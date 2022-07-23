@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Button } from "@chakra-ui/react";
+import { Flex, Text, Button, Heading } from "@chakra-ui/react";
 
 export default function Header() {
   return (
@@ -9,18 +9,18 @@ export default function Header() {
         alignItems="center"
         padding="20px 10%"
       >
-        <Text fontSize='3xl'>Tech Optimum</Text>
+        <Heading fontSize='3xl' color='primary'>Tech Optimum</Heading>
         <nav>
           <ul className="nav-links">
-            <li>HOME</li>
-            <li>JOIN</li>
-            <li>HACKATHON</li>
-            <li>DASHBOARD</li>
-            <li>CONTACT</li>
+            <li><Text color='primary'>HOME</Text></li>
+            <li><Text color='primary'>JOIN</Text></li>
+            <li><Text color='primary'>HACKATHON</Text></li>
+            <li><Text color='primary'>DASHBOARD</Text></li>
+            <li><Text color='primary'>CONTACT</Text></li>
           </ul>
         </nav>
-        <Button colorScheme="signUpButton" borderRadius="full" px="6">Sign up</Button>
-        <Button colorScheme="twitter" borderRadius="full" px="6">Log in</Button>
+        <Button colorScheme="secondaryButton" borderRadius="full" px="6" fontWeight='normal'>Sign up</Button>
+        <Button colorScheme="twitter" borderRadius="full" px="6" fontWeight='normal'>Log in</Button>
       </Flex>
     </>
   );

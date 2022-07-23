@@ -5,20 +5,25 @@ const theme = extendTheme({
     secondary: "#1B76FF",
     primary: "#A7B2FF",
     bgColor: "#060E17",
-    signUpButton: {
+    secondaryButton: {
       500: "#333333",
       600: "#303030", // you need this
+    },
+    footerBg: "#0D132F",
+    inputBg: "#0A0F24",
+    buttonBg: {
+      500: "#4559E9",
+      600: "#4559E9",
     }
   },
   fonts: {
-    body: "Inter, system-ui, sans-serif",
-    heading: "Inter, system-ui, sans-serif",
+    body: "'Neue Machina', sans-serif",
+    heading: "'Neue Machina', sans-serif",
   },
   styles: {
     global: () => ({
       body: {
-        fontFamily:
-          "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+        fontFamily: "Neue Machina",
         color: "white",
         backgroundColor: "bgColor",
         padding: 0,
