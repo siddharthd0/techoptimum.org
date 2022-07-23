@@ -5,6 +5,10 @@ const theme = extendTheme({
     secondary: "#1B76FF",
     primary: "#A7B2FF",
     bgColor: "#060E17",
+    signUpButton: {
+      500: "#333333",
+      600: "#303030", // you need this
+    }
   },
   fonts: {
     body: "Inter, system-ui, sans-serif",

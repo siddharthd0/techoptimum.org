@@ -9,7 +9,7 @@ export default function Header() {
         alignItems="center"
         padding="20px 10%"
       >
-        <Text>Tech Optimum</Text>
+        <Text fontSize='3xl'>Tech Optimum</Text>
         <nav>
           <ul className="nav-links">
             <li>HOME</li>
@@ -19,8 +19,8 @@ export default function Header() {
             <li>CONTACT</li>
           </ul>
         </nav>
-        <Button>Sign up</Button>
-        <Button>Log in</Button>
+        <Button colorScheme="signUpButton" borderRadius="full" px="6">Sign up</Button>
+        <Button colorScheme="twitter" borderRadius="full" px="6">Log in</Button>
       </Flex>
     </>
   );
