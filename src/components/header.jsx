@@ -19,8 +19,10 @@ export default function Header() {
             <li><Text color='primary'>CONTACT</Text></li>
           </ul>
         </nav>
-        <Button colorScheme="secondaryButton" borderRadius="full" px="6" fontWeight='normal'>Sign up</Button>
-        <Button colorScheme="twitter" borderRadius="full" px="6" fontWeight='normal'>Log in</Button>
+        <Flex alignItems="right" justifyContent="space-between">
+          <Button colorScheme="secondaryButton" borderRadius="full" px="6" fontWeight='normal'>Sign up</Button>
+          <Button colorScheme="primaryButton" borderRadius="full" px="6" fontWeight='normal' marginLeft="20px">Log in</Button>
+        </Flex>
       </Flex>
     </>
   );
