@@ -1,11 +1,11 @@
 import Footer from "../components/footer";
-import Navbar from "../components/navbar";
+import Header from "../components/header";
 import HeroHeader from "../components/homepage-landing";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Header />
       <HeroHeader />
       <Footer />
     </>
