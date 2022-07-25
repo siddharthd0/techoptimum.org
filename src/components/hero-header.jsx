@@ -1,5 +1,5 @@
 import { Container, Flex, Heading, Text, Button } from "@chakra-ui/react"
-import Head from "next/head"
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 
 export default function HeroHeader() {
@@ -32,6 +32,7 @@ export default function HeroHeader() {
                         padding={"0"}
                         color="#1B76FF"
                         fontWeight={"400"}
+                        rightIcon={ <ExternalLinkIcon /> }
                     >LEARN MORE</Button>
                 </Flex>
                 <Container
