@@ -32,7 +32,7 @@ export default function HeroHeader() {
                         padding={"0"}
                         color="#1B76FF"
                         fontWeight={"400"}
-                        rightIcon={ <ExternalLinkIcon /> }
+                        rightIcon={ <ExternalLinkIcon position={"relative"} bottom={"2px"} /> }
                     >LEARN MORE</Button>
                 </Flex>
                 <Container
