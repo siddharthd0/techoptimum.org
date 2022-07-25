@@ -1,13 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Header from "../components/header";
 import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import HeroHeader from "../components/hero-header";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
+      <HeroHeader />
       <Footer />
     </>
   );

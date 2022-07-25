@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Text, Button, Heading } from "@chakra-ui/react";
 
-export default function Header() {
+export default function Navbar() {
   return (
     <>
       <Flex
