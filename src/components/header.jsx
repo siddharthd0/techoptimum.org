@@ -32,23 +32,8 @@ export default function Header() {
           </ul>
         </nav>
         <Flex alignItems="right" justifyContent="space-between">
-          <Button
-            colorScheme="secondaryButton"
-            borderRadius="full"
-            px="6"
-            fontWeight="normal"
-          >
-            Sign up
-          </Button>
-          <Button
-            colorScheme="primaryButton"
-            borderRadius="full"
-            px="6"
-            fontWeight="normal"
-            marginLeft="20px"
-          >
-            Log in
-          </Button>
+          <Button colorScheme="secondaryButton" borderRadius="full" px="6" fontWeight='normal'>Sign up</Button>
+          <Button colorScheme="primaryButton" borderRadius="full" px="6" fontWeight='normal' marginLeft="20px">Log in</Button>
         </Flex>
       </Flex>
     </>
