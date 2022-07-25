@@ -1,4 +1,5 @@
 import { Container, Flex, Heading, Text, Button } from "@chakra-ui/react"
+import Head from "next/head"
 
 
 export default function HeroHeader() {
@@ -33,7 +34,60 @@ export default function HeroHeader() {
                         fontWeight={"400"}
                     >LEARN MORE</Button>
                 </Flex>
+                <Container
+                    maxWidth={"60%"} 
+                    backgroundColor="#29368C"
+                    height={"20vh"}
+                    margin={"0 auto"}
+                    borderRadius={"36px"}
+                    marginTop={"5rem"}
+                >
+                    <Flex
+                        alignItems={"center"}
+                        height={"100%"}
+                    >
+                        <Heading
+                            color="white"
+                            fontSize="2xl"
+                            fontWeight={"400"}
+                            width={"30%"}
+                            textAlign={"center"}
+                        >
+                            40+ FREE PROGRAMMING COURSES
+                        </Heading>
+                        <Heading
+                            color="white"
+                            fontSize="2xl"
+                            fontWeight={"400"}
+                            width={"5%"}
+                        >+</Heading>
+                        <Heading
+                            color="white"
+                            fontSize="2xl"
+                            fontWeight={"400"}    
+                            width={"30%"}
+                            textAlign={"center"}
 
+                        >
+                            INTERNSHIP FINDER
+                        </Heading>
+                        <Heading
+                            color="white"
+                            fontSize="2xl"
+                            fontWeight={"400"}
+                            width={"5%"}
+                        >+</Heading>
+                        <Heading
+                            color="white"
+                            fontSize="2xl"
+                            fontWeight={"400"}     
+                            width={"30%"}
+                            textAlign={"center"}
+                        >
+                            HACKATHONS
+                        </Heading>
+                    </Flex>
+                </Container>
             </Flex>
         </>
     )
