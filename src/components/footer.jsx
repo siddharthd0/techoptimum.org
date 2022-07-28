@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text, Image, Input, Heading, Button } from "@chakra-ui/react";
+import {ExternalLinkIcon} from '@chakra-ui/icons';
 
 export default function Footer() {
   return (
@@ -36,13 +37,14 @@ export default function Footer() {
         </Flex>
         <Flex
           direction={"column"}
-          h="140px"
+          h="150px"
           justifyContent="space-between"
           alignItems="start"
         >
           <Heading color="primary" fontSize="lg">
             ABOUT
           </Heading>
+
           <Text color="primary" fontSize="lg">
             COMMUNITY
           </Text>
@@ -55,13 +57,14 @@ export default function Footer() {
         </Flex>
         <Flex
           direction={"column"}
-          h="140px"
+          h="150px"
           justifyContent="space-between"
           alignItems="start"
         >
           <Heading color="primary" fontSize="lg">
             MISCELLANEOUS
           </Heading>
+       
           <Text color="primary" fontSize="lg">
             BECOME A MEMBER
           </Text>
@@ -74,7 +77,7 @@ export default function Footer() {
         </Flex>
         <Flex direction={"column"} alignItems="start" justifyContent="center">
           <Text color="primary" fontSize="3xl">
-            Check us out, you’ll <br /> definitely like it!
+            Check us out, you’ll <br /> definitely like it! 
           </Text>
           <Button
             colorScheme="buttonBg"
@@ -82,8 +85,11 @@ export default function Footer() {
             px="6"
             marginTop={5}
             fontWeight="normal"
+            rightIcon={
+              <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+            }
           >
-            Join Now
+            Join now
           </Button>
         </Flex>
       </Flex>
