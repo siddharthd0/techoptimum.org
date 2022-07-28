@@ -7,7 +7,7 @@ export default function HeroHeader() {
   return (
     <>
       <Flex height={"100vh"} width={"100%"} direction={"column"}>
-        <Flex direction={"column"} width={"60%"} margin={"7rem 0 0 6rem"}>
+        <Flex direction={"column"} width={"60%"} margin={"0rem 0 0 6rem"}>
           <Heading color="primary" fontSize="5xl" marginBottom={"2.5rem"}>
             Learn. Participate. Accomplish.
           </Heading>
