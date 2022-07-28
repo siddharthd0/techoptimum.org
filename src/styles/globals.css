@@ -23,3 +23,9 @@ a {
   display: inline-block;
   padding: 0 10px;
 }
+
+.job-card-image {
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}

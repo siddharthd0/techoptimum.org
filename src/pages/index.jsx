@@ -2,19 +2,19 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import HeroHeader from "../components/homepage-landing";
 import Courses from "../components/courses";
-
+import Jobs from "../components/jobs";
 import Events from "../components/events";
 import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
     <>
-
-      <Box my="50px">
-        <Header />
+      <Header />
+      <Box my="100px">
         <HeroHeader />
         <Courses />
         <Events />
+        <Jobs />
       </Box>
       <Footer />
     </>
