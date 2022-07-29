@@ -10,11 +10,20 @@ import {
 } from "@chakra-ui/react";
 import { BsLayers, BsGraphUp, BsArrowUpRight } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
-
+import AOS from 'aos';
+import Head from 'next/head';
+import {useEffect} from 'react';
 export default function Jobs() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);  
   return (
     <>
-      <Flex marginLeft={"7rem"} marginTop={"10rem"} direction={"column"}>
+      <Head>
+        <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" key="test"/>
+      </Head>
+      <Flex marginLeft={"7rem"} marginTop={"10rem"} direction={"column"} data-aos={"fade-up"} data-aos-duration={"2000"}>
         <Heading color="primary" fontSize="5xl">
           Jobs
         </Heading>
