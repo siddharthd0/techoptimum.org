@@ -4,6 +4,8 @@ import HeroHeader from "../components/homepage-landing";
 import Courses from "../components/courses";
 import Jobs from "../components/jobs";
 import Events from "../components/events";
+import Finder from "../components/internship-finder";
+import Socials from "../components/socials";
 import { Box } from "@chakra-ui/react";
 
 export default function Home() {
@@ -15,7 +17,9 @@ export default function Home() {
         <Courses />
         <Events />
         <Jobs />
+        <Finder />
       </Box>
+      <Socials />
       <Footer />
     </>
   );
