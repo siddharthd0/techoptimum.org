@@ -3,13 +3,22 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+import {useEffect} from 'react';
+import AOS from 'aos';
+import Head from 'next/head';
 export default function Courses() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  useEffect(() => {
+      AOS.init();
+      AOS.refresh();
+    }, []);  
   return (
     <Flex marginLeft={"7rem"} direction={"column"}>
-      <Heading color="primary" fontSize="5xl">
+      <Head>
+        <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" key="test"/>
+      </Head>
+      <Heading color="primary" fontSize="5xl" data-aos="fade-right" data-aos-duration="1000">
         Courses
       </Heading>
       <Flex
@@ -25,6 +34,8 @@ export default function Courses() {
           borderRadius={"22px"}
           direction={"column"}
           padding={"2rem"}
+          data-aos={"fade-up"}
+          data-aos-duration={"1000"}
         >
           <Heading
             color="#FFF6AA"
@@ -67,6 +78,9 @@ export default function Courses() {
           direction={"column"}
           padding={"2rem"}
           as={motion.div}
+          data-aos={"fade-up"}
+          data-aos-delay={"100"}
+          data-aos-duration={"1000"}
         >
           <Heading
             color="#FFF6AA"
@@ -108,6 +122,9 @@ export default function Courses() {
           borderRadius={"22px"}
           direction={"column"}
           padding={"2rem"}
+          data-aos={"fade-up"}
+          data-aos-delay={"200"}
+          data-aos-duration={"1000"}
         >
           <Heading
             color="#FFF6AA"
