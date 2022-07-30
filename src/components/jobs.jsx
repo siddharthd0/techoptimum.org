@@ -28,8 +28,7 @@ export default function Jobs() {
           Jobs
         </Heading>
         <Box
-
-          maxW="1160px"
+          maxW="1210px"
           bgColor={"#29368C"}
           borderRadius={"27px"}
           border={"3px solid #4559E9"}
@@ -45,7 +44,8 @@ export default function Jobs() {
               <Flex p={"20px"} flexDirection={"column"}>
                 <Flex flexDirection={"row"} alignItems="center">
                   <Box
-                  
+                    w={"106px"}
+                    h={"98px"}
                     bgColor={"#ACFFAA"}
                     borderRadius={"20px"}
                   >
@@ -170,7 +170,8 @@ export default function Jobs() {
               <Flex p={"20px"} flexDirection={"column"}>
                 <Flex flexDirection={"row"} alignItems="center">
                   <Box
-                    
+                    w={"106px"}
+                    h={"98px"}
                     bgColor={"#FFC4AA"}
                     borderRadius={"20px"}
                   >
