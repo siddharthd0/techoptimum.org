@@ -54,6 +54,7 @@ export default function Courses() {
             Use databases in your own website. Discover how data can be stored
             in DB's like Mongo and learn how to control the data.
           </Text>
+          <br></br>
           <Flex height={"25%"} alignItems={"center"}>
             <Button
               backgroundColor="transparent"
@@ -99,6 +100,7 @@ export default function Courses() {
             Create simple websites using HTML, CSS and JS. Host, publish and
             share your personalized website that you created from scratch.
           </Text>
+          <br></br>
           <Flex height={"25%"} alignItems={"center"}>
             <Button
               backgroundColor="transparent"
@@ -130,7 +132,7 @@ export default function Courses() {
             color="#FFF6AA"
             fontSize="2xl"
             fontWeight={"400"}
-            height={"25%"}
+            height={"20%"}
           >
             Game Dev.
           </Heading>
@@ -143,6 +145,7 @@ export default function Courses() {
             Learn how to create simple games, create real-world applications
             using languages like Javascript.
           </Text>
+          <br></br>
           <Flex height={"25%"} alignItems={"center"}>
             <Button
               backgroundColor="transparent"
