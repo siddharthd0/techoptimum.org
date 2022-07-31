@@ -20,7 +20,7 @@ export default function Socials() {
               color={"#878787"}
               mr={"50px"}
             >
-              GITHUB
+              TIKTOK
             </Text>
             <Text
               fontWeight={"800"}
