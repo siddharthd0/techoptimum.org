@@ -76,8 +76,8 @@ export default function Footer() {
           </Text>
         </Flex>
         <Flex direction={"column"} alignItems="start" justifyContent="center">
-          <Text color="primary" fontSize="3xl">
-            Check us out, you’ll <br /> definitely like it! 
+          <Text color="primary" fontSize="2xl">
+          Become a member <br></br>today and improve <br></br>your CS skills
           </Text>
           <Button
             colorScheme="buttonBg"
