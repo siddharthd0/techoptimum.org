@@ -29,3 +29,29 @@ a {
   height: auto;
   z-index: -1;
 }
+
+.socials-text-tiktok:hover {
+color:#ff0050;
+cursor:pointer;
+transition:400ms;
+}
+.socials-text-linkedin:hover {
+  color:#0077b5;
+  cursor:pointer;
+  transition:400ms;
+}
+.socials-text-instagram:hover {
+  color: #E1306C;
+  cursor:pointer;
+  transition:400ms;
+}
+.socials-text-discord:hover{
+  color:#7289da;
+  cursor:pointer;
+  transition:400ms;
+}
+.socials-text-twitter:hover {
+  color:#1293d2;
+  cursor:pointer;
+  transition:400ms;
+}

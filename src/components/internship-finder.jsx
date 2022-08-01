@@ -24,21 +24,22 @@ export default function Finder() {
       </Heading>
       <Text
         color="primary"
-        fontSize="3xl"
-        marginTop={"2.5rem"}
+        fontSize="lg"
+        marginTop={"2.2rem"}
         data-aos="fade-right"
         data-aos-duration="1000"
+        width={"600px"}
       >
-        Land a computer science internship
+        As a high school student, have you ever wanted to get real work experience at a real company? This is your chance to discover Computer Science internships at a number of businesses!
       </Text>
       <Button
-        w={"493px"}
-        h={"81px"}
+        w={"290px"}
+        
         bgColor={"#4559E9"}
         borderRadius={"50px"}
         color={"#FFFFFF"}
         fontWeight={"400"}
-        fontSize={"36px"}
+        fontSize="xl"
         _hover={{ bgColor: "#3244ca" }}
         mt={"2.5rem"}
       >
