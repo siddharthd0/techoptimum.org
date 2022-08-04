@@ -1,0 +1,27 @@
+Info 0    [01:42:49.006] Starting TS Server
+Info 1    [01:42:49.008] Version: 4.6.2
+Info 2    [01:42:49.008] Arguments: /usr/bin/node /usr/lib/node_modules/typescript/lib/tsserver.js --logFile /home/aryan/Code/TechOptimum/Tech-Optimum-Website/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/2e7a9176ad555a49ffac937e6a2c0865/tscancellation*
+Info 3    [01:42:49.008] Platform: linux NodeVersion: 18 CaseSensitive: true
+Info 4    [01:42:49.008] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [01:42:49.020] Format host information updated
+Info 6    [01:42:49.499] Search path: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/pages
+Info 7    [01:42:49.500] For info: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/pages/hackathon.jsx :: No config files found.
+Info 8    [01:42:49.504] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 9    [01:42:51.037] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1533.1320389993489ms
+Info 10   [01:42:51.038] Project '/dev/null/inferredProject1*' (Inferred)
+Info 11   [01:42:51.038] 	Files (573)
+
+Info 12   [01:42:51.038] -----------------------------------------------
+Info 13   [01:42:51.052] AutoImportProviderProject: found 7 root files in 7 dependencies in 11.845313999801874 ms
+Info 14   [01:42:51.053] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 15   [01:42:51.612] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 558.9251139983535ms
+Info 16   [01:42:51.612] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 17   [01:42:51.612] 	Files (105)
+
+Info 18   [01:42:51.612] -----------------------------------------------
+Info 19   [01:42:51.650] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 20   [01:42:51.687] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: true structureIsReused:: Not Elapsed: 36.19631699845195ms
+Info 21   [01:42:51.687] Different program with same set of files
+Info 22   [01:42:54.151] Before ensureProjectForOpenFiles:
+Info 23   [01:42:54.151] After ensureProjectForOpenFiles:
+Info 24   [01:42:54.153] got projects updated in background, updating diagnostics for /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/pages/hackathon.jsx
