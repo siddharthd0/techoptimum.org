@@ -1,7 +1,8 @@
 import ChessIcon from "../assets/chess.svg";
 
-import { Container, Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
 // import { ExternalLinkIcon } from "@chakra-ui/icons";
+import {BsArrowUpRight} from "react-icons/bs";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 
@@ -15,9 +16,9 @@ export default function HackathonRecap() {
 					</Heading>
 				</Flex>
 				<Container
-					maxWidth={"40%"}
+					maxWidth={"570px"}
 					backgroundColor="#29368C"
-					height={"15vh"}
+					height={"150px"}
 					margin={"0 auto"}
 					borderRadius={"36px"}
 					paddingTop={"1rem"}
@@ -33,32 +34,43 @@ export default function HackathonRecap() {
 					<Flex alignItems={"center"} height={"100%"}>
 						<Heading
 							color="white"
-							fontSize="2xl"
+							fontSize="4xl"
 							fontWeight={"400"}
-							width={"47.5%"}
-							textAlign={"center"}
+							textAlign={"left"}
+							ml={"6%"}
+							mr={"6%"}
 						>
+
 							<CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
-							PARTICAPENTS
+				
+							<Heading fontWeight={"400"}fontSize="2xl">
+							Participants
+							</Heading>
 						</Heading>
 						<Heading
 							color="white"
 							fontSize="6xl"
-							fontWeight={"400"}
+							fontWeight={"300"}
 							width={"5%"}
 						>
 							/
 						</Heading>
 						<Heading
 							color="white"
-							fontSize="2xl"
+							fontSize="4xl"
 							fontWeight={"400"}
 							width={"47.5%"}
-							textAlign={"center"}
+							textAlign={"left"}
+							ml={"1.1rem"}
 						>
 							$<CountUp end={40000} duration={4} useEasing={true} delay={1.5} />+
-							PRIZES
+							<br></br>
+							<Heading fontWeight={"400"}fontSize="2xl">
+							Prizes
+							</Heading>
 						</Heading>
+						
+						<Icon className="diagonal-button"as={BsArrowUpRight}/>
 					</Flex>
 				</Container>
 				<Flex direction={"row"} left="37.5%" width={"25%"} marginTop={"2.5rem"}>

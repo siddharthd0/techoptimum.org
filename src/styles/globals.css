@@ -56,3 +56,11 @@ transition:400ms;
   cursor:pointer;
   transition:400ms;
 }
+.diagonal-button {
+  font-size: 70px;
+  background-color: #4559E9;
+  color:white;
+  border-radius: 50%;
+  font-weight:lighter;
+  padding: 1.2rem;
+}
