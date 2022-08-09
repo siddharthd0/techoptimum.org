@@ -98,7 +98,7 @@ export default function Courses() {
             height={"50%"}
           >
             Create simple websites using HTML, CSS and JS. Host, publish and
-            share your personalized website that you created from scratch.
+            share your new personalized website that you created from scratch.
           </Text>
           <br></br>
           <Flex height={"25%"} alignItems={"center"}>
