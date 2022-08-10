@@ -81,21 +81,22 @@ transition:400ms;
 }
 .audio-player .timeline .progress {
   position: absolute;
-  top: -27px;
+  top: -8px;
   background-image: url("/Player-Fill-Track.png");
+  background-size: 9.5ch;
   background-color: #29368C;
-  height: 35px;
+  height: 29px;
   width: 0%;
   transition: 0.5s;
 }
 
 .audio-player .timeline .thumb {
   position: absolute;
-  top: -6px;
+  top: -8px;
   border-radius: 100%;
   background-color: yellow;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   transition: 0.5s;
 }
 

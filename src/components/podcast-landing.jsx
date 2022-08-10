@@ -7,13 +7,13 @@ export default function PodcastHero() {
   return (
     <>
       <Flex height="75vh">
-        <Flex top="17%" left="29%" position="absolute" zIndex={1}>
+        <Flex top="14%" left="29%" position="absolute" zIndex={1}>
           <BlueStar />
         </Flex>
-        <Flex top="16%" left="42%" position="absolute" zIndex={2}>
+        <Flex top="13%" left="42%" position="absolute" zIndex={2}>
           <OrangeStar />
         </Flex>
-        <Flex top="7.5%" left="35.7%" position="absolute" zIndex={0}>
+        <Flex top="5.5%" left="37.7%" position="absolute" zIndex={0}>
           <GreenStar />
         </Flex>
         <Flex width="full" height="75vh" position="absolute" zIndex={3} direction="column" alignItems="center" justifyContent="center">
