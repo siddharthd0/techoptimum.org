@@ -2,10 +2,9 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
 import HackathonRecap from "../components/hackathon-recap.jsx";
-
 import HackathonBanner from "../assets/hackathon2022.svg";
-
 import { Box } from "@chakra-ui/react";
+import HackathonWinners from "../components/hackathon-winners";
 
 export default function Hackathons() {
 	return (
@@ -14,6 +13,7 @@ export default function Hackathons() {
   			<HackathonBanner width="100%" />
 			<Box my="100px">
 				<HackathonRecap />
+				<HackathonWinners/>
 			</Box>
 			<Socials />
 			<Footer />
