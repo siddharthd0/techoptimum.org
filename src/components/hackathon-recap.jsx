@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function HackathonRecap() {
 	return (
 		<>
-			<Flex height={"80vh"} width={"100%"} direction={"column"}>
+			<Flex direction={"column"}>
 				<Flex direction={"column"} width={"100%"} align="center">
 					<Heading color="primary" fontSize="5xl" marginBottom={"2.5rem"}>
 						Quick Recap
@@ -73,11 +73,13 @@ export default function HackathonRecap() {
 						<Icon className="diagonal-button"as={BsArrowUpRight}/>
 					</Flex>
 				</Container>
-				<Flex direction={"row"} left="37.5%" width={"25%"} marginTop={"2.5rem"}>
+				<Flex alignItems={"center"} height={"100%"}>
+				<Flex align="center" justify="center"left="37.5%" width={"25%"} marginTop={"2.5rem"}>
 					<ChessIcon width="20%" height="auto" />
 					<Heading width="80%" color="primary" fontSize="3xl">
 						Chess Tournament
 					</Heading>
+				</Flex>
 				</Flex>
 			</Flex>
 		</>
