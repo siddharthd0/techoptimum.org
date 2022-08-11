@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/react";
+import FirstPlace from "../assets/hackathon/1stplace.png";
 
 export default function HackathonWinners() {
   return (
@@ -15,16 +16,16 @@ export default function HackathonWinners() {
       <Flex align="center" justify="center">
       <Stack spacing="40px"direction='row'>
 
-        <Box>
-          <Image width="400px"borderRadius='30px'fallbackSrc='https://via.placeholder.com/500'src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/002/034/353/datas/medium.png" alt="Dan Abramov" />
-        </Box>
-        <br />
-        <Box boxSize="xxlg">
-          <Image width="400px"borderRadius='30px'fallbackSrc='https://via.placeholder.com/500'src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/002/033/999/datas/medium.png" alt="Dan Abramov" />
+        <Box boxSize="xlg">
+          <Image width="420px"borderRadius='30px' src="https://cdn.discordapp.com/attachments/995836673738940416/1007072533335506974/firstplace.png" />
         </Box>
         <br />
         <Box boxSize="xlg">
-          <Image width="400px"borderRadius='30px'fallbackSrc='https://via.placeholder.com/500'src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/002/034/967/datas/medium.png" alt="Dan Abramov" />
+          <Image width="400px"borderRadius='30px' src="https://media.discordapp.net/attachments/995836673738940416/1007072534082105374/2ndplace.png" />
+          </Box>
+        <br />
+        <Box boxSize="xlg">
+          <Image width="400px"borderRadius='30px'src="https://media.discordapp.net/attachments/995836673738940416/1007072533637500938/3rdplace.png" alt="Dan Abramov" />
         </Box>
 
 

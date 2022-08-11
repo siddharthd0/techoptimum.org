@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 export default function HackathonRecap() {
 	return (
 		<>
-			<Flex direction={"column"}>
+			
 				<Flex direction={"column"} width={"100%"} align="center">
-					<Heading color="primary" fontSize="5xl" marginBottom={"2.5rem"}>
+					<Heading color="primary" fontSize="6xl" marginBottom={"2.5rem"}>
 						Quick Recap
 					</Heading>
-				</Flex>
+				
 				<Container
 					maxWidth={"570px"}
 					backgroundColor="#29368C"
@@ -74,12 +74,14 @@ export default function HackathonRecap() {
 					</Flex>
 				</Container>
 				<Flex alignItems={"center"} height={"100%"}>
-				<Flex align="center" justify="center"left="37.5%" width={"25%"} marginTop={"2.5rem"}>
+				{/*<Flex align="center" justify="center"left="37.5%" width={"25%"} marginTop={"2.5rem"}>
 					<ChessIcon width="20%" height="auto" />
 					<Heading width="80%" color="primary" fontSize="3xl">
 						Chess Tournament
 					</Heading>
-				</Flex>
+				</Flex>*/}
+				
+				<br /><br /><br />
 				</Flex>
 			</Flex>
 		</>
