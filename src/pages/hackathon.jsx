@@ -5,6 +5,8 @@ import HackathonRecap from "../components/hackathon-recap.jsx";
 import HackathonBanner from "../assets/hackathon2022.svg";
 import { Box } from "@chakra-ui/react";
 import HackathonWinners from "../components/hackathon-winners";
+import UpcomingEvents from "../components/upcoming-events";
+
 
 export default function Hackathons() {
 	return (
@@ -14,6 +16,7 @@ export default function Hackathons() {
 			<Box my="100px">
 				<HackathonRecap />
 				<HackathonWinners/>
+				<UpcomingEvents/>
 			</Box>
 			<Socials />
 			<Footer />
