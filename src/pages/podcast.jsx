@@ -9,10 +9,10 @@ export default function Hackathons() {
 	return (
 		<>
 			<Header />
-        <Box mb="100px">
-					<PodcastHero />
-					<PodcastPlayer />
-        </Box>
+			<Box mb="100px">
+				<PodcastHero />
+				<PodcastPlayer />
+			</Box>
 			<Socials />
 			<Footer />
 		</>
