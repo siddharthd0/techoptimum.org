@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, IconButton } from "@chakra-ui/react";
+import { Flex, IconButton, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { AiOutlinePause } from "react-icons/ai";
 import { FiPlay } from "react-icons/fi";
@@ -47,7 +47,7 @@ export default function PodcastPlayer() {
             </Text>
             {playerStatus && <AudioPlayer playPauseStatus={playerStatus} audioFileURI="https://azcmfxkhasiaycwdlcns.supabase.co/storage/v1/object/public/test-buc/Super%20Purposes,%20Super%20Julie%20Braun%20_%20Tech%20Optimum%20Podcasts.mp3.crdownload?t=2022-08-10T02%3A52%3A52.021Z" />}
           </Flex>
-        </Flex>
+ki        </Flex>
         <Flex justifyContent="center" alignItems="center" width="30%" padding="40px">
           <Text fontSize="2xl" fontWeight="bold">Learn about Super Julie&apos;s,  fantastic journey, struggles and how she leads her company, Super purposes!</Text>
         </Flex>

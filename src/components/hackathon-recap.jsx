@@ -43,9 +43,9 @@ export default function HackathonRecap() {
 
 							<CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
 				
-							<Heading fontWeight={"400"}fontSize="2xl">
+							<Text fontWeight={"400"}fontSize="2xl">
 							Participants
-							</Heading>
+							</Text>
 						</Heading>
 						<Heading
 							color="white"
@@ -65,9 +65,9 @@ export default function HackathonRecap() {
 						>
 							$<CountUp end={40000} duration={4} useEasing={true} delay={1.5} />+
 							<br></br>
-							<Heading fontWeight={"400"}fontSize="2xl">
+							<Text fontWeight={"400"}fontSize="2xl">
 							Prizes
-							</Heading>
+							</Text>
 						</Heading>
 						
 						<Icon className="diagonal-button"as={BsArrowUpRight}/>
