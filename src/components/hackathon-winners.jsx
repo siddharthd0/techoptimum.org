@@ -11,7 +11,7 @@ import FirstPlace from "../assets/hackathon/1stplace.png";
 export default function HackathonWinners() {
   return (
     <>
-      <Heading fontSize="6xl"color="primary"align="center">Winners</Heading>
+      <Heading fontSize="5xl"color="primary"align="center">Winners</Heading>
       <br></br>
       <Flex align="center" justify="center">
       <Stack spacing="40px"direction='row'>
