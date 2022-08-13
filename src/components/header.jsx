@@ -29,10 +29,13 @@ export default function Header() {
 							<Text color="primary"><Link href="/podcast">PODCAST</Link></Text>
 						</li>
 						<li>
-							<Text color="primary"><a href="https://dashboard.techoptimum.org">DASHBOARD</a></Text>
+							<Text color="primary"><a href="https://dashboard.techoptimupm.org">DASHBOARD</a></Text>
 						</li>
 						<li>
 							<Text color="primary"><Link href="/contact">CONTACT</Link></Text>
+						</li>
+						<li>
+							<Text color="primary"><Link href="/about">ABOUT</Link></Text>
 						</li>
 					</ul>
 				</nav>
