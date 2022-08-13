@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react";
 import PodcastHero from "../components/podcast-landing";
 import PodcastPlayer from "../components/podcast-player";
 
-export default function Hackathons() {
+export default function Podcasts() {
 	return (
 		<>
 			<Header />
