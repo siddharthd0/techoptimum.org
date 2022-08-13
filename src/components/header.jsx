@@ -29,7 +29,7 @@ export default function Header() {
 							<Text color="primary"><Link href="/podcast">PODCAST</Link></Text>
 						</li>
 						<li>
-							<Text color="primary"><a href="dashboard.techoptimum.org">DASHBOARD</a></Text>
+							<Text color="primary"><a href="https://dashboard.techoptimum.org">DASHBOARD</a></Text>
 						</li>
 						<li>
 							<Text color="primary"><Link href="/contact">CONTACT</Link></Text>
@@ -49,7 +49,7 @@ export default function Header() {
 						colorScheme="primaryButton"
 						borderRadius="full"
 						px="6"
-						fontWeight="normal"
+n						fontWeight="normal"
 						marginLeft="20px"
 					>
 						Log in
