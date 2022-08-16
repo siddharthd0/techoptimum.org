@@ -28,12 +28,8 @@ export default function Header() {
 						<li>
 							<Text color="primary"><Link href="/podcast">PODCAST</Link></Text>
 						</li>
-						<li>
-							<Text color="primary"><a href="https://dashboard.techoptimupm.org">DASHBOARD</a></Text>
-						</li>
-						<li>
-							<Text color="primary"><Link href="/contact">CONTACT</Link></Text>
-						</li>
+						
+						
 						<li>
 							<Text color="primary"><Link href="/about">ABOUT</Link></Text>
 						</li>
