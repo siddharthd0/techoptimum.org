@@ -17,7 +17,9 @@ export default function Header() {
 				<nav>
 					<ul className="nav-links">
 						<li>
-							<Text color="primary"><Link href="/">HOME</Link></Text>
+							<Text color="primary">
+								<Link href="/">HOME</Link>
+							</Text>
 						</li>
 						<li>
 							<Text color="primary"><Link href="/join">JOIN</Link></Text>
