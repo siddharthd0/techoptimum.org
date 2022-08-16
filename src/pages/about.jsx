@@ -30,6 +30,7 @@ export default function About() {
           key="test"
         />
       </Head>
+      <Header />
       <Flex
         marginLeft={"7rem"}
         marginTop={"10rem"}
@@ -40,13 +41,15 @@ export default function About() {
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
           Executives
         </Heading>
-		<Flex direction={"row"} gap='24px'>
+		<Flex mb={"9%"}direction={"row"} gap='65px'>
 				{/* import sid.svg from public */}
-				<img src="/sid.svg" alt="sid" width="350" height="350" gap="10px" />
-				<img src="/pran.svg" alt="pran" width="350" height="350" gap="10px" />
-				<img src="/arnav.svg" alt="arnav" width="350" height="350" gap="10px" />
+				<img src="/sid.svg" alt="sid" width="300" height="350" gap="15px" />
+				<img src="/pran.svg" alt="pran" width="300" height="350" gap="15px" />
+				<img src="/arnav.svg" alt="arnav" width="300" height="350" gap="15px" />
 				</Flex>
 			</Flex>
+
+      <Footer />
 		</>
 	);
 }
