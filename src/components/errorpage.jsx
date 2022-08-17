@@ -18,7 +18,6 @@ export default function Error() {
             >
                 These might help you:
             </Text>
-            <Link to="/Home">
             <Button
               backgroundColor="transparent"
               _hover={{ backgroundColor: "transparent" }}
@@ -31,9 +30,8 @@ export default function Error() {
                 <ExternalLinkIcon position={"relative"} bottom={"2px"} />
               }
             >
-              Home
+            <Link href="/">Home</Link>
             </Button>
-            </Link>
             <Button
               backgroundColor="transparent"
               _hover={{ backgroundColor: "transparent" }}
