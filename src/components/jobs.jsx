@@ -10,27 +10,35 @@ import {
 } from "@chakra-ui/react";
 import { BsLayers, BsGraphUp, BsArrowUpRight } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
-import AOS from 'aos';
-import Head from 'next/head';
-import {useEffect} from 'react';
+import AOS from "aos";
+import Head from "next/head";
+import { useEffect } from "react";
 export default function Jobs() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);  
+  }, []);
   return (
     <>
       <Head>
-        <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" key="test"/>
+        <link
+          href="https://unpkg.com/aos@next/dist/aos.css"
+          rel="stylesheet"
+          key="test"
+        />
       </Head>
-      <Flex marginLeft={"7rem"} marginTop={"10rem"} direction={"column"} data-aos={"fade-up"} data-aos-duration={"2000"}>
-        <Heading color="primary" fontSize="5xl">
+      <Flex
+        marginLeft={"7rem"}
+        marginTop={"10rem"}
+        direction={"column"}
+        data-aos={"fade-up"}
+        data-aos-duration={"2000"}
+      >
+        <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
           Jobs
         </Heading>
         <Box
-          mt="45px"
-          w={"1374px"}
-          h={"719px"}
+          maxW="1210px"
           bgColor={"#29368C"}
           borderRadius={"27px"}
           border={"3px solid #4559E9"}
@@ -39,10 +47,8 @@ export default function Jobs() {
             <Box
               className="job-card1"
               bgColor={"#4559E9"}
-              w={"332px"}
-              h={"412px"}
               borderRadius={"32px"}
-              mr={"8.5rem"}
+              mr={"5%"}
             >
               <Flex p={"20px"} flexDirection={"column"}>
                 <Flex flexDirection={"row"} alignItems="center">
@@ -72,7 +78,6 @@ export default function Jobs() {
                   </Text>
                 </Flex>
                 <Text
-                  w={"260px"}
                   fontWeight="400"
                   fontSize="14px"
                   lineHeight="14px"
@@ -83,7 +88,7 @@ export default function Jobs() {
                 </Text>
 
                 <Button
-                  mt="8.1rem"
+                  mt="20%"
                   variant={"unstyled"}
                   w={"175px"}
                   h={"46px"}
@@ -93,7 +98,7 @@ export default function Jobs() {
                   _hover={{
                     bgColor: "#60c25e",
                   }}
-                  ml={"7rem"}
+                  ml={"35%"}
                 >
                   APPLY NOW
                 </Button>
@@ -102,10 +107,8 @@ export default function Jobs() {
             <Box
               className="job-card2"
               bgColor={"#4559E9"}
-              w={"332px"}
-              h={"412px"}
               borderRadius={"32px"}
-              mr={"8.5rem"}
+              mr={"5%"}
             >
               <Flex p={"20px"} flexDirection={"column"}>
                 <Flex flexDirection={"row"} alignItems="center">
@@ -146,7 +149,7 @@ export default function Jobs() {
                 </Text>
 
                 <Button
-                  mt="8.8rem"
+                  mt="20%"
                   variant={"unstyled"}
                   w={"175px"}
                   h={"46px"}
@@ -165,8 +168,7 @@ export default function Jobs() {
             <Box
               className="job-card3"
               bgColor={"#4559E9"}
-              w={"332px"}
-              h={"412px"}
+              mr={"5%"}
               borderRadius={"32px"}
             >
               <Flex p={"20px"} flexDirection={"column"}>
@@ -202,13 +204,12 @@ export default function Jobs() {
                   fontSize="14px"
                   lineHeight="14px"
                   mt={"0.7rem"}
-                  h={"55px"}
                 >
                   As a social media manager, you will be handling our socials.
                 </Text>
-
+                <br></br>
                 <Button
-                  mt="8.1rem"
+                  mt="20%"
                   variant={"unstyled"}
                   w={"175px"}
                   h={"46px"}
@@ -225,35 +226,30 @@ export default function Jobs() {
               </Flex>
             </Box>
           </Flex>
-          <Flex justifyContent={"flex-end"} mt={"118px"} mr={"50px"}>
+          <Flex justifyContent={"flex-end"} mt={"4%"} mr={"50px"}>
             <Button
-              w={"253px"}
-              h={"66px"}
               bgColor={"#4559E9"}
               borderRadius={"30px"}
               variant={"unstyled"}
-              pl={"35px"}
+              pr="20px"
+              pl="20px"
               _hover={{
                 bgColor: "#4558eb",
               }}
             >
               <Flex flexDirection={"row"} alignItems="center">
-                <Text
-                  color={"#FFFFFF"}
-                  fontWeight={"400"}
-                  fontSize={"24px"}
-                  mr={"1rem"}
-                >
+                <Text color={"#FFFFFF"} fontWeight={"400"} fontSize={"xl"}>
                   MORE JOBS
                 </Text>
                 <Icon
                   as={BsArrowUpRight}
                   color={"#FFFFFF"}
-                  fontSize={"1.5rem"}
+                  fontSize={"1.3rem"}
                 />
               </Flex>
             </Button>
           </Flex>
+          <br></br>
         </Box>
       </Flex>
     </>

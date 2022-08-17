@@ -9,9 +9,10 @@ export default function Socials() {
         </Flex>
         <Flex justifyContent={"center"}>
           <Flex
+          className="social-section"
             //  justifyContent={"center"}
             justifyContent={"space-around"}
-            my={"4rem"}
+            my={"3rem"}
             w={"500px"}
           >
             <Text
@@ -19,14 +20,16 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
+              className="socials-text-tiktok"
             >
-              GITHUB
+              TIKTOK
             </Text>
             <Text
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
+              className="socials-text-twitter"
             >
               TWITTER
             </Text>
@@ -35,6 +38,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
+              className="socials-text-instagram"
             >
               INSTAGRAM
             </Text>
@@ -43,6 +47,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
+              className="socials-text-linkedin"
             >
               LINKEDIN
             </Text>
@@ -51,6 +56,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
+              className="socials-text-discord"
             >
               DISCORD
             </Text>

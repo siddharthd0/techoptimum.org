@@ -45,16 +45,17 @@ export default function Footer() {
             ABOUT
           </Heading>
 
-          <Text color="primary" fontSize="lg">
+          <Text color="primary" fontSize="md">
             COMMUNITY
           </Text>
-          <Text color="primary" fontSize="lg">
+          <Text color="primary" fontSize="md">
             CONTACT US
           </Text>
-          <Text color="primary" fontSize="lg">
+          <Text color="primary" fontSize="md">
             JOIN OUR TEAM
           </Text>
         </Flex>
+        
         <Flex
           direction={"column"}
           h="150px"
@@ -65,25 +66,27 @@ export default function Footer() {
             MISCELLANEOUS
           </Heading>
        
-          <Text color="primary" fontSize="lg">
+          <Text color="primary" fontSize="md">
             BECOME A MEMBER
           </Text>
-          <Text color="primary" fontSize="lg">
+          <Text color="primary" fontSize="md">
             WORKSHOPS
           </Text>
-          <Text color="primary" fontSize="lg">
+          <Text color="primary" fontSize="md">
             JOIN OUR COMMUNITY
           </Text>
         </Flex>
         <Flex direction={"column"} alignItems="start" justifyContent="center">
-          <Text color="primary" fontSize="3xl">
-            Check us out, you’ll <br /> definitely like it! 
+          <Text width="250px"color="primary" fontSize="md">
+            At Tech Optimum, we strive for excellence when it comes to programming. 
+            Interested? Join us in the process of improving the future of CS.
+
           </Text>
           <Button
             colorScheme="buttonBg"
             borderRadius="full"
             px="6"
-            marginTop={5}
+            marginTop={3}
             fontWeight="normal"
             rightIcon={
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
