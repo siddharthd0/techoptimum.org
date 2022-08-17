@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Box my="100px">
+      <Box my="100px" _hover={{}}>
         <HeroHeader />
         <Courses />
         <Events />

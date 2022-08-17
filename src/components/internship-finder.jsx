@@ -30,11 +30,12 @@ export default function Finder() {
         data-aos-duration="1000"
         width={"600px"}
       >
-        As a high school student, have you ever wanted to get real work experience at a real company? This is your chance to discover Computer Science internships at a number of businesses!
+        As a high school student, have you ever wanted to get real work
+        experience at a real company? This is your chance to discover Computer
+        Science internships at a number of businesses!
       </Text>
       <Button
         w={"290px"}
-        
         bgColor={"#4559E9"}
         borderRadius={"50px"}
         color={"#FFFFFF"}

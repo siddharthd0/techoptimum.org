@@ -6,15 +6,15 @@ import PodcastHero from "../components/podcast-landing";
 import PodcastPlayer from "../components/podcast-player";
 
 export default function Podcasts() {
-	return (
-		<>
-			<Header />
-			<Box mb="100px">
-				<PodcastHero />
-				<PodcastPlayer />
-			</Box>
-			<Socials />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Header />
+      <Box mb="100px">
+        <PodcastHero />
+        <PodcastPlayer />
+      </Box>
+      <Socials />
+      <Footer />
+    </>
+  );
 }

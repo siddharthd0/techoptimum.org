@@ -18,7 +18,7 @@ const theme = extendTheme({
     buttonBg: {
       500: "#4559E9",
       600: "#3549D9",
-    }
+    },
   },
   fonts: {
     body: "'Neue Machina', sans-serif",
