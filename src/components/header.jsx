@@ -11,7 +11,7 @@ export default function Header() {
 				alignItems="center"
 				padding="20px 10%"
 			>
-				<Heading fontSize="3xl" color="primary">
+				<Heading href="./#"fontSize="3xl" color="primary">
 					Tech Optimum
 				</Heading>
 				<nav>
