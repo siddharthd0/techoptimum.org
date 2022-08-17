@@ -1,22 +1,18 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import HackathonRecap from "../components/hackathon-recap.jsx";
-import HackathonBanner from "../assets/hackathon2022.svg";
 import { Box } from "@chakra-ui/react";
-import HackathonWinners from "../components/hackathon-winners";
-import UpcomingEvents from "../components/upcoming-events";
+import JoinHero from "../components/joinpage-landing";
+import JoinDiscord from "../components/join-discord";
 
 
 export default function Hackathons() {
 	return (
 		<>
 			<Header />
-  			<HackathonBanner width="100%" />
-			<Box my="100px">
-				<HackathonRecap />
-				<HackathonWinners/>
-				<UpcomingEvents/>
+			<Box mb="100px">
+				<JoinHero />
+				<JoinDiscord />
 			</Box>
 			<Socials />
 			<Footer />
