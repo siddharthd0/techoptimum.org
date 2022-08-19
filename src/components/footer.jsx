@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Text, Image, Input, Heading, Button } from "@chakra-ui/react";
-import {ExternalLinkIcon} from '@chakra-ui/icons';
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function Footer() {
   return (
@@ -55,7 +55,7 @@ export default function Footer() {
             JOIN OUR TEAM
           </Text>
         </Flex>
-        
+
         <Flex
           direction={"column"}
           h="150px"
@@ -65,7 +65,7 @@ export default function Footer() {
           <Heading color="primary" fontSize="lg">
             MISCELLANEOUS
           </Heading>
-       
+
           <Text color="primary" fontSize="md">
             BECOME A MEMBER
           </Text>
@@ -77,10 +77,10 @@ export default function Footer() {
           </Text>
         </Flex>
         <Flex direction={"column"} alignItems="start" justifyContent="center">
-          <Text width="250px"color="primary" fontSize="md">
-            At Tech Optimum, we strive for excellence when it comes to programming. 
-            Interested? Join us in the process of improving the future of CS.
-
+          <Text width="250px" color="primary" fontSize="md">
+            At Tech Optimum, we strive for excellence when it comes to
+            programming. Interested? Join us in the process of improving the
+            future of CS.
           </Text>
           <Button
             colorScheme="buttonBg"

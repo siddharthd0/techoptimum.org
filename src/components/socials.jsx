@@ -9,7 +9,7 @@ export default function Socials() {
         </Flex>
         <Flex justifyContent={"center"}>
           <Flex
-          className="social-section"
+            className="social-section"
             //  justifyContent={"center"}
             justifyContent={"space-around"}
             my={"3rem"}

@@ -3,22 +3,31 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import {useEffect} from 'react';
-import AOS from 'aos';
-import Head from 'next/head';
+import { useEffect } from "react";
+import AOS from "aos";
+import Head from "next/head";
 export default function Courses() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   useEffect(() => {
-      AOS.init();
-      AOS.refresh();
-    }, []);  
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Flex marginLeft={"7rem"} direction={"column"}>
       <Head>
-        <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" key="test"/>
+        <link
+          href="https://unpkg.com/aos@next/dist/aos.css"
+          rel="stylesheet"
+          key="test"
+        />
       </Head>
-      <Heading color="primary" fontSize="5xl" data-aos="fade-right" data-aos-duration="1000">
+      <Heading
+        color="primary"
+        fontSize="5xl"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         Courses
       </Heading>
       <Flex

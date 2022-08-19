@@ -12,16 +12,26 @@ import SquiggleLine from "../assets/Squiggly-Line.svg";
 export default function UpcomingEvents() {
   return (
     <>
-  
       <br></br>
-      <Flex position={"relative"} color="primary" mb={"3rem"}mt={"4rem"} paddingTop={"4rem"} height={"300px"} backgroundColor={"#05101D"} display={"column"} align="center" justify="center">
-      <Heading mb={"4rem"} fontSize="5xl"color="primary"align="center">Upcoming Events</Heading>
-      <div >
-       
-       </div>
+      <Flex
+        position={"relative"}
+        color="primary"
+        mb={"3rem"}
+        mt={"4rem"}
+        paddingTop={"4rem"}
+        height={"300px"}
+        backgroundColor={"#05101D"}
+        display={"column"}
+        align="center"
+        justify="center"
+      >
+        <Heading mb={"4rem"} fontSize="5xl" color="primary" align="center">
+          Upcoming Events
+        </Heading>
+        <div></div>
         <h2 align="center">More events coming soon...</h2>
         <SquiggleLine />
-        </Flex>
+      </Flex>
     </>
   );
 }
