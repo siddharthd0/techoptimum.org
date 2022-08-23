@@ -1,6 +1,6 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
-
+import ExecutiveCard from "../components/executive-card";
 import React from "react";
 import {
 	Box,
@@ -72,16 +72,9 @@ export default function About() {
 					Executives
 				</Heading>
 				<Flex mb={"9%"} direction={"row"} gap="65px">
-					{/* import sid.svg from public */}
-					<img src="/sid.svg" alt="sid" width="300" height="350" gap="15px" />
-					<img src="/pran.svg" alt="pran" width="300" height="350" gap="15px" />
-					<img
-						src="/arnav.svg"
-						alt="arnav"
-						width="300"
-						height="350"
-						gap="15px"
-					/>
+					<ExecutiveCard src="/sid.svg" name="Siddharth Duggal" role="CEO" />
+					<ExecutiveCard src="/pran.svg" name="Pranith Molakalapalli" role="CTO" />
+					<ExecutiveCard src="/arnav.svg" name="Arnav Pandey" role="COO" />
 				</Flex>
 			</Flex>
 
