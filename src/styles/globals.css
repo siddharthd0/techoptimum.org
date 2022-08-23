@@ -63,6 +63,11 @@ a {
   border-radius: 50%;
   font-weight: lighter;
   padding: 1.2rem;
+  transition:400ms;
+}
+.diagonal-button:hover {
+  background-color: #6e7ce8;
+
 }
 
 .audio-player {
