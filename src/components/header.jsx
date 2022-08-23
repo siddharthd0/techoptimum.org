@@ -14,6 +14,8 @@ export default function Header() {
         <Heading href="./#" fontSize="3xl" color="primary">
           Tech Optimum
         </Heading>
+
+
         <nav>
           <ul className="nav-links">
             <li>
