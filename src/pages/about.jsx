@@ -34,28 +34,28 @@ export default function About() {
 
 			<Flex
 				marginLeft={"7rem"}
-				marginTop={"10rem"}
+				marginTop={"5rem"}
 				direction={"column"}
 				data-aos={"fade-up"}
 				data-aos-duration={"2000"}
 			>
-				<Heading marginBottom={"2%"} color="primary" fontSize="5xl">
+				<Heading marginBottom={"2%"} color="primary" fontSize="4xl">
 					About Us
 				</Heading>
 
-				<Text fontSize="2xl">Tech Optimum is an organization that is entirely managed by students and is commited to influence the next wave of technological leaders. <br /><br /> As you deepen your understanding of computer science, we want to support you in every way we can. To achieve this, we have a few principles:</Text>
+				<Text width={"70%"} fontSize="2xl">Tech Optimum is an organization that is entirely managed by students and is commited to influence the next wave of technological leaders. <br /><br /> As you deepen your understanding of computer science, we want to support you in every way we can. To achieve this, we have a few principles:</Text>
 
 				<br />
 				<br />
 
-				<Flex mb={"9%"} direction={"row"} gap="65px">
-					<img src="/red_card.svg" alt="passion" width="460" height="420" gap="15px" />
-					<img src="/blue_card.svg" alt="assist" width="460" height="420" gap="15px" />
+				<Flex direction={"row"} gap="65px">
+					<img src="/red_card.svg" alt="passion" width="360" height="320" gap="15px" />
+					<img src="/blue_card.svg" alt="assist" width="360" height="320" gap="15px" />
 					<img
 						src="/green_card.svg"
 						alt="excellence"
-						width="460"
-						height="420"
+						width="360"
+						height="320"
 						gap="15px"
 					/>
 				</Flex>
@@ -63,7 +63,7 @@ export default function About() {
 
 			<Flex
 				marginLeft={"7rem"}
-				marginTop={"10rem"}
+				marginTop={"5rem"}
 				direction={"column"}
 				data-aos={"fade-up"}
 				data-aos-duration={"2000"}

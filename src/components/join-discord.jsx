@@ -42,8 +42,23 @@ export default function JoinDiscord() {
             rounded="3xl"
             marginBottom="20px"
             marginRight="20px"
+            borderWidth="5px"
+            transition={"500ms"}
+            borderColor="#4559E9"
+            _hover={{
+              borderColor: "#79BFF8",
+            }}
           >
-            <Heading fontSize="3xl">#General</Heading>
+            <Heading
+              fontSize="3xl"
+              transition="500ms"
+              _hover={{
+                cursor: "pointer",
+                textDecoration: "underline",
+              }}
+            >
+              #General
+            </Heading>
             <Text>Discuss with other enthusiasts</Text>
           </Flex>
           <Flex
@@ -54,6 +69,12 @@ export default function JoinDiscord() {
             rounded="3xl"
             marginBottom="20px"
             marginLeft="20px"
+            borderWidth="5px"
+            transition={"500ms"}
+            borderColor="#56D16A"
+            _hover={{
+              borderColor: "#CBEED0",
+            }}
           >
             <Heading fontSize="3xl">#Coding-memes</Heading>
             <Text>Get your daily dose of laughter</Text>

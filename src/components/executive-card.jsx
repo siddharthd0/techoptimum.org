@@ -8,7 +8,7 @@ export default function ExecutiveCard({ src, width="400", alt, name, role }) {
         <Flex height="500px" position="absolute" alignItems="stretch" zIndex={1}>
           <Flex width={"400px"} justifyContent="space-between" position="absolute" zIndex={1}>
             <Flex flexDir="column">
-              <Text marginTop="40px" marginLeft="40px" fontSize="xl" fontWeight="bold">{name.split(" ")[0]}</Text>
+              <Text Top="50px" marginLeft="40px" fontSize="xl" fontWeight="bold">{name.split(" ")[0]}</Text>
               <Text marginX="40px" fontSize="xl" fontWeight="bold">{name.split(" ")[1]}</Text>
             </Flex>
             <Text margin="40px" fontSize="xl" fontWeight="bold">{role}</Text>

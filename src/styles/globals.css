@@ -24,6 +24,9 @@ a {
   display: inline-block;
   padding: 0 10px;
 }
+.link-navs:hover {
+   color:#252739;
+}
 
 .job-card-image {
   width: 100%;
