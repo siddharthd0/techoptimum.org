@@ -130,3 +130,10 @@ a {
 .audio-player .controls .time > * {
   padding: 2px;
 }
+.gradient-title {
+  background: linear-gradient(90.85deg, #8692E2 21.85%, rgba(52, 193, 225, 0.495) 113.4%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

@@ -1,14 +1,17 @@
-import { Container, Flex, Heading, Text, Button } from "@chakra-ui/react";
+
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+import { Link } from '@chakra-ui/react'
+import { BsArrowUpRight } from "react-icons/bs";
+import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
 
 export default function HeroHeader() {
   return (
     <>
       <Flex height={"80vh"} width={"100%"} direction={"column"}>
         <Flex direction={"column"} width={"60%"} margin={"0rem 0 0 6rem"}>
-          <Heading color="primary" fontSize="5xl" marginBottom={"2.5rem"}>
+          <Heading className="gradient-title" fontSize="5xl" marginBottom={"2.5rem"}>
             Learn. Participate. Accomplish.
           </Heading>
           <Text
@@ -22,11 +25,15 @@ export default function HeroHeader() {
           </Text>
           <Button
             backgroundColor="transparent"
-            _hover={{ backgroundColor: "transparent" }}
+            _hover={{ 
+              backgroundColor: "transparent" ,
+              color: "#9DB2F6",
+            }}
             width="fit-content"
             padding={"0"}
             color="#1B76FF"
             fontWeight={"400"}
+         
             rightIcon={
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
             }
@@ -96,7 +103,12 @@ export default function HeroHeader() {
               <CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
               COMMUNITY MEMBERS
             </Heading>
+            <Link href='./join' 
+            transition="500ms">
+            <Icon className="diagonal-button" as={BsArrowUpRight} />
+            </Link>
           </Flex>
+         
         </Container>
       </Flex>
     </>

@@ -1,4 +1,5 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text, Link, Icon} from "@chakra-ui/react";
+import { BsArrowUpRight } from "react-icons/bs";
 import { useEffect } from "react";
 import AOS from "aos";
 import Head from "next/head";
@@ -16,6 +17,7 @@ export default function Events() {
           key="test"
         />
       </Head>
+
       <Heading
         color="primary"
         fontSize="5xl"
@@ -24,6 +26,7 @@ export default function Events() {
       >
         Events
       </Heading>
+   
       <Text
         color="primary"
         fontSize="3xl"
@@ -33,6 +36,8 @@ export default function Events() {
       >
         Participate in events hosted by Tech Optimum
       </Text>
+      
+      <Flex>
       <Text
         color="primary"
         fontSize="xl"
@@ -45,7 +50,9 @@ export default function Events() {
         which participants can code projects as a team or individually and
         competet for numerous prizes!. Not only that but, we host fun
         tournaments.
+       
       </Text>
+      </Flex>
     </Flex>
   );
 }

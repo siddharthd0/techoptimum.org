@@ -45,6 +45,7 @@ export default function Courses() {
           padding={"2rem"}
           data-aos={"fade-up"}
           data-aos-duration={"1000"}
+          className="course-cards"
         >
           <Heading
             color="#FFF6AA"
@@ -67,7 +68,11 @@ export default function Courses() {
           <Flex height={"25%"} alignItems={"center"}>
             <Button
               backgroundColor="transparent"
-              _hover={{ backgroundColor: "transparent" }}
+              transition={"700"}
+              _hover={{ 
+                backgroundColor: "transparent" ,
+                color:"#9DB2F6"
+              }}
               width="fit-content"
               padding={"0"}
               color="#FFF6AA"
@@ -75,6 +80,7 @@ export default function Courses() {
               rightIcon={
                 <ExternalLinkIcon position={"relative"} bottom={"2px"} />
               }
+              
             >
               LEARN MORE
             </Button>
@@ -111,9 +117,13 @@ export default function Courses() {
           </Text>
           <br></br>
           <Flex height={"25%"} alignItems={"center"}>
-            <Button
+          <Button
               backgroundColor="transparent"
-              _hover={{ backgroundColor: "transparent" }}
+              transition={"700"}
+              _hover={{ 
+                backgroundColor: "transparent" ,
+                color:"#9DB2F6"
+              }}
               width="fit-content"
               padding={"0"}
               color="#FFF6AA"
@@ -121,6 +131,7 @@ export default function Courses() {
               rightIcon={
                 <ExternalLinkIcon position={"relative"} bottom={"2px"} />
               }
+              
             >
               LEARN MORE
             </Button>
@@ -156,9 +167,13 @@ export default function Courses() {
           </Text>
           <br></br>
           <Flex height={"25%"} alignItems={"center"}>
-            <Button
+          <Button
               backgroundColor="transparent"
-              _hover={{ backgroundColor: "transparent" }}
+              transition={"700"}
+              _hover={{ 
+                backgroundColor: "transparent" ,
+                color:"#9DB2F6"
+              }}
               width="fit-content"
               padding={"0"}
               color="#FFF6AA"
@@ -166,6 +181,7 @@ export default function Courses() {
               rightIcon={
                 <ExternalLinkIcon position={"relative"} bottom={"2px"} />
               }
+              
             >
               LEARN MORE
             </Button>
