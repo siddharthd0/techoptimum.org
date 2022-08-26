@@ -76,7 +76,15 @@ export default function JoinDiscord() {
               borderColor: "#CBEED0",
             }}
           >
-            <Heading fontSize="3xl">#Coding-memes</Heading>
+            <Heading
+              fontSize="3xl"
+              _hover={{
+                cursor: "pointer",
+                textDecoration: "underline",
+              }}
+            >
+              #Coding-memes
+            </Heading>
             <Text>Get your daily dose of laughter</Text>
           </Flex>
         </Flex>
@@ -90,8 +98,22 @@ export default function JoinDiscord() {
             marginRight="20px"
             width="80%"
             className="cs-help"
+            borderWidth="5px"
+            transition={"500ms"}
+            borderColor="transparent"
+            _hover={{
+              borderColor: "#FBDEA0",
+            }}
           >
-            <Heading fontSize="5xl">#CS-help</Heading>
+            <Heading
+              fontSize="5xl"
+              _hover={{
+                cursor: "pointer",
+                textDecoration: "underline",
+              }}
+            >
+              #CS-help
+            </Heading>
             <Text fontSize="2xl">Get help with your CS problems</Text>
           </Flex>
           <Flex
@@ -101,10 +123,25 @@ export default function JoinDiscord() {
             rounded="3xl"
             marginTop="20px"
             marginLeft="20px"
-            width="20%"
+            width="25%"
+            borderWidth="5px"
+            transition={"500ms"}
+            borderColor="transparent"
+            _hover={{
+              borderColor: "#94D3ED",
+            }}
           >
             <Flex flexDir="column" transform="rotate(90deg)">
-              <Heading fontSize="3xl">#Networking</Heading>
+              <Heading
+                fontSize="3xl"
+                _hover={{
+                  cursor: "pointer",
+                  textDecoration: "underline",
+                }}
+              >
+                #Networking
+              </Heading>
+              
               <Text>Build your network</Text>
             </Flex>
           </Flex>
