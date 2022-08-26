@@ -1,5 +1,5 @@
-import { Flex, Text, Button } from "@chakra-ui/react";
-import JoinText from "../assets/Join-text-underline.svg";
+import { Link, Heading, Flex, Text, Button } from "@chakra-ui/react";
+// import JoinText from "../assets/Join-text-underline.svg";
 
 export default function JoinHero() {
   return (
@@ -15,20 +15,28 @@ export default function JoinHero() {
         paddingTop="5%"
         paddingBottom="10%"
       >
-        <JoinText height="30%" />
+        <Heading fontWeight={100} fontSize={"6xl"}>
+          Become a Member.<br />
+          It's free.
+        </Heading>
         <Text fontSize="2xl">
           Get access to free services, including free <br /> courses, free
           workshops, and a helpful community!
         </Text>
+        <Link href="./dashboard">
         <Button
           colorScheme="buttonBg"
           padding="40px"
           fontSize="3xl"
           fontWeight="normal"
           rounded="full"
+          _hover={{
+            textDecoration: "none !important"
+          }}
         >
           Get access now
         </Button>
+        </Link>
       </Flex>
     </>
   );

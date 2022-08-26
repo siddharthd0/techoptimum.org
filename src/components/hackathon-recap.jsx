@@ -41,7 +41,7 @@ export default function HackathonRecap() {
               ml={"6%"}
               mr={"6%"}
             >
-              <CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
+              <CountUp end={313} duration={4} useEasing={true} delay={1.5} />+
               <Text fontWeight={"400"} fontSize="2xl">
                 Participants
               </Text>
@@ -62,7 +62,7 @@ export default function HackathonRecap() {
               textAlign={"left"}
               ml={"1.1rem"}
             >
-              $<CountUp end={40000} duration={4} useEasing={true} delay={1.5} />
+              $<CountUp end={41750} duration={4} useEasing={true} delay={1.5} />
               +<br></br>
               <Text fontWeight={"400"} fontSize="2xl">
                 Prizes
