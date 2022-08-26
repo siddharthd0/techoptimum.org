@@ -19,28 +19,28 @@ export default function Header() {
         <nav>
           <ul className="nav-links">
             <li>
-              <Text color="primary">
-                <Link className="link-navs" href="/">HOME</Link>
+              <Text className="link-navs" color="primary">
+                <Link href="/">HOME</Link>
               </Text>
             </li>
             <li>
-              <Text color="primary">
+            <Text className="link-navs" color="primary">
                 <Link href="/join">JOIN</Link>
               </Text>
             </li>
             <li>
-              <Text color="primary">
+            <Text className="link-navs" color="primary">
                 <Link href="/hackathon">HACKATHON</Link>
               </Text>
             </li>
             <li>
-              <Text color="primary">
+            <Text className="link-navs" color="primary">
                 <Link href="/podcast">PODCAST</Link>
               </Text>
             </li>
 
             <li>
-              <Text color="primary">
+            <Text className="link-navs" color="primary">
                 <Link href="/about">ABOUT</Link>
               </Text>
             </li>
