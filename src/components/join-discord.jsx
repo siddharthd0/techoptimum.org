@@ -1,4 +1,12 @@
-import { Flex, Text, Button, Heading, IconButton, Box } from "@chakra-ui/react";
+import {
+  Link,
+  Flex,
+  Text,
+  Button,
+  Heading,
+  IconButton,
+  Box,
+} from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
 
 export default function JoinDiscord() {
@@ -7,24 +15,31 @@ export default function JoinDiscord() {
       <Flex flexDir="column" width="100vw" padding="5vw">
         <Flex alignItems="center">
           <Heading display="flex">
-            Join Our
+            Join our
             <Text mx="15px" color="#738BDA">
               Discord
             </Text>
             Server
           </Heading>
-          <IconButton
-            marginTop="7px"
-            marginLeft="10px"
-            icon={<BsArrowUpRight />}
-            background="transparant"
-            color="#1B76FF"
-            fontSize="3xl"
-          ></IconButton>
+          <Link href="./discord">
+            <IconButton
+              _hover={{
+                backgroundColor: "transparent",
+                color: "#738BDA",
+              }}
+              icon={<BsArrowUpRight />}
+              background="transparant"
+              color="#1B76FF"
+              fontSize="3xl"
+            ></IconButton>
+          </Link>
         </Flex>
         <Text marginY="40px" fontSize="xl">
-          A public community. We value innovation, which is why we <br />{" "}
-          created a platform for you to share your innovations
+          A public community full of programmers of all skill-levels. Whether{" "}
+          <br />
+          you need computer science help, want to network, or just want to be{" "}
+          <br />
+          entertained from our daily memes, we have it all.
         </Text>
         <Heading marginTop="60px">Channels for your needs</Heading>
         <Flex
@@ -141,7 +156,7 @@ export default function JoinDiscord() {
               >
                 #Networking
               </Heading>
-              
+
               <Text>Build your network</Text>
             </Flex>
           </Flex>
