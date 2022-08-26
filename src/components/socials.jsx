@@ -20,7 +20,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
-              className="socials-text-tiktok"
+              className="socials-text-tiktok smooth-hover"
             >
               TIKTOK
             </Text>
@@ -29,7 +29,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
-              className="socials-text-twitter"
+              className="socials-text-twitter smooth-hover"
             >
               TWITTER
             </Text>
@@ -38,7 +38,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
-              className="socials-text-instagram"
+              className="socials-text-instagram smooth-hover"
             >
               INSTAGRAM
             </Text>
@@ -47,7 +47,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
-              className="socials-text-linkedin"
+              className="socials-text-linkedin smooth-hover"
             >
               LINKEDIN
             </Text>
@@ -56,7 +56,7 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               mr={"50px"}
-              className="socials-text-discord"
+              className="socials-text-discord smooth-hover"
             >
               DISCORD
             </Text>

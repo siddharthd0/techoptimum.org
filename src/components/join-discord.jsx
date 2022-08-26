@@ -85,11 +85,11 @@ export default function JoinDiscord() {
             padding="40px"
             flexDir="column"
             justifyContent="center"
-            bg="#FFC4AA"
             rounded="3xl"
             marginTop="20px"
             marginRight="20px"
             width="80%"
+            className="cs-help"
           >
             <Heading fontSize="5xl">#CS-help</Heading>
             <Text fontSize="2xl">Get help with your CS problems</Text>
