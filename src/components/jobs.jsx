@@ -45,6 +45,8 @@ export default function Jobs() {
         >
           <Flex className="job-cards" mx={"50px"} mt={"80px"}>
             <Box
+             data-aos="zoom-in-down"
+             data-aos-delay="200"
               className="job-card1"
               bgColor={"#4559E9"}
               borderRadius={"32px"}
@@ -105,6 +107,8 @@ export default function Jobs() {
               </Flex>
             </Box>
             <Box
+             data-aos-delay="400"
+             data-aos="zoom-in-down"
               className="job-card2"
               bgColor={"#4559E9"}
               borderRadius={"32px"}
@@ -166,6 +170,8 @@ export default function Jobs() {
               </Flex>
             </Box>
             <Box
+             data-aos-delay="600"
+             data-aos="zoom-in-down"
               className="job-card3"
               bgColor={"#4559E9"}
               mr={"5%"}
@@ -229,19 +235,24 @@ export default function Jobs() {
           <Flex justifyContent={"flex-end"} mt={"4%"} mr={"50px"}>
             <Button
               bgColor={"#4559E9"}
-              borderRadius={"30px"}
+              borderRadius={"15px"}
               variant={"unstyled"}
               pr="20px"
               pl="20px"
+              transitionDuration={"500ms"}
               _hover={{
-                bgColor: "#4558eb",
+                bgColor: "#6C7BE6",
+                transitionDuration: "500ms",
               }}
+              data-aos-delay="600"
+              data-aos="fade-left"
             >
               <Flex flexDirection={"row"} alignItems="center">
-                <Text color={"#FFFFFF"} fontWeight={"400"} fontSize={"xl"}>
-                  MORE JOBS
+                <Text color={"#FFFFFF"} fontWeight={"400"} fontSize={"lg"}>
+                  Find more jobs
                 </Text>
                 <Icon
+                  pl={"5px"}
                   as={BsArrowUpRight}
                   color={"#FFFFFF"}
                   fontSize={"1.3rem"}
