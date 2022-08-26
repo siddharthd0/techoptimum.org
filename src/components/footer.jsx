@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Image, Input, Heading, Button } from "@chakra-ui/react";
+import { Flex, Text, Image, Input, Heading, Button, Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function Footer() {
@@ -37,7 +37,7 @@ export default function Footer() {
         </Flex>
         <Flex
           direction={"column"}
-          h="150px"
+          h="130px"
           justifyContent="space-between"
           alignItems="start"
         >
@@ -46,34 +46,39 @@ export default function Footer() {
           </Heading>
 
           <Text color="primary" fontSize="md">
-            COMMUNITY
+            <Link href="./community"> 
+            Community
+            </Link>
+
           </Text>
           <Text color="primary" fontSize="md">
-            CONTACT US
+          <Link href="./contact"> 
+           Contact</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            JOIN OUR TEAM
+          <Link href="./join-leadership"> 
+           Join our Team</Link>
           </Text>
         </Flex>
 
         <Flex
           direction={"column"}
-          h="150px"
+          h="130px"
           justifyContent="space-between"
           alignItems="start"
         >
           <Heading color="primary" fontSize="lg">
-            MISCELLANEOUS
+            OTHER
           </Heading>
 
           <Text color="primary" fontSize="md">
-            BECOME A MEMBER
+            <Link href="join"> Become a Member</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            WORKSHOPS
+            <Link href="workshops"> Workshops</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            JOIN OUR COMMUNITY
+            <Link href="discord"> Discord</Link>
           </Text>
         </Flex>
         <Flex direction={"column"} alignItems="start" justifyContent="center">
