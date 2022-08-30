@@ -7,7 +7,8 @@ export default function Header() {
   return (
     <>
       <Flex
-        zIndex={1}
+        zIndex={100}
+        position="relative"
         justifyContent="space-between"
         alignItems="center"
         padding="20px 10%"
