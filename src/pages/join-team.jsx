@@ -8,7 +8,7 @@ export default function JoinTeam() {
   return (
     <>
       <Header />
-      <Box position="relative" top="-120px" mb="100px" overflow="hidden">
+      <Box zIndex={"2"} position="relative" top="-120px" mb="100px" overflow="hidden">
         <JoinTeamLanding />
       </Box>
       <Socials />

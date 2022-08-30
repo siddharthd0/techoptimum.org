@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   Textarea,
+  Button,
 } from "@chakra-ui/react";
 
 export default function HeroHeader() {
@@ -15,7 +16,8 @@ export default function HeroHeader() {
         <Flex
           padding={"30px"}
           borderRadius={"20px"}
-          backgroundColor={"blue.900"}
+
+          backgroundColor={"#444867"}
           marginBottom={"60px"}
           marginTop={"50px"}
           width="700px"
@@ -33,6 +35,9 @@ export default function HeroHeader() {
               </Flex>
               <FormLabel mt={"15px"} >Message</FormLabel>
               <Textarea placeholder='your super super important message' />
+              <Button 
+              mt="1rem"
+              color="blue">Submit</Button>
             </FormControl>
             
           </div>
