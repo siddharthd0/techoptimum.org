@@ -8,7 +8,7 @@ import {
   Textarea,
   Button,
 } from "@chakra-ui/react";
-
+import { BsArrowRight } from "react-icons/bs";
 export default function HeroHeader() {
   return (
     <>
@@ -26,18 +26,32 @@ export default function HeroHeader() {
             <Heading fontSize={"4xl"} mb={"15px"}>Get in Touch </Heading>
             <FormControl>
               <FormLabel >Email</FormLabel>
-              <Input mb={"15px"}placeholder="your lovely email"type="email" />
+              <Input mb={"15px"}placeholder="siddharthduggal2013@gmail.com"type="email" />
               <Flex>
               <FormLabel>First name</FormLabel>
-                <Input placeholder='ur very interesting first name' />
+                <Input placeholder='Siddharth' />
                 <FormLabel ml="20px">Last name</FormLabel>
-                <Input placeholder='what is ur poggers last name' />
+                <Input placeholder='Duggal' />
               </Flex>
               <FormLabel mt={"15px"} >Message</FormLabel>
-              <Textarea placeholder='your super super important message' />
-              <Button 
-              mt="1rem"
-              color="blue">Submit</Button>
+              <Textarea placeholder='Explain what you need help with here!' />
+          
+               <Button
+            backgroundColor="#2E3569"
+            borderRadius="full"
+            px="10"
+            marginTop={3}
+            fontWeight="normal"
+            rightIcon={
+              <BsArrowRight position={"relative"}  />
+            }
+            _hover={{
+              backgroundColor:"#272D56",
+            }}
+
+          >
+            SEND
+          </Button>
             </FormControl>
             
           </div>
