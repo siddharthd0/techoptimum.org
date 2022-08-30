@@ -151,3 +151,9 @@ a {
 .cs-help {
   background: linear-gradient(273.54deg, #FFC4AA -54.24%, rgba(251, 152, 69, 0.838636) 4.07%, rgba(253, 183, 119, 0.8) 18.03%, rgba(253, 180, 116, 0.8) 31.16%, rgba(253, 180, 116, 0.8) 31.17%, rgba(253, 167, 102, 0.8) 91.13%);
 }
+.faq-button {
+  background-color:#1b2341;
+  border:none;
+  text-decoration: none;
+  border-radius: 20px;
+}

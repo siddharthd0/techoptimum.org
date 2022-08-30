@@ -239,10 +239,10 @@ export default function Jobs() {
               variant={"unstyled"}
               pr="20px"
               pl="20px"
-              transitionDuration={"500ms"}
+              transition={"700"}
               _hover={{
                 bgColor: "#6C7BE6",
-                transitionDuration: "500ms",
+                transition: "700",
               }}
               data-aos-delay="600"
               data-aos="fade-left"
