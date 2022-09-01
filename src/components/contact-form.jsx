@@ -1,60 +1,148 @@
 import { motion } from "framer-motion";
 import {
   FormControl,
-  FormLabel,
   Input,
   Flex,
   Heading,
   Textarea,
   Button,
+  Box,
+  Text,
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
+
 export default function HeroHeader() {
   return (
     <>
-      <Flex width="1000px" margin={"auto"}>
-        <Flex
-          padding={"30px"}
-          borderRadius={"20px"}
-
-          backgroundColor={"#444867"}
-          marginBottom={"60px"}
-          marginTop={"50px"}
-          width="700px"
-        >
-          <div>
-            <Heading fontSize={"4xl"} mb={"15px"}>Get in Touch </Heading>
-            <FormControl>
-              <FormLabel >Email</FormLabel>
-              <Input mb={"15px"}placeholder="siddharthduggal2013@gmail.com"type="email" />
-              <Flex>
-              <FormLabel>First name</FormLabel>
-                <Input placeholder='Siddharth' />
-                <FormLabel ml="20px">Last name</FormLabel>
-                <Input placeholder='Duggal' />
-              </Flex>
-              <FormLabel mt={"15px"} >Message</FormLabel>
-              <Textarea placeholder='Explain what you need help with here!' />
-          
-               <Button
-            backgroundColor="#2E3569"
-            borderRadius="full"
-            px="10"
-            marginTop={3}
-            fontWeight="normal"
-            rightIcon={
-              <BsArrowRight position={"relative"}  />
-            }
-            _hover={{
-              backgroundColor:"#272D56",
-            }}
-
+      <Flex height="80vh" width="100vw" justifyContent="center" margin={"auto"} color="#A7B2FF">
+        <Flex width="70vw" marginTop="50px" marginBottom="50px">
+          <Box
+            padding={"50px"}
+            borderRadius={"20px"}
+            backgroundImage={"/contact-card.svg"}
+            backgroundRepeat="no-repeat"
+            backgroundSize="cover"
+            width="35vw"
+            height="100%"
           >
-            SEND
-          </Button>
+            <Heading fontSize={"4xl"} mb={"30px"}>
+              Get in Touch{" "}
+            </Heading>
+            <FormControl height="full">
+              <Input
+                mb={"40px"}
+                _placeholder={{
+                  color: "#A7B2FF",
+                }}
+                padding="0"
+                placeholder="EMAIL"
+                type="email"
+                border="none"
+                borderRadius="0px"
+                borderBottom="1px"
+                borderBottomColor="#fff"
+              />
+              <Flex mb="40px">
+                <Box>
+                  <Input
+                    _placeholder={{
+                      color: "#A7B2FF",
+                    }}
+                    padding="0"
+                    placeholder="FIRST NAME"
+                    border="none"
+                    borderRadius="0px"
+                    borderBottom="1px"
+                    borderBottomColor="#fff"
+                  />
+                </Box>
+                <Box ml="20px">
+                  <Input
+                    _placeholder={{
+                      color: "#A7B2FF",
+                    }}
+                    padding="0"
+                    placeholder="LAST NAME"
+                    border="none"
+                    borderRadius="0px"
+                    borderBottom="1px"
+                    borderBottomColor="#fff"
+                  />
+                </Box>
+              </Flex>
+              <Textarea
+                _placeholder={{
+                  color: "#A7B2FF",
+                }}
+                padding="0"
+                placeholder="SUBJECT"
+                border="none"
+                borderRadius="0px"
+                borderBottom="1px"
+                borderBottomColor="#fff"
+                marginBottom="30px"
+                height="17vh"
+              />
+
+              <Button
+                backgroundColor="#2E3569"
+                borderRadius="full"
+                px="10"
+                marginTop={3}
+                fontWeight="normal"
+                rightIcon={<BsArrowRight position={"relative"} />}
+                _hover={{
+                  backgroundColor: "#272D56",
+                }}
+              >
+                SEND
+              </Button>
             </FormControl>
-            
-          </div>
+          </Box>
+          <Flex
+            paddingLeft="5rem"
+            width="35vw"
+            flexDir="column"
+            justifyContent="center"
+            alignItems="center"
+            color="#A7B2FF"
+          >
+            <Box
+              paddingBottom="2rem"
+              borderBottom="1px"
+              borderBottomColor="#A7B2FF"
+            >
+              <Flex marginBottom="20px" alignItems="center">
+                <img src="/contact-icon-1.svg" alt="talking icon" width="60" />
+                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+                  Speak the truth
+                </Text>
+              </Flex>
+              <Text>
+                At Tech Optimum we thrive for your feedback! We always like
+                people who speak the truth, so share your honest feedback, ask
+                questions, and just speak the truth.
+              </Text>
+            </Box>
+            <Box
+              paddingTop="2rem"
+              paddingBottom="2rem"
+              borderBottom="1px"
+              borderBottomColor="#A7B2FF"
+            >
+              <Flex marginBottom="20px" alignItems="center">
+                <img src="/contact-icon-2.svg" alt="talking icon" width="60" />
+                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+                  Speak the truth
+                </Text>
+              </Flex>
+              <Text>
+                At Tech Optimum we thrive for your feedback! We always like
+                people who speak the truth, so share your honest feedback, ask
+                questions, and just speak the truth.
+              </Text>
+            </Box>
+          </Flex>
         </Flex>
       </Flex>
     </>
