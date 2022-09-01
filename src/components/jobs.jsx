@@ -239,25 +239,20 @@ export default function Jobs() {
               variant={"unstyled"}
               pr="20px"
               pl="20px"
-              transition={"700"}
+              transition={"700ms"}
               _hover={{
                 bgColor: "#6C7BE6",
                 transition: "700",
               }}
               data-aos-delay="600"
               data-aos="fade-left"
+              rightIcon={
+                <BsArrowUpRight position={"relative"} bottom={"2px"} />
+              }
             >
-              <Flex flexDirection={"row"} alignItems="center">
-                <Text color={"#FFFFFF"} fontWeight={"400"} fontSize={"lg"}>
+         
                   Find more jobs
-                </Text>
-                <Icon
-                  pl={"5px"}
-                  as={BsArrowUpRight}
-                  color={"#FFFFFF"}
-                  fontSize={"1.3rem"}
-                />
-              </Flex>
+               
             </Button>
           </Flex>
           <br></br>
