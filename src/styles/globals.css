@@ -157,3 +157,14 @@ a {
   text-decoration: none;
   border-radius: 20px;
 }
+
+.development-heading {
+  background: linear-gradient(90deg, #4458E4 5.11%, #8290FF 58.28%, #2A3896 116.07%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+
+}
