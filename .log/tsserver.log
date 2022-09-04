@@ -1,27 +1,37 @@
-Info 0    [23:09:47.137] Starting TS Server
-Info 1    [23:09:47.140] Version: 4.6.2
-Info 2    [23:09:47.140] Arguments: /usr/bin/node /usr/lib/node_modules/typescript/lib/tsserver.js --logFile /home/aryan/Code/TechOptimum/Tech-Optimum-Website/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/0c73fba914883010d0954864bc25d4ee/tscancellation*
-Info 3    [23:09:47.140] Platform: linux NodeVersion: 18 CaseSensitive: true
-Info 4    [23:09:47.140] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
-Info 5    [23:09:47.158] Format host information updated
-Info 6    [23:09:47.169] Search path: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/pages
-Info 7    [23:09:47.170] For info: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/pages/about.jsx :: No config files found.
-Info 8    [23:09:47.176] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info 9    [23:09:53.524] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 6347.579442001879ms
-Info 10   [23:09:53.524] Project '/dev/null/inferredProject1*' (Inferred)
-Info 11   [23:09:53.524] 	Files (657)
+Info 0    [13:52:35.045] Starting TS Server
+Info 1    [13:52:35.150] Version: 4.6.2
+Info 2    [13:52:35.150] Arguments: /usr/bin/node /usr/lib/node_modules/typescript/lib/tsserver.js --logFile /home/aryan/Code/TechOptimum/Tech-Optimum-Website/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/f319b13b25c45bbc26a6a3305503ff79/tscancellation*
+Info 3    [13:52:35.150] Platform: linux NodeVersion: 18 CaseSensitive: true
+Info 4    [13:52:35.150] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [13:52:35.418] Format host information updated
+Info 6    [13:53:05.222] Search path: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components
+Info 7    [13:53:05.223] For info: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/hackathon-recap.jsx :: No config files found.
+Info 8    [13:53:05.228] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 9    [13:53:26.572] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 21343.522991999984ms
+Info 10   [13:53:26.572] Project '/dev/null/inferredProject1*' (Inferred)
+Info 11   [13:53:26.572] 	Files (572)
 
-Info 12   [23:09:53.524] -----------------------------------------------
-Info 13   [23:09:53.611] AutoImportProviderProject: found 8 root files in 8 dependencies in 81.88264499604702 ms
-Info 14   [23:09:53.612] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
-Info 15   [23:09:55.758] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 2146.124268002808ms
-Info 16   [23:09:55.758] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
-Info 17   [23:09:55.758] 	Files (110)
+Info 12   [13:53:26.572] -----------------------------------------------
+Info 13   [13:53:26.702] AutoImportProviderProject: found 7 root files in 7 dependencies in 126.09056899975985 ms
+Info 14   [13:53:26.705] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 15   [13:53:29.358] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 2653.109451999888ms
+Info 16   [13:53:29.358] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 17   [13:53:29.358] 	Files (105)
 
-Info 18   [23:09:55.758] -----------------------------------------------
-Info 19   [23:09:55.840] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info 20   [23:09:55.910] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: true structureIsReused:: Not Elapsed: 70.4926619976759ms
-Info 21   [23:09:55.910] Different program with same set of files
-Info 22   [23:09:58.341] Before ensureProjectForOpenFiles:
-Info 23   [23:09:58.341] After ensureProjectForOpenFiles:
-Info 24   [23:09:58.341] got projects updated in background, updating diagnostics for /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/pages/about.jsx
+Info 18   [13:53:29.358] -----------------------------------------------
+Info 19   [13:53:30.643] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 20   [13:53:31.600] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: true structureIsReused:: Not Elapsed: 957.1748110000044ms
+Info 21   [13:53:31.600] Project '/dev/null/inferredProject1*' (Inferred)
+Info 22   [13:53:31.600] 	Files (577)
+
+Info 23   [13:53:31.600] -----------------------------------------------
+Info 24   [13:53:31.600] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 25   [13:53:31.600] 	Files (105)
+
+Info 26   [13:53:31.600] -----------------------------------------------
+Info 27   [13:53:33.100] Before ensureProjectForOpenFiles:
+Info 28   [13:53:33.100] After ensureProjectForOpenFiles:
+Info 29   [13:53:33.100] got projects updated in background, updating diagnostics for /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/hackathon-recap.jsx
+Info 30   [13:57:25.438] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 31   [13:57:25.463] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 24.975391999818385ms
+Info 32   [13:57:25.464] Different program with same set of files
