@@ -1,0 +1,59 @@
+[18:45:17.287] Global cache location '/home/aryan/.cache/typescript/4.6', safe file path '/usr/lib/node_modules/typescript/lib/typingSafeList.json', types map path /usr/lib/node_modules/typescript/lib/typesMap.json
+[18:45:17.290] Processing cache location '/home/aryan/.cache/typescript/4.6'
+[18:45:17.290] Trying to find '/home/aryan/.cache/typescript/4.6/package.json'...
+[18:45:17.382] Loaded content of '/home/aryan/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.606"},"devDependencies":{"@types/aos":"^3.0.4","@types/co":"^4.6.3","@types/eslint":"^8.4.5","@types/lodash.debounce":"^4.0.7","@types/lodash.throttle":"^4.1.7","@types/node":"^18.7.2","@types/react":"^18.0.17","@types/react-dom":"^18.0.6","@types/styled-components":"^5.1.26","@types/webpack":"^5.28.0"}}
+[18:45:17.382] Loaded content of '/home/aryan/.cache/typescript/4.6/package-lock.json'
+[18:45:17.436] Adding entry into typings cache: 'aos' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/aos/index.d.ts'
+[18:45:17.486] Adding entry into typings cache: 'co' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/co/index.d.ts'
+[18:45:17.506] Adding entry into typings cache: 'eslint' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/eslint/index.d.ts'
+[18:45:17.556] Adding entry into typings cache: 'lodash.debounce' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/lodash.debounce/index.d.ts'
+[18:45:17.558] Adding entry into typings cache: 'lodash.throttle' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/lodash.throttle/index.d.ts'
+[18:45:17.609] Adding entry into typings cache: 'node' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/node/index.d.ts'
+[18:45:17.666] Adding entry into typings cache: 'react' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts'
+[18:45:17.707] Adding entry into typings cache: 'react-dom' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/react-dom/index.d.ts'
+[18:45:17.731] Adding entry into typings cache: 'styled-components' => '/home/aryan/.cache/typescript/4.6/node_modules/@types/styled-components/index.d.ts'
+[18:45:17.753] Adding entry into typings cache: 'webpack' => '/home/aryan/.cache/typescript/4.6/node_modules/webpack/types.d.ts'
+[18:45:17.754] Finished processing cache location '/home/aryan/.cache/typescript/4.6'
+[18:45:17.754] Process id: 21402
+[18:45:17.754] NPM location: /usr/bin/npm (explicit '--npmLocation' not  provided)
+[18:45:17.754] validateDefaultNpmLocation: false
+[18:45:17.754] Npm config file: /home/aryan/.cache/typescript/4.6/package.json
+[18:45:17.754] Updating types-registry npm package...
+[18:45:17.754] Exec: /usr/bin/npm install --ignore-scripts types-registry@latest
+[18:45:25.966]     Succeeded. stdout:
+    
+    changed 1 package, and audited 95 packages in 2s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+[18:45:25.966] Updated types-registry npm package
+[18:45:39.773] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/usr/lib/node_modules/typescript/lib/lib.es5.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/usr/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/hackathon-recap.jsx"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components","kind":"discover"}
+[18:45:39.780] Loaded safelist from types map file '/usr/lib/node_modules/typescript/lib/typesMap.json'
+[18:45:39.781] Explicitly included types: []
+[18:45:39.781] Inferred 'react' typings due to presence of '.jsx' extension
+[18:45:39.781] Inferred typings from unresolved imports: []
+[18:45:39.781] Result: {"cachedTypingPaths":["/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components","/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules"]}
+[18:45:39.781] Finished typings discovery: {"cachedTypingPaths":["/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components","/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules"]}
+[18:45:39.782] DirectoryWatcher:: Added:: WatchInfo: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components
+[18:45:39.782] DirectoryWatcher:: Added:: WatchInfo: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:45:39.783] Elapsed:: 1.036226999014616ms DirectoryWatcher:: Added:: WatchInfo: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:45:39.783] DirectoryWatcher:: Added:: WatchInfo: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules
+[18:45:39.783] DirectoryWatcher:: Added:: WatchInfo: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:45:39.783] Elapsed:: 0.08689000084996223ms DirectoryWatcher:: Added:: WatchInfo: /home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:45:39.783] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[18:45:39.784] Response has been sent.
+[18:45:39.784] No new typings were requested as a result of typings discovery
+[18:45:41.640] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/usr/lib/node_modules/typescript/lib/lib.es5.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/usr/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/hackathon-recap.jsx","/home/aryan/.cache/typescript/4.6/node_modules/@types/react/global.d.ts","/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components","kind":"discover"}
+[18:45:41.640] Explicitly included types: []
+[18:45:41.640] Inferred 'react' typings due to presence of '.jsx' extension
+[18:45:41.640] Inferred typings from unresolved imports: []
+[18:45:41.640] Result: {"cachedTypingPaths":["/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components","/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules"]}
+[18:45:41.641] Finished typings discovery: {"cachedTypingPaths":["/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/bower_components","/home/aryan/Code/TechOptimum/Tech-Optimum-Website/src/components/node_modules"]}
+[18:45:41.641] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["/home/aryan/.cache/typescript/4.6/node_modules/@types/react/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[18:45:41.641] Response has been sent.
+[18:45:41.641] No new typings were requested as a result of typings discovery
