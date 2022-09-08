@@ -21,7 +21,7 @@ export default function Events() {
       <Heading
         color="primary"
         fontSize="5xl"
-        data-aos="fade-left"
+        data-aos="fade-right"
         data-aos-duration="1000"
       >
         Events
@@ -44,7 +44,7 @@ export default function Events() {
         fontSize="xl"
         marginTop={"2.5rem"}
         width={"65%"}
-        data-aos="fade-left"
+        data-aos="fade-right"
         data-aos-duration="1000"
       >
         We host yearly hackathons. A hackathon is 48-hour coding competition in
