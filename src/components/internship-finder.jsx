@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import Head from "next/head";
-import { Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
+import { Flex, Heading, Text, Button, Icon, Image } from "@chakra-ui/react";
 
 export default function Finder() {
   return (
@@ -34,6 +34,7 @@ export default function Finder() {
         experience at a real company? This is your chance to discover Computer
         Science internships at a number of businesses!
       </Text>
+      
       <Button
         w={"290px"}
         bgColor={"#4559E9"}
@@ -47,9 +48,9 @@ export default function Finder() {
       >
         Find internships now
       </Button>
+      
     </Flex>
   );
 }
 
-// data-aos="fade-right"
-// data-aos-duration="1000"
+

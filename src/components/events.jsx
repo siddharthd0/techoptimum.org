@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Link, Icon} from "@chakra-ui/react";
+import { Flex, Heading, Text, Link, Icon, Image, Stack} from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -17,7 +17,7 @@ export default function Events() {
           key="test"
         />
       </Head>
-
+    
       <Heading
         color="primary"
         fontSize="5xl"
@@ -38,11 +38,12 @@ export default function Events() {
       </Text>
       
       <Flex>
+     
       <Text
         color="primary"
         fontSize="xl"
         marginTop={"2.5rem"}
-        width={"70%"}
+        width={"65%"}
         data-aos="fade-left"
         data-aos-duration="1000"
       >
@@ -52,7 +53,10 @@ export default function Events() {
         tournaments.
        
       </Text>
+      <Image mt="-10rem" p={"0"} boxSize='300px' src='https://media.discordapp.net/attachments/910672979401269258/1017251262422601870/stripy-90_1.png' alt='Dan Abramov' />
+     
       </Flex>
+      
     </Flex>
   );
 }
