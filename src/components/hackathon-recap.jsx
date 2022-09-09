@@ -92,7 +92,7 @@ export default function HackathonRecap() {
 						<Heading width="10%" color="primary" fontSize="3xl">
 						</Heading>
 						<Heading width="65%" color="primary" fontSize="3xl">
-							skribble.io
+							Skribble.io
 						</Heading>
 					</Flex>
 				</Flex>
