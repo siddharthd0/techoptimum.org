@@ -14,7 +14,7 @@ import { BsArrowRight } from "react-icons/bs";
 export default function HeroHeader() {
   return (
     <>
-      <Flex height="80vh" width="100vw" justifyContent="center" margin={"auto"} color="#A7B2FF">
+      <Flex width="100vw" justifyContent="center" margin={"auto"} color="#A7B2FF">
         <Flex width="70vw" marginTop="50px" marginBottom="50px">
           <Box
             padding={"50px"}
@@ -23,7 +23,7 @@ export default function HeroHeader() {
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             width="35vw"
-            height="100%"
+           
           >
             <Heading fontSize={"4xl"} mb={"30px"}>
               Get in Touch{" "}
