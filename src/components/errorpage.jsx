@@ -78,7 +78,7 @@ export default function Error() {
         </Flex>
         <Box
           boxSize={["xs", "md", "lg"]}
-          paddingLeft={{ base: "60px", lg: "0" }}
+          paddingLeft={{ base: "60px", md: "0", lg: "0" }}
         >
           <Image src="/robot_404.png" alt="404" />
         </Box>
