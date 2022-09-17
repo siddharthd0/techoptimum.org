@@ -1,6 +1,7 @@
 import { Image, Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import JoinWebDev from "../assets/web-developer-graphic.svg";
 export default function JoinTeamJobs() {
   return (
     <>
@@ -27,6 +28,7 @@ improve & maintain it.</Text>
           >
             LEARN MORE
           </Button>
+          <JoinWebDev width="50vw" />
       </Flex>
     </>
   );
