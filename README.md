@@ -1,6 +1,6 @@
 # Tech Optimum Website
 
-This is the official website for the student led organization, <strong>Tech Optimum</strong>!!
+This is the official website for the student led organization, <strong>Tech Optimum</strong>!
 
 ## Contributing
 
