@@ -35,7 +35,7 @@ export default function Jobs() {
         data-aos-duration={"2000"}
       >
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
-          Jobs
+          Volunteer with us
         </Heading>
         <Box
           maxW="1210px"
