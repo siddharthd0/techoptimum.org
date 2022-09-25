@@ -50,7 +50,7 @@ export default function About() {
         <br />
 
         <Stack direction={["column", "row"]} spacing="24px">
-          <Box borderRadius={"20px"} h="300px"w="300px" bg="#29368C">
+          <Box borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
             <div text-align="center">
               <Text pl={"2rem"} pr="2rem" marginTop="2rem">
                 <HeartIcon margin="auto" />
@@ -67,7 +67,7 @@ export default function About() {
               </Text>
             </div>
           </Box>
-          <Box borderRadius={"20px"} h="300px"w="300px" bg="#29368C">
+          <Box borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
             <Center>
               <Text pl={"2rem"} pr="2rem" marginTop="2rem">
                 <ChatIcon />
@@ -84,7 +84,7 @@ export default function About() {
               </Text>
             </Center>
           </Box>
-          <Box borderRadius={"20px"} h="300px"w="300px" bg="#29368C">
+          <Box borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
             <Center>
               <Text pb="4rem" pl={"2rem"} pr="2rem" marginTop="2rem">
                 <SupportIcon />
@@ -94,7 +94,7 @@ export default function About() {
                   fontWeight={"300"}
                   fontSize={"3xl"}
                 >
-                 Excellence
+                  Excellence
                 </Heading>
                 We strive for excellence when it comes to computer science. We
                 do not stop when we reach average.
