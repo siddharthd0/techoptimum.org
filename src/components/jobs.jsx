@@ -239,21 +239,20 @@ export default function Jobs() {
               variant={"unstyled"}
               pr="20px"
               pl="20px"
-              transition={"700ms"}
               _hover={{
                 bgColor: "#6C7BE6",
-                transition: "700",
-              }}
+               
+              }}// someone add a hover transition here plz
               data-aos-delay="600"
               data-aos="fade-left"
-              rightIcon={
-                <BsArrowUpRight position={"relative"} bottom={"2px"} />
-              }
+
             >
          
                   Find more jobs
                
             </Button>
+           
+   
           </Flex>
           <br></br>
         </Box>
