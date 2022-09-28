@@ -120,7 +120,7 @@ export default function About() {
             src="/pran.svg"
             name="Pranith Molakalapalli"
             role="CTO"
-          />
+          /> 
           <ExecutiveCard src="/arnav.svg" name="Arnav Pandey" role="COO" />
         </Flex>
       </Flex>

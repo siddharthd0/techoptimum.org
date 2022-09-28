@@ -20,7 +20,7 @@ export default function Footer() {
               objectFit="cover"
               src="/Logo.png"
               alt="Logo"
-            />
+            /> 
             <Text marginLeft={3} fontSize="3xl" color="primary">
               TECH OPTIMUM
             </Text>
