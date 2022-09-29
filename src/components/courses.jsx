@@ -35,7 +35,8 @@ export default function Courses() {
 
 
       <Stack direction={["column", "row"]} spacing="60px">
-          <Box backgroundColor="#003B73"borderRadius={"20px"} h="250px"w="280px" >
+          <Box data-aos-delay="100"
+             data-aos="zoom-in-up" backgroundColor="#003B73"borderRadius={"20px"} h="250px"w="280px" >
             <div text-align="center">
               <Text color="#FFF6AA"fontSize="sm"pl={"2rem"} pr="2rem" marginTop="2rem">
      
@@ -69,7 +70,8 @@ export default function Courses() {
               
             </div>
           </Box>
-          <Box backgroundColor="#05445E"borderRadius={"20px"} h="250px"w="280px" >
+          <Box data-aos-delay="300"
+             data-aos="zoom-in-up"backgroundColor="#05445E"borderRadius={"20px"} h="250px"w="280px" >
             <Center>
               <Text color="#FFF6AA"fontSize="sm"pl={"2rem"} pr="2rem" marginTop="2rem">
                
@@ -103,7 +105,8 @@ export default function Courses() {
               </Text>
             </Center>
           </Box>
-          <Box  backgroundColor="#145DA0"borderRadius={"20px"} h="250px"w="280px" >
+          <Box  data-aos-delay="600"
+             data-aos="zoom-in-up"backgroundColor="#145DA0"borderRadius={"20px"} h="250px"w="280px" >
             <Center>
               <Text color="#FFF6AA"fontSize="sm"pb="4rem" pl={"2rem"} pr="2rem" marginTop="2rem">
                

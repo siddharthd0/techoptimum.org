@@ -1,68 +1,64 @@
 import React from "react";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Wrap, WrapItem, Center} from "@chakra-ui/react";
 export default function Socials() {
   return (
     <>
       <Flex flexDirection={"column"}>
-        <Flex justifyContent={"center"}>
           <Box w={"1545px"} h={"1px"} bgColor={"#222E75"}></Box>
-        </Flex>
-        <Flex justifyContent={"center"}>
-          <Flex
-            className="social-section"
-            //  justifyContent={"center"}
-            justifyContent={"space-around"}
-            my={"3rem"}
-            w={"500px"}
-          >
-            <Text
+      </Flex>
+
+       <Center>
+        
+            <Wrap mx="2rem" my={"3rem"}>
+            <WrapItem
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              mr={"50px"}
+               px="1.25rem"
               className="socials-text-tiktok smooth-hover"
             >
               TIKTOK
-            </Text>
-            <Text
+            </WrapItem>
+            <WrapItem
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              mr={"50px"}
+              px="1.25rem"
               className="socials-text-twitter smooth-hover"
             >
               TWITTER
-            </Text>
-            <Text
+            </WrapItem>
+            <WrapItem
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              mr={"50px"}
+              px="1.25rem"
               className="socials-text-instagram smooth-hover"
             >
               INSTAGRAM
-            </Text>
-            <Text
+            </WrapItem>
+            <WrapItem
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              mr={"50px"}
+              px="1.25rem"
               className="socials-text-linkedin smooth-hover"
             >
               LINKEDIN
-            </Text>
-            <Text
+            </WrapItem>
+            <WrapItem
               fontWeight={"800"}
               fontSize={"16px"}
-              color={"#878787"}
-              mr={"50px"}
+              color={"#878787"}      
               className="socials-text-discord smooth-hover"
+              px="1.25rem"
             >
               DISCORD
-            </Text>
-          </Flex>
-        </Flex>
-      </Flex>
+            </WrapItem>
+            </Wrap>
+          
+        
+     </Center>
     </>
   );
 }
