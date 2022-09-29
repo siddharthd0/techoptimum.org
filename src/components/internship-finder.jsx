@@ -26,7 +26,8 @@ export default function Finder() {
         color="primary"
         fontSize="lg"
         marginTop={"2.2rem"}
-        
+        data-aos="fade-right"
+        data-aos-duration="1000"
         width={["250px", "600px"]}
       >
         As a high school student, have you ever wanted to get real work
