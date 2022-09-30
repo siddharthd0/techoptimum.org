@@ -9,7 +9,7 @@ export default function Events() {
     AOS.refresh();
   }, []);
   return (
-    <Flex marginLeft={"7rem"} marginTop={"10rem"} direction={"column"}>
+    <Flex marginLeft={["2rem", "7rem"]} marginTop={"10rem"} direction={"column"}>
       <Head>
         <link
           href="https://unpkg.com/aos@next/dist/aos.css"
@@ -37,13 +37,13 @@ export default function Events() {
         Participate in events hosted by Tech Optimum
       </Text>
       
-      <Flex>
+      <Flex direction={["column", "row"]}>
      
       <Text
         color="primary"
         fontSize="xl"
         marginTop={"2.5rem"}
-        width={"65%"}
+        mr="1rem"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
@@ -53,7 +53,7 @@ export default function Events() {
         tournaments.
        
       </Text>
-      <Image mt="-10rem" p={"0"} boxSize='300px' src='https://media.discordapp.net/attachments/910672979401269258/1017251262422601870/stripy-90_1.png' alt='Dan Abramov' />
+      <Image mt={["0rem","-10rem"]} p={"0"} boxSize='300px' src='https://media.discordapp.net/attachments/910672979401269258/1017251262422601870/stripy-90_1.png' alt='Tech Optimum Events' />
      
       </Flex>
       

@@ -1,4 +1,13 @@
-import { Flex, Heading, Text, Button, Container, Stack, Box, Center } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Container,
+  Stack,
+  Box,
+  Center,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
@@ -14,7 +23,7 @@ export default function Courses() {
     AOS.refresh();
   }, []);
   return (
-    <Flex marginLeft={"7rem"} direction={"column"}>
+    <Flex marginLeft={["2rem", "7rem"]} direction={"column"}>
       <Head>
         <link
           href="https://unpkg.com/aos@next/dist/aos.css"
@@ -32,122 +41,146 @@ export default function Courses() {
         Courses
       </Heading>
 
-
-
       <Stack direction={["column", "row"]} spacing="60px">
-          <Box data-aos-delay="100"
-             data-aos="zoom-in-up" backgroundColor="#003B73"borderRadius={"20px"} h="250px"w="280px" >
-            <div text-align="center">
-              <Text color="#FFF6AA"fontSize="sm"pl={"2rem"} pr="2rem" marginTop="2rem">
-     
-                <Heading
-                  pt={".2rem"}
-                  pb={".7rem"}
-                  fontWeight={"300"}
-                  fontSize={"3xl"}
-                >
-                 MongoDB.
-                </Heading>
-                Use databases in your own website. Discover how data can be stored in DB's like Mongo and learn how to control the data.
-                <Button
-              backgroundColor="transparent"
-              transition={"700"}
-              _hover={{ 
-                backgroundColor: "transparent" ,
-                color:"#9DB2F6"
-              }}
-         
-              padding={"0"}
+        <Box
+          data-aos-delay="100"
+          data-aos="zoom-in-up"
+          backgroundColor="#003B73"
+          borderRadius={"20px"}
+          h="250px"
+          w="280px"
+        >
+          <div text-align="center">
+            <Text
               color="#FFF6AA"
-              fontWeight={"400"}
-              rightIcon={
-                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-              }
-              
+              fontSize="sm"
+              pl={"2rem"}
+              pr="2rem"
+              marginTop="2rem"
             >
-              LEARN MORE
-            </Button> </Text>
-              
-            </div>
-          </Box>
-          <Box data-aos-delay="300"
-             data-aos="zoom-in-up"backgroundColor="#05445E"borderRadius={"20px"} h="250px"w="280px" >
-            <Center>
-              <Text color="#FFF6AA"fontSize="sm"pl={"2rem"} pr="2rem" marginTop="2rem">
-               
-                <Heading
-                  pt={".2rem"}
-                  pb={".7rem"}
-                  fontWeight={"300"}
-                  fontSize={"3xl"}
-                >
-                  Web Dev.
-                </Heading>
-                Create simple websites using HTML, CSS and JS. Host, publish and share your new personalized website that you created from scratch.
-                <Button
-              backgroundColor="transparent"
-              transition={"700"}
-              _hover={{ 
-                backgroundColor: "transparent" ,
-                color:"#9DB2F6"
-              }}
-         
-              padding={"0"}
+              <Heading
+                pt={".2rem"}
+                pb={".7rem"}
+                fontWeight={"300"}
+                fontSize={"3xl"}
+              >
+                MongoDB.
+              </Heading>
+              Use databases in your own website. Discover how data can be stored
+              in DB's like Mongo and learn how to control the data.
+              <Button
+                backgroundColor="transparent"
+                transition={"700"}
+                _hover={{
+                  backgroundColor: "transparent",
+                  color: "#9DB2F6",
+                }}
+                padding={"0"}
+                color="#FFF6AA"
+                fontWeight={"400"}
+                rightIcon={
+                  <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+                }
+              >
+                LEARN MORE
+              </Button>{" "}
+            </Text>
+          </div>
+        </Box>
+        <Box
+          data-aos-delay="300"
+          data-aos="zoom-in-up"
+          backgroundColor="#05445E"
+          borderRadius={"20px"}
+          h="250px"
+          w="280px"
+        >
+          <Center>
+            <Text
               color="#FFF6AA"
-              fontWeight={"400"}
-              rightIcon={
-                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-              }
-              
+              fontSize="sm"
+              pl={"2rem"}
+              pr="2rem"
+              marginTop="2rem"
             >
-              LEARN MORE
-            </Button>
-              </Text>
-            </Center>
-          </Box>
-          <Box  data-aos-delay="600"
-             data-aos="zoom-in-up"backgroundColor="#145DA0"borderRadius={"20px"} h="250px"w="280px" >
-            <Center>
-              <Text color="#FFF6AA"fontSize="sm"pb="4rem" pl={"2rem"} pr="2rem" marginTop="2rem">
-               
-                <Heading
-                  pt={".2rem"}
-                  pb={".7rem"}
-                  fontWeight={"300"}
-                  fontSize={"3xl"}
-                >
-                 Game Dev.
-                </Heading>
-                Learn how to create simple games, create real-world applications using languages like Javascript.
-                <br />
-                <br />
-                <Button
-              backgroundColor="transparent"
-              transition={"700"}
-              _hover={{ 
-                backgroundColor: "transparent" ,
-                color:"#9DB2F6"
-              }}
-         
-              padding={"0"}
+              <Heading
+                pt={".2rem"}
+                pb={".7rem"}
+                fontWeight={"300"}
+                fontSize={"3xl"}
+              >
+                Web Dev.
+              </Heading>
+              Create simple websites using HTML, CSS and JS. Host, publish and
+              share your new personalized website that you created from scratch.
+              <Button
+                backgroundColor="transparent"
+                transition={"700"}
+                _hover={{
+                  backgroundColor: "transparent",
+                  color: "#9DB2F6",
+                }}
+                padding={"0"}
+                color="#FFF6AA"
+                fontWeight={"400"}
+                rightIcon={
+                  <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+                }
+              >
+                LEARN MORE
+              </Button>
+            </Text>
+          </Center>
+        </Box>
+        <Box
+          data-aos-delay="600"
+          data-aos="zoom-in-up"
+          backgroundColor="#145DA0"
+          borderRadius={"20px"}
+          h="250px"
+          w="280px"
+        >
+          <Center>
+            <Text
               color="#FFF6AA"
-              fontWeight={"400"}
-              rightIcon={
-                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-              }
-              
+              fontSize="sm"
+              pb="4rem"
+              pl={"2rem"}
+              pr="2rem"
+              marginTop="2rem"
             >
-              LEARN MORE
-            </Button>
-              </Text>
-            </Center>
-          </Box>
-        </Stack>
- 
-
-
-
-
-     </Flex>
+              <Heading
+                pt={".2rem"}
+                pb={".7rem"}
+                fontWeight={"300"}
+                fontSize={"3xl"}
+              >
+                Game Dev.
+              </Heading>
+              Learn how to create simple games, create real-world applications
+              using languages like Javascript.
+              <br />
+              <br />
+              <Button
+                backgroundColor="transparent"
+                transition={"700"}
+                _hover={{
+                  backgroundColor: "transparent",
+                  color: "#9DB2F6",
+                }}
+                padding={"0"}
+                color="#FFF6AA"
+                fontWeight={"400"}
+                rightIcon={
+                  <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+                }
+              >
+                LEARN MORE
+              </Button>
+            </Text>
+          </Center>
+        </Box>
+      </Stack>
+    </Flex>
   );
 }
