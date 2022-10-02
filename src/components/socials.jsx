@@ -15,6 +15,7 @@ export default function Socials() {
             my={"3rem"}
             w={"500px"}
           >
+            <a href="https://www.tiktok.com/@techoptimum">
             <Text
               fontWeight={"800"}
               fontSize={"16px"}
@@ -24,6 +25,8 @@ export default function Socials() {
             >
               TIKTOK
             </Text>
+            </a>
+            <a href="https://twitter.com/TechOptimumHQ">
             <Text
               fontWeight={"800"}
               fontSize={"16px"}
@@ -33,6 +36,8 @@ export default function Socials() {
             >
               TWITTER
             </Text>
+            </a>
+            <a href="https://www.instagram.com/techoptimum_">
             <Text
               fontWeight={"800"}
               fontSize={"16px"}
@@ -42,6 +47,8 @@ export default function Socials() {
             >
               INSTAGRAM
             </Text>
+            </a>
+            <a href="https://www.linkedin.com/company/techoptimum">
             <Text
               fontWeight={"800"}
               fontSize={"16px"}
@@ -51,6 +58,8 @@ export default function Socials() {
             >
               LINKEDIN
             </Text>
+            </a>
+            <a href="https://discord.gg/w7cymgdRBH">
             <Text
               fontWeight={"800"}
               fontSize={"16px"}
@@ -60,6 +69,7 @@ export default function Socials() {
             >
               DISCORD
             </Text>
+            </a>
           </Flex>
         </Flex>
       </Flex>
