@@ -30,7 +30,7 @@ export default function Events() {
       <Text
         color="primary"
         fontSize="3xl"
-        marginTop={"2.5rem"}
+        marginTop={"2rem"}
         data-aos="fade-right"
         data-aos-duration="1000"
       >
@@ -42,15 +42,17 @@ export default function Events() {
       <Text
         color="primary"
         fontSize="xl"
-        marginTop={"2.5rem"}
+        marginTop={"2rem"}
         mr="1rem"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
         We host yearly hackathons. A hackathon is 48-hour coding competition in
         which participants can code projects as a team or individually and
-        competet for numerous prizes!. Not only that but, we host fun
+        compete for numerous prizes! Not only that but, we host fun
         tournaments.
+
+        Check out the hackathon that we hosted in the summer with over 300 participants <Link>here</Link>.
        
       </Text>
       <Image mt={["0rem","-10rem"]} p={"0"} boxSize='300px' src='https://media.discordapp.net/attachments/910672979401269258/1017251262422601870/stripy-90_1.png' alt='Tech Optimum Events' />

@@ -43,6 +43,7 @@ export default function HeroHeader() {
         </Flex>
         
         <Container
+         margin={"0 auto"}
           maxWidth={"800px"}
           backgroundColor="#29368C"
           height={["200px","150px"]}
