@@ -5,8 +5,8 @@ export default function ExecutiveCard({ src, width = "400", alt, name, role }) {
     <>
       <Box
         backgroundImage={"url('/static-exec-bg.png')"}
-        width={"350px"}
-        height="400px"
+        width={"300px"}
+        height="347px"
         backgroundRepeat="no-repeat"
         borderRadius="10%"
       >
@@ -17,7 +17,7 @@ export default function ExecutiveCard({ src, width = "400", alt, name, role }) {
           </Badge>
           <Text>{name}</Text>
         </Box>
-        <Image margin="auto" src={src} alt={alt} width={"300px"} height={"330px"}></Image>
+        <Image margin="auto" src={src} alt={alt} width={"250px"} height={"275px"}></Image>
       </Box>
     </>
   );
