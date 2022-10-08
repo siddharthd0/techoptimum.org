@@ -28,12 +28,25 @@ a {
   border-radius: 10px;
    padding: 2px 10px 2px 10px;
    transition: 300ms;
+   color:#9da5f0;
+   background-color:transparent !important;
+   font-weight: 100 !important;
+
 }
 .link-navs:hover {
    color:#9da5f0;
-   background-color: #252739;
+   background-color: #252739 !important;
 
 }
+.link-navs-dropdown {
+  color:#9da5f0 !important;
+  background-color: #252739 !important;
+  border: none !important;
+}
+.link-navs-dd-text:hover {
+    background-color:black !important;
+}
+
 
 .job-card-image {
   width: 100%;

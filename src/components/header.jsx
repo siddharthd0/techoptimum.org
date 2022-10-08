@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Button, Heading } from "@chakra-ui/react";
+import { Flex, Text, Button, Heading, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 
 import Link from "next/link";
 
@@ -26,9 +26,16 @@ export default function Header() {
               </Text>
             </li>
             <li>
-            <Text className="link-navs" color="primary">
-                <Link href="/join">JOIN</Link>
-              </Text>
+            <Menu>
+  <MenuButton className="link-navs" bgColor={"transparent"} color="primary"as={Button} >
+   ABOUT
+  </MenuButton>
+  <MenuList className="link-navs-dropdown">
+    <MenuItem className="link-navs-dd-text">Meet the Team</MenuItem>
+    <MenuItem className="link-navs-dd-text">Contact us</MenuItem>
+    <MenuItem className="link-navs-dd-text">Faq</MenuItem>
+  </MenuList>
+</Menu>
             </li>
             <li>
             <Text className="link-navs" color="primary">
