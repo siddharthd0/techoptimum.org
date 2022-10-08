@@ -1,5 +1,14 @@
 import React from "react";
-import { Flex, Text, Button, Heading, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Button,
+  Heading,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
 
 import Link from "next/link";
 
@@ -17,7 +26,6 @@ export default function Header() {
           Tech Optimum
         </Heading>
 
-
         <nav>
           <ul className="nav-links">
             <li>
@@ -26,33 +34,49 @@ export default function Header() {
               </Text>
             </li>
             <li>
+              <Menu>
+                <MenuButton
+                  className="link-navs"
+                  bgColor={"transparent"}
+                  color="primary"
+                >
+                  ABOUT
+                </MenuButton>
+                <MenuList className="link-navs-dropdown">
+                  <MenuItem className="link-navs-dd-text">
+                    Meet the Team
+                  </MenuItem>
+                  <MenuItem className="link-navs-dd-text">Contact us</MenuItem>
+                  <MenuItem className="link-navs-dd-text">Faq</MenuItem>
+                </MenuList>
+              </Menu>
+            </li>
+            <li>
             <Menu>
-  <MenuButton className="link-navs" bgColor={"transparent"} color="primary"as={Button} >
-   ABOUT
-  </MenuButton>
-  <MenuList className="link-navs-dropdown">
-    <MenuItem className="link-navs-dd-text">Meet the Team</MenuItem>
-    <MenuItem className="link-navs-dd-text">Contact us</MenuItem>
-    <MenuItem className="link-navs-dd-text">Faq</MenuItem>
-  </MenuList>
-</Menu>
+                <MenuButton
+                  className="link-navs"
+                  bgColor={"transparent"}
+                  color="primary"
+                >
+                 INITIATIVES
+                </MenuButton>
+                <MenuList className="link-navs-dropdown">
+                <MenuItem className="link-navs-dd-text">Community</MenuItem>
+                  <MenuItem className="link-navs-dd-text">
+                  Hackathon
+                  </MenuItem>
+                  <MenuItem className="link-navs-dd-text">Tech Optimum Talks</MenuItem>
+                  <MenuItem className="link-navs-dd-text">Courses</MenuItem>
+                </MenuList>
+              </Menu>
             </li>
             <li>
-            <Text className="link-navs" color="primary">
-                <Link href="/hackathon">HACKATHON</Link>
-              </Text>
-            </li>
-            <li>
-            <Text className="link-navs" color="primary">
-                <Link href="/podcast">PODCAST</Link>
+              <Text className="link-navs" color="primary">
+                <Link href="/">VOLUNTEER</Link>
               </Text>
             </li>
 
-            <li>
-            <Text className="link-navs" color="primary">
-                <Link href="/about">ABOUT</Link>
-              </Text>
-            </li>
+        
           </ul>
         </nav>
         <Flex alignItems="right" justifyContent="space-between">
