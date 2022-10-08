@@ -8,11 +8,22 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  useDisclosure,
+  onOpen,
+  onClose,
+  isOpen,
+
+
+
 } from "@chakra-ui/react";
 
 import Link from "next/link";
 
 export default function Header() {
+ // const { isOpen, onOpen, onClose } = useDisclosure()
+ const { isOpen: isEditOpen , onOpen: onEditOpen, onClose: onEditClose } = useDisclosure()
+ const { isOpen: isSecondOpen , onOpen: onSecondOpen, onClose: onSecondClose } = useDisclosure()
+ 
   return (
     <>
       <Flex
@@ -34,39 +45,54 @@ export default function Header() {
               </Text>
             </li>
             <li>
-              <Menu>
+              <Menu gutter={"5"} isOpen={isEditOpen}>
                 <MenuButton
                   className="link-navs"
                   bgColor={"transparent"}
                   color="primary"
+                  onMouseEnter={onEditOpen}
+                onMouseLeave={onEditClose}
+                
                 >
                   ABOUT
                 </MenuButton>
-                <MenuList className="link-navs-dropdown">
+                <MenuList onMouseEnter={onEditOpen} onMouseLeave={onEditClose} className="link-navs-dropdown">
+                  <Link href="/about">
                   <MenuItem className="link-navs-dd-text">
                     Meet the Team
                   </MenuItem>
+                  </Link>
+                  <Link href="/contact">
                   <MenuItem className="link-navs-dd-text">Contact us</MenuItem>
+                  </Link>
+                  <Link href="/faq">
                   <MenuItem className="link-navs-dd-text">Faq</MenuItem>
+                  </Link>
                 </MenuList>
               </Menu>
             </li>
             <li>
-            <Menu>
+            <Menu gutter={"5"}isOpen={isSecondOpen}>
                 <MenuButton
                   className="link-navs"
                   bgColor={"transparent"}
                   color="primary"
+                  onMouseEnter={onSecondOpen}
+                  onMouseLeave={onSecondClose}
                 >
                  INITIATIVES
                 </MenuButton>
-                <MenuList className="link-navs-dropdown">
+                <MenuList onMouseEnter={onSecondOpen} onMouseLeave={onSecondClose} className="link-navs-dropdown">
                 <MenuItem className="link-navs-dd-text">Community</MenuItem>
                   <MenuItem className="link-navs-dd-text">
                   Hackathon
                   </MenuItem>
+                  <Link href="/podcast">
                   <MenuItem className="link-navs-dd-text">Tech Optimum Talks</MenuItem>
+                  </Link>
+                  <Link isExternal  href="https://dashboard.techoptimum.org">
                   <MenuItem className="link-navs-dd-text">Courses</MenuItem>
+                  </Link>
                 </MenuList>
               </Menu>
             </li>
