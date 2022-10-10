@@ -15,18 +15,18 @@ export default function HeroHeader() {
   return (
     <>
       <Flex width="100vw" justifyContent="center" margin={"auto"} color="#A7B2FF">
-        <Flex width="70vw" marginTop="50px" marginBottom="50px">
+        <Flex marginTop="50px" marginBottom="50px" direction={{base:'column',md:'column',lg:'row'}}>
           <Box
             padding={"50px"}
             borderRadius={"20px"}
             backgroundImage={"/contact-card.svg"}
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            width="35vw"
+            w={{base:'300px',md:'500px',lg:'700px'}} 
            
           >
             <Heading fontSize={"4xl"} mb={"30px"}>
-              Get in Touch{" "}
+              Get in Touch
             </Heading>
             <FormControl height="full">
               <Input
@@ -42,8 +42,8 @@ export default function HeroHeader() {
                 borderBottom="1px"
                 borderBottomColor="#fff"
               />
-              <Flex mb="40px">
-                <Box>
+              <Flex mb="40px" direction={{base:'column'}}>
+                <Box mb="40px">
                   <Input
                     _placeholder={{
                       color: "#A7B2FF",
@@ -56,7 +56,7 @@ export default function HeroHeader() {
                     borderBottomColor="#fff"
                   />
                 </Box>
-                <Box ml="20px">
+                <Box>
                   <Input
                     _placeholder={{
                       color: "#A7B2FF",
@@ -70,7 +70,7 @@ export default function HeroHeader() {
                   />
                 </Box>
               </Flex>
-              <Textarea
+              <Input
                 _placeholder={{
                   color: "#A7B2FF",
                 }}
@@ -81,7 +81,7 @@ export default function HeroHeader() {
                 borderBottom="1px"
                 borderBottomColor="#fff"
                 marginBottom="30px"
-                height="17vh"
+                height={'40px'}
               />
 
               <Button
@@ -101,7 +101,7 @@ export default function HeroHeader() {
           </Box>
           <Flex
             paddingLeft="5rem"
-            width="35vw"
+            width="40vw"
             flexDir="column"
             justifyContent="center"
             alignItems="center"
@@ -111,10 +111,12 @@ export default function HeroHeader() {
               paddingBottom="2rem"
               borderBottom="1px"
               borderBottomColor="#A7B2FF"
+              marginLeft={{base:'90px',md:'140px',lg:'100px'}} 
+              marginTop={{base:'40px',md:'60px'}}
             >
               <Flex marginBottom="20px" alignItems="center">
                 <img src="/contact-icon-1.svg" alt="talking icon" width="60" />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+                <Text fontSize="3xl" ml="10px" fontWeight="bold" w={{base:'300px',md:'500px',lg:'700px'}}>
                   Speak the truth
                 </Text>
               </Flex>
@@ -129,17 +131,17 @@ export default function HeroHeader() {
               paddingBottom="2rem"
               borderBottom="1px"
               borderBottomColor="#A7B2FF"
+              marginLeft={{base:'90px',md:'140px',lg:'100px'}} 
+              marginTop={{base:'40px',md:'60px'}}
             >
               <Flex marginBottom="20px" alignItems="center">
                 <img src="/contact-icon-2.svg" alt="talking icon" width="60" />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
-                  Speak the truth
+                <Text fontSize="3xl" ml="10px" fontWeight="bold"  w={{base:'300px',md:'500px',lg:'700px'}}>
+                  Fast Responding
                 </Text>
               </Flex>
               <Text>
-                At Tech Optimum we thrive for your feedback! We always like
-                people who speak the truth, so share your honest feedback, ask
-                questions, and just speak the truth.
+                We are always open and ready to respond. We won't make you wait that long, just 1-2 hours.  
               </Text>
             </Box>
           </Flex>

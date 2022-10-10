@@ -1,7 +1,6 @@
 import React from "react";
-import { Flex, Text, Button, Heading } from "@chakra-ui/react";
+import { Flex, Text, Button, Heading, Link} from "@chakra-ui/react";
 
-import Link from "next/link";
 
 export default function Header() {
   return (
@@ -13,12 +12,12 @@ export default function Header() {
         alignItems="center"
         padding="20px 10%"
       >
-        <Heading href="./#" fontSize="3xl" color="primary">
+        <Heading href="./#" color="primary" fontSize={{ base: '24px', md: '40px', lg: '56px' }}>
           Tech Optimum
         </Heading>
 
 
-        <nav>
+        <Flex  alignItems='center'>
           <ul className="nav-links">
             <li>
               <Text className="link-navs" color="primary">
@@ -47,13 +46,15 @@ export default function Header() {
               </Text>
             </li>
           </ul>
-        </nav>
+        </Flex>
         <Flex alignItems="right" justifyContent="space-between">
           <Button
             colorScheme="secondaryButton"
             borderRadius="full"
             px="6"
             fontWeight="normal"
+            w={{base: '50px', md: '100px', lg: '150px'}}
+            fontSize={{base: '10px', md: '20px', lg: '20px'}}
           >
             Sign up
           </Button>
@@ -64,6 +65,8 @@ export default function Header() {
             n
             fontWeight="normal"
             marginLeft="20px"
+            w={{base: '10px', md: '10px', lg: '150px'}}
+            fontSize={{base: '10px', md: '10px', lg: '20px'}}
           >
             Log in
           </Button>

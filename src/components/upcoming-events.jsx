@@ -25,12 +25,13 @@ export default function UpcomingEvents() {
         align="center"
         justify="center"
       >
-        <Heading mb={"4rem"} fontSize="5xl" color="primary" align="center">
-          Upcoming Events
+        <Heading mb={"4rem"} fontSize="5xl" color="primary" align="center" style={{display:'flex'}}>
+          <SquiggleLine style={{marginTop:'7vh'}}/>
+          <h1 style={{marginLeft:'auto',flex:1}}>Upcoming Events</h1>
+          <SquiggleLine />
         </Heading>
         <div></div>
         <h2 align="center">More events coming soon...</h2>
-        <SquiggleLine />
       </Flex>
     </>
   );
