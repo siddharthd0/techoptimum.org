@@ -10,7 +10,7 @@ export default function HeroHeader() {
   return (
     <>
       <Flex height={"80vh"} width={"100%"} direction={"column"}>
-        <Flex direction={"column"} width={"60%"} margin={"0rem 0 0 6rem"}>
+        <Flex direction={"column"}  marginLeft={["2rem", "7rem"]}>
           <Heading className="gradient-title" fontSize="5xl" marginBottom={"2.5rem"}>
             Learn. Participate. Accomplish.
           </Heading>
@@ -41,11 +41,13 @@ export default function HeroHeader() {
             LEARN MORE
           </Button>
         </Flex>
+        
         <Container
-          maxWidth={"60%"}
+         margin={"0 auto"}
+          maxWidth={"800px"}
           backgroundColor="#29368C"
-          height={"20vh"}
-          margin={"0 auto"}
+          height={["200px","150px"]}
+          mx="2rem  "
           borderRadius={"36px"}
           marginTop={"5rem"}
           as={motion.div}
@@ -57,7 +59,7 @@ export default function HeroHeader() {
             y: 0,
           }}
         >
-          <Flex alignItems={"center"} height={"100%"}>
+          <Flex direction={["column", "row"]}alignItems={"center"} height={"100%"}>
             <Heading
               color="white"
               fontSize="2xl"

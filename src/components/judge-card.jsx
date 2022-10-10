@@ -1,6 +1,6 @@
 import { Text, Flex, Box, Image, Badge } from "@chakra-ui/react";
 
-export default function ExecutiveCard({ src, width = "400", alt, name, role }) {
+export default function JudgeCard({ src, width = "400", alt, name, role }) {
   return (
     <>
       <Box

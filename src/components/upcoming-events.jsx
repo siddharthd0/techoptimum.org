@@ -16,10 +16,10 @@ export default function UpcomingEvents() {
     <>
       <br></br>
       <Flex
-        position={"relative"}
+      
         color="primary"
         mb={"3rem"}
-        mt={"4rem"}
+        mt="0"
         paddingTop={"4rem"}
         height={"583px"}
         backgroundColor={"#05101D"}

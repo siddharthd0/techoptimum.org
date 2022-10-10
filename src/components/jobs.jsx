@@ -28,14 +28,14 @@ export default function Jobs() {
         />
       </Head>
       <Flex
-        marginLeft={"7rem"}
+      marginLeft={["2rem", "7rem"]}
         marginTop={"10rem"}
         direction={"column"}
         data-aos={"fade-up"}
         data-aos-duration={"2000"}
       >
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
-          Jobs
+          Volunteer with us
         </Heading>
         <Box
           maxW="1210px"
