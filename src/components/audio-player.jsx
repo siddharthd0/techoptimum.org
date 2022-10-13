@@ -19,45 +19,45 @@ export default function AudioPlayer({ playPauseStatus, audioFileURI }) {
     );
   };
 
-  useEffect(() => {
-    const audioPlayer = window.document.querySelector(".audio-player");
-    const audio = new Audio(audioFileURI);
+  // useEffect(() => {
+  //   const audioPlayer = window.document.querySelector(".audio-player");
+  //   const audio = new Audio(audioFileURI);
 
-    audio.addEventListener(
-      "loadeddata",
-      () => {
-        audioPlayer.querySelector(".time .length").textContent =
-          getTimeCodeFromNum(audio.duration);
-        audio.volume = 0.75;
-      },
-      false
-    );
+  //   audio.addEventListener(
+  //     "loadeddata",
+  //     () => {
+  //       audioPlayer.querySelector(".time .length").textContent =
+  //         getTimeCodeFromNum(audio.duration);
+  //       audio.volume = 0.75;
+  //     },
+  //     false
+  //   );
 
-    setAudioState(audio);
+  //   setAudioState(audio);
 
-    const timeline = audioPlayer.querySelector(".timeline");
-    timeline.addEventListener(
-      "click",
-      (e) => {
-        const timelineWidth = window.getComputedStyle(timeline).width;
-        const timeToSeek =
-          (e.offsetX / parseInt(timelineWidth)) * audio.duration;
-        audio.currentTime = timeToSeek;
-      },
-      false
-    );
+  //   const timeline = audioPlayer.querySelector(".timeline");
+  //   timeline.addEventListener(
+  //     "click",
+  //     (e) => {
+  //       const timelineWidth = window.getComputedStyle(timeline).width;
+  //       const timeToSeek =
+  //         (e.offsetX / parseInt(timelineWidth)) * audio.duration;
+  //       audio.currentTime = timeToSeek;
+  //     },
+  //     false
+  //   );
 
-    setInterval(() => {
-      const progressBar = audioPlayer.querySelector(".progress");
-      progressBar.style.width =
-        (audio.currentTime / audio.duration) * 100 + "%";
-      const thumb = audioPlayer.querySelector(".thumb");
-      thumb.style.marginLeft =
-        (audio.currentTime / audio.duration) * 100 - 1 + "%";
-      audioPlayer.querySelector(".time .current").textContent =
-        getTimeCodeFromNum(audio.currentTime);
-    }, 500);
-  }, []);
+  //   setInterval(() => {
+  //     const progressBar = audioPlayer.querySelector(".progress");
+  //     progressBar.style.width =
+  //       (audio.currentTime / audio.duration) * 100 + "%";
+  //     const thumb = audioPlayer.querySelector(".thumb");
+  //     thumb.style.marginLeft =
+  //       (audio.currentTime / audio.duration) * 100 - 1 + "%";
+  //     audioPlayer.querySelector(".time .current").textContent =
+  //       getTimeCodeFromNum(audio.currentTime);
+  //   }, 500);
+  // }, []);
 
   useEffect(() => {
     if (audioState) {
@@ -72,15 +72,15 @@ export default function AudioPlayer({ playPauseStatus, audioFileURI }) {
   return (
     <>
       <div style={{ width: "50px", height: "50px" }}></div>
-      <div className="audio-player">
-        <div className="timeline">
-          <div className="progress"></div>
-          <div className="thumb"></div>
+      <div className='audio-player'>
+        <div className='timeline'>
+          <div className='progress'></div>
+          <div className='thumb'></div>
         </div>
-        <div className="controls">
-          <div className="time">
-            <div className="current">0:00</div>
-            <div className="length"></div>
+        <div className='controls'>
+          <div className='time'>
+            <div className='current'>0:00</div>
+            <div className='length'></div>
           </div>
         </div>
       </div>

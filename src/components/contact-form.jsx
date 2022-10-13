@@ -10,63 +10,68 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
+import Image from "next/image";
 
 export default function HeroHeader() {
   return (
     <>
-      <Flex width="100vw" justifyContent="center" margin={"auto"} color="#A7B2FF">
-        <Flex width="70vw" marginTop="50px" marginBottom="50px">
+      <Flex
+        width='100vw'
+        justifyContent='center'
+        margin={"auto"}
+        color='#A7B2FF'
+      >
+        <Flex width='70vw' marginTop='50px' marginBottom='50px'>
           <Box
             padding={"50px"}
             borderRadius={"20px"}
             backgroundImage={"/contact-card.svg"}
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            width="35vw"
-           
+            backgroundRepeat='no-repeat'
+            backgroundSize='cover'
+            width='35vw'
           >
             <Heading fontSize={"4xl"} mb={"30px"}>
               Get in Touch{" "}
             </Heading>
-            <FormControl height="full">
+            <FormControl height='full'>
               <Input
                 mb={"40px"}
                 _placeholder={{
                   color: "#A7B2FF",
                 }}
-                padding="0"
-                placeholder="EMAIL"
-                type="email"
-                border="none"
-                borderRadius="0px"
-                borderBottom="1px"
-                borderBottomColor="#fff"
+                padding='0'
+                placeholder='EMAIL'
+                type='email'
+                border='none'
+                borderRadius='0px'
+                borderBottom='1px'
+                borderBottomColor='#fff'
               />
-              <Flex mb="40px">
+              <Flex mb='40px'>
                 <Box>
                   <Input
                     _placeholder={{
                       color: "#A7B2FF",
                     }}
-                    padding="0"
-                    placeholder="FIRST NAME"
-                    border="none"
-                    borderRadius="0px"
-                    borderBottom="1px"
-                    borderBottomColor="#fff"
+                    padding='0'
+                    placeholder='FIRST NAME'
+                    border='none'
+                    borderRadius='0px'
+                    borderBottom='1px'
+                    borderBottomColor='#fff'
                   />
                 </Box>
-                <Box ml="20px">
+                <Box ml='20px'>
                   <Input
                     _placeholder={{
                       color: "#A7B2FF",
                     }}
-                    padding="0"
-                    placeholder="LAST NAME"
-                    border="none"
-                    borderRadius="0px"
-                    borderBottom="1px"
-                    borderBottomColor="#fff"
+                    padding='0'
+                    placeholder='LAST NAME'
+                    border='none'
+                    borderRadius='0px'
+                    borderBottom='1px'
+                    borderBottomColor='#fff'
                   />
                 </Box>
               </Flex>
@@ -74,22 +79,22 @@ export default function HeroHeader() {
                 _placeholder={{
                   color: "#A7B2FF",
                 }}
-                padding="0"
-                placeholder="SUBJECT"
-                border="none"
-                borderRadius="0px"
-                borderBottom="1px"
-                borderBottomColor="#fff"
-                marginBottom="30px"
-                height="17vh"
+                padding='0'
+                placeholder='SUBJECT'
+                border='none'
+                borderRadius='0px'
+                borderBottom='1px'
+                borderBottomColor='#fff'
+                marginBottom='30px'
+                height='17vh'
               />
 
               <Button
-                backgroundColor="#2E3569"
-                borderRadius="full"
-                px="10"
+                backgroundColor='#2E3569'
+                borderRadius='full'
+                px='10'
                 marginTop={3}
-                fontWeight="normal"
+                fontWeight='normal'
                 rightIcon={<BsArrowRight position={"relative"} />}
                 _hover={{
                   backgroundColor: "#272D56",
@@ -100,21 +105,26 @@ export default function HeroHeader() {
             </FormControl>
           </Box>
           <Flex
-            paddingLeft="5rem"
-            width="35vw"
-            flexDir="column"
-            justifyContent="center"
-            alignItems="center"
-            color="#A7B2FF"
+            paddingLeft='5rem'
+            width='35vw'
+            flexDir='column'
+            justifyContent='center'
+            alignItems='center'
+            color='#A7B2FF'
           >
             <Box
-              paddingBottom="2rem"
-              borderBottom="1px"
-              borderBottomColor="#A7B2FF"
+              paddingBottom='2rem'
+              borderBottom='1px'
+              borderBottomColor='#A7B2FF'
             >
-              <Flex marginBottom="20px" alignItems="center">
-                <img src="/contact-icon-1.svg" alt="talking icon" width="60" />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+              <Flex marginBottom='20px' alignItems='center'>
+                <Image
+                  src='/contact-icon-1.svg'
+                  alt='talking icon'
+                  width='60'
+                  height='60'
+                />
+                <Text fontSize='3xl' ml='10px' fontWeight='bold'>
                   Speak the truth
                 </Text>
               </Flex>
@@ -125,14 +135,19 @@ export default function HeroHeader() {
               </Text>
             </Box>
             <Box
-              paddingTop="2rem"
-              paddingBottom="2rem"
-              borderBottom="1px"
-              borderBottomColor="#A7B2FF"
+              paddingTop='2rem'
+              paddingBottom='2rem'
+              borderBottom='1px'
+              borderBottomColor='#A7B2FF'
             >
-              <Flex marginBottom="20px" alignItems="center">
-                <img src="/contact-icon-2.svg" alt="talking icon" width="60" />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+              <Flex marginBottom='20px' alignItems='center'>
+                <Image
+                  src='/contact-icon-2.svg'
+                  alt='talking icon'
+                  width='60'
+                  height='60'
+                />
+                <Text fontSize='3xl' ml='10px' fontWeight='bold'>
                   Speak the truth
                 </Text>
               </Flex>

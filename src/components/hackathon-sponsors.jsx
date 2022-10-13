@@ -17,46 +17,51 @@ export default function HackathonSponsors() {
     <>
       <Heading
         textAlign={"center"}
-        color="primary"
-        fontSize="6xl"
-        mt="3rem"
+        color='primary'
+        fontSize='6xl'
+        mt='3rem'
         marginBottom={"1rem"}
       >
         Sponsors
       </Heading>
       <SimpleGrid
         borderRadius={"20px"}
-        padding="3rem"
+        padding='3rem'
         backgroundColor={"#05101D"}
         margin={"auto"}
         maxWidth={"1100px"}
-        minChildWidth="200px"
-        spacing="20px"
-  
+        minChildWidth='200px'
+        spacing='20px'
       >
         <Box>
-          <Image src="./xyz.png"></Image>
+          <Image alt={"xyzSponsor"} src='./xyz.png'></Image>
         </Box>
         <Box>
-          <Image src="./taskade.png"></Image>
+          <Image alt={"taskadeSponsor"} src='./taskade.png'></Image>
         </Box>
         <Box>
-          <Image src="./echo3d-2.png"></Image>
+          <Image alt={"echo3dSponsor"} src='./echo3d-2.png'></Image>
         </Box>
         <Box>
-          <Image minWidth={"300px"}src="./aops.png"></Image>
+          <Image
+            alt={"aopsSponsor"}
+            minWidth={"300px"}
+            src='./aops.png'
+          ></Image>
         </Box>
         <Box>
-          <Image src="./Replit.png"></Image>
+          <Image alt={"replitSponsor"} src='./Replit.png'></Image>
         </Box>
         <Box>
-          <Image src="./Slingshot.png"></Image>
+          <Image alt={"SlingshotSponsor"} src='./Slingshot.png'></Image>
         </Box>
         <Box maxWidth={"150px"}>
-          <Image src="./Wolfram-Language-Sponsor.png"></Image>
+          <Image
+            alt={"WolframSponsor"}
+            src='./Wolfram-Language-Sponsor.png'
+          ></Image>
         </Box>
       </SimpleGrid>
-    
     </>
   );
 }

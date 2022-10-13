@@ -26,37 +26,37 @@ export default function Courses() {
     <Flex marginLeft={["2rem", "7rem"]} direction={"column"}>
       <Head>
         <link
-          href="https://unpkg.com/aos@next/dist/aos.css"
-          rel="stylesheet"
-          key="test"
+          href='https://unpkg.com/aos@next/dist/aos.css'
+          rel='stylesheet'
+          key='test'
         />
       </Head>
       <Heading
-        color="primary"
-        fontSize="5xl"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        mb="2rem"
+        color='primary'
+        fontSize='5xl'
+        data-aos='fade-right'
+        data-aos-duration='1000'
+        mb='2rem'
       >
         Courses
       </Heading>
 
-      <Stack direction={["column", "row"]} spacing="60px">
+      <Stack direction={["column", "row"]} spacing='60px'>
         <Box
-          data-aos-delay="100"
-          data-aos="zoom-in-up"
-          backgroundColor="#003B73"
+          data-aos-delay='100'
+          data-aos='zoom-in-up'
+          backgroundColor='#003B73'
           borderRadius={"20px"}
-          h="250px"
-          w="280px"
+          h='250px'
+          w='280px'
         >
-          <div text-align="center">
+          <div text-align='center'>
             <Text
-              color="#FFF6AA"
-              fontSize="sm"
+              color='#FFF6AA'
+              fontSize='sm'
               pl={"2rem"}
-              pr="2rem"
-              marginTop="2rem"
+              pr='2rem'
+              marginTop='2rem'
             >
               <Heading
                 pt={".2rem"}
@@ -67,16 +67,16 @@ export default function Courses() {
                 MongoDB.
               </Heading>
               Use databases in your own website. Discover how data can be stored
-              in DB's like Mongo and learn how to control the data.
+              in DB&apos;s like Mongo and learn how to control the data.
               <Button
-                backgroundColor="transparent"
+                backgroundColor='transparent'
                 transition={"700"}
                 _hover={{
                   backgroundColor: "transparent",
                   color: "#9DB2F6",
                 }}
                 padding={"0"}
-                color="#FFF6AA"
+                color='#FFF6AA'
                 fontWeight={"400"}
                 rightIcon={
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
@@ -88,20 +88,20 @@ export default function Courses() {
           </div>
         </Box>
         <Box
-          data-aos-delay="300"
-          data-aos="zoom-in-up"
-          backgroundColor="#05445E"
+          data-aos-delay='300'
+          data-aos='zoom-in-up'
+          backgroundColor='#05445E'
           borderRadius={"20px"}
-          h="250px"
-          w="280px"
+          h='250px'
+          w='280px'
         >
           <Center>
             <Text
-              color="#FFF6AA"
-              fontSize="sm"
+              color='#FFF6AA'
+              fontSize='sm'
               pl={"2rem"}
-              pr="2rem"
-              marginTop="2rem"
+              pr='2rem'
+              marginTop='2rem'
             >
               <Heading
                 pt={".2rem"}
@@ -114,14 +114,14 @@ export default function Courses() {
               Create simple websites using HTML, CSS and JS. Host, publish and
               share your new personalized website that you created from scratch.
               <Button
-                backgroundColor="transparent"
+                backgroundColor='transparent'
                 transition={"700"}
                 _hover={{
                   backgroundColor: "transparent",
                   color: "#9DB2F6",
                 }}
                 padding={"0"}
-                color="#FFF6AA"
+                color='#FFF6AA'
                 fontWeight={"400"}
                 rightIcon={
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
@@ -133,21 +133,21 @@ export default function Courses() {
           </Center>
         </Box>
         <Box
-          data-aos-delay="600"
-          data-aos="zoom-in-up"
-          backgroundColor="#145DA0"
+          data-aos-delay='600'
+          data-aos='zoom-in-up'
+          backgroundColor='#145DA0'
           borderRadius={"20px"}
-          h="250px"
-          w="280px"
+          h='250px'
+          w='280px'
         >
           <Center>
             <Text
-              color="#FFF6AA"
-              fontSize="sm"
-              pb="4rem"
+              color='#FFF6AA'
+              fontSize='sm'
+              pb='4rem'
               pl={"2rem"}
-              pr="2rem"
-              marginTop="2rem"
+              pr='2rem'
+              marginTop='2rem'
             >
               <Heading
                 pt={".2rem"}
@@ -162,14 +162,14 @@ export default function Courses() {
               <br />
               <br />
               <Button
-                backgroundColor="transparent"
+                backgroundColor='transparent'
                 transition={"700"}
                 _hover={{
                   backgroundColor: "transparent",
                   color: "#9DB2F6",
                 }}
                 padding={"0"}
-                color="#FFF6AA"
+                color='#FFF6AA'
                 fontWeight={"400"}
                 rightIcon={
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
