@@ -1,8 +1,11 @@
-import { Text, Box, Flex, Heading,Button,Link } from "@chakra-ui/react";
+import { Text, Box, Flex, Heading, Button, Link, useDisclosure } from "@chakra-ui/react";
 import { ExternalLinkIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 
 export default function JobPostingCard({ role, description, application }) {
+    
   return (
+   
+
     <>
       <Box
         width={"300px"}
@@ -10,16 +13,18 @@ export default function JobPostingCard({ role, description, application }) {
         background={"footerBg"}
         pt="6"
         pl="6"
-        height={"300px"}
+     
       >
-        <Heading fontSize={"3xl"}>{role}</Heading>
-        <Text>{description}</Text>
-        <Link  _hover={{
-          textDecoration: "none",
-        }
-        }
-        href={application}>
-        <Button
+        <Heading mb=".75rem;" color="secondary" fontSize={"3xl"}>{role}</Heading>
+        <Text color="primary">{description}</Text>
+        <Link
+        isExternal
+          _hover={{
+            textDecoration: "none",
+          }}
+          href={application}
+        >
+          <Button
             colorScheme="buttonBg"
             borderRadius="full"
             px="6"
@@ -28,11 +33,11 @@ export default function JobPostingCard({ role, description, application }) {
             rightIcon={
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
             }
-            
+            mb="2rem;"
           >
             Apply
           </Button>
-          </Link>
+        </Link>
       </Box>
     </>
   );

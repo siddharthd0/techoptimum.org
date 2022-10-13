@@ -17,11 +17,11 @@ export default function JoinTeam() {
           <JobPostingCard
             role="Web Developer"
             description={
-              "Develops the websites Communicates with other web developers or senior developers implements designs & tasks complete the designated amount of tasks per weekAttend all required meetings"
+              "Develop the websites, Communicate with other web developers or senior developers, Implements designs & tasks complete the designated amount of tasks per week"
             }
             application="https://forms.gle/NXQomJvT7dmCq8nU9"
           />
-          <JobPostingCard role="test" description={"ajnsfjkasdjf"} />
+          <JobPostingCard role="Instagram Social Media Manager" description={""} application="https://forms.gle/WmjFUvvWBHPRs2Z78" />
         </Wrap>
       </Box>
       <Socials />
