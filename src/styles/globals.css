@@ -178,8 +178,7 @@ a {
 -webkit-text-fill-color: transparent;
 background-clip: text;
 text-fill-color: transparent;
-
-
-
 }
-    
+.no-hover:hover {
+  text-decoration:none;
+}

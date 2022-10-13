@@ -19,6 +19,7 @@ export default function JoinTeam() {
             description={
               "Develops the websites Communicates with other web developers or senior developers implements designs & tasks complete the designated amount of tasks per weekAttend all required meetings"
             }
+            application="https://forms.gle/NXQomJvT7dmCq8nU9"
           />
           <JobPostingCard role="test" description={"ajnsfjkasdjf"} />
         </Wrap>
