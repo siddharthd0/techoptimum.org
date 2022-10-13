@@ -36,6 +36,7 @@ export default function Header() {
           name='description'
           content='A student-led organization helping and inspiring future leaders of the tech industry worldwide.'
         />
+        <title>Tech Optimum</title>
       </Head>
       <Flex
         zIndex={100}
