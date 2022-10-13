@@ -52,7 +52,7 @@ export default function Header() {
                 >
                   ABOUT
                 </MenuButton>
-                <div class="testing-nav">
+                <div className="testing-nav">
                 <MenuList onMouseEnter={onEditOpen} onMouseLeave={onEditClose} className="link-navs-dropdown">
                   <Link href="/about">
                   <MenuItem className="link-navs-dd-text">
