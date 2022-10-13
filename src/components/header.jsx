@@ -9,12 +9,7 @@ import {
   MenuItem,
   MenuList,
   useDisclosure,
-  onOpen,
-  onClose,
-  isOpen,
-
-
-
+ 
 } from "@chakra-ui/react";
 
 import Link from "next/link";
@@ -46,6 +41,7 @@ export default function Header() {
             </li>
             <li>
               <Menu gutter={"5"} isOpen={isEditOpen}>
+               
                 <MenuButton
                   className="link-navs"
                   bgColor={"transparent"}
@@ -56,6 +52,7 @@ export default function Header() {
                 >
                   ABOUT
                 </MenuButton>
+                <div class="testing-nav">
                 <MenuList onMouseEnter={onEditOpen} onMouseLeave={onEditClose} className="link-navs-dropdown">
                   <Link href="/about">
                   <MenuItem className="link-navs-dd-text">
@@ -69,6 +66,7 @@ export default function Header() {
                   <MenuItem className="link-navs-dd-text">Faq</MenuItem>
                   </Link>
                 </MenuList>
+                </div>
               </Menu>
             </li>
             <li>
@@ -83,10 +81,14 @@ export default function Header() {
                  INITIATIVES
                 </MenuButton>
                 <MenuList onMouseEnter={onSecondOpen} onMouseLeave={onSecondClose} className="link-navs-dropdown">
+                  <Link href="/join">
                 <MenuItem className="link-navs-dd-text">Community</MenuItem>
+                </Link>
+                <Link href="/hackathon">
                   <MenuItem className="link-navs-dd-text">
                   Hackathon
                   </MenuItem>
+                  </Link>
                   <Link href="/podcast">
                   <MenuItem className="link-navs-dd-text">Tech Optimum Talks</MenuItem>
                   </Link>
@@ -98,7 +100,7 @@ export default function Header() {
             </li>
             <li>
               <Text className="link-navs" color="primary">
-                <Link href="/">VOLUNTEER</Link>
+                <Link href="/join-team">VOLUNTEER</Link>
               </Text>
             </li>
 

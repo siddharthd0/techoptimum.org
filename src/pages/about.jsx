@@ -30,14 +30,14 @@ export default function About() {
         marginLeft={["2rem", "7rem"]}
         marginTop={"5rem"}
         direction={"column"}
-        data-aos={"fade-up"}
-        data-aos-duration={"2000"}
+      
+      
       >
-        <Heading marginBottom={"2%"} color="primary" fontSize="4xl">
+        <Heading  data-aos-delay="400"data-aos="fade-up-right"  marginBottom={"2%"} color="primary" fontSize="4xl">
           About Us
         </Heading>
 
-        <Text width={["90%", "70%"]} fontSize="2xl">
+        <Text data-aos="fade-up-right"width={["90%", "70%"]} fontSize="2xl">
           Tech Optimum is an organization that is entirely managed by students
           and is commited to influence the next wave of technological leaders.{" "}
           <br />
@@ -50,10 +50,12 @@ export default function About() {
         <br />
 
         <Stack direction={["column", "row"]} spacing="24px">
-          <Box borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
+          <Box data-aos="zoom-in"borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
             <div text-align="center">
               <Text pl={"2rem"} pr="2rem" marginTop="2rem">
+                <Flex textAlign={"center"} margin="auto">
                 <HeartIcon margin="auto" />
+                </Flex>
                 <Heading
                   pt={".2rem"}
                   pb={".7rem"}
@@ -108,8 +110,8 @@ export default function About() {
         marginLeft={["1rem", "7rem"]}
         marginTop={"5rem"}
         direction={"column"}
-        data-aos={"fade-up"}
-        data-aos-duration={"2000"}
+     
+     
       >
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
           Executives

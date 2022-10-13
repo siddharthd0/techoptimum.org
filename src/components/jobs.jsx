@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { BsLayers, BsGraphUp, BsArrowUpRight } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
-import AOS from "aos";
+import AOS from "aos"; 
 import Head from "next/head";
 import { useEffect } from "react";
 export default function Jobs() {
