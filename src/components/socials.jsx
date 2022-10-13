@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Flex, Wrap, WrapItem, Center} from "@chakra-ui/react";
+import { Box, Text, Flex, Wrap, WrapItem, Center,Link} from "@chakra-ui/react";
 export default function Socials() {
   return (
     <>
@@ -10,7 +10,11 @@ export default function Socials() {
        <Center>
         
             <Wrap mx="2rem" my={"3rem"}>
+            <Link isExternal _hover={{
+                 textDecoration:"none",
+              }} href="https://www.tiktok.com/@techoptimum">
             <WrapItem
+
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
@@ -19,7 +23,12 @@ export default function Socials() {
             >
               TIKTOK
             </WrapItem>
+            </Link>
+            <Link isExternal _hover={{
+                 textDecoration:"none",
+              }} href="https://twitter.com/TechOptimumHQ">
             <WrapItem
+
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
@@ -28,7 +37,12 @@ export default function Socials() {
             >
               TWITTER
             </WrapItem>
+            </Link>
+            <Link isExternal _hover={{
+                 textDecoration:"none",
+              }} href="https://www.instagram.com/techoptimum_">
             <WrapItem
+
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
@@ -37,7 +51,12 @@ export default function Socials() {
             >
               INSTAGRAM
             </WrapItem>
+            </Link>
+            <Link isExternal _hover={{
+                 textDecoration:"none",
+              }} href="https://www.linkedin.com/company/techoptimum">
             <WrapItem
+
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
@@ -46,7 +65,12 @@ export default function Socials() {
             >
               LINKEDIN
             </WrapItem>
+            </Link>
+            <Link isExternal _hover={{
+                 textDecoration:"none",
+              }} href="https://discord.gg/w7cymgdRBH">
             <WrapItem
+
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}      
@@ -55,6 +79,7 @@ export default function Socials() {
             >
               DISCORD
             </WrapItem>
+            </Link>
             </Wrap>
           
         

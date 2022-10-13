@@ -55,7 +55,8 @@ export default function Events() {
         Check out the hackathon that we hosted in the summer with over 300 participants <Link>here</Link>.
        
       </Text>
-      <Image mt={["0rem","-10rem"]} p={"0"} boxSize='300px' src='https://media.discordapp.net/attachments/910672979401269258/1017251262422601870/stripy-90_1.png' alt='Tech Optimum Events' />
+      <Image data-aos="fade-left"
+        data-aos-duration="2000"mt={["0rem","-10rem"]} p={"0"} boxSize='300px' src='https://media.discordapp.net/attachments/910672979401269258/1017251262422601870/stripy-90_1.png' alt='Tech Optimum Events' />
      
       </Flex>
       
