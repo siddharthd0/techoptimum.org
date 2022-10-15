@@ -16,6 +16,7 @@ import {
   List,
   ListItem,
   ListIcon,
+  Image,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -52,9 +53,19 @@ export default function JobPostingCard({
                 pt="6"
                 pl="6"
               >
+                          <Image
+  borderRadius='12px'
+  boxSize='30px'
+  src='./tech-optimum-logo.png'
+  alt='Tech Optimum Logo'
+ 
+  position="absolute"
+  left="10px"
+  bottom="7.5px"/>
                 <Heading color="#BD75E5;" fontSize={"3xl"}>
                   {role}
-                </Heading>
+                  </Heading>
+        
               </Button>
             </Flex>
           </PopoverTrigger>
