@@ -53,7 +53,7 @@ export default function HackathonSponsors() {
           <Image alt={"replitSponsor"} src='./Replit.png'></Image>
         </Box>
         <Box>
-          <Image alt={"SlingshotSponsor"} src='./Slingshot.png'></Image>
+          <Image alt={"SlingshotSponsor"} src='./slingshot.png'></Image>
         </Box>
         <Box maxWidth={"150px"}>
           <Image
