@@ -5,80 +5,92 @@ import {
   Heading,
   Button,
   Link,
-  useDisclosure,
+  Badge,
   Popover,
   PopoverTrigger,
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
   List,
   ListItem,
   ListIcon,
-  PopoverAnchor,
 } from "@chakra-ui/react";
-import {
-  MdCheckCircle,
-  CheckCircleIcon,
-  ExternalLinkIcon,
-  InfoOutlineIcon,
-} from "@chakra-ui/icons";
-import { BsArrowUpRight } from "react-icons/bs";
+import { CheckCircleIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
-export default function JobPostingCard({ role, description, application }) {
+export default function JobPostingCard({
+  role,
+  description,
+  application,
+  department,
+  responsibilityOne,
+  responsibilityTwo,
+  responsibilityThree,
+
+}) {
   return (
     <>
-      <Box
-        width={"300px"}
-        borderRadius="10%"
-        background={"#003B73"}
-        pt="6"
-        pl="6"
-      >
-        <Heading color="#FFF6AA" mb=".75rem;" fontSize={"3xl"}>
-          {role}
-        </Heading>
-        <Text color="#FFF6AA">{description}</Text>
-
+    
+      <Box>
         <Popover>
           <PopoverTrigger>
-            <Button
-              _hover={{
-                background: "#066AC8",
-              }}
-              fontWeight="100"
-              marginTop={"10px"}
-              marginBottom={"24px"}
-              borderRadius={"10px"}
-              px="10px"
-              background="#0255A4"
-            >
-              More Info
-            </Button>
+            <Flex direction={"column"}>
+              <Button
+                class="job-listing"
+                px="30px"
+                py="20px"
+                borderRadius={"20px"}
+                background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
+                transition={"500ms"}
+                _hover={{
+                  transform: "scale(0.92)",
+                }}
+                _active={{
+                  transform: "scale(0.9)",
+                }}
+                pt="6"
+                pl="6"
+              >
+                <Heading color="#BD75E5;" fontSize={"3xl"}>
+                  {role}
+                </Heading>
+              </Button>
+            </Flex>
           </PopoverTrigger>
-          <PopoverContent zIndex={"100"} background="black">
+          <PopoverContent
+            borderColor={"transparent"}
+            background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
+          >
             <PopoverArrow />
             <PopoverCloseButton />
-            <PopoverHeader fontSize={"2xl"} fontWeight={1000}>
-              {role}
+            <PopoverHeader
+            color={"#BD75E5"}
+              borderColor={"#BD75E5"}
+              fontSize={"xl"}
+              fontWeight={1000}
+              margin={"0"}
+            >
+              {role} 
+              <Text>
+              <Badge margin={"0"} variant='outline'colorScheme={"purple"}>Department of <span>{department}</span></Badge>
+              </Text>
             </PopoverHeader>
-           
-            <PopoverBody>
-              <List spacing={3}>
+
+            <PopoverBody  color={"#BD75E5"}>
+              <List spacing={2.5}>
                 <ListItem>
                   <Text fontWeight={800}>Responsibilites:</Text>
-                  <ListIcon as={CheckCircleIcon} color="green.500" />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  <ListIcon as={CheckCircleIcon} color="purple.300" />
+                 {responsibilityOne}
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckCircleIcon} color="green.500" />
-                  Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                <ListIcon as={CheckCircleIcon} color="purple.300" />
+                {responsibilityTwo}
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckCircleIcon} color="green.500" />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                <ListIcon as={CheckCircleIcon} color="purple.300" />
+                {responsibilityThree}
                 </ListItem>
               </List>
             </PopoverBody>
@@ -92,9 +104,15 @@ export default function JobPostingCard({ role, description, application }) {
             >
               <PopoverBody>
                 <Button
-                fontWeight={"normal"}
-                marginBottom={"10px"}
-                  colorScheme="buttonBg"
+               
+                borderColor={"#BD75E5"}
+                  fontWeight={"normal"}
+                  marginBottom={"10px"}
+                  background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
+                  _hover={{
+                 
+                    boxShadow: "2px 9px 50px -15px #000000;"
+                  }}
                   borderRadius="full"
                   px="6"
                   rightIcon={
