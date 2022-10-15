@@ -133,13 +133,13 @@ reach average.
           Executives
         </Heading>
         <Flex mb={"9%"} direction={["column", "row"]} gap="45px">
-          <ExecutiveCard src="/sid.svg" name="Siddharth Duggal" role="CEO" />
+          <ExecutiveCard src="/sid.svg" name="Siddharth Duggal" role="Chief Executive Officer" />
           <ExecutiveCard
             src="/pran.svg"
             name="Pranith Molakalapalli"
-            role="CTO"
+            role="Chief Technology Officer"
           />
-          <ExecutiveCard src="/arnav.svg" name="Arnav Pandey" role="COO" />
+          <ExecutiveCard src="/arnav.svg" name="Arnav Pandey" role="Chief Operating Officer" />
         </Flex>
       </Flex>
 
