@@ -148,13 +148,11 @@ export default function HeroHeader() {
                   height='60'
                 />
                 <Text fontSize='3xl' ml='10px' fontWeight='bold'>
-                  Speak the truth
+                  Don't wait long
                 </Text>
               </Flex>
               <Text>
-                At Tech Optimum we thrive for your feedback! We always like
-                people who speak the truth, so share your honest feedback, ask
-                questions, and just speak the truth.
+              We are always here to respond. You won't have to wait a long time for a response from our team!
               </Text>
             </Box>
           </Flex>
