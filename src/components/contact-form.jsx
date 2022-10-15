@@ -148,11 +148,12 @@ export default function HeroHeader() {
                   height='60'
                 />
                 <Text fontSize='3xl' ml='10px' fontWeight='bold'>
-                  Don't wait long
+                  Don&apos;t wait long
                 </Text>
               </Flex>
               <Text>
-              We are always here to respond. You won't have to wait a long time for a response from our team!
+                We are always here to respond. You won&apos;t have to wait a
+                long time for a response from our team!
               </Text>
             </Box>
           </Flex>

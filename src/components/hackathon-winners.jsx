@@ -27,6 +27,7 @@ export default function HackathonWinners() {
                 width='420px'
                 borderRadius='30px'
                 src='https://cdn.discordapp.com/attachments/995836673738940416/1007072533335506974/firstplace.png'
+                alt='GenfolioDevpost'
               />
             </Link>
           </Box>
