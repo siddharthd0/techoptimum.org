@@ -30,14 +30,18 @@ export default function About() {
         marginLeft={["2rem", "7rem"]}
         marginTop={"5rem"}
         direction={"column"}
-      
-      
       >
-        <Heading  data-aos-delay="400"data-aos="fade-up-right"  marginBottom={"2%"} color="primary" fontSize="4xl">
+        <Heading
+          data-aos-delay="400"
+          data-aos="fade-up-right"
+          marginBottom={"2%"}
+          color="primary"
+          fontSize="4xl"
+        >
           About Us
         </Heading>
 
-        <Text data-aos="fade-up-right"width={["90%", "70%"]} fontSize="2xl">
+        <Text data-aos="fade-up-right" width={["90%", "70%"]} fontSize="2xl">
           Tech Optimum is an organization that is entirely managed by students
           and is commited to influence the next wave of technological leaders.{" "}
           <br />
@@ -46,63 +50,77 @@ export default function About() {
           principles:
         </Text>
 
-        <br />
+        
         <br />
 
-        <Stack direction={["column", "row"]} spacing="24px">
-          <Box data-aos="zoom-in"borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
-            <div text-align="center">
-              <Text pl={"2rem"} pr="2rem" marginTop="2rem">
+        <Stack direction={["column", "row"]} spacing="30px">
+          <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+           
+              <Text mb={"30px"} textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
                 <Flex textAlign={"center"} margin="auto">
-                <HeartIcon margin="auto" />
+                  <Text margin="auto">
+                    <HeartIcon />
+                  </Text>
                 </Flex>
                 <Heading
                   pt={".2rem"}
-                  pb={".7rem"}
+                  pb={".5rem"}
                   fontWeight={"300"}
                   fontSize={"3xl"}
+                  textAlign={"center"}
                 >
                   Passion
                 </Heading>
                 Passion drives our creativity. All projects, teams, and
                 initiatives are led by passionate team members.
-              </Text>
-            </div>
+              </Text>  
           </Box>
-          <Box borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
-            <Center>
-              <Text pl={"2rem"} pr="2rem" marginTop="2rem">
-                <ChatIcon />
-                <Heading
-                  pt={".2rem"}
-                  pb={".7rem"}
-                  fontWeight={"300"}
-                  fontSize={"3xl"}
-                >
-                  Support
-                </Heading>
-                We are here to assist you. Finding internships, learning CS, or
-                simply having a community to talk to.
-              </Text>
-            </Center>
-          </Box>
-          <Box borderRadius={"20px"} h="300px" w="300px" bg="#29368C">
-            <Center>
-              <Text pb="4rem" pl={"2rem"} pr="2rem" marginTop="2rem">
+          <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+           
+           <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
+             <Flex textAlign={"center"} margin="auto">
+               <Text margin="auto">
+                 <ChatIcon />
+               </Text>
+             </Flex>
+             <Heading
+               pt={".2rem"}
+               pb={".5rem"}
+               fontWeight={"300"}
+               fontSize={"3xl"}
+               textAlign={"center"}
+             >
+               Support
+             </Heading>
+             We are here to assist you. 
+Finding internships, learning CS, or having a community 
+to talk to.
+           </Text>  
+       </Box>
+           <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+           
+           <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
+             <Flex textAlign={"center"} margin="auto">
+               <Text margin="auto">
                 <SupportIcon />
-                <Heading
-                  pt={".2rem"}
-                  pb={".7rem"}
-                  fontWeight={"300"}
-                  fontSize={"3xl"}
-                >
-                  Excellence
-                </Heading>
-                We strive for excellence when it comes to computer science. We
-                do not stop when we reach average.
-              </Text>
-            </Center>
-          </Box>
+                 
+               </Text>
+             </Flex>
+             <Heading
+               pt={".4rem"}
+               pb={".5rem"}
+               fontWeight={"300"}
+               fontSize={"3xl"}
+               textAlign={"center"}
+             >
+               Excellence
+             </Heading>
+             We strive for excellence when 
+it comes to computer science.
+We do not stop when we 
+reach average.
+           </Text>  
+       </Box>
         </Stack>
       </Flex>
 
@@ -110,8 +128,6 @@ export default function About() {
         marginLeft={["1rem", "7rem"]}
         marginTop={"5rem"}
         direction={"column"}
-     
-     
       >
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
           Executives
@@ -122,7 +138,7 @@ export default function About() {
             src="/pran.svg"
             name="Pranith Molakalapalli"
             role="CTO"
-          /> 
+          />
           <ExecutiveCard src="/arnav.svg" name="Arnav Pandey" role="COO" />
         </Flex>
       </Flex>
