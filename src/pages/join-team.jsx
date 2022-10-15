@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import { Box, Flex, Wrap } from "@chakra-ui/react";
+import { Box, Flex, Wrap,Heading } from "@chakra-ui/react";
 import JoinTeamLanding from "../components/join-team-landing";
 import JoinTeamJobs from "../components/join-team-jobs";
 import JobPostingCard from "../components/job-card";
@@ -13,7 +13,7 @@ export default function JoinTeam() {
       <Box zIndex={"2"} position="relative" top="-120px" overflow="hidden">
         <JoinTeamLanding />
         {/*   <JoinTeamJobs />*/}
-        <Flex margin={"auto"} width="500px" direction="column" justify="center" gap="30px">
+        <Flex marginTop={"-10rem !important"} margin={"auto"} width="500px" direction="column" justify="center" gap="30px">
           <JobPostingCard
             role="Web Developer"
             description={
@@ -28,8 +28,23 @@ export default function JoinTeam() {
           />
           <JobPostingCard
           role="Social Media Manager"
-          application=""
+          application="https://forms.gle/wAPeXbta2oE1WNMz6"
+          responsibilityOne={"Create engaging content for the audience"}
+          responsibilityTwo="Complete the designated amount of tasks per week using Canva, Photoshop, etc."
+          responsibilityThree={"Attend all required meetings"}
+          department="Marketing"
           />
+          <JobPostingCard
+          role="Course Instructor"
+          application="https://forms.gle/q4m3r724RMQvP7F66"
+          responsibilityOne={"Complete a designated programming course from start to finish"}
+          responsibilityTwo="Work on creating programming lessons in English"
+          responsibilityThree={"Proficient in multiple programming languages"}
+          department="Education"
+
+          />
+          <Heading margin={"auto"} textAlign="center" fontSize={"xl"} color="primary"> More volunteer positions opening soon...</Heading>
+
         
         </Flex>
       </Box>

@@ -31,7 +31,7 @@ export default function JobPostingCard({
 }) {
   return (
     <>
-    
+
       <Box>
         <Popover>
           <PopoverTrigger>
@@ -59,6 +59,7 @@ export default function JobPostingCard({
             </Flex>
           </PopoverTrigger>
           <PopoverContent
+            
             borderColor={"transparent"}
             background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
           >
