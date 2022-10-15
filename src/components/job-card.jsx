@@ -33,7 +33,7 @@ export default function JobPostingCard({
     <>
 
       <Box>
-        <Popover>
+        <Popover placement='top'>
           <PopoverTrigger>
             <Flex direction={"column"}>
               <Button
