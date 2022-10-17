@@ -44,13 +44,13 @@ export default function JoinDiscord() {
         <Heading marginTop="60px">Channels for your needs</Heading>
         <Flex
           marginTop="20px"
-          width="70vw"
           height="167px"
           display="grid"
           gridTemplateColumns="repeat(2, minmax(0, 1fr))"
+          w={{base:'350px',md:'500px',lg:'1600px'}}
         >
           <Flex
-            padding="40px"
+            padding={{base:'10px',md:'20px',lg:'40px'}}
             flexDir="column"
             justifyContent="center"
             bg="#4559E9"
@@ -65,7 +65,7 @@ export default function JoinDiscord() {
             }}
           >
             <Heading
-              fontSize="3xl"
+              fontSize={{base:'xl',md:'2xl',lg:'3xl'}}
               transition="500ms"
               _hover={{
                 cursor: "pointer",
@@ -77,7 +77,7 @@ export default function JoinDiscord() {
             <Text>Discuss with other enthusiasts</Text>
           </Flex>
           <Flex
-            padding="40px"
+            padding={{base:'10px',md:'20px',lg:'40px'}}
             flexDir="column"
             justifyContent="center"
             bg="#56D16A"
@@ -92,7 +92,7 @@ export default function JoinDiscord() {
             }}
           >
             <Heading
-              fontSize="3xl"
+              fontSize={{base:'xl',md:'2xl',lg:'3xl'}}
               _hover={{
                 cursor: "pointer",
                 textDecoration: "underline",
@@ -103,25 +103,24 @@ export default function JoinDiscord() {
             <Text>Get your daily dose of laughter</Text>
           </Flex>
         </Flex>
-        <Flex width="70vw" height="400px">
+        <Flex width={{base:'350px',md:'500px',lg:'1600px'}} height={{base:'250px',md:'300px',lg:'400px'}} marginTop={{base:'15px',md:'30px',lg:'40px'}}>
           <Flex
-            padding="40px"
+            paddingTop={{base:'30px',md:'40px',lg:'100px'}}
             flexDir="column"
-            justifyContent="center"
             rounded="3xl"
-            marginTop="20px"
             marginRight="20px"
             width="80%"
             className="cs-help"
             borderWidth="5px"
             transition={"500ms"}
+            paddingLeft={'20px'}
             borderColor="transparent"
             _hover={{
               borderColor: "#FBDEA0",
             }}
           >
             <Heading
-              fontSize="5xl"
+              fontSize={{base:'2xl',md:'3xl',lg:'7xl'}}
               _hover={{
                 cursor: "pointer",
                 textDecoration: "underline",
@@ -129,16 +128,13 @@ export default function JoinDiscord() {
             >
               #CS-help
             </Heading>
-            <Text fontSize="2xl">Get help with your CS problems</Text>
+            <Text fontSize={{base:'xl',md:'2xl',lg:'3xl'}}>Get help with your CS problems</Text>
           </Flex>
           <Flex
             flexDir="column"
-            justifyContent="center"
             bg="#05445E"
             rounded="3xl"
-            marginTop="20px"
-            marginLeft="20px"
-            width="25%"
+            width="25%" 
             borderWidth="5px"
             transition={"500ms"}
             borderColor="transparent"
@@ -146,9 +142,9 @@ export default function JoinDiscord() {
               borderColor: "#94D3ED",
             }}
           >
-            <Flex flexDir="column" transform="rotate(90deg)">
+            <Flex flexDir="column" transform="rotate(90deg)" margin={'auto'} paddingTop={'50px'}>
               <Heading
-                fontSize="3xl"
+                fontSize={{base:'xl',md:'2xl',lg:'4xl'}}
                 _hover={{
                   cursor: "pointer",
                   textDecoration: "underline",
@@ -157,7 +153,7 @@ export default function JoinDiscord() {
                 #Networking
               </Heading>
 
-              <Text>Build your network</Text>
+              <Text fontSize={{base:'sm',md:'lg',lg:'xl'}}>Build your network</Text>
             </Flex>
           </Flex>
         </Flex>
