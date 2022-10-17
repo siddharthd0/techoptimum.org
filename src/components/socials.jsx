@@ -9,7 +9,7 @@ export default function Socials() {
 
        <Center>
         
-            <Wrap mx="2rem" my={"3rem"}>
+            <Wrap mx="2rem" my={"3rem"} justify='center'>
             <Link isExternal _hover={{
                  textDecoration:"none",
               }} href="https://www.tiktok.com/@techoptimum">
