@@ -1,15 +1,16 @@
-# Tech Optimum Website
+# Tech Optimum
 
-This is the official website for the student led organization, <strong>Tech Optimum</strong>!!
+Tech Optimum is a student-led nonprofit organization dedicated to helping students in CS through courses, internships, talks, and more. If you are interested in joining our team, click [here](https://techoptimum.org/join-team).
 
-## Contributing
 
-Pull requests are welcome as <strong>Tech Optimum</strong> is a non-profit.
-
-## Run Development Server
-
-```sh
+## Run Locally:
+#### Install Node Modules
+ ```
+ npm i
+ ```
+#### Run Development Server
+```
 npm run dev
 ```
 
-Open [https://localhost:3000](https://localhost:3000) with your browser to see the result.
+Open [https://localhost:3000](https://localhost:3000) with your browser to see the website.
