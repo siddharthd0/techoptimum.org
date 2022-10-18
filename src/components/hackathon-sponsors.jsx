@@ -1,4 +1,5 @@
 import {
+  Stack, HStack, VStack,
   SimpleGrid,
   Flex,
   Heading,
@@ -24,44 +25,46 @@ export default function HackathonSponsors() {
       >
         Sponsors
       </Heading>
-      <SimpleGrid
-        borderRadius={"20px"}
-        padding='3rem'
-        backgroundColor={"#05101D"}
-        margin={"auto"}
-        maxWidth={"1100px"}
-        minChildWidth='200px'
-        spacing='20px'
-      >
-        <Box>
-          <Image alt={"xyzSponsor"} src='./xyz.png'></Image>
-        </Box>
-        <Box>
-          <Image alt={"taskadeSponsor"} src='./taskade.png'></Image>
-        </Box>
-        <Box>
-          <Image alt={"echo3dSponsor"} src='./echo3d-2.png'></Image>
-        </Box>
-        <Box>
-          <Image
-            alt={"aopsSponsor"}
-            minWidth={"300px"}
-            src='./aops.png'
-          ></Image>
-        </Box>
-        <Box>
-          <Image alt={"replitSponsor"} src='./Replit.png'></Image>
-        </Box>
-        <Box>
-          <Image alt={"SlingshotSponsor"} src='./slingshot.png'></Image>
-        </Box>
-        <Box maxWidth={"150px"}>
-          <Image
-            alt={"WolframSponsor"}
-            src='./Wolfram-Language-Sponsor.png'
-          ></Image>
-        </Box>
-      </SimpleGrid>
+      
+        <SimpleGrid
+          borderRadius={"20px"}
+          padding='3rem'
+          backgroundColor={"#05101D"}
+          margin={"auto"}
+          maxWidth={"1100px"}
+          minChildWidth='200px'
+          spacingX='20px'
+          spacingY='30px'
+        >
+          <Box>
+            <Image alt={"xyzSponsor"} src='./xyz.png'></Image>
+          </Box>
+          <Box>
+            <Image alt={"taskadeSponsor"} src='./taskade.png'></Image>
+          </Box>
+          <Box>
+            <Image alt={"echo3dSponsor"} src='./echo3d-2.png'></Image>
+          </Box>
+          <Center>
+          <Box>
+            <Image
+              alt={"aopsSponsor"} boxSize={"100px"} marginBottom='5' maxHeight='79' minWidth='250' src='./aops.png'
+            ></Image>
+          </Box>
+          </Center>
+          <Box paddingTop='7' > 
+            <Image alt={"replitSponsor"} src='./Replit.png'></Image>
+          </Box>
+          <Box>
+            <Image alt={"SlingshotSponsor"} src='./slingshot.png'></Image>
+          </Box>
+          <Center>
+          <Box maxWidth={"122px"}>
+            <Image alt={"WolframSponsor"} src='./Wolfram-Language-Sponsor.png'
+            ></Image>
+          </Box>
+          </Center>
+        </SimpleGrid>
     </>
   );
 }
