@@ -14,3 +14,8 @@ npm run dev
 ```
 
 Open [https://localhost:3000](https://localhost:3000) with your browser to see the website.
+
+## Dashboard
+
+(Tech Optimum Dashboard Front-end)[https://github.com/TechOptimum/NextJs-Dashboard]
+(Tech Optimum Dashboard Back-end)[https://github.com/TechOptimum/NextJs-Dashboard]
