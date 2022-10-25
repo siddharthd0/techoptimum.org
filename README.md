@@ -2,9 +2,7 @@
 
 Tech Optimum is a student-led nonprofit organization dedicated to helping students in CS through courses, internships, talks, and more. If you are interested in joining our team, click [here](https://techoptimum.org/join-team).
 
-## Install and run locally
-
-### npm
+## Install and run locally via npm
 
 1. Clone the repository
 2. Install dependencies with `npm install`
@@ -13,17 +11,6 @@ Tech Optimum is a student-led nonprofit organization dedicated to helping studen
 ```bash
   npm install
   npm run dev
-```
-
-### yarn
-
-1. Clone the repository
-2. Install dependencies with `yarn install`
-3. Run the development server with `yarn dev`
-
-```bash
-  yarn install
-  yarn dev
 ```
 
 Finally, open [https://localhost:3000](https://localhost:3000) with your browser to see the website.
