@@ -7,6 +7,7 @@ import {
   Icon,
   Spacer,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import { BsLayers, BsGraphUp, BsArrowUpRight } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
@@ -232,18 +233,25 @@ export default function Jobs() {
               </Flex>
             </Box>
           </Flex>
-          <Flex justifyContent={"flex-end"} mt={"4%"} mr={"50px"}>
+          <Flex justifyContent={"flex-end"} mt={"30px"} mr={"50px"}>
             <Button
               bgColor={"#4559E9"}
               borderRadius={"15px"}
               variant={"unstyled"}
               pr="20px"
               pl="20px"
+             fontWeight={100}
               _hover={{
                 bgColor: "#6C7BE6",
               }}
             >
-              View More Volunteer Positions
+
+         
+                  <Link href="./join-team" _hover={{
+                    textDecoration:"none"
+                  }}>View More</Link>
+               
+
             </Button>
           </Flex>
           <br></br>

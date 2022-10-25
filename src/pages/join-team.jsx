@@ -13,14 +13,17 @@ export default function JoinTeam() {
       <Box zIndex={"2"} position="relative" top="-120px" overflow="hidden">
         <JoinTeamLanding />
         {/*   <JoinTeamJobs />*/}
+
         <Flex
-          marginTop={"-10rem !important"}
+         
           margin={"auto"}
           width="500px"
           direction="column"
           justify="center"
           gap="30px"
         >
+
+       
           <JobPostingCard
             role="Web Developer"
             description={
@@ -50,6 +53,7 @@ export default function JoinTeam() {
             responsibilityThree={"Proficient in multiple programming languages"}
             department="Education"
           />
+
           <Heading
             margin={"auto"}
             textAlign="center"
@@ -57,8 +61,10 @@ export default function JoinTeam() {
             color="primary"
           >
             {" "}
-            More volunteer positions opening soon...
+            More positions opening soon...
           </Heading>
+
+       
         </Flex>
       </Box>
       <Socials />
