@@ -39,14 +39,25 @@ export default function Footer() {
           <Text fontSize="md" color="primary" marginTop={8} marginBottom={5}>
             RECIEVE WEEKLY EMAILS
           </Text>
-          <Input
-            border="none"
-            borderRadius={15}
-            padding="20px"
-            h="50px"
-            placeholder="EMAIL:"
-            bgColor="inputBg"
-          />
+          <Flex>
+            <Input
+              border="none"
+              borderRadius={15}
+              padding="20px"
+              h="50px"
+              placeholder="EMAIL:"
+              bgColor="inputBg"
+            />
+            <Button
+              colorScheme="buttonBg"
+              borderRadius={15}
+              padding="20px"
+              h="50px"
+              marginLeft={5}
+            >
+              SUBMIT
+            </Button>
+          </Flex>
         </Flex>
         <Divider width={{ base: 80, md: 0 }} />
         {/* if screen size greater than medium remove the flex */}
