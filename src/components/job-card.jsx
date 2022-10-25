@@ -51,7 +51,6 @@ export default function JobPostingCard({
                 pt="6"
                 pl="6"
               >
-
                 <Image
                   borderRadius="12px"
                   boxSize="30px"

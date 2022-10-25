@@ -15,15 +15,12 @@ export default function JoinTeam() {
         {/*   <JoinTeamJobs />*/}
 
         <Flex
-         
           margin={"auto"}
           width="500px"
           direction="column"
           justify="center"
           gap="30px"
         >
-
-       
           <JobPostingCard
             role="Web Developer"
             description={
@@ -63,8 +60,6 @@ export default function JoinTeam() {
             {" "}
             More positions opening soon...
           </Heading>
-
-       
         </Flex>
       </Box>
       <Socials />

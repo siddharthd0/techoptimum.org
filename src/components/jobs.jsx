@@ -240,18 +240,19 @@ export default function Jobs() {
               variant={"unstyled"}
               pr="20px"
               pl="20px"
-             fontWeight={100}
+              fontWeight={100}
               _hover={{
                 bgColor: "#6C7BE6",
               }}
             >
-
-         
-                  <Link href="./join-team" _hover={{
-                    textDecoration:"none"
-                  }}>View More</Link>
-               
-
+              <Link
+                href="./join-team"
+                _hover={{
+                  textDecoration: "none",
+                }}
+              >
+                View More
+              </Link>
             </Button>
           </Flex>
           <br></br>
