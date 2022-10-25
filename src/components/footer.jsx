@@ -11,7 +11,11 @@ import {
   WrapItem,
   Divider,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon, InfoOutlineIcon } from "@chakra-ui/icons";
+import {
+  ExternalLinkIcon,
+  InfoOutlineIcon,
+  ArrowForwardIcon,
+} from "@chakra-ui/icons";
 
 export default function Footer() {
   return (
@@ -43,7 +47,7 @@ export default function Footer() {
             <Input
               border="none"
               borderRadius={15}
-              padding="20px"
+              padding="25px"
               h="50px"
               placeholder="Enter your email"
               bgColor="inputBg"
@@ -52,11 +56,12 @@ export default function Footer() {
               colorScheme="buttonBg"
               fontWeight="normal"
               borderRadius={15}
-              padding="20px"
+              padding="25px"
               h="50px"
               marginLeft={5}
+              rightIcon={<ArrowForwardIcon />}
             >
-              Submit
+              Sign up
             </Button>
           </Flex>
         </Flex>
