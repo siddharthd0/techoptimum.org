@@ -40,30 +40,6 @@ export default function Footer() {
               TECH OPTIMUM
             </Text>
           </Flex>
-          <Text fontSize="md" color="primary" marginTop={8} marginBottom={5}>
-            RECIEVE WEEKLY EMAILS
-          </Text>
-          <Flex>
-            <Input
-              border="none"
-              borderRadius={15}
-              padding="25px"
-              h="50px"
-              placeholder="Enter your email"
-              bgColor="inputBg"
-            />
-            <Button
-              colorScheme="buttonBg"
-              fontWeight="normal"
-              borderRadius={15}
-              padding="25px"
-              h="50px"
-              marginLeft={5}
-              rightIcon={<ArrowForwardIcon />}
-            >
-              Sign up
-            </Button>
-          </Flex>
         </Flex>
         <Divider width={{ base: 80, md: 0 }} />
         {/* if screen size greater than medium remove the flex */}
@@ -118,6 +94,9 @@ export default function Footer() {
           alignItems={{ base: "center", md: "start" }}
           justifyContent={{ base: "center", md: "start" }}
         >
+          <Heading color="primary" fontSize="lg">
+            JOIN US
+          </Heading>
           <Text
             width={{ base: "300px", md: "250px" }}
             color="primary"
@@ -125,8 +104,7 @@ export default function Footer() {
             textAlign={{ base: "center", md: "left" }}
           >
             At Tech Optimum, we strive for excellence when it comes to
-            programming. Interested? Join us in the process of improving the
-            future of CS.
+            programming. Join us in the process of improving the future of CS.
           </Text>
           <Button
             colorScheme="buttonBg"
@@ -138,7 +116,38 @@ export default function Footer() {
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
             }
           >
-            Join now
+            Learn more
+          </Button>
+        </Flex>
+
+        <Divider width={{ base: 80, md: 0 }} />
+        <Flex
+          direction={"column"}
+          alignItems={{ base: "center", md: "start" }}
+          justifyContent={{ base: "center", md: "start" }}
+        >
+          <Heading color="primary" fontSize="lg">
+            RECEIVE WEEKLY UPDATES
+          </Heading>
+          <Input
+            border="none"
+            borderRadius={15}
+            padding="25px"
+            h="50px"
+            marginTop={3}
+            placeholder="Enter your email"
+            bgColor="inputBg"
+          />
+          <Button
+            colorScheme="buttonBg"
+            fontWeight="normal"
+            borderRadius="full"
+            marginTop={3}
+            padding="25px"
+            h="50px"
+            rightIcon={<ArrowForwardIcon />}
+          >
+            Sign up
           </Button>
         </Flex>
       </Flex>
