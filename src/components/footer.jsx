@@ -45,17 +45,18 @@ export default function Footer() {
               borderRadius={15}
               padding="20px"
               h="50px"
-              placeholder="EMAIL:"
+              placeholder="Enter your email"
               bgColor="inputBg"
             />
             <Button
               colorScheme="buttonBg"
+              fontWeight="normal"
               borderRadius={15}
               padding="20px"
               h="50px"
               marginLeft={5}
             >
-              SUBMIT
+              Submit
             </Button>
           </Flex>
         </Flex>
