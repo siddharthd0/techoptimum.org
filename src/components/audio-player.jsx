@@ -72,15 +72,15 @@ export default function AudioPlayer({ playPauseStatus, audioFileURI }) {
   return (
     <>
       <div style={{ width: "50px", height: "50px" }}></div>
-      <div className='audio-player'>
-        <div className='timeline'>
-          <div className='progress'></div>
-          <div className='thumb'></div>
+      <div className="audio-player">
+        <div className="timeline">
+          <div className="progress"></div>
+          <div className="thumb"></div>
         </div>
-        <div className='controls'>
-          <div className='time'>
-            <div className='current'>0:00</div>
-            <div className='length'></div>
+        <div className="controls">
+          <div className="time">
+            <div className="current">0:00</div>
+            <div className="length"></div>
           </div>
         </div>
       </div>

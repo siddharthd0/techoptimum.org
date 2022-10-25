@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <>
       <Header />
-       
-       <FaqComp />
+
+      <FaqComp />
 
       <Socials />
       <Footer />

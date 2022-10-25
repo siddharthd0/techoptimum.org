@@ -6,7 +6,11 @@ import { Flex, Heading, Text, Button, Icon, Image } from "@chakra-ui/react";
 
 export default function Finder() {
   return (
-    <Flex marginLeft={["2rem", "7rem"]} marginTop={"10rem"} direction={"column"}>
+    <Flex
+      marginLeft={["2rem", "7rem"]}
+      marginTop={"10rem"}
+      direction={"column"}
+    >
       <Head>
         <link
           href="https://unpkg.com/aos@next/dist/aos.css"
@@ -34,7 +38,7 @@ export default function Finder() {
         experience at a real company? This is your chance to discover Computer
         Science internships at a number of businesses!
       </Text>
-      
+
       <Button
         w={"280px"}
         bgColor={"#4559E9"}
@@ -44,13 +48,9 @@ export default function Finder() {
         fontSize="xl"
         _hover={{ bgColor: "#3244ca" }}
         mt={"2.5rem"}
-        
       >
         Find internships now
       </Button>
-      
     </Flex>
   );
 }
-
-

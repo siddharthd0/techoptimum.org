@@ -33,20 +33,20 @@ export default function Header() {
   return (
     <>
       <Head>
-        <link rel='icon' href='/TechOptimumLogo.png' />
-        <meta name='title' content='Tech Optimum' />
+        <link rel="icon" href="/TechOptimumLogo.png" />
+        <meta name="title" content="Tech Optimum" />
         <meta
-          name='description'
-          content='A student-led organization helping and inspiring future leaders of the tech industry worldwide.'
+          name="description"
+          content="A student-led organization helping and inspiring future leaders of the tech industry worldwide."
         />
         <title>Tech Optimum</title>
       </Head>
       <Flex
-        bgColor='#FFAC33'
-        color='black'
+        bgColor="#FFAC33"
+        color="black"
         py={1.5}
         px={10}
-        w='100%'
+        w="100%"
         zIndex={1000}
       >
         <Text margin={"auto"} textAlign={"center"}>
@@ -54,7 +54,7 @@ export default function Header() {
           <Link
             _hover={{}}
             isExternal
-            href='https://github.com/TechOptimum/Tech-Optimum-Website'
+            href="https://github.com/TechOptimum/Tech-Optimum-Website"
           >
             here
           </Link>
@@ -63,51 +63,51 @@ export default function Header() {
       </Flex>
       <Flex
         zIndex={100}
-        position='relative'
-        justifyContent='space-between'
-        alignItems='center'
-        padding='20px 10%'
+        position="relative"
+        justifyContent="space-between"
+        alignItems="center"
+        padding="20px 10%"
       >
-        <Heading href='./#' fontSize='3xl' color='primary'>
+        <Heading href="./#" fontSize="3xl" color="primary">
           Tech Optimum
         </Heading>
 
         <nav>
-          <ul className='nav-links'>
+          <ul className="nav-links">
             <li>
-              <Text className='link-navs' color='primary'>
-                <Link href='/'>HOME</Link>
+              <Text className="link-navs" color="primary">
+                <Link href="/">HOME</Link>
               </Text>
             </li>
             <li>
               <Menu gutter={"5"} isOpen={isEditOpen}>
                 <MenuButton
-                  className='link-navs'
+                  className="link-navs"
                   bgColor={"transparent"}
-                  color='primary'
+                  color="primary"
                   onMouseEnter={onEditOpen}
                   onMouseLeave={onEditClose}
                 >
                   ABOUT
                 </MenuButton>
-                <div className='testing-nav'>
+                <div className="testing-nav">
                   <MenuList
                     onMouseEnter={onEditOpen}
                     onMouseLeave={onEditClose}
-                    className='link-navs-dropdown'
+                    className="link-navs-dropdown"
                   >
-                    <Link href='/about'>
-                      <MenuItem className='link-navs-dd-text'>
+                    <Link href="/about">
+                      <MenuItem className="link-navs-dd-text">
                         Meet the Team
                       </MenuItem>
                     </Link>
-                    <Link href='/contact'>
-                      <MenuItem className='link-navs-dd-text'>
+                    <Link href="/contact">
+                      <MenuItem className="link-navs-dd-text">
                         Contact us
                       </MenuItem>
                     </Link>
-                    <Link href='/faq'>
-                      <MenuItem className='link-navs-dd-text'>Faq</MenuItem>
+                    <Link href="/faq">
+                      <MenuItem className="link-navs-dd-text">Faq</MenuItem>
                     </Link>
                   </MenuList>
                 </div>
@@ -116,9 +116,9 @@ export default function Header() {
             <li>
               <Menu gutter={"5"} isOpen={isSecondOpen}>
                 <MenuButton
-                  className='link-navs'
+                  className="link-navs"
                   bgColor={"transparent"}
-                  color='primary'
+                  color="primary"
                   onMouseEnter={onSecondOpen}
                   onMouseLeave={onSecondClose}
                 >
@@ -127,48 +127,48 @@ export default function Header() {
                 <MenuList
                   onMouseEnter={onSecondOpen}
                   onMouseLeave={onSecondClose}
-                  className='link-navs-dropdown'
+                  className="link-navs-dropdown"
                 >
-                  <Link href='/join'>
-                    <MenuItem className='link-navs-dd-text'>Community</MenuItem>
+                  <Link href="/join">
+                    <MenuItem className="link-navs-dd-text">Community</MenuItem>
                   </Link>
-                  <Link href='/hackathon'>
-                    <MenuItem className='link-navs-dd-text'>Hackathon</MenuItem>
+                  <Link href="/hackathon">
+                    <MenuItem className="link-navs-dd-text">Hackathon</MenuItem>
                   </Link>
-                  <Link href='/podcast'>
-                    <MenuItem className='link-navs-dd-text'>
+                  <Link href="/podcast">
+                    <MenuItem className="link-navs-dd-text">
                       Tech Optimum Talks
                     </MenuItem>
                   </Link>
-                  <Link isExternal href='https://dashboard.techoptimum.org'>
-                    <MenuItem className='link-navs-dd-text'>Courses</MenuItem>
+                  <Link isExternal href="https://dashboard.techoptimum.org">
+                    <MenuItem className="link-navs-dd-text">Courses</MenuItem>
                   </Link>
                 </MenuList>
               </Menu>
             </li>
             <li>
-              <Text className='link-navs' color='primary'>
-                <Link href='/join-team'>VOLUNTEER</Link>
+              <Text className="link-navs" color="primary">
+                <Link href="/join-team">VOLUNTEER</Link>
               </Text>
             </li>
           </ul>
         </nav>
-        <Flex alignItems='right' justifyContent='space-between'>
+        <Flex alignItems="right" justifyContent="space-between">
           <Button
-            colorScheme='secondaryButton'
-            borderRadius='full'
-            px='6'
-            fontWeight='normal'
+            colorScheme="secondaryButton"
+            borderRadius="full"
+            px="6"
+            fontWeight="normal"
           >
             Sign up
           </Button>
           <Button
-            colorScheme='primaryButton'
-            borderRadius='full'
-            px='6'
+            colorScheme="primaryButton"
+            borderRadius="full"
+            px="6"
             n
-            fontWeight='normal'
-            marginLeft='20px'
+            fontWeight="normal"
+            marginLeft="20px"
           >
             Log in
           </Button>

@@ -21,8 +21,8 @@ const theme = extendTheme({
     },
     joinTeamBtn: {
       500: "#4A7EAE",
-      600: "#4A7EAE"
-    }
+      600: "#4A7EAE",
+    },
   },
   fonts: {
     body: "'Neue Machina', sans-serif",

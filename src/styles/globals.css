@@ -26,27 +26,24 @@ a {
 }
 .link-navs {
   border-radius: 10px;
-   padding: 2px 10px 2px 10px;
-   transition: 300ms;
-   color:#9da5f0;
-   background-color:transparent !important;
-   font-weight: 100 !important;
-
+  padding: 2px 10px 2px 10px;
+  transition: 300ms;
+  color: #9da5f0;
+  background-color: transparent !important;
+  font-weight: 100 !important;
 }
 .link-navs:hover {
-   color:#9da5f0;
-   background-color: #252739 !important;
-
+  color: #9da5f0;
+  background-color: #252739 !important;
 }
 .link-navs-dropdown {
-  color:#9da5f0 !important;
+  color: #9da5f0 !important;
   background-color: #252739 !important;
   border: none !important;
 }
 .link-navs-dd-text:hover {
-    background-color:black !important;
+  background-color: black !important;
 }
-
 
 .job-card-image {
   width: 100%;
@@ -55,7 +52,7 @@ a {
 }
 
 .smooth-hover {
- transition:500ms;
+  transition: 500ms;
 }
 .socials-text-tiktok:hover {
   color: #ff0050;
@@ -89,11 +86,10 @@ a {
   border-radius: 50%;
   font-weight: lighter;
   padding: 1.2rem;
-  transition:400ms;
+  transition: 400ms;
 }
 .diagonal-button:hover {
   background-color: #6e7ce8;
-
 }
 
 .audio-player {
@@ -154,7 +150,11 @@ a {
   padding: 2px;
 }
 .gradient-title {
-  background: linear-gradient(90.85deg, #8692E2 21.85%, rgba(52, 193, 225, 0.495) 113.4%);
+  background: linear-gradient(
+    90.85deg,
+    #8692e2 21.85%,
+    rgba(52, 193, 225, 0.495) 113.4%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -162,23 +162,36 @@ a {
 }
 
 .cs-help {
-  background: linear-gradient(273.54deg, #FFC4AA -54.24%, rgba(251, 152, 69, 0.838636) 4.07%, rgba(253, 183, 119, 0.8) 18.03%, rgba(253, 180, 116, 0.8) 31.16%, rgba(253, 180, 116, 0.8) 31.17%, rgba(253, 167, 102, 0.8) 91.13%);
+  background: linear-gradient(
+    273.54deg,
+    #ffc4aa -54.24%,
+    rgba(251, 152, 69, 0.838636) 4.07%,
+    rgba(253, 183, 119, 0.8) 18.03%,
+    rgba(253, 180, 116, 0.8) 31.16%,
+    rgba(253, 180, 116, 0.8) 31.17%,
+    rgba(253, 167, 102, 0.8) 91.13%
+  );
 }
 .faq-button {
-  background-color:#1b2341;
-  border:none;
+  background-color: #1b2341;
+  border: none;
   text-decoration: none;
   border-radius: 10px;
-  padding:3px;
+  padding: 3px;
 }
 
 .development-heading {
-  background: linear-gradient(90deg, #4458E4 5.11%, #8290FF 58.28%, #2A3896 116.07%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #4458e4 5.11%,
+    #8290ff 58.28%,
+    #2a3896 116.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .no-hover:hover {
-  text-decoration:none;
+  text-decoration: none;
 }

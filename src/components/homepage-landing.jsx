@@ -1,8 +1,7 @@
-
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import { Link } from '@chakra-ui/react'
+import { Link } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
 
@@ -10,8 +9,12 @@ export default function HeroHeader() {
   return (
     <>
       <Flex height={"80vh"} width={"100%"} direction={"column"}>
-        <Flex direction={"column"}  marginLeft={["2rem", "7rem"]}>
-          <Heading className="gradient-title" fontSize="5xl" marginBottom={"2.5rem"}>
+        <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
+          <Heading
+            className="gradient-title"
+            fontSize="5xl"
+            marginBottom={"2.5rem"}
+          >
             Learn. Participate. Accomplish.
           </Heading>
           <Text
@@ -25,15 +28,14 @@ export default function HeroHeader() {
           </Text>
           <Button
             backgroundColor="transparent"
-            _hover={{ 
-              backgroundColor: "transparent" ,
+            _hover={{
+              backgroundColor: "transparent",
               color: "#9DB2F6",
             }}
             width="fit-content"
             padding={"0"}
             color="#1B76FF"
             fontWeight={"400"}
-         
             rightIcon={
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
             }
@@ -41,12 +43,12 @@ export default function HeroHeader() {
             LEARN MORE
           </Button>
         </Flex>
-        
+
         <Container
-         margin={"0 auto"}
+          margin={"0 auto"}
           maxWidth={"800px"}
           backgroundColor="#29368C"
-          height={["200px","150px"]}
+          height={["200px", "150px"]}
           mx="2rem  "
           borderRadius={"36px"}
           marginTop={"5rem"}
@@ -59,7 +61,11 @@ export default function HeroHeader() {
             y: 0,
           }}
         >
-          <Flex direction={["column", "row"]}alignItems={"center"} height={"100%"}>
+          <Flex
+            direction={["column", "row"]}
+            alignItems={"center"}
+            height={"100%"}
+          >
             <Heading
               color="white"
               fontSize="2xl"
@@ -105,12 +111,10 @@ export default function HeroHeader() {
               <CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
               COMMUNITY MEMBERS
             </Heading>
-            <Link href='./join' 
-            transition="500ms">
-            <Icon className="diagonal-button" as={BsArrowUpRight} />
+            <Link href="./join" transition="500ms">
+              <Icon className="diagonal-button" as={BsArrowUpRight} />
             </Link>
           </Flex>
-         
         </Container>
       </Flex>
     </>
