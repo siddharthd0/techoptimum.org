@@ -1,9 +1,10 @@
-import { Link,Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Link, Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import JoinBanner from "../assets/join-leadership-globe.svg";
 
 export default function JoinTeamLanding() {
   return (
     <>
+
       <JoinBanner  width="100vw" />
       <Flex flexDir="column" justifyContent="center" alignItems="center" position="absolute" top="0px" left="0px" width="100vw" height="80vh" zIndex={10}>
         <Heading color="#6AA0D3" fontSize="6xl">Join our Team</Heading>

@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { BsLayers, BsGraphUp, BsArrowUpRight } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
-import AOS from "aos"; 
+import AOS from "aos";
 import Head from "next/head";
 import { useEffect } from "react";
 export default function Jobs() {
@@ -29,7 +29,7 @@ export default function Jobs() {
         />
       </Head>
       <Flex
-      marginLeft={["2rem", "7rem"]}
+        marginLeft={["2rem", "7rem"]}
         marginTop={"10rem"}
         direction={"column"}
         data-aos={"fade-up"}
@@ -46,8 +46,8 @@ export default function Jobs() {
         >
           <Flex className="job-cards" mx={"50px"} mt={"80px"}>
             <Box
-             data-aos="zoom-in-down"
-             data-aos-delay="200"
+              data-aos="zoom-in-down"
+              data-aos-delay="200"
               className="job-card1"
               bgColor={"#4559E9"}
               borderRadius={"32px"}
@@ -108,8 +108,8 @@ export default function Jobs() {
               </Flex>
             </Box>
             <Box
-             data-aos-delay="400"
-             data-aos="zoom-in-down"
+              data-aos-delay="400"
+              data-aos="zoom-in-down"
               className="job-card2"
               bgColor={"#4559E9"}
               borderRadius={"32px"}
@@ -171,8 +171,8 @@ export default function Jobs() {
               </Flex>
             </Box>
             <Box
-             data-aos-delay="600"
-             data-aos="zoom-in-down"
+              data-aos-delay="600"
+              data-aos="zoom-in-down"
               className="job-card3"
               bgColor={"#4559E9"}
               mr={"5%"}
@@ -243,16 +243,15 @@ export default function Jobs() {
              fontWeight={100}
               _hover={{
                 bgColor: "#6C7BE6",
-               
               }}
-            
-             
             >
+
          
                   <Link href="./join-team" _hover={{
                     textDecoration:"none"
                   }}>View More</Link>
                
+
             </Button>
           </Flex>
           <br></br>

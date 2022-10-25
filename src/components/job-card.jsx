@@ -28,13 +28,11 @@ export default function JobPostingCard({
   responsibilityOne,
   responsibilityTwo,
   responsibilityThree,
-
 }) {
   return (
     <>
-
       <Box>
-        <Popover placement='top'>
+        <Popover placement="top">
           <PopoverTrigger>
             <Flex direction={"column"}>
               <Button
@@ -53,56 +51,58 @@ export default function JobPostingCard({
                 pt="6"
                 pl="6"
               >
-                          <Image
-  borderRadius='12px'
-  boxSize='30px'
-  src='./tech-optimum-logo.png'
-  alt='Tech Optimum Logo'
- 
-  position="absolute"
-  left="8px"
-  bottom="7.5px"/>
+
+                <Image
+                  borderRadius="12px"
+                  boxSize="30px"
+                  src="./tech-optimum-logo.png"
+                  alt="Tech Optimum Logo"
+                  position="absolute"
+                  left="10px"
+                  bottom="7.5px"
+                />
+
                 <Heading color="#BD75E5;" fontSize={"3xl"}>
                   {role}
-                  </Heading>
-        
+                </Heading>
               </Button>
             </Flex>
           </PopoverTrigger>
           <PopoverContent
-            
             borderColor={"transparent"}
             background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
           >
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverHeader
-            color={"#BD75E5"}
+              color={"#BD75E5"}
               borderColor={"#BD75E5"}
               fontSize={"xl"}
               fontWeight={1000}
               margin={"0"}
             >
-              {role} 
+              {role}
               <Text>
-              <Badge margin={"0"} variant='outline'colorScheme={"purple"}>Department of <span>{department}</span></Badge>
+                <Badge margin={"0"} variant="outline" colorScheme={"purple"}>
+                  Department of <span>{department}</span>
+                </Badge>
               </Text>
             </PopoverHeader>
 
-            <PopoverBody  color={"#BD75E5"}>
+            <PopoverBody color={"#BD75E5"}>
               <List spacing={2.5}>
                 <ListItem>
                   <Text fontWeight={800}>Responsibilites:</Text>
                   <ListIcon as={CheckCircleIcon} color="purple.300" />
-                 {responsibilityOne}
+                  {responsibilityOne}
                 </ListItem>
                 <ListItem>
-                <ListIcon as={CheckCircleIcon} color="purple.300" />
-                {responsibilityTwo}
+                  <ListIcon as={CheckCircleIcon} color="purple.300" />
+                  {responsibilityTwo}
                 </ListItem>
                 <ListItem>
-                <ListIcon as={CheckCircleIcon} color="purple.300" />
-                {responsibilityThree}
+                  <ListIcon as={CheckCircleIcon} color="purple.300" />
+                  {responsibilityThree}
                 </ListItem>
               </List>
             </PopoverBody>
@@ -116,14 +116,12 @@ export default function JobPostingCard({
             >
               <PopoverBody>
                 <Button
-               
-                borderColor={"#BD75E5"}
+                  borderColor={"#BD75E5"}
                   fontWeight={"normal"}
                   marginBottom={"10px"}
                   background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
                   _hover={{
-                 
-                    boxShadow: "2px 9px 50px -15px #000000;"
+                    boxShadow: "2px 9px 50px -15px #000000;",
                   }}
                   borderRadius="full"
                   px="6"

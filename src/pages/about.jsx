@@ -50,77 +50,75 @@ export default function About() {
           principles:
         </Text>
 
-        
         <br />
 
         <Stack direction={["column", "row"]} spacing="30px">
           <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
-           
-              <Text mb={"30px"} textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
-                <Flex textAlign={"center"} margin="auto">
-                  <Text margin="auto">
-                    <HeartIcon />
-                  </Text>
-                </Flex>
-                <Heading
-                  pt={".2rem"}
-                  pb={".5rem"}
-                  fontWeight={"300"}
-                  fontSize={"3xl"}
-                  textAlign={"center"}
-                >
-                  Passion
-                </Heading>
-                Passion drives our creativity. All projects, teams, and
-                initiatives are led by passionate team members.
-              </Text>  
+            <Text
+              mb={"30px"}
+              textAlign={"center"}
+              pl={"2rem"}
+              pr="2rem"
+              marginTop="2rem"
+            >
+              <Flex textAlign={"center"} margin="auto">
+                <Text margin="auto">
+                  <HeartIcon />
+                </Text>
+              </Flex>
+              <Heading
+                pt={".2rem"}
+                pb={".5rem"}
+                fontWeight={"300"}
+                fontSize={"3xl"}
+                textAlign={"center"}
+              >
+                Passion
+              </Heading>
+              Passion drives our creativity. All projects, teams, and
+              initiatives are led by passionate team members.
+            </Text>
           </Box>
           <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
-           
-           <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
-             <Flex textAlign={"center"} margin="auto">
-               <Text margin="auto">
-                 <ChatIcon />
-               </Text>
-             </Flex>
-             <Heading
-               pt={".2rem"}
-               pb={".5rem"}
-               fontWeight={"300"}
-               fontSize={"3xl"}
-               textAlign={"center"}
-             >
-               Support
-             </Heading>
-             We are here to assist you. 
-Finding internships, learning CS, or having a community 
-to talk to.
-           </Text>  
-       </Box>
-           <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
-           
-           <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
-             <Flex textAlign={"center"} margin="auto">
-               <Text margin="auto">
-                <SupportIcon />
-                 
-               </Text>
-             </Flex>
-             <Heading
-               pt={".4rem"}
-               pb={".5rem"}
-               fontWeight={"300"}
-               fontSize={"3xl"}
-               textAlign={"center"}
-             >
-               Excellence
-             </Heading>
-             We strive for excellence when 
-it comes to computer science.
-We do not stop when we 
-reach average.
-           </Text>  
-       </Box>
+            <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
+              <Flex textAlign={"center"} margin="auto">
+                <Text margin="auto">
+                  <ChatIcon />
+                </Text>
+              </Flex>
+              <Heading
+                pt={".2rem"}
+                pb={".5rem"}
+                fontWeight={"300"}
+                fontSize={"3xl"}
+                textAlign={"center"}
+              >
+                Support
+              </Heading>
+              We are here to assist you. Finding internships, learning CS, or
+              having a community to talk to.
+            </Text>
+          </Box>
+          <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+            <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
+              <Flex textAlign={"center"} margin="auto">
+                <Text margin="auto">
+                  <SupportIcon />
+                </Text>
+              </Flex>
+              <Heading
+                pt={".4rem"}
+                pb={".5rem"}
+                fontWeight={"300"}
+                fontSize={"3xl"}
+                textAlign={"center"}
+              >
+                Excellence
+              </Heading>
+              We strive for excellence when it comes to computer science. We do
+              not stop when we reach average.
+            </Text>
+          </Box>
         </Stack>
       </Flex>
 
@@ -133,13 +131,21 @@ reach average.
           Executives
         </Heading>
         <Flex mb={"9%"} direction={["column", "row"]} gap="45px">
-          <ExecutiveCard src="/sid.svg" name="Siddharth Duggal" role="Chief Executive Officer" />
+          <ExecutiveCard
+            src="/sid.svg"
+            name="Siddharth Duggal"
+            role="Chief Executive Officer"
+          />
           <ExecutiveCard
             src="/pran.svg"
             name="Pranith Molakalapalli"
             role="Chief Technology Officer"
           />
-          <ExecutiveCard src="/arnav.svg" name="Arnav Pandey" role="Chief Operating Officer" />
+          <ExecutiveCard
+            src="/arnav.svg"
+            name="Arnav Pandey"
+            role="Chief Operating Officer"
+          />
         </Flex>
       </Flex>
 

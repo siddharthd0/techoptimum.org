@@ -12,12 +12,18 @@ export default function JudgeCard({ src, width = "400", alt, name, role }) {
       >
         {/* <Image src="/static-exec-bg.png" alt="bg" width="450" height="400" /> */}
         <Box pt="6" pl="6">
-          <Badge borderRadius="full" px="7px" >
+          <Badge borderRadius="full" px="7px">
             {role}
           </Badge>
           <Text>{name}</Text>
         </Box>
-        <Image margin="auto" src={src} alt={alt} width={"250px"} height={"275px"}></Image>
+        <Image
+          margin="auto"
+          src={src}
+          alt={alt}
+          width={"250px"}
+          height={"275px"}
+        ></Image>
       </Box>
     </>
   );

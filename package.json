@@ -13,24 +13,27 @@
     "ChakraUI"
   ],
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.4",
-    "@chakra-ui/react": "^2.2.4",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "all": "^0.0.0",
-    "aos": "^3.0.0-beta.6",
-    "framer-motion": "^6.5.1",
-    "next": "12.2.2",
+    "aos": "^2.3.4",
+    "framer-motion": "^7.6.1",
+    "next": "^12.3.1",
     "nextjs-redirect": "^6.0.1",
-    "react": "18.2.0",
-    "react-countup": "^6.3.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "styled-components": "^5.3.5"
+    "react": "^18.2.0",
+    "react-countup": "^6.3.2",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.3.1",
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.2"
+    "@svgr/webpack": "^6.5.0",
+    "eslint": "^8.26.0",
+    "eslint-config-next": "^12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.7.1"
   }
 }

@@ -1,5 +1,16 @@
 import React from "react";
-import { Flex, Text, Image, Input, Heading, Button, Link, Wrap, WrapItem , Divider} from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Image,
+  Input,
+  Heading,
+  Button,
+  Link,
+  Wrap,
+  WrapItem,
+  Divider,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 
 export default function Footer() {
@@ -10,8 +21,8 @@ export default function Footer() {
         alignItems={{ base: "center", md: "center" }}
         padding="60px 10%"
         bgColor="footerBg"
-        direction={{base: "column", md: "row"}}
-        gap={{base: "20px", md: "0px"}}
+        direction={{ base: "column", md: "row" }}
+        gap={{ base: "20px", md: "0px" }}
       >
         <Flex direction="column">
           <Flex alignItems="end">
@@ -20,7 +31,7 @@ export default function Footer() {
               objectFit="cover"
               src="/Logo.png"
               alt="Logo"
-            /> 
+            />
             <Text marginLeft={3} fontSize="3xl" color="primary">
               TECH OPTIMUM
             </Text>
@@ -37,7 +48,7 @@ export default function Footer() {
             bgColor="inputBg"
           />
         </Flex>
-        <Divider width={{base:80, md: 0}} />
+        <Divider width={{ base: 80, md: 0 }} />
         {/* if screen size greater than medium remove the flex */}
 
         {/* <Flex
@@ -46,52 +57,56 @@ export default function Footer() {
           direction={"column"}
           h="130px"
           justifyContent="space-between"
-          alignItems={{base:"center",md:"start"}}
+          alignItems={{ base: "center", md: "start" }}
         >
-            <Heading color="primary" fontSize="lg">
-              ABOUT
-            </Heading>
+          <Heading color="primary" fontSize="lg">
+            ABOUT
+          </Heading>
 
-            <Text color="primary" fontSize="md">
-              <Link href="./community"> 
-              Community
-              </Link>
-
-            </Text>
-            <Text color="primary" fontSize="md">
-            <Link href="./contact"> 
-            Contact</Link>
-            </Text>
-            <Text color="primary" fontSize="md">
-            <Link href="./join-leadership"> 
-            Join our Team</Link>
-            </Text>
-          </Flex>
-          <Divider width={{base:80, md: 0}} />
+          <Text color="primary" fontSize="md">
+            <Link href="./community">Community</Link>
+          </Text>
+          <Text color="primary" fontSize="md">
+            <Link href="./contact">Contact</Link>
+          </Text>
+          <Text color="primary" fontSize="md">
+            <Link href="./join-leadership">Join our Team</Link>
+          </Text>
+        </Flex>
+        <Divider width={{ base: 80, md: 0 }} />
         <Flex
           direction={"column"}
           h="130px"
           justifyContent="space-between"
-          alignItems={{base:"center",md:"start"}}
+          alignItems={{ base: "center", md: "start" }}
         >
-            <Heading color="primary" fontSize="lg">
-              OTHER
-            </Heading>
+          <Heading color="primary" fontSize="lg">
+            OTHER
+          </Heading>
 
-            <Text color="primary" fontSize="md">
-              <Link href="join"> Become a Member</Link>
-            </Text>
-            <Text color="primary" fontSize="md">
-              <Link href="workshops"> Workshops</Link>
-            </Text>
-            <Text color="primary" fontSize="md">
-              <Link href="discord"> Discord</Link>
-            </Text>
+          <Text color="primary" fontSize="md">
+            <Link href="join"> Become a Member</Link>
+          </Text>
+          <Text color="primary" fontSize="md">
+            <Link href="workshops"> Workshops</Link>
+          </Text>
+          <Text color="primary" fontSize="md">
+            <Link href="discord"> Discord</Link>
+          </Text>
         </Flex>
         {/* </Flex> */}
-        <Divider width={{base:80, md: 0}} />
-        <Flex direction={"column"} alignItems={{base:"center", md:"start"}} justifyContent={{base:"center", md:"start"}}>
-          <Text width={{base: "300px",md:"250px"}} color="primary" fontSize="md" textAlign={{base:"center", md:"left"}}>
+        <Divider width={{ base: 80, md: 0 }} />
+        <Flex
+          direction={"column"}
+          alignItems={{ base: "center", md: "start" }}
+          justifyContent={{ base: "center", md: "start" }}
+        >
+          <Text
+            width={{ base: "300px", md: "250px" }}
+            color="primary"
+            fontSize="md"
+            textAlign={{ base: "center", md: "left" }}
+          >
             At Tech Optimum, we strive for excellence when it comes to
             programming. Interested? Join us in the process of improving the
             future of CS.

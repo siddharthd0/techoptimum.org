@@ -14,7 +14,6 @@ export default function UpcomingEvents() {
     <>
       <br></br>
       <Flex
-      
         color="primary"
         mb={"3rem"}
         mt="0"
