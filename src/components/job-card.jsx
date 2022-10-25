@@ -48,7 +48,7 @@ export default function JobPostingCard({
                   transform: "scale(0.92)",
                 }}
                 _active={{
-                  transform: "scale(0.9)",
+                  transform: "scale(0.99)",
                 }}
                 pt="6"
                 pl="6"
@@ -60,7 +60,7 @@ export default function JobPostingCard({
   alt='Tech Optimum Logo'
  
   position="absolute"
-  left="10px"
+  left="8px"
   bottom="7.5px"/>
                 <Heading color="#BD75E5;" fontSize={"3xl"}>
                   {role}
