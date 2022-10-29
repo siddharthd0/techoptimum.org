@@ -8,7 +8,7 @@ import { Image } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/react";
 import FirstPlace from "../assets/hackathon/1stplace.png";
 import SquiggleLine from "../assets/Squiggly-Line.svg";
-
+import SquiggleLine2 from "../assets/Squiggly-Line-2.svg";
 export default function UpcomingEvents() {
   return (
     <>
@@ -26,7 +26,7 @@ export default function UpcomingEvents() {
         justify="center"
       >
         <Heading mb={"4rem"} fontSize="5xl" color="primary" align="center" style={{display:'flex'}}>
-          <SquiggleLine style={{marginTop:'7vh'}}/>
+          <SquiggleLine2 style={{marginTop:'7vh'}}/>
           <h1 style={{marginLeft:'auto',flex:1}}>Upcoming Events</h1>
           <SquiggleLine />
         </Heading>
