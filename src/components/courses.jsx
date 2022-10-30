@@ -75,6 +75,10 @@ export default function Courses() {
                   backgroundColor: "transparent",
                   color: "#9DB2F6",
                 }}
+                _active={{
+                  backgroundColor: "transparent",
+                  color: "#9DB2F6",
+                }}
                 padding={"0"}
                 color="#FFF6AA"
                 fontWeight={"400"}
@@ -117,6 +121,10 @@ export default function Courses() {
                 backgroundColor="transparent"
                 transition={"700"}
                 _hover={{
+                  backgroundColor: "transparent",
+                  color: "#9DB2F6",
+                }}
+                _active={{
                   backgroundColor: "transparent",
                   color: "#9DB2F6",
                 }}
@@ -165,6 +173,10 @@ export default function Courses() {
                 backgroundColor="transparent"
                 transition={"700"}
                 _hover={{
+                  backgroundColor: "transparent",
+                  color: "#9DB2F6",
+                }}
+                _active={{
                   backgroundColor: "transparent",
                   color: "#9DB2F6",
                 }}

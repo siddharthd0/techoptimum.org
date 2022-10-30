@@ -47,6 +47,7 @@ export default function Finder() {
         fontWeight={"400"}
         fontSize="xl"
         _hover={{ bgColor: "#3244ca" }}
+        _active={{ bgColor: "#3244ca" }}
         mt={"2.5rem"}
       >
         Find internships now

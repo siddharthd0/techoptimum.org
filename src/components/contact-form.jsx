@@ -111,6 +111,9 @@ export default function HeroHeader() {
                 _hover={{
                   backgroundColor: "#272D56",
                 }}
+                _active={{
+                  backgroundColor: "#272D56",
+                }}
               >
                 SEND
               </Button>
