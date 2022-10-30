@@ -32,6 +32,10 @@ export default function HeroHeader() {
               backgroundColor: "transparent",
               color: "#9DB2F6",
             }}
+            _active={{
+              backgroundColor: "transparent",
+              color: "#9DB2F6",
+            }}
             width="fit-content"
             padding={"0"}
             color="#1B76FF"
