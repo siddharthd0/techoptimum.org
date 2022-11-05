@@ -13,14 +13,14 @@ export default function HeroHeader() {
           <Heading
             className="gradient-title"
             fontSize="5xl"
-            marginBottom={"2.5rem"}
+            marginBottom={{base: ".5em", md: "1rem" ,lg: "2rem"}}
           >
             Learn. Participate. Accomplish.
           </Heading>
           <Text
             fontSize="2xl"
             color="primary"
-            marginBottom={"2.5rem"}
+            marginBottom={{base: ".5em", md: "1rem" ,lg: "2rem"}}
             width={"85%"}
           >
             A student-led organization helping and inspiring future leaders of
