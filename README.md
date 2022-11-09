@@ -9,7 +9,7 @@ Tech Optimum is a student-led nonprofit organization dedicated to helping studen
 3. Run the development server with `yarn dev`
 
 ```bash
-git clone <link to repo>
+git clone https://github.com/TechOptimum/Tech-Optimum-Website
 yarn install
 yarn dev
 ```
