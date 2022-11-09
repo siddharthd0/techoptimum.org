@@ -28,7 +28,7 @@ export const getBlocks = async (blockId) => {
     if (!next_cursor) {
       break;
     }
-    cursor = next_cursor;
+    cursor = next_cursor; 
   }
   return blocks;
 };

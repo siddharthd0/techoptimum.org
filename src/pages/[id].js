@@ -1,9 +1,10 @@
 import { Fragment } from "react";
 import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
+
 import { databaseId } from "./announcements.jsx";
 import Header from "../components/header";
-import { Heading, Link } from "@chakra-ui/react";
+import { Heading,Flex,Link } from "@chakra-ui/react";
 import Footer from "../components/footer";
 
 export const Text = ({ text }) => {
@@ -17,7 +18,6 @@ export const Text = ({ text }) => {
     } = value;
     return (
       <span
-       //we need  a Key ID here, idk what tho?
         className={[
           bold ? styles.bold : "",
           code ? styles.code : "",
@@ -164,28 +164,28 @@ export default function Post({ page, blocks }) {
   }
   return (
     <>
-      <Header />
-      <div>
-        <Head>
-          <title>{page.properties.Name.title[0].plain_text}</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+<Header/>
+    <div>
+      <Head>
+        <title>{page.properties.Name.title[0].plain_text}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <article class="announcementContent">
-          <Heading fontSize={"4xl"}>
-            <Text text={page.properties.Name.title} />
-          </Heading>
-          <section>
-            {blocks.map((block) => (
-              <Fragment key={block.id}>{renderBlock(block)}</Fragment>
-            ))}
-            <Link marginTop="15px" href="/announcements">
-              ← Go home
-            </Link>
-          </section>
-        </article>
-      </div>
-      <Footer />
+      <article class="announcementContent" >
+       <Heading fontSize={"4xl"}>
+          <Text text={page.properties.Name.title} />
+        </Heading>
+        <section>
+          {blocks.map((block) => (
+            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
+          ))}
+          <Link marginTop="15px" href="/announcements">
+            ← Go home
+          </Link>
+        </section>
+      </article>
+    </div>
+    <Footer/>
     </>
   );
 }
