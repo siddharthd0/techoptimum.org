@@ -3,6 +3,8 @@ import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./announcements.jsx";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -160,6 +162,8 @@ export default function Post({ page, blocks }) {
     return <div />;
   }
   return (
+    <>
+<Header/>
     <div>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
@@ -180,6 +184,8 @@ export default function Post({ page, blocks }) {
         </section>
       </article>
     </div>
+    <Footer/>
+    </>
   );
 }
 

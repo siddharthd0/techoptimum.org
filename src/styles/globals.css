@@ -200,6 +200,8 @@ a {
   width:800px;
   margin:auto;
   text-align:center;
+  margin-top: 50px;
+  margin-bottom: 75px;
 }
 .announcements {
 list-style: none;
@@ -290,4 +292,34 @@ list-style: none;
   .pre {
     background-color: rgb(15, 8, 28);
   }
+}
+
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  margin-bottom: 40px !important;
+  background-color:#0D132F;
+  border-radius:15px;
+  width:60%;
+  margin: auto;
+  padding: 10px 0px 10px 0px;
+}
+
+.postTitle {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.postTitle a {
+  color: inherit;
+}
+
+.postDescription {
+  margin-top: 0;
+  margin-bottom: 12px;
+  opacity: 0.65;
 }

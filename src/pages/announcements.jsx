@@ -14,7 +14,7 @@ export default function Announcements({ posts }) {
    <>
 <Header/>
     <div className="announcements-container">
-        <Heading color="primary">Tech Optimum Announcements</Heading>
+        <Heading marginBottom={"20px "} color="primary">Announcements</Heading>
         <ol class="announcements">
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
@@ -26,15 +26,15 @@ export default function Announcements({ posts }) {
               }
             );
             return (
-              <li  key={post.id} >
-                <h3 >
+              <li  className="post"key={post.id} >
+                <h3 className="postTitle">
                   <Link href={`/${post.id}`}>
                     <Text text={post.properties.Name.title} />
                   </Link>
                 </h3>
 
-                <p >{date}</p>
-                <Link href={`/${post.id}`}>Read post </Link>
+                <p className="postDescription">{date}</p>
+                <Link className="readMoreLink" href={`/${post.id}`}>Read more → </Link>
               </li>
             );
           })}
