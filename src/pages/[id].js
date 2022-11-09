@@ -1,9 +1,10 @@
 import { Fragment } from "react";
 import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
-import Link from "next/link";
+
 import { databaseId } from "./announcements.jsx";
 import Header from "../components/header";
+import { Heading,Flex,Link } from "@chakra-ui/react";
 import Footer from "../components/footer";
 
 export const Text = ({ text }) => {
@@ -170,15 +171,15 @@ export default function Post({ page, blocks }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <article >
-        <h1 >
+      <article class="announcementContent" >
+       <Heading fontSize={"4xl"}>
           <Text text={page.properties.Name.title} />
-        </h1>
+        </Heading>
         <section>
           {blocks.map((block) => (
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
           ))}
-          <Link href="/announcements">
+          <Link marginTop="15px" href="/announcements">
             ← Go home
           </Link>
         </section>
