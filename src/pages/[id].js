@@ -4,7 +4,7 @@ import { getDatabase, getPage, getBlocks } from "../lib/notion";
 
 import { databaseId } from "./announcements.jsx";
 import Header from "../components/header";
-import { Heading,Flex,Link } from "@chakra-ui/react";
+import { Heading, Flex, Link, Image } from "@chakra-ui/react";
 import Footer from "../components/footer";
 
 export const Text = ({ text }) => {
@@ -26,6 +26,7 @@ export const Text = ({ text }) => {
           underline ? styles.underline : "",
         ].join(" ")}
         style={color !== "default" ? { color } : {}}
+        key={value.id}
       >
         {text.link ? <a href={text.link.url}>{text.content}</a> : text.content}
       </span>
@@ -111,7 +112,7 @@ const renderBlock = (block) => {
       const caption = value.caption ? value.caption[0]?.plain_text : "";
       return (
         <figure>
-          <img src={src} alt={caption} />
+          <Image src={src} alt={caption} />
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
       );
@@ -164,28 +165,28 @@ export default function Post({ page, blocks }) {
   }
   return (
     <>
-<Header/>
-    <div>
-      <Head>
-        <title>{page.properties.Name.title[0].plain_text}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header />
+      <div>
+        <Head>
+          <title>{page.properties.Name.title[0].plain_text}</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <article class="announcementContent" >
-       <Heading fontSize={"4xl"}>
-          <Text text={page.properties.Name.title} />
-        </Heading>
-        <section>
-          {blocks.map((block) => (
-            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
-          ))}
-          <Link marginTop="15px" href="/announcements">
-            ← Go home
-          </Link>
-        </section>
-      </article>
-    </div>
-    <Footer/>
+        <article class="announcementContent">
+          <Heading fontSize={"4xl"}>
+            <Text text={page.properties.Name.title} />
+          </Heading>
+          <section>
+            {blocks.map((block) => (
+              <Fragment key={block.id}>{renderBlock(block)}</Fragment>
+            ))}
+            <Link marginTop="15px" href="/announcements">
+              ← Go home
+            </Link>
+          </section>
+        </article>
+      </div>
+      <Footer />
     </>
   );
 }
