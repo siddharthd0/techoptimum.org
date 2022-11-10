@@ -15,7 +15,7 @@ export default function Announcements({ posts }) {
 <Header/>
     <div className="announcements-container">
         <Heading marginBottom={"20px "} color="primary">Announcements</Heading>
-        <ol class="announcements">
+        <ol className="announcements">
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
               "en-US",
