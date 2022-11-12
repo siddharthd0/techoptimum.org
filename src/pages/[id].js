@@ -6,7 +6,7 @@ import { databaseId } from "./announcements.jsx";
 import Header from "../components/header";
 import { Heading,Flex,Link } from "@chakra-ui/react";
 import Footer from "../components/footer";
-
+//deploy again
 export const Text = ({ text }) => {
   if (!text) {
     return null;
