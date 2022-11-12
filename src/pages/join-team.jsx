@@ -51,15 +51,7 @@ export default function JoinTeam() {
             department="Education"
           />
 
-          <Heading
-            margin={"auto"}
-            textAlign="center"
-            fontSize={"xl"}
-            color="primary"
-          >
-            {" "}
-            More positions opening soon...
-          </Heading>
+        
         </Flex>
       </Box>
       <Socials />

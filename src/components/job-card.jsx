@@ -56,7 +56,7 @@ export default function JobPostingCard({
                   boxSize="30px"
                   src="./tech-optimum-logo.png"
                   alt="Tech Optimum Logo"
-                  position="absolute"
+                 className="TO-Job-Image"
                   left="10px"
                   bottom="7.5px"
                 />
