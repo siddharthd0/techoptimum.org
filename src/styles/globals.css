@@ -311,7 +311,7 @@ list-style: none;
 
 .postTitle {
   margin-bottom: 10px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .postTitle a {
@@ -322,13 +322,17 @@ list-style: none;
   margin-top: 0;
   margin-bottom: 12px;
   opacity: 0.65;
+  FONT-SIZE:.8rem;
 }
 .announcementContent {
-  width:800px;
+  width:600px;
   margin:auto;
   margin-top: 2rem;
   margin-bottom:2rem;
 }
 .goHome {
-  background-color:blue;
+ margin-top:20px !important;
+}
+.job-listing {
+  display:flex;
 }

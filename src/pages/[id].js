@@ -164,9 +164,13 @@ export default function Post({ page, blocks }) {
   if (!page || !blocks) {
     return <div />;
   }
+  
   return (
+    
     <>
+    
 <Header/>
+
     <div>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
@@ -174,17 +178,20 @@ export default function Post({ page, blocks }) {
       </Head>
 
       <article class="announcementContent" >
-       <Heading fontSize={"4xl"}>
+       <Heading marginBottom={"1.5rem;"} fontSize={"4xl"}>
+
           <Text text={page.properties.Name.title} />
         </Heading>
+      
         <section>
           {blocks.map((block) => (
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
           ))}
-          <Link marginTop="15px" href="/announcements">
+         
+        </section>
+        <Link className="goHome" href="/announcements">
             ← Go home
           </Link>
-        </section>
       </article>
     </div>
     <Footer/>

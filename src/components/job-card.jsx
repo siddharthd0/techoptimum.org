@@ -51,6 +51,9 @@ export default function JobPostingCard({
                 pt="6"
                 pl="6"
               >
+              
+
+                <Heading float={"right"} color="#BD75E5;" fontSize={"3xl"}>
                 <Image
                   borderRadius="12px"
                   boxSize="30px"
@@ -59,9 +62,9 @@ export default function JobPostingCard({
                  className="TO-Job-Image"
                   left="10px"
                   bottom="7.5px"
+                  float={"left"}
+                  
                 />
-
-                <Heading color="#BD75E5;" fontSize={"3xl"}>
                   {role}
                 </Heading>
               </Button>
