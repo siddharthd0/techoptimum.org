@@ -141,11 +141,7 @@ export default function About() {
             name="Pranith Molakalapalli"
             role="Chief Technology Officer"
           />
-          <ExecutiveCard
-            src="/arnav.svg"
-            name="Arnav Pandey"
-            role="Chief Operating Officer"
-          />
+       
         </Flex>
       </Flex>
 
