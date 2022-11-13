@@ -183,7 +183,7 @@ export default function Post({ page, blocks }) {
           <Text text={page.properties.Name.title} />
         </Heading>
       
-        <section>
+        <section className="announcementsTextC">
           {blocks.map((block) => (
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
           ))}

@@ -336,3 +336,6 @@ list-style: none;
 .job-listing {
   display:flex;
 }
+.announcementsTextC {
+  margin-bottom:1.5rem;
+}
