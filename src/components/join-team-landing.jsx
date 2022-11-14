@@ -15,6 +15,7 @@ export default function JoinTeamLanding() {
         width="100vw"
         height="80vh"
         zIndex={10}
+        marginTop="5rem"
       >
         <Heading color="#6AA0D3" fontSize="6xl">
           Join our Team
