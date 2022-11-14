@@ -53,18 +53,8 @@ export default function JobPostingCard({
               >
               
 
-                <Heading float={"right"} color="#BD75E5;" fontSize={"3xl"}>
-                <Image
-                  borderRadius="12px"
-                  boxSize="30px"
-                  src="./tech-optimum-logo.png"
-                  alt="Tech Optimum Logo"
-                 className="TO-Job-Image"
-                  left="10px"
-                  bottom="7.5px"
-                  float={"left"}
-                  
-                />
+                <Heading color="#BD75E5;" fontSize={"3xl"}>
+               
                   {role}
                 </Heading>
               </Button>

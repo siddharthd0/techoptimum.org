@@ -10,11 +10,11 @@ export default function JoinTeam() {
   return (
     <>
       <Header />
-      <Box zIndex={"2"} position="relative" top="-120px" overflow="hidden">
+      <Box  position="relative" bottom="20px" top="-200px" overflow="hidden">
         <JoinTeamLanding />
-        {/*   <JoinTeamJobs />*/}
-
+ <br/><br/>
         <Flex
+        id="jobs"
           margin={"auto"}
           width="500px"
           direction="column"
@@ -50,8 +50,6 @@ export default function JoinTeam() {
             responsibilityThree={"Proficient in multiple programming languages"}
             department="Education"
           />
-
-        
         </Flex>
       </Box>
       <Socials />

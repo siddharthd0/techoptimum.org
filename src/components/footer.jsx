@@ -23,7 +23,7 @@ export default function Footer() {
       <Flex
         justifyContent="space-between"
         alignItems={{ base: "center", md: "center" }}
-        padding="60px 10%"
+        padding="33px 10% "
         bgColor="footerBg"
         direction={{ base: "column", md: "row" }}
         gap={{ base: "20px", md: "0px" }}
@@ -31,18 +31,17 @@ export default function Footer() {
         <Flex direction="column">
           <Flex alignItems="end">
             <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="/Logo.png"
+             width="150px"
+             marginBottom={"-1.1rem"}
+              src="/text-lblue-transparent.png"
               alt="Logo"
             />
-            <Text marginLeft={3} fontSize="3xl" color="primary">
-              TECH OPTIMUM
-            </Text>
+            
+            
           </Flex>
-          <Text fontSize="md" color="primary" marginTop={8} marginBottom={5}>
+          <Heading fontSize="md" color="primary" marginTop={8} marginBottom={5}>
             RECIEVE WEEKLY EMAILS
-          </Text>
+          </Heading>
           <Flex>
             <Input
               border="none"
@@ -51,14 +50,16 @@ export default function Footer() {
               h="50px"
               placeholder="Enter your email"
               bgColor="inputBg"
+              width={"60%"}
             />
             <Button
               colorScheme="buttonBg"
               fontWeight="normal"
-              borderRadius={15}
-              padding="25px"
+             borderRadius={"0px 15px 15px 0px"}
+             
               h="50px"
-              marginLeft={5}
+              
+              marginLeft={-15}
               rightIcon={<ArrowForwardIcon />}
             >
               Sign up
@@ -76,7 +77,7 @@ export default function Footer() {
           justifyContent="space-between"
           alignItems={{ base: "center", md: "start" }}
         >
-          <Heading color="primary" fontSize="lg">
+          <Heading color="primary" fontSize="md">
             ABOUT
           </Heading>
 
@@ -97,7 +98,7 @@ export default function Footer() {
           justifyContent="space-between"
           alignItems={{ base: "center", md: "start" }}
         >
-          <Heading color="primary" fontSize="lg">
+          <Heading color="primary" fontSize="md">
             OTHER
           </Heading>
 
@@ -121,7 +122,7 @@ export default function Footer() {
           <Text
             width={{ base: "300px", md: "250px" }}
             color="primary"
-            fontSize="md"
+            fontSize="sm"
             textAlign={{ base: "center", md: "left" }}
           >
             At Tech Optimum, we strive for excellence when it comes to
