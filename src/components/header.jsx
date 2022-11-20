@@ -133,14 +133,14 @@ export default function Header() {
                     <MenuItem className="link-navs-dd-text">Community</MenuItem>
                   </Link>
                   <Link href="/hackathon">
-                    <MenuItem className="link-navs-dd-text">Hackathon</MenuItem>
+                    <MenuItem className="link-navs-dd-text">Tech Optimum Hacks</MenuItem>
                   </Link>
                   <Link href="/podcast">
                     <MenuItem className="link-navs-dd-text">
                       Tech Optimum Talks
                     </MenuItem>
                   </Link>
-                  <Link isExternal href="https://dashboard.techoptimum.org">
+                  <Link isExternal href="https://courses.techoptimum.org">
                     <MenuItem className="link-navs-dd-text">Courses</MenuItem>
                   </Link>
                 </MenuList>
