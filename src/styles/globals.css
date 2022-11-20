@@ -343,3 +343,9 @@ list-style: none;
 .announcementsTextC {
   margin-bottom:1.5rem;
 }
+.curriculmbg {
+  background-size:cover;
+  background-image: url("/curriculm-landing.png");
+height:60vh;
+  
+}
