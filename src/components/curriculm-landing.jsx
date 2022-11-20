@@ -34,7 +34,7 @@ export default function CurriculmLanding() {
               Taking an effective and efficient approach to computer science is
               integral to our philosophy. To practice what you have learned, you
               should be able to do practical programming projects. All you need
-              is a willingness to learn; we'll help you do the rest!
+              is a willingness to learn; we&apos;ll help you do the rest!
             </Text>
             <Link href="#web-dev">
             <Button width="130px" fontWeight={"light"} colorScheme="buttonBg">

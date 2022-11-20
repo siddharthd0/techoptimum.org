@@ -129,18 +129,7 @@ export default function Footer() {
             programming. Interested? Join us in the process of improving the
             future of CS.
           </Text>
-          <Button
-            colorScheme="buttonBg"
-            borderRadius="full"
-            px="6"
-            marginTop={3}
-            fontWeight="normal"
-            rightIcon={
-              <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-            }
-          >
-            Join now
-          </Button>
+      
         </Flex>
       </Flex>
     </>
