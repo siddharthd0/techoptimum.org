@@ -20,15 +20,16 @@ export default function CurriculmLanding() {
         <Flex direction="row">
           <Flex
             marginLeft={["2rem", "7rem"]}
-            marginTop={"5rem"}
+            marginTop={"8rem"}
             direction={"column"}
             width="50%;"
           >
-            <Heading fontSize={"5xl"} color="primary" marginBottom={"1rem"}>
+            <Heading fontSize={"5xl"} color="primary" marginBottom={".75rem"}>
               {" "}
               Tech Optimum Curriculm
             </Heading>
-            <Text marginBottom="2rem">
+            <Text  width="80%;"marginBottom="1.25rem">
+
               Taking an effective and efficient approach to computer science is
               integral to our philosophy. To practice what you have learned, you
               should be able to do practical programming projects. All you need
@@ -38,12 +39,12 @@ export default function CurriculmLanding() {
               Learn More
             </Button>
           </Flex>
-          <Flex
+          <Box
             borderRadius={"15px"}
             height="300px"
             width="400px"
             backgroundColor={"#2E3569"}
-            marginTop={"4rem"}
+            marginTop={"5.5rem"}
             marginLeft={["4rem", "5rem"]}
             direction={"column"}
             padding={"1.5rem"}
@@ -57,7 +58,7 @@ export default function CurriculmLanding() {
             <Heading fontSize={"3xl"} color="#FE9292">Intro to Python</Heading>
             <Text>2 weeks · Introductory Course</Text>
             <br/>
-          </Flex>
+          </Box>
         </Flex>
       </Box>
     </>
