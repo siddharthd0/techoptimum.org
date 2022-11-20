@@ -2,7 +2,24 @@ import CurriculmLanding from "../components/curriculm-landing";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import { Box, Flex, Heading, Text, Badge, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Badge,
+  Button,
+  Icon,
+  Link,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from "@chakra-ui/react";
 import { FaGraduationCap } from "react-icons/fa";
 export default function Curriculm() {
   return (
@@ -13,6 +30,7 @@ export default function Curriculm() {
         marginTop={"4rem"}
         marginLeft={["4rem", "7rem"]}
         marginBottom="7rem"
+        id="web-dev"
       >
         <Flex direction={"column"} width="60%;">
           <Flex>
@@ -40,9 +58,25 @@ export default function Curriculm() {
             course, you will have made 3 projects and you will have mastered the
             fundementals of HTML, CSS, and JS.
           </Text>
-          <Button width="130px" fontWeight={"light"} colorScheme="buttonBg">
-            Start Course
-          </Button>
+          <Menu>
+            <MenuButton
+              width="130px"
+              fontWeight={"light"}
+              colorScheme="buttonBg"
+              as={Button}
+            >
+              Learn More
+            </MenuButton>
+            <MenuList className="link-navs-dropdown">
+              <Link href="e">
+                <MenuItem className="link-navs-dd-text">View Course</MenuItem>
+              </Link>
+               <Link href="e">
+                <MenuItem className="link-navs-dd-text">Course Help</MenuItem>
+              </Link>
+             
+            </MenuList>
+          </Menu>
         </Flex>
         <Box
           borderRadius={"15px"}

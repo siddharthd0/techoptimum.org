@@ -11,6 +11,7 @@ import {
   Text,
   Button,
   Icon,
+  
 } from "@chakra-ui/react";
 
 export default function CurriculmLanding() {
@@ -35,9 +36,11 @@ export default function CurriculmLanding() {
               should be able to do practical programming projects. All you need
               is a willingness to learn; we'll help you do the rest!
             </Text>
+            <Link href="#web-dev">
             <Button width="130px" fontWeight={"light"} colorScheme="buttonBg">
               Learn More
             </Button>
+            </Link>
           </Flex>
           <Box
             borderRadius={"15px"}
