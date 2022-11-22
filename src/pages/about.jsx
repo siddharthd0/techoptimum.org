@@ -36,12 +36,12 @@ export default function About() {
           data-aos="fade-up-right"
           marginBottom={"2%"}
           color="primary"
-          fontSize="4xl"
+          fontSize="5xl"
         >
           About Us
         </Heading>
 
-        <Text data-aos="fade-up-right" width={["90%", "70%"]} fontSize="2xl">
+        <Text data-aos="fade-up-right" width={["90%", "70%"]} fontSize="xl">
           Tech Optimum is an organization that is entirely managed by students
           and is commited to influence the next wave of technological leaders.{" "}
           <br />

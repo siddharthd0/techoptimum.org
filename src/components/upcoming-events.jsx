@@ -15,13 +15,13 @@ export default function UpcomingEvents() {
       <br></br>
       <Flex
         color="primary"
-        mb={"3rem"}
+     
         mt="0"
         paddingTop={"4rem"}
         height={"300px"}
         backgroundColor={"#05101D"}
         display={"column"}
-        align="center"
+        align="ce nter"
         justify="center"
       >
         <Heading mb={"4rem"} fontSize="5xl" color="primary" align="center">
@@ -29,7 +29,7 @@ export default function UpcomingEvents() {
         </Heading>
         <div></div>
         <h2 align="center">More events coming soon...</h2>
-        <SquiggleLine />
+
       </Flex>
     </>
   );

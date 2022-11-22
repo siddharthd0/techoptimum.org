@@ -13,11 +13,14 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function HackathonRecap() {
   return (
     <>
-      <Flex direction={"column"} width={"100%"} align="center">
-        <Heading color="primary" fontSize="6xl" marginBottom={"2.5rem"}>
+      <Flex marginBottom={"3rem"} direction={"column"} width={"100%"} align="center">
+        <Heading fontSize="7xl" color={"primary"}>
           Quick Recap
         </Heading>
-
+        <Text  maxWidth={"600px"} marginBottom="2rem" marginTop={"1.4rem"} fontSize="xl">
+          Tech Optimum Hacks was our first annual 48-hour virtual hackathon. We had over 50 project submissions and hosted 3 workshops. 
+          We will be hosting our next hackathon in June 2023. Whether you've never touched code, or are a coding master, you are welcome to participate! We look forward to seeing you. 
+        </Text>
         <Container
           maxWidth={"570px"}
           backgroundColor="#29368C"
@@ -79,7 +82,8 @@ export default function HackathonRecap() {
             </Link>
           </Flex>
         </Container>
-        <Flex alignItems={"center"} height={"100%"}>
+      
+       {/* <Flex alignItems={"center"} height={"100%"}>
           <Flex
             align="center"
             justify="center"
@@ -131,6 +135,7 @@ export default function HackathonRecap() {
             </Flex>
           </Flex>
         </Flex>
+        */}
       </Flex>
     </>
   );

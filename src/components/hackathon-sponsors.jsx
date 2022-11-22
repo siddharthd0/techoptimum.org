@@ -31,7 +31,7 @@ export default function HackathonSponsors() {
       <SimpleGrid
         borderRadius={"20px"}
         padding="3rem"
-        backgroundColor={"#05101D"}
+
         margin={"auto"}
         maxWidth={"1100px"}
         minChildWidth="200px"
