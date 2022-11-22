@@ -41,7 +41,7 @@ export default function Header() {
         />
         <title>Tech Optimum</title>
       </Head>
-      <Flex
+    {/*  <Flex
         bgColor="#FFAC33"
         color="black"
         py={1.5}
@@ -60,7 +60,7 @@ export default function Header() {
           </Link>
           .
         </Text>
-      </Flex>
+  </Flex>*/}
       <Flex
         zIndex={100}
         position="relative"
