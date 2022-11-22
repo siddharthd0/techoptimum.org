@@ -18,20 +18,13 @@ import { Link } from "@chakra-ui/react";
 export default function HackathonSponsors() {
   return (
     <>
-      <Heading
-        textAlign={"center"}
-        color="primary"
-        fontSize="6xl"
-        mt="3rem"
-        marginBottom={"1rem"}
-      >
+      <Heading textAlign={"center"} color="primary" fontSize="5xl" mt="3rem">
         Sponsors
       </Heading>
 
       <SimpleGrid
         borderRadius={"20px"}
         padding="3rem"
-
         margin={"auto"}
         maxWidth={"1100px"}
         minChildWidth="200px"
