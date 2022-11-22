@@ -64,7 +64,7 @@ export default function Finder() {
             Find internships now
           </Button>
         </Box>
-        <Box w={300} h={400} boxSize={["md", "lg"]} paddingLeft={50}>
+        <Box width={"350px"} paddingLeft="100px">
           <Image src="/internship-finder-image.png" alt="internship finder" />
         </Box>
       </Stack>
