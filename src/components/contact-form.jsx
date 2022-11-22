@@ -89,7 +89,7 @@ export default function HeroHeader() {
                   color: "#A7B2FF",
                 }}
                 padding="0"
-                placeholder="SUBJECT"
+                placeholder="MESSAGE"
                 border="none"
                 borderRadius="0px"
                 borderBottom="1px"
