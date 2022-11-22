@@ -66,7 +66,7 @@ export default function Header() {
         position="relative"
         justifyContent="space-between"
         alignItems="center"
-        padding="20px 10%"
+        padding="30px 10%"
       >
         <Heading href="./#" fontSize="3xl" color="primary">
           Tech Optimum
