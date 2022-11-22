@@ -36,17 +36,28 @@ export default function JoinDiscord() {
             ></IconButton>
           </Link>
         </Flex>
-        <Text marginY="20px" fontSize="xl">
-          A public community full of programmers of all skill-levels. Whether{" "}
-          <br />
-          you need computer science help, want to network, or just want to be{" "}
-          <br />
+        
+        <Text width={"700px"} marginY="15px" fontSize="xl">
+          A public community full of programmers of all skill-levels. Whether
+         
+          you need computer science help, want to network, or just want to be
+         
           entertained from our daily memes, we have it all.
         </Text>
-        <Heading marginTop="60px">Channels for your needs</Heading>
+        <Flex marginTop={"5rem"}>
+      
+          <Heading display="flex">
+            Channels for your
+            <Text mx="15px" color="#738BDA">
+              Needs
+            </Text>
+          
+          </Heading>
+          </Flex>
+        <Text width={"800px"} marginY="10px" fontSize="xl">We have many channels where you can chat with other community members about various things! From memes, to coding help, we are here for you!</Text>
         <Flex
           marginTop="20px"
-          w={{ base: "350px", md: "400px", lg: "800px" }}
+          w={{ base: "350px", md: "400px", lg: "750px" }}
           height="167px"
           display="grid"
           gridTemplateColumns="repeat(2, minmax(0, 1fr))"
@@ -106,8 +117,8 @@ export default function JoinDiscord() {
           </Flex>
         </Flex>
         <Flex
-          width={{ base: "350px", md: "500px", lg: "1000px" }}
-          height={{ base: "250px", md: "300px", lg: "350px" }}
+          width={{ base: "350px", md: "400px", lg: "750px" }}
+          height={{ base: "250px", md: "230px", lg: "350px" }}
           marginTop={{ base: "15px", md: "30px", lg: "40px" }}
         >
           <Flex
