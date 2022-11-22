@@ -15,7 +15,7 @@ export default function JoinHero() {
         width="100vw"
         paddingTop="5%"
         paddingBottom="10%"
-        marginTop={"-11.5vh"}
+        marginTop={"-14vh"}
       >
         <Heading marginTop={"140px "} fontWeight={100} fontSize={"7xl"}>
           Tech Optimum
