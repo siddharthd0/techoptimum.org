@@ -17,20 +17,38 @@ export default function JoinHero() {
         paddingBottom="10%"
         marginTop={"-14vh"}
       >
-        <Heading marginTop={"140px "} fontWeight={100} fontSize={"7xl"}>
+        <Heading
+          marginBottom={"-10px"}
+          marginTop={"140px "}
+          fontWeight={100}
+          fontSize={"6xl"}
+        >
           Tech Optimum
-          <br />
+        </Heading>
+        <Heading
+          fontWeight={100}
+          color={"blue.100"}
+          marginTop={"-10px"}
+          px={"10px"}
+          borderRadius={"10px"}
+          backgroundColor={"blue.500"}
+          fontSize={"6xl"}
+        >
           Community
         </Heading>
         <Text fontSize="2xl">
-          Join a community of like-minded <br/>people who enjoy coding. 
-          
+          Join a community of like-minded <br />
+          people who enjoy coding.
         </Text>
-        <Link _hover={{
-              textDecoration: "none !important",
-            }}href="./discord"
-            isExternal>
+        <Link
+          _hover={{
+            textDecoration: "none !important",
+          }}
+          href="./discord"
+          isExternal
+        >
           <Button
+          marginTop={"-10px"}
             colorScheme="buttonBg"
             padding="25px 35px 25px 35px"
             fontSize="2xl"
@@ -40,7 +58,7 @@ export default function JoinHero() {
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
             }
           >
-           Take me there
+            Take me there
           </Button>
         </Link>
       </Flex>

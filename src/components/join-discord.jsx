@@ -27,6 +27,8 @@ export default function JoinDiscord() {
                 backgroundColor: "transparent",
                 color: "#738BDA",
               }}
+             
+              
               icon={<BsArrowUpRight />}
               background="transparant"
               color="#1B76FF"
@@ -34,7 +36,7 @@ export default function JoinDiscord() {
             ></IconButton>
           </Link>
         </Flex>
-        <Text marginY="40px" fontSize="xl">
+        <Text marginY="20px" fontSize="xl">
           A public community full of programmers of all skill-levels. Whether{" "}
           <br />
           you need computer science help, want to network, or just want to be{" "}
@@ -44,7 +46,7 @@ export default function JoinDiscord() {
         <Heading marginTop="60px">Channels for your needs</Heading>
         <Flex
           marginTop="20px"
-          w={{ base: "350px", md: "500px", lg: "1000px" }}
+          w={{ base: "350px", md: "400px", lg: "800px" }}
           height="167px"
           display="grid"
           gridTemplateColumns="repeat(2, minmax(0, 1fr))"
