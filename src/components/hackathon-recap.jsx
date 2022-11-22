@@ -13,15 +13,75 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function HackathonRecap() {
   return (
     <>
-      <Flex marginBottom={"3rem"} direction={"column"} width={"100%"} align="center">
+      <Flex
+        marginBottom={"3rem"}
+        direction={"column"}
+        width={"100%"}
+        align="center"
+      >
         <Heading fontSize="7xl" color={"primary"}>
           Quick Recap
         </Heading>
-        <Text  maxWidth={"600px"} marginBottom="2rem" marginTop={"1.4rem"} fontSize="xl">
-          Tech Optimum Hacks was our first annual 48-hour virtual hackathon. We had over 50 project submissions and hosted 3 workshops. 
-          We will be hosting our next hackathon in June 2023. Whether you've never touched code, or are a coding master, you are welcome to participate! We look forward to seeing you. 
-        </Text>
+        <Heading color={"primary"} marginTop={"20px"}>Featuring...</Heading>
+        <Flex>
+          <Flex alignItems={"center"} height={"100%"}>
+            <Flex
+              align="center"
+              justify="center"
+              paddingLeft="15%"
+              marginTop={"2.5rem"}
+            >
+              <ChessIcon width="55px" height="auto" />
+
+              <Heading textAlign="center" color="primary" fontSize="3xl">
+                Chess Tournament
+              </Heading>
+            </Flex>
+          </Flex>
+          <Flex alignItems={"center"} height={"100%"}>
+            <Flex
+              align="center"
+              justify="center"
+              paddingLeft="10px"
+              marginTop={"2.5rem"}
+            >
+              <SkribblIoIcon width="70px" height="auto" />
+
+              <Heading
+                mx={"30px"}
+                textAlign={"center"}
+                color="primary"
+                fontSize="3xl"
+              >
+                Skribble.io <br />
+                Tournament
+              </Heading>
+            </Flex>
+          </Flex>
+          <Flex alignItems={"center"} height={"100%"} marginBottom={"7.5rem"}>
+            <Flex
+              align="center"
+              justify="center"
+              paddingLeft="5%"
+              marginTop={"2.5rem"}
+            >
+              <WorkshopsIcon width="60px" />
+
+              <Heading
+                marginLeft={"20px"}
+                textAlign={"center"}
+                color="primary"
+                fontSize="3xl"
+              >
+                Programming
+                <br />
+                Workshops
+              </Heading>
+            </Flex>
+          </Flex>
+        </Flex>
         <Container
+        marginTop={"-4rem !important"}
           maxWidth={"570px"}
           backgroundColor="#29368C"
           height={"150px"}
@@ -82,60 +142,6 @@ export default function HackathonRecap() {
             </Link>
           </Flex>
         </Container>
-      
-       {/* <Flex alignItems={"center"} height={"100%"}>
-          <Flex
-            align="center"
-            justify="center"
-            paddingLeft="15%"
-            width={"70%"}
-            marginTop={"2.5rem"}
-          >
-            <ChessIcon width="25%" height="auto" />
-            <Heading width="5%" color="primary" fontSize="3xl"></Heading>
-            <Heading
-              textAlign="center"
-              width="70%"
-              color="primary"
-              fontSize="3xl"
-            >
-              Chess Tournament
-            </Heading>
-          </Flex>
-        </Flex>
-        <Flex alignItems={"center"} height={"100%"}>
-          <Flex
-            align="center"
-            justify="center"
-            paddingLeft="5%"
-            width={"90%"}
-            marginTop={"2.5rem"}
-          >
-            <SkribblIoIcon width="25%" height="auto" />
-            <Heading width="10%" color="primary" fontSize="3xl"></Heading>
-            <Heading width="65%" color="primary" fontSize="3xl">
-              Skribble.io
-            </Heading>
-          </Flex>
-        </Flex>
-        <Flex alignItems={"center"} height={"100%"} marginBottom={"7.5rem"}>
-          <Flex
-            align="center"
-            justify="center"
-            paddingLeft="5%"
-            width={"70%"}
-            marginTop={"2.5rem"}
-          >
-            <WorkshopsIcon width="27.5%" height="auto" />
-            <Heading width="17.5%" color="primary" fontSize="3xl"></Heading>
-            <Flex width="57.5%" height="100%">
-              <Heading width="100%" height="50%" color="primary" fontSize="3xl">
-                Workshops
-              </Heading>
-            </Flex>
-          </Flex>
-        </Flex>
-        */}
       </Flex>
     </>
   );
