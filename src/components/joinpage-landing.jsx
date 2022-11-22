@@ -1,6 +1,7 @@
 import { Link, Heading, Flex, Text, Button } from "@chakra-ui/react";
 // import JoinText from "../assets/Join-text-underline.svg";
-
+import { BsArrowUpRight } from "react-icons/bs";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function JoinHero() {
   return (
     <>
@@ -10,32 +11,36 @@ export default function JoinHero() {
         flexDir="column"
         justifyContent="space-around"
         alignItems="center"
-        height="90vh"
+        height="100vh"
         width="100vw"
         paddingTop="5%"
         paddingBottom="10%"
+        marginTop={"-11.5vh"}
       >
-        <Heading fontWeight={100} fontSize={"6xl"}>
-          Become a Member.
+        <Heading marginTop={"140px "} fontWeight={100} fontSize={"7xl"}>
+          Tech Optimum
           <br />
-          It&apos;s free.
+          Community
         </Heading>
         <Text fontSize="2xl">
-          Get access to free services, including free <br /> courses, free
-          workshops, and a helpful community!
+          Join a community of like-minded <br/>people who enjoy coding. 
+          
         </Text>
-        <Link href="./dashboard">
+        <Link _hover={{
+              textDecoration: "none !important",
+            }}href="./discord"
+            isExternal>
           <Button
             colorScheme="buttonBg"
-            padding="40px"
-            fontSize="3xl"
+            padding="25px 35px 25px 35px"
+            fontSize="2xl"
             fontWeight="normal"
             rounded="full"
-            _hover={{
-              textDecoration: "none !important",
-            }}
+            rightIcon={
+              <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+            }
           >
-            Get access now
+           Take me there
           </Button>
         </Link>
       </Flex>
