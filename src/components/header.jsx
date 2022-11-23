@@ -68,15 +68,16 @@ export default function Header() {
         alignItems="right"
         padding="25px 12%"
         position={"relative"}
+        direction={["column", "row"]}
       >
         <Flex justifyContent={"start"}>
-        <Image  marginTop={"-15px"} w="60px" src="./logo-transparent.png"></Image>
+        <Image  display={["none", "block"]} marginTop={"-15px"} w="60px" src="./logo-transparent.png"></Image>
 
-        <Heading alignItems="left"href="./#" fontSize="3xl" color="primary">
+        <Heading textAlign={"center"}  alignItems="left"href="./#" fontSize="3xl" color="primary">
           Tech Optimum
         </Heading>
         </Flex>
-
+<Flex marginTop={["1.5rem", "0rem"]} textAlign={"center"}>
         <nav>
           <ul className="nav-links">
             <li>
@@ -159,6 +160,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+        </Flex>
         
       </Flex>
     </>

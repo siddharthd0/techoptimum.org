@@ -20,15 +20,16 @@ export default function HeroHeader() {
         justifyContent="center"
         margin={"auto"}
         color="#A7B2FF"
+       
       >
-        <Flex width="70vw" marginTop="50px" marginBottom="50px">
+        <Flex  direction={["column", "row"]}width="70vw" marginTop="50px" marginBottom="50px">
           <Box
             padding={"50px"}
             borderRadius={"20px"}
             backgroundImage={"/contact-card.svg"}
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            width="35vw"
+            maxWidth="500px"
           >
             <Heading fontSize={"4xl"} mb={"30px"}>
               Get in Touch{" "}
@@ -139,7 +140,7 @@ export default function HeroHeader() {
                   width="60"
                   height="60"
                 />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+                <Text  fontSize="3xl" ml="10px" fontWeight="bold">
                   Speak the truth
                 </Text>
               </Flex>
