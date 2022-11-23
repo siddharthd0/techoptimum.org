@@ -129,6 +129,9 @@ export default function Header() {
                   onMouseLeave={onSecondClose}
                   className="link-navs-dropdown"
                 >
+                  <Link href="./curriculm">
+                    <MenuItem className="link-navs-dd-text">Curriculm</MenuItem>
+                  </Link>
                   <Link href="/join">
                     <MenuItem className="link-navs-dd-text">Community</MenuItem>
                   </Link>
@@ -140,9 +143,7 @@ export default function Header() {
                       Tech Optimum Talks
                     </MenuItem>
                   </Link>
-                  <Link isExternal href="https://courses.techoptimum.org">
-                    <MenuItem className="link-navs-dd-text">Courses</MenuItem>
-                  </Link>
+                  
                 </MenuList>
               </Menu>
             </li>

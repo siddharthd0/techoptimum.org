@@ -68,10 +68,10 @@ export default function Curriculm() {
               Learn More
             </MenuButton>
             <MenuList className="link-navs-dropdown">
-              <Link href="e">
+              <Link href="https://courses.techoptimum.org">
                 <MenuItem className="link-navs-dd-text">View Course</MenuItem>
               </Link>
-               <Link href="e">
+               <Link href="./discord">
                 <MenuItem className="link-navs-dd-text">Course Help</MenuItem>
               </Link>
              
