@@ -7,6 +7,7 @@ import {
   Stack,
   Box,
   Center,
+  Link,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -86,7 +87,11 @@ export default function Courses() {
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                 }
               >
+                 <Link _hover={{
+            textDecoration: "none"
+          }}href="./curriculm">
                 LEARN MORE
+                </Link>
               </Button>{" "}
             </Text>
           </div>
@@ -135,7 +140,11 @@ export default function Courses() {
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                 }
               >
+                <Link _hover={{
+            textDecoration: "none"
+          }}href="./curriculm">
                 LEARN MORE
+                </Link>
               </Button>
             </Text>
           </Center>
@@ -187,7 +196,11 @@ export default function Courses() {
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                 }
               >
+                <Link _hover={{
+            textDecoration: "none"
+          }}href="./curriculm">
                 LEARN MORE
+                </Link>
               </Button>
             </Text>
           </Center>

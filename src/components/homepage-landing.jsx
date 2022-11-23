@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { Link } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
+import { NodeNextRequest } from "next/dist/server/base-http/node";
 
 export default function HeroHeader() {
   return (
     <>
-      <Flex height={"80vh"} width={"100%"} direction={"column"}>
-        <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
+      <Flex  marginBottom={"100px"}width={"100%"} direction={"column"}>
+        <Flex direction={"column"} marginLeft={["2rem", "9rem"]}>
           <Heading
             className="gradient-title"
             fontSize="5xl"
@@ -26,6 +27,9 @@ export default function HeroHeader() {
             A student-led organization helping and inspiring future leaders of
             the tech industry worldwide.
           </Text>
+          <Link _hover={{
+            textDecoration: "none"
+          }}href="./curriculm">
           <Button
             backgroundColor="transparent"
             _hover={{
@@ -46,16 +50,18 @@ export default function HeroHeader() {
           >
             LEARN MORE
           </Button>
+          </Link>
         </Flex>
 
         <Container
+       
           margin={"0 auto"}
           maxWidth={"800px"}
           backgroundColor="#29368C"
           height={["200px", "150px"]}
           mx="2rem  "
           borderRadius={"36px"}
-          marginTop={"5rem"}
+          marginTop={"3rem"}
           as={motion.div}
           initial={{ opacity: 0, y: 40 }}
           animate={{

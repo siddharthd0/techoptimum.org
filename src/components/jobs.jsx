@@ -5,7 +5,6 @@ import {
   Text,
   Flex,
   Icon,
-  Spacer,
   Button,
   Link,
 } from "@chakra-ui/react";
@@ -74,10 +73,10 @@ export default function Jobs() {
                     ml={"1.7rem"}
                     fontWeight="800"
                     lineHeight="35px"
-                    fontSize="36px"
+                   fontSize={"4xl"}
                     width="158px"
                   >
-                    Graphic Design
+                    Course Writer
                   </Text>
                 </Flex>
                 <Text
@@ -86,10 +85,11 @@ export default function Jobs() {
                   lineHeight="14px"
                   mt={"0.7rem"}
                 >
-                  As a graphic developer you will be making various logos &
-                  designs that are needed for the website & social media
+                  As a course instructor, you will assist us in building programming courses. This includes writing, colloborating, and revising courses.
                 </Text>
-
+  <Link _hover={{
+    textDecoration: "none"
+  }} isExternal href="https://forms.gle/CpcuX7kdhRpiJLZL8">
                 <Button
                   mt="20%"
                   variant={"unstyled"}
@@ -105,6 +105,7 @@ export default function Jobs() {
                 >
                   APPLY NOW
                 </Button>
+                </Link>
               </Flex>
             </Box>
             <Box
@@ -152,7 +153,9 @@ export default function Jobs() {
                   As a website developer you will be working on the Tech Optimum
                   website to improve & maintain it.
                 </Text>
-
+<Link  _hover={{
+  textDecoration:"none"
+}}isExternal href="https://forms.gle/NXQomJvT7dmCq8nU9">
                 <Button
                   mt="20%"
                   variant={"unstyled"}
@@ -168,6 +171,7 @@ export default function Jobs() {
                 >
                   APPLY NOW
                 </Button>
+                </Link>
               </Flex>
             </Box>
             <Box
@@ -215,6 +219,9 @@ export default function Jobs() {
                   As a social media manager, you will be handling our socials.
                 </Text>
                 <br></br>
+                <Link _hover={{
+                  textDecoration:"none"
+                }} isExternal href="https://forms.gle/2gUHAWRiKXvjBZSZ7">
                 <Button
                   mt="20%"
                   variant={"unstyled"}
@@ -230,6 +237,7 @@ export default function Jobs() {
                 >
                   APPLY NOW
                 </Button>
+                </Link>
               </Flex>
             </Box>
           </Flex>

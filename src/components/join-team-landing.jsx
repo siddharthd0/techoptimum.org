@@ -4,7 +4,9 @@ import JoinBanner from "../assets/join-team-globe.svg";
 export default function JoinTeamLanding() {
   return (
     <>
-      <JoinBanner width="100vw" />
+    <Flex marginTop={"-4.5rem"}>
+      <JoinBanner  width="100vw" />
+      </Flex>
       <Flex
         flexDir="column"
         justifyContent="center"

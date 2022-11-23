@@ -12,6 +12,7 @@ import {
   Spacer,
   NextChakraLink,
   SimpleButton,
+  Image
 } from "@chakra-ui/react";
 
 import Link from "next/link";
@@ -62,15 +63,19 @@ export default function Header() {
         </Text>
   </Flex>*/}
       <Flex
-        zIndex={100}
-        position="relative"
+        zIndex="100 !important"
         justifyContent="space-between"
-        alignItems="center"
-        padding="30px 10%"
+        alignItems="right"
+        padding="25px 12%"
+        position={"relative"}
       >
-        <Heading href="./#" fontSize="3xl" color="primary">
+        <Flex justifyContent={"start"}>
+        <Image  marginTop={"-15px"} w="60px" src="./logo-transparent.png"></Image>
+
+        <Heading alignItems="left"href="./#" fontSize="3xl" color="primary">
           Tech Optimum
         </Heading>
+        </Flex>
 
         <nav>
           <ul className="nav-links">
@@ -154,26 +159,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <Flex alignItems="right" justifyContent="space-between">
-          <Button
-            colorScheme="secondaryButton"
-            borderRadius="full"
-            px="6"
-            fontWeight="normal"
-          >
-            Sign up
-          </Button>
-          <Button
-            colorScheme="primaryButton"
-            borderRadius="full"
-            px="6"
-            n
-            fontWeight="normal"
-            marginLeft="20px"
-          >
-            Log in
-          </Button>
-        </Flex>
+        
       </Flex>
     </>
   );
