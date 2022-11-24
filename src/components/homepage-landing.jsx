@@ -58,7 +58,7 @@ export default function HeroHeader() {
           margin={"0 auto"}
           maxWidth={"800px"}
           backgroundColor="#29368C"
-          height={["200px", "150px"]}
+          height={["300px", "150px"]}
           mx="2rem  "
           borderRadius={"36px"}
           marginTop={"3rem"}
@@ -75,10 +75,11 @@ export default function HeroHeader() {
             direction={["column", "row"]}
             alignItems={"center"}
             height={"100%"}
+            marginTop="2"
           >
             <Heading
               color="white"
-              fontSize="2xl"
+              fontSize="{{ base: '150%', sm: '50%', md: '25%' }}"
               fontWeight={"400"}
               width={"35%"}
               textAlign={"center"}
@@ -88,7 +89,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize="2xl"
+              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
               fontWeight={"400"}
               width={"5%"}
             >
@@ -96,7 +97,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize="2xl"
+              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
               fontWeight={"400"}
               width={"30%"}
               textAlign={"center"}
@@ -105,7 +106,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize="2xl"
+              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
               fontWeight={"400"}
               width={"5%"}
             >
@@ -113,7 +114,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize="2xl"
+              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
               fontWeight={"400"}
               width={"30%"}
               textAlign={"center"}
