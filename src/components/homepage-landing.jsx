@@ -85,7 +85,7 @@ export default function HeroHeader() {
               width={["80%", "30%"]}
               textAlign={"center"}
             >
-              <CountUp end={40} duration={4} useEasing={true} delay={1.5} />+
+              <CountUp end={10} duration={6} useEasing={true} delay={1.5} />+
               PROGRAMMING COURSES
             </Heading>
             <Heading
@@ -93,6 +93,7 @@ export default function HeroHeader() {
               fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
               width={"5%"}
+              textAlign="center"
             >
               +
             </Heading>
@@ -110,6 +111,7 @@ export default function HeroHeader() {
               fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
               width={"5%"}
+              textAlign="center"
             >
               +
             </Heading>
@@ -120,7 +122,7 @@ export default function HeroHeader() {
               width={["70%", "30%"]}
               textAlign={"center"}
             >
-              <CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
+              <CountUp end={300} duration={6} useEasing={true} delay={1.5} />+
               COMMUNITY MEMBERS
             </Heading>
             <Link marginBottom={["2rem", "0rem"]} marginTop={["1rem", "0rem"]} href="./join" transition="500ms">
