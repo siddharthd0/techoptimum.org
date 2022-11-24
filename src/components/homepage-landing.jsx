@@ -54,12 +54,12 @@ export default function HeroHeader() {
         </Flex>
 
         <Container
-       
-          margin={"0 auto"}
-          maxWidth={"800px"}
+     
+          maxWidth={["310px", "500px", "800px"]}
           backgroundColor="#29368C"
-          height={["300px", "150px"]}
-          mx="2rem  "
+          height={["330px", "150px"]}
+          
+          
           borderRadius={"36px"}
           marginTop={"3rem"}
           as={motion.div}
@@ -78,18 +78,19 @@ export default function HeroHeader() {
             marginTop="2"
           >
             <Heading
+             marginTop={["2rem", "0rem"]}
               color="white"
-              fontSize="{{ base: '150%', sm: '50%', md: '25%' }}"
+              fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
-              width={"35%"}
+              width={["80%", "30%"]}
               textAlign={"center"}
             >
               <CountUp end={40} duration={4} useEasing={true} delay={1.5} />+
-              FREE PROGRAMMING COURSES
+              PROGRAMMING COURSES
             </Heading>
             <Heading
               color="white"
-              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
+              fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
               width={"5%"}
             >
@@ -97,16 +98,16 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
+              fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
-              width={"30%"}
+              width={["80%", "30%"]}
               textAlign={"center"}
             >
               INTERNSHIP FINDER
             </Heading>
             <Heading
               color="white"
-              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
+              fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
               width={"5%"}
             >
@@ -114,15 +115,15 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize="{{ base: '100%', sm: '50%', md: '25%' }}"
+              fontSize={[ "xl", "2xl" ]}
               fontWeight={"400"}
-              width={"30%"}
+              width={["70%", "30%"]}
               textAlign={"center"}
             >
               <CountUp end={300} duration={4} useEasing={true} delay={1.5} />+
               COMMUNITY MEMBERS
             </Heading>
-            <Link href="./join" transition="500ms">
+            <Link marginBottom={["2rem", "0rem"]} marginTop={["1rem", "0rem"]} href="./join" transition="500ms">
               <Icon className="diagonal-button" as={BsArrowUpRight} />
             </Link>
           </Flex>
