@@ -12,8 +12,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 export default function JoinDiscord() {
   return (
     <>
-      <Flex flexDir="column" width="100vw" padding="5vw">
-        <Flex alignItems="center">
+      <Flex marginLeft={["2rem", "8rem"]}flexDir="column"  padding="1rem">
+        <Flex marginTop="1rem" alignItems="center">
           <Heading display="flex">
             Join our
             <Text mx="15px" color="#738BDA">
@@ -37,7 +37,7 @@ export default function JoinDiscord() {
           </Link>
         </Flex>
         
-        <Text width={"700px"} marginY="15px" fontSize="xl">
+        <Text maxWidth={"700px"} marginY="15px" fontSize="xl">
           A public community full of programmers of all skill-levels. Whether
          
           you need computer science help, want to network, or just want to be
@@ -54,7 +54,7 @@ export default function JoinDiscord() {
           
           </Heading>
           </Flex>
-        <Text width={"800px"} marginY="10px" fontSize="xl">We have many channels where you can chat with other community members about various things! From memes, to coding help, we are here for you!</Text>
+        <Text maxWidth={"800px"} marginY="10px" fontSize="xl">We have many channels where you can chat with other community members about various things! From memes, to coding help, we are here for you!</Text>
         <Flex
           marginTop="20px"
           w={{ base: "350px", md: "400px", lg: "750px" }}

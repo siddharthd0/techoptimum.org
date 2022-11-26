@@ -11,17 +11,20 @@ export default function JoinHero() {
         flexDir="column"
         justifyContent="space-around"
         alignItems="center"
-        height="100vh"
+        height={["80vh","100vh"]}
         width="100vw"
         paddingTop="5%"
         paddingBottom="10%"
         marginTop={["-26vh","-14vh"]}
+       
       >
         <Heading
-          marginBottom={"-10px"}
+        
+          marginBottom={["-50px", "-10px"]}
           marginTop={"140px "}
           fontWeight={100}
-          fontSize={"6xl"}
+          fontSize={["4xl", "6xl"]}
+
         >
           Tech Optimum
         </Heading>
@@ -32,11 +35,11 @@ export default function JoinHero() {
           px={"10px"}
           borderRadius={"10px"}
           backgroundColor={"blue.500"}
-          fontSize={"6xl"}
+          fontSize={["4xl", "6xl"]}
         >
           Community
         </Heading>
-        <Text fontSize="2xl">
+        <Text  fontSize={["lg", "2xl"]}>
           Join a community of like-minded <br />
           people who enjoy coding.
         </Text>
@@ -48,10 +51,10 @@ export default function JoinHero() {
           isExternal
         >
           <Button
-          marginTop={"-10px"}
+          marginTop={["-70px", "-10px"]}
             colorScheme="buttonBg"
-            padding="25px 35px 25px 35px"
-            fontSize="2xl"
+            padding={["20px 25px 20px 25px","25px 35px 25px 35px"]}
+            fontSize={["lg", "2xl"]}
             fontWeight="normal"
             rounded="full"
             rightIcon={
