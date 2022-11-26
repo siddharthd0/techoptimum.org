@@ -53,13 +53,10 @@ export default function HeroHeader() {
           </Link>
         </Flex>
 
-        <Container
-     
+        <Container   
           maxWidth={["310px", "500px", "800px"]}
           backgroundColor="#29368C"
-          height={["330px", "150px"]}
-          
-          
+          height={["330px", "150px"]}     
           borderRadius={"36px"}
           marginTop={"3rem"}
           as={motion.div}

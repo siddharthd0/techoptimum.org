@@ -19,7 +19,7 @@ export default function Events() {
   return (
     <Flex
       marginLeft={["2rem", "7rem"]}
-      marginTop={"10rem"}
+      marginTop={["5rem", "8rem"]}
       direction={"column"}
     >
       <Head>
@@ -30,6 +30,7 @@ export default function Events() {
         />
       </Head>
 
+
       <Heading
         color="primary"
         fontSize="5xl"
@@ -38,25 +39,28 @@ export default function Events() {
       >
         Events
       </Heading>
-
+      
+      <Link href="./hackathon">
       <Text
         color="primary"
-        fontSize="3xl"
-        marginTop={"2rem"}
+        fontSize="2xl"
+        marginTop={"1.5rem"}
         data-aos="fade-right"
         data-aos-duration="1000"
       >
         Participate in events hosted by Tech Optimum
       </Text>
+      </Link>
 
       <Flex direction={["column", "row"]}>
         <Text
           color="primary"
-          fontSize="xl"
-          marginTop={"2rem"}
-          mr="1rem"
+          fontSize="lg"
+          marginTop={"1rem"}
+          mr="5rem"
           data-aos="fade-right"
           data-aos-duration="1000"
+          maxWidth={"800px"}
         >
           We host yearly hackathons. A hackathon is 48-hour coding competition
           in which participants can code projects as a team or individually and

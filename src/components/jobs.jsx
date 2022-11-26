@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Text,
-  Flex,
-  Icon,
-  Button,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Icon, Button, Link } from "@chakra-ui/react";
 import { BsLayers, BsGraphUp, BsArrowUpRight } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
 import AOS from "aos";
@@ -29,10 +21,11 @@ export default function Jobs() {
       </Head>
       <Flex
         marginLeft={["2rem", "7rem"]}
-        marginTop={"10rem"}
+        marginTop={["4rem","10rem"]}
         direction={"column"}
         data-aos={"fade-up"}
         data-aos-duration={"2000"}
+        marginRight="2rem"
       >
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
           Volunteer with us
@@ -43,7 +36,7 @@ export default function Jobs() {
           borderRadius={"27px"}
           border={"3px solid #4559E9"}
         >
-          <Flex className="job-cards" mx={"50px"} mt={"80px"}>
+          <Flex display={["none", "flex"]} className="job-cards" mx={"50px"} mt={"80px"}>
             <Box
               data-aos="zoom-in-down"
               data-aos-delay="200"
@@ -73,7 +66,7 @@ export default function Jobs() {
                     ml={"1.7rem"}
                     fontWeight="800"
                     lineHeight="35px"
-                   fontSize={"4xl"}
+                    fontSize={"4xl"}
                     width="158px"
                   >
                     Course Writer
@@ -85,26 +78,32 @@ export default function Jobs() {
                   lineHeight="14px"
                   mt={"0.7rem"}
                 >
-                  As a course instructor, you will assist us in building programming courses. This includes writing, colloborating, and revising courses.
+                  As a course instructor, you will assist us in building
+                  programming courses. This includes writing, colloborating, and
+                  revising courses.
                 </Text>
-  <Link _hover={{
-    textDecoration: "none"
-  }} isExternal href="https://forms.gle/CpcuX7kdhRpiJLZL8">
-                <Button
-                  mt="20%"
-                  variant={"unstyled"}
-                  w={"175px"}
-                  h={"46px"}
-                  borderRadius={"20px"}
-                  bgColor={"#ACFFAA"}
-                  textColor={"#000000"}
+                <Link
                   _hover={{
-                    bgColor: "#60c25e",
+                    textDecoration: "none",
                   }}
-                  ml={"35%"}
+                  isExternal
+                  href="https://forms.gle/CpcuX7kdhRpiJLZL8"
                 >
-                  APPLY NOW
-                </Button>
+                  <Button
+                    mt="20%"
+                    variant={"unstyled"}
+                    w={"175px"}
+                    h={"46px"}
+                    borderRadius={"20px"}
+                    bgColor={"#ACFFAA"}
+                    textColor={"#000000"}
+                    _hover={{
+                      bgColor: "#60c25e",
+                    }}
+                    ml={"35%"}
+                  >
+                    APPLY NOW
+                  </Button>
                 </Link>
               </Flex>
             </Box>
@@ -153,24 +152,28 @@ export default function Jobs() {
                   As a website developer you will be working on the Tech Optimum
                   website to improve & maintain it.
                 </Text>
-<Link  _hover={{
-  textDecoration:"none"
-}}isExternal href="https://forms.gle/NXQomJvT7dmCq8nU9">
-                <Button
-                  mt="20%"
-                  variant={"unstyled"}
-                  w={"175px"}
-                  h={"46px"}
-                  borderRadius={"20px"}
-                  bgColor={"#FFF6AA"}
-                  textColor={"#000000"}
+                <Link
                   _hover={{
-                    bgColor: "#d6c63a",
+                    textDecoration: "none",
                   }}
-                  ml={"7rem"}
+                  isExternal
+                  href="https://forms.gle/NXQomJvT7dmCq8nU9"
                 >
-                  APPLY NOW
-                </Button>
+                  <Button
+                    mt="24%"
+                    variant={"unstyled"}
+                    w={"175px"}
+                    h={"46px"}
+                    borderRadius={"20px"}
+                    bgColor={"#FFF6AA"}
+                    textColor={"#000000"}
+                    _hover={{
+                      bgColor: "#d6c63a",
+                    }}
+                    ml={"7rem"}
+                  >
+                    APPLY NOW
+                  </Button>
                 </Link>
               </Flex>
             </Box>
@@ -219,49 +222,54 @@ export default function Jobs() {
                   As a social media manager, you will be handling our socials.
                 </Text>
                 <br></br>
-                <Link _hover={{
-                  textDecoration:"none"
-                }} isExternal href="https://forms.gle/2gUHAWRiKXvjBZSZ7">
-                <Button
-                  mt="20%"
-                  variant={"unstyled"}
-                  w={"175px"}
-                  h={"46px"}
-                  borderRadius={"20px"}
-                  bgColor={"#FFC4AA"}
-                  textColor={"#000000"}
+                <Link
                   _hover={{
-                    bgColor: "#fb9b72",
+                    textDecoration: "none",
                   }}
-                  ml={"7rem"}
+                  isExternal
+                  href="https://forms.gle/2gUHAWRiKXvjBZSZ7"
                 >
-                  APPLY NOW
-                </Button>
+                  <Button
+                    mt="20%"
+                    variant={"unstyled"}
+                    w={"175px"}
+                    h={"46px"}
+                    borderRadius={"20px"}
+                    bgColor={"#FFC4AA"}
+                    textColor={"#000000"}
+                    _hover={{
+                      bgColor: "#fb9b72",
+                    }}
+                    ml={"7rem"}
+                  >
+                    APPLY NOW
+                  </Button>
                 </Link>
               </Flex>
             </Box>
           </Flex>
-          <Flex justifyContent={"flex-end"} mt={"30px"} mr={"50px"}>
-            <Button
-              bgColor={"#4559E9"}
-              borderRadius={"15px"}
-              variant={"unstyled"}
-              pr="20px"
-              pl="20px"
-              fontWeight={100}
+          <Flex marginLeft={["2rem", "0rem"]} justifyContent={["flex-start", "flex-end"]} mt={"30px"} mr={"50px"}>
+            <Link
+              href="./join-team"
               _hover={{
-                bgColor: "#6C7BE6",
+                textDecoration: "none",
               }}
             >
-              <Link
-                href="./join-team"
+              <Button
+                bgColor={"#4559E9"}
+                borderRadius={"15px"}
+                variant={"unstyled"}
+                pr="20px"
+                pl="20px"
+                fontWeight={100}
                 _hover={{
-                  textDecoration: "none",
+                  bgColor: "#6C7BE6",
                 }}
+
               >
                 View More
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Flex>
           <br></br>
         </Box>

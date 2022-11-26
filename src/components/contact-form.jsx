@@ -20,9 +20,13 @@ export default function HeroHeader() {
         justifyContent="center"
         margin={"auto"}
         color="#A7B2FF"
-       
       >
-        <Flex  direction={["column", "row"]}width="70vw" marginTop="50px" marginBottom="50px">
+        <Flex
+          direction={["column", "row"]}
+          width="70vw"
+          marginTop="50px"
+          marginBottom="50px"
+        >
           <Box
             padding={"50px"}
             borderRadius={"20px"}
@@ -121,8 +125,9 @@ export default function HeroHeader() {
             </FormControl>
           </Box>
           <Flex
-            paddingLeft="5rem"
-            width="35vw"
+          marginTop={["5rem", "0px"]}
+            paddingLeft={["0rem", "5rem"]}
+            maxWidth="530px"
             flexDir="column"
             justifyContent="center"
             alignItems="center"
@@ -140,7 +145,7 @@ export default function HeroHeader() {
                   width="60"
                   height="60"
                 />
-                <Text  fontSize="3xl" ml="10px" fontWeight="bold">
+                <Text fontSize="3xl" ml="10px" fontWeight="bold">
                   Speak the truth
                 </Text>
               </Flex>

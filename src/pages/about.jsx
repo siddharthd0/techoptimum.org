@@ -53,7 +53,7 @@ export default function About() {
         <br />
 
         <Stack direction={["column", "row"]} spacing="30px">
-          <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+          <Box minH={"220px"} data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
             <Text
               mb={"30px"}
               textAlign={"center"}
@@ -79,7 +79,7 @@ export default function About() {
               initiatives are led by passionate team members.
             </Text>
           </Box>
-          <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+          <Box minH={"220px"}data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
             <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
               <Flex textAlign={"center"} margin="auto">
                 <Text margin="auto">
@@ -99,7 +99,7 @@ export default function About() {
               having a community to talk to.
             </Text>
           </Box>
-          <Box data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+          <Box minH={"220px"}data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
             <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
               <Flex textAlign={"center"} margin="auto">
                 <Text margin="auto">
@@ -123,7 +123,7 @@ export default function About() {
       </Flex>
 
       <Flex
-        marginLeft={["1rem", "7rem"]}
+        marginLeft={["2rem", "7rem"]}
         marginTop={"5rem"}
         direction={"column"}
       >

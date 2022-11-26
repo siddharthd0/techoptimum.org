@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import Head from "next/head";
+import Link from "next/link";
 import {
   Flex,
   Heading,
@@ -17,7 +18,7 @@ export default function Finder() {
   return (
     <Flex
       marginLeft={["2rem", "7rem"]}
-      marginTop={"10rem"}
+      marginTop={["5rem","10rem"]}
       direction={"column"}
     >
       <Stack direction="row">
@@ -49,7 +50,12 @@ export default function Finder() {
             experience at a real company? This is your chance to discover
             Computer Science internships at a number of businesses!
           </Text>
-
+          <Link
+                href="https://internships.techoptimum.org"
+                _hover={{
+                  textDecoration: "none",
+                }}
+              >
           <Button
             w={"280px"}
             bgColor={"#4559E9"}
@@ -63,6 +69,7 @@ export default function Finder() {
           >
             Find internships now
           </Button>
+          </Link>
         </Box>
         <Box width={"350px"} paddingLeft="100px">
           <Image src="/internship-finder-image.png" alt="internship finder" />
