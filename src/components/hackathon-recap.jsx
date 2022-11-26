@@ -18,12 +18,13 @@ export default function HackathonRecap() {
         direction={"column"}
         width={"100%"}
         align="center"
+     
       >
-        <Heading fontSize="7xl" color={"primary"}>
+        <Heading fontSize={["5xl","6xl"]} color={"primary"}>
           Quick Recap
         </Heading>
         <Heading color={"primary"} marginTop={"20px"}>Featuring...</Heading>
-        <Flex>
+        <Flex direction={["column", "row"]}>
           <Flex alignItems={"center"} height={"100%"}>
             <Flex
               align="center"
