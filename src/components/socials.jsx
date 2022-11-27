@@ -12,7 +12,7 @@ export default function Socials() {
   return (
     <>
       <Flex flexDirection={"column"}>
-        <Box w={"1545px"} h={"1px"} bgColor={"#222E75"}></Box>
+        <Box w={"100%"} h={"1px"} bgColor={"#222E75"}></Box>
       </Flex>
 
       <Center>
