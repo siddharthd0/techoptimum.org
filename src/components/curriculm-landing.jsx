@@ -61,7 +61,7 @@ export default function CurriculmLanding() {
             <Text>6 weeks · Intermediate Course</Text>
             <br/>
             <Heading fontSize={"3xl"} color="#FE9292">Intro to Python</Heading>
-            <Text>2 weeks · Introductory Course</Text>
+            <Text>4 weeks · Introductory Course</Text>
             <br/>
           </Box>
         </Flex>
