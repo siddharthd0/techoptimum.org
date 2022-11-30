@@ -118,7 +118,7 @@ export default function Curriculm() {
             borderRadius={"full"}
             width="250px"
             px="10px"
-            colorScheme={"#EBF8FF"}
+            colorScheme={"yellow"}
             marginTop="1rem"
             marginBottom={"2rem"}
           >
