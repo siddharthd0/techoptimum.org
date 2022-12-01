@@ -66,15 +66,16 @@ export default function Header() {
         zIndex="100 !important"
         justifyContent="space-between"
       
-        padding="25px 12%"
+        padding="15px 12%"
         position={"relative"}
         direction={["column", "row"]}
+        alignItems="center"
         
       >
-        <Flex justifyContent={"start"}>
-        <Image  display={["none", "block"]} marginTop={"-15px"} w="60px" src="./logo-transparent.png"></Image>
+        <Flex alignItems={"center"} justifyContent={"start"}>
+        <Image  display={["none", "block"]}  w="60px" src="./logo-transparent.png"></Image>
 
-        <Heading textAlign={"center"}  alignItems="left"href="./#" fontSize="3xl" color="primary">
+        <Heading marginTop={"7px"} textAlign={"center"}  alignItems="left"href="./#" fontSize="3xl" color="primary">
           Tech Optimum
         </Heading>
         </Flex>

@@ -57,7 +57,7 @@ export default function HeroHeader() {
           maxWidth={["310px", "500px", "800px"]}
           backgroundColor="#29368C"
           height={["330px", "150px"]}     
-          borderRadius={"36px"}
+          borderRadius={"25px"}
           marginTop={"3rem"}
           as={motion.div}
           initial={{ opacity: 0, y: 40 }}
