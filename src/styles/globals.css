@@ -349,3 +349,14 @@ list-style: none;
 height:75vh;
   
 }
+
+.linkedin {
+  cursor:pointer;
+  transition:400ms !important;
+}
+.linkedin:hover {
+  color: rgb(145, 145, 253) !important;
+  transition:400ms !important;
+
+  
+}

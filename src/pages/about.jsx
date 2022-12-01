@@ -1,8 +1,9 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import ExecutiveCard from "../components/executive-card";
+import Volunteer from "../components/volunteer-card";
 import React from "react";
-import { Box, Heading, Text, Flex, Stack, Center } from "@chakra-ui/react";
+import { Wrap, Box, Heading, Text, Flex, Stack, Center } from "@chakra-ui/react";
 import AOS from "aos";
 import Head from "next/head";
 import { useEffect } from "react";
@@ -26,11 +27,7 @@ export default function About() {
       </Head>
       <Header />
 
-      <Flex
-        marginLeft={["2rem", "7rem"]}
-        marginTop={"5rem"}
-        direction={"column"}
-      >
+      <Flex alignItems={"center"} marginTop={"3rem"} direction={"column"}>
         <Heading
           data-aos-delay="400"
           data-aos="fade-up-right"
@@ -41,7 +38,7 @@ export default function About() {
           About Us
         </Heading>
 
-        <Text data-aos="fade-up-right" width={["90%", "70%"]} fontSize="xl">
+        <Text data-aos="fade-up-right" width={["80%", "70%"]} fontSize="xl">
           Tech Optimum is an organization that is entirely managed by students
           and is commited to influence the next wave of technological leaders.{" "}
           <br />
@@ -53,7 +50,13 @@ export default function About() {
         <br />
 
         <Stack direction={["column", "row"]} spacing="30px">
-          <Box minH={"220px"} data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+          <Box
+            minH={"220px"}
+            data-aos="zoom-in"
+            borderRadius={"20px"}
+            w="300px"
+            bg="#29368C"
+          >
             <Text
               mb={"30px"}
               textAlign={"center"}
@@ -79,7 +82,13 @@ export default function About() {
               initiatives are led by passionate team members.
             </Text>
           </Box>
-          <Box minH={"220px"}data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+          <Box
+            minH={"220px"}
+            data-aos="zoom-in"
+            borderRadius={"20px"}
+            w="300px"
+            bg="#29368C"
+          >
             <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
               <Flex textAlign={"center"} margin="auto">
                 <Text margin="auto">
@@ -99,7 +108,13 @@ export default function About() {
               having a community to talk to.
             </Text>
           </Box>
-          <Box minH={"220px"}data-aos="zoom-in" borderRadius={"20px"} w="300px" bg="#29368C">
+          <Box
+            minH={"220px"}
+            data-aos="zoom-in"
+            borderRadius={"20px"}
+            w="300px"
+            bg="#29368C"
+          >
             <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
               <Flex textAlign={"center"} margin="auto">
                 <Text margin="auto">
@@ -122,27 +137,73 @@ export default function About() {
         </Stack>
       </Flex>
 
-      <Flex
-        marginLeft={["2rem", "7rem"]}
-        marginTop={"5rem"}
-        direction={"column"}
-      >
+      <Flex marginTop={"5rem"} direction={"column"} alignItems="center">
         <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
           Executives
         </Heading>
-        <Flex mb={"9%"} direction={["column", "row"]} gap="45px">
+        <Flex mb={"5%"} direction={["column", "row"]} gap="45px">
           <ExecutiveCard
-            src="/sid.svg"
+            src="/siddharthduggal.jpeg"
             name="Siddharth Duggal"
             role="Chief Executive Officer"
+            description={"Siddharth Duggal is a senior in high school who enjoys programming. He enjoys participating in hackathons and making projects that help people. Outside of programming, he enjoys playing the piano and playing video games. "}
+            linkedin="https://www.linkedin.com/in/siddharth-duggal"
+            
           />
           <ExecutiveCard
-            src="/pran.svg"
+            src="https://cdn.discordapp.com/attachments/934996871976480828/1047751981231521842/Screen_Shot_2022-11-30_at_10.52.03_PM.png"
             name="Pranith Molakalapalli"
             role="Chief Technology Officer"
+            linkedin="https://www.linkedin.com/in/pranith-molakalapalli/"
+
           />
-       
         </Flex>
+      </Flex>
+      <Flex direction={"column"} alignItems={"center"}>
+        <Heading
+          marginBottom={"2%"}
+          color="primary"
+          fontSize="5xl"
+          textAlign={"center"}
+        >
+          Volunteers
+        </Heading>
+        <Flex alignItems={"center"}>
+        <Wrap  justify='center' spacing="30px">
+          <Volunteer 
+           src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Moustafa+Sanad&size=100"
+           name="Moustafa Sanad"
+           role="Director of Design"
+           />
+          <Volunteer
+            src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
+            name="Snehil Kakani"
+            role="Web Developer"
+          />
+          <Volunteer 
+            src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aditya+Sahasranam&size=100"
+            name="Aditya Sahasranam"
+            role="Web Developer"
+          />
+          <Volunteer 
+           name="Aviral Dhingra"
+           src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aviral+Dhingra&size=100"
+           role="Course Instructor"
+          />
+          <Volunteer 
+          name="Ryan Kert"
+          src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Ryan+Kert&size=100"
+          role="Web Developer"
+          />
+          <Volunteer
+          name="Lysander Q."
+          src="https://cdn.discordapp.com/attachments/1008805810773708822/1047400317777608704/295565520_1002290440444502_1261252384820745655_n.jpg"
+          role="Graphic Designer"
+/>
+        </Wrap>
+      
+        </Flex>
+        <Text mt="2rem" marginBottom={"5rem"}color="primary">and more...</Text>
       </Flex>
 
       <Footer />
