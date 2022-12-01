@@ -15,7 +15,7 @@ export default function JoinHero() {
         width="100vw"
         paddingTop="5%"
         paddingBottom="10%"
-        marginTop={["-26vh","-14vh"]}
+        marginTop="0"
        
       >
         <Heading

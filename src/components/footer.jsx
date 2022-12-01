@@ -35,34 +35,31 @@ export default function Footer() {
              marginBottom={"-1.1rem"}
               src="/text-lblue-transparent.png"
               alt="Logo"
+              ml="-12px"
             />
             
             
           </Flex>
-          <Heading fontSize="md" color="primary" marginTop={8} marginBottom={5}>
+          <Heading  fontSize="md" color="primary" marginTop={8} marginBottom={5}>
             RECIEVE WEEKLY EMAILS
           </Heading>
-          <Flex>
+          <Flex alignItems={"center"}>
             <Input
               border="none"
-              borderRadius={15}
+              borderRadius={"15px 0px 0px 15px"}
               padding="25px"
               h="50px"
               placeholder="Enter your email"
               bgColor="inputBg"
-              width={"60%"}
+              width="220px"
+             
             />
             <Button
+            borderRadius={"0 15px 15px 0px"}
+             h="49px"
               colorScheme="buttonBg"
-              fontWeight="normal"
-             borderRadius={"0px 15px 15px 0px"}
-             
-              h="50px"
-              
-              marginLeft={-15}
-              rightIcon={<ArrowForwardIcon />}
             >
-              Sign up
+            <ArrowForwardIcon />
             </Button>
           </Flex>
         </Flex>

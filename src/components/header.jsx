@@ -65,10 +65,11 @@ export default function Header() {
       <Flex
         zIndex="100 !important"
         justifyContent="space-between"
-        alignItems="right"
+      
         padding="25px 12%"
         position={"relative"}
         direction={["column", "row"]}
+        
       >
         <Flex justifyContent={"start"}>
         <Image  display={["none", "block"]} marginTop={"-15px"} w="60px" src="./logo-transparent.png"></Image>
@@ -77,7 +78,7 @@ export default function Header() {
           Tech Optimum
         </Heading>
         </Flex>
-<Flex marginTop={["1.5rem", "0rem"]} textAlign={"center"}>
+<Flex   marginTop={["1.5rem", "2.1px"]} textAlign={"center"}>
         <nav>
           <ul className="nav-links">
             <li>
