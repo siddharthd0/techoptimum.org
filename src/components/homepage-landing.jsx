@@ -13,19 +13,18 @@ export default function HeroHeader() {
         <Flex direction={"column"} marginLeft={["2rem", "9rem"]}>
           <Heading
             className="gradient-title"
-            fontSize="5xl"
+            fontSize="6xl"
             marginBottom={{ base: ".5em", md: "1rem", lg: "2rem" }}
           >
             Learn. Participate. Accomplish.
           </Heading>
           <Text
-            fontSize="2xl"
+            fontSize="30px"
             color="primary"
             marginBottom={{ base: ".5em", md: "1rem", lg: "2rem" }}
-            width={"85%"}
+            width={"75%"}
           >
-            A student-led organization helping and inspiring future leaders of
-            the tech industry worldwide.
+            A student-led organization helping and inspiring the next generation of tech leaders. 
           </Text>
           <Link _hover={{
             textDecoration: "none"
