@@ -89,7 +89,7 @@ export default function Courses() {
               >
                  <Link _hover={{
             textDecoration: "none"
-          }}href="./curriculm">
+          }}href="./curriculum">
                 LEARN MORE
                 </Link>
               </Button>{" "}
@@ -142,7 +142,7 @@ export default function Courses() {
               >
                 <Link _hover={{
             textDecoration: "none"
-          }}href="./curriculm">
+          }}href="./curriculum">
                 LEARN MORE
                 </Link>
               </Button>
@@ -198,7 +198,7 @@ export default function Courses() {
               >
                 <Link _hover={{
             textDecoration: "none"
-          }}href="./curriculm">
+          }}href="./curriculum">
                 LEARN MORE
                 </Link>
               </Button>

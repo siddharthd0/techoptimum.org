@@ -29,7 +29,7 @@ export default function HeroHeader() {
           </Text>
           <Link _hover={{
             textDecoration: "none"
-          }}href="./curriculm">
+          }}href="./curriculum">
           <Button
             backgroundColor="transparent"
             _hover={{

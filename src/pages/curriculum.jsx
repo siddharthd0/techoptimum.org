@@ -55,7 +55,7 @@ export default function Curriculm() {
             websites using HTML, CSS and JS. Host, publish and share your new
             personalized website that you created from scratch. All concepts
             taught in this course are introductory concepts so people of all
-            skill-levels can understand the curriculm. By the end of this
+            skill-levels can understand the curriculum. By the end of this
             course, you will have made 3 projects and you will have mastered the
             fundementals of HTML, CSS, and JS.
           </Text>

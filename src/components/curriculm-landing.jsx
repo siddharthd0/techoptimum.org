@@ -27,7 +27,7 @@ export default function CurriculmLanding() {
           >
             <Heading fontSize={"5xl"} color="primary" marginBottom={".75rem"}>
               {" "}
-              Tech Optimum Curriculm
+              Tech Optimum Curriculum
             </Heading>
             <Text  width="80%;"marginBottom="1.25rem">
 

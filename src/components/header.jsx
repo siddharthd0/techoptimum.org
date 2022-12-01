@@ -135,8 +135,8 @@ export default function Header() {
                   onMouseLeave={onSecondClose}
                   className="link-navs-dropdown"
                 >
-                  <Link href="./curriculm">
-                    <MenuItem className="link-navs-dd-text">Curriculm</MenuItem>
+                  <Link href="./curriculum">
+                    <MenuItem className="link-navs-dd-text">Curriculum</MenuItem>
                   </Link>
                   <Link href="/join">
                     <MenuItem className="link-navs-dd-text">Community</MenuItem>
