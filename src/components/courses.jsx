@@ -65,10 +65,9 @@ export default function Courses() {
                 fontWeight={"300"}
                 fontSize={"3xl"}
               >
-                MongoDB.
+                Python.
               </Heading>
-              Use databases in your own website. Discover how data can be stored
-              in DB&apos;s like Mongo and learn how to control the data.
+              Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. 
               <Button
                 backgroundColor="transparent"
                 transition={"700"}
