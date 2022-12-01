@@ -36,7 +36,7 @@ export default function JobPostingCard({
           <PopoverTrigger>
             <Flex direction={"column"}>
               <Button
-                class="job-listing"
+                
                 px="30px"
                 py="20px"
                 borderRadius={"20px"}

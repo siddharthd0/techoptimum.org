@@ -26,11 +26,12 @@ export default function Curriculm() {
     <>
       <Header />
       <CurriculmLanding />
+      <Text mb="4rem" id="web-dev"></Text>
       <Flex
-        marginTop={"4rem"}
+        
         marginLeft={["4rem", "7rem"]}
         marginBottom="7rem"
-        id="web-dev"
+       
       >
         <Flex direction={"column"} width="60%;">
           <Flex>
