@@ -40,7 +40,7 @@ export default function ExecutiveCard({
             transition={"300ms"}
             border= "2px solid transparent"
             _hover={{
-              transition: "ease-in-out 300ms",
+             
               border: "2px solid orange",
               brightness: ".2",
               cursor: "pointer",
