@@ -205,6 +205,11 @@ name="Aakarshan Kumar"
 src="https://cdn.discordapp.com/attachments/916543942139469884/1048134367949631488/Screen_Shot_2022-12-02_at_12.11.37_AM.png"
 role="Web Developer"
 />
+<Volunteer 
+name="Ganesh Nathan"
+src="https://cdn.discordapp.com/attachments/916543942139469884/1048135087637667850/Screen_Shot_2022-12-02_at_12.14.31_AM.png"
+role="Web Developer"
+/>
         </Wrap>
       
         </Flex>
