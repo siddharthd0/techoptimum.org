@@ -73,13 +73,16 @@ export default function Header() {
         
       >
         <Flex alignItems={"center"} justifyContent={"start"}>
-        <Image  display={["none", "block"]}  w="60px" src="./logo-transparent.png"></Image>
-
-        <Heading marginTop={"7px"} textAlign={"center"}  alignItems="left"href="./#" fontSize="3xl" color="primary">
+        <a href="/">
+        <Image display={["none", "block"]}  w="60px" src="./logo-transparent.png"></Image>
+        </a>
+        <a href="/">
+        <Heading marginTop={"7px"} textAlign={"center"}  alignItems="left" href="https://techoptimum.org" fontSize="3xl" color="primary">
           Tech Optimum
         </Heading>
+        </a>
         </Flex>
-<Flex   marginTop={["1.5rem", "2.1px"]} textAlign={"center"}>
+        <Flex   marginTop={["1.5rem", "2.1px"]} textAlign={"center"}>
         <nav>
           <ul className="nav-links">
             <li>
