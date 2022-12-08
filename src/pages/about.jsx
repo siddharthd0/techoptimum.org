@@ -175,16 +175,17 @@ export default function About() {
            name="Moustafa Sanad"
            role="Director of Design"
            />
+            <Volunteer 
+            src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aditya+Sahasranam&size=100"
+            name="Aditya Sahasranam"
+            role="Community Manager"
+          />
           <Volunteer
             src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
             name="Snehil Kakani"
             role="Web Developer"
           />
-          <Volunteer 
-            src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aditya+Sahasranam&size=100"
-            name="Aditya Sahasranam"
-            role="Web Developer"
-          />
+         
           <Volunteer 
            name="Aviral Dhingra"
            src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aviral+Dhingra&size=100"

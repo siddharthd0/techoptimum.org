@@ -19,12 +19,12 @@ export default function HeroHeader() {
             Learn. Participate. Accomplish.
           </Heading>
           <Text
-            fontSize="30px"
+            fontSize="2xl"
             color="primary"
             marginBottom={{ base: ".5em", md: "1rem", lg: "2rem" }}
             width={"75%"}
           >
-            A student-led organization helping and inspiring the next generation of tech leaders. 
+            A student-led organization dedicated helping and inspiring the next generation of tech leaders. 
           </Text>
           <Link _hover={{
             textDecoration: "none"

@@ -14,7 +14,7 @@ import {
   useDisclosure,
   Button,
   Heading,
-  Link
+  Link,
 } from "@chakra-ui/react";
 import { IoLogoLinkedin } from "react-icons/io";
 
@@ -38,9 +38,8 @@ export default function ExecutiveCard({
             height={"105px"}
             borderRadius="full"
             transition={"300ms"}
-            border= "2px solid transparent"
+            border="2px solid transparent"
             _hover={{
-             
               border: "2px solid orange",
               brightness: ".2",
               cursor: "pointer",
@@ -60,36 +59,32 @@ export default function ExecutiveCard({
       <Modal onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
         <ModalContent bgColor={"bgColor"} color="primary">
-          <Flex mt="1.5rem"alignItems={"center"} >
-        <Image
-            marginRight={"1rem"}
-            src={src}
-            alt={name}
-            width={"105px"}
-            height={"105px"}
-            borderRadius="full"
-           
-            margin="1.5rem"
-          />
-          <Flex  direction="column">
-          <Heading fontWeight={"light"} fontSize={"3xl"}>{name}</Heading>
-           <Text>{role}</Text>
-           <Link isExternal href={linkedin}>
-           <IoLogoLinkedin size={24}  className="linkedin" />
-           </Link>
-           </Flex>
-           
-           </Flex>
+          <Flex mt="1.5rem" alignItems={"center"}>
+            <Image
+              marginRight={"1rem"}
+              src={src}
+              alt={name}
+              width={"105px"}
+              height={"105px"}
+              borderRadius="full"
+              margin="1.5rem"
+            />
+            <Flex direction="column">
+              <Heading fontWeight={"light"} fontSize={"3xl"}>
+                {name}
+              </Heading>
+              <Text>{role}</Text>
+              <Link isExternal href={linkedin}>
+                <IoLogoLinkedin size={24} className="linkedin" />
+              </Link>
+            </Flex>
+          </Flex>
           <ModalCloseButton />
-         
+
           <ModalBody>
-         
-          <Text>{description}</Text>
-          
+            <Text>{description}</Text>
           </ModalBody>
-          <ModalFooter>
-       
-          </ModalFooter>
+          <ModalFooter></ModalFooter>
         </ModalContent>
       </Modal>
     </>
