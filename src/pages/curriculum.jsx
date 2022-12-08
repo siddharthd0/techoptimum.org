@@ -26,17 +26,18 @@ export default function Curriculm() {
     <>
       <Header />
       <CurriculmLanding />
-      <Text mb="4rem" id="web-dev"></Text>
+      <Text mb={["2rem","4rem"]} id="web-dev"></Text>
       <Flex
         
-        marginLeft={["4rem", "7rem"]}
-        marginBottom="7rem"
+        marginLeft={["2rem", "7rem"]}
+        marginBottom={["4rem","7rem"]}
+        direction={["column","row"]}
        
       >
-        <Flex direction={"column"} width="60%;">
-          <Flex>
-            <FaGraduationCap size={65} color="#FE9292" />
-            <Heading marginLeft={"15px"} color="#FE9292" fontSize={"6xl"}>
+        <Flex direction={"column"} maxW="800px" >
+          <Flex alignItems={"center"}>
+            <FaGraduationCap size={65} color={ "#FE9292"}/>
+            <Heading marginLeft="15px" color="#FE9292" fontSize={["3xl","6xl"]}>
               Intro to Web Dev.
             </Heading>
           </Flex>
@@ -50,7 +51,7 @@ export default function Curriculm() {
           >
             4 weeks · Introductory Course
           </Badge>
-          <Text width="75%" marginBottom={"1rem"}>
+          <Text fontSize={["sm","md"]} width="75%" marginBottom={"1rem"}>
             Ever wondered how websites are made? In this course, create simple
             websites using HTML, CSS and JS. Host, publish and share your new
             personalized website that you created from scratch. All concepts
@@ -81,17 +82,18 @@ export default function Curriculm() {
         </Flex>
         <Box
           borderRadius={"15px"}
-          width="500px"
+          w={["320px", "415px"]}
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
-          h="275px"
+          h={["230px","275px"]}
           marginTop={"2.5rem"}
-          w="400px"
+          marginRight={["2rem","0rem"]}
+       
         >
-          <Heading marginBottom={"1rem"} fontSize={"5xl"} color="primary">
+          <Heading marginBottom={["5px","1rem"]} fontSize={["3xl","5xl"]} color="primary">
             Curriculum
           </Heading>
-          <Text>
+          <Text fontSize={["sm","md"]}>
             Lesson 1: Basics of HTML
             <br />
             Lesson 2: Basics of CSS <br />
@@ -103,16 +105,17 @@ export default function Curriculm() {
         </Box>
       </Flex>
       <Flex
-        marginTop={"4rem"}
-        marginLeft={["4rem", "7rem"]}
-        marginBottom="7rem"
-        id="web-dev"
+        
+        marginLeft={["2rem", "7rem"]}
+        marginBottom="5rem"
+        direction={["column","row"]}
+       
       >
-        <Flex direction={"column"} width="60%;">
-          <Flex>
+        <Flex direction={"column"} maxW="800px" >
+          <Flex alignItems={"center"}>
             <FaPython size={65} color="#3776ab" />
-            <Heading marginLeft={"15px"} color="#ffd343 " fontSize={"6xl"}>
-              Intro to Python.
+            <Heading marginLeft={"15px"} color="#ffd343 " fontSize={["3xl","6xl"]}>
+              Intro to Python
             </Heading>
           </Flex>
           <Badge
@@ -125,7 +128,7 @@ export default function Curriculm() {
           >
             4 weeks · Introductory Course
           </Badge>
-          <Text width="75%" marginBottom={"1rem"}>
+          <Text fontSize={["sm","md"]} width="75%" marginBottom={"1rem"}>
           Python has become one of the most popular programming languages in 
           the world in recent years. Python is a general-purpose language, 
           meaning it can be used to create a variety of different programs 
@@ -156,17 +159,17 @@ export default function Curriculm() {
         </Flex>
         <Box
           borderRadius={"15px"}
-          width="500px"
+          w={["320px", "415px"]}
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
-          h="275px"
+          h={["230px","275px"]}
           marginTop={"2.5rem"}
-          w="400px"
+          marginRight={["2rem","0rem"]}
         >
-          <Heading marginBottom={"1rem"} fontSize={"5xl"} color="primary">
+         <Heading marginBottom={["5px","1rem"]} fontSize={["3xl","5xl"]} color="primary">
             Curriculum
           </Heading>
-          <Text>
+          <Text fontSize={["sm","md"]}>
             Lesson 1: Datatypes and Variables<br />
             Lesson 2: Lists and Loops <br />
             Lesson 3: Conditionals and Functions <br />

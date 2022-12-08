@@ -1,35 +1,29 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import CountUp from "react-countup";
-import { motion } from "framer-motion";
 import { Link } from "@chakra-ui/react";
-import { BsArrowUpRight, BsBox } from "react-icons/bs";
 import {
   Box,
-  Container,
   Flex,
   Heading,
   Text,
   Button,
-  Icon,
-  
 } from "@chakra-ui/react";
 
 export default function CurriculmLanding() {
   return (
     <>
       <Box className="curriculmbg">
-        <Flex direction="row">
+        <Flex direction={["column","row"]}>
           <Flex
             marginLeft={["2rem", "7rem"]}
-            marginTop={"8rem"}
+            marginTop={["3.5rem","8rem"]}
             direction={"column"}
-            width="50%;"
+           maxWidth={["90%","50%"]}
           >
-            <Heading fontSize={"5xl"} color="primary" marginBottom={".75rem"}>
+            <Heading fontSize={["3xl","5xl"]} color="primary" marginBottom={".75rem"}>
               {" "}
               Tech Optimum Curriculum
             </Heading>
-            <Text  width="80%;"marginBottom="1.25rem">
+            <Text  fontSize={["sm","md"]} maxWidth="80%"marginBottom="1.25rem">
 
               Taking an effective and efficient approach to computer science is
               integral to our philosophy. To practice what you have learned, you
@@ -45,6 +39,7 @@ export default function CurriculmLanding() {
             </Link>
           </Flex>
           <Box
+          display={["none","block"]}
             borderRadius={"15px"}
             height="300px"
             width="400px"

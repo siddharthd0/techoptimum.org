@@ -21,7 +21,7 @@ export default function HeroHeader() {
           <Text
             fontSize="2xl"
             color="primary"
-            marginBottom={{ base: ".5em", md: "1rem", lg: "2rem" }}
+            marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
             width={"75%"}
           >
             A student-led organization dedicated helping and inspiring the next generation of tech leaders. 
@@ -30,6 +30,7 @@ export default function HeroHeader() {
             textDecoration: "none"
           }}href="./curriculum">
           <Button
+        fontSize={"md"}
             backgroundColor="transparent"
             _hover={{
               backgroundColor: "transparent",
@@ -42,7 +43,7 @@ export default function HeroHeader() {
             width="fit-content"
             padding={"0"}
             color="#1B76FF"
-            fontWeight={"400"}
+            fontWeight={"500"}
             rightIcon={
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />
             }
