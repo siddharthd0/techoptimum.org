@@ -4,8 +4,8 @@ import JoinBanner from "../assets/join-team-globe.svg";
 export default function JoinTeamLanding() {
   return (
     <>
-    <Flex marginTop={"-4.5rem"}>
-      <JoinBanner  width="100vw" />
+      <Flex marginTop={"-4.5rem"}>
+        <JoinBanner width="100vw" />
       </Flex>
       <Flex
         flexDir="column"
@@ -27,16 +27,22 @@ export default function JoinTeamLanding() {
           <br /> the future of the Computer Science industry
         </Text>
 
-<Link href="#jobs">
-        <Button
-          marginTop="30px"
-          rounded="full"
-          pl="2rem"
-          pr="2rem"
-          colorScheme="joinTeamBtn"
+        <Link
+          _hover={{
+            textDecoration: "none",
+          }}
+          href="#jobs"
         >
-          View Volunteer Positions
-        </Button>
+          <Button
+            marginTop="30px"
+            rounded="full"
+            pl="2rem"
+            pr="2rem"
+            colorScheme="joinTeamBtn"
+            fontWeight={"100"}
+          >
+            View Volunteer Positions
+          </Button>
         </Link>
       </Flex>
     </>

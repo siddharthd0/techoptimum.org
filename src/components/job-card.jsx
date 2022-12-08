@@ -16,7 +16,6 @@ import {
   List,
   ListItem,
   ListIcon,
-  Image,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -36,25 +35,21 @@ export default function JobPostingCard({
           <PopoverTrigger>
             <Flex direction={"column"}>
               <Button
-                
                 px="30px"
-                py="20px"
-                borderRadius={"20px"}
-                background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
+                py="30px"
+                borderRadius={"18px"}
+                background="footerBg"
                 transition={"500ms"}
                 _hover={{
-                  transform: "scale(0.92)",
+                  transform: "scale(0.95)",
                 }}
                 _active={{
                   transform: "scale(0.99)",
                 }}
-                pt="6"
+                pt="8"
                 pl="6"
               >
-              
-
-                <Heading color="#BD75E5;" fontSize={"3xl"}>
-               
+                <Heading fontWeight={"300"} color="primary" fontSize={"26px"}>
                   {role}
                 </Heading>
               </Button>
@@ -62,38 +57,38 @@ export default function JobPostingCard({
           </PopoverTrigger>
           <PopoverContent
             borderColor={"transparent"}
-            background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
+            background="footerBg"
           >
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverHeader
-              color={"#BD75E5"}
-              borderColor={"#BD75E5"}
+              color={"primary"}
+              borderColor={"primary"}
               fontSize={"xl"}
               fontWeight={1000}
               margin={"0"}
             >
               {role}
               <Text>
-                <Badge margin={"0"} variant="outline" colorScheme={"purple"}>
+                <Badge margin={"0"} variant="outline" colorScheme={"blue"}>
                   Department of <span>{department}</span>
                 </Badge>
               </Text>
             </PopoverHeader>
 
-            <PopoverBody color={"#BD75E5"}>
+            <PopoverBody color={"primary"}>
               <List spacing={2.5}>
                 <ListItem>
                   <Text fontWeight={800}>Responsibilites:</Text>
-                  <ListIcon as={CheckCircleIcon} color="purple.300" />
+                  <ListIcon as={CheckCircleIcon} color="primary" />
                   {responsibilityOne}
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckCircleIcon} color="purple.300" />
+                  <ListIcon as={CheckCircleIcon} color="primary" />
                   {responsibilityTwo}
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckCircleIcon} color="purple.300" />
+                  <ListIcon as={CheckCircleIcon} color="primary" />
                   {responsibilityThree}
                 </ListItem>
               </List>
@@ -102,20 +97,22 @@ export default function JobPostingCard({
               isExternal
               _hover={{
                 textDecoration: "none",
-                color: "skyblue",
+                
               }}
               href={application}
             >
               <PopoverBody>
                 <Button
-                  borderColor={"#BD75E5"}
+                  borderColor={"primary"}
                   fontWeight={"normal"}
                   marginBottom={"10px"}
-                  background="linear-gradient(164.59deg, #530041 10.8%, #28006B 125.52%);"
+                  border={"1px"}
+                  color={"primary"}
+                  backgroundColor="footerBg"
                   _hover={{
                     boxShadow: "2px 9px 50px -15px #000000;",
                   }}
-                  borderRadius="full"
+                  borderRadius="10px"
                   px="6"
                   rightIcon={
                     <ExternalLinkIcon position={"relative"} bottom={"2px"} />

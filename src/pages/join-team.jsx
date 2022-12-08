@@ -17,7 +17,7 @@ export default function JoinTeam() {
         <Flex
     
           margin={"auto"}
-          width="500px"
+          width="450px"
           direction="column"
           justify="center"
           gap="25px"
