@@ -176,7 +176,7 @@ export default function About() {
            role="Director of Design"
            />
             <Volunteer 
-            src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aditya+Sahasranam&size=100"
+            src="https://cdn.discordapp.com/attachments/916543942139469884/1050303286697279518/Screen_Shot_2022-12-07_at_11.50.08_PM.png"
             name="Aditya Sahasranam"
             role="Community Manager"
           />
