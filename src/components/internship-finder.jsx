@@ -32,7 +32,7 @@ export default function Finder() {
           </Head>
           <Heading
             color="primary"
-            fontSize="5xl"
+            fontSize={["4xl","5xl"]}
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -40,8 +40,8 @@ export default function Finder() {
           </Heading>
           <Text
             color="primary"
-            fontSize="lg"
-            marginTop={"2.2rem"}
+            fontSize={["md","lg"]}
+            marginTop={["1.3rem","2.2rem"]}
             data-aos="fade-right"
             data-aos-duration="1000"
             width={["250px", "600px"]}
@@ -57,15 +57,15 @@ export default function Finder() {
                 }}
               >
           <Button
-            w={"280px"}
+            w={["250px","280px"]}
             bgColor={"#4559E9"}
-            borderRadius={"50px"}
+            borderRadius={"18px"}
             color={"#FFFFFF"}
             fontWeight={"400"}
-            fontSize="xl"
+            fontSize={["lg","xl"]}
             _hover={{ bgColor: "#3244ca" }}
             _active={{ bgColor: "#3244ca" }}
-            mt={"2.5rem"}
+            mt={["1.5rem","2.5rem"]}
           >
             Find internships now
           </Button>

@@ -20,7 +20,7 @@ export default function HackathonRecap() {
         align="center"
      
       >
-        <Heading fontSize={["5xl","6xl"]} color={"primary"}>
+        <Heading fontSize={["4xl","6xl"]} color={"primary"}>
           Quick Recap
         </Heading>
         <Heading color={"primary"} marginTop={"20px"}>Featuring...</Heading>
@@ -34,7 +34,7 @@ export default function HackathonRecap() {
             >
               <ChessIcon width="55px" height="auto" />
 
-              <Heading textAlign="center" color="primary" fontSize="3xl">
+              <Heading textAlign="center" color="primary" fontSize={["2xl","3xl"]}>
                 Chess Tournament
               </Heading>
             </Flex>
@@ -52,7 +52,7 @@ export default function HackathonRecap() {
                 mx={"30px"}
                 textAlign={"center"}
                 color="primary"
-                fontSize="3xl"
+                fontSize={["2xl","3xl"]}
               >
                 Skribble.io <br />
                 Tournament
@@ -72,7 +72,7 @@ export default function HackathonRecap() {
                 marginLeft={"20px"}
                 textAlign={"center"}
                 color="primary"
-                fontSize="3xl"
+                fontSize={["2xl","3xl"]}
               >
                 Programming
                 <br />
@@ -82,10 +82,11 @@ export default function HackathonRecap() {
           </Flex>
         </Flex>
         <Container
+      
         marginTop={"-4rem !important"}
           maxWidth={"570px"}
           backgroundColor="#29368C"
-          height={"150px"}
+          height={["120px","150px"]}
           margin={"0 auto"}
           borderRadius={"36px"}
           paddingTop={"1rem"}
@@ -101,20 +102,20 @@ export default function HackathonRecap() {
           <Flex alignItems={"center"} height={"100%"}>
             <Heading
               color="white"
-              fontSize="4xl"
+              fontSize={["2xl","4xl"]}
               fontWeight={"400"}
               textAlign={"left"}
               ml={"6%"}
               mr={"6%"}
             >
               <CountUp end={313} duration={4} useEasing={true} delay={1.5} />+
-              <Text fontWeight={"400"} fontSize="2xl">
+              <Text fontWeight={"400"}  fontSize={["xl","2xl"]}>
                 Participants
               </Text>
             </Heading>
             <Heading
               color="white"
-              fontSize="6xl"
+              fontSize={["4xl","6xl"]}
               fontWeight={"300"}
               width={"5%"}
             >
@@ -122,15 +123,15 @@ export default function HackathonRecap() {
             </Heading>
             <Heading
               color="white"
-              fontSize="4xl"
+              fontSize={["2xl","4xl"]}
               fontWeight={"400"}
               width={"47.5%"}
               textAlign={"left"}
-              ml={"1.1rem"}
+              ml={"1rem"}
             >
               $<CountUp end={41750} duration={4} useEasing={true} delay={1.5} />
               +<br></br>
-              <Text fontWeight={"400"} fontSize="2xl">
+              <Text fontWeight={"400"}  fontSize={["xl","2xl"]}>
                 Prizes
               </Text>
             </Heading>
@@ -139,7 +140,7 @@ export default function HackathonRecap() {
               isExternal
               transition="500ms"
             >
-              <Icon className="diagonal-button" as={BsArrowUpRight} />
+              <Icon display={["none","block"]} className="diagonal-button" as={BsArrowUpRight} />
             </Link>
           </Flex>
         </Container>

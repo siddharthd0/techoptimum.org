@@ -9,54 +9,58 @@ import { NodeNextRequest } from "next/dist/server/base-http/node";
 export default function HeroHeader() {
   return (
     <>
-      <Flex  marginBottom={"100px"}width={"100%"} direction={"column"}>
+      <Flex marginBottom={"100px"} width={"100%"} direction={"column"}>
         <Flex direction={"column"} marginLeft={["2rem", "9rem"]}>
           <Heading
             className="gradient-title"
-            fontSize="6xl"
+            fontSize={["4xl", "5xl"]}
             marginBottom={{ base: ".5em", md: "1rem", lg: "2rem" }}
           >
             Learn. Participate. Accomplish.
           </Heading>
           <Text
-            fontSize="2xl"
+            fontSize={["lg", "2xl"]}
             color="primary"
             marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
             width={"75%"}
           >
-            A student-led organization dedicated helping and inspiring the next generation of tech leaders. 
+            A student-led organization dedicated helping and inspiring the next
+            generation of tech leaders.
           </Text>
-          <Link _hover={{
-            textDecoration: "none"
-          }}href="./curriculum">
-          <Button
-        fontSize={"md"}
-            backgroundColor="transparent"
+          <Link
             _hover={{
-              backgroundColor: "transparent",
-              color: "#9DB2F6",
+              textDecoration: "none",
             }}
-            _active={{
-              backgroundColor: "transparent",
-              color: "#9DB2F6",
-            }}
-            width="fit-content"
-            padding={"0"}
-            color="#1B76FF"
-            fontWeight={"500"}
-            rightIcon={
-              <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-            }
+            href="./curriculum"
           >
-            LEARN MORE
-          </Button>
+            <Button
+             fontSize={["sm", "md"]}
+              backgroundColor="transparent"
+              _hover={{
+                backgroundColor: "transparent",
+                color: "#9DB2F6",
+              }}
+              _active={{
+                backgroundColor: "transparent",
+                color: "#9DB2F6",
+              }}
+              width="fit-content"
+              padding={"0"}
+              color="#1B76FF"
+              fontWeight={"500"}
+              rightIcon={
+                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+              }
+            >
+              LEARN MORE
+            </Button>
           </Link>
         </Flex>
 
-        <Container   
-          maxWidth={["310px", "500px", "800px"]}
+        <Container
+          maxWidth={["290px", "500px", "800px"]}
           backgroundColor="#29368C"
-          height={["330px", "150px"]}     
+          height={["330px", "150px"]}
           borderRadius={"25px"}
           marginTop={"3rem"}
           as={motion.div}
@@ -75,9 +79,9 @@ export default function HeroHeader() {
             marginTop="2"
           >
             <Heading
-             marginTop={["2rem", "0rem"]}
+              marginTop={["2rem", "0rem"]}
               color="white"
-              fontSize={[ "xl", "2xl" ]}
+              fontSize={["lg", "2xl"]}
               fontWeight={"400"}
               width={["80%", "30%"]}
               textAlign={"center"}
@@ -87,7 +91,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize={[ "xl", "2xl" ]}
+              fontSize={["xl", "2xl"]}
               fontWeight={"400"}
               width={"5%"}
               textAlign="center"
@@ -96,7 +100,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize={[ "xl", "2xl" ]}
+              fontSize={["lg", "2xl"]}
               fontWeight={"400"}
               width={["80%", "30%"]}
               textAlign={"center"}
@@ -105,7 +109,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize={[ "xl", "2xl" ]}
+              fontSize={["lg", "2xl"]}
               fontWeight={"400"}
               width={"5%"}
               textAlign="center"
@@ -114,7 +118,7 @@ export default function HeroHeader() {
             </Heading>
             <Heading
               color="white"
-              fontSize={[ "xl", "2xl" ]}
+              fontSize={["lg", "2xl"]}
               fontWeight={"400"}
               width={["70%", "30%"]}
               textAlign={"center"}
@@ -122,7 +126,12 @@ export default function HeroHeader() {
               <CountUp end={300} duration={6} useEasing={true} delay={1.5} />+
               COMMUNITY MEMBERS
             </Heading>
-            <Link marginBottom={["2rem", "0rem"]} marginTop={["1rem", "0rem"]} href="./join" transition="500ms">
+            <Link
+              marginBottom={["2rem", "0rem"]}
+              marginTop={["1.6rem", "0rem"]}
+              href="./join"
+              transition="500ms"
+            >
               <Icon className="diagonal-button" as={BsArrowUpRight} />
             </Link>
           </Flex>

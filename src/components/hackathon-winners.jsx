@@ -15,7 +15,7 @@ export default function HackathonWinners() {
         Winners
       </Heading>
       <br></br>
-      <Flex align="center" justify="center">
+      <Flex marginLeft={["2rem", "rem"]} maxW={["300px","1500px"]} align="center" justify="center">
         <Stack spacing="40px" direction={["column", "row"]}>
           <Box boxSize="xlg">
             <Link href="https://devpost.com/software/genfolio" isExternal>

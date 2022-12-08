@@ -33,7 +33,7 @@ export default function Events() {
 
       <Heading
         color="primary"
-        fontSize="5xl"
+        fontSize={["4xl","5xl"]}
         data-aos="fade-right"
         data-aos-duration="1000"
       >
@@ -43,7 +43,7 @@ export default function Events() {
       <Link href="./hackathon">
       <Text
         color="primary"
-        fontSize="2xl"
+        fontSize={["xl","2xl"]}
         marginTop={"1.5rem"}
         data-aos="fade-right"
         data-aos-duration="1000"
@@ -55,7 +55,7 @@ export default function Events() {
       <Flex direction={["column", "row"]}>
         <Text
           color="primary"
-          fontSize="lg"
+          fontSize={["md","lg"]}
           marginTop={"1rem"}
           mr="5rem"
           data-aos="fade-right"

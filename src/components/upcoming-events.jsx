@@ -18,13 +18,13 @@ export default function UpcomingEvents() {
      
         mt="0"
         paddingTop={"4rem"}
-        height={"300px"}
+        height={["250px","300px"]}
         backgroundColor={"#05101D"}
         display={"column"}
         align="ce nter"
         justify="center"
       >
-        <Heading mb={"4rem"} fontSize="5xl" color="primary" align="center">
+        <Heading mb={"4rem"} fontSize={["3xl","5xl"]} color="primary" align="center">
           Upcoming Events
         </Heading>
         <div></div>

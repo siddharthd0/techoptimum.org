@@ -34,7 +34,7 @@ export default function Courses() {
       </Head>
       <Heading
         color="primary"
-        fontSize="5xl"
+        fontSize={["4xl", "5xl"]}
         data-aos="fade-right"
         data-aos-duration="1000"
         mb="2rem"
@@ -63,9 +63,9 @@ export default function Courses() {
                 pt={".2rem"}
                 pb={".7rem"}
                 fontWeight={"300"}
-                fontSize={"3xl"}
+                fontSize={["2xl", "3xl"]}
               >
-                Python.
+                Intro to PY
               </Heading>
               Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. 
               <Button
@@ -115,13 +115,14 @@ export default function Courses() {
                 pt={".2rem"}
                 pb={".7rem"}
                 fontWeight={"300"}
-                fontSize={"3xl"}
+                fontSize={["2xl", "3xl"]}
               >
                 Web Dev.
               </Heading>
               Create simple websites using HTML, CSS and JS. Host, publish and
               share your new personalized website that you created from scratch.
               <Button
+              
                 backgroundColor="transparent"
                 transition={"700"}
                 _hover={{
@@ -169,7 +170,7 @@ export default function Courses() {
                 pt={".2rem"}
                 pb={".7rem"}
                 fontWeight={"300"}
-                fontSize={"3xl"}
+                fontSize={["2xl", "3xl"]}
               >
                 Game Dev.
               </Heading>

@@ -33,12 +33,12 @@ export default function About() {
           data-aos="fade-up-right"
           marginBottom={"2%"}
           color="primary"
-          fontSize="5xl"
+          fontSize={["4xl","5xl"]}
         >
           About Us
         </Heading>
 
-        <Text data-aos="fade-up-right" width={["80%", "70%"]} fontSize="xl">
+        <Text data-aos="fade-up-right" width={["80%", "70%"]} fontSize={["lg","xl"]}>
           Tech Optimum is an organization that is entirely managed by students
           and is commited to influence the next wave of technological leaders.{" "}
           <br />
@@ -83,7 +83,7 @@ export default function About() {
             </Text>
           </Box>
           <Box
-            minH={"220px"}
+            minH={"260px"}
             data-aos="zoom-in"
             borderRadius={"20px"}
             w="300px"
@@ -109,7 +109,7 @@ export default function About() {
             </Text>
           </Box>
           <Box
-            minH={"220px"}
+            minH={"255px"}
             data-aos="zoom-in"
             borderRadius={"20px"}
             w="300px"
@@ -138,7 +138,7 @@ export default function About() {
       </Flex>
 
       <Flex marginTop={"5rem"} direction={"column"} alignItems="center">
-        <Heading marginBottom={"2%"} color="primary" fontSize="5xl">
+        <Heading marginBottom={"2%"} color="primary"  fontSize={["4xl","5xl"]}>
           Executives
         </Heading>
         <Flex mb={"5%"} direction={["column", "row"]} gap="45px">
@@ -163,7 +163,7 @@ export default function About() {
         <Heading
           marginBottom={"2%"}
           color="primary"
-          fontSize="5xl"
+          fontSize={["4xl","5xl"]}
           textAlign={"center"}
         >
           Volunteers
