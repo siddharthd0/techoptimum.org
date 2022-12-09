@@ -12,58 +12,46 @@ import { BsArrowUpRight } from "react-icons/bs";
 export default function JoinDiscord() {
   return (
     <>
-      <Flex marginLeft={["2rem", "8rem"]}flexDir="column"  padding="1rem">
-        <Flex marginTop="1rem" alignItems="center">
-          <Heading display="flex">
-            Join our
-            <Text mx="15px" color="#738BDA">
-              Discord
-            </Text>
-            Server
-          </Heading>
+      <Flex marginLeft={["2rem", "10rem"]} flexDir="column" padding="1rem">
+        <Flex marginTop="1.75rem" alignItems="center">
+          <Heading color="primary"display="flex">Chatting Community for you</Heading>
           <Link href="./discord">
             <IconButton
               _hover={{
                 backgroundColor: "transparent",
                 color: "#738BDA",
               }}
-             
-              
               icon={<BsArrowUpRight />}
               background="transparant"
               color="#1B76FF"
               fontSize="3xl"
+              left="10px"
+              bottom="3px"
             ></IconButton>
           </Link>
         </Flex>
-        
+
         <Text maxWidth={"700px"} marginY="15px" fontSize="xl">
           A public community full of programmers of all skill-levels. Whether
-         
           you need computer science help, want to network, or just want to be
-         
           entertained from our daily memes, we have it all.
         </Text>
-        <Flex marginTop={"5rem"}>
-      
-          <Heading display="flex">
-            Channels for your
-            <Text mx="15px" color="#738BDA">
-              Needs
-            </Text>
-          
-          </Heading>
-          </Flex>
-        <Text maxWidth={"800px"} marginY="10px" fontSize="xl">We have many channels where you can chat with other community members about various things! From memes, to coding help, we are here for you!</Text>
+        <Flex marginTop={"3.5rem"}>
+          <Heading color="primary">Channels for your Needs </Heading>
+        </Flex>
+        <Text maxWidth={"700px"} marginY="10px" fontSize="xl">
+          We have many channels where you can chat with other community members
+          about various things! From memes, to coding help, we are here for you!
+        </Text>
         <Flex
           marginTop="20px"
-          w={{ base: "350px", md: "400px", lg: "750px" }}
+          w={{ base: "300px", md: "400px", lg: "750px" }}
           height="167px"
           display="grid"
           gridTemplateColumns="repeat(2, minmax(0, 1fr))"
         >
           <Flex
-            padding={{ base: "10px", md: "20px", lg: "40px" }}
+            padding={{ base: "5px", md: "20px", lg: "40px" }}
             flexDir="column"
             justifyContent="center"
             bg="#4559E9"
@@ -117,8 +105,9 @@ export default function JoinDiscord() {
           </Flex>
         </Flex>
         <Flex
-          width={{ base: "350px", md: "400px", lg: "750px" }}
-          height={{ base: "250px", md: "230px", lg: "350px" }}
+       
+          width={{ base: "300px", md: "400px", lg: "750px" }}
+          height={{ base: "200px", md: "230px", lg: "350px" }}
           marginTop={{ base: "15px", md: "30px", lg: "40px" }}
         >
           <Flex
@@ -137,7 +126,7 @@ export default function JoinDiscord() {
             }}
           >
             <Heading
-              fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
+              fontSize={{ base: "2xl", md: "4xl", lg: "6xl" }}
               _hover={{
                 cursor: "pointer",
                 textDecoration: "underline",
@@ -165,7 +154,7 @@ export default function JoinDiscord() {
               flexDir="column"
               transform="rotate(90deg)"
               margin={"auto"}
-              paddingTop={"50px"}
+              paddingTop={["80px","50px"]}
             >
               <Heading
                 fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
