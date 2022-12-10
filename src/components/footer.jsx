@@ -77,16 +77,16 @@ export default function Footer() {
           <Heading color="primary" fontSize="md">
             ABOUT
           </Heading>
-
           <Text color="primary" fontSize="md">
-            <Link href="./community">Community</Link>
+            <Link href="./faq">FAQ</Link>
           </Text>
           <Text color="primary" fontSize="md">
             <Link href="./contact">Contact</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            <Link href="./join-leadership">Join our Team</Link>
+            <Link href="./about">Team</Link>
           </Text>
+          
         </Flex>
         <Divider width={{ base: 80, md: 0 }} />
         <Flex
@@ -100,10 +100,10 @@ export default function Footer() {
           </Heading>
 
           <Text color="primary" fontSize="md">
-            <Link href="join"> Become a Member</Link>
+            <Link href="join"> Community</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            <Link href="workshops"> Workshops</Link>
+            <Link href="curriculm"> Courses</Link>
           </Text>
           <Text color="primary" fontSize="md">
             <Link href="discord"> Discord</Link>
