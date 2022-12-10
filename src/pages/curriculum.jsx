@@ -35,7 +35,7 @@ export default function Curriculm() {
                     <ModalCloseButton />
                     <ModalHeader color={"white"}>Under Construction</ModalHeader>
                     <ModalBody>
-                        <Text>Our team is currently working hard to finish the lessons in our curriculm. If some buttons don't work, or lessons are missing, please come back later!</Text>
+                        <Text>Our team is currently working hard to finish the lessons in our curriculm. If some buttons do not work, or lessons are missing, please come back later!</Text>
                     </ModalBody>
                     <br/>
                 </ModalContent>
