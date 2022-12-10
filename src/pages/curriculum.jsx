@@ -9,22 +9,37 @@ import {
   Text,
   Badge,
   Button,
-  Icon,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
   Link,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
+  ModalHeader,
 } from "@chakra-ui/react";
 import { FaGraduationCap, FaPython } from "react-icons/fa";
 export default function Curriculm() {
+  const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true })
   return (
     <>
       <Header />
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+                <ModalOverlay />
+                <ModalContent backgroundColor={"blue.800"}>
+      
+                    <ModalCloseButton />
+                    <ModalHeader color={"white"}>Under Construction</ModalHeader>
+                    <ModalBody>
+                        <Text>Our team is currently working hard to finish the lessons in our curriculm. If some buttons don't work, or lessons are missing, please come back later!</Text>
+                    </ModalBody>
+                    <br/>
+                </ModalContent>
+            </Modal>
       <CurriculmLanding />
       <Text mb={["2rem","4rem"]} id="web-dev"></Text>
       <Flex
