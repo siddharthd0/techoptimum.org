@@ -13,6 +13,7 @@ export default function JoinDiscord() {
   return (
     <>
       <Flex marginLeft={["2rem", "10rem"]} flexDir="column" padding="1rem">
+
         <Flex marginTop="1.75rem" alignItems="center">
           <Heading color="primary"display="flex">Chatting Community for you</Heading>
           <Link href="./discord">
@@ -172,6 +173,8 @@ export default function JoinDiscord() {
             </Flex>
           </Flex>
         </Flex>
+        
+
       </Flex>
     </>
   );

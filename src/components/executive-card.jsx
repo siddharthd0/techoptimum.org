@@ -40,9 +40,10 @@ export default function ExecutiveCard({
             transition={"300ms"}
             border="2px solid transparent"
             _hover={{
-              border: "2px solid orange",
+              border: "3px solid orange",
               brightness: ".2",
               cursor: "pointer",
+              opacity: ".6",
             }}
             onClick={onOpen}
           />
