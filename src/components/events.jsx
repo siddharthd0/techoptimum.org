@@ -59,8 +59,8 @@ export default function Events() {
           over 300 participants <Link>here</Link>.
         </Text>
         <Image
-          data-aos="fade-left"
-          data-aos-duration="2000"
+          data-aos="zoom-in"
+          data-aos-delay="450"
           mt={["0rem", "-10rem"]}
           p={"0"}
           boxSize="300px"

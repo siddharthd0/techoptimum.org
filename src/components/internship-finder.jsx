@@ -22,7 +22,7 @@ export default function Finder() {
       direction={"column"}
     >
       <Stack direction="row">
-        <Box>
+        <Box mr="13rem">
           <Head>
             <link
               href="https://unpkg.com/aos@next/dist/aos.css"
@@ -57,6 +57,9 @@ export default function Finder() {
                 }}
               >
           <Button
+          data-aos-delay="150"
+          data-aos="fade-right"
+          data-aos-duration="1000"
             w={["250px","280px"]}
             bgColor={"#4559E9"}
             borderRadius={"18px"}
@@ -71,8 +74,9 @@ export default function Finder() {
           </Button>
           </Link>
         </Box>
-        <Box width={"350px"} paddingLeft="100px">
-          <Image src="/internship-finder-image.png" alt="internship finder" />
+        <Box  data-aos="zoom-in"
+          data-aos-delay="450" width={"350px"} paddingLeft="80px">
+          <Image  mt="-1.5rem" src="/internship-finder-image.png" alt="internship finder" />
         </Box>
       </Stack>
     </Flex>
