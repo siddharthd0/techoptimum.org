@@ -7,15 +7,9 @@ import {
   Heading,
   Button,
   Link,
-  Wrap,
-  WrapItem,
   Divider,
 } from "@chakra-ui/react";
-import {
-  ExternalLinkIcon,
-  InfoOutlineIcon,
-  ArrowForwardIcon,
-} from "@chakra-ui/icons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 export default function Footer() {
   return (
@@ -31,16 +25,14 @@ export default function Footer() {
         <Flex direction="column">
           <Flex alignItems="end">
             <Image
-             width="150px"
-             marginBottom={"-1.1rem"}
+              width="150px"
+              marginBottom={"-1.1rem"}
               src="/text-lblue-transparent.png"
               alt="Logo"
               ml="-12px"
             />
-            
-            
           </Flex>
-          <Heading  fontSize="md" color="primary" marginTop={8} marginBottom={5}>
+          <Heading fontSize="md" color="primary" marginTop={8} marginBottom={5}>
             RECIEVE WEEKLY EMAILS
           </Heading>
           <Flex alignItems={"center"}>
@@ -52,14 +44,13 @@ export default function Footer() {
               placeholder="Enter your email"
               bgColor="inputBg"
               width="220px"
-             
             />
             <Button
-            borderRadius={"0 15px 15px 0px"}
-             h="49px"
+              borderRadius={"0 15px 15px 0px"}
+              h="49px"
               colorScheme="buttonBg"
             >
-            <ArrowForwardIcon />
+              <ArrowForwardIcon />
             </Button>
           </Flex>
         </Flex>
@@ -86,7 +77,6 @@ export default function Footer() {
           <Text color="primary" fontSize="md">
             <Link href="./about">Team</Link>
           </Text>
-          
         </Flex>
         <Divider width={{ base: 80, md: 0 }} />
         <Flex
@@ -126,7 +116,6 @@ export default function Footer() {
             programming. Interested? Join us in the process of improving the
             future of CS.
           </Text>
-      
         </Flex>
       </Flex>
     </>

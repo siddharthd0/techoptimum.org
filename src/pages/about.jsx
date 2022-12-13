@@ -168,7 +168,9 @@ export default function About() {
             name="Pranith Molakalapalli"
             role="Chief Technology Officer"
             linkedin="https://www.linkedin.com/in/pranith-molakalapalli/"
-            description={"Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."}
+            description={
+              "Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."
+            }
           />
         </Flex>
       </Flex>

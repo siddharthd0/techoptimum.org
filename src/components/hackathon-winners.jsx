@@ -1,8 +1,4 @@
-import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
-// import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { BsArrowUpRight } from "react-icons/bs";
-import CountUp from "react-countup";
-import { motion } from "framer-motion";
+import { Flex, Heading } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/react";
@@ -15,7 +11,12 @@ export default function HackathonWinners() {
         Winners
       </Heading>
       <br></br>
-      <Flex marginLeft={["2rem", "rem"]} maxW={["300px","1500px"]} align="center" justify="center">
+      <Flex
+        marginLeft={["2rem", "rem"]}
+        maxW={["300px", "1500px"]}
+        align="center"
+        justify="center"
+      >
         <Stack spacing="40px" direction={["column", "row"]}>
           <Box boxSize="xlg">
             <Link href="https://devpost.com/software/genfolio" isExternal>

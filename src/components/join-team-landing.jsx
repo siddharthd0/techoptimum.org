@@ -1,4 +1,4 @@
-import { Link, Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Link, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import JoinBanner from "../assets/join-team-globe.svg";
 
 export default function JoinTeamLanding() {

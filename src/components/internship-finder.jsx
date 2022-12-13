@@ -3,12 +3,12 @@ import { useEffect } from "react";
 import AOS from "aos";
 import Head from "next/head";
 import Link from "next/link";
+
 import {
   Flex,
   Heading,
   Text,
   Button,
-  Icon,
   Image,
   Box,
   Stack,

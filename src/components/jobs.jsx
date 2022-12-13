@@ -21,13 +21,13 @@ export default function Jobs() {
       </Head>
       <Flex
         marginLeft={["2rem", "7rem"]}
-        marginTop={["4rem","10rem"]}
+        marginTop={["4rem", "10rem"]}
         direction={"column"}
         data-aos={"fade-up"}
         data-aos-duration={"2000"}
         marginRight="2rem"
       >
-        <Heading marginBottom={"2%"} color="primary" fontSize={["4xl","5xl"]}>
+        <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Volunteer with us
         </Heading>
         <Box
@@ -36,7 +36,12 @@ export default function Jobs() {
           borderRadius={"27px"}
           border={"3px solid #4559E9"}
         >
-          <Flex display={["none", "flex"]} className="job-cards" mx={"50px"} mt={"80px"}>
+          <Flex
+            display={["none", "flex"]}
+            className="job-cards"
+            mx={"50px"}
+            mt={"80px"}
+          >
             <Box
               data-aos="zoom-in-down"
               data-aos-delay="200"
@@ -248,7 +253,12 @@ export default function Jobs() {
               </Flex>
             </Box>
           </Flex>
-          <Flex marginLeft={["2rem", "0rem"]} justifyContent={["flex-start", "flex-end"]} mt={"30px"} mr={"50px"}>
+          <Flex
+            marginLeft={["2rem", "0rem"]}
+            justifyContent={["flex-start", "flex-end"]}
+            mt={"30px"}
+            mr={"50px"}
+          >
             <Link
               href="./join-team"
               _hover={{
@@ -265,7 +275,6 @@ export default function Jobs() {
                 _hover={{
                   bgColor: "#6C7BE6",
                 }}
-
               >
                 View More
               </Button>

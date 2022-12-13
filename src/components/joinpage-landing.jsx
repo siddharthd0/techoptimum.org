@@ -1,6 +1,5 @@
 import { Link, Heading, Flex, Text, Button } from "@chakra-ui/react";
 // import JoinText from "../assets/Join-text-underline.svg";
-import { BsArrowUpRight } from "react-icons/bs";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function JoinHero() {
   return (
@@ -17,7 +16,6 @@ export default function JoinHero() {
         paddingBottom="10%"
         marginTop="0"
       >
-       
         <svg
           id="stroke"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,12 +34,21 @@ export default function JoinHero() {
           </defs>
         </svg>
 
-       <Heading  marginBottom={["-50px", "-40px"]}
+        <Heading
+          marginBottom={["-50px", "-40px"]}
           marginTop={"30px "}
           fontWeight={1000}
-          fontSize={["4xl", "6xl"]}>Tech Optimum</Heading>
+          fontSize={["4xl", "6xl"]}
+        >
+          Tech Optimum
+        </Heading>
 
-        <Text fontWeight="1000" fontSize={["4xl", "49px"]}className="wavy" href="/">
+        <Text
+          fontWeight="1000"
+          fontSize={["4xl", "49px"]}
+          className="wavy"
+          href="/"
+        >
           Community
           <svg class="button-stroke" viewBox="0 0 154 13">
             <use href="#line"></use>
@@ -63,11 +70,10 @@ export default function JoinHero() {
           isExternal
         >
           <Button
-         
             colorScheme="buttonBg"
             padding={["20px 25px 20px 25px", "20px 30px 20px 30px"]}
             fontSize={["lg", "xl"]}
-           fontWeight="normal"
+            fontWeight="normal"
             rounded="full"
             rightIcon={
               <ExternalLinkIcon position={"relative"} bottom={"2px"} />

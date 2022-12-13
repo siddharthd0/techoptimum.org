@@ -55,10 +55,7 @@ export default function JobPostingCard({
               </Button>
             </Flex>
           </PopoverTrigger>
-          <PopoverContent
-            borderColor={"transparent"}
-            background="footerBg"
-          >
+          <PopoverContent borderColor={"transparent"} background="footerBg">
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverHeader
@@ -97,7 +94,6 @@ export default function JobPostingCard({
               isExternal
               _hover={{
                 textDecoration: "none",
-                
               }}
               href={application}
             >

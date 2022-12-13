@@ -1,21 +1,14 @@
-import {
-  Link,
-  Flex,
-  Text,
-  Button,
-  Heading,
-  IconButton,
-  Box,
-} from "@chakra-ui/react";
+import { Link, Flex, Text, Heading, IconButton } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
 
 export default function JoinDiscord() {
   return (
     <>
       <Flex marginLeft={["2rem", "10rem"]} flexDir="column" padding="1rem">
-
         <Flex marginTop="1.75rem" alignItems="center">
-          <Heading color="primary"display="flex">Chatting Community for you</Heading>
+          <Heading color="primary" display="flex">
+            Chatting Community for you
+          </Heading>
           <Link href="./discord">
             <IconButton
               _hover={{
@@ -106,7 +99,6 @@ export default function JoinDiscord() {
           </Flex>
         </Flex>
         <Flex
-       
           width={{ base: "300px", md: "400px", lg: "750px" }}
           height={{ base: "200px", md: "230px", lg: "350px" }}
           marginTop={{ base: "15px", md: "30px", lg: "40px" }}
@@ -155,7 +147,7 @@ export default function JoinDiscord() {
               flexDir="column"
               transform="rotate(90deg)"
               margin={"auto"}
-              paddingTop={["80px","50px"]}
+              paddingTop={["80px", "50px"]}
             >
               <Heading
                 fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
@@ -173,8 +165,6 @@ export default function JoinDiscord() {
             </Flex>
           </Flex>
         </Flex>
-        
-
       </Flex>
     </>
   );

@@ -12,8 +12,8 @@ export default function Hackathons() {
   return (
     <>
       <Header />
-      <HackathonBanner width= "100%" />
-      <Box my={["60px","100px"]}>
+      <HackathonBanner width="100%" />
+      <Box my={["60px", "100px"]}>
         <HackathonRecap />
         <HackathonWinners />
         <HackathonSponsors />

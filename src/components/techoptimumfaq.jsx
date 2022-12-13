@@ -8,7 +8,6 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Center,
   Heading,
   Link,
 } from "@chakra-ui/react";
@@ -23,7 +22,7 @@ export default function FaqComp() {
         maxWidth="1200px"
         padding="3rem"
       >
-        <Heading color="primary" mt={"1rem"}  fontSize={["4xl","5xl"]}>
+        <Heading color="primary" mt={"1rem"} fontSize={["4xl", "5xl"]}>
           {" "}
           FAQ
         </Heading>

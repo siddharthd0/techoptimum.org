@@ -1,13 +1,4 @@
-import {
-  Flex,
-  Heading,
-  Text,
-  Link,
-  Icon,
-  Image,
-  Stack,
-} from "@chakra-ui/react";
-import { BsArrowUpRight } from "react-icons/bs";
+import { Flex, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { useEffect } from "react";
 import AOS from "aos";
 import Head from "next/head";
@@ -30,32 +21,31 @@ export default function Events() {
         />
       </Head>
 
-
       <Heading
         color="primary"
-        fontSize={["4xl","5xl"]}
+        fontSize={["4xl", "5xl"]}
         data-aos="fade-right"
         data-aos-duration="1000"
       >
         Events
       </Heading>
-      
+
       <Link href="./hackathon">
-      <Text
-        color="primary"
-        fontSize={["xl","2xl"]}
-        marginTop={"1.5rem"}
-        data-aos="fade-right"
-        data-aos-duration="1000"
-      >
-        Participate in events hosted by Tech Optimum
-      </Text>
+        <Text
+          color="primary"
+          fontSize={["xl", "2xl"]}
+          marginTop={"1.5rem"}
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          Participate in events hosted by Tech Optimum
+        </Text>
       </Link>
 
       <Flex direction={["column", "row"]}>
         <Text
           color="primary"
-          fontSize={["md","lg"]}
+          fontSize={["md", "lg"]}
           marginTop={"1rem"}
           mr="5rem"
           data-aos="fade-right"

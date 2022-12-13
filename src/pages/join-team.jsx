@@ -1,21 +1,19 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import { Box, Flex, Wrap, Heading,Text } from "@chakra-ui/react";
+import { Box, Flex, Wrap, Heading, Text } from "@chakra-ui/react";
 import JoinTeamLanding from "../components/join-team-landing";
-import JoinTeamJobs from "../components/join-team-jobs";
 import JobPostingCard from "../components/job-card";
 
 export default function JoinTeam() {
   return (
     <>
       <Header />
-      <Box  position="relative" bottom="20px" top="-200px" overflow="hidden">
+      <Box position="relative" bottom="20px" top="-200px" overflow="hidden">
         <JoinTeamLanding />
-       <Text id="jobs"></Text>
+        <Text id="jobs"></Text>
 
         <Flex
-    
           margin={"auto"}
           width="450px"
           direction="column"

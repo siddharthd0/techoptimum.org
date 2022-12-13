@@ -3,14 +3,12 @@ import {
   Heading,
   Text,
   Button,
-  Container,
   Stack,
   Box,
   Center,
   Link,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
@@ -65,7 +63,7 @@ export default function Courses() {
                 fontWeight={"300"}
                 fontSize={["2xl", "3xl"]}
               >
-                Intro to PY
+                Python Basics
               </Heading>
               Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. 
               <Button

@@ -125,7 +125,7 @@ export default function HeroHeader() {
             </FormControl>
           </Box>
           <Flex
-          marginTop={["5rem", "0px"]}
+            marginTop={["5rem", "0px"]}
             paddingLeft={["0rem", "5rem"]}
             maxWidth="530px"
             flexDir="column"
