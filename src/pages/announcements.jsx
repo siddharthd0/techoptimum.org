@@ -6,16 +6,15 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { Heading, Flex } from "@chakra-ui/react";
 
+
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Announcements({ posts }) {
   return (
     <>
-      <Header />
-      <div className="announcements-container">
-        <Heading marginBottom={"20px "} color="primary">
-          Announcements
-        </Heading>
+ <Header/>
+     <div className="announcements-container">
+         <Heading marginBottom={"20px "} color="primary">Announcements</Heading>
         <ol className="announcements">
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
@@ -27,7 +26,7 @@ export default function Announcements({ posts }) {
               }
             );
             return (
-              <li className="post" key={post.id}>
+              <li  className="post"key={post.id} >
                 <h3 className="postTitle">
                   <Link href={`/${post.id}`}>
                     <Text text={post.properties.Name.title} />
@@ -35,15 +34,13 @@ export default function Announcements({ posts }) {
                 </h3>
 
                 <p className="postDescription">{date}</p>
-                <Link className="readMoreLink" href={`/${post.id}`}>
-                  Read more →{" "}
-                </Link>
+                <Link className="readMoreLink" href={`/${post.id}`}>Read more → </Link>
               </li>
             );
           })}
         </ol>
-      </div>
-      <Footer />
+        </div>
+     <Footer/>
     </>
   );
 }
