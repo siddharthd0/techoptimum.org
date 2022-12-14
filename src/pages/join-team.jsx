@@ -12,7 +12,6 @@ export default function JoinTeam() {
       <Box position="relative" bottom="20px" top="-200px" overflow="hidden">
         <JoinTeamLanding />
         <Text id="jobs"></Text>
-
         <Flex
           margin={"auto"}
           width="450px"
