@@ -7,6 +7,7 @@ import Events from "../components/events";
 import Finder from "../components/internship-finder";
 import Socials from "../components/socials";
 import { Box } from "@chakra-ui/react";
+import Mission from "../components/mission";
 //redepoylkafmkfm
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <Box my={["20px", "65px"]} _hover={{}}>
         <HeroHeader />
+        <Mission/>
         <Courses />
         <Events />
         <Jobs />
