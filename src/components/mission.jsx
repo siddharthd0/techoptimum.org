@@ -16,7 +16,7 @@ export default function Mission() {
       <Flex mb="6rem" marginLeft={["2rem", "7rem"]} direction={"column"}>
         <Heading fontSize={"5xl"} color="primary">Our Mission</Heading>
         <Text color="primary"fontSize={"lg"} mt="1.5rem" maxW={"700px"}>
-          More than one-third of the world's population especially students
+          More than one-third of the world&apos;s population especially students
           continues to be excluded from technology because of the digital
           divide. We offer students in need accessible resources, tools, and a
           learning platform along with an inclusive community to learn more
