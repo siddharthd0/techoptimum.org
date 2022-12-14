@@ -17,7 +17,7 @@ export default function Footer() {
       <Flex
         justifyContent="space-between"
         alignItems={{ base: "center", md: "center" }}
-        padding="33px 10% "
+        padding="33px 12% "
         bgColor="footerBg"
         direction={{ base: "column", md: "row" }}
         gap={{ base: "20px", md: "0px" }}

@@ -59,7 +59,7 @@ export default function PodcastPlayer() {
           width="30%"
           padding="40px"
         >
-          <Text fontSize="2xl" fontWeight="bold">
+          <Text fontSize="2xl" fontWeight="100">
             Learn about Super Julie&apos;s, fantastic journey, struggles and how
             she leads her company, Super purposes!
           </Text>
