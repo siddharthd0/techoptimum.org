@@ -7,6 +7,7 @@ export default function Events() {
     AOS.init();
     AOS.refresh();
   }, []);
+  
   return (
     <Flex
       marginLeft={["2rem", "7rem"]}

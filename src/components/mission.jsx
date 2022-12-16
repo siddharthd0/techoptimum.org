@@ -1,23 +1,40 @@
 import React from "react";
-import {
-  Flex,
-  Text,
-  Image,
-  Input,
-  Heading,
-  Button,
-  Link,
-  Divider,
-} from "@chakra-ui/react";
+import { Flex, Text, Heading } from "@chakra-ui/react";
+import { useEffect } from "react";
+import AOS from "aos";
+import Head from "next/head";
 
 export default function Mission() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
+      <Head>
+        <link
+          href="https://unpkg.com/aos@next/dist/aos.css"
+          rel="stylesheet"
+          key="test"
+        />
+      </Head>
       <Flex mb="6rem" marginLeft={["2rem", "7rem"]} direction={"column"}>
-        <Heading fontSize={"5xl"} color="primary">
+        <Heading
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          fontSize={"5xl"}
+          color="primary"
+        >
           Our Mission
         </Heading>
-        <Text color="primary" fontSize={"lg"} mt="1.5rem" maxW={"760px"}>
+        <Text
+          data-aos="fade-right"
+          data-aos-duration="2200"
+          color="primary"
+          fontSize={"lg"}
+          mt="1.5rem"
+          maxW={"760px"}
+        >
           More than one-third of the world&apos;s population especially students
           continues to be excluded from technology because of the digital
           divide. We offer students in need accessible resources, tools, and a
