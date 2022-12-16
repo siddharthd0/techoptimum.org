@@ -42,26 +42,6 @@ export default function Header() {
         />
         <title>Tech Optimum</title>
       </Head>
-      {/*  <Flex
-        bgColor="#FFAC33"
-        color="black"
-        py={1.5}
-        px={10}
-        w="100%"
-        zIndex={1000}
-      >
-        <Text margin={"auto"} textAlign={"center"}>
-          This website is still a work in progress. Check out the progress{" "}
-          <Link
-            _hover={{}}
-            isExternal
-            href="https://github.com/TechOptimum/Tech-Optimum-Website"
-          >
-            here
-          </Link>
-          .
-        </Text>
-  </Flex>*/}
       <Flex
         zIndex="100 !important"
         justifyContent="space-between"
@@ -76,9 +56,10 @@ export default function Header() {
               _hover={{
                 cursor: "pointer",
               }}
-              display={["none", "block"]}
+              display={{ base: "block", md: "block" }}
               w="60px"
               src="./logo-transparent.png"
+              alt={"Tech Optimum Logo"}
             ></Image>
           </Link>
           <Link href={"./"}>
@@ -92,6 +73,7 @@ export default function Header() {
               href="https://techoptimum.org"
               fontSize="3xl"
               color="primary"
+              display={{ base: "none", md: "block" }}
             >
               Tech Optimum
             </Heading>

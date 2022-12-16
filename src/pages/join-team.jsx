@@ -14,7 +14,6 @@ export default function JoinTeam() {
         <JoinTeamLanding />
         </Flex>
         <Text id="jobs"></Text>
-
         <Flex
         height={["700px","400px"]}
           margin={"auto"}
