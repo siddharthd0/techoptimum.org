@@ -9,20 +9,19 @@ export default function JoinTeam() {
   return (
     <>
       <Header />
-      <Box  position="relative" bottom="20px" top="-200px" overflow="hidden">
-        <Flex display={["none","block"]}>
-        <JoinTeamLanding />
+      <Box position="relative" bottom="20px" top="-200px" overflow="hidden">
+        <Flex display={["none", "block"]}>
+          <JoinTeamLanding />
         </Flex>
         <Text id="jobs"></Text>
         <Flex
-        height={["700px","400px"]}
+          height={["700px", "400px"]}
           margin={"auto"}
-          width="350px"
           direction="column"
           justify="center"
           gap="25px"
-         
           zIndex="100"
+          width="400px"
         >
           <JobPostingCard
             role="Web Developer"
@@ -52,6 +51,14 @@ export default function JoinTeam() {
             responsibilityTwo="Work on creating programming lessons in English"
             responsibilityThree={"Proficient in multiple programming languages"}
             department="Education"
+          />
+          <JobPostingCard
+          role="HR Associate"
+          application="https://forms.gle/GUD5T4cAPpRy2JYY6"
+          responsibilityOne={"Maintain staff information logs"}
+          responsibilityTwo="Recruit new volunteers"
+          responsibilityThree={"Update staff information documents"}
+          department="Human Resources"
           />
         </Flex>
       </Box>

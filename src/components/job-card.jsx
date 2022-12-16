@@ -49,7 +49,7 @@ export default function JobPostingCard({
                 }}
                 pt="8"
                 pl="6"
-                width={["250px", "350px"]}
+                width={["250px", "390px"]}
               >
                 <Heading fontWeight={"300"} color="primary" fontSize={["18px","26px"]}>
                   {role}
@@ -108,7 +108,8 @@ export default function JobPostingCard({
                   color={"primary"}
                   backgroundColor="footerBg"
                   _hover={{
-                    boxShadow: "2px 9px 50px -15px #000000;",
+                    backgroundColor:"primary",
+                    color: "black"
                   }}
                   borderRadius="10px"
                   px="6"
