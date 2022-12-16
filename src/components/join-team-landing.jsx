@@ -40,6 +40,10 @@ export default function JoinTeamLanding() {
             pr="2rem"
             colorScheme="joinTeamBtn"
             fontWeight={"100"}
+            transition="300ms"
+            _hover={{
+              bgColor: "#6C7BE6",
+            }}
           >
             View Volunteer Positions
           </Button>

@@ -9,16 +9,21 @@ export default function JoinTeam() {
   return (
     <>
       <Header />
-      <Box position="relative" bottom="20px" top="-200px" overflow="hidden">
+      <Box  position="relative" bottom="20px" top="-200px" overflow="hidden">
+        <Flex display={["none","block"]}>
         <JoinTeamLanding />
+        </Flex>
         <Text id="jobs"></Text>
 
         <Flex
+        height={["700px","400px"]}
           margin={"auto"}
-          width="450px"
+          width="350px"
           direction="column"
           justify="center"
           gap="25px"
+         
+          zIndex="100"
         >
           <JobPostingCard
             role="Web Developer"

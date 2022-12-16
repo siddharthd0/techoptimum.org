@@ -31,10 +31,11 @@ export default function JobPostingCard({
   return (
     <>
       <Box>
-        <Popover placement="top">
+        <Popover placement='top-start'>
           <PopoverTrigger>
             <Flex direction={"column"}>
               <Button
+              margin={"auto"} 
                 px="30px"
                 py="30px"
                 borderRadius={"18px"}
@@ -48,8 +49,9 @@ export default function JobPostingCard({
                 }}
                 pt="8"
                 pl="6"
+                width={["250px", "350px"]}
               >
-                <Heading fontWeight={"300"} color="primary" fontSize={"26px"}>
+                <Heading fontWeight={"300"} color="primary" fontSize={["18px","26px"]}>
                   {role}
                 </Heading>
               </Button>
