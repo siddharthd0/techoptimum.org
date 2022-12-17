@@ -90,10 +90,22 @@ export default function Curriculm() {
               Learn More
             </MenuButton>
             <MenuList className="link-navs-dropdown">
-              <Link href="https://courses.techoptimum.org">
-                <MenuItem className="link-navs-dd-text">View Course</MenuItem>
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="https://courses.techoptimum.org"
+              >
+                <MenuItem className="link-navs-dd-text">
+                  View Course (under work)
+                </MenuItem>
               </Link>
-              <Link href="./discord">
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="./discord"
+              >
                 <MenuItem className="link-navs-dd-text">Course Help</MenuItem>
               </Link>
             </MenuList>
@@ -101,10 +113,10 @@ export default function Curriculm() {
         </Flex>
         <Box
           borderRadius={"15px"}
-          w={["320px", "415px"]}
+          w={["320px", "400px"]}
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
-          h={["230px", "275px"]}
+          h={["230px", "265px"]}
           marginTop={"2.5rem"}
           marginRight={["2rem", "0rem"]}
         >
@@ -172,12 +184,22 @@ export default function Curriculm() {
               Learn More
             </MenuButton>
             <MenuList className="link-navs-dropdown">
-              <Link href="https://courses.techoptimum.org">
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="https://courses.techoptimum.org"
+              >
                 <MenuItem className="link-navs-dd-text">
                   View Course (under work)
                 </MenuItem>
               </Link>
-              <Link href="./discord">
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="./discord"
+              >
                 <MenuItem className="link-navs-dd-text">Course Help</MenuItem>
               </Link>
             </MenuList>

@@ -45,7 +45,7 @@ export default function JoinHero() {
 
         <Text
           fontWeight="1000"
-          fontSize={["4xl", "49px"]}
+          fontSize={["4xl", "6xl"]}
           className="wavy"
           href="/"
         >

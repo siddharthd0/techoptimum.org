@@ -17,14 +17,13 @@ export default function JoinTeamLanding() {
         width="100vw"
         height="80vh"
         zIndex={10}
-        marginTop="5rem"
+        marginTop="4rem"
       >
         <Heading color="#6AA0D3" fontSize="6xl">
           Join our Team
         </Heading>
-        <Text color="#6AA0D3" marginTop="40px" textAlign="center" fontSize="xl">
-          We are a student-run nonprofit organization dedicated to improving{" "}
-          <br /> the future of the Computer Science industry
+        <Text maxW={"590px"}  marginTop="20px" textAlign="center" fontSize="xl">
+          We are a student-run nonprofit organization dedicated to improving the future of the Computer Science industry
         </Text>
 
         <Link
@@ -34,7 +33,7 @@ export default function JoinTeamLanding() {
           href="#jobs"
         >
           <Button
-            marginTop="30px"
+            marginTop="20px"
             rounded="full"
             pl="2rem"
             pr="2rem"
