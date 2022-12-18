@@ -21,7 +21,7 @@ export default function Mission() {
       <Flex mb="6rem" marginLeft={["2rem", "7rem"]} direction={"column"}>
         <Heading
           data-aos="fade-right"
-          data-aos-duration="1500"
+          data-aos-duration="800"
           fontSize={"5xl"}
           color="primary"
         >
@@ -29,7 +29,7 @@ export default function Mission() {
         </Heading>
         <Text
           data-aos="fade-right"
-          data-aos-duration="2200"
+          data-aos-duration="1200"
           color="primary"
           fontSize={"lg"}
           mt="1.5rem"

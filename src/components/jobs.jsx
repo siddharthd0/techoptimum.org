@@ -21,7 +21,7 @@ export default function Jobs() {
       </Head>
       <Flex
         marginLeft={["2rem", "7rem"]}
-        marginTop={["4rem", "10rem"]}
+        marginTop={["4rem", "8rem"]}
         direction={"column"}
         data-aos={"fade-up"}
         data-aos-duration={"2000"}

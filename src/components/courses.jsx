@@ -67,6 +67,12 @@ export default function Courses() {
               </Heading>
               Python is a computer programming language often used to build
               websites and software, automate tasks, and conduct data analysis.
+              <Link
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                  href="./curriculum"
+                >
               <Button
                 backgroundColor="transparent"
                 transition={"700"}
@@ -85,15 +91,11 @@ export default function Courses() {
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                 }
               >
-                <Link
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  href="./curriculum"
-                >
+               
                   LEARN MORE
-                </Link>
-              </Button>{" "}
+
+              </Button>
+              </Link>
             </Text>
           </div>
         </Box>
@@ -123,6 +125,12 @@ export default function Courses() {
               </Heading>
               Create simple websites using HTML, CSS and JS. Host, publish and
               share your new personalized website that you created from scratch.
+              <Link
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                  href="./curriculum"
+                >
               <Button
                 backgroundColor="transparent"
                 transition={"700"}
@@ -141,15 +149,11 @@ export default function Courses() {
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                 }
               >
-                <Link
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  href="./curriculum"
-                >
+               
                   LEARN MORE
-                </Link>
+               
               </Button>
+              </Link>
             </Text>
           </Center>
         </Box>
@@ -182,6 +186,12 @@ export default function Courses() {
               using languages like Javascript.
               <br />
               <br />
+              <Link
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                  href="./curriculum"
+                >
               <Button
                 backgroundColor="transparent"
                 transition={"700"}
@@ -200,15 +210,11 @@ export default function Courses() {
                   <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                 }
               >
-                <Link
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  href="./curriculum"
-                >
+                
                   LEARN MORE
-                </Link>
+                
               </Button>
+              </Link>
             </Text>
           </Center>
         </Box>

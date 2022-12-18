@@ -18,7 +18,7 @@ export default function Finder() {
   return (
     <Flex
       marginLeft={["2rem", "7rem"]}
-      marginTop={["5rem","10rem"]}
+      marginTop={["5rem", "10rem"]}
       direction={"column"}
     >
       <Stack direction="row">
@@ -32,7 +32,7 @@ export default function Finder() {
           </Head>
           <Heading
             color="primary"
-            fontSize={["4xl","5xl"]}
+            fontSize={["4xl", "5xl"]}
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -40,8 +40,8 @@ export default function Finder() {
           </Heading>
           <Text
             color="primary"
-            fontSize={["md","lg"]}
-            marginTop={["1.3rem","2.2rem"]}
+            fontSize={["md", "lg"]}
+            marginTop={["1.3rem", "2.2rem"]}
             data-aos="fade-right"
             data-aos-duration="1000"
             width={["250px", "600px"]}
@@ -51,32 +51,41 @@ export default function Finder() {
             Computer Science internships at a number of businesses!
           </Text>
           <Link
-                href="https://internships.techoptimum.org"
-                _hover={{
-                  textDecoration: "none",
-                }}
-              >
-          <Button
-          data-aos-delay="150"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-            w={["250px","280px"]}
-            bgColor={"#4559E9"}
-            borderRadius={"18px"}
-            color={"#FFFFFF"}
-            fontWeight={"400"}
-            fontSize={["lg","xl"]}
-            _hover={{ bgColor: "#3244ca" }}
-            _active={{ bgColor: "#3244ca" }}
-            mt={["1.5rem","2.5rem"]}
+            href="https://internships.techoptimum.org"
+            _hover={{
+              textDecoration: "none",
+            }}
           >
-            Find internships now
-          </Button>
+            <Button
+              transition={"200ms !important"}
+              data-aos-delay="150"
+              data-aos="fade-right"
+              data-aos-duration="1000 !important"
+              w={["250px", "280px"]}
+              bgColor={"#4559E9"}
+              borderRadius={"18px"}
+              color={"#FFFFFF"}
+              fontWeight={"400"}
+              fontSize={["lg", "xl"]}
+              _hover={{ bgColor: "#3244ca" }}
+              _active={{ bgColor: "#3244ca" }}
+              mt={["1.5rem", "2.5rem"]}
+            >
+              Find internships now
+            </Button>
           </Link>
         </Box>
-        <Box  data-aos="zoom-in"
-          data-aos-delay="450" width={"350px"} paddingLeft="80px">
-          <Image  mt="-1.5rem" src="/internship-finder-image.png" alt="internship finder" />
+        <Box
+          data-aos="zoom-in"
+          data-aos-delay="450"
+          width={"350px"}
+          paddingLeft="80px"
+        >
+          <Image
+            mt="-1.5rem"
+            src="/internship-finder-image.png"
+            alt="internship finder"
+          />
         </Box>
       </Stack>
     </Flex>
