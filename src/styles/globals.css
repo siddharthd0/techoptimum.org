@@ -421,3 +421,8 @@ html {
   stroke-width: 4;
   transition: stroke-dashoffset 800ms ease-out;
 }
+
+.missionbg {
+  background: linear-gradient(156.16deg, #00A197 17.37%, #0068A2 86.15%);
+
+}

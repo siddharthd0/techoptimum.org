@@ -24,7 +24,7 @@ export default function HeroHeader() {
             marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
             width={"75%"}
           >
-            A student-led organization dedicated helping and inspiring the next
+            A student-led organization dedicated to helping and inspiring the next
             generation of tech leaders.
           </Text>
           <Link
