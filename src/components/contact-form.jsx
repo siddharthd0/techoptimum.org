@@ -8,11 +8,14 @@ import {
   Button,
   Box,
   Text,
+  useToast,
+
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
 
 export default function HeroHeader() {
+  const toast = useToast()
   return (
     <>
       <Flex
@@ -107,6 +110,15 @@ export default function HeroHeader() {
               />
 
               <Button
+               onClick={() =>
+                toast({
+                  title: 'Message Sent!',
+                  description: "We'll get back to you as soon as possible.",
+                  status: 'success',
+                  duration: 9000,
+                  isClosable: true,
+                })
+              }
                 backgroundColor="#2E3569"
                 borderRadius="full"
                 px="10"

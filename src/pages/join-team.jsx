@@ -15,13 +15,14 @@ export default function JoinTeam() {
         </Flex>
         <Text id="jobs"></Text>
         <Flex
-          height={["700px", "400px"]}
+          height={["500px", "400px"]}
           margin={"auto"}
           direction="column"
           justify="center"
           gap="25px"
           zIndex="100"
-          width="400px"
+          maxWidth="400px"
+          marginTop={["150px", "0px"]}
         >
           <JobPostingCard
             role="Web Developer"

@@ -21,9 +21,10 @@ export default function Footer() {
         bgColor="footerBg"
         direction={{ base: "column", md: "row" }}
         gap={{ base: "20px", md: "0px" }}
+        
       >
-        <Flex direction="column">
-          <Flex alignItems="end">
+        <Flex  alignItems={{ base: "center", md: "start" }} direction="column">
+          <Flex  alignItems={{ base: "center", md: "start" }}>
             <Image
               width="150px"
               marginBottom={"-1.1rem"}
@@ -55,10 +56,6 @@ export default function Footer() {
           </Flex>
         </Flex>
         <Divider width={{ base: 80, md: 0 }} />
-        {/* if screen size greater than medium remove the flex */}
-
-        {/* <Flex
-        justifyContent="space-around"> */}
         <Flex
           direction={"column"}
           h="130px"

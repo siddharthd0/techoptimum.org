@@ -21,9 +21,14 @@ import {
   MenuList,
   MenuItem,
   ModalHeader,
+  Collapse,
 } from "@chakra-ui/react";
+import React from "react";
 import { FaGraduationCap, FaPython } from "react-icons/fa";
 export default function Curriculm() {
+  const [show, setShow] = React.useState(false)
+
+  const handleToggle = () => setShow(!show)
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true });
   return (
     <>
@@ -46,6 +51,7 @@ export default function Curriculm() {
       <CurriculmLanding />
       <Text mb={["2rem", "4rem"]} id="web-dev"></Text>
       <Flex
+      alignItems={"center"}
         marginLeft={["2rem", "7rem"]}
         marginBottom={["4rem", "7rem"]}
         direction={["column", "row"]}
@@ -56,7 +62,7 @@ export default function Curriculm() {
             <Heading
               marginLeft="15px"
               color="#FE9292"
-              fontSize={["3xl", "6xl"]}
+              fontSize={["3xl", "5xl"]}
             >
               Intro to Web Dev.
             </Heading>
@@ -117,7 +123,7 @@ export default function Curriculm() {
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
           h={["230px", "265px"]}
-          marginTop={"2.5rem"}
+        
           marginRight={["2rem", "0rem"]}
         >
           <Heading
@@ -149,7 +155,7 @@ export default function Curriculm() {
             <Heading
               marginLeft={"15px"}
               color="#ffd343 "
-              fontSize={["3xl", "6xl"]}
+              fontSize={["3xl", "5xl"]}
             >
               Intro to Python
             </Heading>
