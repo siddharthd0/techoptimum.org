@@ -50,7 +50,7 @@ export default function HeroHeader() {
                 border="none"
                 borderRadius="0px"
                 borderBottom="1px"
-                borderBottomColor="#fff"
+                borderBottomColor="primary"
                 _focus={{
                   "box-shadow": "none",
                 }}
@@ -66,7 +66,7 @@ export default function HeroHeader() {
                     border="none"
                     borderRadius="0px"
                     borderBottom="1px"
-                    borderBottomColor="#fff"
+                    borderBottomColor="primary"
                     _focus={{
                       "box-shadow": "none",
                     }}
@@ -82,7 +82,7 @@ export default function HeroHeader() {
                     border="none"
                     borderRadius="0px"
                     borderBottom="1px"
-                    borderBottomColor="#fff"
+                    borderBottomColor="primary"
                     _focus={{
                       "box-shadow": "none",
                     }}
@@ -98,7 +98,7 @@ export default function HeroHeader() {
                 border="none"
                 borderRadius="0px"
                 borderBottom="1px"
-                borderBottomColor="#fff"
+                borderBottomColor="primary"
                 marginBottom="30px"
                 height="17vh"
                 _focus={{
@@ -134,9 +134,9 @@ export default function HeroHeader() {
             color="#A7B2FF"
           >
             <Box
-              paddingBottom="2rem"
-              borderBottom="1px"
-              borderBottomColor="#A7B2FF"
+              paddingLeft="2rem"
+              borderLeftColor="#A7B2FF"
+              borderLeftWidth={"3px"}
             >
               <Flex marginBottom="20px" alignItems="center">
                 <Image
@@ -146,37 +146,24 @@ export default function HeroHeader() {
                   height="60"
                 />
                 <Text fontSize="3xl" ml="10px" fontWeight="bold">
-                  Speak the truth
+                  Contact us
                 </Text>
               </Flex>
               <Text>
-                At Tech Optimum we thrive for your feedback! We always like
-                people who speak the truth, so share your honest feedback, ask
-                questions, and just speak the truth.
+              <Text mb="10px">Some alternative methods of contact:</Text>
+               
+      
+                <b>Discord</b> <a href="https://discord.gg/HpRfm7kp3U">discord.gg/HpRfm7kp3U</a>
+                <br />
+                <b>Email:</b>
+                <a href="mailto:contact.techoptimum@gmail.com"
+                > contact.techoptimum@gmail.com</a>
+                <br/>
+                <b>Instagram:</b> <a href="https://www.instagram.com/techoptimum_/">@techoptimum_</a>
               </Text>
             </Box>
-            <Box
-              paddingTop="2rem"
-              paddingBottom="2rem"
-              borderBottom="1px"
-              borderBottomColor="#A7B2FF"
-            >
-              <Flex marginBottom="20px" alignItems="center">
-                <Image
-                  src="/contact-icon-2.svg"
-                  alt="talking icon"
-                  width="60"
-                  height="60"
-                />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
-                  Don&apos;t wait long
-                </Text>
-              </Flex>
-              <Text>
-                We are always here to respond. You won&apos;t have to wait a
-                long time for a response from our team!
-              </Text>
-            </Box>
+           
+            
           </Flex>
         </Flex>
       </Flex>
