@@ -22,7 +22,7 @@ export default function Mission() {
         <Heading
           data-aos="fade-right"
           data-aos-duration="800"
-          fontSize={"5xl"}
+          fontSize={["4xl", "5xl"]}
           color="primary"
         >
           Our Mission
@@ -31,7 +31,8 @@ export default function Mission() {
           data-aos="fade-right"
           data-aos-duration="1200"
           color="primary"
-          fontSize={"lg"}
+          mr="5rem"
+          fontSize={["md", "lg"]}
           mt="1.5rem"
           maxW={"760px"}
         >
