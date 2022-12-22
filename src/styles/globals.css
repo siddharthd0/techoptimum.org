@@ -426,3 +426,7 @@ html {
   background: linear-gradient(156.16deg, #00A197 17.37%, #0068A2 86.15%);
 
 }
+.missionValueBg {
+  background: linear-gradient(156.16deg, #a5b006 17.37%, #c47f11 86.15%);
+  border-radius: 20px;
+}

@@ -1,7 +1,14 @@
 import { Link } from "@chakra-ui/react";
-import { Box, Flex, Heading, Text, Button, Highlight } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Highlight,
+} from "@chakra-ui/react";
 
-export default function CurriculmLanding() {
+export default function MissionLanding() {
   return (
     <>
       <Box
@@ -20,30 +27,54 @@ export default function CurriculmLanding() {
               color="
               #5EE0F9"
               textAlign={"center"}
-              marginBottom={".75rem"}
+              marginBottom={"1.2rem"}
             >
               {" "}
               <Highlight
-                query={["Mission"]}
+                query={["Our Mission"]}
                 styles={{
                   px: "3",
                   pt: "1.5",
                   rounded: "full",
-                  bg: "teal.200",
-                  color: "teal.800",
+                  bg: "blue.200",
+                  color: "blue.800",
                 }}
               >
                 Our Mission
               </Highlight>
             </Heading>
-            <Text textAlign={"center"} fontSize={["sm", "md"]}  marginBottom="1.25rem">
-              More than one-third of the world's population especially students
+            <Text
+              textAlign={"center"}
+              fontSize={["md", "18px"]}
+              marginBottom="1.25rem"
+            >
+              More than one-third of the world&apos;s population especially students
               continues to be excluded from technology because of the digital
               divide. We offer students in need accessible resources, tools, and
               a learning platform along with an inclusive community to learn
               more about their passion. We envision a diverse community that
               strives for inclusion in the technology industry.
             </Text>
+            <Link
+              _hover={{
+                textDecoration: "none",
+              }}
+              margin={"auto"}
+              href="#accomplish"
+            >
+              <Button
+                borderRadius={"full"}
+                margin={"auto"}
+                fontWeight={"100"}
+                bgColor={"blue.500"}
+                width={"350px"}
+                _hover={{
+                  bgColor: "blue.400",
+                }}
+              >
+                Learn how we accomplish this
+              </Button>
+            </Link>
           </Flex>
         </Flex>
       </Box>
