@@ -1,10 +1,10 @@
-import { Link, Heading, Flex, Text, Button } from "@chakra-ui/react";
+import { Box,Link, Heading, Flex, Text, Button } from "@chakra-ui/react";
 // import JoinText from "../assets/Join-text-underline.svg";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function JoinHero() {
   return (
     <>
-      <Flex
+      <Box
         bg="#29368C"
         textAlign="center"
         flexDir="column"
@@ -35,17 +35,17 @@ export default function JoinHero() {
         </svg>
 
         <Heading
-          marginBottom={["-50px", "-40px"]}
-          marginTop={"30px "}
+       
+          marginTop={["80px", "80px "]}
           fontWeight={1000}
-          fontSize={["4xl", "6xl"]}
+          fontSize={["3xl", "6xl"]}
         >
           Tech Optimum
         </Heading>
 
         <Text
           fontWeight="1000"
-          fontSize={["4xl", "6xl"]}
+          fontSize={["3xl", "5xl"]}
           className="wavy"
           href="/"
         >
@@ -58,7 +58,7 @@ export default function JoinHero() {
           </svg>
         </Text>
 
-        <Text px="20px" fontSize={["lg", "xl"]}>
+        <Text mt="2rem" px={["30px","20px"]} fontSize={["sm", "xl"]}>
           Join our Discord community of like-minded <br />
           people who enjoy coding and building new projects!
         </Text>
@@ -70,19 +70,20 @@ export default function JoinHero() {
           isExternal
         >
           <Button
-              colorScheme="buttonBg"
-              padding={["20px 25px 20px 25px", "20px 30px 20px 30px"]}
-              fontSize={["lg", "xl"]}
-              fontWeight="normal"
-              rounded="full"
-              rightIcon={
-                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-              }
+          mt="25px"
+            colorScheme="buttonBg"
+            padding={["20px 25px 20px 25px", "20px 30px 20px 30px"]}
+            fontSize={["md", "xl"]}
+            fontWeight="normal"
+            rounded="full"
+            rightIcon={
+              <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+            }
           >
             Take me there
           </Button>
         </Link>
-      </Flex>
+      </Box>
     </>
   );
 }

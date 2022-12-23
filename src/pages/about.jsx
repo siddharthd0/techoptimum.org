@@ -10,7 +10,6 @@ import {
   Text,
   Flex,
   Stack,
-  Center,
 } from "@chakra-ui/react";
 import AOS from "aos";
 import Head from "next/head";
@@ -39,7 +38,7 @@ export default function About() {
         <Heading
           data-aos-delay="400"
           data-aos="fade-up-right"
-          marginBottom={"2%"}
+          marginBottom={"20px"}
           color="primary"
           fontSize={["4xl", "5xl"]}
         >
@@ -49,7 +48,7 @@ export default function About() {
         <Text
           data-aos="fade-up-right"
           width={["80%", "70%"]}
-          fontSize={["lg", "xl"]}
+          fontSize={["md", "xl"]}
         >
           Tech Optimum is an organization that is entirely managed by students
           and is commited to influence the next wave of technological leaders.{" "}
@@ -85,7 +84,7 @@ export default function About() {
                 pt={".2rem"}
                 pb={".5rem"}
                 fontWeight={"300"}
-                fontSize={"3xl"}
+                fontSize={["2xl","3xl"]}
                 textAlign={"center"}
               >
                 Passion
@@ -111,7 +110,7 @@ export default function About() {
                 pt={".2rem"}
                 pb={".5rem"}
                 fontWeight={"300"}
-                fontSize={"3xl"}
+                fontSize={["2xl","3xl"]}
                 textAlign={"center"}
               >
                 Support
@@ -137,7 +136,7 @@ export default function About() {
                 pt={".4rem"}
                 pb={".5rem"}
                 fontWeight={"300"}
-                fontSize={"3xl"}
+                fontSize={["2xl","3xl"]}
                 textAlign={"center"}
               >
                 Excellence
@@ -180,6 +179,7 @@ export default function About() {
           color="primary"
           fontSize={["4xl", "5xl"]}
           textAlign={"center"}
+          mt={["60px", "0px"]}
         >
           Volunteers
         </Heading>

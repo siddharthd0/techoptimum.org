@@ -146,9 +146,9 @@ export default function HeroHeader() {
             color="#A7B2FF"
           >
             <Box
-              paddingLeft="2rem"
-              borderLeftColor="#A7B2FF"
-              borderLeftWidth={"3px"}
+           
+              paddingLeft="1.5rem"
+
             >
               <Flex marginBottom="20px" alignItems="center">
                 <Image

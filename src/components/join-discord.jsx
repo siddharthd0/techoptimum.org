@@ -6,7 +6,7 @@ export default function JoinDiscord() {
     <>
       <Flex marginLeft={["2rem", "10rem"]} flexDir="column" padding="1rem">
         <Flex marginTop="1.75rem" alignItems="center">
-          <Heading color="primary" display="flex">
+          <Heading fontSize={["2xl","4xl"]} color="primary" display="flex">
             Chatting Community for you
           </Heading>
           <Link href="./discord">
@@ -25,15 +25,15 @@ export default function JoinDiscord() {
           </Link>
         </Flex>
 
-        <Text maxWidth={"700px"} marginY="15px" fontSize="xl">
+        <Text maxWidth={"700px"} marginY="15px" fontSize={["sm","xl"]}>
           A public community full of programmers of all skill-levels. Whether
           you need computer science help, want to network, or just want to be
           entertained from our daily memes, we have it all.
         </Text>
         <Flex marginTop={"3.5rem"}>
-          <Heading color="primary">Channels for your Needs </Heading>
+          <Heading fontSize={["2xl","4xl"]}color="primary">Channels for your Needs </Heading>
         </Flex>
-        <Text maxWidth={"700px"} marginY="10px" fontSize="xl">
+        <Text maxWidth={"700px"} marginY="10px" fontSize={["sm","xl"]}>
           We have many channels where you can chat with other community members
           about various things! From memes, to coding help, we are here for you!
         </Text>
