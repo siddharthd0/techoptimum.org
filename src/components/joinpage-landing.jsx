@@ -70,14 +70,14 @@ export default function JoinHero() {
           isExternal
         >
           <Button
-            colorScheme="buttonBg"
-            padding={["20px 25px 20px 25px", "20px 30px 20px 30px"]}
-            fontSize={["lg", "xl"]}
-            fontWeight="normal"
-            rounded="full"
-            rightIcon={
-              <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-            }
+              colorScheme="buttonBg"
+              padding={["20px 25px 20px 25px", "20px 30px 20px 30px"]}
+              fontSize={["lg", "xl"]}
+              fontWeight="normal"
+              rounded="full"
+              rightIcon={
+                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+              }
           >
             Take me there
           </Button>

@@ -37,29 +37,31 @@ export default function Mission() {
           maxW={"760px"}
         >
           More than one-third of the world&apos;s population especially students
-          continues to be excluded from technology because of the digital
-          divide. We offer students in need accessible resources, tools, and a
+          continues to be excluded from technology because of the{" "}
+          <Link href="https://en.wikipedia.org/wiki/Digital_divide">
+            digital divide
+          </Link>
+          . We offer students in need accessible resources, tools, and a
           learning platform along with an inclusive community to learn more
           about their passion. We envision a diverse community that strives for
           inclusion in the technology industry.
         </Text>
-      
-          <Button
-            transition={"200ms !important"}
-            w={["340px", "450px"]}
-            bgColor={"#4559E9"}
-            borderRadius={"18px"}
-            color={"#FFFFFF"}
-            fontWeight={"400"}
-            fontSize={["md", "xl"]}
-            _hover={{ bgColor: "#3244ca" }}
-            _active={{ bgColor: "#3244ca" }}
-            mt={["1.5rem", "1.75rem"]}
-            isDisabled="true"
-          >
-            Learn how we accomplish our mission
-          </Button>
-    
+
+        <Button
+          transition={"200ms !important"}
+          w={["305px", "415px"]}
+          bgColor={"#4559E9"}
+          borderRadius={"18px"}
+          color={"#FFFFFF"}
+          fontWeight={"400"}
+          fontSize={["sm", "lg"]}
+          _hover={{ bgColor: "#3244ca" }}
+          _active={{ bgColor: "#3244ca" }}
+          mt={["1.5rem", "1.75rem"]}
+          isDisabled="true"
+        >
+          Learn how we accomplish our mission
+        </Button>
       </Flex>
     </>
   );

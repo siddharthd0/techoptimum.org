@@ -85,7 +85,7 @@ export default function Header() {
             <ul className="nav-links">
               <li>
                 <Text className="link-navs" color="primary">
-                  <Link href="/">HOME</Link>
+                  <Link className="link-navs"href="/">HOME</Link>
                 </Text>
               </li>
               <li>
