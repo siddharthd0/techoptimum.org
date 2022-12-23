@@ -40,7 +40,7 @@ export default function JoinDiscord() {
         <Flex
           marginTop="20px"
           w={{ base: "300px", md: "400px", lg: "750px" }}
-          height="167px"
+          h={{ base: "100px", md: "150px", lg: "200px"}}
           display="grid"
           gridTemplateColumns="repeat(2, minmax(0, 1fr))"
         >
@@ -60,7 +60,7 @@ export default function JoinDiscord() {
             }}
           >
             <Heading
-              fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+              fontSize={{ base: "md", md: "2xl", lg: "3xl" }}
               transition="500ms"
               _hover={{
                 cursor: "pointer",
@@ -69,7 +69,7 @@ export default function JoinDiscord() {
             >
               #General
             </Heading>
-            <Text>Discuss with other enthusiasts</Text>
+            <Text fontSize={{ base: "11px", md: "lg", lg: "xl" }}>Discuss with other enthusiasts</Text>
           </Flex>
           <Flex
             padding={{ base: "10px", md: "20px", lg: "40px" }}
@@ -87,7 +87,7 @@ export default function JoinDiscord() {
             }}
           >
             <Heading
-              fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+              fontSize={{ base: "md", md: "2xl", lg: "3xl" }}
               _hover={{
                 cursor: "pointer",
                 textDecoration: "underline",
@@ -95,12 +95,12 @@ export default function JoinDiscord() {
             >
               #Coding-memes
             </Heading>
-            <Text>Get your daily dose of laughter</Text>
+            <Text fontSize={{ base: "11px", md: "lg", lg: "xl" }}>Get your daily dose of laughter</Text>
           </Flex>
         </Flex>
         <Flex
           width={{ base: "300px", md: "400px", lg: "750px" }}
-          height={{ base: "200px", md: "230px", lg: "350px" }}
+          height={{ base: "130px", md: "230px", lg: "350px" }}
           marginTop={{ base: "15px", md: "30px", lg: "40px" }}
         >
           <Flex
@@ -119,7 +119,7 @@ export default function JoinDiscord() {
             }}
           >
             <Heading
-              fontSize={{ base: "2xl", md: "4xl", lg: "6xl" }}
+              fontSize={{ base: "md", md: "2xl", lg: "3xl" }}
               _hover={{
                 cursor: "pointer",
                 textDecoration: "underline",
@@ -127,7 +127,7 @@ export default function JoinDiscord() {
             >
               #CS-help
             </Heading>
-            <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>
+            <Text fontSize={{ base: "11px", md: "lg", lg: "xl" }}>
               Get help with your CS problems
             </Text>
           </Flex>
@@ -147,10 +147,10 @@ export default function JoinDiscord() {
               flexDir="column"
               transform="rotate(90deg)"
               margin={"auto"}
-              paddingTop={["80px", "50px"]}
+              paddingTop={["50px", "50px"]}
             >
               <Heading
-                fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
+                fontSize={{ base: "sm", md: "2xl", lg: "3xl" }}
                 _hover={{
                   cursor: "pointer",
                   textDecoration: "underline",
@@ -159,7 +159,7 @@ export default function JoinDiscord() {
                 #Networking
               </Heading>
 
-              <Text fontSize={{ base: "sm", md: "lg", lg: "xl" }}>
+              <Text fontSize={{ base: "10px", md: "lg", lg: "xl" }}>
                 Build your network
               </Text>
             </Flex>
