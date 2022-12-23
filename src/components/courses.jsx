@@ -12,15 +12,15 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
-import AOS from "aos";
+//import AOS from "aos";
 import Head from "next/head";
 export default function Courses() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  useEffect(() => {
+/*   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, []); */
   return (
     <Flex marginLeft={["2rem", "7rem"]} direction={"column"}>
       <Head>

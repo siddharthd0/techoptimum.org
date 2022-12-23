@@ -43,12 +43,7 @@ export default function Mission() {
           about their passion. We envision a diverse community that strives for
           inclusion in the technology industry.
         </Text>
-        <Link
-          href="/mission"
-          _hover={{
-            textDecoration: "none",
-          }}
-        >
+      
           <Button
             transition={"200ms !important"}
             w={["340px", "450px"]}
@@ -59,11 +54,12 @@ export default function Mission() {
             fontSize={["md", "xl"]}
             _hover={{ bgColor: "#3244ca" }}
             _active={{ bgColor: "#3244ca" }}
-            mt={["1.5rem", "2rem"]}
+            mt={["1.5rem", "1.75rem"]}
+            isDisabled="true"
           >
             Learn how we accomplish our mission
           </Button>
-        </Link>
+    
       </Flex>
     </>
   );
