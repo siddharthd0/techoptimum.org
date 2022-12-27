@@ -191,7 +191,7 @@ export default function About() {
               role="Director of Design"
             />
             <Volunteer
-              src="https://cdn.discordapp.com/attachments/997763434038956112/1051662114223296542/me.jpg"
+              src="https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png"
               name="Aditya Sahasranam"
               role="Community Manager"
             />
