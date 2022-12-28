@@ -59,7 +59,7 @@ export default function FaqComp() {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Click <Link>here</Link> to apply to volunteer at Tech Optimum.
+              Click <Link href="join-team">here</Link> to apply to volunteer at Tech Optimum.
             </AccordionPanel>
           </AccordionItem>
 
@@ -73,7 +73,7 @@ export default function FaqComp() {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Click <Link>here</Link> to signup for our free programming
+              Click <Link href="https://courses.techoptimum.org">here</Link> to signup for our free programming
               courses.
             </AccordionPanel>
           </AccordionItem>
@@ -110,15 +110,39 @@ export default function FaqComp() {
             <h2>
               <AccordionButton className="faq-button">
                 <Box flex="1" textAlign="left">
-                  How can I volunteer for Tech Optimum?
+                  How can I donate to Tech Optimum
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              If you would like to support our student led organization, you can
-              volunteer. We have many positions that you can choose from, check
-              them out <Link>here</Link>!
+              We appreciate all donations. Please click <Link href="/donate">here</Link> to donate.
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem mt=".75rem" className="faq-button">
+            <h2>
+              <AccordionButton className="faq-button">
+                <Box flex="1" textAlign="left">
+                  Do we have a Discord server?
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+             Yes, we do! Please click <Link href="/discord">here</Link> to join our Discord server.
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem mt=".75rem" className="faq-button">
+            <h2>
+              <AccordionButton className="faq-button">
+                <Box flex="1" textAlign="left">
+                  How can I donate to Tech Optimum
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              We appreciate all donations. Please click <Link href="/donate">here</Link> to donate.
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

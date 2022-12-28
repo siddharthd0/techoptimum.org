@@ -40,13 +40,13 @@ export default function Courses() {
         Courses
       </Heading>
 
-      <Stack direction={["column", "row"]} spacing="60px">
+      <Stack direction={["column", "row"]} spacing="50px">
         <Box
           data-aos-delay="100"
           data-aos="zoom-in-up"
           backgroundColor="#003B73"
           borderRadius={"20px"}
-         
+        
           w="280px"
         >
           <div text-align="center">
@@ -169,7 +169,7 @@ export default function Courses() {
             <Text
               color="#FFF6AA"
               fontSize="sm"
-              pb="4rem"
+              pb="1.5rem"
               pl={"2rem"}
               pr="2rem"
               marginTop="2rem"

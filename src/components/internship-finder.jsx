@@ -58,10 +58,10 @@ export default function Finder() {
             }}
           >
             <Button
-              transition={"200ms !important"}
               data-aos-delay="150"
               data-aos="fade-right"
-              data-aos-duration="1000 !important"
+              data-aos-duration="3000"
+              transition={"700ms !important"}
               w={["250px", "280px"]}
               bgColor={"#4559E9"}
               borderRadius={"18px"}
