@@ -49,7 +49,7 @@ export default function About() {
             linkedin="https://www.linkedin.com/in/siddharth-duggal"
           />
           <ExecutiveCard
-            src="https://cdn.discordapp.com/attachments/934996871976480828/1047751981231521842/Screen_Shot_2022-11-30_at_10.52.03_PM.png"
+            src="/PranithPortraitv2.JPG"
             name="Pranith Molakalapalli"
             role="Chief Technology Officer"
             linkedin="https://www.linkedin.com/in/pranith-molakalapalli/"
@@ -124,7 +124,7 @@ export default function About() {
           mb="4rem"
           borderRadius={"14px"}
           width={"400px"}
-         className="missionbg"
+          className="missionbg"
           padding="24px"
           textAlign={"center"}
         >
@@ -141,20 +141,20 @@ export default function About() {
             possible, learn more about them!
           </Text>
           <Link href="/mission">
-          <Button
-          mt="1rem"
-                fontSize={["sm","md"]}
-                rounded="full"
-                px="2rem"
-                colorScheme="joinTeamBtn"
-                fontWeight={"100"}
-                transition="300ms"
-                _hover={{
-                  bgColor: "#6C7BE6",
-                }}
-              >
-                Learn more
-              </Button>
+            <Button
+              mt="1rem"
+              fontSize={["sm", "md"]}
+              rounded="full"
+              px="2rem"
+              colorScheme="joinTeamBtn"
+              fontWeight={"100"}
+              transition="300ms"
+              _hover={{
+                bgColor: "#6C7BE6",
+              }}
+            >
+              Learn more
+            </Button>
           </Link>
         </Box>
       </Flex>

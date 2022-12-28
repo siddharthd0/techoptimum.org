@@ -71,6 +71,7 @@ export default function Donate() {
             }}
           >
             Contribute
+            {/* Change this to donate maybe?  */}
           </Button>
         </Center>
       </Box>
