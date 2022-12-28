@@ -9,22 +9,18 @@ export default function TestimonialCard() {
   }, []);
   const testimonials = [
     {
-      name: "John Doe",
-      title: "CEO of ABC Company",
+      name: "Kaushal Kurpad",
+      title: "Community Member",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Tech Optimum has the best community for coding. The staff are wonderful and experienced! They will help you with any problem you have. I would recommend Tech Optimum to anyone who wants to learn coding.",
+      src: "https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Kaushal+Kurpad&size=100",
     },
     {
-      name: "Jane Doe",
-      title: "CEO of ABC Company",
+      name: "Aditya Sahasranam",
+      title: "Community Manager",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      name: "Jane Doe",
-      title: "CEO of ABC Company",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Tech Optimum is an incredible organization that is making a real difference in the world. Its commitment to its community, its dedication to providing access to technology and education, and its exceptional team make it a truly special and worthy cause.",
+      src: "https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png",
     },
   ];
   return (
@@ -34,6 +30,7 @@ export default function TestimonialCard() {
         justifyContent={"center"}
         flexWrap={"wrap"}
         gap={5}
+        mb={"120px"}
       >
         {testimonials.map((testimonial, i) => (
           <Box
@@ -61,10 +58,10 @@ export default function TestimonialCard() {
                 fit="cover"
                 rounded="full"
                 borderStyle="solid"
-                borderWidth={2}
+                borderWidth={3}
                 color="brand.500"
                 alt="Testimonial avatar"
-                src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80"
+                src={testimonial.src}
               />
             </Flex>
 
