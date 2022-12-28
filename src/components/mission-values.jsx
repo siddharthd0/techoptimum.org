@@ -5,15 +5,7 @@ import MissionValue from "../components/mission-value-card";
 export default function MissionValues() {
   return (
     <>
-      <Heading
-       id="accomplish"
-        pt="4rem"
-        fontSize={["2xl", "5xl"]}
-        color="primary"
-        textAlign={"center"}
-      >
-        Our Values:
-      </Heading>
+     
       <Wrap
        
         pt="2rem !important"
@@ -61,9 +53,7 @@ export default function MissionValues() {
           />
         </WrapItem>
       </Wrap>
-      <br />
-      <br />
-      <br />
+      
     </>
   );
 }
