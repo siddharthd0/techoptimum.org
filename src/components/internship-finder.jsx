@@ -20,6 +20,7 @@ export default function Finder() {
       marginLeft={["2rem", "7rem"]}
       marginTop={["5rem", "10rem"]}
       direction={"column"}
+      mb={["5rem", "10rem"]}
     >
       <Stack direction="row">
         <Box mr="13rem">
