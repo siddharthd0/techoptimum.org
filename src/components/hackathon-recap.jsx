@@ -44,15 +44,15 @@ export default function HackathonRecap() {
           </Highlight>
         </Heading>
 
-        <Text mt="10px" color="grey" fontSize={"lg"}>
+        <Text mt="8px" color="grey" fontSize={"lg"}>
           (We did more than just coding!)
         </Text>
         <Container
-          marginTop={"1rem !important"}
+          marginTop={"50px! important"}
           maxWidth={"570px"}
           className="missionbg"
           height={["120px", "150px"]}
-          margin={"1rem auto"}
+          margin={"1rem auto"}  
           borderRadius={"36px"}
           paddingTop={"1rem"}
           as={motion.div}
@@ -116,7 +116,7 @@ export default function HackathonRecap() {
 
         <Flex
           borderRadius={"20px"}
-          mt="1rem"
+          mt="2rem"
           py="2rem"
           px="5rem"
           className="missionbg"

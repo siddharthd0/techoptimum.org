@@ -13,7 +13,11 @@ export default function Hackathons() {
       <Header />
       <Box
         height={"80vh"}
-        backgroundImage={"/hackathon-projects-background.png"}
+        backgroundImage={"/hackathon-projects-background-modified.png"}
+        backgroundSize={"cover"}
+        backgroundPosition={"center"}
+        backdropFilter={"blur(10px)"}
+        
       >
         <br />
         <br />

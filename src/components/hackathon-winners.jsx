@@ -7,6 +7,7 @@ import { Link } from "@chakra-ui/react";
 export default function HackathonWinners() {
   return (
     <>
+    <br/>
       <Heading fontSize="5xl" color="primary" align="center">
         Winners
       </Heading>
