@@ -41,8 +41,9 @@ export default function PodcastHero() {
           color="black"
           background={"primary"}
           transition="0.3s"
-          _hover={{ background: "purple.400" }}
+          _hover={{ background: "purple.300" }}
           mb="5rem"
+          isDisabled="true"
         >
           Listen Now
         </Button>

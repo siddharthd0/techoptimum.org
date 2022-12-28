@@ -19,7 +19,7 @@ export default function FaqComp() {
         alignContent={"center"}
         margin={"auto"}
         flexDir="column"
-        maxWidth="1200px"
+        maxWidth="700px"
         padding="3rem"
       >
         <Heading color="primary" mt={"1rem"} fontSize={["4xl", "5xl"]}>

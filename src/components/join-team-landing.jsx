@@ -22,7 +22,7 @@ export default function JoinTeamLanding() {
         <Heading color="#6AA0D3" fontSize="6xl">
           Join our Team
         </Heading>
-        <Text maxW={"590px"}  marginTop="20px" textAlign="center" fontSize="xl">
+        <Text maxW={"590px"}  marginTop="10px" textAlign="center" fontSize="lg">
           We are a student-run nonprofit organization dedicated to improving the future of the Computer Science industry
         </Text>
 
