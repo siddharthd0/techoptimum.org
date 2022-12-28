@@ -6,7 +6,8 @@ export default function MissionValues() {
   return (
     <>
       <Heading
-        mt="2rem"
+       id="accomplish"
+        pt="4rem"
         fontSize={["2xl", "5xl"]}
         color="primary"
         textAlign={"center"}
@@ -14,7 +15,7 @@ export default function MissionValues() {
         Our Values:
       </Heading>
       <Wrap
-        id="accomplish"
+       
         pt="2rem !important"
         spacing={"25px"}
         justify="center"

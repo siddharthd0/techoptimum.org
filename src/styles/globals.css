@@ -23,8 +23,8 @@ html {
 
 .nav-links {
   list-style: none;
-}
 
+}
 .nav-links li {
   display: inline-block;
   padding: 0 5px;
@@ -426,9 +426,15 @@ html {
   background: linear-gradient(156.16deg, #0b2b5f 17.37%, #334c81 86.15%);
 
 }
-.missionValueBg {
-  background: linear-gradient(156.16deg, #190a5d 12.37%, #211f87 86.15%);
 
-  border-radius: 16px;
-  transition: 600ms;
+.missionValueBg:hover {
+  border: 1.5px solid rgb(138, 138, 242);
+}
+
+.missionValueBg {
+  border: 1.5px solid transparent;
+  background: linear-gradient(156.16deg, #473595 12.37%, #413ece 86.15%);
+
+  border-radius: 13px;
+  transition: 400ms;
 }

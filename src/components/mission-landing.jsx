@@ -19,14 +19,14 @@ export default function MissionLanding() {
               fontSize={["4xl", "5xl"]}
               color="primary"
               textAlign={"center"}
-              marginBottom={"12px"}
+              marginBottom={"18px"}
             >
-              Our Mission
+              Our Mission:
             </Heading>
             <Text
               textAlign={"center"}
               fontSize={["md", "18px"]}
-              marginBottom="20px"
+              marginBottom="26px"
             >
               More than one-third of the world&apos;s population especially
               students continues to be excluded from technology because of the{" "}
@@ -51,8 +51,8 @@ export default function MissionLanding() {
               <Button
                 fontSize={["sm","lg"]}
                 rounded="full"
-                pl="1rem"
-                pr="1rem"
+                pl="2rem"
+                pr="2rem"
                 colorScheme="joinTeamBtn"
                 fontWeight={"100"}
                 transition="300ms"
