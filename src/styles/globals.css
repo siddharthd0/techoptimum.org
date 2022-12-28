@@ -449,7 +449,9 @@ html {
   border-radius: 13px;
   transition: 400ms;
 }
-.tintBg {
-  background-color:#83b8de;
-  opacity: .97;
+.donate {
+  color: #54afe7 !important;
+}
+.donate:hover {
+  color:white !important;
 }

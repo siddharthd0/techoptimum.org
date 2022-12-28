@@ -169,7 +169,7 @@ export default function Header() {
                 </Text>
               </li>
               <li>
-                <Text className="link-navs" color="primary">
+                <Text className="link-navs donate" color="primary">
                   <Link href="/donate">DONATE</Link>
                 </Text>
               </li>

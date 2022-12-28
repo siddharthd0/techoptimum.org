@@ -29,7 +29,7 @@ export default function TestimonialCard() {
         overflow={"none"}
         justifyContent={"center"}
         flexWrap={"wrap"}
-        gap={5}
+        gap={10}
         mb={"120px"}
       >
         {testimonials.map((testimonial, i) => (

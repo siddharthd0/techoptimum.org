@@ -20,25 +20,33 @@ export default function Donate() {
   return (
     <>
       <Header />
-      <Box minH={"75vh"} pt={"70px"}>
+      <Box minH={"75vh"} pt={"80px"}>
         <Center flexDirection={"column"}>
           <Heading
             data-aos-delay="400"
             data-aos="fade-up-right"
             mt={"40px"}
             color="primary"
-            fontSize={["4xl", "5xl"]}
+            fontSize={["4xl", "6xl"]}
           >
             Donations
           </Heading>
           <Box
-            w={"45px"}
+            px="10px"
+            w={"355px"}
             h={"1px"}
             bgColor={"white"}
             borderRadius={"15px"}
-            my={"20px"}
+            my={"10px"}
           ></Box>
-          <Text color={"primary"} w={"550px"} textAlign={"center"}>
+          <Text
+            fontSize={["sm", "md"]}
+            mt="10px"
+            px={"20px"}
+            color={"primary"}
+            maxW={"550px"}
+            textAlign={"center"}
+          >
             Remember, our mission isn&apos;t small. We need your help to achieve
             our goals and create a larger and broader societal impact. More
             information about our mission statement is
@@ -57,6 +65,7 @@ export default function Donate() {
           </Text>
           {/* Description for why person X should donate */}
           <Button
+            fontSize={["md", "lg"]}
             mt={"25px"}
             width={"190px"}
             height={"60px"}
@@ -70,7 +79,7 @@ export default function Donate() {
               );
             }}
           >
-            Contribute
+            Donate
             {/* Change this to donate maybe?  */}
           </Button>
         </Center>
