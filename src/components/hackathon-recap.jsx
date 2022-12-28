@@ -21,14 +21,13 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function HackathonRecap() {
   return (
     <>
-      <Flex id="recap"direction="column" marginBottom={"3rem"} align="center">
+      <Flex id="recap" direction="column" marginBottom={"3rem"} align="center">
         <Heading
           fontWeight={"100"}
           fontSize={"5xl"}
           maxW={"1000px"}
           lineHeight="medium"
           textAlign={"center"}
-          
         >
           <Highlight
             query={["2022", "Tech Optimum Hacks 2022:"]}
@@ -44,9 +43,9 @@ export default function HackathonRecap() {
             Quick Recap of Tech Optimum Hacks 2022:
           </Highlight>
         </Heading>
-        
+
         <Text mt="10px" color="grey" fontSize={"lg"}>
-         (We did more than just coding!)
+          (We did more than just coding!)
         </Text>
         <Container
           marginTop={"1rem !important"}
@@ -114,38 +113,39 @@ export default function HackathonRecap() {
             </Link>
           </Flex>
         </Container>
-         
-       
-       
-        <Flex borderRadius={"20px"} mt="1rem" py="2rem" px="5rem" className="missionbg"  direction={["column", "row"]}>
+
+        <Flex
+          borderRadius={"20px"}
+          mt="1rem"
+          py="2rem"
+          px="5rem"
+          className="missionbg"
+          direction={["column", "row"]}
+        >
           <Flex alignItems={"center"} height={"100%"}>
-            <Flex
-              align="center"
-              justify="center"
-              
-              
-            >
+            <Flex align="center" justify="center">
               <ChessIcon width="55px" height="auto" />
 
-              <Heading mx="20px" textAlign="center" color="primary" fontSize={["2xl","3xl"]}>
-                Chess <br/>Tournaments
+              <Heading
+                mx="20px"
+                textAlign="center"
+                color="primary"
+                fontSize={["2xl", "3xl"]}
+              >
+                Chess <br />
+                Tournaments
               </Heading>
             </Flex>
           </Flex>
           <Flex alignItems={"center"} height={"100%"}>
-            <Flex
-              align="center"
-              justify="center"
-              paddingLeft="10px"
-            
-            >
+            <Flex align="center" justify="center" paddingLeft="10px">
               <SkribblIoIcon width="70px" height="auto" />
 
               <Heading
                 mx={"30px"}
                 textAlign={"center"}
                 color="primary"
-                fontSize={["2xl","3xl"]}
+                fontSize={["2xl", "3xl"]}
               >
                 Skribble.io <br />
                 Tournaments
@@ -153,19 +153,14 @@ export default function HackathonRecap() {
             </Flex>
           </Flex>
           <Flex alignItems={"center"} height={"100%"}>
-            <Flex
-              align="center"
-              justify="center"
-              paddingLeft="5%"
-             
-            >
+            <Flex align="center" justify="center" paddingLeft="5%">
               <WorkshopsIcon width="60px" />
 
               <Heading
                 marginLeft={"20px"}
                 textAlign={"center"}
                 color="primary"
-                fontSize={["2xl","3xl"]}
+                fontSize={["2xl", "3xl"]}
               >
                 Programming
                 <br />
@@ -174,7 +169,6 @@ export default function HackathonRecap() {
             </Flex>
           </Flex>
         </Flex>
-       
       </Flex>
     </>
   );
