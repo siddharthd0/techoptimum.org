@@ -46,7 +46,7 @@ export default function Courses() {
           data-aos="zoom-in-up"
           backgroundColor="#003B73"
           borderRadius={"20px"}
-          h="250px"
+         
           w="280px"
         >
           <div text-align="center">
@@ -104,7 +104,7 @@ export default function Courses() {
           data-aos="zoom-in-up"
           backgroundColor="#05445E"
           borderRadius={"20px"}
-          h="250px"
+         
           w="280px"
         >
           <Center>
@@ -162,7 +162,7 @@ export default function Courses() {
           data-aos="zoom-in-up"
           backgroundColor="#145DA0"
           borderRadius={"20px"}
-          h="250px"
+         
           w="280px"
         >
           <Center>

@@ -109,7 +109,18 @@ html {
   padding: 1.2rem;
   transition: 400ms;
 }
-
+.diagonal-button-secondary {
+  font-size: 70px;
+  background-color: #598ae0;
+  color: white;
+  border-radius: 50%;
+  font-weight: lighter;
+  padding: 1.2rem;
+  transition: 400ms;
+}
+.diagonal-button-secondary:hover {
+  background-color: #6e7ce8;
+}
 .diagonal-button:hover {
   background-color: #6e7ce8;
 }
@@ -437,4 +448,8 @@ html {
 
   border-radius: 13px;
   transition: 400ms;
+}
+.tintBg {
+  background-color:#83b8de;
+  opacity: .97;
 }

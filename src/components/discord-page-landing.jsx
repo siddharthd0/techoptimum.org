@@ -36,7 +36,7 @@ export default function JoinHero() {
 
         <Heading
        
-          marginTop={["80px", "80px "]}
+          marginTop={["80px", "75px "]}
           fontWeight={1000}
           fontSize={["3xl", "6xl"]}
         >
@@ -58,7 +58,7 @@ export default function JoinHero() {
           </svg>
         </Text>
 
-        <Text mt="2rem" px={["30px","20px"]} fontSize={["sm", "xl"]}>
+        <Text mt="2rem" px={["30px","20px"]} fontSize={["sm", "lg"]}>
           Join our Discord community of like-minded <br />
           people who enjoy coding and building new projects!
         </Text>
