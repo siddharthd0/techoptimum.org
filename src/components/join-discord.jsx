@@ -9,20 +9,6 @@ export default function JoinDiscord() {
           <Heading fontSize={["2xl","4xl"]} color="primary" display="flex">
             Chatting Community for you
           </Heading>
-          <Link href="./discord">
-            <IconButton
-              _hover={{
-                backgroundColor: "transparent",
-                color: "#738BDA",
-              }}
-              icon={<BsArrowUpRight />}
-              background="transparant"
-              color="#1B76FF"
-              fontSize="3xl"
-              left="10px"
-              bottom="3px"
-            ></IconButton>
-          </Link>
         </Flex>
 
         <Text maxWidth={"700px"} marginY="15px" fontSize={["sm","xl"]}>

@@ -25,7 +25,19 @@ export default function ExecutiveCard({
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box maxWidth={"420px"} borderRadius="20px" padding="10px 10px 10px 20px">
+      <Box
+        onClick={onOpen}
+        transition={"250ms"}
+        _hover={{
+          borderColor: "blue.700 !important",
+          cursor: "pointer",
+        }}
+        borderColor={"transparent !important"}
+        border={"1px"}
+        maxWidth={"425px"}
+        borderRadius="20px"
+        padding="10px 10px 10px 20px"
+      >
         <Flex alignItems={"center"} direction={"row"}>
           <Image
             marginRight={"1rem"}
@@ -34,15 +46,6 @@ export default function ExecutiveCard({
             width={"105px"}
             height={"105px"}
             borderRadius="full"
-            transition={"300ms"}
-            border="2px solid transparent"
-            _hover={{
-              border: "3px solid orange",
-              brightness: ".2",
-              cursor: "pointer",
-              opacity: ".6",
-            }}
-            onClick={onOpen}
           />
           <Flex direction="column">
             <Text color={"primary"} fontSize={"2xl"}>
@@ -72,8 +75,12 @@ export default function ExecutiveCard({
                 {name}
               </Heading>
               <Text>{role}</Text>
-              <Link isExternal href={linkedin}>
-                <IoLogoLinkedin size={24} className="linkedin" />
+              <Link transition="300ms !important" isExternal href={linkedin}>
+                <IoLogoLinkedin
+                  transition="300ms !important"
+                  size={24}
+                  className="linkedin"
+                />
               </Link>
             </Flex>
           </Flex>

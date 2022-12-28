@@ -23,8 +23,8 @@ html {
 
 .nav-links {
   list-style: none;
-}
 
+}
 .nav-links li {
   display: inline-block;
   padding: 0 5px;
@@ -109,7 +109,18 @@ html {
   padding: 1.2rem;
   transition: 400ms;
 }
-
+.diagonal-button-secondary {
+  font-size: 70px;
+  background-color: #598ae0;
+  color: white;
+  border-radius: 50%;
+  font-weight: lighter;
+  padding: 1.2rem;
+  transition: 400ms;
+}
+.diagonal-button-secondary:hover {
+  background-color: #6e7ce8;
+}
 .diagonal-button:hover {
   background-color: #6e7ce8;
 }
@@ -426,9 +437,19 @@ html {
   background: linear-gradient(156.16deg, #0b2b5f 17.37%, #334c81 86.15%);
 
 }
-.missionValueBg {
-  background: linear-gradient(156.16deg, #190a5d 12.37%, #211f87 86.15%);
 
-  border-radius: 16px;
-  transition: 600ms;
+.missionValueBg:hover {
+  border: 1.5px solid rgb(138, 138, 242);
+}
+
+.missionValueBg {
+  border: 1.5px solid transparent;
+  background: linear-gradient(156.16deg, #473595 12.37%, #413ece 86.15%);
+
+  border-radius: 13px;
+  transition: 400ms;
+}
+.tintBg {
+  background-color:#83b8de;
+  opacity: .97;
 }

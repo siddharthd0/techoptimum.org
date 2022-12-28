@@ -4,6 +4,7 @@ import ExecutiveCard from "../components/executive-card";
 import Volunteer from "../components/volunteer-card";
 import React from "react";
 import {
+  Button,
   Wrap,
   Box,
   Heading,
@@ -14,9 +15,8 @@ import {
 import AOS from "aos";
 import Head from "next/head";
 import { useEffect } from "react";
-import ChatIcon from "../assets/chat-icon.svg";
-import HeartIcon from "../assets/heart-icon.svg";
-import SupportIcon from "../assets/lightning-icon.svg";
+import MissionValues from "../components/mission-values";
+import Link from "next/link";
 
 export default function About() {
   useEffect(() => {
@@ -34,121 +34,7 @@ export default function About() {
       </Head>
       <Header />
 
-      <Flex alignItems={"center"} marginTop={"3rem"} direction={"column"}>
-        <Heading
-          data-aos-delay="400"
-          data-aos="fade-up-right"
-          marginBottom={"20px"}
-          color="primary"
-          fontSize={["4xl", "5xl"]}
-        >
-          About Us
-        </Heading>
-
-        <Text
-          data-aos="fade-up-right"
-          width={["80%", "70%"]}
-          fontSize={["md", "xl"]}
-        >
-          Tech Optimum is an organization that is entirely managed by students
-          and is commited to influence the next wave of technological leaders.{" "}
-          <br />
-          <br /> As you deepen your understanding of computer science, we want
-          to support you in every way we can. To achieve this, we have a few
-          principles:
-        </Text>
-
-        <br />
-
-        <Stack direction={["column", "row"]} spacing="30px">
-          <Box
-            minH={"220px"}
-            data-aos="zoom-in"
-            borderRadius={"20px"}
-            w="300px"
-            bg="#29368C"
-          >
-            <Text
-              mb={"30px"}
-              textAlign={"center"}
-              pl={"2rem"}
-              pr="2rem"
-              marginTop="2rem"
-            >
-              <Flex textAlign={"center"} margin="auto">
-                <Text margin="auto">
-                  <HeartIcon />
-                </Text>
-              </Flex>
-              <Heading
-                pt={".2rem"}
-                pb={".5rem"}
-                fontWeight={"300"}
-                fontSize={["2xl","3xl"]}
-                textAlign={"center"}
-              >
-                Passion
-              </Heading>
-              Passion drives our creativity. All projects, teams, and
-              initiatives are led by passionate team members.
-            </Text>
-          </Box>
-          <Box
-            minH={"260px"}
-            data-aos="zoom-in"
-            borderRadius={"20px"}
-            w="300px"
-            bg="#29368C"
-          >
-            <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
-              <Flex textAlign={"center"} margin="auto">
-                <Text margin="auto">
-                  <ChatIcon />
-                </Text>
-              </Flex>
-              <Heading
-                pt={".2rem"}
-                pb={".5rem"}
-                fontWeight={"300"}
-                fontSize={["2xl","3xl"]}
-                textAlign={"center"}
-              >
-                Support
-              </Heading>
-              We are here to assist you. Finding internships, learning CS, or
-              having a community to talk to.
-            </Text>
-          </Box>
-          <Box
-            minH={"255px"}
-            data-aos="zoom-in"
-            borderRadius={"20px"}
-            w="300px"
-            bg="#29368C"
-          >
-            <Text textAlign={"center"} pl={"2rem"} pr="2rem" marginTop="2rem">
-              <Flex textAlign={"center"} margin="auto">
-                <Text margin="auto">
-                  <SupportIcon />
-                </Text>
-              </Flex>
-              <Heading
-                pt={".4rem"}
-                pb={".5rem"}
-                fontWeight={"300"}
-                fontSize={["2xl","3xl"]}
-                textAlign={"center"}
-              >
-                Excellence
-              </Heading>
-              We strive for excellence when it comes to computer science. We do
-              not stop when we reach average.
-            </Text>
-          </Box>
-        </Stack>
-      </Flex>
-
-      <Flex marginTop={"5rem"} direction={"column"} alignItems="center">
+      <Flex marginTop={"3rem"} direction={"column"} alignItems="center">
         <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Executives
         </Heading>
@@ -191,7 +77,7 @@ export default function About() {
               role="Director of Design"
             />
             <Volunteer
-              src="https://cdn.discordapp.com/attachments/997763434038956112/1051662114223296542/me.jpg"
+              src="https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png"
               name="Aditya Sahasranam"
               role="Community Manager"
             />
@@ -229,8 +115,48 @@ export default function About() {
           </Wrap>
         </Flex>
         <Text mt="2rem" marginBottom={"5rem"} color="primary">
-          and more...
+          and many more...
         </Text>
+
+        <Box
+          alignItems={"center"}
+          alignContent={"center"}
+          mb="4rem"
+          borderRadius={"14px"}
+          width={"400px"}
+         className="missionbg"
+          padding="24px"
+          textAlign={"center"}
+        >
+          <Heading
+            color="primary"
+            mb="5px"
+            fontSize={"5xl"}
+            alignContent={"center"}
+          >
+            Our Mission
+          </Heading>
+          <Text color={"primary"} fontSize={"md"}>
+            Tech Optimum was founded on certain beliefs that make our mission
+            possible, learn more about them!
+          </Text>
+          <Link href="/mission">
+          <Button
+          mt="1rem"
+                fontSize={["sm","md"]}
+                rounded="full"
+                px="2rem"
+                colorScheme="joinTeamBtn"
+                fontWeight={"100"}
+                transition="300ms"
+                _hover={{
+                  bgColor: "#6C7BE6",
+                }}
+              >
+                Learn more
+              </Button>
+          </Link>
+        </Box>
       </Flex>
 
       <Footer />

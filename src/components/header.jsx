@@ -118,7 +118,7 @@ export default function Header() {
                         </MenuItem>
                       </Link>
                       <Link href="/faq">
-                        <MenuItem className="link-navs-dd-text">Faq</MenuItem>
+                        <MenuItem className="link-navs-dd-text">FAQ</MenuItem>
                       </Link>
                     </MenuList>
                   </div>

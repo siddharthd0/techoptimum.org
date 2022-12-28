@@ -2,92 +2,57 @@ import ChessIcon from "../assets/chess.svg";
 import SkribblIoIcon from "../assets/skribblio.svg";
 import WorkshopsIcon from "../assets/workshops.svg";
 
-import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Icon,
+} from "@chakra-ui/react";
 // import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BsArrowUpRight } from "react-icons/bs";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import { Link } from "@chakra-ui/react";
+import { Highlight, Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function HackathonRecap() {
   return (
     <>
-      <Flex
-        marginBottom={"3rem"}
-        direction={"column"}
-        width={"100%"}
-        align="center"
-     
-      >
-        <Heading fontSize={["4xl","6xl"]} color={"primary"}>
-          Quick Recap
+      <Flex id="recap" direction="column" marginBottom={"3rem"} align="center">
+        <Heading
+          fontWeight={"100"}
+          fontSize={"5xl"}
+          maxW={"1000px"}
+          lineHeight="medium"
+          textAlign={"center"}
+        >
+          <Highlight
+            query={["2022", "Tech Optimum Hacks 2022:"]}
+            styles={{
+              px: "14px",
+              py: "10px",
+              rounded: "12px",
+              bg: "linear-gradient(156.16deg, #0b2b5f 17.37%, #334c81 86.15%)",
+              fontWeight: "100",
+              color: "blue.100",
+            }}
+          >
+            Quick Recap of Tech Optimum Hacks 2022:
+          </Highlight>
         </Heading>
-        <Heading color={"primary"} marginTop={"20px"}>Featuring...</Heading>
-        <Flex direction={["column", "row"]}>
-          <Flex alignItems={"center"} height={"100%"}>
-            <Flex
-              align="center"
-              justify="center"
-              paddingLeft="15%"
-              marginTop={"2.5rem"}
-            >
-              <ChessIcon width="55px" height="auto" />
 
-              <Heading textAlign="center" color="primary" fontSize={["2xl","3xl"]}>
-                Chess Tournament
-              </Heading>
-            </Flex>
-          </Flex>
-          <Flex alignItems={"center"} height={"100%"}>
-            <Flex
-              align="center"
-              justify="center"
-              paddingLeft="10px"
-              marginTop={"2.5rem"}
-            >
-              <SkribblIoIcon width="70px" height="auto" />
-
-              <Heading
-                mx={"30px"}
-                textAlign={"center"}
-                color="primary"
-                fontSize={["2xl","3xl"]}
-              >
-                Skribble.io <br />
-                Tournament
-              </Heading>
-            </Flex>
-          </Flex>
-          <Flex alignItems={"center"} height={"100%"} marginBottom={"7.5rem"}>
-            <Flex
-              align="center"
-              justify="center"
-              paddingLeft="5%"
-              marginTop={"2.5rem"}
-            >
-              <WorkshopsIcon width="60px" />
-
-              <Heading
-                marginLeft={"20px"}
-                textAlign={"center"}
-                color="primary"
-                fontSize={["2xl","3xl"]}
-              >
-                Programming
-                <br />
-                Workshops
-              </Heading>
-            </Flex>
-          </Flex>
-        </Flex>
+        <Text mt="10px" color="grey" fontSize={"lg"}>
+          (We did more than just coding!)
+        </Text>
         <Container
-      
-        marginTop={"-4rem !important"}
+          marginTop={"1rem !important"}
           maxWidth={"570px"}
-          backgroundColor="#29368C"
-          height={["120px","150px"]}
-          margin={"0 auto"}
+          className="missionbg"
+          height={["120px", "150px"]}
+          margin={"1rem auto"}
           borderRadius={"36px"}
           paddingTop={"1rem"}
           as={motion.div}
@@ -102,20 +67,20 @@ export default function HackathonRecap() {
           <Flex alignItems={"center"} height={"100%"}>
             <Heading
               color="white"
-              fontSize={["2xl","4xl"]}
+              fontSize={["2xl", "4xl"]}
               fontWeight={"400"}
               textAlign={"left"}
               ml={"6%"}
               mr={"6%"}
             >
               <CountUp end={313} duration={4} useEasing={true} delay={1.5} />+
-              <Text fontWeight={"400"}  fontSize={["xl","2xl"]}>
+              <Text fontWeight={"400"} fontSize={["xl", "2xl"]}>
                 Participants
               </Text>
             </Heading>
             <Heading
               color="white"
-              fontSize={["4xl","6xl"]}
+              fontSize={["4xl", "6xl"]}
               fontWeight={"300"}
               width={"5%"}
             >
@@ -123,7 +88,7 @@ export default function HackathonRecap() {
             </Heading>
             <Heading
               color="white"
-              fontSize={["2xl","4xl"]}
+              fontSize={["2xl", "4xl"]}
               fontWeight={"400"}
               width={"47.5%"}
               textAlign={"left"}
@@ -131,7 +96,7 @@ export default function HackathonRecap() {
             >
               $<CountUp end={41750} duration={4} useEasing={true} delay={1.5} />
               +<br></br>
-              <Text fontWeight={"400"}  fontSize={["xl","2xl"]}>
+              <Text fontWeight={"400"} fontSize={["xl", "2xl"]}>
                 Prizes
               </Text>
             </Heading>
@@ -140,10 +105,70 @@ export default function HackathonRecap() {
               isExternal
               transition="500ms"
             >
-              <Icon display={["none","block"]} className="diagonal-button" as={BsArrowUpRight} />
+              <Icon
+                display={["none", "block"]}
+                className="diagonal-button-secondary"
+                as={BsArrowUpRight}
+              />
             </Link>
           </Flex>
         </Container>
+
+        <Flex
+          borderRadius={"20px"}
+          mt="1rem"
+          py="2rem"
+          px="5rem"
+          className="missionbg"
+          direction={["column", "row"]}
+        >
+          <Flex alignItems={"center"} height={"100%"}>
+            <Flex align="center" justify="center">
+              <ChessIcon width="55px" height="auto" />
+
+              <Heading
+                mx="20px"
+                textAlign="center"
+                color="primary"
+                fontSize={["2xl", "3xl"]}
+              >
+                Chess <br />
+                Tournaments
+              </Heading>
+            </Flex>
+          </Flex>
+          <Flex alignItems={"center"} height={"100%"}>
+            <Flex align="center" justify="center" paddingLeft="10px">
+              <SkribblIoIcon width="70px" height="auto" />
+
+              <Heading
+                mx={"30px"}
+                textAlign={"center"}
+                color="primary"
+                fontSize={["2xl", "3xl"]}
+              >
+                Skribble.io <br />
+                Tournaments
+              </Heading>
+            </Flex>
+          </Flex>
+          <Flex alignItems={"center"} height={"100%"}>
+            <Flex align="center" justify="center" paddingLeft="5%">
+              <WorkshopsIcon width="60px" />
+
+              <Heading
+                marginLeft={"20px"}
+                textAlign={"center"}
+                color="primary"
+                fontSize={["2xl", "3xl"]}
+              >
+                Programming
+                <br />
+                Workshops
+              </Heading>
+            </Flex>
+          </Flex>
+        </Flex>
       </Flex>
     </>
   );

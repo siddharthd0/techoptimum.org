@@ -31,37 +31,36 @@ export default function JobPostingCard({
   return (
     <>
       <Box>
-        <Popover placement='top-start'>
+        <Popover placement="top-start">
           <PopoverTrigger>
             <Flex direction={"column"}>
               <Button
-              margin={"auto"} 
-                px="30px"
-                py="30px"
-                borderRadius={"18px"}
-                background="footerBg"
-                transition={"500ms"}
+                color={"white !important"}
+                margin={"auto"}
+                py="28px"
+                borderRadius={"10px"}
+                background="#124276"
+                transition={"350ms"}
                 _hover={{
                   transform: "scale(0.95)",
                 }}
                 _active={{
-                  transform: "scale(0.99)",
+                  transform: "scale(1)",
                 }}
                 pt="8"
                 pl="6"
-                width={["250px", "390px"]}
+                width={["250px", "380px"]}
               >
-                <Heading fontWeight={"300"} color="primary" fontSize={["18px","26px"]}>
+                <Heading fontWeight={"300"} fontSize={["18px", "26px"]}>
                   {role}
                 </Heading>
               </Button>
             </Flex>
           </PopoverTrigger>
-          <PopoverContent borderColor={"transparent"} background="footerBg">
+          <PopoverContent borderColor={"transparent"} background="#124276">
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverHeader
-              color={"primary"}
               borderColor={"primary"}
               fontSize={"xl"}
               fontWeight={1000}
@@ -69,13 +68,17 @@ export default function JobPostingCard({
             >
               {role}
               <Text>
-                <Badge margin={"0"} variant="outline" colorScheme={"blue"}>
+                <Badge
+                  margin={"0"}
+                  variant="outline"
+                  colorScheme={"whiteAlpha"}
+                >
                   Department of <span>{department}</span>
                 </Badge>
               </Text>
             </PopoverHeader>
 
-            <PopoverBody color={"primary"}>
+            <PopoverBody>
               <List spacing={2.5}>
                 <ListItem>
                   <Text fontWeight={800}>Responsibilites:</Text>
@@ -101,23 +104,20 @@ export default function JobPostingCard({
             >
               <PopoverBody>
                 <Button
-                  borderColor={"primary"}
+                fontSize={"sm"}
                   fontWeight={"normal"}
                   marginBottom={"10px"}
-                  border={"1px"}
-                  color={"primary"}
-                  backgroundColor="footerBg"
+                  backgroundColor="blue.600"
                   _hover={{
-                    backgroundColor:"primary",
-                    color: "black"
+                    backgroundColor: "blue.500",
+                   
                   }}
                   borderRadius="10px"
-                  px="6"
                   rightIcon={
                     <ExternalLinkIcon position={"relative"} bottom={"2px"} />
                   }
                 >
-                  Apply
+                  Apply for {role}
                 </Button>
               </PopoverBody>
             </Link>

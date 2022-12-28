@@ -123,7 +123,7 @@ export default function HeroHeader() {
               width={["70%", "30%"]}
               textAlign={"center"}
             >
-              <CountUp end={300} duration={6} useEasing={true} delay={1.5} />+
+              <CountUp end={500} duration={6} useEasing={true} delay={1.5} />+
               COMMUNITY MEMBERS
             </Heading>
             <Link
