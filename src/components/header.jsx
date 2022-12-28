@@ -85,7 +85,9 @@ export default function Header() {
             <ul className="nav-links">
               <li>
                 <Text className="link-navs" color="primary">
-                  <Link className="link-navs"href="/">HOME</Link>
+                  <Link className="link-navs" href="/">
+                    HOME
+                  </Link>
                 </Text>
               </li>
               <li>
@@ -164,6 +166,11 @@ export default function Header() {
               <li>
                 <Text className="link-navs" color="primary">
                   <Link href="/join-team">VOLUNTEER</Link>
+                </Text>
+              </li>
+              <li>
+                <Text className="link-navs" color="primary">
+                  <Link href="/donate">DONATE</Link>
                 </Text>
               </li>
             </ul>
