@@ -42,7 +42,7 @@ export default function Donate() {
             Remember, our mission isn&apos;t small. We need your help to achieve
             our goals and create a larger and broader societal impact. More
             information about our mission statement is
-            <Link href={"/"}>
+            <Link href={"/mission"}>
               <Text
                 color={"primary"}
                 _hover={{
