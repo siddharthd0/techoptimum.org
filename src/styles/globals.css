@@ -38,6 +38,17 @@ html {
   background-color: transparent !important;
   font-weight: 100 !important;
 }
+.donate-li {
+  background-color: #2e54ab !important;
+  color:White !important;
+  padding: 5px 14px 5px 14px;
+  margin-left: 12px
+}
+.donate-li:hover {
+ 
+  background-color:#577bce !important;
+
+}
 
 .link-navs:hover {
   color: #ffffff;
@@ -454,4 +465,7 @@ html {
 }
 .donate:hover {
   color:white !important;
+}
+.initatives-list li {
+  font-size: 15px;
 }

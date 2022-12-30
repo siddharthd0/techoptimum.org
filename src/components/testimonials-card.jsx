@@ -19,7 +19,7 @@ export default function TestimonialCard() {
       name: "Aditya Sahasranam",
       title: "Community Manager",
       description:
-        "Tech Optimum is an incredible organization that is making a real difference in the world. Its commitment to its community, its dedication to providing access to technology and education, and its exceptional team make it a truly special and worthy cause.",
+        "Tech Optimum is an incredible organization that is making a real difference in the world. Its commitment to its community, its dedication to providing access to technology and education, and its exceptional team make it truly special and a worthy cause.",
       src: "https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png",
     },
   ];

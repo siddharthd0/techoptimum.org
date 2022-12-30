@@ -7,68 +7,234 @@ import {
   Button,
   Image,
   Box,
-  Stack,
   Center,
+  Link,
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+  StatArrow,
+  StatGroup,
 } from "@chakra-ui/react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Socials from "../components/socials";
-import Link from "next/link";
 import { FaDollarSign } from "react-icons/fa";
+import TestimonialCard from "../components/testimonials-card";
 
 export default function Donate() {
   return (
     <>
       <Header />
-      <Box minH={"75vh"} pt={"80px"}>
+      <Box pt={["0px", "30px"]}>
         <Center flexDirection={"column"}>
           <Heading
             data-aos-delay="400"
             data-aos="fade-up-right"
-            mt={"40px"}
+            mt={["2rem", "4rem"]}
             color="primary"
-            fontSize={["4xl", "6xl"]}
+            fontSize={["5xl", "6xl"]}
           >
             Donations
           </Heading>
-          <Box
-            px="10px"
-            w={"355px"}
-            h={"1px"}
-            bgColor={"white"}
-            borderRadius={"15px"}
-            my={"10px"}
-          ></Box>
-          <Text
-            fontSize={["sm", "md"]}
-            mt="10px"
-            px={"20px"}
-            color={"primary"}
-            maxW={"550px"}
-            textAlign={"center"}
+          <Flex
+            justifyContent="center"
+            padding="15px 0"
+            direction={["column", "row"]}
+            alignItems="center"
+            borderBottom={"1px "}
+            borderBottomColor="blue.500"
+            borderBottomWidth="1px !important"
+            width={"70%"}
           >
-            Remember, our mission isn&apos;t small. We need your help to achieve
-            our goals and create a larger and broader societal impact. More
-            information about our mission statement is
-            <Link href={"/mission"}>
-              <Text
-                color={"primary"}
-                _hover={{
-                  textDecoration: "underline",
-                  cursor: "pointer",
-                  color: "white",
-                }}
-              >
-                here.
+            <Flex mb="10px" marginTop={["1.5rem", "2px"]} textAlign={"center"}>
+              <nav>
+                <ul className="nav-links">
+                  <Link className="link-navs" href="#mission">
+                    <li>
+                      <Text
+                        mb={["1rem !important", "0rem !important"]}
+                        className="link-navs  donate-li"
+                        color="primary"
+                      >
+                        What is our mission?
+                      </Text>
+                    </li>
+                  </Link>
+                  <Link href="#my-money">
+                    <li>
+                      <Text
+                        mb={["1rem !important", "0rem !important"]}
+                        className="link-navs  donate-li"
+                        color="primary"
+                      >
+                        Where will my money go?
+                      </Text>
+                    </li>
+                  </Link>
+                  <Link href="#testimonials">
+                    <li>
+                      <Text className="link-navs  donate-li" color="primary">
+                        What do members at Tech Optimum say?
+                      </Text>
+                    </li>
+                  </Link>
+                </ul>
+              </nav>
+            </Flex>
+          </Flex>
+        </Center>
+        <Flex
+          mt="3rem !important"
+          margin={"auto"}
+          maxWidth={"900px"}
+          direction={["column", "row"]}
+          alignItems={"center"}
+          id="mission"
+        >
+          <Flex ml={["2rem", "0rem"]} direction={"column"}>
+            <Heading
+              fontWeight={"100"}
+              mb="8px"
+              fontSize={"4xl"}
+              color={"primary"}
+            >
+              Our Mission:
+            </Heading>
+            <Text maxWidth={"500px"}>
+              More than one-third of the world's population especially students
+              continues to be excluded from technology because of the digital
+              divide. We offer students in need accessible resources, tools, and
+              a learning platform along with an inclusive community to learn
+              more about their passion. We envision a diverse community that
+              strives for inclusion in the technology industry.
+            </Text>
+          </Flex>
+          <Flex direction={"column"}>
+            <Image
+              mt={["2rem", "0rem"]}
+              ml={["-1rem", "4rem"]}
+              maxW={["250px", "300px"]}
+              src="/mission-blue-abstract.png"
+            />
+          </Flex>
+        </Flex>
+
+        <Flex
+          mt="4rem !important"
+          margin={"auto"}
+          maxWidth={"900px"}
+          direction={["column", "row"]}
+          alignItems={"center"}
+          id="my-money"
+        >
+          <Flex direction={["column", "row"]}>
+            <Stat>
+              <Heading ml={["2rem","0rem"]}color={"primary"} fontWeight={"100"} fontSize={["2xl","4xl"]}>
+                How will my donation be used?
+              </Heading>
+              <Flex direction={["column", "row"]} mt="10px">
+                <Flex ml={["2rem", "0rem"]} direction="column">
+                  <StatNumber fontSize={"4xl"}>20%</StatNumber>
+                  <StatHelpText>
+                    {" "}
+                    goes to Tech Optimum's discretionary fund
+                  </StatHelpText>
+                </Flex>
+                <Flex ml="2rem" direction="column">
+                  <StatNumber fontSize={"4xl"}>40%</StatNumber>
+                  <StatHelpText>
+                    {" "}
+                    goes towards organization maintance and online subscriptions{" "}
+                  </StatHelpText>
+                </Flex>
+                <Flex ml="2rem" direction="column">
+                  <StatNumber fontSize={"4xl"}>40%</StatNumber>
+                  <StatHelpText>goes directly towards our mission</StatHelpText>
+                </Flex>
+              </Flex>
+            </Stat>
+            <Flex mt={["3rem", "0rem"]} maxW={"400px"} ml={["2rem","5rem"]}>
+              <Box px="14px">
+                <Heading
+                  mb="10px"
+                  color={"primary"}
+                  fontWeight={"100"}
+                  fontSize={["2xl","4xl"]}
+                >
+                  Our initiatives include:
+                </Heading>
+
+                <ul className="initatives-list">
+                  <li>
+                    Hosting annual hackathons{" "}
+                    <Link href="./hackathon">(Tech Optimum Hacks)</Link>
+                  </li>
+                  <li>
+                    Providing free and accessible programming courses to high
+                    school and college students{" "}
+                    <Link href="https://courses.techoptimum.org">
+                      (Check them out here)
+                    </Link>
+                  </li>
+                  <li>
+                    A Discord chatting community open to all skill-levels of
+                    programming, with CS help in it!{" "}
+                    <Link href="/discord">(Join here)</Link>
+                  </li>
+                  <li>
+                    Free internship opportunities for students to get real-world
+                    programming experience
+                  </li>
+                </ul>
+              </Box>
+            </Flex>
+          </Flex>
+          <Flex direction={"column"}></Flex>
+        </Flex>
+        <Center flexDirection="column">
+          <Heading
+            mt="3rem !important"
+            mb="4rem"
+            color="primary"
+            fontSize={["2xl", "4xl"]}
+            id="testimonials"
+            fontWeight={"100"}
+            ml={["2rem","0rem"]}
+          >
+            What do members at Tech Optimum say?
+          </Heading>
+          <TestimonialCard />
+          <Box>
+            <Text
+              mb="1rem"
+              fontSize={["md", "lg"]}
+              fontWeight={"100"}
+              color="primary"
+            >
+              The Tech Optimum team greatly appreciates your consideration for a donation,
+            </Text>
+            <Flex>
+              <Text>
+                <Image/>
+                <Text>
+                  Siddharth Duggal, <br/>Founder & CEO
+                </Text>
               </Text>
-            </Link>
-          </Text>
-          {/* Description for why person X should donate */}
+              <Text ml="2rem">
+                <Image/>
+                <Text>
+                Pranith Molakalapalli,<br/> Chief Technology Officer
+                </Text>
+              </Text>
+            </Flex>
+          </Box>
           <Button
+            mb="2rem"
             fontSize={["md", "lg"]}
-            mt={"25px"}
-            width={"190px"}
-            height={"60px"}
+            mt={"3rem"}
+            px="40px"
+            py="30px"
             rightIcon={<FaDollarSign />}
             bgColor={"primaryButton.500"}
             _hover={{ bgColor: "primaryButton.600" }}
