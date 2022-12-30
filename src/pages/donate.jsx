@@ -7,10 +7,10 @@ import {
   Button,
   Image,
   Box,
+  Tooltip,
   Center,
   Link,
   Stat,
-  StatLabel,
   StatNumber,
   StatHelpText,
   StatArrow,
@@ -21,6 +21,8 @@ import Footer from "../components/footer";
 import Socials from "../components/socials";
 import { FaDollarSign } from "react-icons/fa";
 import TestimonialCard from "../components/testimonials-card";
+import { SlRocket } from "react-icons/sl";
+import {MdAttachMoney, MdOutlinePeopleAlt} from "react-icons/md"
 
 export default function Donate() {
   return (
@@ -31,7 +33,7 @@ export default function Donate() {
           <Heading
             data-aos-delay="400"
             data-aos="fade-up-right"
-            mt={["2rem", "4rem"]}
+            mt={["2rem", "2rem"]}
             color="primary"
             fontSize={["5xl", "6xl"]}
           >
@@ -47,36 +49,47 @@ export default function Donate() {
             borderBottomWidth="1px !important"
             width={"70%"}
           >
-            <Flex mb="10px" marginTop={["1.5rem", "2px"]} textAlign={"center"}>
+            <Flex mb="10px" marginTop={["1.5rem", "0px"]} textAlign={"center"}>
               <nav>
                 <ul className="nav-links">
                   <Link className="link-navs" href="#mission">
                     <li>
-                      <Text
+                    <Tooltip openDelay={175} label='Learn more about Tech Optimum&apos;s goal ' placement='bottom'>
+                      <Button
                         mb={["1rem !important", "0rem !important"]}
                         className="link-navs  donate-li"
+
                         color="primary"
-                      >
+                        rightIcon={<SlRocket className="donate-icons"/>}
+                      > 
                         What is our mission?
-                      </Text>
+                      </Button>
+                      </Tooltip>
                     </li>
                   </Link>
                   <Link href="#my-money">
                     <li>
-                      <Text
+                    <Tooltip openDelay={175}label='The breakdown of your donation ' placement='bottom'>
+                      <Button
                         mb={["1rem !important", "0rem !important"]}
                         className="link-navs  donate-li"
                         color="primary"
+                        rightIcon={<MdAttachMoney className="donate-icons"/>}
+                        
                       >
                         Where will my money go?
-                      </Text>
+                      </Button>
+                      </Tooltip>
                     </li>
                   </Link>
                   <Link href="#testimonials">
                     <li>
-                      <Text className="link-navs  donate-li" color="primary">
+                    <Tooltip openDelay={175}label='The affect your donation will have ' placement='bottom'>
+                      <Button className="link-navs  donate-li" color="primary" 
+                      rightIcon={<MdOutlinePeopleAlt className="donate-icons"/>}>
                         What do members at Tech Optimum say?
-                      </Text>
+                      </Button>
+                      </Tooltip>
                     </li>
                   </Link>
                 </ul>
@@ -102,12 +115,12 @@ export default function Donate() {
               Our Mission:
             </Heading>
             <Text maxWidth={"500px"}>
-              More than one-third of the world&apos;s population especially students
-              continues to be excluded from technology because of the digital
-              divide. We offer students in need accessible resources, tools, and
-              a learning platform along with an inclusive community to learn
-              more about their passion. We envision a diverse community that
-              strives for inclusion in the technology industry.
+              More than one-third of the world&apos;s population especially
+              students continues to be excluded from technology because of the
+              digital divide. We offer students in need accessible resources,
+              tools, and a learning platform along with an inclusive community
+              to learn more about their passion. We envision a diverse community
+              that strives for inclusion in the technology industry.
             </Text>
           </Flex>
           <Flex direction={"column"}>
@@ -130,7 +143,12 @@ export default function Donate() {
         >
           <Flex direction={["column", "row"]}>
             <Stat>
-              <Heading ml={["2rem","0rem"]}color={"primary"} fontWeight={"100"} fontSize={["2xl","4xl"]}>
+              <Heading
+                ml={["2rem", "0rem"]}
+                color={"primary"}
+                fontWeight={"100"}
+                fontSize={["2xl", "4xl"]}
+              >
                 How will my donation be used?
               </Heading>
               <Flex direction={["column", "row"]} mt="10px">
@@ -147,6 +165,7 @@ export default function Donate() {
                     {" "}
                     goes towards organization maintance and online subscriptions{" "}
                   </StatHelpText>
+                  n
                 </Flex>
                 <Flex ml="2rem" direction="column">
                   <StatNumber fontSize={"4xl"}>40%</StatNumber>
@@ -154,13 +173,13 @@ export default function Donate() {
                 </Flex>
               </Flex>
             </Stat>
-            <Flex mt={["3rem", "0rem"]} maxW={"400px"} ml={["2rem","5rem"]}>
+            <Flex mt={["3rem", "0rem"]} maxW={"400px"} ml={["2rem", "5rem"]}>
               <Box px="14px">
                 <Heading
                   mb="10px"
                   color={"primary"}
                   fontWeight={"100"}
-                  fontSize={["2xl","4xl"]}
+                  fontSize={["2xl", "4xl"]}
                 >
                   Our initiatives include:
                 </Heading>
@@ -200,7 +219,7 @@ export default function Donate() {
             fontSize={["2xl", "4xl"]}
             id="testimonials"
             fontWeight={"100"}
-            ml={["2rem","0rem"]}
+            ml={["2rem", "0rem"]}
           >
             What do members at Tech Optimum say?
           </Heading>
@@ -212,26 +231,30 @@ export default function Donate() {
               fontWeight={"100"}
               color="primary"
             >
-              The Tech Optimum team greatly appreciates your consideration for a donation,
+              The Tech Optimum team greatly appreciates your consideration for a
+              donation,
             </Text>
             <Flex>
               <Text>
-                <Image/>
+                <Image />
                 <Text>
-                  Siddharth Duggal, <br/>Founder & CEO
+                  Siddharth Duggal, <br />
+                  Founder & CEO
                 </Text>
               </Text>
               <Text ml="2rem">
-                <Image/>
+                <Image />
                 <Text>
-                Pranith Molakalapalli,<br/> Chief Technology Officer
+                  Pranith Molakalapalli,
+                  <br /> Chief Technology Officer
                 </Text>
-                </Text>
-                <Text ml="10rem">
-                <Image/>
+              </Text>
+              <Text ml="10rem">
+                <Image />
                 <Text>
-                For any questions, please send an email to <br/> <Link href="mailto:contact.techoptimum@gmail.com">
-                  contact.techoptimum@gmail.com
+                  For any questions, please send an email to <br />{" "}
+                  <Link href="mailto:contact.techoptimum@gmail.com">
+                    contact.techoptimum@gmail.com
                   </Link>
                 </Text>
               </Text>
