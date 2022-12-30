@@ -102,7 +102,7 @@ export default function Donate() {
               Our Mission:
             </Heading>
             <Text maxWidth={"500px"}>
-              More than one-third of the world's population especially students
+              More than one-third of the world&apos;s population especially students
               continues to be excluded from technology because of the digital
               divide. We offer students in need accessible resources, tools, and
               a learning platform along with an inclusive community to learn
@@ -138,7 +138,7 @@ export default function Donate() {
                   <StatNumber fontSize={"4xl"}>20%</StatNumber>
                   <StatHelpText>
                     {" "}
-                    goes to Tech Optimum's discretionary fund
+                    goes to Tech Optimum&apos;s discretionary fund
                   </StatHelpText>
                 </Flex>
                 <Flex ml="2rem" direction="column">
@@ -225,6 +225,14 @@ export default function Donate() {
                 <Image/>
                 <Text>
                 Pranith Molakalapalli,<br/> Chief Technology Officer
+                </Text>
+                </Text>
+                <Text ml="10rem">
+                <Image/>
+                <Text>
+                For any questions, please send an email to <br/> <Link href="mailto:contact.techoptimum@gmail.com">
+                  contact.techoptimum@gmail.com
+                  </Link>
                 </Text>
               </Text>
             </Flex>
