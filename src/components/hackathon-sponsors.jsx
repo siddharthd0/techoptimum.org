@@ -23,6 +23,9 @@ export default function HackathonSponsors() {
       </Heading>
 
       <SimpleGrid
+      alignItems={"center"}
+      justifyContent="center"
+      alignContent={"center"}
         borderRadius={"20px"}
         padding="3rem"
         margin={"auto"}
@@ -32,17 +35,50 @@ export default function HackathonSponsors() {
         spacingY="30px"
       >
         <Box>
-          <Image alt={"xyzSponsor"} src="./xyz.png"></Image>
+          <Image
+            maxWidth={"200px"}
+            filter={"grayscale(90%)"}
+            transition="300ms"
+            _hover={{
+              filter: "grayscale(0%)",
+            }}
+            alt={"xyzSponsor"}
+            src="./xyz.png"
+          ></Image>
         </Box>
         <Box>
-          <Image alt={"taskadeSponsor"} src="./taskade.png"></Image>
+          <Image
+          transition="300ms"
+          _hover={{
+            filter: "grayscale(0%)",
+          }}
+            filter={"grayscale(90%)"}
+            alt={"taskadeSponsor"}
+            src="./taskade.png"
+          ></Image>
         </Box>
         <Box>
-          <Image alt={"echo3dSponsor"} src="./echo3d-2.png"></Image>
+          <Image
+          transition="300ms"
+          _hover={{
+            filter: "grayscale(0%)",
+          }}
+            ml="1rem"
+            maxWidth={"200px"}
+            filter={"grayscale(90%)"}
+            alt={"echo3dSponsor"}
+            src="./echo3d-2.png"
+          ></Image>
         </Box>
         <Center>
           <Box>
             <Image
+            transition="300ms"
+            _hover={{
+              filter: "grayscale(0%)",
+            }}
+              marginLeft={"-1rem"}
+              filter={"grayscale(90%)"}
               alt={"aopsSponsor"}
               boxSize={"100px"}
               marginBottom="5"
@@ -53,14 +89,36 @@ export default function HackathonSponsors() {
           </Box>
         </Center>
         <Box paddingTop="7">
-          <Image alt={"replitSponsor"} src="./Replit.png"></Image>
+          <Image
+          transition="300ms"
+          _hover={{
+            filter: "grayscale(0%)",
+          }}
+            filter={"grayscale(90%)"}
+            alt={"replitSponsor"}
+            src="./Replit.png"
+          ></Image>
         </Box>
         <Box>
-          <Image alt={"SlingshotSponsor"} src="./slingshot.png"></Image>
+          <Image
+          transition="300ms"
+          _hover={{
+            filter: "grayscale(0%)",
+          }}
+            filter={"grayscale(90%)"}
+            alt={"SlingshotSponsor"}
+            src="./slingshot.png"
+          ></Image>
         </Box>
         <Center>
-          <Box maxWidth={"122px"}>
+          <Box maxWidth={"100px"}>
             <Image
+            
+            transition="300ms"
+            _hover={{
+              filter: "grayscale(0%)",
+            }}
+              filter={"grayscale(90%)"}
               alt={"WolframSponsor"}
               src="./Wolfram-Language-Sponsor.png"
             ></Image>
