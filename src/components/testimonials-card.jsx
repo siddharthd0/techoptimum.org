@@ -30,7 +30,7 @@ export default function TestimonialCard() {
         justifyContent={"center"}
         flexWrap={"wrap"}
         gap={10}
-        mb={"120px"}
+        mb={"60px"}
       >
         {testimonials.map((testimonial, i) => (
           <Box

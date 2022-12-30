@@ -169,9 +169,19 @@ export default function Header() {
                 </Text>
               </li>
               <li>
-                <Text className="link-navs donate" color="primary">
+                <Button
+
+                  borderRadius={"10px"}
+                  ml="10px"
+                  color="black !important"
+                  bgColor={"blue.500 !important"}
+                  className="link-navs donate"
+                  _hover={{
+                    bgColor: "blue.300 !important",
+                  }}
+                >
                   <Link href="/donate">DONATE</Link>
-                </Text>
+                </Button>
               </li>
             </ul>
           </nav>

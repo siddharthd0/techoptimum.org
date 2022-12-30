@@ -1,6 +1,7 @@
 import React from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import {
+  Divider,
   Flex,
   Heading,
   Text,
@@ -22,7 +23,7 @@ import Socials from "../components/socials";
 import { FaDollarSign } from "react-icons/fa";
 import TestimonialCard from "../components/testimonials-card";
 import { SlRocket } from "react-icons/sl";
-import {MdAttachMoney, MdOutlinePeopleAlt} from "react-icons/md"
+import { MdAttachMoney, MdOutlinePeopleAlt } from "react-icons/md";
 
 export default function Donate() {
   return (
@@ -54,41 +55,56 @@ export default function Donate() {
                 <ul className="nav-links">
                   <Link className="link-navs" href="#mission">
                     <li>
-                    <Tooltip openDelay={175} label='Learn more about Tech Optimum&apos;s goal ' placement='bottom'>
-                      <Button
-                        mb={["1rem !important", "0rem !important"]}
-                        className="link-navs  donate-li"
-
-                        color="primary"
-                        rightIcon={<SlRocket className="donate-icons"/>}
-                      > 
-                        What is our mission?
-                      </Button>
+                      <Tooltip
+                        openDelay={175}
+                        label="Learn more about Tech Optimum's goal "
+                        placement="bottom"
+                      >
+                        <Button
+                          mb={["1rem !important", "0rem !important"]}
+                          className="link-navs  donate-li"
+                          color="primary"
+                          rightIcon={<SlRocket className="donate-icons" />}
+                        >
+                          What is our mission?
+                        </Button>
                       </Tooltip>
                     </li>
                   </Link>
                   <Link href="#my-money">
                     <li>
-                    <Tooltip openDelay={175}label='The breakdown of your donation ' placement='bottom'>
-                      <Button
-                        mb={["1rem !important", "0rem !important"]}
-                        className="link-navs  donate-li"
-                        color="primary"
-                        rightIcon={<MdAttachMoney className="donate-icons"/>}
-                        
+                      <Tooltip
+                        openDelay={175}
+                        label="The breakdown of your donation "
+                        placement="bottom"
                       >
-                        Where will my money go?
-                      </Button>
+                        <Button
+                          mb={["1rem !important", "0rem !important"]}
+                          className="link-navs  donate-li"
+                          color="primary"
+                          rightIcon={<MdAttachMoney className="donate-icons" />}
+                        >
+                          Where will my money go?
+                        </Button>
                       </Tooltip>
                     </li>
                   </Link>
                   <Link href="#testimonials">
                     <li>
-                    <Tooltip openDelay={175}label='The affect your donation will have ' placement='bottom'>
-                      <Button className="link-navs  donate-li" color="primary" 
-                      rightIcon={<MdOutlinePeopleAlt className="donate-icons"/>}>
-                        What do members at Tech Optimum say?
-                      </Button>
+                      <Tooltip
+                        openDelay={175}
+                        label="The affect your donation will have "
+                        placement="bottom"
+                      >
+                        <Button
+                          className="link-navs  donate-li"
+                          color="primary"
+                          rightIcon={
+                            <MdOutlinePeopleAlt className="donate-icons" />
+                          }
+                        >
+                          What do members at Tech Optimum say?
+                        </Button>
                       </Tooltip>
                     </li>
                   </Link>
@@ -154,22 +170,22 @@ export default function Donate() {
               <Flex direction={["column", "row"]} mt="10px">
                 <Flex ml={["2rem", "0rem"]} direction="column">
                   <StatNumber fontSize={"4xl"}>20%</StatNumber>
-                  <StatHelpText>
+                  <StatHelpText mt="-7px">
                     {" "}
                     goes to Tech Optimum&apos;s discretionary fund
                   </StatHelpText>
                 </Flex>
                 <Flex ml="2rem" direction="column">
                   <StatNumber fontSize={"4xl"}>40%</StatNumber>
-                  <StatHelpText>
-                    {" "}
+                  <StatHelpText mt="-7px">
+             
                     goes towards organization maintance and online subscriptions{" "}
                   </StatHelpText>
-                  n
+                  
                 </Flex>
                 <Flex ml="2rem" direction="column">
                   <StatNumber fontSize={"4xl"}>40%</StatNumber>
-                  <StatHelpText>goes directly towards our mission</StatHelpText>
+                  <StatHelpText mt="-7px">goes directly towards our mission</StatHelpText>
                 </Flex>
               </Flex>
             </Stat>
@@ -198,7 +214,7 @@ export default function Donate() {
                   </li>
                   <li>
                     A Discord chatting community open to all skill-levels of
-                    programming, with CS help in it!{" "}
+                    programming, offering CS help to everyone!{" "}
                     <Link href="/discord">(Join here)</Link>
                   </li>
                   <li>
@@ -224,7 +240,50 @@ export default function Donate() {
             What do members at Tech Optimum say?
           </Heading>
           <TestimonialCard />
+        </Center>
+        <Flex
+          mb="10px !important"
+          direction="column"
+          margin={"auto"}
+          maxWidth={"900px"}
+        >
+          <Heading
+            mb="10px"
+            color="primary"
+            fontSize={["xl", "4xl"]}
+            id="testimonials"
+            fontWeight={"100"}
+            ml={["2rem", "0rem"]}
+          >
+            Your donation will:
+          </Heading>
+          <ul className="initatives-list">
+            <li>
+              Bring computer science skills to high schoolers and college students worldwide through providing more courses
+            </li>
+            <li>
+              Make us one step closer to closing the gap in the digital divide
+            </li>
+            <li>
+              Allow us to grow our team
+            </li>
+            <li>
+              Help us host better hackathons with more prizes and resources for participants
+            </li>
+            <li>
+              Let us use better online products to develop things like our websites and services (e.g. Figma premium, Notion premium, etc.)
+            </li>
+            <li>
+              Insipre teenagers to pursue computer science and technology
+            </li>
+          </ul>
+        </Flex>
+        
+        <Center flexDir={"column"}>
+          
           <Box>
+          <Divider my="1.5rem"/>
+            
             <Text
               mb="1rem"
               fontSize={["md", "lg"]}
@@ -259,6 +318,7 @@ export default function Donate() {
                 </Text>
               </Text>
             </Flex>
+            
           </Box>
           <Button
             mb="2rem"

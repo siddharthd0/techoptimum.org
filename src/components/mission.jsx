@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, Button, Flex, Text, Heading } from "@chakra-ui/react";
+import { Button, Flex, Text, Heading } from "@chakra-ui/react";
 import { useEffect } from "react";
 import AOS from "aos";
 import Head from "next/head";
+import Link from "next/link"
 
 export default function Mission() {
   useEffect(() => {
@@ -46,7 +47,7 @@ export default function Mission() {
           about their passion. We envision a diverse community that strives for
           inclusion in the technology industry.
         </Text>
-
+        <Link href="/mission">
         <Button
           transition={"200ms !important"}
           w={["305px", "415px"]}
@@ -58,10 +59,11 @@ export default function Mission() {
           _hover={{ bgColor: "#3244ca" }}
           _active={{ bgColor: "#3244ca" }}
           mt={["1.5rem", "1.75rem"]}
-          isDisabled="true"
+        
         >
           Learn how we accomplish our mission
         </Button>
+        </Link>
       </Flex>
     </>
   );

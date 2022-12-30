@@ -460,14 +460,10 @@ html {
   border-radius: 13px;
   transition: 400ms;
 }
-.donate {
-  color: #54afe7 !important;
-}
-.donate:hover {
-  color:white !important;
-}
 .initatives-list li {
-  font-size: 15px;
+  font-size: 14.5px;
+  margin-left: 20px;
+  margin-bottom: 3px;
 }
 .donate-icons {
   margin-bottom: 4px !important;
