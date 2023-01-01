@@ -40,7 +40,7 @@ export default function About() {
         </Heading>
         <Flex mb={"5%"} direction={["column", "row"]} gap="45px">
           <ExecutiveCard
-            src="/siddharthduggal.jpeg"
+            src="/sid.png"
             name="Siddharth Duggal"
             role="Chief Executive Officer"
             description={
