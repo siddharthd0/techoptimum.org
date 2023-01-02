@@ -22,6 +22,13 @@ export default function TestimonialCard() {
         "Tech Optimum is an incredible organization that is making a real difference in the world. Its commitment to its community, its dedication to providing access to technology and education, and its exceptional team make it truly special and a worthy cause.",
       src: "https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png",
     },
+    {
+      name: "Viachaslau Matsukevich",
+      title: "Hackathon Judge",
+      description:
+        "I had a great time Judging in the Tech Optimum Hacks. Before that, I participated in 15+ hackathons and can say that this was an awesome and well-organized event. Thanks to the Hackathon, lot's of great project with good potential was created. I think this event would be great for experienced hackers as well as novices. I'd like to thank Tech Optimum team for the opportunity and would love to participate again",
+      src: "https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Viachaslau+Matsukevich&size=100",
+    },
   ];
   return (
     <>
