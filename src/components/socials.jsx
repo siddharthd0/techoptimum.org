@@ -90,7 +90,7 @@ export default function Socials() {
             _hover={{
               textDecoration: "none",
             }}
-            href="https://discord.gg/w7cymgdRBH"
+            href="/discord"
           >
             <WrapItem
               fontWeight={"800"}

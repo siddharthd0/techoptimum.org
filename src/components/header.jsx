@@ -168,20 +168,25 @@ export default function Header() {
                   <Link href="/join-team">VOLUNTEER</Link>
                 </Text>
               </li>
-              <li>
-                <Button
-
-                  borderRadius={"10px"}
-                  ml="10px"
-                  color="black !important"
-                  bgColor={"blue.500 !important"}
-                  className="link-navs donate"
-                  _hover={{
-                    bgColor: "blue.300 !important",
-                  }}
-                >
-                  <Link href="/donate">DONATE</Link>
-                </Button>
+              <li >
+                <Link _hover={{
+                  cursor:"pointer",
+                }} href="/donate">
+                  <Text
+                  transition={"400ms"}
+                   ml="12px !important" 
+                    fontWeight={"bold !important"}
+                    color="primary"
+                    backgroundColor={"transparent"}
+                    _hover={{
+                      cursor:"pointer",
+                      color: "white",
+                      backgroundColor: "transparent",
+                    }}
+                  >
+                    DONATE
+                  </Text>
+                </Link>
               </li>
             </ul>
           </nav>
