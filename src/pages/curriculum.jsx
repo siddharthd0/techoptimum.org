@@ -232,7 +232,7 @@ export default function Curriculm() {
             <br />
             Lesson 2: Lists and Loops <br />
             Lesson 3: Conditionals and Functions <br />
-            Lesson 2 and 3 Exercise
+            Lesson 2 and 3 Exercise<br/>
             Lesson 4: Dictionaries <br/>
             Lesson 5: Modules <br/>
             Final Project!
