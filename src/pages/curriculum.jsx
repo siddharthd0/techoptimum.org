@@ -216,7 +216,7 @@ export default function Curriculm() {
           w={["320px", "415px"]}
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
-          h={["230px", "275px"]}
+          h={["230px", "295px"]}
           marginTop={"2.5rem"}
           marginRight={["2rem", "0rem"]}
         >
@@ -232,6 +232,10 @@ export default function Curriculm() {
             <br />
             Lesson 2: Lists and Loops <br />
             Lesson 3: Conditionals and Functions <br />
+            Lesson 2 and 3 Exercise
+            Lesson 4: Dictionaries <br/>
+            Lesson 5: Modules <br/>
+            Final Project!
           </Text>
           <br />
         </Box>
