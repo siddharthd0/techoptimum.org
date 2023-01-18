@@ -21,7 +21,6 @@ import {
   MenuList,
   MenuItem,
   ModalHeader,
-  Collapse,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaGraduationCap, FaPython } from "react-icons/fa";
