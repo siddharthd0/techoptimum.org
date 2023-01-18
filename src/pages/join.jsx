@@ -1,7 +1,16 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import { Text, Heading,Tooltip, Flex, Link, Button, Box } from "@chakra-ui/react";
+import {
+  Text,
+  Heading,
+  Tooltip,
+  Flex,
+  Link,
+  Button,
+  Box,
+} from "@chakra-ui/react";
+import DiscordPageLanding from "../components/discord-page-landing";
 
 export default function Join() {
   return (
@@ -28,14 +37,14 @@ export default function Join() {
           padding="2rem"
           opacity={".95"}
         >
-          <Heading fontSize={"5xl"} color={"blue.900"}>
+          <Heading fontSize={"6xl"} color={"blue.900"}>
             We are Tech Optimum
           </Heading>
           <Text
             mt=".5rem"
             mb="1rem"
             maxW={"70%"}
-            fontSize={"lg"}
+            fontSize={"xl"}
             color={"blue.900"}
           >
             A platform where you can innovate, learn, create, and share your
@@ -77,6 +86,39 @@ export default function Join() {
           </Link>
         </Box>
       </Box>
+
+      <Flex id="do" marginLeft={["2rem", "12rem"]} maxW={"750px"} my="3rem">
+        <Flex direction={"column"}>
+          <Heading mb="14px" color={"primary"} fontSize={"5xl"}>
+            Our Discord Server
+          </Heading>
+          <Text mb="17px">
+            We have a community of over 400+ members on our Discord server. We
+            have a variety of channels for you to chat in, including a general
+            chat, a tech help channel, and a channel for you to share your
+            projects. Innovate in our Discord server and if you ever need coding
+            help, we&apos;re here!
+          </Text>
+          <Link
+            _hover={{
+              textDecoration: "none",
+            }}
+            href="/discord"
+            isExternal
+          >
+            <Button
+              px={"30px"}
+              borderRadius={"20px"}
+              colorScheme={"joinTeamBtn"}
+              fontWeight="light"
+            >
+              {" "}
+              Join Now
+            </Button>
+          </Link>
+        </Flex>
+      </Flex>
+
       <Socials />
       <Footer />
     </>
