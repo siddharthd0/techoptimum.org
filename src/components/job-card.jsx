@@ -6,16 +6,6 @@ import {
   Button,
   Link,
   Badge,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverArrow,
-  PopoverCloseButton,
-  List,
-  ListItem,
-  ListIcon,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -24,105 +14,52 @@ export default function JobPostingCard({
   description,
   application,
   department,
-  responsibilityOne,
-  responsibilityTwo,
-  responsibilityThree,
+  responsibility,
 }) {
   return (
     <>
-      <Box>
-        <Popover placement="top-start">
-          <PopoverTrigger>
-            <Flex direction={"column"}>
-              <Button
-                color={"white !important"}
-                margin={"auto"}
-                py="28px"
-                borderRadius={"10px"}
-                background="#124276"
-                transition={"350ms"}
-                _hover={{
-                  transform: "scale(0.95)",
-                }}
-                _active={{
-                  transform: "scale(1)",
-                }}
-                pt="8"
-                pl="6"
-                width={["250px", "380px"]}
-              >
-                <Heading fontWeight={"300"} fontSize={["18px", "26px"]}>
-                  {role}
-                </Heading>
-              </Button>
-            </Flex>
-          </PopoverTrigger>
-          <PopoverContent borderColor={"transparent"} background="#124276">
-            <PopoverArrow />
-            <PopoverCloseButton />
-            <PopoverHeader
-              borderColor={"primary"}
-              fontSize={"xl"}
-              fontWeight={1000}
-              margin={"0"}
-            >
-              {role}
-              <Text>
-                <Badge
-                  margin={"0"}
-                  variant="outline"
-                  colorScheme={"whiteAlpha"}
-                >
-                  Department of <span>{department}</span>
-                </Badge>
-              </Text>
-            </PopoverHeader>
+      <Box
+        position="relative"
+        padding="2rem"
+        borderRadius={"27px"}
+        width="375px"
+        className="job-card"
+      >
+        <Heading color="white" fontSize="24px" mb={"6px"}>
+          {role}
+        </Heading>
+        <Badge mb="1rem">{department}</Badge>
+        <Flex mb="5rem" direction="column">
+          <ul>
+            {responsibility.map((item, i) => {
+              return <li key={i}>{item}</li>;
+            })}
+          </ul>
+        </Flex>
 
-            <PopoverBody>
-              <List spacing={2.5}>
-                <ListItem>
-                  <Text fontWeight={800}>Responsibilites:</Text>
-                  <ListIcon as={CheckCircleIcon} color="primary" />
-                  {responsibilityOne}
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckCircleIcon} color="primary" />
-                  {responsibilityTwo}
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckCircleIcon} color="primary" />
-                  {responsibilityThree}
-                </ListItem>
-              </List>
-            </PopoverBody>
-            <Link
-              isExternal
-              _hover={{
-                textDecoration: "none",
-              }}
-              href={application}
-            >
-              <PopoverBody>
-                <Button
-                fontSize={"sm"}
-                  fontWeight={"normal"}
-                  marginBottom={"10px"}
-                  backgroundColor="blue.600"
-                  _hover={{
-                    backgroundColor: "blue.500",
-                   
-                  }}
-                  borderRadius="10px"
-                  rightIcon={
-                    <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-                  }
-                >
-                  Apply for {role}
-                </Button>
-              </PopoverBody>
-            </Link>
-          </PopoverContent>
-        </Popover>
+        <Link
+          _hover={{
+            textDecoration: "none",
+          }}
+          href={application}
+          isExternal
+        >
+          <Button
+            position="absolute"
+            bottom="45px"
+            float={"bottom"}
+            fontWeight="light"
+            color={"#white"}
+            bgColor={"rgba(0, 0, 0, 0.05)"}
+            _hover={{
+              color: "#white",
+              bgColor: "rgba(0, 0, 0, 0.5)",
+            }}
+            border={"1px solid rgba(0, 0, 0, 0.7)"}
+          >
+            Apply for {role}
+          </Button>
+        </Link>
       </Box>
     </>
   );

@@ -23,7 +23,6 @@ html {
 
 .nav-links {
   list-style: none;
-
 }
 .nav-links li {
   display: inline-block;
@@ -40,31 +39,26 @@ html {
 }
 .donate-li {
   background-color: #2e54ab !important;
-  color:White !important;
+  color: White !important;
   padding: 5px 14px 5px 14px;
-  margin-left: 12px
+  margin-left: 12px;
 }
 .donate-li:hover {
- 
-  background-color:#577bce !important;
-
+  background-color: #577bce !important;
 }
 
 .link-navs:hover {
   color: #ffffff;
-
 }
 
 .link-navs-dropdown {
   color: #9da5f0 !important;
   background-color: #252739 !important;
   border: none !important;
-
 }
 
 .link-navs-dd-text:hover {
   background-color: #2f313c !important;
-
 }
 
 .link-navs-dd-text:active {
@@ -75,6 +69,9 @@ html {
   width: 100%;
   height: auto;
   z-index: -1;
+}
+.job-card {
+  background: linear-gradient(156.16deg, #00a197 17.37%, #0068a2 86.15%);
 }
 
 .smooth-hover {
@@ -181,7 +178,7 @@ html {
   height: 90px;
 }
 
-.audio-player .controls>* {
+.audio-player .controls > * {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,12 +191,20 @@ html {
   width: 100%;
 }
 
-.audio-player .controls .time>* {
+.audio-player .controls .time > * {
   padding: 2px;
 }
 
 .gradient-title {
-  background: linear-gradient(90.58deg, #5164EC -4.52%, rgba(67, 124, 240, 0.9188) 22.72%, rgba(156, 193, 250, 0.886457) 38.78%, rgba(49, 114, 188, 0.863) 50.34%, rgba(20, 116, 205, 0.712) 62.16%, #4559E9 84.49%);
+  background: linear-gradient(
+    90.58deg,
+    #5164ec -4.52%,
+    rgba(67, 124, 240, 0.9188) 22.72%,
+    rgba(156, 193, 250, 0.886457) 38.78%,
+    rgba(49, 114, 188, 0.863) 50.34%,
+    rgba(20, 116, 205, 0.712) 62.16%,
+    #4559e9 84.49%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -207,13 +212,15 @@ html {
 }
 
 .cs-help {
-  background: linear-gradient(273.54deg,
-      #ffc4aa -54.24%,
-      rgba(251, 152, 69, 0.838636) 4.07%,
-      rgba(253, 183, 119, 0.8) 18.03%,
-      rgba(253, 180, 116, 0.8) 31.16%,
-      rgba(253, 180, 116, 0.8) 31.17%,
-      rgba(253, 167, 102, 0.8) 91.13%);
+  background: linear-gradient(
+    273.54deg,
+    #ffc4aa -54.24%,
+    rgba(251, 152, 69, 0.838636) 4.07%,
+    rgba(253, 183, 119, 0.8) 18.03%,
+    rgba(253, 180, 116, 0.8) 31.16%,
+    rgba(253, 180, 116, 0.8) 31.17%,
+    rgba(253, 167, 102, 0.8) 91.13%
+  );
 }
 
 .faq-button {
@@ -225,10 +232,12 @@ html {
 }
 
 .development-heading {
-  background: linear-gradient(90deg,
-      #4458e4 5.11%,
-      #8290ff 58.28%,
-      #2a3896 116.07%);
+  background: linear-gradient(
+    90deg,
+    #4458e4 5.11%,
+    #8290ff 58.28%,
+    #2a3896 116.07%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -249,7 +258,6 @@ html {
 
 .announcements {
   list-style: none;
-
 }
 
 .name {
@@ -348,7 +356,7 @@ html {
 
 .post {
   margin-bottom: 40px !important;
-  background-color: #0D132F;
+  background-color: #0d132f;
   border-radius: 15px;
   width: 60%;
   margin: auto;
@@ -368,7 +376,7 @@ html {
   margin-top: 0;
   margin-bottom: 12px;
   opacity: 0.65;
-  FONT-SIZE: .8rem;
+  font-size: 0.8rem;
 }
 
 .announcementContent {
@@ -394,7 +402,6 @@ html {
   background-size: cover;
   background-image: url("/curriculm-landing.png");
   height: 70vh;
-
 }
 
 .linkedin {
@@ -405,19 +412,14 @@ html {
 .linkedin:hover {
   color: rgb(145, 145, 253) !important;
   transition: 400ms !important;
-
-
 }
 
-
 .wavy {
-
   color: white;
 
   text-decoration: none;
 
   position: relative;
-
 }
 
 .wavy:hover .button-stroke:nth-child(2) {
@@ -433,7 +435,6 @@ html {
   left: 20px;
   bottom: -2px;
   stroke-width: 3;
-
 }
 
 .button-stroke:nth-child(2) {
@@ -446,7 +447,6 @@ html {
 
 .missionbg {
   background: linear-gradient(156.16deg, #0b2b5f 17.37%, #334c81 86.15%);
-
 }
 
 .missionValueBg:hover {
