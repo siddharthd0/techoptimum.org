@@ -2,7 +2,7 @@ import Footer from "../components/footer";
 import { useState, useEffect, useMemo } from "react";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import { Box, Flex, Wrap, Text, chakra } from "@chakra-ui/react";
+import { Tooltip,Box, Flex, Wrap, Text, chakra } from "@chakra-ui/react";
 import JoinTeamLanding from "../components/join-team-landing";
 import JobPostingCard from "../components/job-card";
 
@@ -94,27 +94,33 @@ export default function JoinTeam() {
           <JoinTeamLanding />
         </Flex>
         <Text id="jobs"></Text>
-        <form>
+        <Flex justify={"center"}>
+        <chakra.form justify="center" my="1rem" >
+          <Tooltip placement="right" label="Try searching for Marketing, or Tech">
           <chakra.input
+        justify="center"
             type="text"
             onChange={(e) => setSearchQuery(e.target.value)}
             value={searchQuery}
-            placeholder="Search..."
+            placeholder="Search by department..."
             borderRadius={"10px"}
             padding="12px 20px"
             backgroundColor={"blue.500"}
-            margin="auto"
+            margin="auto !important"
             color="white"
           />
-        </form>
+          </Tooltip>
+        </chakra.form>
+        </Flex>
         <Wrap
+
           maxW={"1200px"}
           margin={"auto"}
           direction="row"
           justify="center"
           spacing={"30px"}
           zIndex="100"
-          marginTop={["150px", "0px"]}
+          marginTop={["150px", "20px"]}
         >
           {filteredCards.map((cardInfo) => (
             <JobPostingCard

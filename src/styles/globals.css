@@ -478,3 +478,12 @@ html {
 .donate-icons {
   margin-bottom: 4px !important;
 }
+
+input::placeholder {
+  color: rgb(249, 242, 242);
+  transition: 300ms;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgb(121, 120, 120);
+}

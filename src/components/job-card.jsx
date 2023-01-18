@@ -53,9 +53,9 @@ export default function JobPostingCard({
             bgColor={"rgba(0, 0, 0, 0.05)"}
             _hover={{
               color: "#white",
-              bgColor: "rgba(0, 0, 0, 0.5)",
+              bgColor: "rgba(0, 0, 0, 0.2)",
             }}
-            border={"1px solid rgba(0, 0, 0, 0.7)"}
+            border={"1px solid rgba(0, 0, 0, 0.1)"}
           >
             Apply for {role}
           </Button>
