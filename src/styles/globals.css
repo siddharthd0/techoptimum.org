@@ -396,6 +396,12 @@ html {
   height: 70vh;
 
 }
+.joinbg {
+  background-size: cover;
+  background-image: url("/join-landing.png");
+  height: 70vh;
+
+}
 
 .linkedin {
   cursor: pointer;
@@ -446,6 +452,10 @@ html {
 
 .missionbg {
   background: linear-gradient(156.16deg, #0b2b5f 17.37%, #334c81 86.15%);
+
+}
+.greenbg {
+  background: linear-gradient(156.16deg, #68f37b 17.37%, #c5eb09 86.15%);
 
 }
 
