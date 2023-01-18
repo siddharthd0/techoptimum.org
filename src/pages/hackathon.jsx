@@ -2,9 +2,8 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import Socials from "../components/socials";
 import HackathonRecap from "../components/hackathon-recap.jsx";
-import { Link, Button, Text, Flex, Heading, Box } from "@chakra-ui/react";
+import { Link, Button, Text, Heading, Box } from "@chakra-ui/react";
 import HackathonWinners from "../components/hackathon-winners";
-import UpcomingEvents from "../components/upcoming-events";
 import HackathonSponsors from "../components/hackathon-sponsors";
 
 export default function Hackathons() {

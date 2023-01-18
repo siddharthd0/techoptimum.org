@@ -79,7 +79,7 @@ export default function About() {
             <Volunteer
               src="https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png"
               name="Aditya Sahasranam"
-              role="Community Manager"
+              role="Director of Education"
             />
             <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"

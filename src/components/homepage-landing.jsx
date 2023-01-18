@@ -14,7 +14,7 @@ export default function HeroHeader() {
           <Heading
             className="gradient-title"
             fontSize={["4xl", "5xl"]}
-            marginBottom={{ base: ".5em", md: "1rem", lg: "2rem" }}
+            marginBottom={{ base: ".5em", md: "1rem", lg: "1.5rem" }}
           >
             Learn. Participate. Accomplish.
           </Heading>
@@ -24,8 +24,8 @@ export default function HeroHeader() {
             marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
             width={"75%"}
           >
-            A student-led organization dedicated to helping and inspiring the next
-            generation of tech leaders.
+            A student-led organization dedicated to helping and inspiring the
+            next generation of tech leaders.
           </Text>
           <Link
             _hover={{
@@ -34,7 +34,7 @@ export default function HeroHeader() {
             href="./curriculum"
           >
             <Button
-             fontSize={["sm", "md"]}
+              fontSize={["sm", "md"]}
               backgroundColor="transparent"
               _hover={{
                 backgroundColor: "transparent",
@@ -76,18 +76,21 @@ export default function HeroHeader() {
             direction={["column", "row"]}
             alignItems={"center"}
             height={"100%"}
-            marginTop="2"
+            marginTop="1"
           >
             <Heading
+              borderRadius={"10px"}
               marginTop={["2rem", "0rem"]}
               color="white"
               fontSize={["lg", "2xl"]}
               fontWeight={"400"}
-              width={["80%", "30%"]}
+              px={"1rem"}
+              py="10px"
+              width={["80%", "200px"]}
               textAlign={"center"}
             >
               <CountUp end={10} duration={6} useEasing={true} delay={1.5} />+
-              PROGRAMMING COURSES
+              Programming Courses
             </Heading>
             <Heading
               color="white"
@@ -105,7 +108,7 @@ export default function HeroHeader() {
               width={["80%", "30%"]}
               textAlign={"center"}
             >
-              INTERNSHIP FINDER
+              Accessible Internships
             </Heading>
             <Heading
               color="white"
@@ -124,7 +127,7 @@ export default function HeroHeader() {
               textAlign={"center"}
             >
               <CountUp end={500} duration={6} useEasing={true} delay={1.5} />+
-              COMMUNITY MEMBERS
+              <br /> Community Members
             </Heading>
             <Link
               marginBottom={["2rem", "0rem"]}

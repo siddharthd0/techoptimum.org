@@ -29,7 +29,7 @@ export default function PodcastHero() {
           color="primary"
           textAlign={"Center"}
         >
-          Listen to discussions with CEOs, entrepreneuers, and more!
+          Listen to discussions with leaders in the Tech Industry.
         </Text>
         <Button
           mt="15px !important"

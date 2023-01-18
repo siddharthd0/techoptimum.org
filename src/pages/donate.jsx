@@ -14,8 +14,6 @@ import {
   Stat,
   StatNumber,
   StatHelpText,
-  StatArrow,
-  StatGroup,
 } from "@chakra-ui/react";
 import Header from "../components/header";
 import Footer from "../components/footer";
