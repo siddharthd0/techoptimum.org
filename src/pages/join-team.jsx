@@ -72,6 +72,16 @@ export default function JoinTeam() {
           "Research new techniques on how to create engaging content",
         ],
       },
+      {
+        role: "Discord Bot Developer",
+        application: "https://forms.gle/WzU1TMsQ7WP18UcE6",
+        department: "Technology",
+        responsibility: [
+          "Implement advanced and dynamic bot commands",
+          "Proactively monitor and handle server-related issues",
+          "Continuously improve and optimize bot performance",
+        ],
+      },
     ],
     []
   );
