@@ -2,7 +2,18 @@ import Footer from "../components/footer";
 import { useState, useEffect, useMemo } from "react";
 import Header from "../components/header";
 import Socials from "../components/socials";
-import { Box, Flex, Wrap, Text, chakra } from "@chakra-ui/react";
+import {
+  Image,
+  Button,
+  Link,
+  Heading,
+  Tooltip,
+  Box,
+  Flex,
+  Wrap,
+  Text,
+  chakra,
+} from "@chakra-ui/react";
 import JoinTeamLanding from "../components/join-team-landing";
 import JobPostingCard from "../components/job-card";
 
@@ -17,9 +28,8 @@ export default function JoinTeam() {
         application: "https://forms.gle/NXQomJvT7dmCq8nU9",
         department: "Technology",
         responsibility: [
-          "Develop the Website",
-          "Attend all required meetings",
-          "Implement designs and complete tasks using NodeJS, CSS, Next.js/React.js, and more",
+          "Contribute to the development and maintenance of the website",
+          "Execute designs and assignments utilizing a comprehensive array of cutting-edge technologies such as NodeJS, CSS, Next.js/React.js and more",
         ],
       },
       {
@@ -27,19 +37,17 @@ export default function JoinTeam() {
         application: "https://forms.gle/wAPeXbta2oE1WNMz6",
         department: "Marketing",
         responsibility: [
-          "Create engaging content for the audience",
-          "Complete the designated amount of tasks per week using Canva, Photoshop, etc.",
-          "Attend all required meetings",
+          "Conceptualize and craft compelling content that resonates with the target audience",
+          "Deftly utilizing various graphic design platforms such as Canva, Photoshop, etc. to accomplish a set number of tasks per week",
         ],
       },
       {
-        role: "Course Instructor",
+        role: "Coding Course Instructor",
         application: "https://forms.gle/q4m3r724RMQvP7F66",
         department: "Education",
         responsibility: [
-          "Complete a designated programming course from start to finish",
-          "Work on creating programming lessons in English",
-          "Proficient in multiple programming languages",
+          "Utilize acquired knowledge to craft polished and instructive programming lessons in the English language",
+          "Create and maintain a comprehensive and up-to-date curriculum",
         ],
       },
       {
@@ -47,9 +55,9 @@ export default function JoinTeam() {
         application: "https://forms.gle/GUD5T4cAPpRy2JYY6",
         department: "Human Resources",
         responsibility: [
-          "Maintain staff information logs",
-          "Recruit new volunteers",
-          "Update staff information documents",
+          "Curate meticulous records of personnel information",
+          "Actively seek out and onboard new volunteer associates",
+          "Ensure the timely and accurate updating of all staff-related documentation",
         ],
       },
       {
@@ -57,9 +65,9 @@ export default function JoinTeam() {
         application: "https://forms.gle/L4SN4CjxtUjijN9h6",
         department: "Marketing",
         responsibility: [
-          "Create videos to entertain programmers",
-          "Edit content using advanced video editing software",
-          "Research content ideas",
+          "Craft visually stunning and engaging video content to delight and entertain the programming community",
+          "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
+          "Conduct extensive research to identify and develop novel and compelling ideas.",
         ],
       },
       {
@@ -67,9 +75,27 @@ export default function JoinTeam() {
         application: "https://forms.gle/tqeJKWVQBCp52xi47",
         department: "Marketing",
         responsibility: [
-          "Create Youtube shorts to entertain programmers",
-          "Edit content using advanced video editing software",
-          "Research new techniques on how to create engaging content",
+          "Conceive and produce visually captivating and entertaining Youtube shorts for the programming community",
+          "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
+        ],
+      },
+      {
+        role: "Outreach Associate",
+        application: "https://forms.gle/WhdUNtTjnNShN3wXA",
+        department: "Human Resources",
+        responsibility: [
+          "Developing and implementing outreach strategies to reach new and diverse audiences",
+          "Representing the organization at community events and meetings",
+          "Contact famous software engineers/entrepreneurs to participate in TO Talks",
+        ],
+      },
+      {
+        role: "Proof-reader",
+        application: "https://forms.gle/EBVmKkgeJVxAXNPBA",
+        department: "Human Resources",
+        responsibility: [
+          "Curate and elevate the verbiage and language used in digital mediums, such as the organizations website and social media platforms",
+          " Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
         ],
       },
       {
@@ -99,44 +125,106 @@ export default function JoinTeam() {
   return (
     <>
       <Header />
-      <Box position="relative" bottom="20px" top="-200px" overflow="hidden">
-        <Flex display={["none", "block"]}>
-          <JoinTeamLanding />
-        </Flex>
-        <Text id="jobs"></Text>
-        <form>
-          <chakra.input
-            type="text"
-            onChange={(e) => setSearchQuery(e.target.value)}
-            value={searchQuery}
-            placeholder="Search..."
-            borderRadius={"10px"}
-            padding="12px 20px"
-            backgroundColor={"blue.500"}
-            margin="auto"
-            color="white"
-          />
-        </form>
-        <Wrap
-          maxW={"1200px"}
-          margin={"auto"}
-          direction="row"
-          justify="center"
-          spacing={"30px"}
-          zIndex="100"
-          marginTop={["150px", "0px"]}
+
+      <Flex display={["none", "block"]}>
+        <Box
+          height={"80vh"}
+          backgroundImage={"/desk-modified.png"}
+          backgroundSize={"cover"}
+          backgroundPosition={"center"}
+          backdropFilter={"blur(10px)"}
         >
-          {filteredCards.map((cardInfo) => (
-            <JobPostingCard
-              key={cardInfo}
-              role={cardInfo.role}
-              application={cardInfo.application}
-              department={cardInfo.department}
-              responsibility={cardInfo.responsibility}
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <Box
+            marginX="auto"
+            className="missionbg"
+            borderRadius={"20px"}
+            maxWidth="800px"
+            padding="1.3rem 2rem"
+            opacity={".95"}
+          >
+            <Flex alignItems={"center"}>
+              <Flex direction={"column"}>
+                <Heading fontSize={"6xl"} color={"blue.100"}>
+                  Join the Team
+                </Heading>
+                <Text mt=".3rem" mb="1rem" fontSize={"lg"} color={"blue.200"}>
+                  Join our team and become a catalyst for positive change,
+                  impacting the lives of programmers globally.
+                </Text>
+                <Link
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                  href="#jobs"
+                >
+                  <Button
+                    mr={"18px"}
+                    px={"25px"}
+                    borderRadius={"20px"}
+                    colorScheme={"blue"}
+                    fontWeight="light"
+                  >
+                    {" "}
+                    Search for volunteer opportunities
+                  </Button>
+                </Link>
+              </Flex>
+              <Flex>
+                <Image src="puzzle.png" />
+              </Flex>
+            </Flex>
+          </Box>
+        </Box>
+      </Flex>
+      <Text id="jobs"></Text>
+      <Flex justify={"center"}>
+        <chakra.form justify="center" my="2rem">
+          <Tooltip
+            placement="right"
+            label="Try searching for Marketing, or Tech"
+          >
+            <chakra.input
+              justify="center"
+              type="text"
+              onChange={(e) => setSearchQuery(e.target.value)}
+              value={searchQuery}
+              placeholder="Search by department..."
+              borderRadius={"10px"}
+              padding="12px 20px"
+              backgroundColor={"blue.500"}
+              margin="auto !important"
+              color="white"
             />
-          ))}
-        </Wrap>
-      </Box>
+          </Tooltip>
+        </chakra.form>
+      </Flex>
+      <Wrap
+        mb="5rem !important"
+        maxW={"1200px"}
+        margin={"auto"}
+        direction="row"
+        justify="center"
+        spacing={"30px"}
+        zIndex="100"
+        marginTop={["150px", "5px"]}
+      >
+        {filteredCards.map((cardInfo) => (
+          <JobPostingCard
+            key={cardInfo}
+            role={cardInfo.role}
+            application={cardInfo.application}
+            department={cardInfo.department}
+            responsibility={cardInfo.responsibility}
+          />
+        ))}
+      </Wrap>
+
       <Socials />
       <Footer />
     </>
