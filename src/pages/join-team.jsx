@@ -39,7 +39,6 @@ export default function JoinTeam() {
         responsibility: [
           "Conceptualize and craft compelling content that resonates with the target audience",
           "Deftly utilizing various graphic design platforms such as Canva, Photoshop, etc. to accomplish a set number of tasks per week",
- 
         ],
       },
       {
@@ -49,8 +48,6 @@ export default function JoinTeam() {
         responsibility: [
           "Utilize acquired knowledge to craft polished and instructive programming lessons in the English language",
           "Create and maintain a comprehensive and up-to-date curriculum",
-          
-          
         ],
       },
       {
@@ -59,7 +56,7 @@ export default function JoinTeam() {
         department: "Human Resources",
         responsibility: [
           "Curate meticulous records of personnel information",
-           "Actively seek out and onboard new volunteer associates",
+          "Actively seek out and onboard new volunteer associates",
           "Ensure the timely and accurate updating of all staff-related documentation",
         ],
       },
@@ -70,7 +67,7 @@ export default function JoinTeam() {
         responsibility: [
           "Craft visually stunning and engaging video content to delight and entertain the programming community",
           "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
-          "Conduct extensive research to identify and develop novel and compelling ideas."
+          "Conduct extensive research to identify and develop novel and compelling ideas.",
         ],
       },
       {
@@ -80,7 +77,25 @@ export default function JoinTeam() {
         responsibility: [
           "Conceive and produce visually captivating and entertaining Youtube shorts for the programming community",
           "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
-
+        ],
+      },
+      {
+        role: "Outreach Associate",
+        application: "https://forms.gle/WhdUNtTjnNShN3wXA",
+        department: "Human Resources",
+        responsibility: [
+          "Developing and implementing outreach strategies to reach new and diverse audiences",
+          "Representing the organization at community events and meetings",
+          "Contact famous software engineers/entrepreneurs to participate in TO Talks",
+        ],
+      },
+      {
+        role: "Proof-reader",
+        application: "https://forms.gle/EBVmKkgeJVxAXNPBA",
+        department: "Human Resources",
+        responsibility: [
+          "Curate and elevate the verbiage and language used in digital mediums, such as the organizations website and social media platforms",
+          " Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
         ],
       },
     ],
@@ -128,12 +143,7 @@ export default function JoinTeam() {
                 <Heading fontSize={"6xl"} color={"blue.100"}>
                   Join the Team
                 </Heading>
-                <Text
-                  mt=".3rem"
-                  mb="1rem"
-                  fontSize={"lg"}
-                  color={"blue.200"}
-                >
+                <Text mt=".3rem" mb="1rem" fontSize={"lg"} color={"blue.200"}>
                   Join our team and become a catalyst for positive change,
                   impacting the lives of programmers globally.
                 </Text>
@@ -185,7 +195,7 @@ export default function JoinTeam() {
         </chakra.form>
       </Flex>
       <Wrap
-      mb="5rem !important"
+        mb="5rem !important"
         maxW={"1200px"}
         margin={"auto"}
         direction="row"
@@ -205,7 +215,7 @@ export default function JoinTeam() {
         ))}
       </Wrap>
 
-      <Socials  />
+      <Socials />
       <Footer />
     </>
   );
