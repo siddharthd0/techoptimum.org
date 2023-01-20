@@ -98,6 +98,16 @@ export default function JoinTeam() {
           " Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
         ],
       },
+      {
+        role: "Discord Bot Developer",
+        application: "https://forms.gle/WzU1TMsQ7WP18UcE6",
+        department: "Technology",
+        responsibility: [
+          "Implement advanced and dynamic bot commands",
+          "Proactively monitor and handle server-related issues",
+          "Continuously improve and optimize bot performance",
+        ],
+      },
     ],
     []
   );
