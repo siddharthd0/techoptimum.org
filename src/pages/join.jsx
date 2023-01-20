@@ -17,7 +17,7 @@ export default function Join() {
     <>
       <Header />
       <Box
-        height={"80vh"}
+        height={["90vh", "80vh"]}
         backgroundImage={"/join-landing.png"}
         backgroundSize={"cover"}
         backgroundPosition={"center"}
@@ -30,21 +30,21 @@ export default function Join() {
         <br />
         <br />
         <Box
-          marginX="auto"
+          marginX={["2rem", "auto"]}
           className="greenbg"
           borderRadius={"20px"}
           maxWidth="800px"
           padding="2rem"
           opacity={".95"}
         >
-          <Heading fontSize={"6xl"} color={"blue.900"}>
+          <Heading fontSize={["4xl", "6xl"]} color={"blue.900"}>
             We are Tech Optimum
           </Heading>
           <Text
             mt=".5rem"
             mb="1rem"
             maxW={"70%"}
-            fontSize={"xl"}
+            fontSize={["md", "xl"]}
             color={"blue.900"}
           >
             A platform where you can innovate, learn, create, and share your
@@ -75,6 +75,7 @@ export default function Join() {
             isExternal
           >
             <Button
+              mt={["1rem", "0"]}
               px={"25px"}
               borderRadius={"20px"}
               colorScheme={"teal"}

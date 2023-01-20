@@ -11,7 +11,7 @@ export default function Hackathons() {
     <>
       <Header />
       <Box
-        height={"80vh"}
+        height={["90vh","80vh"]}
         backgroundImage={"/hackathon-projects-background-modified.png"}
         backgroundSize={"cover"}
         backgroundPosition={"center"}
@@ -24,18 +24,18 @@ export default function Hackathons() {
         <br />
         <br />
         <Box
-          marginX="auto"
+          marginX={["2rem","auto"]}
           className="missionbg"
           borderRadius={"20px"}
           maxWidth="800px"
           padding="2rem"
           opacity={".948"}
         >
-          <Text fontSize={"4xl"}>Welcome to</Text>
-          <Heading color="primary" fontSize="6xl">
+          <Text fontSize={["2xl","4xl"]}>Welcome to</Text>
+          <Heading color="primary" fontSize={["4xl","6xl"]}>
             Tech Optimum Hacks
           </Heading>
-          <Text fontSize={"xl"}>
+          <Text fontSize={["md","xl"]}>
             A 48-hour hackathon where you can explore your coding potential.
             Come join us in July 2023 for Tech Optimum Hacks 2023!
           </Text>

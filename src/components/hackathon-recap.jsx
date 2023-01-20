@@ -24,13 +24,13 @@ export default function HackathonRecap() {
       <Flex id="recap" direction="column" marginBottom={"3rem"} align="center">
         <Heading
           fontWeight={"100"}
-          fontSize={"5xl"}
+          fontSize={["3xl", "5xl"]}
           maxW={"1000px"}
           lineHeight="medium"
           textAlign={"center"}
         >
           <Highlight
-            query={["2022", "Tech Optimum Hacks 2022:"]}
+            query={["2022", "Tech Optimum"]}
             styles={{
               px: "14px",
               py: "10px",
@@ -52,7 +52,7 @@ export default function HackathonRecap() {
           maxWidth={"570px"}
           className="missionbg"
           height={["120px", "150px"]}
-          margin={"1rem auto"}  
+          margin={"1rem auto"}
           borderRadius={"36px"}
           paddingTop={"1rem"}
           as={motion.div}

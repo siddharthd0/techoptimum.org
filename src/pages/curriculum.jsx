@@ -122,7 +122,7 @@ export default function Curriculm() {
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
           h={["230px", "265px"]}
-        
+         mt={["2rem", "0rem"]}
           marginRight={["2rem", "0rem"]}
         >
           <Heading

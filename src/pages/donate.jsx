@@ -176,14 +176,14 @@ export default function Donate() {
                 <Flex ml="2rem" direction="column">
                   <StatNumber fontSize={"4xl"}>40%</StatNumber>
                   <StatHelpText mt="-7px">
-             
                     goes towards organization maintance and online subscriptions{" "}
                   </StatHelpText>
-                  
                 </Flex>
                 <Flex ml="2rem" direction="column">
                   <StatNumber fontSize={"4xl"}>40%</StatNumber>
-                  <StatHelpText mt="-7px">goes directly towards our mission</StatHelpText>
+                  <StatHelpText mt="-7px">
+                    goes directly towards our mission
+                  </StatHelpText>
                 </Flex>
               </Flex>
             </Stat>
@@ -242,13 +242,14 @@ export default function Donate() {
         <Flex
           mb="10px !important"
           direction="column"
-          margin={"auto"}
+          margin={["1.5rem","auto"]}
           maxWidth={"900px"}
+
         >
           <Heading
             mb="10px"
             color="primary"
-            fontSize={["xl", "4xl"]}
+            fontSize={["3xl", "4xl"]}
             id="testimonials"
             fontWeight={"100"}
             ml={["2rem", "0rem"]}
@@ -257,32 +258,31 @@ export default function Donate() {
           </Heading>
           <ul className="initatives-list">
             <li>
-              Bring computer science skills to high schoolers and college students worldwide through providing more courses
+              Bring computer science skills to high schoolers and college
+              students worldwide through providing more courses
             </li>
             <li>
               Make us one step closer to closing the gap in the digital divide
             </li>
+            <li>Allow us to grow our team</li>
             <li>
-              Allow us to grow our team
+              Help us host better hackathons with more prizes and resources for
+              participants
             </li>
             <li>
-              Help us host better hackathons with more prizes and resources for participants
+              Let us use better online products to develop things like our
+              websites and services (e.g. Figma premium, Notion premium, etc.)
             </li>
-            <li>
-              Let us use better online products to develop things like our websites and services (e.g. Figma premium, Notion premium, etc.)
-            </li>
-            <li>
-              Insipre teenagers to pursue computer science and technology
-            </li>
+            <li>Insipre teenagers to pursue computer science and technology</li>
           </ul>
         </Flex>
-        
+
         <Center flexDir={"column"}>
-          
-          <Box>
-          <Divider my="1.5rem"/>
-            
+          <Box mx={["2rem", "0rem"]}>
+            <Divider my="1.5rem" />
+
             <Text
+            mx={["2rem", "0rem"]}
               mb="1rem"
               fontSize={["md", "lg"]}
               fontWeight={"100"}
@@ -291,22 +291,22 @@ export default function Donate() {
               The Tech Optimum team greatly appreciates your consideration for a
               donation,
             </Text>
-            <Flex>
-              <Text>
+            <Flex direction={["column", "row"]}>
+            <Text mb={["1rem", "0rem"]} ml={["3rem","0rem"]}>
                 <Image />
                 <Text>
                   Siddharth Duggal, <br />
                   Founder & CEO
                 </Text>
               </Text>
-              <Text ml="2rem">
+              <Text mb={["1rem", "0rem"]}ml={["3rem","2rem"]}>
                 <Image />
                 <Text>
                   Pranith Molakalapalli,
                   <br /> Chief Technology Officer
                 </Text>
               </Text>
-              <Text ml="10rem">
+              <Text ml={["3rem","10rem"]}>
                 <Image />
                 <Text>
                   For any questions, please send an email to <br />{" "}
@@ -316,7 +316,6 @@ export default function Donate() {
                 </Text>
               </Text>
             </Flex>
-            
           </Box>
           <Button
             mb="2rem"

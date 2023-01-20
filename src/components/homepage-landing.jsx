@@ -60,7 +60,7 @@ export default function HeroHeader() {
         <Container
           maxWidth={["290px", "500px", "800px"]}
           backgroundColor="#29368C"
-          height={["330px", "150px"]}
+          height={["395px", "150px"]}
           borderRadius={"25px"}
           marginTop={"3rem"}
           as={motion.div}
@@ -130,7 +130,7 @@ export default function HeroHeader() {
               <br /> Community Members
             </Heading>
             <Link
-              marginBottom={["2rem", "0rem"]}
+   
               marginTop={["1.6rem", "0rem"]}
               href="./join"
               transition="500ms"

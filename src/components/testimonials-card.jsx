@@ -40,12 +40,13 @@ export default function TestimonialCard() {
         flexWrap={"wrap"}
         gap={10}
         mb={"60px"}
+        px="2rem"
       >
         {testimonials.map((testimonial, i) => (
           <Box
             mt="20px"
             key={i}
-            w="md"
+            maxW="400px"
             py={4}
             px={8}
             bg="#29368C"

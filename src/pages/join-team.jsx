@@ -116,9 +116,9 @@ export default function JoinTeam() {
     <>
       <Header />
 
-      <Flex display={["none", "block"]}>
+      <Flex>
         <Box
-          height={"80vh"}
+          height={["90vh", "80vh"]}
           backgroundImage={"/desk-modified.png"}
           backgroundSize={"cover"}
           backgroundPosition={"center"}
@@ -131,19 +131,25 @@ export default function JoinTeam() {
           <br />
           <br />
           <Box
-            marginX="auto"
+            mx={["2rem", "auto"]}
             className="missionbg"
             borderRadius={"20px"}
             maxWidth="800px"
-            padding="1.3rem 2rem"
+            padding="1rem 2rem"
             opacity={".95"}
           >
             <Flex alignItems={"center"}>
               <Flex direction={"column"}>
-                <Heading fontSize={"6xl"} color={"blue.100"}>
+                <Heading fontSize={["4xl", "6xl"]} color={"blue.100"}>
                   Join the Team
                 </Heading>
-                <Text mt=".3rem" mb="1rem" fontSize={"lg"} color={"blue.200"}>
+                <Text
+                  pr=".5rem"
+                  mt=".3rem"
+                  mb="1rem"
+                  fontSize={["sm", "lg"]}
+                  color={"blue.200"}
+                >
                   Join our team and become a catalyst for positive change,
                   impacting the lives of programmers globally.
                 </Text>
@@ -195,6 +201,7 @@ export default function JoinTeam() {
         </chakra.form>
       </Flex>
       <Wrap
+      mx={["2rem !important", "0"]}
         mb="5rem !important"
         maxW={"1200px"}
         margin={"auto"}
@@ -202,7 +209,7 @@ export default function JoinTeam() {
         justify="center"
         spacing={"30px"}
         zIndex="100"
-        marginTop={["150px", "5px"]}
+        marginTop={["10px", "5px"]}
       >
         {filteredCards.map((cardInfo) => (
           <JobPostingCard

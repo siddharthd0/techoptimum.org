@@ -123,10 +123,11 @@ export default function About() {
           alignContent={"center"}
           mb="4rem"
           borderRadius={"14px"}
-          width={"400px"}
+          maxWidth={"400px"}
           className="missionbg"
           padding="24px"
           textAlign={"center"}
+          mx="2rem"
         >
           <Heading
             color="primary"
