@@ -30,7 +30,7 @@ export default function Donate() {
       <Header />
       <Box
         className="donatebg"
-        height={["90vh", "67vh"]}
+        height={["100vh", "67vh"]}
         backgroundPosition={"center"}
         backdropFilter={"blur(10px)"}
       >
