@@ -42,8 +42,7 @@ html {
 .donate-li {
   background-color: #2e54ab !important;
   color: White !important;
-  padding: 5px 14px 5px 14px;
-  margin-left: 12px;
+
 }
 
 .donate-li:hover {
@@ -514,4 +513,34 @@ input:focus {
   right: 0;
   width: 84%;
   height: 100%
+}
+.donatebg {
+  background: linear-gradient(46deg, #2c5aa7, #060a29, #13696e, #060e17);
+  background-size: 800% 800%;
+
+  -webkit-animation: cool-animation 23s ease infinite;
+  -moz-animation: cool-animation 23s ease infinite;
+  -o-animation: cool-animation 23s ease infinite;
+  animation: cool-animation 23s ease infinite;
+}
+
+@-webkit-keyframes cool-animation {
+  0%{background-position:0% 66%}
+  50%{background-position:100% 35%}
+  100%{background-position:0% 66%}
+}
+@-moz-keyframes cool-animation {
+  0%{background-position:0% 66%}
+  50%{background-position:100% 35%}
+  100%{background-position:0% 66%}
+}
+@-o-keyframes cool-animation {
+  0%{background-position:0% 66%}
+  50%{background-position:100% 35%}
+  100%{background-position:0% 66%}
+}
+@keyframes cool-animation { 
+  0%{background-position:0% 66%}
+  50%{background-position:100% 35%}
+  100%{background-position:0% 66%}
 }

@@ -22,33 +22,41 @@ import { FaDollarSign } from "react-icons/fa";
 import TestimonialCard from "../components/testimonials-card";
 import { SlRocket } from "react-icons/sl";
 import { MdAttachMoney, MdOutlinePeopleAlt } from "react-icons/md";
+import { TbHeartHandshake} from "react-icons/tb";
 
 export default function Donate() {
   return (
     <>
       <Header />
-      <Box pt={["0px", "30px"]}>
-        <Center flexDirection={"column"}>
-          <Heading
-            data-aos-delay="400"
-            data-aos="fade-up-right"
-            mt={["2rem", "2rem"]}
-            color="primary"
-            fontSize={["5xl", "6xl"]}
-          >
-            Donations
+      <Box
+        className="donatebg"
+        height={["90vh", "67vh"]}
+        backgroundPosition={"center"}
+        backdropFilter={"blur(10px)"}
+      >
+        <br />
+        <br />
+        <br />
+        <br />
+        <Box
+          marginX={["2rem", "10rem"]}
+          borderRadius={"20px"}
+          maxWidth="1000px"
+          padding="2rem"
+        >
+          <Heading color="white" fontSize={["4xl", "6xl"]}>
+            Donate to Tech Optimum
           </Heading>
-          <Flex
-            justifyContent="center"
-            padding="15px 0"
-            direction={["column", "row"]}
-            alignItems="center"
-            borderBottom={"1px "}
-            borderBottomColor="blue.500"
-            borderBottomWidth="1px !important"
-            width={"70%"}
-          >
-            <Flex mb="10px" marginTop={["1.5rem", "0px"]} textAlign={"center"}>
+          <Text fontSize={["sm", "sm"]}>
+            Your contribution is tax-deductible.
+          </Text>
+
+          <Text fontSize={["sm", "sm"]}>
+            Tech Optimum is a 501(c)(3) nonprofit organization, EIN: 88-3677650
+          </Text>
+
+          <Flex marginLeft={"-15px"} padding="18px 0" direction={["column", "row"]}>
+            <Flex mb="10px" marginTop={["1.5rem", "0px"]}>
               <nav>
                 <ul className="nav-links">
                   <Link className="link-navs" href="#mission">
@@ -69,7 +77,7 @@ export default function Donate() {
                       </Tooltip>
                     </li>
                   </Link>
-                  <Link href="#my-money">
+                  <Link className="link-navs" href="#my-money">
                     <li>
                       <Tooltip
                         openDelay={175}
@@ -87,7 +95,7 @@ export default function Donate() {
                       </Tooltip>
                     </li>
                   </Link>
-                  <Link href="#testimonials">
+                  <Link className="link-navs" href="#testimonials">
                     <li>
                       <Tooltip
                         openDelay={175}
@@ -95,6 +103,7 @@ export default function Donate() {
                         placement="bottom"
                       >
                         <Button
+                          mt={"1rem"}
                           className="link-navs  donate-li"
                           color="primary"
                           rightIcon={
@@ -106,11 +115,34 @@ export default function Donate() {
                       </Tooltip>
                     </li>
                   </Link>
+                  <Link className="link-navs" href="#donate-now">
+                    <li>
+                      <Tooltip
+                        openDelay={175}
+                        label="The affect your donation will have "
+                        placement="bottom"
+                      >
+                        <Button
+                          mt={"1rem"}
+                          className="link-navs  donate-li"
+                          color="primary"
+                          rightIcon={
+                            <TbHeartHandshake className="donate-icons" />
+                          }
+                        >
+                          Donate now
+                        </Button>
+                      </Tooltip>
+                    </li>
+                  </Link>
                 </ul>
               </nav>
             </Flex>
           </Flex>
-        </Center>
+        </Box>
+      </Box>
+      <Box pt={["0px", "30px"]}>
+        <Center flexDirection={"column"}></Center>
         <Flex
           mt="3rem !important"
           margin={"auto"}
@@ -317,6 +349,7 @@ export default function Donate() {
             </Flex>
           </Box>
           <Button
+          id="donate-now"
             mb="2rem"
             fontSize={["md", "lg"]}
             mt={"3rem"}
@@ -338,7 +371,7 @@ export default function Donate() {
           <Text fontSize={["md", "lg"]} fontWeight={"100"} color="primary">
             Or, you can donate by filling out the form below
           </Text>
-          <br/>
+          <br />
 
           <div className="iframe-div">
             <iframe
