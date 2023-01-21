@@ -242,9 +242,8 @@ export default function Donate() {
         <Flex
           mb="10px !important"
           direction="column"
-          margin={["1.5rem","auto"]}
+          margin={["1.5rem", "auto"]}
           maxWidth={"900px"}
-
         >
           <Heading
             mb="10px"
@@ -273,7 +272,7 @@ export default function Donate() {
               Let us use better online products to develop things like our
               websites and services (e.g. Figma premium, Notion premium, etc.)
             </li>
-            <li>Insipre teenagers to pursue computer science and technology</li>
+            <li>Inspire teenagers to pursue computer science and technology</li>
           </ul>
         </Flex>
 
@@ -282,7 +281,7 @@ export default function Donate() {
             <Divider my="1.5rem" />
 
             <Text
-            mx={["2rem", "0rem"]}
+              mx={["2rem", "0rem"]}
               mb="1rem"
               fontSize={["md", "lg"]}
               fontWeight={"100"}
@@ -292,21 +291,21 @@ export default function Donate() {
               donation,
             </Text>
             <Flex direction={["column", "row"]}>
-            <Text mb={["1rem", "0rem"]} ml={["3rem","0rem"]}>
+              <Text mb={["1rem", "0rem"]} ml={["3rem", "0rem"]}>
                 <Image />
                 <Text>
                   Siddharth Duggal, <br />
                   Founder & CEO
                 </Text>
               </Text>
-              <Text mb={["1rem", "0rem"]}ml={["3rem","2rem"]}>
+              <Text mb={["1rem", "0rem"]} ml={["3rem", "2rem"]}>
                 <Image />
                 <Text>
                   Pranith Molakalapalli,
                   <br /> Chief Technology Officer
                 </Text>
               </Text>
-              <Text ml={["3rem","10rem"]}>
+              <Text ml={["3rem", "10rem"]}>
                 <Image />
                 <Text>
                   For any questions, please send an email to <br />{" "}
@@ -328,7 +327,7 @@ export default function Donate() {
             _hover={{ bgColor: "primaryButton.600" }}
             onClick={async () => {
               window.open(
-                "https://buy.stripe.com/8wM16Fa934Ce6LS9AA",
+                "https://www.zeffy.com/en-US/donation-form/b47b410e-e84d-438f-bdd9-8b22db51f119",
                 "_blank"
               );
             }}
@@ -336,8 +335,23 @@ export default function Donate() {
             Donate
             {/* Change this to donate maybe?  */}
           </Button>
+          <Text fontSize={["md", "lg"]} fontWeight={"100"} color="primary">
+            Or, you can donate by filling out the form below
+          </Text>
+          <br/>
+
+          <div className="iframe-div">
+            <iframe
+              className="iframe"
+              src="https://www.zeffy.com/en-US/embed/donation-form/b47b410e-e84d-438f-bdd9-8b22db51f119"
+              allowpaymentrequest
+              allowTransparency="true"
+            ></iframe>
+          </div>
         </Center>
       </Box>
+      <br />
+      <br />
       <Socials />
       <Footer />
     </>
