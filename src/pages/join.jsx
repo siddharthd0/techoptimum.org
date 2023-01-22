@@ -37,7 +37,7 @@ export default function Join() {
           padding="2rem"
           opacity={".95"}
         >
-          <Heading fontSize={["4xl", "6xl"]} color={"blue.900"}>
+          <Heading fontSize={["4xl", "6xl"]} color={"blue.100"}>
             We are Tech Optimum
           </Heading>
           <Text
@@ -45,7 +45,7 @@ export default function Join() {
             mb="1rem"
             maxW={"70%"}
             fontSize={["md", "xl"]}
-            color={"blue.900"}
+            color={"blue.200"}
           >
             A platform where you can innovate, learn, create, and share your
             projects with our community.
@@ -60,7 +60,7 @@ export default function Join() {
               mr={"18px"}
               px={"25px"}
               borderRadius={"20px"}
-              colorScheme={"teal"}
+              colorScheme={"blue"}
               fontWeight="light"
             >
               {" "}
@@ -78,7 +78,7 @@ export default function Join() {
               mt={["1rem", "0"]}
               px={"25px"}
               borderRadius={"20px"}
-              colorScheme={"teal"}
+              colorScheme={"green"}
               fontWeight="light"
             >
               {" "}
