@@ -128,7 +128,7 @@ export default function JoinTeam() {
 
       <Flex>
         <Box
-        width={"100%"}
+          width={"100%"}
           height={["90vh", "80vh"]}
           backgroundImage={"/desk-modified.png"}
           backgroundSize={"cover"}
@@ -190,7 +190,7 @@ export default function JoinTeam() {
         </Box>
       </Flex>
       <Text id="jobs"></Text>
-      <Flex  justify={"center"}>
+      <Flex justify={"center"}>
         <chakra.form justify="center" my="2rem">
           <Tooltip
             placement="right"
@@ -212,7 +212,7 @@ export default function JoinTeam() {
         </chakra.form>
       </Flex>
       <Wrap
-      mx={["2rem !important", "auto !important"]}
+        mx={["2rem !important", "auto !important"]}
         mb="5rem !important"
         maxW={"1200px"}
         margin={"auto"}
