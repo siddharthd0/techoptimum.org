@@ -90,7 +90,7 @@ export default function Footer() {
             <Link href="join"> Community</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            <Link href="curriculm"> Courses</Link>
+            <Link href="curriculum"> Courses</Link>
           </Text>
           <Text color="primary" fontSize="md">
             <Link href="discord"> Discord</Link>
