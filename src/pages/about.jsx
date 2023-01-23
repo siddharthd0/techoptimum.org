@@ -109,7 +109,7 @@ export default function About() {
             />
             <Volunteer
             name="Neil Sangra"
-        src="https://cdn.discordapp.com/attachments/1066602167286366289/1066607000361910312/Screen_Shot_2023-01-21_at_11.35.21_PM.png"
+        src="neils.jpg"
             role="HR Associate"
             />
             <Volunteer
