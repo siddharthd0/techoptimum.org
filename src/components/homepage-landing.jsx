@@ -10,7 +10,7 @@ export default function HeroHeader() {
   return (
     <>
       <Flex marginBottom={"100px"} width={"100%"} direction={"column"}>
-        <Flex direction={"column"} marginLeft={["2rem", "9rem"]}>
+        <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
           <Heading
             className="gradient-title"
             fontSize={["4xl", "5xl"]}
