@@ -40,6 +40,9 @@ export default function Header() {
           name="description"
           content="A student-led organization helping and inspiring future leaders of the tech industry worldwide."
         />
+        <meta name="og:title" content="Tech Optimum "></meta>
+        <meta name="og:description" content="A student-led organization dedicated to helping and inspiring the next generation of tech leaders."></meta>
+        <meta name="og:image" content=" /meta.png"></meta>
         <title>Tech Optimum</title>
       </Head>
       <Flex
