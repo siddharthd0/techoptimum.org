@@ -403,6 +403,12 @@ html {
   background-image: url("/curriculm-landing.png");
   height: 70vh;
 }
+.donatebg {
+  background-size: cover;
+  background-image: url("/donate-landing.png");
+  height: 70vh;
+
+}
 
 .joinbg {
   background-size: cover;
@@ -514,15 +520,7 @@ input:focus {
   width: 84%;
   height: 100%
 }
-.donatebg {
-  background: linear-gradient(46deg, #2c5aa7, #060a29, #13696e, #060e17);
-  background-size: 800% 800%;
 
-  -webkit-animation: cool-animation 23s ease infinite;
-  -moz-animation: cool-animation 23s ease infinite;
-  -o-animation: cool-animation 23s ease infinite;
-  animation: cool-animation 23s ease infinite;
-}
 
 @-webkit-keyframes cool-animation {
   0%{background-position:0% 66%}

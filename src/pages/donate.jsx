@@ -22,145 +22,72 @@ import { FaDollarSign } from "react-icons/fa";
 import TestimonialCard from "../components/testimonials-card";
 import { SlRocket } from "react-icons/sl";
 import { MdAttachMoney, MdOutlinePeopleAlt } from "react-icons/md";
-import { TbHeartHandshake} from "react-icons/tb";
+import { TbHeartHandshake } from "react-icons/tb";
 
 export default function Donate() {
   return (
     <>
       <Header />
-      <Box
-        className="donatebg"
-        height={["100vh", "67vh"]}
-        backgroundPosition={"center"}
-        backdropFilter={"blur(10px)"}
-      >
-        <br />
-        <br />
-        <br />
-        <br />
-        <Box
-          marginX={["2rem", "10rem"]}
-          borderRadius={"20px"}
-          maxWidth="1000px"
-          padding="2rem"
-        >
-          <Heading color="white" fontSize={["4xl", "6xl"]}>
-            Donate to Tech Optimum
-          </Heading>
-          <Text fontSize={["sm", "sm"]}>
-            Your contribution is tax-deductible.
-          </Text>
-
-          <Text fontSize={["sm", "sm"]}>
-            Tech Optimum is a 501(c)(3) nonprofit organization, EIN: 88-3677650
-          </Text>
-
-          <Flex marginLeft={"-15px"} padding="18px 0" direction={["column", "row"]}>
-            <Flex mb="10px" marginTop={["1.5rem", "0px"]}>
-              <nav>
-                <ul className="nav-links">
-                  <Link className="link-navs" href="#mission">
-                    <li>
-                      <Tooltip
-                        openDelay={175}
-                        label="Learn more about Tech Optimum's goal "
-                        placement="bottom"
-                      >
-                        <Button
-                          mb={["1rem !important", "0rem !important"]}
-                          className="link-navs  donate-li"
-                          color="primary"
-                          rightIcon={<SlRocket className="donate-icons" />}
-                        >
-                          What is our mission?
-                        </Button>
-                      </Tooltip>
-                    </li>
-                  </Link>
-                  <Link className="link-navs" href="#my-money">
-                    <li>
-                      <Tooltip
-                        openDelay={175}
-                        label="The breakdown of your donation "
-                        placement="bottom"
-                      >
-                        <Button
-                          mb={["1rem !important", "0rem !important"]}
-                          className="link-navs  donate-li"
-                          color="primary"
-                          rightIcon={<MdAttachMoney className="donate-icons" />}
-                        >
-                          Where will my money go?
-                        </Button>
-                      </Tooltip>
-                    </li>
-                  </Link>
-                  <Link className="link-navs" href="#testimonials">
-                    <li>
-                      <Tooltip
-                        openDelay={175}
-                        label="The affect your donation will have "
-                        placement="bottom"
-                      >
-                        <Button
-                          mt={"1rem"}
-                          className="link-navs  donate-li"
-                          color="primary"
-                          rightIcon={
-                            <MdOutlinePeopleAlt className="donate-icons" />
-                          }
-                        >
-                          What do members at Tech Optimum say?
-                        </Button>
-                      </Tooltip>
-                    </li>
-                  </Link>
-                  <Link className="link-navs" href="#donate-now">
-                    <li>
-                      <Tooltip
-                        openDelay={175}
-                        label="The affect your donation will have "
-                        placement="bottom"
-                      >
-                        <Button
-                          mt={"1rem"}
-                          className="link-navs  donate-li"
-                          color="primary"
-                          rightIcon={
-                            <TbHeartHandshake className="donate-icons" />
-                          }
-                        >
-                          Donate now
-                        </Button>
-                      </Tooltip>
-                    </li>
-                  </Link>
-                </ul>
-              </nav>
-            </Flex>
-          </Flex>
-        </Box>
-      </Box>
-      <Box pt={["0px", "30px"]}>
-        <Center flexDirection={"column"}></Center>
-        <Flex
-          mt="3rem !important"
-          margin={"auto"}
-          maxWidth={"900px"}
-          direction={["column", "row"]}
-          alignItems={"center"}
-          id="mission"
-        >
-          <Flex ml={["2rem", "0rem"]} direction={"column"}>
+      <Box className="donatebg">
+        <Flex direction={["column", "row"]}>
+          <Flex
+            marginLeft={["2rem", "7rem"]}
+            marginTop={["3.5rem", "8rem"]}
+            direction={"column"}
+            maxWidth={["90%", "50%"]}
+          >
             <Heading
-              fontWeight={"100"}
-              mb="8px"
-              fontSize={"4xl"}
-              color={"primary"}
+              fontSize={["3xl", "5xl"]}
+              color="primary"
+              marginBottom={".75rem"}
             >
+              {" "}
+              Donate to Tech Optimum
+            </Heading>
+            <Text fontSize={["sm", "md"]} maxWidth="80%" marginBottom=".25rem">
+              Tech Optimum is dedicated to influencing the next generation of
+              tech leaders through providing free educational resources and
+              mentorship. We are a 501(c)(3) nonprofit organization and your
+              donations is tax-deductible.
+            </Text>
+            <Text marginBottom="1rem">EIN: 88-3677650</Text>
+            <Link
+              _hover={{
+                textDecoration: "none",
+              }}
+              href="#web-dev"
+            >
+              <Button
+                onClick={async () => {
+                  window.open(
+                    "https://www.zeffy.com/en-US/donation-form/b47b410e-e84d-438f-bdd9-8b22db51f119",
+                    "_blank"
+                  );
+                }}
+                rightIcon={<FaDollarSign fontWeight={"100"} />}
+                px="24px"
+                fontWeight={"light"}
+                colorScheme="buttonBg"
+              >
+                Donate Now
+              </Button>
+            </Link>
+          </Flex>
+          <Box
+            display={["none", "block"]}
+            borderRadius={"15px"}
+            height="300px"
+            mr="5rem  "
+            backgroundColor={"#2E3569"}
+            marginTop={"6.25rem"}
+            marginLeft={["4rem", "5rem"]}
+            direction={"column"}
+            padding={"1.5rem"}
+          >
+            <Heading mb="8px" fontSize={"4xl"} color={"primary"}>
               Our Mission:
             </Heading>
-            <Text maxWidth={"500px"}>
+            <Text fontSize={["sm", "md"]}  maxWidth={"600px"}>
               More than one-third of the world&apos;s population especially
               students continues to be excluded from technology because of the
               digital divide. We offer students in need accessible resources,
@@ -168,27 +95,21 @@ export default function Donate() {
               to learn more about their passion. We envision a diverse community
               that strives for inclusion in the technology industry.
             </Text>
-          </Flex>
-          <Flex direction={"column"}>
-            <Image
-              mt={["2rem", "0rem"]}
-              ml={["-1rem", "4rem"]}
-              maxW={["250px", "300px"]}
-              src="/mission-blue-abstract.png"
-            />
-          </Flex>
+            <br />
+          </Box>
         </Flex>
-
+      </Box>
+      <Box pt={["0px", "30px"]}>
         <Flex
           mt="4rem !important"
           margin={"auto"}
-          maxWidth={"900px"}
+          maxWidth={"1070px"}
           direction={["column", "row"]}
           alignItems={"center"}
           id="my-money"
         >
           <Flex direction={["column", "row"]}>
-            <Stat>
+            {/*  <Stat>
               <Heading
                 ml={["2rem", "0rem"]}
                 color={"primary"}
@@ -218,8 +139,8 @@ export default function Donate() {
                   </StatHelpText>
                 </Flex>
               </Flex>
-            </Stat>
-            <Flex mt={["3rem", "0rem"]} maxW={"400px"} ml={["2rem", "5rem"]}>
+            </Stat> */}
+            <Flex mt={["3rem", "0rem"]} ml={["2rem", "5rem"]}>
               <Box px="14px">
                 <Heading
                   mb="10px"
@@ -254,6 +175,12 @@ export default function Donate() {
                 </ul>
               </Box>
             </Flex>
+            <Image
+              mt={["2rem", "0rem"]}
+              ml={["-1rem", "4rem"]}
+              maxW={["250px", "300px"]}
+              src="/mission-blue-abstract.png"
+            />
           </Flex>
           <Flex direction={"column"}></Flex>
         </Flex>
@@ -349,7 +276,7 @@ export default function Donate() {
             </Flex>
           </Box>
           <Button
-          id="donate-now"
+            id="donate-now"
             mb="2rem"
             fontSize={["md", "lg"]}
             mt={"3rem"}
@@ -368,19 +295,6 @@ export default function Donate() {
             Donate
             {/* Change this to donate maybe?  */}
           </Button>
-          <Text fontSize={["md", "lg"]} fontWeight={"100"} color="primary">
-            Or, you can donate by filling out the form below
-          </Text>
-          <br />
-
-          <div className="iframe-div">
-            <iframe
-              className="iframe"
-              src="https://www.zeffy.com/en-US/embed/donation-form/b47b410e-e84d-438f-bdd9-8b22db51f119"
-              allowpaymentrequest
-              allowTransparency="true"
-            ></iframe>
-          </div>
         </Center>
       </Box>
       <br />
