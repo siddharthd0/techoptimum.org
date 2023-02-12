@@ -23,11 +23,16 @@ import {
   ModalHeader,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaGraduationCap, FaPython, FaDatabase, FaJsSquare } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaPython,
+  FaDatabase,
+  FaJsSquare,
+} from "react-icons/fa";
 export default function Curriculm() {
-  const [show, setShow] = React.useState(false)
+  const [show, setShow] = React.useState(false);
 
-  const handleToggle = () => setShow(!show)
+  const handleToggle = () => setShow(!show);
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true });
   return (
     <>
@@ -50,7 +55,7 @@ export default function Curriculm() {
       <CurriculmLanding />
       <Text mb={["2rem", "4rem"]} id="web-dev"></Text>
       <Flex
-      alignItems={"center"}
+        alignItems={"center"}
         marginLeft={["2rem", "7rem"]}
         marginBottom={["4rem", "7rem"]}
         direction={["column", "row"]}
@@ -122,7 +127,7 @@ export default function Curriculm() {
           backgroundColor={"#2E3569"}
           padding={"1.5rem"}
           h={["230px", "265px"]}
-         mt={["2rem", "0rem"]}
+          mt={["2rem", "0rem"]}
           marginRight={["2rem", "0rem"]}
         >
           <Heading
@@ -150,7 +155,7 @@ export default function Curriculm() {
       >
         <Flex direction={"column"} maxW="800px">
           <Flex alignItems={"center"}>
-            <FaPython size={65} color="#3776ab" />
+            <FaPython size={65} color="#ffd343 " />
             <Heading
               marginLeft={"15px"}
               color="#ffd343 "
@@ -167,7 +172,7 @@ export default function Curriculm() {
             marginTop="1rem"
             marginBottom={"2rem"}
           >
-           Introductory Course
+            Introductory Course
           </Badge>
           <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
             Python has become one of the most popular programming languages in
@@ -195,9 +200,7 @@ export default function Curriculm() {
                 }}
                 href="https://courses.techoptimum.org"
               >
-                <MenuItem className="link-navs-dd-text">
-                  View Course (under work)
-                </MenuItem>
+                <MenuItem className="link-navs-dd-text">View Course</MenuItem>
               </Link>
               <Link
                 _hover={{
@@ -231,9 +234,10 @@ export default function Curriculm() {
             <br />
             Lesson 2: Lists and Loops <br />
             Lesson 3: Conditionals and Functions <br />
-            Lesson 2 and 3 Exercise<br/>
-            Lesson 4: Dictionaries <br/>
-            Lesson 5: Modules <br/>
+            Lesson 2 and 3 Exercise
+            <br />
+            Lesson 4: Dictionaries <br />
+            Lesson 5: Modules <br />
             Final Project!
           </Text>
           <br />
@@ -246,12 +250,8 @@ export default function Curriculm() {
       >
         <Flex direction={"column"} maxW="800px">
           <Flex alignItems={"center"}>
-            <FaDatabase size={65} color="#7D98A1" />
-            <Heading
-              marginLeft={"15px"}
-              color="#5E6572"
-              fontSize={["3xl", "5xl"]}
-            >
+            <FaDatabase size={65} color="#fff" />
+            <Heading marginLeft={"15px"} color="#fff" fontSize={["3xl", "5xl"]}>
               Intro to SQL
             </Heading>
           </Flex>
@@ -266,12 +266,14 @@ export default function Curriculm() {
             Introductory Course
           </Badge>
           <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
-          SQL (Structured Query Language) is a standard programming language used 
-          for managing relational databases. It is used to create, modify, and query 
-          databases for storing and retrieving data. With SQL, you can insert, update, 
-          and delete data, retrieve data based on various conditions, and manipulate data 
-          in a database to meet specific requirements. SQL is used in many applications, 
-          including online shopping systems, financial systems, and customer relationship management systems, among others.
+            SQL (Structured Query Language) is a standard programming language
+            used for managing relational databases. It is used to create,
+            modify, and query databases for storing and retrieving data. With
+            SQL, you can insert, update, and delete data, retrieve data based on
+            various conditions, and manipulate data in a database to meet
+            specific requirements. SQL is used in many applications, including
+            online shopping systems, financial systems, and customer
+            relationship management systems, among others.
           </Text>
           <Menu>
             <MenuButton
@@ -289,9 +291,7 @@ export default function Curriculm() {
                 }}
                 href="https://courses.techoptimum.org"
               >
-                <MenuItem className="link-navs-dd-text">
-                  View Course (under work)
-                </MenuItem>
+                <MenuItem className="link-navs-dd-text">View Course</MenuItem>
               </Link>
               <Link
                 _hover={{
@@ -325,10 +325,10 @@ export default function Curriculm() {
             <br />
             Lesson 2: Postgre SQL <br />
             Lesson 3: Foundation of SQL <br />
-            Lesson 4: Importing and Exporting External Data <br/>
-            Lesson 5: Advanced SQL <br/>
-            Lesson 6: Database Design and Normalisation <br/>
-            Lesson 7: SQL Functions and Stored Procedures <br/>
+            Lesson 4: Importing and Exporting External Data <br />
+            Lesson 5: Advanced SQL <br />
+            Lesson 6: Database Design and Normalisation <br />
+            Lesson 7: SQL Functions and Stored Procedures <br />
           </Text>
           <br />
         </Box>
@@ -360,13 +360,16 @@ export default function Curriculm() {
             Introductory Course
           </Badge>
           <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
-          JavaScript is a high-level, interpreted programming language that 
-          is commonly used for web development. It is used to add interactivity 
-          and other dynamic elements to websites, such as form validation, creating animations, 
-          and handling user events like clicking a button. JavaScript runs on the client side, 
-          which means that the code is executed directly in the user's browser, making it fast and efficient. 
-          JavaScript can also be used for server-side development using technologies like Node.js. JavaScript 
-          is a flexible and versatile language that is widely used for creating dynamic and interactive web applications.
+            JavaScript is a high-level, interpreted programming language that is
+            commonly used for web development. It is used to add interactivity
+            and other dynamic elements to websites, such as form validation,
+            creating animations, and handling user events like clicking a
+            button. JavaScript runs on the client side, which means that the
+            code is executed directly in the user&apos;s browser, making it fast and
+            efficient. JavaScript can also be used for server-side development
+            using technologies like Node.js. JavaScript is a flexible and
+            versatile language that is widely used for creating dynamic and
+            interactive web applications.
           </Text>
           <Menu>
             <MenuButton
@@ -384,9 +387,7 @@ export default function Curriculm() {
                 }}
                 href="https://courses.techoptimum.org"
               >
-                <MenuItem className="link-navs-dd-text">
-                  View Course (under work)
-                </MenuItem>
+                <MenuItem className="link-navs-dd-text">View Course</MenuItem>
               </Link>
               <Link
                 _hover={{
@@ -420,10 +421,10 @@ export default function Curriculm() {
             <br />
             Lesson 2: Variables in JavaScript <br />
             Lesson 3: Control Flow in JavaScript <br />
-            Lesson 4: Functions in JavaScript <br/>
-            Lesson 5: Arrays in JavaScript <br/>
-            Lesson 6: Objects in JavaScript <br/>
-            Assessment: JavaScript Concepts <br/>
+            Lesson 4: Functions in JavaScript <br />
+            Lesson 5: Arrays in JavaScript <br />
+            Lesson 6: Objects in JavaScript <br />
+            Assessment: JavaScript Concepts <br />
           </Text>
           <br />
         </Box>
