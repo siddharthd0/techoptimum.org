@@ -23,7 +23,7 @@ import {
   ModalHeader,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaGraduationCap, FaPython } from "react-icons/fa";
+import { FaGraduationCap, FaPython, FaDatabase, FaJsSquare } from "react-icons/fa";
 export default function Curriculm() {
   const [show, setShow] = React.useState(false)
 
@@ -68,13 +68,13 @@ export default function Curriculm() {
           </Flex>
           <Badge
             borderRadius={"full"}
-            width="250px"
+            width="175px"
             px="10px"
             colorScheme={"red"}
             marginTop="1rem"
             marginBottom={"2rem"}
           >
-            4 weeks · Introductory Course
+            Introductory Course
           </Badge>
           <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
             Ever wondered how websites are made? In this course, create simple
@@ -161,13 +161,13 @@ export default function Curriculm() {
           </Flex>
           <Badge
             borderRadius={"full"}
-            width="250px"
+            width="175px"
             px="10px"
             colorScheme={"yellow"}
             marginTop="1rem"
             marginBottom={"2rem"}
           >
-            4 weeks · Introductory Course
+           Introductory Course
           </Badge>
           <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
             Python has become one of the most popular programming languages in
@@ -235,6 +235,195 @@ export default function Curriculm() {
             Lesson 4: Dictionaries <br/>
             Lesson 5: Modules <br/>
             Final Project!
+          </Text>
+          <br />
+        </Box>
+      </Flex>
+      <Flex
+        marginLeft={["2rem", "7rem"]}
+        marginBottom="5rem"
+        direction={["column", "row"]}
+      >
+        <Flex direction={"column"} maxW="800px">
+          <Flex alignItems={"center"}>
+            <FaDatabase size={65} color="#7D98A1" />
+            <Heading
+              marginLeft={"15px"}
+              color="#5E6572"
+              fontSize={["3xl", "5xl"]}
+            >
+              Intro to SQL
+            </Heading>
+          </Flex>
+          <Badge
+            borderRadius={"full"}
+            width="175px"
+            px="10px"
+            colorScheme={"blue"}
+            marginTop="1rem"
+            marginBottom={"2rem"}
+          >
+            Introductory Course
+          </Badge>
+          <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
+          SQL (Structured Query Language) is a standard programming language used 
+          for managing relational databases. It is used to create, modify, and query 
+          databases for storing and retrieving data. With SQL, you can insert, update, 
+          and delete data, retrieve data based on various conditions, and manipulate data 
+          in a database to meet specific requirements. SQL is used in many applications, 
+          including online shopping systems, financial systems, and customer relationship management systems, among others.
+          </Text>
+          <Menu>
+            <MenuButton
+              width="130px"
+              fontWeight={"light"}
+              colorScheme="buttonBg"
+              as={Button}
+            >
+              Learn More
+            </MenuButton>
+            <MenuList className="link-navs-dropdown">
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="https://courses.techoptimum.org"
+              >
+                <MenuItem className="link-navs-dd-text">
+                  View Course (under work)
+                </MenuItem>
+              </Link>
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="./discord"
+              >
+                <MenuItem className="link-navs-dd-text">Course Help</MenuItem>
+              </Link>
+            </MenuList>
+          </Menu>
+        </Flex>
+        <Box
+          borderRadius={"15px"}
+          w={["320px", "415px"]}
+          backgroundColor={"#2E3569"}
+          padding={"1.5rem"}
+          h={["285px", "345px"]}
+          marginTop={"2.5rem"}
+          marginRight={["2rem", "0rem"]}
+        >
+          <Heading
+            marginBottom={["5px", "1rem"]}
+            fontSize={["3xl", "5xl"]}
+            color="primary"
+          >
+            Curriculum
+          </Heading>
+          <Text fontSize={["sm", "md"]}>
+            Lesson 1: Introduction to SQL
+            <br />
+            Lesson 2: Postgre SQL <br />
+            Lesson 3: Foundation of SQL <br />
+            Lesson 4: Importing and Exporting External Data <br/>
+            Lesson 5: Advanced SQL <br/>
+            Lesson 6: Database Design and Normalisation <br/>
+            Lesson 7: SQL Functions and Stored Procedures <br/>
+          </Text>
+          <br />
+        </Box>
+      </Flex>
+      <Flex
+        marginLeft={["2rem", "7rem"]}
+        marginBottom="5rem"
+        direction={["column", "row"]}
+      >
+        <Flex direction={"column"} maxW="800px">
+          <Flex alignItems={"center"}>
+            <FaJsSquare size={65} color="#F0DB4F" />
+            <Heading
+              marginLeft={"15px"}
+              color="#FFE66D"
+              fontSize={["3xl", "5xl"]}
+            >
+              Intro to JavaScript
+            </Heading>
+          </Flex>
+          <Badge
+            borderRadius={"full"}
+            width="175px"
+            px="10px"
+            colorScheme={"yellow"}
+            marginTop="1rem"
+            marginBottom={"2rem"}
+          >
+            Introductory Course
+          </Badge>
+          <Text fontSize={["sm", "md"]} width="75%" marginBottom={"1rem"}>
+          JavaScript is a high-level, interpreted programming language that 
+          is commonly used for web development. It is used to add interactivity 
+          and other dynamic elements to websites, such as form validation, creating animations, 
+          and handling user events like clicking a button. JavaScript runs on the client side, 
+          which means that the code is executed directly in the user's browser, making it fast and efficient. 
+          JavaScript can also be used for server-side development using technologies like Node.js. JavaScript 
+          is a flexible and versatile language that is widely used for creating dynamic and interactive web applications.
+          </Text>
+          <Menu>
+            <MenuButton
+              width="130px"
+              fontWeight={"light"}
+              colorScheme="buttonBg"
+              as={Button}
+            >
+              Learn More
+            </MenuButton>
+            <MenuList className="link-navs-dropdown">
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="https://courses.techoptimum.org"
+              >
+                <MenuItem className="link-navs-dd-text">
+                  View Course (under work)
+                </MenuItem>
+              </Link>
+              <Link
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="./discord"
+              >
+                <MenuItem className="link-navs-dd-text">Course Help</MenuItem>
+              </Link>
+            </MenuList>
+          </Menu>
+        </Flex>
+        <Box
+          borderRadius={"15px"}
+          w={["320px", "415px"]}
+          backgroundColor={"#2E3569"}
+          padding={"1.5rem"}
+          h={["255px", "300px"]}
+          marginTop={"2.5rem"}
+          marginRight={["2rem", "0rem"]}
+        >
+          <Heading
+            marginBottom={["5px", "1rem"]}
+            fontSize={["3xl", "5xl"]}
+            color="primary"
+          >
+            Curriculum
+          </Heading>
+          <Text fontSize={["sm", "md"]}>
+            Lesson 1: Datatypes in JavaScript
+            <br />
+            Lesson 2: Variables in JavaScript <br />
+            Lesson 3: Control Flow in JavaScript <br />
+            Lesson 4: Functions in JavaScript <br/>
+            Lesson 5: Arrays in JavaScript <br/>
+            Lesson 6: Objects in JavaScript <br/>
+            Assessment: JavaScript Concepts <br/>
           </Text>
           <br />
         </Box>
