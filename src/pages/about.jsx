@@ -57,6 +57,15 @@ export default function About() {
               "Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."
             }
           />
+          <ExecutiveCard
+          src="adityasahas.jpeg"
+          name="Aditya Sahasranam"
+          role="Chief Operating Officer"
+          linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
+          description="Aditya is a sophomore  who enjoys coding and video games. He loves doing projects that have an impact on underserved communities. He also enjoys playing tennis and basketball."
+          
+
+          />
         </Flex>
       </Flex>
       <Flex direction={"column"} alignItems={"center"}>
@@ -76,11 +85,7 @@ export default function About() {
               name="Moustafa Sanad"
               role="Director of Design"
             />
-            <Volunteer
-              src="https://cdn.discordapp.com/attachments/916543942139469884/1057191127016542238/Screen_Shot_2022-12-27_at_12.00.00_AM.png"
-              name="Aditya Sahasranam"
-              role="Director of Education"
-            />
+           
             <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
