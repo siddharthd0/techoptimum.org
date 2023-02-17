@@ -21,7 +21,7 @@ export default function JobPostingCard({
       <Box
         position="relative"
         padding="2rem"
-        borderRadius={"27px"}
+        borderRadius={"12.5px"}
         width="375px"
         className="job-card"
       >

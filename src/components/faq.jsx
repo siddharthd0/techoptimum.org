@@ -88,7 +88,7 @@ export default function FaqComp() {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Please email contact.techoptimum@gmail.com to report any bugs on
+              Please email team@techoptimum.org to report any bugs on
               the website.
             </AccordionPanel>
           </AccordionItem>
@@ -132,19 +132,7 @@ export default function FaqComp() {
              Yes, we do! Please click <Link href="/discord">here</Link> to join our Discord server.
             </AccordionPanel>
           </AccordionItem>
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  How can I donate to Tech Optimum
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              We appreciate all donations. Please click <Link href="/donate">here</Link> to donate.
-            </AccordionPanel>
-          </AccordionItem>
+       
         </Accordion>
       </Flex>
     </>

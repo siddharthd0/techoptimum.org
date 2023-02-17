@@ -34,7 +34,7 @@ export default function ExecutiveCard({
         }}
         borderColor={"transparent !important"}
         border={"1px"}
-        maxWidth={"425px"}
+        maxWidth={"350px"}
         borderRadius="20px"
         padding="10px 10px 10px 20px"
       >

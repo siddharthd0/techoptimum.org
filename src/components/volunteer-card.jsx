@@ -5,9 +5,6 @@ export default function Volunteer({ src, name, role }) {
     <>
       <Box
       transition={"200ms"}
-      _hover={{
-        borderColor: "blue.700 !important",
-      }}
         borderColor={"transparent !important"}
         border={"1px"}
         width={"350px"}

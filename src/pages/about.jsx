@@ -38,7 +38,8 @@ export default function About() {
         <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Executives
         </Heading>
-        <Flex mb={"5%"} direction={["column", "row"]} gap="45px">
+        <Flex mb={"5%"} direction={["column", "row"]} >
+        <Wrap justify="center" spacing="30px">
           <ExecutiveCard
             src="/sid.png"
             name="Siddharth Duggal"
@@ -66,6 +67,7 @@ export default function About() {
           
 
           />
+          </Wrap>
         </Flex>
       </Flex>
       <Flex direction={"column"} alignItems={"center"}>
