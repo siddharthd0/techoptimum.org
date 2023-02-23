@@ -196,18 +196,23 @@ export default function JoinTeam() {
             placement="right"
             label="Try searching for Marketing, or Tech"
           >
-            <chakra.input
-              justify="center"
-              type="text"
-              onChange={(e) => setSearchQuery(e.target.value)}
+            <chakra.select
+              className="select"
               value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by department..."
               borderRadius={"10px"}
-              padding="12px 20px"
+              padding="10px 24px"
               backgroundColor={"blue.500"}
-              margin="auto !important"
               color="white"
-            />
+            >
+              <option value="">Select a Department</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Technology">Technology</option>
+              <option value="Human Resources">Human Resources</option>
+
+              <option value="Education">Education</option>
+            </chakra.select>
           </Tooltip>
         </chakra.form>
       </Flex>

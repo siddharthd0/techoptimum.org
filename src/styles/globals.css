@@ -542,3 +542,14 @@ input:focus {
   50%{background-position:100% 35%}
   100%{background-position:0% 66%}
 }
+.select {
+  cursor: pointer;
+  background-color: #2c2c2c !important;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 16px;
+  margin: 0;
+  -webkit-appearance: none;
+}
