@@ -12,6 +12,14 @@ export default function HeroHeader() {
       <Flex marginBottom={"100px"} width={"100%"} direction={"column"}>
         <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
           <Heading
+            as={motion.div}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+              ease: "easeIn",
+              x: 0,
+            }}
             className="gradient-title"
             fontSize={["4xl", "5xl"]}
             marginBottom={{ base: ".5em", md: "1rem", lg: "1.5rem" }}
@@ -19,6 +27,16 @@ export default function HeroHeader() {
             Learn. Participate. Accomplish.
           </Heading>
           <Text
+          
+           as={motion.div}
+           initial={{ opacity: 0, x: -40 }}
+           animate={{
+             opacity: 1,
+             transition: { duration: 1 },
+             ease: "easeIn",
+             x: 0,
+             delay: 1,
+           }}
             fontSize={["lg", "2xl"]}
             color="primary"
             marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
@@ -34,6 +52,14 @@ export default function HeroHeader() {
             href="./curriculum"
           >
             <Button
+              as={motion.div}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 1 },
+                ease: "easeOut",
+                y: 0,
+              }}
               fontSize={["sm", "md"]}
               backgroundColor="transparent"
               _hover={{
@@ -70,6 +96,7 @@ export default function HeroHeader() {
             transition: { duration: 1 },
             ease: "easeIn",
             y: 0,
+            delay: 4.5,
           }}
         >
           <Flex
