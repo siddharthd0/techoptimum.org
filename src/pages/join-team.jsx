@@ -24,6 +24,15 @@ export default function JoinTeam() {
   const cardsInfo = useMemo(
     () => [
       {
+        role: "Web Designer",
+        application: "https://forms.gle/9FayfQddFF6B4Ro39",
+        department: "Technology",
+        responsibility: [
+          "Design visually appealing websites: Create attractive and user-friendly websites by using your creativity, design, Figma/AdobeXD skills.",
+          "Collaborate with team: Work with others effectively.",
+        ],
+      },
+      {
         role: "Web Developer",
         application: "https://forms.gle/NXQomJvT7dmCq8nU9",
         department: "Technology",
