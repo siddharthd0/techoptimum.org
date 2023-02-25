@@ -40,10 +40,9 @@ export default function Header() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "fade",
         damping: 10,
         stiffness: 150,
-       
       },
     },
   };
@@ -58,7 +57,10 @@ export default function Header() {
           content="A student-led organization helping and inspiring future leaders of the tech industry worldwide."
         />
         <meta name="og:title" content="Tech Optimum "></meta>
-        <meta name="og:description" content="A student-led organization dedicated to helping and inspiring the next generation of tech leaders."></meta>
+        <meta
+          name="og:description"
+          content="A student-led organization dedicated to helping and inspiring the next generation of tech leaders."
+        ></meta>
         <meta name="og:image" content=" /meta.png"></meta>
         <title>Tech Optimum</title>
       </Head>
@@ -70,102 +72,101 @@ export default function Header() {
         direction={["column", "row"]}
         alignItems="center"
       >
-         <motion.div
-            variants={{
-              ...buttonVariants,
-              visible: {
-                ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 1,
-                },
+        <motion.div
+          variants={{
+            ...buttonVariants,
+            visible: {
+              ...buttonVariants.visible,
+              transition: {
+                ...buttonVariants.visible.transition,
+                delay: buttonDelay * 1,
               },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-        <Flex alignItems={"center"} justifyContent={"start"}>
-          <Link _hover={{}} href={"./"}>
-            <Image
-              _hover={{
-                cursor: "pointer",
-              }}
-              display={{ base: "block", md: "block" }}
-              w="60px"
-              src="./logo-transparent.png"
-              alt={"Tech Optimum Logo"}
-            ></Image>
-          </Link>
-          <Link href={"./"}>
-            <Heading
-              _hover={{
-                cursor: "pointer",
-              }}
-              marginTop={"7px"}
-              textAlign={"center"}
-              alignItems="left"
-              href="https://techoptimum.org"
-              fontSize="3xl"
-              color="primary"
-              display={{ base: "none", md: "block" }}
-            >
-              Tech Optimum
-            </Heading>
-          </Link>
-        </Flex>
+            },
+          }}
+          initial="hidden"
+          animate="visible"
+        >
+          <Flex alignItems={"center"} justifyContent={"start"}>
+            <Link _hover={{}} href={"./"}>
+              <Image
+                _hover={{
+                  cursor: "pointer",
+                }}
+                display={{ base: "block", md: "block" }}
+                w="60px"
+                src="./logo-transparent.png"
+                alt={"Tech Optimum Logo"}
+              ></Image>
+            </Link>
+            <Link href={"./"}>
+              <Heading
+                _hover={{
+                  cursor: "pointer",
+                }}
+                marginTop={"7px"}
+                textAlign={"center"}
+                alignItems="left"
+                href="https://techoptimum.org"
+                fontSize="3xl"
+                color="primary"
+                display={{ base: "none", md: "block" }}
+              >
+                Tech Optimum
+              </Heading>
+            </Link>
+          </Flex>
         </motion.div>
 
         <Flex marginTop={["1.5rem", "2.1px"]} textAlign={"center"}>
           <nav>
             <ul className="nav-links">
-              
               <li>
-              <motion.div
-            variants={{
-              ...buttonVariants,
-              visible: {
-                ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 2,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-                <Text className="link-navs" color="primary">
-                  <Link className="link-navs" href="/">
-                    HOME
-                  </Link>
-                </Text>
+                <motion.div
+                  variants={{
+                    ...buttonVariants,
+                    visible: {
+                      ...buttonVariants.visible,
+                      transition: {
+                        ...buttonVariants.visible.transition,
+                        delay: buttonDelay * 2,
+                      },
+                    },
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <Text className="link-navs" color="primary">
+                    <Link className="link-navs" href="/">
+                      HOME
+                    </Link>
+                  </Text>
                 </motion.div>
               </li>
               <li>
                 <Menu gutter={"5"} isOpen={isEditOpen}>
-                <motion.div
-            variants={{
-              ...buttonVariants,
-              visible: {
-                ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 3.5,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-                  <MenuButton
-                    className="link-navs"
-                    bgColor={"transparent"}
-                    color="primary"
-                    onMouseEnter={onEditOpen}
-                    onMouseLeave={onEditClose}
+                  <motion.div
+                    variants={{
+                      ...buttonVariants,
+                      visible: {
+                        ...buttonVariants.visible,
+                        transition: {
+                          ...buttonVariants.visible.transition,
+                          delay: buttonDelay * 3.5,
+                        },
+                      },
+                    }}
+                    initial="hidden"
+                    animate="visible"
                   >
-                    ABOUT
-                  </MenuButton>
+                    <MenuButton
+                      className="link-navs"
+                      bgColor={"transparent"}
+                      color="primary"
+                      onMouseEnter={onEditOpen}
+                      onMouseLeave={onEditClose}
+                    >
+                      ABOUT
+                    </MenuButton>
                   </motion.div>
                   <div className="testing-nav">
                     <MenuList
@@ -192,29 +193,29 @@ export default function Header() {
               </li>
               <li>
                 <Menu gutter={"5"} isOpen={isSecondOpen}>
-                <motion.div
-            variants={{
-              ...buttonVariants,
-              visible: {
-                ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 5,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-                  <MenuButton
-                    className="link-navs"
-                    bgColor={"transparent"}
-                    color="primary"
-                    onMouseEnter={onSecondOpen}
-                    onMouseLeave={onSecondClose}
+                  <motion.div
+                    variants={{
+                      ...buttonVariants,
+                      visible: {
+                        ...buttonVariants.visible,
+                        transition: {
+                          ...buttonVariants.visible.transition,
+                          delay: buttonDelay * 5,
+                        },
+                      },
+                    }}
+                    initial="hidden"
+                    animate="visible"
                   >
-                    INITIATIVES
-                  </MenuButton>
+                    <MenuButton
+                      className="link-navs"
+                      bgColor={"transparent"}
+                      color="primary"
+                      onMouseEnter={onSecondOpen}
+                      onMouseLeave={onSecondClose}
+                    >
+                      INITIATIVES
+                    </MenuButton>
                   </motion.div>
                   <MenuList
                     onMouseEnter={onSecondOpen}
@@ -245,58 +246,61 @@ export default function Header() {
                 </Menu>
               </li>
               <li>
-              <motion.div
-            variants={{
-              ...buttonVariants,
-              visible: {
-                ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 6.5,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-                <Text className="link-navs" color="primary">
-                  <Link href="/join-team">VOLUNTEER</Link>
-                </Text>
+                <motion.div
+                  variants={{
+                    ...buttonVariants,
+                    visible: {
+                      ...buttonVariants.visible,
+                      transition: {
+                        ...buttonVariants.visible.transition,
+                        delay: buttonDelay * 6.5,
+                      },
+                    },
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <Text className="link-navs" color="primary">
+                    <Link href="/join-team">VOLUNTEER</Link>
+                  </Text>
                 </motion.div>
               </li>
-              <li >
-              <motion.div
-            variants={{
-              ...buttonVariants,
-              visible: {
-                ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 8,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-                <Link _hover={{
-                  cursor:"pointer",
-                }} href="/donate">
-                  <Text
-                  transition={"400ms"}
-                   ml="12px !important" 
-                    fontWeight={"bold !important"}
-                    color="primary"
-                    backgroundColor={"transparent"}
+              <li>
+                <motion.div
+                  variants={{
+                    ...buttonVariants,
+                    visible: {
+                      ...buttonVariants.visible,
+                      transition: {
+                        ...buttonVariants.visible.transition,
+                        delay: buttonDelay * 8,
+                      },
+                    },
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <Link
                     _hover={{
-                      cursor:"pointer",
-                      color: "white",
-                      backgroundColor: "transparent",
+                      cursor: "pointer",
                     }}
+                    href="/donate"
                   >
-                    DONATE
-                  </Text>
-                </Link>
+                    <Text
+                      transition={"400ms"}
+                      ml="12px !important"
+                      fontWeight={"bold !important"}
+                      color="primary"
+                      backgroundColor={"transparent"}
+                      _hover={{
+                        cursor: "pointer",
+                        color: "white",
+                        backgroundColor: "transparent",
+                      }}
+                    >
+                      DONATE
+                    </Text>
+                  </Link>
                 </motion.div>
               </li>
             </ul>
