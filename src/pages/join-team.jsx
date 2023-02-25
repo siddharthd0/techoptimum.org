@@ -117,6 +117,17 @@ export default function JoinTeam() {
           "Continuously improve and optimize bot performance",
         ],
       },
+      {
+        role: "Hackathon Organizer",
+        application: "https://forms.gle/dTR7zvEaQioPxC7W7",
+        department: "Hackathon",
+        responsibility: [
+          " Planning and organizing the hackathon event",
+          "Developing the hackathon schedule, including workshops, keynote speeches, and judging sessions ",
+          "Recruiting and managing a team of volunteers and staff to assist with the event ",
+          "Developing and implementing marketing and promotion strategies to attract participants and sponsors Identifying and securing sponsors and partnerships to support the event financially",
+        ],
+      },
     ],
     []
   );
@@ -203,7 +214,7 @@ export default function JoinTeam() {
         <chakra.form justify="center" my="2rem">
           <Tooltip
             placement="right"
-            label="Try searching for Marketing, or Tech"
+            label="Try searching for Marketing, or Technology"
           >
             <chakra.select
               className="select"
@@ -219,7 +230,7 @@ export default function JoinTeam() {
               <option value="Marketing">Marketing</option>
               <option value="Technology">Technology</option>
               <option value="Human Resources">Human Resources</option>
-
+              <option value="Hackathon">Hackathon</option>
               <option value="Education">Education</option>
             </chakra.select>
           </Tooltip>
