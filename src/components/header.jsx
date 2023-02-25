@@ -33,7 +33,7 @@ export default function Header() {
   } = useDisclosure();
   const buttonVariants = {
     hidden: {
-      y: -50,
+      y: -10,
       opacity: 0,
     },
     visible: {
