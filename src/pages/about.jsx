@@ -80,15 +80,18 @@ export default function About() {
         >
           Volunteers
         </Heading>
-        <Flex alignItems={"center"}>
+        <Flex mx="100px" alignItems={"center"}>
           <Wrap justify="center" spacing="30px">
             <Volunteer
               src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Moustafa+Sanad&size=100"
               name="Moustafa Sanad"
               role="Director of Design"
             />
-           
-            <Volunteer
+           <Volunteer
+              src="aarush.jpg"
+              name="Aarush Sah"
+              role="Director of Product"/>
+           <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
               role="Web Developer"
