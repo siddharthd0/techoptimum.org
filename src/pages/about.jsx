@@ -96,7 +96,11 @@ export default function About() {
               name="Snehil Kakani"
               role="Web Developer"
             />
-
+            <Volunteer
+              name="Vivaan Vora"
+              src="https://cdn.discordapp.com/attachments/1065021922447999036/1079588343773413486/vivaan-vora.04d0429.png"
+              role="Course Instructor"
+            />
             <Volunteer
               name="Aviral Dhingra"
               src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aviral+Dhingra&size=100"
