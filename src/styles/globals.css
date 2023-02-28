@@ -476,7 +476,7 @@ html {
   background: linear-gradient(156.16deg, #473595 12.37%, #413ece 86.15%);
 
   border-radius: 13px;
-  transition: 400ms;
+  transition: 200ms;
 }
 
 .initatives-list li {
@@ -552,4 +552,11 @@ input:focus {
   font-size: 16px;
   margin: 0;
   -webkit-appearance: none;
+}
+.secondaryButtonBg {
+  border: 1px solid #4559E9;
+  background-color: transparent !important;
+}
+.secondaryButtonBg:hover {
+  background: #4559E9 !important;
 }

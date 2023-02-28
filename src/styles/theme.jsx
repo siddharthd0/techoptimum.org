@@ -19,6 +19,7 @@ const theme = extendTheme({
       500: "#4559E9",
       600: "#3549D9",
     },
+ 
     joinTeamBtn: {
       500: "#4A7EAE",
       600: "#4A7EAE",

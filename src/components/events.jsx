@@ -56,8 +56,8 @@ export default function Events() {
           We host yearly hackathons. A hackathon is 48-hour coding competition
           in which participants can code projects as a team or individually and
           compete for numerous prizes! Not only that but, we host fun
-          tournaments. Check out the hackathon that we hosted in the summer with
-          over 300 participants <Link>here</Link>.
+          tournaments. Check out the hackathon that we hosted in summer 2022 with
+          over 300 participants <Link isExternal href="/hackathon">here</Link>.
         </Text>
         <Image
           data-aos="zoom-in"

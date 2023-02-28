@@ -10,6 +10,7 @@ import {
   Text,
   Button,
   Image,
+  Tooltip,
   Box,
   Stack,
 } from "@chakra-ui/react";
@@ -57,6 +58,9 @@ export default function Finder() {
               textDecoration: "none",
             }}
           >
+            <Tooltip borderRadius={"10px"} placement="right" label="Coming Soon!    ">
+
+            
             <Button
               data-aos-delay="150"
               data-aos="fade-right"
@@ -71,9 +75,10 @@ export default function Finder() {
               _hover={{ bgColor: "#3244ca" }}
               _active={{ bgColor: "#3244ca" }}
               mt={["1.5rem", "2.5rem"]}
+              isDisabled
             >
               Find internships now
-            </Button>
+            </Button></Tooltip>
           </Link>
         </Box>
         <Box

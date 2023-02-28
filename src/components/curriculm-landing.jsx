@@ -32,9 +32,27 @@ export default function CurriculmLanding() {
               }}
               href="#web-dev"
             >
-              <Button width="130px" fontWeight={"light"} colorScheme="buttonBg">
+              <Button px="20px" fontWeight={"light"} colorScheme="buttonBg">
                 Learn More
-              </Button>
+              </Button >
+          
+            
+               <Link isExternal _hover={{
+                textDecoration: "none",
+              }}
+              href="https://courses.techoptimum.org/"
+              >
+                  <Button
+                   px="20px"
+                  ml="1rem"
+                      
+                    fontWeight={"light"}
+                    className="secondaryButtonBg"
+                  >
+                    Visit Courses Website
+                  </Button>
+               </Link>
+             
             </Link>
           </Flex>
           <Box

@@ -224,7 +224,7 @@ export default function Header() {
                   >
                     <Link href="./curriculum">
                       <MenuItem className="link-navs-dd-text">
-                        Curriculum
+                       Courses
                       </MenuItem>
                     </Link>
               
