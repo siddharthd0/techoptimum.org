@@ -7,6 +7,7 @@ import {
   Heading,
   Button,
   Link,
+  Box,
   Divider,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -17,14 +18,13 @@ export default function Footer() {
       <Flex
         justifyContent="space-between"
         alignItems={{ base: "center", md: "center" }}
-        padding="33px 12% "
+        padding="23px 12% "
         bgColor="footerBg"
         direction={{ base: "column", md: "row" }}
         gap={{ base: "20px", md: "0px" }}
-        
       >
-        <Flex  alignItems={{ base: "center", md: "start" }} direction="column">
-          <Flex  alignItems={{ base: "center", md: "start" }}>
+        <Flex alignItems={{ base: "center", md: "start" }} direction="column">
+          <Flex alignItems={{ base: "center", md: "start" }}>
             <Image
               width="150px"
               marginBottom={"-1.1rem"}
@@ -75,7 +75,7 @@ export default function Footer() {
             <Link href="./about">Team</Link>
           </Text>
         </Flex>
-        <Divider width={{ base: 80, md: 0 }} />
+        <Divider  width={{ base: 80, md: 0 }} />
         <Flex
           direction={"column"}
           h="130px"
@@ -109,12 +109,30 @@ export default function Footer() {
             fontSize="sm"
             textAlign={{ base: "center", md: "left" }}
           >
-            At Tech Optimum, we strive for excellence when it comes to
-            programming. Interested? Join us in the process of improving the
-            future of CS.
+            Tech Optimum is a non-profit organization that aims to provide
+            educational resources to underprivileged students, to ensure
+            everyone has access to the same opportunities.
           </Text>
         </Flex>
       </Flex>
+
+      <Box>
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          padding="15px 12% "
+          backgroundColor={"footerBg"}
+          direction={{ base: "column", md: "row" }}
+        >
+          <Text color="primary" fontSize="sm">
+            Tech Optimum © 2023. All rights reserved.
+          </Text>
+          <Text display={"flex"} color="primary" fontSize="sm">
+          <Text>EIN: 88-3677650 | team@techoptimum.org</Text>
+          </Text>
+        </Flex>
+
+      </Box>
     </>
   );
 }

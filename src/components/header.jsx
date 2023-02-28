@@ -137,7 +137,7 @@ export default function Header() {
                 >
                   <Text className="link-navs" color="primary">
                     <Link className="link-navs" href="/">
-                      HOME
+                     Home
                     </Link>
                   </Text>
                 </motion.div>
@@ -165,7 +165,7 @@ export default function Header() {
                       onMouseEnter={onEditOpen}
                       onMouseLeave={onEditClose}
                     >
-                      ABOUT
+                      About
                     </MenuButton>
                   </motion.div>
                   <div className="testing-nav">
@@ -176,12 +176,12 @@ export default function Header() {
                     >
                       <Link href="/about">
                         <MenuItem className="link-navs-dd-text">
-                          Meet the Team
+                         Team
                         </MenuItem>
                       </Link>
                       <Link href="/contact">
                         <MenuItem className="link-navs-dd-text">
-                          Contact us
+                          Contact
                         </MenuItem>
                       </Link>
                       <Link href="/faq">
@@ -214,7 +214,7 @@ export default function Header() {
                       onMouseEnter={onSecondOpen}
                       onMouseLeave={onSecondClose}
                     >
-                      INITIATIVES
+                   Initiatives
                     </MenuButton>
                   </motion.div>
                   <MenuList
@@ -227,19 +227,15 @@ export default function Header() {
                         Curriculum
                       </MenuItem>
                     </Link>
-                    <Link href="/join">
-                      <MenuItem className="link-navs-dd-text">
-                        Community
-                      </MenuItem>
-                    </Link>
+              
                     <Link href="/hackathon">
                       <MenuItem className="link-navs-dd-text">
-                        Tech Optimum Hacks
+                      Hackathon
                       </MenuItem>
                     </Link>
                     <Link href="/podcast">
                       <MenuItem className="link-navs-dd-text">
-                        Tech Optimum Talks
+                       Talks
                       </MenuItem>
                     </Link>
                   </MenuList>
@@ -261,7 +257,7 @@ export default function Header() {
                   animate="visible"
                 >
                   <Text className="link-navs" color="primary">
-                    <Link href="/join-team">VOLUNTEER</Link>
+                    <Link href="/join-team">Volunteer</Link>
                   </Text>
                 </motion.div>
               </li>
@@ -285,20 +281,23 @@ export default function Header() {
                       cursor: "pointer",
                     }}
                     href="/donate"
+                    isExternal
+
                   >
                     <Text
+          
                       transition={"400ms"}
-                      ml="12px !important"
-                      fontWeight={"bold !important"}
+                      ml="7px !important"
+                      fontWeight={"700!important"}
                       color="primary"
-                      backgroundColor={"transparent"}
+      
                       _hover={{
                         cursor: "pointer",
-                        color: "white",
-                        backgroundColor: "transparent",
+  
+                        opacity: "0.7 !important"
                       }}
                     >
-                      DONATE
+                      Donate
                     </Text>
                   </Link>
                 </motion.div>

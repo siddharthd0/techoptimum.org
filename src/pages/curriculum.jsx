@@ -10,17 +10,11 @@ import {
   Badge,
   Button,
   useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalBody,
   Link,
   Menu,
   MenuButton,
   MenuList,
-  MenuItem,
-  ModalHeader,
+  MenuItem, 
 } from "@chakra-ui/react";
 import React from "react";
 import {
@@ -37,21 +31,8 @@ export default function Curriculm() {
   return (
     <>
       <Header />
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay />
-        <ModalContent backgroundColor={"blue.800"}>
-          <ModalCloseButton />
-          <ModalHeader color={"white"}>Under Construction</ModalHeader>
-          <ModalBody>
-            <Text>
-              Our team is currently working hard to finish the lessons in our
-              curriculm. If some buttons do not work, or lessons are missing,
-              please come back later!
-            </Text>
-          </ModalBody>
-          <br />
-        </ModalContent>
-      </Modal>
+     
+      
       <CurriculmLanding />
       <Text mb={["2rem", "4rem"]} id="web-dev"></Text>
       <Flex

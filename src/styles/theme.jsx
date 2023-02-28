@@ -37,7 +37,7 @@ const theme = extendTheme({
         padding: 0,
         margin: 0,
       },
-      "&::-webkit-scrollbar": {
+     /*  "&::-webkit-scrollbar": {
         width: "0.5em",
       },
       "&::-webkit-scrollbar-track": {
@@ -47,7 +47,7 @@ const theme = extendTheme({
       "&::-webkit-scrollbar-thumb": {
         background: "secondary",
         borderRadius: "50px",
-      },
+      }, */
     }),
   },
 });

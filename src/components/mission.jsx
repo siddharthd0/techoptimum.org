@@ -19,7 +19,7 @@ export default function Mission() {
           key="test"
         />
       </Head>
-      <Flex mb="6rem" marginLeft={["2rem", "7rem"]} direction={"column"}>
+      <Flex paddingTop={"80px"} id="learn-more" mb="6rem" marginLeft={["2rem", "7rem"]} direction={"column"}>
         <Heading
           data-aos="fade-right"
           data-aos-duration="800"

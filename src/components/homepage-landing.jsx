@@ -9,7 +9,7 @@ import { NodeNextRequest } from "next/dist/server/base-http/node";
 export default function HeroHeader() {
   return (
     <>
-      <Flex marginBottom={"100px"} width={"100%"} direction={"column"}>
+      <Flex  mb="60px" width={"100%"} direction={"column"}>
         <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
           <Heading
             as={motion.div}
@@ -49,7 +49,7 @@ export default function HeroHeader() {
             _hover={{
               textDecoration: "none",
             }}
-            href="./curriculum"
+            href="#learn-more"
           >
             <Button
               as={motion.div}
@@ -87,7 +87,7 @@ export default function HeroHeader() {
           maxWidth={["290px", "500px", "800px"]}
           backgroundColor="#29368C"
           height={["395px", "150px"]}
-          borderRadius={"25px"}
+          borderRadius={"15px"}
           marginTop={"3rem"}
           as={motion.div}
           initial={{ opacity: 0, y: 40 }}
@@ -157,9 +157,10 @@ export default function HeroHeader() {
               <br /> Community Members
             </Heading>
             <Link
+
    
               marginTop={["1.6rem", "0rem"]}
-              href="./join"
+              href="./about"
               transition="500ms"
             >
               <Icon className="diagonal-button" as={BsArrowUpRight} />
