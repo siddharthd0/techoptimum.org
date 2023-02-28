@@ -93,7 +93,7 @@ export default function Header() {
                   cursor: "pointer",
                 }}
                 display={{ base: "block", md: "block" }}
-                w="60px"
+                w="45px"
                 src="./logo-transparent.png"
                 alt={"Tech Optimum Logo"}
               ></Image>
@@ -107,7 +107,7 @@ export default function Header() {
                 textAlign={"center"}
                 alignItems="left"
                 href="https://techoptimum.org"
-                fontSize="3xl"
+                fontSize="2xl"
                 color="primary"
                 display={{ base: "none", md: "block" }}
               >
