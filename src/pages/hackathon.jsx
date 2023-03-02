@@ -11,38 +11,36 @@ export default function Hackathons() {
     <>
       <Header />
       <Box
-      mt={["-4rem","-5rem"]}
-        height={["90vh","100vh"]}
+        mt={["-15rem", "-5rem"]}
+        height={["90vh", "100vh"]}
         backgroundImage={"/hackathon-projects-background-modified.png"}
         backgroundSize={"cover"}
         className="shadowBg"
-        
       >
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
+        <br />
 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
+        <br />
 
-     
         <Box
-       
-          marginX={["2rem","auto"]}
+          marginX={["2rem", "auto"]}
           className="missionbg"
           borderRadius={"20px"}
           maxWidth="800px"
           padding="2rem"
           opacity={".948"}
+          mt={["3rem", "0"]}
         >
-          <Text fontSize={["2xl","4xl"]}>Welcome to</Text>
-          <Heading color="primary" fontSize={["4xl","6xl"]}>
+          <Text fontSize={["xl", "4xl"]}>Welcome to</Text>
+          <Heading color="primary" fontSize={["3xl", "6xl"]}>
             Tech Optimum Hacks
           </Heading>
-          <Text fontSize={["md","xl"]}>
+          <Text fontSize={["sm", "xl"]}>
             A 48-hour hackathon where you can explore your coding potential.
             Come join us in July 2023 for Tech Optimum Hacks 2023!
           </Text>
@@ -59,7 +57,7 @@ export default function Hackathons() {
               borderRadius={"18px"}
               color={"#FFFFFF"}
               fontWeight={"400"}
-              fontSize={["sm", "lg"]}
+              fontSize={["xs", "lg"]}
               _hover={{ bgColor: "#3244ca" }}
               _active={{ bgColor: "#3244ca" }}
               mt={["1.5rem", "10px"]}

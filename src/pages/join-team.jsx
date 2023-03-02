@@ -154,7 +154,7 @@ export default function JoinTeam() {
           backgroundSize={"cover"}
           backgroundPosition={"center"}
           backdropFilter={"blur(10px)"}
-          mt={["-4rem","-5rem"]}
+          mt={["-16rem","-5rem"]}
           className="shadowBg"
 
         >
@@ -168,6 +168,7 @@ export default function JoinTeam() {
           <br />
           <br />
           <Box
+          mt={["3rem", "0"]}
             mx={["2rem", "auto"]}
             className="missionbg"
             borderRadius={"20px"}
@@ -202,6 +203,7 @@ export default function JoinTeam() {
                     borderRadius={"20px"}
                     colorScheme={"blue"}
                     fontWeight="light"
+                    fontSize={["x-small", "md"]}
                   >
                     {" "}
                     Search for volunteer opportunities
