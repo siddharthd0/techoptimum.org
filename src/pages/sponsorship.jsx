@@ -1,0 +1,3 @@
+import redirect from "nextjs-redirect";
+export default redirect("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0957f417-cd85-429e-a85a-3b02c9a89fc8/Tech_Optimum_Sponsorship_Prospectus.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230302%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230302T235334Z&X-Amz-Expires=86400&X-Amz-Signature=107c9da721d1a4d5e8b11eeda98693e17321aae32d08043f9ae005a39574d012&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Tech%2520Optimum%2520Sponsorship%2520Prospectus.pdf%22&x-id=GetObject");
+
