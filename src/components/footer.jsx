@@ -87,7 +87,7 @@ export default function Footer() {
           </Heading>
 
           <Text color="primary" fontSize="md">
-            <Link href="join"> Community</Link>
+            <Link href="hackathon"> Hackathon</Link>
           </Text>
           <Text color="primary" fontSize="md">
             <Link href="curriculum"> Courses</Link>
