@@ -401,7 +401,7 @@ html {
 .curriculmbg {
   background-size: cover;
   background-image: url("/curriculm-landing.png");
-  height: 70vh;
+  height: 90vh;
 }
 .donatebg {
   background-size: cover;
@@ -559,4 +559,9 @@ input:focus {
 }
 .secondaryButtonBg:hover {
   background: #4559E9 !important;
+}
+.shadowBg {
+  -webkit-box-shadow: inset 0px 115px 81px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 115px 81px -3px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 115px 81px -3px rgba(0,0,0,0.75);
 }

@@ -5,10 +5,13 @@ export default function CurriculmLanding() {
   return (
     <>
       <Box className="curriculmbg">
-        <Flex direction={["column", "row"]}>
+        <Flex
+          paddingTop={["3.5rem", "8rem"]}
+          alignItems={"center"}
+          direction={["column", "row"]}
+        >
           <Flex
             marginLeft={["2rem", "7rem"]}
-            marginTop={["3.5rem", "8rem"]}
             direction={"column"}
             maxWidth={["90%", "50%"]}
           >
@@ -34,25 +37,25 @@ export default function CurriculmLanding() {
             >
               <Button px="20px" fontWeight={"light"} colorScheme="buttonBg">
                 Learn More
-              </Button >
-          
-            
-               <Link isExternal _hover={{
-                textDecoration: "none",
-              }}
-              href="https://courses.techoptimum.org/"
+              </Button>
+
+              <Link
+                isExternal
+                _hover={{
+                  textDecoration: "none",
+                }}
+                href="https://courses.techoptimum.org/"
               >
-                  <Button
-                   px="20px"
-                  ml="1rem"
-                      
-                    fontWeight={"light"}
-                    className="secondaryButtonBg"
-                  >
-                    Visit Courses Website
-                  </Button>
-               </Link>
-             
+                <Button
+                mt={["1rem", "0rem"]}
+                  px="20px"
+                  ml={["0rem", "1rem"]}
+                  fontWeight={"light"}
+                  className="secondaryButtonBg"
+                >
+                  Visit Courses Website
+                </Button>
+              </Link>
             </Link>
           </Flex>
           <Box
@@ -61,7 +64,6 @@ export default function CurriculmLanding() {
             height="300px"
             width="400px"
             backgroundColor={"#2E3569"}
-            marginTop={"5.5rem"}
             marginLeft={["4rem", "5rem"]}
             direction={"column"}
             padding={"1.5rem"}

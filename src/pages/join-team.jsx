@@ -149,12 +149,18 @@ export default function JoinTeam() {
       <Flex>
         <Box
           width={"100%"}
-          height={["90vh", "80vh"]}
+          height={["90vh", "100vh"]}
           backgroundImage={"/desk-modified.png"}
           backgroundSize={"cover"}
           backgroundPosition={"center"}
           backdropFilter={"blur(10px)"}
+          mt={["-4rem","-5rem"]}
+          className="shadowBg"
+
         >
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />

@@ -11,19 +11,26 @@ export default function Hackathons() {
     <>
       <Header />
       <Box
-        height={["90vh","80vh"]}
+      mt={["-4rem","-5rem"]}
+        height={["90vh","100vh"]}
         backgroundImage={"/hackathon-projects-background-modified.png"}
         backgroundSize={"cover"}
-        backgroundPosition={"center"}
-        backdropFilter={"blur(10px)"}
+        className="shadowBg"
         
       >
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+     
         <Box
+       
           marginX={["2rem","auto"]}
           className="missionbg"
           borderRadius={"20px"}
