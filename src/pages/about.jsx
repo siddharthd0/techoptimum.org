@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
 import ExecutiveCard from "../components/executive-card";
 import Volunteer from "../components/volunteer-card";
 import React from "react";
@@ -32,8 +30,6 @@ export default function About() {
           key="test"
         />
       </Head>
-      <Header />
-
       <Flex marginTop={"3rem"} direction={"column"} alignItems="center">
         <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Executives
@@ -178,8 +174,6 @@ export default function About() {
           </Link>
         </Box>
       </Flex>
-
-      <Footer />
     </>
   );
 }

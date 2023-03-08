@@ -1,6 +1,4 @@
-import Footer from "../components/footer";
 import { useState, useEffect, useMemo } from "react";
-import Header from "../components/header";
 import Socials from "../components/socials";
 import {
   Image,
@@ -144,8 +142,6 @@ export default function JoinTeam() {
   }, [searchQuery, cardsInfo]);
   return (
     <>
-      <Header />
-
       <Flex>
         <Box
           width={"100%"}
@@ -267,7 +263,6 @@ export default function JoinTeam() {
       </Wrap>
 
       <Socials />
-      <Footer />
     </>
   );
 }

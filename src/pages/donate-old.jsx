@@ -15,8 +15,6 @@ import {
   StatNumber,
   StatHelpText,
 } from "@chakra-ui/react";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import Socials from "../components/socials";
 import { FaDollarSign } from "react-icons/fa";
 import TestimonialCard from "../components/testimonials-card";
@@ -27,7 +25,6 @@ import { TbHeartHandshake } from "react-icons/tb";
 export default function Donate() {
   return (
     <>
-      <Header />
       <Box className="donatebg">
         <Flex direction={["column", "row"]}>
           <Flex
@@ -300,7 +297,6 @@ export default function Donate() {
       <br />
       <br />
       <Socials />
-      <Footer />
     </>
   );
 }

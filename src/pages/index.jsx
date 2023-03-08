@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
 import HeroHeader from "../components/homepage-landing";
 import Courses from "../components/courses";
 import Jobs from "../components/jobs";
@@ -51,7 +49,6 @@ export default function Home() {
   return (
     <>
       {/* <Button onClick={() => toast.closeAll()}>Close Toast</Button>*/}
-      <Header />
       <meta name="og:title" content="Tech Optimum "></meta>
       <meta
         name="og:description"
@@ -68,7 +65,6 @@ export default function Home() {
         <TestimonialCard />
       </Box>
       <Socials />
-      <Footer />
     </>
   );
 }
