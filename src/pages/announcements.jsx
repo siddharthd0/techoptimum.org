@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import { Heading, Flex } from "@chakra-ui/react";
 
 
@@ -12,7 +10,6 @@ export const databaseId = process.env.NOTION_DATABASE_ID;
 export default function Announcements({ posts }) {
   return (
     <>
- <Header/>
      <div className="announcements-container">
          <Heading marginBottom={"20px "} color="primary">Announcements</Heading>
         <ol className="announcements">
@@ -40,7 +37,6 @@ export default function Announcements({ posts }) {
           })}
         </ol>
         </div>
-     <Footer/>
     </>
   );
 }

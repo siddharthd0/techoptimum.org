@@ -1,6 +1,4 @@
 import CurriculmLanding from "../components/curriculm-landing";
-import Footer from "../components/footer";
-import Header from "../components/header";
 import Socials from "../components/socials";
 import {
   Box,
@@ -30,9 +28,6 @@ export default function Curriculm() {
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true });
   return (
     <>
-      <Header />
-     
-      
       <CurriculmLanding />
       <Text mb={["2rem", "4rem"]} id="web-dev"></Text>
       <Flex
@@ -411,7 +406,6 @@ export default function Curriculm() {
         </Box>
       </Flex>
       <Socials />
-      <Footer />
     </>
   );
 }

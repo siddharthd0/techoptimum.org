@@ -1,6 +1,4 @@
-import Footer from "../components/footer";
 import { useState, useEffect, useMemo } from "react";
-import Header from "../components/header";
 import Socials from "../components/socials";
 import {
   Image,
@@ -23,6 +21,17 @@ export default function JoinTeam() {
 
   const cardsInfo = useMemo(
     () => [
+      {
+        role: "Community Team",
+        application: "https://forms.gle/MRcjD5Ytp5kWcyDy8",
+        department: "Community",
+        responsibility: [
+          "Develop and implement strategies to increase engagement on the Discord server and other platforms",
+          "  Monitor and moderate community discussions to ensure a positive and inclusive environment",
+          "Respond to user inquiries and concerns in a timely and professional manner",
+          "Collaborate with other teams to organize events and activities that promote community engagement",
+        ],
+      },
       {
         role: "Web Designer",
         application: "https://forms.gle/9FayfQddFF6B4Ro39",
@@ -144,8 +153,6 @@ export default function JoinTeam() {
   }, [searchQuery, cardsInfo]);
   return (
     <>
-      <Header />
-
       <Flex>
         <Box
           width={"100%"}
@@ -154,9 +161,8 @@ export default function JoinTeam() {
           backgroundSize={"cover"}
           backgroundPosition={"center"}
           backdropFilter={"blur(10px)"}
-          mt={["-16rem","-5rem"]}
+          mt={["-16rem", "-5rem"]}
           className="shadowBg"
-
         >
           <br />
           <br />
@@ -168,7 +174,7 @@ export default function JoinTeam() {
           <br />
           <br />
           <Box
-          mt={["3rem", "0"]}
+            mt={["3rem", "0"]}
             mx={["2rem", "auto"]}
             className="missionbg"
             borderRadius={"20px"}
@@ -267,7 +273,6 @@ export default function JoinTeam() {
       </Wrap>
 
       <Socials />
-      <Footer />
     </>
   );
 }

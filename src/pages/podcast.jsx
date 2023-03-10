@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
 import Socials from "../components/socials";
 import {
   Text,
@@ -21,7 +19,6 @@ export default function Podcasts() {
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true });
   return (
     <>
-      <Header />
       <Box mb="100px">
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
           <ModalOverlay />
@@ -47,7 +44,6 @@ export default function Podcasts() {
         </Flex>
       </Box>
       <Socials />
-      <Footer />
     </>
   );
 }
