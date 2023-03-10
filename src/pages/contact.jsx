@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
 import Socials from "../components/socials";
 import { Flex } from "@chakra-ui/react";
 import ContactForm from "../components/contact-form";
@@ -7,10 +5,8 @@ import ContactForm from "../components/contact-form";
 export default function Contact() {
   return (
     <>
-      <Header />
       <ContactForm />
       <Socials />
-      <Footer />
     </>
   );
 }

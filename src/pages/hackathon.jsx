@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
 import Socials from "../components/socials";
 import HackathonRecap from "../components/hackathon-recap.jsx";
 import { Link, Button, Text, Heading, Box } from "@chakra-ui/react";
@@ -9,7 +7,6 @@ import HackathonSponsors from "../components/hackathon-sponsors";
 export default function Hackathons() {
   return (
     <>
-      <Header />
       <Box
         mt={["-15rem", "-5rem"]}
         height={["90vh", "100vh"]}
@@ -73,7 +70,6 @@ export default function Hackathons() {
         <HackathonSponsors />
       </Box>
       <Socials />
-      <Footer />
     </>
   );
 }
