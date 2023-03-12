@@ -79,8 +79,8 @@ export default function About() {
         <Flex mx="100px" alignItems={"center"}>
           <Wrap justify="center" spacing="30px">
             <Volunteer
-              src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Moustafa+Sanad&size=100"
-              name="Moustafa Sanad"
+              src="kesh.jpg"
+              name="Srinikesh Kanneluru"
               role="Director of Design"
             />
            <Volunteer
@@ -91,7 +91,10 @@ export default function About() {
               src="https://cdn.discordapp.com/attachments/1083256324252504154/1083262089570816001/Screen_Shot_2023-03-08_at_10.36.43_PM.png"
               name="Kaushal Kurpad"
               role="Social Media"/>
-              
+            <Volunteer
+            src="sahil.png"
+            name="Sahil Pai"
+            role="HR Associate"/>
            <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
@@ -125,7 +128,7 @@ export default function About() {
             <Volunteer
             name="Neil Sangra"
         src="neils.jpg"
-            role="HR Associate"
+            role="HR Coordinator"
             />
             <Volunteer
               name="Ganesh Nathan"
