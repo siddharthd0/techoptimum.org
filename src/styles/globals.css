@@ -59,12 +59,18 @@ html {
   border: none !important;
 }
 
+.link-navs-dd-text {
+  transition: background-color 0.2s;
+}
+
 .link-navs-dd-text:hover {
-  background-color: #2f313c !important;
+  background-color: #343647 !important;
+  transition: background-color 0.2s;
 }
 
 .link-navs-dd-text:active {
-  background-color: #2f313c !important;
+  background-color: #343647 !important;
+  transition: background-color 0.2s;
 }
 
 .job-card-image {
@@ -403,6 +409,7 @@ html {
   background-image: url("/curriculm-landing.png");
   height: 90vh;
 }
+
 .donatebg {
   background-size: cover;
   background-image: url("/donate-landing.png");
@@ -509,7 +516,7 @@ input:focus {
 }
 
 .iframe {
-    border-radius: 15px;
+  border-radius: 15px;
   margin: auto;
   position: absolute;
   border: 0;
@@ -523,25 +530,61 @@ input:focus {
 
 
 @-webkit-keyframes cool-animation {
-  0%{background-position:0% 66%}
-  50%{background-position:100% 35%}
-  100%{background-position:0% 66%}
+  0% {
+    background-position: 0% 66%
+  }
+
+  50% {
+    background-position: 100% 35%
+  }
+
+  100% {
+    background-position: 0% 66%
+  }
 }
+
 @-moz-keyframes cool-animation {
-  0%{background-position:0% 66%}
-  50%{background-position:100% 35%}
-  100%{background-position:0% 66%}
+  0% {
+    background-position: 0% 66%
+  }
+
+  50% {
+    background-position: 100% 35%
+  }
+
+  100% {
+    background-position: 0% 66%
+  }
 }
+
 @-o-keyframes cool-animation {
-  0%{background-position:0% 66%}
-  50%{background-position:100% 35%}
-  100%{background-position:0% 66%}
+  0% {
+    background-position: 0% 66%
+  }
+
+  50% {
+    background-position: 100% 35%
+  }
+
+  100% {
+    background-position: 0% 66%
+  }
 }
-@keyframes cool-animation { 
-  0%{background-position:0% 66%}
-  50%{background-position:100% 35%}
-  100%{background-position:0% 66%}
+
+@keyframes cool-animation {
+  0% {
+    background-position: 0% 66%
+  }
+
+  50% {
+    background-position: 100% 35%
+  }
+
+  100% {
+    background-position: 0% 66%
+  }
 }
+
 .select {
   cursor: pointer;
   background-color: #2c2c2c !important;
@@ -553,15 +596,18 @@ input:focus {
   margin: 0;
   -webkit-appearance: none;
 }
+
 .secondaryButtonBg {
   border: 1px solid #4559E9;
   background-color: transparent !important;
 }
+
 .secondaryButtonBg:hover {
   background: #4559E9 !important;
 }
+
 .shadowBg {
-  -webkit-box-shadow: inset 0px 115px 81px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 115px 81px -3px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 115px 81px -3px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset 0px 115px 81px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 115px 81px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 115px 81px -3px rgba(0, 0, 0, 0.75);
 }

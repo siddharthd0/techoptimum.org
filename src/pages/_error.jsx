@@ -7,11 +7,11 @@ import { Box } from "@chakra-ui/react";
 export default function Home() {
   return (
     <>
-      <Header />
+     
       <Box my="100px">
         <Error />
       </Box>
-      <Footer />
+
     </>
   );
 }
