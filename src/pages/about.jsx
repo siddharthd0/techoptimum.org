@@ -88,9 +88,14 @@ export default function About() {
               name="Aarush Sah"
               role="Director of Product"/>
   <Volunteer
-              src="https://cdn.discordapp.com/attachments/1083256324252504154/1083262089570816001/Screen_Shot_2023-03-08_at_10.36.43_PM.png"
+              src="kaushal.png"
               name="Kaushal Kurpad"
               role="Social Media"/>
+              <Volunteer
+              src="azariah.png"
+              name="Azariah Teklu"
+              role="HR Associate"
+              />
               
            <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
