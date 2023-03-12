@@ -3,9 +3,9 @@ import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 
 import { databaseId } from "./announcements.jsx";
-import Header from "../components/header";
+
 import { Heading,Flex,Link } from "@chakra-ui/react";
-import Footer from "../components/footer";
+
 //deploy again
 export const Text = ({ text }) => {
   if (!text) {
@@ -169,7 +169,7 @@ export default function Post({ page, blocks }) {
     
     <>
     
-<Header/>
+
 
     <div>
       <Head>
@@ -194,7 +194,7 @@ export default function Post({ page, blocks }) {
           </Link>
       </article>
     </div>
-    <Footer/>
+ 
     </>
   );
 }
