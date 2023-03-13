@@ -34,35 +34,33 @@ export default function About() {
         <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Executives
         </Heading>
-        <Flex mb={"5%"} direction={["column", "row"]} >
-        <Wrap justify="center" spacing="30px">
-          <ExecutiveCard
-            src="/sid.png"
-            name="Siddharth Duggal"
-            role="Chief Executive Officer"
-            description={
-              "Siddharth Duggal is a senior in high school who enjoys programming. He enjoys participating in hackathons and making projects that help people. Outside of programming, he enjoys playing the piano and playing video games. "
-            }
-            linkedin="https://www.linkedin.com/in/siddharth-duggal"
-          />
-          <ExecutiveCard
-            src="/PranithPortraitv2.JPG"
-            name="Pranith Molakalapalli"
-            role="Chief Technology Officer"
-            linkedin="https://www.linkedin.com/in/pranith-molakalapalli/"
-            description={
-              "Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."
-            }
-          />
-          <ExecutiveCard
-          src="adityasahas.jpeg"
-          name="Aditya Sahasranam"
-          role="Chief Operating Officer"
-          linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
-          description="Aditya is a sophomore  who enjoys coding and video games. He loves doing projects that have an impact on underserved communities. He also enjoys playing tennis and basketball."
-          
-
-          />
+        <Flex mb={"5%"} direction={["column", "row"]}>
+          <Wrap justify="center" spacing="30px">
+            <ExecutiveCard
+              src="/sid.png"
+              name="Siddharth Duggal"
+              role="Chief Executive Officer"
+              description={
+                "Siddharth Duggal is a senior in high school who enjoys programming. He enjoys participating in hackathons and making projects that help people. Outside of programming, he enjoys playing the piano and playing video games. "
+              }
+              linkedin="https://www.linkedin.com/in/siddharth-duggal"
+            />
+            <ExecutiveCard
+              src="/PranithPortraitv2.JPG"
+              name="Pranith Molakalapalli"
+              role="Chief Technology Officer"
+              linkedin="https://www.linkedin.com/in/pranith-molakalapalli/"
+              description={
+                "Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."
+              }
+            />
+            <ExecutiveCard
+              src="adityasahas.jpeg"
+              name="Aditya Sahasranam"
+              role="Chief Operating Officer"
+              linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
+              description="Aditya is a sophomore  who enjoys coding and video games. He loves doing projects that have an impact on underserved communities. He also enjoys playing tennis and basketball."
+            />
           </Wrap>
         </Flex>
       </Flex>
@@ -83,21 +81,24 @@ export default function About() {
               name="Moustafa Sanad"
               role="Director of Design"
             />
-           <Volunteer
+            <Volunteer
               src="aarush.jpg"
               name="Aarush Sah"
-              role="Director of Product"/>
-  <Volunteer
-              src="kaushal.png"
-              name="Kaushal Kurpad"
-              role="Social Media"/>
-              <Volunteer
+              role="Director of Product"
+            />
+
+            <Volunteer
               src="azariah.png"
               name="Azariah Teklu"
+              role="HR Coordinator"
+            />
+            <Volunteer
+              src="preetham.png"
+              name="Preetham Manapuri"
               role="HR Associate"
-              />
-              
-           <Volunteer
+            />
+
+            <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
               role="Web Developer"
@@ -127,11 +128,7 @@ export default function About() {
               src="https://cdn.discordapp.com/attachments/916543942139469884/1048134367949631488/Screen_Shot_2022-12-02_at_12.11.37_AM.png"
               role="Web Developer"
             />
-            <Volunteer
-            name="Neil Sangra"
-        src="neils.jpg"
-            role="HR Associate"
-            />
+            <Volunteer name="Neil Sangra" src="neils.jpg" role="HR Associate" />
             <Volunteer
               name="Ganesh Nathan"
               src="https://cdn.discordapp.com/attachments/916543942139469884/1048135087637667850/Screen_Shot_2022-12-02_at_12.14.31_AM.png"
