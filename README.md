@@ -1,23 +1,23 @@
-# Tech Optimum
+<p align="center"><img width="300" alt="Tech Optimum Logo" src="https://www.techoptimum.org/logo-transparent.png"></p>
+<h1 align="center"><a href="https://techoptimum.org">Tech Optimum</a></h1>
 
-Tech Optimum is a student-led nonprofit organization dedicated to helping students in CS through courses, internships, talks, and more. If you are interested in joining our team, click [here](https://techoptimum.org/join-team).
+Welcome to Tech Optimum, a nonprofit organization dedicated to helping students in CS through courses, internships, talks and more. If you are interested in joining our communtiy, join [here](https://techoptimum.org/discord). If you would like to contribute to our repoositories or join Tech Optimum as a staff member, please go [here](https://techoptimum.org/join-team).
 
-## Install and run locally via yarn
 
+## Getting started
+### Install and run locally via NPM
 1. Clone the repository
-2. Install dependencies with `yarn install`
-3. Run the development server with `yarn dev`
+2. Install dependencies with `npm install`
+3. Run the development server with `npm run dev`
 
 ```bash
 git clone https://github.com/TechOptimum/Tech-Optimum-Website
-yarn install
-yarn dev
+npm i
+npm run dev
 ```
 
-Finally, open [https://localhost:3000](https://localhost:3000) with your browser to see the website.
-
-## Dashboard
-
-[Tech Optimum Dashboard Frontend](https://github.com/TechOptimum/NextJs-Dashboard)
-
-[Tech Optimum Dashboard Backend](https://github.com/TechOptimum/NextJs-Dashboard-Backend)
+## Other Initiatives
+### Courses
+[Tech Optimum Coding Courses](https://github.com/TechOptimum/courses)
+### Internship Finder
+[Tech Optimum Internship Finder](https://github.com/TechOptimum/internships)
