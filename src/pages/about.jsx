@@ -77,8 +77,8 @@ export default function About() {
         <Flex mx="100px" alignItems={"center"}>
           <Wrap justify="center" spacing="30px">
             <Volunteer
-              src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Moustafa+Sanad&size=100"
-              name="Moustafa Sanad"
+              src="kesh.jpg"
+              name="Srinikesh Kanneluru"
               role="Director of Design"
             />
             <Volunteer
@@ -86,18 +86,34 @@ export default function About() {
               name="Aarush Sah"
               role="Director of Product"
             />
+<<<<<<< HEAD
 
+=======
+            <Volunteer
+              src="kaushal.png"
+              name="Kaushal Kurpad"
+              role="Social Media"
+            />
+>>>>>>> 66932b6389562bb00f92dc90a8069a9f7707bc5e
             <Volunteer
               src="azariah.png"
               name="Azariah Teklu"
               role="HR Coordinator"
             />
             <Volunteer
+<<<<<<< HEAD
               src="preetham.png"
               name="Preetham Manapuri"
               role="HR Associate"
             />
 
+=======
+              name="Neil Sangra"
+              src="neils.jpg"
+              role="HR Coordinator"
+            />
+            <Volunteer src="sahil.png" name="Sahil Pai" role="HR Associate" />
+>>>>>>> 66932b6389562bb00f92dc90a8069a9f7707bc5e
             <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
@@ -128,7 +144,11 @@ export default function About() {
               src="https://cdn.discordapp.com/attachments/916543942139469884/1048134367949631488/Screen_Shot_2022-12-02_at_12.11.37_AM.png"
               role="Web Developer"
             />
+<<<<<<< HEAD
             <Volunteer name="Neil Sangra" src="neils.jpg" role="HR Associate" />
+=======
+
+>>>>>>> 66932b6389562bb00f92dc90a8069a9f7707bc5e
             <Volunteer
               name="Ganesh Nathan"
               src="https://cdn.discordapp.com/attachments/916543942139469884/1048135087637667850/Screen_Shot_2022-12-02_at_12.14.31_AM.png"
