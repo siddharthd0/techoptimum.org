@@ -81,11 +81,7 @@ export default function About() {
               name="Srinikesh Kanneluru"
               role="Director of Design"
             />
-            <Volunteer
-              src="aarush.jpg"
-              name="Aarush Sah"
-              role="Director of Product"
-            />
+        
 
             <Volunteer
               src="kaushal.png"
