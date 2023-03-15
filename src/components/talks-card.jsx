@@ -56,7 +56,7 @@ export default function TalksCard({
                   </Flex>
                 </Badge>
               </Link>
-              <Text fontSize={"sm"} color="primary" >
+              <Text  fontSize={"sm"} color="primary" >
                 {date}
               </Text>
               
@@ -64,9 +64,9 @@ export default function TalksCard({
           </Flex>
 
           <Text
-            paddingX={["60px", "6px"]}
+            paddingX={["60px", "2px"]}
             maxWidth="400px"
-            mt={["27px", "12px"]}
+            mt={["27px", "18px"]}
             color={"primary"}
           >
             {description}
