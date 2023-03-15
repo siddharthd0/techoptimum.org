@@ -17,7 +17,7 @@ import Head from "next/head";
 export default function Courses() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-/*   useEffect(() => {
+  /*   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []); */
@@ -46,7 +46,6 @@ export default function Courses() {
           data-aos="zoom-in-up"
           backgroundColor="#003B73"
           borderRadius={"20px"}
-        
           w="280px"
         >
           <div text-align="center">
@@ -68,33 +67,31 @@ export default function Courses() {
               Python is a computer programming language often used to build
               websites and software, automate tasks, and conduct data analysis.
               <Link
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  href="./curriculum"
-                >
-              <Button
-                backgroundColor="transparent"
-                transition={"700"}
                 _hover={{
-                  backgroundColor: "transparent",
-                  color: "#9DB2F6",
+                  textDecoration: "none",
                 }}
-                _active={{
-                  backgroundColor: "transparent",
-                  color: "#9DB2F6",
-                }}
-                padding={"0"}
-                color="#FFF6AA"
-                fontWeight={"400"}
-                rightIcon={
-                  <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-                }
+                href="./curriculum"
               >
-               
+                <Button
+                  backgroundColor="transparent"
+                  transition={"700"}
+                  _hover={{
+                    backgroundColor: "transparent",
+                    color: "#9DB2F6",
+                  }}
+                  _active={{
+                    backgroundColor: "transparent",
+                    color: "#9DB2F6",
+                  }}
+                  padding={"0"}
+                  color="#FFF6AA"
+                  fontWeight={"400"}
+                  rightIcon={
+                    <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+                  }
+                >
                   LEARN MORE
-
-              </Button>
+                </Button>
               </Link>
             </Text>
           </div>
@@ -104,7 +101,6 @@ export default function Courses() {
           data-aos="zoom-in-up"
           backgroundColor="#05445E"
           borderRadius={"20px"}
-         
           w="280px"
         >
           <Center>
@@ -126,33 +122,31 @@ export default function Courses() {
               Create simple websites using HTML, CSS and JS. Host, publish and
               share your new personalized website that you created from scratch.
               <Link
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  href="./curriculum"
-                >
-              <Button
-                backgroundColor="transparent"
-                transition={"700"}
                 _hover={{
-                  backgroundColor: "transparent",
-                  color: "#9DB2F6",
+                  textDecoration: "none",
                 }}
-                _active={{
-                  backgroundColor: "transparent",
-                  color: "#9DB2F6",
-                }}
-                padding={"0"}
-                color="#FFF6AA"
-                fontWeight={"400"}
-                rightIcon={
-                  <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-                }
+                href="./curriculum"
               >
-               
+                <Button
+                  backgroundColor="transparent"
+                  transition={"700"}
+                  _hover={{
+                    backgroundColor: "transparent",
+                    color: "#9DB2F6",
+                  }}
+                  _active={{
+                    backgroundColor: "transparent",
+                    color: "#9DB2F6",
+                  }}
+                  padding={"0"}
+                  color="#FFF6AA"
+                  fontWeight={"400"}
+                  rightIcon={
+                    <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+                  }
+                >
                   LEARN MORE
-               
-              </Button>
+                </Button>
               </Link>
             </Text>
           </Center>
@@ -162,7 +156,6 @@ export default function Courses() {
           data-aos="zoom-in-up"
           backgroundColor="#145DA0"
           borderRadius={"20px"}
-         
           w="280px"
         >
           <Center>
@@ -187,33 +180,31 @@ export default function Courses() {
               <br />
               <br />
               <Link
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  href="./curriculum"
-                >
-              <Button
-                backgroundColor="transparent"
-                transition={"700"}
                 _hover={{
-                  backgroundColor: "transparent",
-                  color: "#9DB2F6",
+                  textDecoration: "none",
                 }}
-                _active={{
-                  backgroundColor: "transparent",
-                  color: "#9DB2F6",
-                }}
-                padding={"0"}
-                color="#FFF6AA"
-                fontWeight={"400"}
-                rightIcon={
-                  <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-                }
+                href="./curriculum"
               >
-                
+                <Button
+                  backgroundColor="transparent"
+                  transition={"700"}
+                  _hover={{
+                    backgroundColor: "transparent",
+                    color: "#9DB2F6",
+                  }}
+                  _active={{
+                    backgroundColor: "transparent",
+                    color: "#9DB2F6",
+                  }}
+                  padding={"0"}
+                  color="#FFF6AA"
+                  fontWeight={"400"}
+                  rightIcon={
+                    <ExternalLinkIcon position={"relative"} bottom={"2px"} />
+                  }
+                >
                   LEARN MORE
-                
-              </Button>
+                </Button>
               </Link>
             </Text>
           </Center>
