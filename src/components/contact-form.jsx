@@ -12,10 +12,9 @@ import {
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
 
 export default function HeroHeader() {
+<<<<<<< HEAD
   const toast = useToast();
 
   const firstNameRef = useRef(null);
@@ -76,6 +75,9 @@ export default function HeroHeader() {
 
   const validateForm = () => {};
 
+=======
+  const toast = useToast()
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
   return (
     <>
       <Flex
@@ -117,7 +119,10 @@ export default function HeroHeader() {
                 _focus={{
                   "box-shadow": "none",
                 }}
+<<<<<<< HEAD
                 ref={emailRef}
+=======
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
               />
               <Flex mb="40px">
                 <Box>
@@ -134,7 +139,10 @@ export default function HeroHeader() {
                     _focus={{
                       "box-shadow": "none",
                     }}
+<<<<<<< HEAD
                     ref={firstNameRef}
+=======
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
                   />
                 </Box>
                 <Box ml="20px">
@@ -151,7 +159,10 @@ export default function HeroHeader() {
                     _focus={{
                       "box-shadow": "none",
                     }}
+<<<<<<< HEAD
                     ref={lastNameRef}
+=======
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
                   />
                 </Box>
               </Flex>
@@ -170,6 +181,7 @@ export default function HeroHeader() {
                 _focus={{
                   "box-shadow": "none",
                 }}
+<<<<<<< HEAD
                 ref={messageRef}
               />
               <Button
@@ -177,6 +189,20 @@ export default function HeroHeader() {
                 onClick={() => {
                   sendEmail();
                 }}
+=======
+              />
+
+              <Button
+               onClick={() =>
+                toast({
+                  title: 'Message Sent!',
+                  description: "We'll get back to you as soon as possible.",
+                  status: 'success',
+                  duration: 9000,
+                  isClosable: true,
+                })
+              }
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
                 backgroundColor="#2E3569"
                 borderRadius="full"
                 px="10"
@@ -203,7 +229,15 @@ export default function HeroHeader() {
             alignItems="center"
             color="#A7B2FF"
           >
+<<<<<<< HEAD
             <Box paddingLeft="1.5rem">
+=======
+            <Box
+           
+              paddingLeft="1.5rem"
+
+            >
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
               <Flex marginBottom="20px" alignItems="center">
                 <Image
                   src="/contact-icon-1.svg"
@@ -216,6 +250,7 @@ export default function HeroHeader() {
                 </Text>
               </Flex>
               <Text>
+<<<<<<< HEAD
                 <Text mb="10px">Some alternative methods of contact:</Text>
                 <b>Discord</b>{" "}
                 <a href="https://discord.gg/HpRfm7kp3U">
@@ -234,6 +269,22 @@ export default function HeroHeader() {
                 </a>
               </Text>
             </Box>
+=======
+              <Text mb="10px">Some alternative methods of contact:</Text>
+               
+      
+                <b>Discord</b> <a href="https://discord.gg/HpRfm7kp3U">discord.gg/HpRfm7kp3U</a>
+                <br />
+                <b>Email:</b>
+                <a href="mailto:contact.techoptimum@gmail.com"
+                > contact.techoptimum@gmail.com</a>
+                <br/>
+                <b>Instagram:</b> <a href="https://www.instagram.com/techoptimum_/">@techoptimum_</a>
+              </Text>
+            </Box>
+           
+            
+>>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
           </Flex>
         </Flex>
       </Flex>
