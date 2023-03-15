@@ -12,72 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
-
 export default function HeroHeader() {
-<<<<<<< HEAD
-  const toast = useToast();
-
-  const firstNameRef = useRef(null);
-  const lastNameRef = useRef(null);
-  const emailRef = useRef(null);
-  const messageRef = useRef(null);
-
-  const sendEmail = async () => {
-    const templateParams = {
-      first_name: firstNameRef.current.value,
-      last_name: lastNameRef.current.value,
-      email: emailRef.current.value,
-      message: messageRef.current.value,
-    };
-
-    console.log(templateParams);
-
-    try {
-      // send email to support
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_SUPPORT_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      );
-      // send acknowledgement email to user
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_USER_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      );
-      // reset form values
-      firstNameRef.current.value = "";
-      lastNameRef.current.value = "";
-      emailRef.current.value = "";
-      messageRef.current.value = "";
-      // show success toast
-      toast({
-        title: "Message sent.",
-        description: "We'll get back to you as soon as possible.",
-        status: "success",
-        duration: 9000,
-        isClosable: true,
-      });
-    } catch (error) {
-      console.log(error);
-      // show error toast
-      toast({
-        title: "Some error occured",
-        description: "Please email us at team@techoptimum.org instead",
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-      });
-    }
-  };
-
-  const validateForm = () => {};
-
-=======
   const toast = useToast()
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
   return (
     <>
       <Flex
@@ -119,10 +55,6 @@ export default function HeroHeader() {
                 _focus={{
                   "box-shadow": "none",
                 }}
-<<<<<<< HEAD
-                ref={emailRef}
-=======
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
               />
               <Flex mb="40px">
                 <Box>
@@ -139,10 +71,6 @@ export default function HeroHeader() {
                     _focus={{
                       "box-shadow": "none",
                     }}
-<<<<<<< HEAD
-                    ref={firstNameRef}
-=======
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
                   />
                 </Box>
                 <Box ml="20px">
@@ -159,10 +87,6 @@ export default function HeroHeader() {
                     _focus={{
                       "box-shadow": "none",
                     }}
-<<<<<<< HEAD
-                    ref={lastNameRef}
-=======
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
                   />
                 </Box>
               </Flex>
@@ -181,17 +105,7 @@ export default function HeroHeader() {
                 _focus={{
                   "box-shadow": "none",
                 }}
-<<<<<<< HEAD
-                ref={messageRef}
               />
-              <Button
-                type="submit"
-                onClick={() => {
-                  sendEmail();
-                }}
-=======
-              />
-
               <Button
                onClick={() =>
                 toast({
@@ -202,7 +116,6 @@ export default function HeroHeader() {
                   isClosable: true,
                 })
               }
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
                 backgroundColor="#2E3569"
                 borderRadius="full"
                 px="10"
@@ -227,19 +140,15 @@ export default function HeroHeader() {
             flexDir="column"
             justifyContent="center"
             alignItems="center"
-            color="#A7B2FF"
-          >
-<<<<<<< HEAD
-            <Box paddingLeft="1.5rem">
-=======
-            <Box
-           
-              paddingLeft="1.5rem"
+             color="#A7B2FF"
+           >
+             <Box
 
-            >
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
-              <Flex marginBottom="20px" alignItems="center">
-                <Image
+               paddingLeft="1.5rem"
+
+             >
+               <Flex marginBottom="20px" alignItems="center">
+                 <Image
                   src="/contact-icon-1.svg"
                   alt="talking icon"
                   width="60"
@@ -250,26 +159,6 @@ export default function HeroHeader() {
                 </Text>
               </Flex>
               <Text>
-<<<<<<< HEAD
-                <Text mb="10px">Some alternative methods of contact:</Text>
-                <b>Discord</b>{" "}
-                <a href="https://discord.gg/HpRfm7kp3U">
-                  discord.gg/HpRfm7kp3U
-                </a>
-                <br />
-                <b>Email:</b>
-                <a href="mailto:contact.techoptimum@gmail.com">
-                  {" "}
-                  contact.techoptimum@gmail.com
-                </a>
-                <br />
-                <b>Instagram:</b>{" "}
-                <a href="https://www.instagram.com/techoptimum_/">
-                  @techoptimum_
-                </a>
-              </Text>
-            </Box>
-=======
               <Text mb="10px">Some alternative methods of contact:</Text>
                
       
@@ -284,7 +173,6 @@ export default function HeroHeader() {
             </Box>
            
             
->>>>>>> parent of d2c36b4... Merge pull request #28 from richard1615/contact-form
           </Flex>
         </Flex>
       </Flex>
