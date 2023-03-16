@@ -12,7 +12,73 @@ import {
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
+import { useRef } from "react";
+
+
+
 export default function HeroHeader() {
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+
+  const resetValues = () => {
+    firstNameRef.current.value = "";
+    lastNameRef.current.value = "";
+    emailRef.current.value = "";
+    messageRef.current.value = "";
+  }
+
+  async function handleSubmit() {
+    const template_params = {
+      first_name: firstNameRef.current.value,
+      last: lastNameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value,
+    }
+
+    const data = {
+      service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
+      user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+      template_params,
+    }
+
+    const response_support = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      body: JSON.stringify({ ...data, template_id: process.env.NEXT_PUBLIC_SUPPORT_TEMPLATE_ID }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+
+    if (response_support.status == 200) {
+      const response_user = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        body: JSON.stringify({ ...data, template_id: process.env.NEXT_PUBLIC_USER_TEMPLATE_ID }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      console.log(response_user)
+      console.log(response_support)
+      toast({
+        title: 'Message Sent!',
+        description: "We'll get back to you as soon as possible.",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+    } else {
+      toast({
+        title: 'Message Failed to Send.',
+        description: "Email use instead at contact@techoptimum.org",
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      })
+    }
+  }
+
   const toast = useToast()
   return (
     <>
@@ -55,6 +121,7 @@ export default function HeroHeader() {
                 _focus={{
                   "box-shadow": "none",
                 }}
+                ref={emailRef}
               />
               <Flex mb="40px">
                 <Box>
@@ -71,6 +138,7 @@ export default function HeroHeader() {
                     _focus={{
                       "box-shadow": "none",
                     }}
+                    ref={firstNameRef}
                   />
                 </Box>
                 <Box ml="20px">
@@ -87,6 +155,7 @@ export default function HeroHeader() {
                     _focus={{
                       "box-shadow": "none",
                     }}
+                    ref={lastNameRef}
                   />
                 </Box>
               </Flex>
@@ -105,17 +174,13 @@ export default function HeroHeader() {
                 _focus={{
                   "box-shadow": "none",
                 }}
+                ref={messageRef}
               />
               <Button
-               onClick={() =>
-                toast({
-                  title: 'Message Sent!',
-                  description: "We'll get back to you as soon as possible.",
-                  status: 'success',
-                  duration: 9000,
-                  isClosable: true,
-                })
-              }
+                onClick={() => {
+                  handleSubmit()
+                }
+                }
                 backgroundColor="#2E3569"
                 borderRadius="full"
                 px="10"
@@ -140,15 +205,15 @@ export default function HeroHeader() {
             flexDir="column"
             justifyContent="center"
             alignItems="center"
-             color="#A7B2FF"
-           >
-             <Box
+            color="#A7B2FF"
+          >
+            <Box
 
-               paddingLeft="1.5rem"
+              paddingLeft="1.5rem"
 
-             >
-               <Flex marginBottom="20px" alignItems="center">
-                 <Image
+            >
+              <Flex marginBottom="20px" alignItems="center">
+                <Image
                   src="/contact-icon-1.svg"
                   alt="talking icon"
                   width="60"
@@ -159,20 +224,20 @@ export default function HeroHeader() {
                 </Text>
               </Flex>
               <Text>
-              <Text mb="10px">Some alternative methods of contact:</Text>
-               
-      
+                <Text mb="10px">Some alternative methods of contact:</Text>
+
+
                 <b>Discord</b> <a href="https://discord.gg/HpRfm7kp3U">discord.gg/HpRfm7kp3U</a>
                 <br />
                 <b>Email:</b>
                 <a href="mailto:contact.techoptimum@gmail.com"
                 > contact.techoptimum@gmail.com</a>
-                <br/>
+                <br />
                 <b>Instagram:</b> <a href="https://www.instagram.com/techoptimum_/">@techoptimum_</a>
               </Text>
             </Box>
-           
-            
+
+
           </Flex>
         </Flex>
       </Flex>
