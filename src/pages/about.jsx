@@ -84,7 +84,7 @@ export default function About() {
             <Volunteer
               name="Aviral Dhingra"
               role="Director of Education"
-              src="https://ui-avatars.com/api/?background=72a9ed&color=fff&name=Aviral+Dhingra&size=100"
+              src="aviral.png"
             />
             <Volunteer
               src="kaushal.png"
