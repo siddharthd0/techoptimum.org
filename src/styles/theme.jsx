@@ -2,8 +2,8 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
-    secondary: "#1B76FF",
     primary: "#A7B2FF",
+    secondary: "#1B76FF",
     bgColor: "#060E17",
     primaryButton: {
       500: "#1B76FF",
@@ -17,9 +17,8 @@ const theme = extendTheme({
     inputBg: "#0A0F24",
     buttonBg: {
       500: "#4559E9",
-      600: "#3549D9",
+      600: "#3244CA",
     },
- 
     joinTeamBtn: {
       500: "#4A7EAE",
       600: "#4A7EAE",
