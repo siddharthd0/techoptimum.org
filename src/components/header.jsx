@@ -61,7 +61,7 @@ export default function Header() {
           name="og:description"
           content="A student-led organization dedicated to helping and inspiring the next generation of tech leaders."
         ></meta>
-        <meta name="og:image" content=" /meta.png"></meta>
+        <meta name="og:image" content="/meta.png"></meta>
         <title>Tech Optimum</title>
       </Head>
       <Flex
@@ -186,6 +186,9 @@ export default function Header() {
                       </Link>
                       <Link href="/faq">
                         <MenuItem className="link-navs-dd-text">FAQ</MenuItem>
+                      </Link>
+                      <Link href="/links">
+                        <MenuItem className="link-navs-dd-text">Links</MenuItem>
                       </Link>
                     </MenuList>
                   </div>

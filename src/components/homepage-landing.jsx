@@ -116,7 +116,7 @@ export default function HeroHeader() {
               width={["80%", "200px"]}
               textAlign={"center"}
             >
-              <CountUp end={10} duration={6} useEasing={true} delay={1.5} />+
+              <CountUp end={10} duration={6} useEasing={(true).toString()} delay={1.5} />+
               Programming Courses
             </Heading>
             <Heading
@@ -153,7 +153,7 @@ export default function HeroHeader() {
               width={["70%", "30%"]}
               textAlign={"center"}
             >
-              <CountUp end={500} duration={6} useEasing={true} delay={1.5} />+
+              <CountUp end={500} duration={6} useEasing={(true).toString()} delay={1.5} />+
               <br /> Community Members
             </Heading>
             <Link
