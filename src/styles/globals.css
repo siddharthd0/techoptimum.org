@@ -254,13 +254,6 @@ html {
   text-decoration: none;
 }
 
-.announcements-container {
-  width: 800px;
-  margin: auto;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 75px;
-}
 
 .announcements {
   list-style: none;

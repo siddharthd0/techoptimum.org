@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
-import { Heading, Flex } from "@chakra-ui/react";
+import { Box,Heading, Flex } from "@chakra-ui/react";
 
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
@@ -10,8 +10,8 @@ export const databaseId = process.env.NOTION_DATABASE_ID;
 export default function Announcements({ posts }) {
   return (
     <>
-     <div className="announcements-container">
-         <Heading marginBottom={"20px "} color="primary">Announcements</Heading>
+     <Box margin={"3rem auto"} maxW={"800px"}>
+         <Heading textAlign={"center"} marginBottom={"20px "} color="primary">Announcements</Heading>
         <ol className="announcements">
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
@@ -36,7 +36,7 @@ export default function Announcements({ posts }) {
             );
           })}
         </ol>
-        </div>
+        </Box>
     </>
   );
 }
