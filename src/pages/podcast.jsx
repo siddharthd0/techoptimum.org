@@ -39,6 +39,7 @@ export default function Podcasts() {
         <PodcastHero />
         <Flex margin="auto" maxWidth={"1100px"} alignItems={"center"}>
           <Wrap justify="center" spacing="30px">
+           
           
           </Wrap>
         </Flex>

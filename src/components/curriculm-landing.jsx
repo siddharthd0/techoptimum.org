@@ -47,7 +47,7 @@ export default function CurriculmLanding() {
                 href="https://courses.techoptimum.org/"
               >
                 <Button
-                mt={["1rem", "0rem"]}
+                  mt={["1rem", "0rem"]}
                   px="20px"
                   ml={["0rem", "1rem"]}
                   fontWeight={"light"}

@@ -9,7 +9,7 @@ import { NodeNextRequest } from "next/dist/server/base-http/node";
 export default function HeroHeader() {
   return (
     <>
-      <Flex  mb="60px" width={"100%"} direction={"column"}>
+      <Flex mb="60px" width={"100%"} direction={"column"}>
         <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
           <Heading
             as={motion.div}
@@ -24,19 +24,18 @@ export default function HeroHeader() {
             fontSize={["4xl", "5xl"]}
             marginBottom={{ base: ".5em", md: "1rem", lg: "1.5rem" }}
           >
-            Learn. Participate. Accomplish.
+            Learn. Create. Accomplish.
           </Heading>
           <Text
-          
-           as={motion.div}
-           initial={{ opacity: 0, x: -40 }}
-           animate={{
-             opacity: 1,
-             transition: { duration: 1 },
-             ease: "easeIn",
-             x: 0,
-             delay: 1,
-           }}
+            as={motion.div}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+              ease: "easeIn",
+              x: 0,
+              delay: 1,
+            }}
             fontSize={["lg", "2xl"]}
             color="primary"
             marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
@@ -157,8 +156,6 @@ export default function HeroHeader() {
               <br /> Community Members
             </Heading>
             <Link
-
-   
               marginTop={["1.6rem", "0rem"]}
               href="./about"
               transition="500ms"
