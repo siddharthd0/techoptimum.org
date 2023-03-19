@@ -30,54 +30,81 @@ export default function HeroHeader() {
   }
 
   async function handleSubmit() {
+    if (
+      firstNameRef.current.value === "" ||
+      lastNameRef.current.value === "" ||
+      emailRef.current.value === "" ||
+      messageRef.current.value === ""
+    ) {
+      toast({
+        title: "Error",
+        description: "Please fill in all the fields.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      return;
+    }
+  
     const template_params = {
       first_name: firstNameRef.current.value,
       last: lastNameRef.current.value,
-      email: emailRef.current.value,
       message: messageRef.current.value,
-    }
-
+    };
+  
     const data = {
       service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
       user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
       template_params,
-    }
-
-    const response_support = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-      method: "POST",
-      body: JSON.stringify({ ...data, template_id: process.env.NEXT_PUBLIC_SUPPORT_TEMPLATE_ID }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-
-    if (response_support.status == 200) {
-      const response_user = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+    };
+  
+    const response_support = await fetch(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      {
         method: "POST",
-        body: JSON.stringify({ ...data, template_id: process.env.NEXT_PUBLIC_USER_TEMPLATE_ID }),
+        body: JSON.stringify({
+          ...data,
+          template_id: process.env.NEXT_PUBLIC_SUPPORT_TEMPLATE_ID,
+        }),
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (response_support.status == 200) {
+      const response_user = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            ...data,
+            template_id: process.env.NEXT_PUBLIC_USER_TEMPLATE_ID,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      })
-      console.log(response_user)
-      console.log(response_support)
+      );
+      console.log(response_user);
+      console.log(response_support);
       toast({
-        title: 'Message Sent!',
+        title: "Message Sent!",
         description: "We'll get back to you as soon as possible.",
-        status: 'success',
+        status: "success",
         duration: 9000,
         isClosable: true,
-      })
+      });
     } else {
       toast({
-        title: 'Message Failed to Send.',
+        title: "Message Failed to Send.",
         description: "Email use instead at contact@techoptimum.org",
-        status: 'error',
+        status: "error",
         duration: 9000,
         isClosable: true,
-      })
+      });
     }
   }
+  
 
   const toast = useToast()
   return (
@@ -198,6 +225,7 @@ export default function HeroHeader() {
               </Button>
             </FormControl>
           </Box>
+
           <Flex
             marginTop={["5rem", "0px"]}
             paddingLeft={["0rem", "5rem"]}

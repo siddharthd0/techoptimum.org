@@ -39,15 +39,7 @@ export default function Podcasts() {
         <PodcastHero />
         <Flex margin="auto" maxWidth={"1100px"} alignItems={"center"}>
           <Wrap justify="center" spacing="30px">
-            <TalksCard
-              src="./home-events-image.png"
-              name="Dr. David Gunning"
-              role="Professor at the University of Toronto"
-              date={"April 2021"}
-              description="A discussion with Dr. David Gunning, a professor at the University of Toronto, about the future of AI and how it will impact our lives."
-              link="https://www.youtube.com/watch?v=Z1Z2Z3Z4Z5Z6Z7Z8Z9Z0"
-  
-              />
+           
           
           </Wrap>
         </Flex>
