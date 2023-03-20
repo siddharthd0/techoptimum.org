@@ -55,7 +55,7 @@ export default function About() {
               }
             />
             <ExecutiveCard
-              src="adityasahas.jpeg"
+              src="adityasahas.jpg"
               name="Aditya Sahasranam"
               role="Chief Operating Officer"
               linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
