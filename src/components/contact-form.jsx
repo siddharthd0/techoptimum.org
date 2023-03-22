@@ -29,16 +29,18 @@ export default function HeroHeader() {
     messageRef.current.value = "";
   }
 
+  function validateForm() {
+    return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailRef.current.value)
+    && firstNameRef.current.value !== ""
+    && lastNameRef.current.value !== ""
+    && messageRef.current.value.length > 10)
+  }
+
   async function handleSubmit() {
-    if (
-      firstNameRef.current.value === "" ||
-      lastNameRef.current.value === "" ||
-      emailRef.current.value === "" ||
-      messageRef.current.value === ""
-    ) {
+    if (!validateForm()) {
       toast({
         title: "Error",
-        description: "Please fill in all the fields.",
+        description: "Please fill in all the fields correctly.",
         status: "error",
         duration: 5000,
         isClosable: true,
