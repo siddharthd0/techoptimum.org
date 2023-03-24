@@ -10,11 +10,11 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsDiscord, BsInstagram } from "react-icons/bs";
+import Link from "next/link";
+import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import { useRef } from "react";
-
-
 
 export default function HeroHeader() {
   const firstNameRef = useRef();
@@ -27,7 +27,7 @@ export default function HeroHeader() {
     lastNameRef.current.value = "";
     emailRef.current.value = "";
     messageRef.current.value = "";
-  }
+  };
 
   async function handleSubmit() {
     if (
@@ -45,19 +45,19 @@ export default function HeroHeader() {
       });
       return;
     }
-  
+
     const template_params = {
       first_name: firstNameRef.current.value,
       last: lastNameRef.current.value,
       message: messageRef.current.value,
     };
-  
+
     const data = {
       service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
       user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
       template_params,
     };
-  
+
     const response_support = await fetch(
       "https://api.emailjs.com/api/v1.0/email/send",
       {
@@ -104,9 +104,8 @@ export default function HeroHeader() {
       });
     }
   }
-  
 
-  const toast = useToast()
+  const toast = useToast();
   return (
     <>
       <Flex
@@ -205,9 +204,8 @@ export default function HeroHeader() {
               />
               <Button
                 onClick={() => {
-                  handleSubmit()
-                }
-                }
+                  handleSubmit();
+                }}
                 backgroundColor="#2E3569"
                 borderRadius="full"
                 px="10"
@@ -235,11 +233,7 @@ export default function HeroHeader() {
             alignItems="center"
             color="#A7B2FF"
           >
-            <Box
-
-              paddingLeft="1.5rem"
-
-            >
+            <Box paddingLeft="1.5rem">
               <Flex marginBottom="20px" alignItems="center">
                 <Image
                   src="/contact-icon-1.svg"
@@ -247,25 +241,73 @@ export default function HeroHeader() {
                   width="60"
                   height="60"
                 />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+                <Text fontSize="3xl" ml="16px" fontWeight="bold">
                   Contact us
                 </Text>
               </Flex>
-              <Text>
-                <Text mb="10px">Some alternative methods of contact:</Text>
-
-
-                <b>Discord</b> <a href="https://discord.gg/HpRfm7kp3U">discord.gg/HpRfm7kp3U</a>
-                <br />
-                <b>Email:</b>
-                <a href="mailto:contact.techoptimum@gmail.com"
-                > contact.techoptimum@gmail.com</a>
-                <br />
-                <b>Instagram:</b> <a href="https://www.instagram.com/techoptimum_/">@techoptimum_</a>
-              </Text>
+              <Flex margin="auto" maxW="151px" justify={"space-between"}>
+                <Link href="/discord">
+                  <Button
+                    className="glowingShadow"
+                    fontSize="4xl"
+                    backgroundColor="transparent"
+                    transition={"700"}
+                    _hover={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    _active={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    padding={"0"}
+                    color="#7289D9"
+                    fontWeight={"400"}
+                    rightIcon={<BsDiscord position="relative" />}
+                  />
+                </Link>
+                <Link href="mailto:team@techoptimum.org">
+                  <Button
+                    className="glowingShadow"
+                    fontSize="4xl"
+                    backgroundColor="transparent"
+                    transition={"700"}
+                    _hover={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    _active={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    padding={"0"}
+                    color="#7289D9"
+                    fontWeight={"400"}
+                    rightIcon={<MdEmail position="relative" />}
+                  />
+                </Link>
+                <Link href="https://www.instagram.com/techoptimum_/">
+                  <Button
+                    className="glowingShadow"
+                    fontSize="4xl"
+                    backgroundColor="transparent"
+                    transition={"700"}
+                    _hover={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    _active={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    padding={"0 !important"}
+                    color="#7289D9"
+                    fontWeight={"400"}
+                    rightIcon={<BsInstagram position="relative" />}
+                  />
+                </Link>
+              </Flex>
             </Box>
-
-
           </Flex>
         </Flex>
       </Flex>
