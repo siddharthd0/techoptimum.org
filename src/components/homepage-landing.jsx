@@ -20,6 +20,7 @@ export default function HeroHeader() {
       <Flex mb="60px" width={"100%"} direction={"column"}>
         <Flex alignItems={"center"} direction={"column"}>
           <Heading
+          px={["3rem", "0rem"]}
             as={motion.div}
             initial={{ opacity: 0, x: -40 }}
             animate={{
@@ -60,7 +61,7 @@ export default function HeroHeader() {
           boxShadow="0px 3px 65px rgba(50, 10, 350, 0.6)"
           maxWidth={["290px", "500px", "800px"]}
           backgroundColor="#29368C"
-          height={["395px", "150px"]}
+          height={["495px", "150px"]}
           borderRadius={"15px"}
           marginTop={"2rem"}
           as={motion.div}
