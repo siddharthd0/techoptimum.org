@@ -18,6 +18,9 @@ import {
   Show,
   useDisclosure,
   Image,
+  DrawerHeader,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -310,7 +313,7 @@ export default function Header() {
       </Show>
 
       <Show breakpoint="(max-width: 800px)">
-        <Flex>
+        <Flex width='80%' m='auto'>
           <motion.div
             variants={{
               ...buttonVariants,
@@ -321,7 +324,7 @@ export default function Header() {
             initial="hidden"
             animate="visible"
           >
-            <Flex alignItems={"center"} justifyContent={"start"}>
+            <Flex padding='15px' alignItems={"center"} justifyContent={"start"}>
               <Link _hover={{}} href={"./"}>
                 <Image
                   _hover={{
@@ -333,7 +336,7 @@ export default function Header() {
                   alt={"Tech Optimum Logo"}
                 ></Image>
               </Link>
-              <Heading size='lg'>Tech Optimum</Heading>
+              <Heading size="lg">Tech Optimum</Heading>
             </Flex>
           </motion.div>
           <motion.div
@@ -342,10 +345,10 @@ export default function Header() {
               visible: {
                 ...buttonVariants.visible,
               },
-            }}     
+            }}
             initial="hidden"
             animate="visible"
-            style={{ marginLeft: 'auto', padding: '0.3rem' }}
+            style={{ marginLeft: "auto", padding: "0.3rem" }}
           >
             <ResponsiveHeader buttonVariants={buttonVariants} buttonDelay />
           </motion.div>
@@ -372,53 +375,39 @@ const ResponsiveHeader = ({ buttonVariants }) => {
 
   return (
     <>
-      <HamburgerIcon ref={btnRef} onClick={onOpen} boxSize='9' />
-      <Box
-        color="#060e17"
-        
-      >
-
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
+    <Box padding='15px'>
+      <HamburgerIcon ref={btnRef} onClick={onOpen} boxSize="9" />
+      <Box color="#060e17">
+        <Drawer
+          isOpen={isOpen}
+          placement="right"
+          onClose={onClose}
+          finalFocusRef={btnRef}
         >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-
-          <DrawerBody>
-            <Flex
-              marginTop={["1.5rem", "2.1px"]}
-              textAlign={"center"}
-              direction={"column"}
-            >
-              <List className="nav-links">
-                <Box>
-                  <motion.div
-                    variants={{
-                      ...buttonVariants,
-                      visible: {
-                        ...buttonVariants.visible,
-                        transition: {
-                          ...buttonVariants.visible.transition,
-                          delay: buttonDelay * 2,
-                        },
-                      },
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>
+              <Flex alignItems={"center"} justifyContent={"start"}>
+                <Link _hover={{}} href={"./"}>
+                  <Image
+                    _hover={{
+                      cursor: "pointer",
                     }}
-                    initial="hidden"
-                    animate="visible"
-                    >
-                    <Text className="link-navs" color="primary">
-                      <Link className="link-navs" href="/">
-                        Home
-                      </Link>
-                    </Text>
-                  </motion.div>
-                </Box>
-                <Box>
-                  <Menu gutter={"5"} isOpen={isEditOpen}>
+                    w="35px"
+                    src="./logo-transparent.png"
+                    alt={"Tech Optimum Logo"}
+                  ></Image>
+                </Link>
+                <Heading size="md" color='primary'>Tech Optimum</Heading>
+              </Flex>
+            </DrawerHeader>
+            <DrawerBody>
+              <Flex
+                direction="column"
+              >
+                <List className="nav-links">
+                  <Box>
                     <motion.div
                       variants={{
                         ...buttonVariants,
@@ -426,158 +415,191 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           ...buttonVariants.visible,
                           transition: {
                             ...buttonVariants.visible.transition,
-                            delay: buttonDelay * 3.5,
+                            // delay: buttonDelay * 2,
                           },
                         },
                       }}
                       initial="hidden"
                       animate="visible"
-                      >
-                      <MenuButton
-                        className="link-navs"
-                        bgColor={"transparent"}
-                        color="primary"
-                        onMouseEnter={onEditOpen}
-                        onMouseLeave={onEditClose}
-                        >
-                        About
-                      </MenuButton>
-                    </motion.div>
-                    <div className="testing-nav">
-                      <MenuList
-                        onMouseEnter={onEditOpen}
-                        onMouseLeave={onEditClose}
-                        className="link-navs-dropdown"
-                        >
-                        <Link href="/about">
-                          <MenuItem className="link-navs-dd-text">
-                            Team
-                          </MenuItem>
-                        </Link>
-                        <Link href="/contact">
-                          <MenuItem className="link-navs-dd-text">
-                            Contact
-                          </MenuItem>
-                        </Link>
-                        <Link href="/faq">
-                          <MenuItem className="link-navs-dd-text">FAQ</MenuItem>
-                        </Link>
-                      </MenuList>
-                    </div>
-                  </Menu>
-                </Box>
-                <Box>
-                  <Menu gutter={"5"} isOpen={isSecondOpen}>
-                    <motion.div
-                      variants={{
-                        ...buttonVariants,
-                        visible: {
-                          ...buttonVariants.visible,
-                          transition: {
-                            ...buttonVariants.visible.transition,
-                            delay: buttonDelay * 5,
-                          },
-                        },
-                      }}
-                      initial="hidden"
-                      animate="visible"
-                      >
-                      <MenuButton
-                        className="link-navs"
-                        bgColor={"transparent"}
-                        color="primary"
-                        onMouseEnter={onSecondOpen}
-                        onMouseLeave={onSecondClose}
-                      >
-                        Initiatives
-                      </MenuButton>
-                    </motion.div>
-                    <MenuList
-                      onMouseEnter={onSecondOpen}
-                      onMouseLeave={onSecondClose}
-                      className="link-navs-dropdown"
                     >
-                      <Link href="./curriculum">
-                        <MenuItem className="link-navs-dd-text">
-                          Courses
-                        </MenuItem>
-                      </Link>
-
-                      <Link href="/hackathon">
-                        <MenuItem className="link-navs-dd-text">
-                          Hackathon
-                        </MenuItem>
-                      </Link>
-                      <Link href="/podcast">
-                        <MenuItem className="link-navs-dd-text">Talks</MenuItem>
-                      </Link>
-                    </MenuList>
-                  </Menu>
-                </Box>
-                <Box>
-                  <motion.div
-                    variants={{
-                      ...buttonVariants,
-                      visible: {
-                        ...buttonVariants.visible,
-                        transition: {
-                          ...buttonVariants.visible.transition,
-                          delay: buttonDelay * 6.5,
-                        },
-                      },
-                    }}
-                    initial="hidden"
-                    animate="visible"
-                    >
-                    <Text className="link-navs" color="primary">
-                      <Link href="/join-team">Volunteer</Link>
-                    </Text>
-                  </motion.div>
-                </Box>
-                <Box>
-                  <motion.div
-                    variants={{
-                      ...buttonVariants,
-                      visible: {
-                        ...buttonVariants.visible,
-                        transition: {
-                          ...buttonVariants.visible.transition,
-                          delay: buttonDelay * 8,
-                        },
-                      },
-                    }}
-                    initial="hidden"
-                    animate="visible"
-                    >
-                    <Link
-                      _hover={{
-                        cursor: "pointer",
-                      }}
-                      href="/donate"
-                      isExternal
-                      >
                       <Text
-                        transition={"400ms"}
-                        ml="7px !important"
-                        fontWeight={"700!important"}
+                        className="link-navs link-navs-responsive"
                         color="primary"
+                      >
+                        <Link className="link-navs" href="/">
+                          Home
+                        </Link>
+                      </Text>
+                    </motion.div>
+                  </Box>
+                  <Box>
+                    <Menu gutter={"5"} isOpen={isEditOpen}>
+                      <motion.div
+                        variants={{
+                          ...buttonVariants,
+                          visible: {
+                            ...buttonVariants.visible,
+                            transition: {
+                              ...buttonVariants.visible.transition,
+                              // delay: buttonDelay * 3.5,
+                            },
+                          },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        className="link-navs-responsive"
+                      >
+                        {/* need to add open & close functionality */}
+                        <Text
+                          className="link-navs"
+                          bgColor={"transparent"}
+                          color="primary"
+                        >
+                          About
+                        </Text>
+                      </motion.div>
+                      {/* add condition to show when about item active */}
+                      <Show>
+                        <Box className="link-navs-responsive">
+                          <UnorderedList display="flex" flexDir="column">
+                            <ListItem display="block" className="link-navs">
+                              <Link href="/about">
+                                <MenuItem>Team</MenuItem>
+                              </Link>
+                            </ListItem>
+                            <ListItem display="block" className="link-navs">
+                              <Link href="/contact">
+                                <MenuItem>Contact</MenuItem>
+                              </Link>
+                            </ListItem>
+                            <ListItem display="block" className="link-navs">
+                              <Link href="/faq">
+                                <MenuItem>FAQ</MenuItem>
+                              </Link>
+                            </ListItem>
+                          </UnorderedList>
+                        </Box>
+                      </Show>
+                    </Menu>
+                  </Box>
+                  <Box>
+                    <Menu gutter={"5"} isOpen={isSecondOpen}>
+                      <motion.div
+                        variants={{
+                          ...buttonVariants,
+                          visible: {
+                            ...buttonVariants.visible,
+                            transition: {
+                              ...buttonVariants.visible.transition,
+                              // delay: buttonDelay * 5,
+                            },
+                          },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        className="link-navs-responsive"
+                      >
+                        <Text
+                          className="link-navs"
+                          bgColor={"transparent"}
+                          color="primary"
+                        >
+                          Initiatives
+                        </Text>
+                      </motion.div>
+                      {/* write conditional to show when initiative tab is active */}
+                      <Show>
+                        <Box className="link-navs-responsive">
+                          <UnorderedList display="flex" flexDir="column">
+                            <ListItem className="link-navs">
+                              <Link href="./curriculum">
+                                <MenuItem>Courses</MenuItem>
+                              </Link>
+                            </ListItem>
+                            <ListItem className="link-navs">
+                              <Link href="/hackathon">
+                                <MenuItem>Hackathon</MenuItem>
+                              </Link>
+                            </ListItem>
+                            <ListItem className="link-navs">
+                              <Link href="/podcast">
+                                <MenuItem>Talks</MenuItem>
+                              </Link>
+                            </ListItem>
+                          </UnorderedList>
+                        </Box>
+                      </Show>
+                    </Menu>
+                  </Box>
+                  <Box>
+                    <motion.div
+                      variants={{
+                        ...buttonVariants,
+                        visible: {
+                          ...buttonVariants.visible,
+                          transition: {
+                            ...buttonVariants.visible.transition,
+                            // delay: buttonDelay * 3.5,
+                          },
+                        },
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      className="link-navs-responsive"
+                    >
+                      <Text
+                        className="link-navs"
+                        bgColor={"transparent"}
+                        color="primary"
+                      >
+                        <Link href="/join-team">Volunteer</Link>
+                      </Text>
+                    </motion.div>
+                  </Box>
+                  <Box className="link-navs link-navs-responsive">
+                    <motion.div
+                      variants={{
+                        ...buttonVariants,
+                        visible: {
+                          ...buttonVariants.visible,
+                          transition: {
+                            ...buttonVariants.visible.transition,
+                            // delay: buttonDelay * 8,
+                          },
+                        },
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                    >
+                      <Link
                         _hover={{
                           cursor: "pointer",
-                          
-                          opacity: "0.7 !important",
                         }}
+                        href="/donate"
+                        isExternal
                       >
-                        Donate
-                      </Text>
-                    </Link>
-                  </motion.div>
-                </Box>
-              </List>
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-                        </Box>
+                        <Text
+                          transition={"400ms"}
+                          fontWeight={"700!important"}
+                          color="primary"
+                          _hover={{
+                            cursor: "pointer",
+
+                            opacity: "0.7 !important",
+                          }}
+                        >
+                          Donate
+                        </Text>
+                      </Link>
+                    </motion.div>
+                  </Box>
+                </List>
+              </Flex>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Box>
+      </Box>
     </>
   );
 };

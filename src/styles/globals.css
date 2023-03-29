@@ -40,6 +40,11 @@ html {
   font-weight: 100 !important;
 }
 
+.link-navs-responsive {
+  text-align: left;
+  font-size: medium;
+}
+
 .donate-li {
   background-color: #2e54ab !important;
   color: White !important;
@@ -60,8 +65,17 @@ html {
   border: none !important;
 }
 
+.link-navs-dropdown-responsive {
+  color: #9da5f0 !important;
+}
+
 .link-navs-dd-text {
   transition: background-color 0.2s;
+}
+
+.link-navs-dd-text-responsive {
+  display: block;
+
 }
 
 .link-navs-dd-text:hover {
