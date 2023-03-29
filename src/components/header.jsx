@@ -4,8 +4,6 @@ import {
   Flex,
   Drawer,
   DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
@@ -28,7 +26,6 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 
 export default function Header() {
-  // const { isOpen, onOpen, onClose } = useDisclosure()
   const {
     isOpen: isEditOpen,
     onOpen: onEditOpen,
@@ -311,6 +308,7 @@ export default function Header() {
           </Flex>
         </Flex>
       </Show>
+
       <Show breakpoint="(max-width: 800px)">
         <Flex>
           <motion.div
@@ -318,10 +316,6 @@ export default function Header() {
               ...buttonVariants,
               visible: {
                 ...buttonVariants.visible,
-                transition: {
-                  ...buttonVariants.visible.transition,
-                  delay: buttonDelay * 1,
-                },
               },
             }}
             initial="hidden"
@@ -339,10 +333,22 @@ export default function Header() {
                   alt={"Tech Optimum Logo"}
                 ></Image>
               </Link>
-              <Heading>Tech Optimum</Heading>
+              <Heading size='lg'>Tech Optimum</Heading>
             </Flex>
           </motion.div>
-          <ResponsiveHeader buttonVariants={buttonVariants} buttonDelay />
+          <motion.div
+            variants={{
+              ...buttonVariants,
+              visible: {
+                ...buttonVariants.visible,
+              },
+            }}     
+            initial="hidden"
+            animate="visible"
+            style={{ marginLeft: 'auto', padding: '0.3rem' }}
+          >
+            <ResponsiveHeader buttonVariants={buttonVariants} buttonDelay />
+          </motion.div>
         </Flex>
       </Show>
     </>
@@ -366,13 +372,18 @@ const ResponsiveHeader = ({ buttonVariants }) => {
 
   return (
     <>
-      <HamburgerIcon ref={btnRef} onClick={onOpen} />
+      <HamburgerIcon ref={btnRef} onClick={onOpen} boxSize='9' />
+      <Box
+        color="#060e17"
+        
+      >
+
       <Drawer
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-      >
+        >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
@@ -398,7 +409,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                     }}
                     initial="hidden"
                     animate="visible"
-                  >
+                    >
                     <Text className="link-navs" color="primary">
                       <Link className="link-navs" href="/">
                         Home
@@ -421,14 +432,14 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                       }}
                       initial="hidden"
                       animate="visible"
-                    >
+                      >
                       <MenuButton
                         className="link-navs"
                         bgColor={"transparent"}
                         color="primary"
                         onMouseEnter={onEditOpen}
                         onMouseLeave={onEditClose}
-                      >
+                        >
                         About
                       </MenuButton>
                     </motion.div>
@@ -437,7 +448,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                         onMouseEnter={onEditOpen}
                         onMouseLeave={onEditClose}
                         className="link-navs-dropdown"
-                      >
+                        >
                         <Link href="/about">
                           <MenuItem className="link-navs-dd-text">
                             Team
@@ -470,7 +481,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                       }}
                       initial="hidden"
                       animate="visible"
-                    >
+                      >
                       <MenuButton
                         className="link-navs"
                         bgColor={"transparent"}
@@ -517,7 +528,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                     }}
                     initial="hidden"
                     animate="visible"
-                  >
+                    >
                     <Text className="link-navs" color="primary">
                       <Link href="/join-team">Volunteer</Link>
                     </Text>
@@ -537,14 +548,14 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                     }}
                     initial="hidden"
                     animate="visible"
-                  >
+                    >
                     <Link
                       _hover={{
                         cursor: "pointer",
                       }}
                       href="/donate"
                       isExternal
-                    >
+                      >
                       <Text
                         transition={"400ms"}
                         ml="7px !important"
@@ -552,7 +563,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                         color="primary"
                         _hover={{
                           cursor: "pointer",
-
+                          
                           opacity: "0.7 !important",
                         }}
                       >
@@ -566,6 +577,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+                        </Box>
     </>
   );
 };

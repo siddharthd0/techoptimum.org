@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -215,7 +216,7 @@ html {
       rgba(49, 114, 188, 0.863) 50.34%,
       rgba(20, 116, 205, 0.712) 62.16%,
       #4559e9 84.49%);
-  -webkit-background-clip: text;
+      -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
@@ -613,4 +614,8 @@ input:focus {
   -webkit-box-shadow: inset 0px 115px 81px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset 0px 115px 81px -3px rgba(0, 0, 0, 0.75);
   box-shadow: inset 0px 115px 81px -3px rgba(0, 0, 0, 0.75);
+}
+
+.css-6e3h0h{
+  background-color: #060e17 !important;
 }
