@@ -122,8 +122,8 @@ export default function HackathonRecap() {
           className="missionbg"
           direction={["column", "row"]}
         >
-          <Flex alignItems={"center"} height={"100%"}>
-            <Flex align="center" justify="center">
+          <Flex alignItems={"center"} height={"100%"} rowGap="30px">
+            <Flex align="center" justify="center" paddingLeft="15px">
               <ChessIcon width="55px" height="auto" />
 
               <Heading
