@@ -1,5 +1,4 @@
 import {
-  Text,
   Box,
   Flex,
   Heading,
@@ -7,11 +6,10 @@ import {
   Link,
   Badge,
 } from "@chakra-ui/react";
-import { CheckCircleIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function JobPostingCard({
   role,
-  description,
   application,
   department,
   responsibility,
@@ -57,7 +55,7 @@ export default function JobPostingCard({
             }}
             border={"1px solid rgba(0, 0, 0, 0.1)"}
           >
-            Apply for {role}
+            <ExternalLinkIcon marginRight="5px" /> Apply
           </Button>
         </Link>
       </Box>
