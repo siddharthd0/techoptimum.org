@@ -55,7 +55,7 @@ export default function About() {
               }
             />
             <ExecutiveCard
-              src="adityasahas.jpeg"
+              src="adityasahas.jpg"
               name="Aditya Sahasranam"
               role="Chief Operating Officer"
               linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
@@ -81,8 +81,11 @@ export default function About() {
               name="Srinikesh Kanneluru"
               role="Director of Design"
             />
-        
-
+            <Volunteer
+              name="Aviral Dhingra"
+              role="Director of Education"
+              src="aviral.png"
+            />
             <Volunteer
               src="kaushal.png"
               name="Kaushal Kurpad"
@@ -98,12 +101,15 @@ export default function About() {
               name="Preetham Manapuri"
               role="HR Associate"
             />
-<Volunteer
+            <Volunteer
               name="Neil Sangra"
               src="neils.jpg"
               role="HR Coordinator"
             />
-            <Volunteer src="sahil.png" name="Sahil Pai" role="HR Associate" />
+            <Volunteer 
+              src="sahil.png" 
+              name="Sahil Pai" 
+              role="HR Associate" />
             <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
@@ -134,7 +140,6 @@ export default function About() {
               src="https://cdn.discordapp.com/attachments/916543942139469884/1048134367949631488/Screen_Shot_2022-12-02_at_12.11.37_AM.png"
               role="Web Developer"
             />
-            <Volunteer name="Neil Sangra" src="neils.jpg" role="HR Associate" />
             <Volunteer
               name="Ganesh Nathan"
               src="https://cdn.discordapp.com/attachments/916543942139469884/1048135087637667850/Screen_Shot_2022-12-02_at_12.14.31_AM.png"

@@ -11,7 +11,7 @@ Welcome to Tech Optimum, a nonprofit organization dedicated to helping students 
 3. Run the development server with `npm run dev`
 
 ```bash
-git clone https://github.com/TechOptimum/Tech-Optimum-Website
+git clone https://github.com/TechOptimum/techoptimum.org
 npm i
 npm run dev
 ```

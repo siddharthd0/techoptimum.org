@@ -3,15 +3,24 @@ import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { Link } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { Container, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Icon,
+  Tooltip,
+} from "@chakra-ui/react";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
 
 export default function HeroHeader() {
   return (
     <>
-      <Flex  mb="60px" width={"100%"} direction={"column"}>
-        <Flex direction={"column"} marginLeft={["2rem", "7rem"]}>
+      <Flex mb="60px" width={"100%"} direction={"column"}>
+        <Flex alignItems={"center"} direction={"column"}>
           <Heading
+          px={["3rem", "0rem"]}
             as={motion.div}
             initial={{ opacity: 0, x: -40 }}
             animate={{
@@ -21,74 +30,40 @@ export default function HeroHeader() {
               x: 0,
             }}
             className="gradient-title"
-            fontSize={["4xl", "5xl"]}
+            fontSize={["4xl", "7xl"]}
             marginBottom={{ base: ".5em", md: "1rem", lg: "1.5rem" }}
           >
-            Learn. Participate. Accomplish.
+            Learn. Create. Accomplish.
           </Heading>
           <Text
-          
-           as={motion.div}
-           initial={{ opacity: 0, x: -40 }}
-           animate={{
-             opacity: 1,
-             transition: { duration: 1 },
-             ease: "easeIn",
-             x: 0,
-             delay: 1,
-           }}
-            fontSize={["lg", "2xl"]}
+            as={motion.div}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+              ease: "easeIn",
+              x: 0,
+              delay: 1,
+            }}
+            fontSize={["md", "2xl"]}
             color="primary"
             marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
-            width={"75%"}
+            width={"70%"}
+            textAlign={"center"}
           >
-            A student-led organization dedicated to helping and inspiring the
-            next generation of tech leaders.
+            Tech Optimum offers accessible resources including courses and
+            internships to help aspiring coders acquire skills and practical
+            experience.
           </Text>
-          <Link
-            _hover={{
-              textDecoration: "none",
-            }}
-            href="#learn-more"
-          >
-            <Button
-              as={motion.div}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{
-                opacity: 1,
-                transition: { duration: 1 },
-                ease: "easeOut",
-                y: 0,
-              }}
-              fontSize={["sm", "md"]}
-              backgroundColor="transparent"
-              _hover={{
-                backgroundColor: "transparent",
-                color: "#9DB2F6",
-              }}
-              _active={{
-                backgroundColor: "transparent",
-                color: "#9DB2F6",
-              }}
-              width="fit-content"
-              padding={"0"}
-              color="#1B76FF"
-              fontWeight={"500"}
-              rightIcon={
-                <ExternalLinkIcon position={"relative"} bottom={"2px"} />
-              }
-            >
-              LEARN MORE
-            </Button>
-          </Link>
         </Flex>
 
         <Container
+          boxShadow="0px 3px 65px rgba(50, 10, 350, 0.6)"
           maxWidth={["290px", "500px", "800px"]}
           backgroundColor="#29368C"
-          height={["395px", "150px"]}
+          height={["495px", "150px"]}
           borderRadius={"15px"}
-          marginTop={"3rem"}
+          marginTop={"2rem"}
           as={motion.div}
           initial={{ opacity: 0, y: 40 }}
           animate={{
@@ -115,8 +90,11 @@ export default function HeroHeader() {
               py="10px"
               width={["80%", "200px"]}
               textAlign={"center"}
+              transition="transform 0.5s ease 0s, background 0.5s ease 0s"
+              _hover={{
+                transform: "rotate(-10deg)",
+              }}
             >
-              <CountUp end={10} duration={6} useEasing={true} delay={1.5} />+
               Programming Courses
             </Heading>
             <Heading
@@ -129,11 +107,19 @@ export default function HeroHeader() {
               +
             </Heading>
             <Heading
+              borderRadius={"10px"}
+              marginTop={["2rem", "0rem"]}
               color="white"
               fontSize={["lg", "2xl"]}
               fontWeight={"400"}
-              width={["80%", "30%"]}
+              px={"1rem"}
+              py="10px"
+              width={["80%", "200px"]}
               textAlign={"center"}
+              transition="transform 0.5s ease 0s, background 0.5s ease 0s"
+              _hover={{
+                transform: "rotate(10deg)",
+              }}
             >
               Accessible Internships
             </Heading>
@@ -147,21 +133,29 @@ export default function HeroHeader() {
               +
             </Heading>
             <Heading
+              borderRadius={"10px"}
+              marginTop={["2rem", "0rem"]}
               color="white"
               fontSize={["lg", "2xl"]}
               fontWeight={"400"}
-              width={["70%", "30%"]}
+              px={"1rem"}
+              py="10px"
+              width={["80%", "200px"]}
               textAlign={"center"}
+              transition="transform 0.5s ease 0s, background 0.5s ease 0s"
+              _hover={{
+                transform: "rotate(-10deg)",
+              }}
             >
-              <CountUp end={500} duration={6} useEasing={true} delay={1.5} />+
-              <br /> Community Members
+              Inclusive Community
             </Heading>
             <Link
-
-   
               marginTop={["1.6rem", "0rem"]}
               href="./about"
-              transition="500ms"
+              _hover={{
+                transform: "rotate(45deg)",
+              }}
+              transition="transform 0.4s ease"
             >
               <Icon className="diagonal-button" as={BsArrowUpRight} />
             </Link>

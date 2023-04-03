@@ -21,37 +21,9 @@ export default function JoinTeam() {
 
   const cardsInfo = useMemo(
     () => [
+    
       {
-        role: "Community Team",
-        application: "https://forms.gle/MRcjD5Ytp5kWcyDy8",
-        department: "Community",
-        responsibility: [
-          "Develop and implement strategies to increase engagement on the Discord server and other platforms",
-          "  Monitor and moderate community discussions to ensure a positive and inclusive environment",
-          "Respond to user inquiries and concerns in a timely and professional manner",
-          "Collaborate with other teams to organize events and activities that promote community engagement",
-        ],
-      },
-      {
-        role: "Web Designer",
-        application: "https://forms.gle/9FayfQddFF6B4Ro39",
-        department: "Technology",
-        responsibility: [
-          "Design visually appealing websites: Create attractive and user-friendly websites by using your creativity, design, Figma/AdobeXD skills.",
-          "Collaborate with team: Work with others effectively.",
-        ],
-      },
-      {
-        role: "Web Developer",
-        application: "https://forms.gle/NXQomJvT7dmCq8nU9",
-        department: "Technology",
-        responsibility: [
-          "Contribute to the development and maintenance of the website",
-          "Execute designs and assignments utilizing a comprehensive array of cutting-edge technologies such as NodeJS, CSS, Next.js/React.js and more",
-        ],
-      },
-      {
-        role: "Insta Content Manager",
+        role: "Insta Content Creator",
         application: "https://forms.gle/wAPeXbta2oE1WNMz6",
         department: "Marketing",
         responsibility: [
@@ -121,9 +93,20 @@ export default function JoinTeam() {
         application: "https://forms.gle/WzU1TMsQ7WP18UcE6",
         department: "Technology",
         responsibility: [
-          "Implement advanced and dynamic bot commands",
-          "Proactively monitor and handle server-related issues",
-          "Continuously improve and optimize bot performance",
+          "Design and develop innovative and user-friendly bot commands for the Discord server",
+          "Monitor server activities and proactively address any issues that arise with the bot",
+          "Optimize bot performance to ensure seamless user experience and maximum uptime",
+        ],
+      },
+      {
+        role: "Community Team",
+        application: "https://forms.gle/MRcjD5Ytp5kWcyDy8",
+        department: "Community",
+        responsibility: [
+          "Develop and implement strategies to increase engagement on the Discord server and other platforms",
+          "  Monitor and moderate community discussions to ensure a positive and inclusive environment",
+          "Respond to user inquiries and concerns in a timely and professional manner",
+          "Collaborate with other teams to organize events and activities that promote community engagement",
         ],
       },
       {
@@ -135,6 +118,24 @@ export default function JoinTeam() {
           "Developing the hackathon schedule, including workshops, keynote speeches, and judging sessions ",
           "Recruiting and managing a team of volunteers and staff to assist with the event ",
           "Developing and implementing marketing and promotion strategies to attract participants and sponsors Identifying and securing sponsors and partnerships to support the event financially",
+        ],
+      },
+      {
+        role: "Web Designer",
+        application: "https://forms.gle/9FayfQddFF6B4Ro39",
+        department: "Technology",
+        responsibility: [
+          "Design visually appealing websites: Create attractive and user-friendly websites by using your creativity, design, Figma/AdobeXD skills.",
+          "Collaborate with team: Work with others effectively.",
+        ],
+      },
+      {
+        role: "Web Developer",
+        application: "https://forms.gle/NXQomJvT7dmCq8nU9",
+        department: "Technology",
+        responsibility: [
+          "Contribute to the development and maintenance of the website",
+          "Execute designs and assignments utilizing a comprehensive array of cutting-edge technologies such as NodeJS, CSS, Next.js/React.js and more",
         ],
       },
     ],

@@ -57,6 +57,7 @@ export default function Header() {
   const buttonDelay = 0.15;
   return (
     <>
+
       <Show breakpoint="(min-width: 800px)">
         <Head>
           <link rel="icon" href="/TechOptimumLogo.png" />
@@ -80,6 +81,7 @@ export default function Header() {
           position={"relative"}
           direction={["column", "row"]}
           alignItems="center"
+
         >
           <motion.div
             variants={{
@@ -244,6 +246,9 @@ export default function Header() {
                       </Link>
                       <Link href="/podcast">
                         <MenuItem className="link-navs-dd-text">Talks</MenuItem>
+                      </Link>
+                      <Link href="/links">
+                        <MenuItem className="link-navs-dd-text">Links</MenuItem>
                       </Link>
                     </MenuList>
                   </Menu>
