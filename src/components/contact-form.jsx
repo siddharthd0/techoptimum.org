@@ -109,6 +109,7 @@ export default function HeroHeader() {
   return (
     <>
       <Flex
+        left="0%"
         width="100vw"
         justifyContent="center"
         margin={"auto"}
@@ -116,7 +117,6 @@ export default function HeroHeader() {
       >
         <Flex
           direction={["column", "row"]}
-          width="70vw"
           marginTop="50px"
           marginBottom="50px"
         >
@@ -227,13 +227,14 @@ export default function HeroHeader() {
           <Flex
             marginTop={["5rem", "0px"]}
             paddingLeft={["0rem", "5rem"]}
+            paddingRight={["0rem", "5rem"]}
             maxWidth="530px"
             flexDir="column"
             justifyContent="center"
             alignItems="center"
             color="#A7B2FF"
           >
-            <Box paddingLeft="1.5rem">
+            <Box>
               <Flex marginBottom="20px" alignItems="center">
                 <Image
                   src="/contact-icon-1.svg"
