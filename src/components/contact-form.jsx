@@ -10,75 +10,106 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsDiscord, BsInstagram } from "react-icons/bs";
+import Link from "next/link";
+import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
 
 export default function HeroHeader() {
-  const toast = useToast();
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
 
-  const firstNameRef = useRef(null);
-  const lastNameRef = useRef(null);
-  const emailRef = useRef(null);
-  const messageRef = useRef(null);
+  const resetValues = () => {
+    firstNameRef.current.value = "";
+    lastNameRef.current.value = "";
+    emailRef.current.value = "";
+    messageRef.current.value = "";
+  };
 
-  const sendEmail = async () => {
-    const templateParams = {
+  async function handleSubmit() {
+    if (
+      firstNameRef.current.value === "" ||
+      lastNameRef.current.value === "" ||
+      emailRef.current.value === "" ||
+      messageRef.current.value === ""
+    ) {
+      toast({
+        title: "Error",
+        description: "Please fill in all the fields.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      return;
+    }
+
+    const template_params = {
       first_name: firstNameRef.current.value,
-      last_name: lastNameRef.current.value,
-      email: emailRef.current.value,
+      last: lastNameRef.current.value,
       message: messageRef.current.value,
     };
 
-    console.log(templateParams);
+    const data = {
+      service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
+      user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+      template_params,
+    };
 
-    try {
-      // send email to support
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_SUPPORT_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    const response_support = await fetch(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          ...data,
+          template_id: process.env.NEXT_PUBLIC_SUPPORT_TEMPLATE_ID,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (response_support.status == 200) {
+      const response_user = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            ...data,
+            template_id: process.env.NEXT_PUBLIC_USER_TEMPLATE_ID,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
-      // send acknowledgement email to user
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_USER_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      );
-      // reset form values
-      firstNameRef.current.value = "";
-      lastNameRef.current.value = "";
-      emailRef.current.value = "";
-      messageRef.current.value = "";
-      // show success toast
+      console.log(response_user);
+      console.log(response_support);
       toast({
-        title: "Message sent.",
+        title: "Message Sent!",
         description: "We'll get back to you as soon as possible.",
         status: "success",
         duration: 9000,
         isClosable: true,
       });
-    } catch (error) {
-      console.log(error);
-      // show error toast
+    } else {
       toast({
-        title: "Some error occured",
-        description: "Please email us at team@techoptimum.org instead",
+        title: "Message Failed to Send.",
+        description: "Email use instead at contact@techoptimum.org",
         status: "error",
         duration: 9000,
         isClosable: true,
       });
     }
-  };
+  }
 
-  const validateForm = () => {};
-
+  const toast = useToast();
   return (
     <>
       <Flex
+        left="0%"
         width="100vw"
         justifyContent="center"
         margin={"auto"}
@@ -86,7 +117,6 @@ export default function HeroHeader() {
       >
         <Flex
           direction={["column", "row"]}
-          width="70vw"
           marginTop="50px"
           marginBottom="50px"
         >
@@ -173,9 +203,8 @@ export default function HeroHeader() {
                 ref={messageRef}
               />
               <Button
-                type="submit"
                 onClick={() => {
-                  sendEmail();
+                  handleSubmit();
                 }}
                 backgroundColor="#2E3569"
                 borderRadius="full"
@@ -194,16 +223,18 @@ export default function HeroHeader() {
               </Button>
             </FormControl>
           </Box>
+
           <Flex
             marginTop={["5rem", "0px"]}
             paddingLeft={["0rem", "5rem"]}
+            paddingRight={["0rem", "5rem"]}
             maxWidth="530px"
             flexDir="column"
             justifyContent="center"
             alignItems="center"
             color="#A7B2FF"
           >
-            <Box paddingLeft="1.5rem">
+            <Box>
               <Flex marginBottom="20px" alignItems="center">
                 <Image
                   src="/contact-icon-1.svg"
@@ -211,28 +242,72 @@ export default function HeroHeader() {
                   width="60"
                   height="60"
                 />
-                <Text fontSize="3xl" ml="10px" fontWeight="bold">
+                <Text fontSize="3xl" ml="16px" fontWeight="bold">
                   Contact us
                 </Text>
               </Flex>
-              <Text>
-                <Text mb="10px">Some alternative methods of contact:</Text>
-                <b>Discord</b>{" "}
-                <a href="https://discord.gg/HpRfm7kp3U">
-                  discord.gg/HpRfm7kp3U
-                </a>
-                <br />
-                <b>Email:</b>
-                <a href="mailto:contact.techoptimum@gmail.com">
-                  {" "}
-                  contact.techoptimum@gmail.com
-                </a>
-                <br />
-                <b>Instagram:</b>{" "}
-                <a href="https://www.instagram.com/techoptimum_/">
-                  @techoptimum_
-                </a>
-              </Text>
+              <Flex margin="auto" maxW="151px" justify={"space-between"}>
+                <Link href="/discord">
+                  <Button
+                    className="glowingShadow"
+                    fontSize="4xl"
+                    backgroundColor="transparent"
+                    transition={"700"}
+                    _hover={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    _active={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    padding={"0"}
+                    color="#7289D9"
+                    fontWeight={"400"}
+                    rightIcon={<BsDiscord position="relative" />}
+                  />
+                </Link>
+                <Link href="mailto:team@techoptimum.org">
+                  <Button
+                    className="glowingShadow"
+                    fontSize="4xl"
+                    backgroundColor="transparent"
+                    transition={"700"}
+                    _hover={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    _active={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    padding={"0"}
+                    color="#7289D9"
+                    fontWeight={"400"}
+                    rightIcon={<MdEmail position="relative" />}
+                  />
+                </Link>
+                <Link href="https://www.instagram.com/techoptimum_/">
+                  <Button
+                    className="glowingShadow"
+                    fontSize="4xl"
+                    backgroundColor="transparent"
+                    transition={"700"}
+                    _hover={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    _active={{
+                      backgroundColor: "transparent",
+                      color: "#9DB2F6",
+                    }}
+                    padding={"0 !important"}
+                    color="#7289D9"
+                    fontWeight={"400"}
+                    rightIcon={<BsInstagram position="relative" />}
+                  />
+                </Link>
+              </Flex>
             </Box>
           </Flex>
         </Flex>

@@ -27,9 +27,11 @@ export default function Jobs() {
         data-aos-duration={"2000"}
         marginRight="2rem"
       >
+        <Link href="/volunteer">
         <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Volunteer with us
         </Heading>
+        </Link>
         <Box
           maxW="1210px"
           bgColor={"#29368C"}
@@ -40,7 +42,7 @@ export default function Jobs() {
             display={["none", "flex"]}
             className="job-cards"
             mx={"50px"}
-            mt={"80px"}
+            mt={"50px"}
           >
             <Box
               data-aos="zoom-in-down"
@@ -259,26 +261,7 @@ export default function Jobs() {
             mt={"30px"}
             mr={"50px"}
           >
-            <Link
-              href="./join-team"
-              _hover={{
-                textDecoration: "none",
-              }}
-            >
-              <Button
-                bgColor={"#4559E9"}
-                borderRadius={"15px"}
-                variant={"unstyled"}
-                pr="20px"
-                pl="20px"
-                fontWeight={100}
-                _hover={{
-                  bgColor: "#6C7BE6",
-                }}
-              >
-                View More
-              </Button>
-            </Link>
+         
           </Flex>
           <br></br>
         </Box>

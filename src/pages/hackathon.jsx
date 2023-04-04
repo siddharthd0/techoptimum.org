@@ -14,16 +14,6 @@ export default function Hackathons() {
         backgroundSize={"cover"}
         className="shadowBg"
       >
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-        <br />
-        <br />
-        <br />
-
         <Box
           marginX={["2rem", "auto"]}
           className="missionbg"
@@ -32,6 +22,9 @@ export default function Hackathons() {
           padding="2rem"
           opacity={".948"}
           mt={["3rem", "0"]}
+          position="relative"
+          top="50%"
+          transform="translate(0, -50%)"
         >
           <Text fontSize={["xl", "4xl"]}>Welcome to</Text>
           <Heading color="primary" fontSize={["3xl", "6xl"]}>

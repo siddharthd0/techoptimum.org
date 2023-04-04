@@ -266,6 +266,9 @@ export default function Header() {
                       <Link href="/podcast">
                         <MenuItem className="link-navs-dd-text">Talks</MenuItem>
                       </Link>
+                      <Link href="/links">
+                        <MenuItem className="link-navs-dd-text">Links</MenuItem>
+                      </Link>
                     </MenuList>
                   </Menu>
                 </li>
@@ -357,7 +360,9 @@ export default function Header() {
                   alt={"Tech Optimum Logo"}
                 ></Image>
               </Link>
-              <Heading size="lg">Tech Optimum</Heading>
+              <Heading size="md" color="primary">
+                Tech Optimum
+              </Heading>
             </Flex>
           </motion.div>
           <motion.div
