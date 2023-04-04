@@ -10,7 +10,6 @@ import {
   List,
   Text,
   Heading,
-  Hide,
   Menu,
   MenuButton,
   MenuItem,
@@ -22,7 +21,12 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import {
+  ChevronRightIcon,
+  ChevronDownIcon,
+  HamburgerIcon,
+} from "@chakra-ui/icons";
+import { useBoolean } from "@chakra-ui/react";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -40,6 +44,21 @@ export default function Header() {
     onClose: onSecondClose,
   } = useDisclosure();
   const buttonVariants = {
+    hidden: {
+      y: -10,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "fade",
+        damping: 10,
+        stiffness: 150,
+      },
+    },
+  };
+  const drawerButtonVariants = {
     hidden: {
       y: -10,
       opacity: 0,
@@ -355,7 +374,10 @@ export default function Header() {
             animate="visible"
             style={{ marginLeft: "auto", padding: "0.3rem" }}
           >
-            <ResponsiveHeader buttonVariants={buttonVariants} buttonDelay />
+            <ResponsiveHeader
+              buttonVariants={drawerButtonVariants}
+              buttonDelay
+            />
           </motion.div>
         </Flex>
       </Show>
@@ -365,23 +387,20 @@ export default function Header() {
 
 const ResponsiveHeader = ({ buttonVariants }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const {
-    isOpen: isEditOpen,
-    onOpen: onEditOpen,
-    onClose: onEditClose,
-  } = useDisclosure();
-  const {
-    isOpen: isSecondOpen,
-    onOpen: onSecondOpen,
-    onClose: onSecondClose,
-  } = useDisclosure();
+  const [aboutIsOpen, setAboutIsOpen] = useBoolean();
+  const [initiativeIsOpen, setInitiativeIsOpen] = useBoolean();
   const btnRef = React.useRef();
-  const buttonDelay = 0.3;
+  const buttonDelay = 0.2;
 
   return (
     <>
-      <Box padding="19px">
-        <HamburgerIcon ref={btnRef} onClick={onOpen} boxSize="7" />
+      <Box padding="15px">
+        <HamburgerIcon 
+          ref={btnRef} 
+          onClick={onOpen} 
+          boxSize="9" 
+          color='#9da5f0'
+        />
         <Box color="#060e17">
           <Drawer
             isOpen={isOpen}
@@ -391,7 +410,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
           >
             <DrawerOverlay />
             <DrawerContent>
-              <DrawerCloseButton />
+              <DrawerCloseButton size='lg' />
               <DrawerHeader>
                 <Flex alignItems={"center"} justifyContent={"start"}>
                   <Link _hover={{}} href={"./"}>
@@ -412,21 +431,21 @@ const ResponsiveHeader = ({ buttonVariants }) => {
               <DrawerBody>
                 <Flex direction="column">
                   <List className="nav-links">
-                    <Box>
-                      <motion.div
-                        variants={{
-                          ...buttonVariants,
-                          visible: {
-                            ...buttonVariants.visible,
-                            transition: {
-                              ...buttonVariants.visible.transition,
-                              // delay: buttonDelay * 2,
-                            },
+                    <motion.div
+                      variants={{
+                        ...buttonVariants,
+                        visible: {
+                          ...buttonVariants.visible,
+                          transition: {
+                            ...buttonVariants.visible.transition,
+                            delay: buttonDelay * 2,
                           },
-                        }}
-                        initial="hidden"
-                        animate="visible"
-                      >
+                        },
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                    >
+                      <Box pb='5'>
                         <Text
                           className="link-navs link-navs-responsive"
                           color="primary"
@@ -435,26 +454,26 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                             Home
                           </Link>
                         </Text>
-                      </motion.div>
-                    </Box>
-                    <Box>
-                      <Menu gutter={"5"} isOpen={isEditOpen}>
-                        <motion.div
-                          variants={{
-                            ...buttonVariants,
-                            visible: {
-                              ...buttonVariants.visible,
-                              transition: {
-                                ...buttonVariants.visible.transition,
-                                // delay: buttonDelay * 3.5,
-                              },
-                            },
-                          }}
-                          initial="hidden"
-                          animate="visible"
-                          className="link-navs-responsive"
-                        >
-                          {/* need to add open & close functionality */}
+                      </Box>
+                    </motion.div>
+                    <motion.div
+                      variants={{
+                        ...buttonVariants,
+                        visible: {
+                          ...buttonVariants.visible,
+                          transition: {
+                            ...buttonVariants.visible.transition,
+                            delay: buttonDelay * 3.5,
+                          },
+                        },
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      className="link-navs-responsive"
+                      onClick={() => setAboutIsOpen.toggle()}
+                    >
+                      <Box pb='5'>
+                        <Flex>
                           <Text
                             className="link-navs"
                             bgColor={"transparent"}
@@ -462,97 +481,60 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           >
                             About
                           </Text>
-                        </motion.div>
-                        {/* add condition to show when about item active */}
-                        <Show>
-                          <Box className="link-navs-responsive">
+                          {aboutIsOpen ? (
+                            <ChevronDownIcon
+                              boxSize="5"
+                              className="link-navs-dropdown-responsive"
+                            />
+                          ) : (
+                            <ChevronRightIcon
+                              boxSize="5"
+                              my="auto"
+                              className="link-navs-dropdown-responsive"
+                            />
+                          )}
+                        </Flex>
+                        {aboutIsOpen && (
+                          <Box className="link-navs-responsive" >
                             <UnorderedList display="flex" flexDir="column">
                               <ListItem display="block" className="link-navs">
                                 <Link href="/about">
-                                  <MenuItem>Team</MenuItem>
+                                  <Text py='2'>Team</Text>
                                 </Link>
                               </ListItem>
                               <ListItem display="block" className="link-navs">
                                 <Link href="/contact">
-                                  <MenuItem>Contact</MenuItem>
+                                  <Text py='2'>Contact</Text>
                                 </Link>
                               </ListItem>
                               <ListItem display="block" className="link-navs">
                                 <Link href="/faq">
-                                  <MenuItem>FAQ</MenuItem>
+                                  <Text pt='2'>FAQ</Text>
                                 </Link>
                               </ListItem>
                             </UnorderedList>
                           </Box>
-                        </Show>
-                      </Menu>
-                      <Menu gutter={"5"} isOpen={isEditOpen}>
-                        <motion.div
-                          variants={{
-                            ...buttonVariants,
-                            visible: {
-                              ...buttonVariants.visible,
-                              transition: {
-                                ...buttonVariants.visible.transition,
-                                delay: buttonDelay * 3.5,
-                              },
+                        )}
+                      </Box>
+                    </motion.div>
+                    <Box pb='5'>
+                      <motion.div
+                        variants={{
+                          ...buttonVariants,
+                          visible: {
+                            ...buttonVariants.visible,
+                            transition: {
+                              ...buttonVariants.visible.transition,
+                              delay: buttonDelay * 5,
                             },
-                          }}
-                          initial="hidden"
-                          animate="visible"
-                        >
-                          <MenuButton
-                            className="link-navs"
-                            bgColor={"transparent"}
-                            color="primary"
-                            onMouseEnter={onEditOpen}
-                            onMouseLeave={onEditClose}
-                          >
-                            About
-                          </MenuButton>
-                        </motion.div>
-                        <div className="testing-nav">
-                          <MenuList
-                            onMouseEnter={onEditOpen}
-                            onMouseLeave={onEditClose}
-                            className="link-navs-dropdown"
-                          >
-                            <Link href="/about">
-                              <MenuItem className="link-navs-dd-text">
-                                Team
-                              </MenuItem>
-                            </Link>
-                            <Link href="/contact">
-                              <MenuItem className="link-navs-dd-text">
-                                Contact
-                              </MenuItem>
-                            </Link>
-                            <Link href="/faq">
-                              <MenuItem className="link-navs-dd-text">
-                                FAQ
-                              </MenuItem>
-                            </Link>
-                          </MenuList>
-                        </div>
-                      </Menu>
-                    </Box>
-                    <Box>
-                      <Menu gutter={"5"} isOpen={isSecondOpen}>
-                        <motion.div
-                          variants={{
-                            ...buttonVariants,
-                            visible: {
-                              ...buttonVariants.visible,
-                              transition: {
-                                ...buttonVariants.visible.transition,
-                                // delay: buttonDelay * 5,
-                              },
-                            },
-                          }}
-                          initial="hidden"
-                          animate="visible"
-                          className="link-navs-responsive"
-                        >
+                          },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        className="link-navs-responsive"
+                        onClick={() => setInitiativeIsOpen.toggle()}
+                      >
+                        <Flex>
                           <Text
                             className="link-navs"
                             bgColor={"transparent"}
@@ -560,47 +542,58 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           >
                             Initiatives
                           </Text>
-                        </motion.div>
-                        {/* write conditional to show when initiative tab is active */}
-                        <Show>
+                          {initiativeIsOpen ? (
+                            <ChevronDownIcon
+                              boxSize="5"
+                              className="link-navs-dropdown-responsive"
+                            />
+                          ) : (
+                            <ChevronRightIcon
+                              boxSize="5"
+                              my="auto"
+                              className="link-navs-dropdown-responsive"
+                            />
+                          )}
+                        </Flex>
+                        {initiativeIsOpen && (
                           <Box className="link-navs-responsive">
                             <UnorderedList display="flex" flexDir="column">
                               <ListItem className="link-navs">
                                 <Link href="./curriculum">
-                                  <MenuItem>Courses</MenuItem>
+                                  <Text py='2'>Courses</Text>
                                 </Link>
                               </ListItem>
                               <ListItem className="link-navs">
                                 <Link href="/hackathon">
-                                  <MenuItem>Hackathon</MenuItem>
+                                  <Text py='2'>Hackathon</Text>
                                 </Link>
                               </ListItem>
                               <ListItem className="link-navs">
                                 <Link href="/podcast">
-                                  <MenuItem>Talks</MenuItem>
+                                  <Text py='2'>Talks</Text>
                                 </Link>
                               </ListItem>
                             </UnorderedList>
                           </Box>
-                        </Show>
-                      </Menu>
+                        )}
+                      </motion.div>
                     </Box>
-                    <Box>
-                      <motion.div
-                        variants={{
-                          ...buttonVariants,
-                          visible: {
-                            ...buttonVariants.visible,
-                            transition: {
-                              ...buttonVariants.visible.transition,
-                              // delay: buttonDelay * 3.5,
-                            },
+                    <motion.div
+                      variants={{
+                        ...buttonVariants,
+                        visible: {
+                          ...buttonVariants.visible,
+                          transition: {
+                            ...buttonVariants.visible.transition,
+                            delay: buttonDelay * 6.5,
                           },
-                        }}
-                        initial="hidden"
-                        animate="visible"
-                        className="link-navs-responsive"
-                      >
+                        },
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      className="link-navs-responsive"
+                    >
+                      <Box  pb='5'>
                         <Text
                           className="link-navs"
                           bgColor={"transparent"}
@@ -608,23 +601,23 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                         >
                           <Link href="/join-team">Volunteer</Link>
                         </Text>
-                      </motion.div>
-                    </Box>
-                    <Box className="link-navs link-navs-responsive">
-                      <motion.div
-                        variants={{
-                          ...buttonVariants,
-                          visible: {
-                            ...buttonVariants.visible,
-                            transition: {
-                              ...buttonVariants.visible.transition,
-                              // delay: buttonDelay * 8,
-                            },
+                      </Box>
+                    </motion.div>
+                    <motion.div
+                      variants={{
+                        ...buttonVariants,
+                        visible: {
+                          ...buttonVariants.visible,
+                          transition: {
+                            ...buttonVariants.visible.transition,
+                            delay: buttonDelay * 8,
                           },
-                        }}
-                        initial="hidden"
-                        animate="visible"
-                      >
+                        },
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                    >
+                      <Box className="link-navs link-navs-responsive" pb='5'>
                         <Link
                           _hover={{
                             cursor: "pointer",
@@ -638,15 +631,15 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                             color="primary"
                             _hover={{
                               cursor: "pointer",
-
+                              color: '#ffffff',
                               opacity: "0.7 !important",
                             }}
                           >
                             Donate
                           </Text>
                         </Link>
-                      </motion.div>
-                    </Box>
+                      </Box>
+                    </motion.div>
                   </List>
                 </Flex>
               </DrawerBody>
