@@ -164,17 +164,8 @@ export default function JoinTeam() {
           mt={["0rem", "-5rem"]}
           className="shadowBg"
         >
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           <Box
-            mt={["3rem", "0"]}
+            mt={["10rem", "12rem"]}
             mx={["2rem", "auto"]}
             className="missionbg"
             borderRadius={"20px"}
