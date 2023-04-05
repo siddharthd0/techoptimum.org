@@ -395,13 +395,13 @@ const ResponsiveHeader = ({ buttonVariants }) => {
   return (
     <>
       <Box padding="15px">
-        <HamburgerIcon 
-          ref={btnRef} 
-          onClick={onOpen} 
-          boxSize="9" 
-          color='#9da5f0'
+        <HamburgerIcon
+          ref={btnRef}
+          onClick={onOpen}
+          boxSize="9"
+          color="#9da5f0"
         />
-        <Box color="#060e17">
+        <Box>
           <Drawer
             isOpen={isOpen}
             placement="right"
@@ -410,7 +410,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
           >
             <DrawerOverlay />
             <DrawerContent>
-              <DrawerCloseButton size='lg' />
+              <DrawerCloseButton size="lg" />
               <DrawerHeader>
                 <Flex alignItems={"center"} justifyContent={"start"}>
                   <Link _hover={{}} href={"./"}>
@@ -445,7 +445,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                       initial="hidden"
                       animate="visible"
                     >
-                      <Box pb='5'>
+                      <Box pb="5">
                         <Text
                           className="link-navs link-navs-responsive"
                           color="primary"
@@ -472,7 +472,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                       className="link-navs-responsive"
                       onClick={() => setAboutIsOpen.toggle()}
                     >
-                      <Box pb='5'>
+                      <Box pb="5">
                         <Flex>
                           <Text
                             className="link-navs"
@@ -495,21 +495,21 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           )}
                         </Flex>
                         {aboutIsOpen && (
-                          <Box className="link-navs-responsive" >
+                          <Box className="link-navs-responsive">
                             <UnorderedList display="flex" flexDir="column">
                               <ListItem display="block" className="link-navs">
                                 <Link href="/about">
-                                  <Text py='2'>Team</Text>
+                                  <Text py="2">Team</Text>
                                 </Link>
                               </ListItem>
                               <ListItem display="block" className="link-navs">
                                 <Link href="/contact">
-                                  <Text py='2'>Contact</Text>
+                                  <Text py="2">Contact</Text>
                                 </Link>
                               </ListItem>
                               <ListItem display="block" className="link-navs">
                                 <Link href="/faq">
-                                  <Text pt='2'>FAQ</Text>
+                                  <Text pt="2">FAQ</Text>
                                 </Link>
                               </ListItem>
                             </UnorderedList>
@@ -517,7 +517,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                         )}
                       </Box>
                     </motion.div>
-                    <Box pb='5'>
+                    <Box pb="5">
                       <motion.div
                         variants={{
                           ...buttonVariants,
@@ -560,17 +560,17 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                             <UnorderedList display="flex" flexDir="column">
                               <ListItem className="link-navs">
                                 <Link href="./curriculum">
-                                  <Text py='2'>Courses</Text>
+                                  <Text py="2">Courses</Text>
                                 </Link>
                               </ListItem>
                               <ListItem className="link-navs">
                                 <Link href="/hackathon">
-                                  <Text py='2'>Hackathon</Text>
+                                  <Text py="2">Hackathon</Text>
                                 </Link>
                               </ListItem>
                               <ListItem className="link-navs">
                                 <Link href="/podcast">
-                                  <Text py='2'>Talks</Text>
+                                  <Text py="2">Talks</Text>
                                 </Link>
                               </ListItem>
                             </UnorderedList>
@@ -593,7 +593,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                       animate="visible"
                       className="link-navs-responsive"
                     >
-                      <Box  pb='5'>
+                      <Box pb="5">
                         <Text
                           className="link-navs"
                           bgColor={"transparent"}
@@ -617,7 +617,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                       initial="hidden"
                       animate="visible"
                     >
-                      <Box className="link-navs link-navs-responsive" pb='5'>
+                      <Box className="link-navs link-navs-responsive" pb="5">
                         <Link
                           _hover={{
                             cursor: "pointer",
@@ -631,7 +631,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                             color="primary"
                             _hover={{
                               cursor: "pointer",
-                              color: '#ffffff',
+                              color: "#ffffff",
                               opacity: "0.7 !important",
                             }}
                           >

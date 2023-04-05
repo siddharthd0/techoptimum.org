@@ -21,7 +21,6 @@ export default function JoinTeam() {
 
   const cardsInfo = useMemo(
     () => [
-    
       {
         role: "Insta Content Creator",
         application: "https://forms.gle/wAPeXbta2oE1WNMz6",
@@ -162,7 +161,7 @@ export default function JoinTeam() {
           backgroundSize={"cover"}
           backgroundPosition={"center"}
           backdropFilter={"blur(10px)"}
-          mt={["-16rem", "-5rem"]}
+          mt={["0rem", "-5rem"]}
           className="shadowBg"
         >
           <br />
