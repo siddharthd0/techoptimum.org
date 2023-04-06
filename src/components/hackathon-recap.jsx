@@ -3,12 +3,10 @@ import SkribblIoIcon from "../assets/skribblio.svg";
 import WorkshopsIcon from "../assets/workshops.svg";
 
 import {
-  Box,
   Container,
   Flex,
   Heading,
   Text,
-  Button,
   Icon,
 } from "@chakra-ui/react";
 // import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -16,7 +14,6 @@ import { BsArrowUpRight } from "react-icons/bs";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { Highlight, Link } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function HackathonRecap() {
   return (
