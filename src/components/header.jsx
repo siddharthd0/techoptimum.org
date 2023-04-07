@@ -438,7 +438,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           ...buttonVariants.visible,
                           transition: {
                             ...buttonVariants.visible.transition,
-                            delay: buttonDelay * 2,
+                            delay: buttonDelay * 1.5,
                           },
                         },
                       }}
@@ -463,7 +463,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           ...buttonVariants.visible,
                           transition: {
                             ...buttonVariants.visible.transition,
-                            delay: buttonDelay * 3.5,
+                            delay: buttonDelay * 2.5,
                           },
                         },
                       }}
@@ -525,7 +525,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                             ...buttonVariants.visible,
                             transition: {
                               ...buttonVariants.visible.transition,
-                              delay: buttonDelay * 5,
+                              delay: buttonDelay * 3,
                             },
                           },
                         }}
@@ -585,7 +585,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           ...buttonVariants.visible,
                           transition: {
                             ...buttonVariants.visible.transition,
-                            delay: buttonDelay * 6.5,
+                            delay: buttonDelay * 4.5,
                           },
                         },
                       }}
@@ -610,7 +610,7 @@ const ResponsiveHeader = ({ buttonVariants }) => {
                           ...buttonVariants.visible,
                           transition: {
                             ...buttonVariants.visible.transition,
-                            delay: buttonDelay * 8,
+                            delay: buttonDelay * 5,
                           },
                         },
                       }}

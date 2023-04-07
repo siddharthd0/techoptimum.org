@@ -4,7 +4,7 @@ import Fonts from "../components/font";
 
 import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { useEffect,useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 
 import Loading from "./loading";
@@ -12,7 +12,6 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
-  
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
