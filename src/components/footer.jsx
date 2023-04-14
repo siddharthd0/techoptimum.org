@@ -9,10 +9,13 @@ import {
   Link,
   Box,
   Divider,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
+
 export default function Footer() {
+  let [isLargerThan600] = useMediaQuery("(max-width: 600px)");
   return (
     <>
       <Flex
@@ -120,9 +123,10 @@ export default function Footer() {
         <Flex
           justifyContent="space-between"
           alignItems="center"
-          padding="15px 12% "
+          padding={isLargerThan600 ? "15px 5%" : "15px 12%" }
           backgroundColor={"footerBg"}
           direction={{ base: "column", md: "row" }}
+          className="footer-rights"
         >
           <Text color="primary" fontSize="sm">
             Tech Optimum © 2023. All rights reserved.
