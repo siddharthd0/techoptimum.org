@@ -32,7 +32,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "stripe": "^11.5.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "uninstall": "^0.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.0",
