@@ -2698,6 +2698,11 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
+"countdown@^2.6.0":
+  "integrity" "sha512-96C3ntj6/Q0KiikjRxDTrnw09VHI1x930gDTxBnTN8spEjySAT4ftvPXbM22Wn1pp5X0HvZ9uw6DOIf2d8g7rg=="
+  "resolved" "https://registry.npmjs.org/countdown/-/countdown-2.6.0.tgz"
+  "version" "2.6.0"
+
 "countup.js@^2.2.0":
   "integrity" "sha512-dQ7F/CmKGjaO6cDfhtEXwsKVlXIpJ89dFs8PvkaZH9jBVJ2Z8GU4iwG/qP7MgY8qwr+1skbwR6qecWWQLUzB8Q=="
   "resolved" "https://registry.npmjs.org/countup.js/-/countup.js-2.3.2.tgz"

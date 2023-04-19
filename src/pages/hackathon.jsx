@@ -3,6 +3,7 @@ import HackathonRecap from "../components/hackathon-recap.jsx";
 import { Link, Button, Text, Heading, Box } from "@chakra-ui/react";
 import HackathonWinners from "../components/hackathon-winners";
 import HackathonSponsors from "../components/hackathon-sponsors";
+import CountDownTimer from "../components/countdown-timer";
 
 export default function Hackathons() {
   return (
@@ -14,6 +15,7 @@ export default function Hackathons() {
         backgroundSize={"cover"}
         className="shadowBg"
       >
+        <CountDownTimer />
         <Box
           marginX={["2rem", "auto"]}
           className="missionbg"

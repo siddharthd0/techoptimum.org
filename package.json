@@ -22,6 +22,7 @@
     "@vercel/analytics": "^0.1.6",
     "all": "^0.0.0",
     "aos": "^2.3.4",
+    "countdown": "^2.6.0",
     "framer-motion": "^7.6.1",
     "next": "^12.3.4",
     "nextjs-redirect": "^6.0.1",
