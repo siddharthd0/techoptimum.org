@@ -1,11 +1,9 @@
-// countdown from DD Days, HH Hours, MM Minute, ss Seconds
-// June 15th-19th, 2023
-
-import {useState, useEffect} from 'react';
+import { useState } from 'react';
+import { Box, Center, Flex, Text } from '@chakra-ui/react';
 
 const TIMER_CONTENT = {
   date_start: "June 15th",
-  timer_text: "June 15th-19th, 2023"
+  timer_text: "June 15th - 19th, 2023"
 }
 
 export default function CountDownTimer(){
@@ -32,10 +30,18 @@ export default function CountDownTimer(){
   })
 
   return (
-    <div>
-      <p>Difference in time</p>
-      {timerComponents.length ? timerComponents : <span>Time&apos Up!</span>}
-    </div>
+    <Box w='100%' h='200px' bgGradient='linear(to-b, #1E1E1E 25%, #434b70)'>
+      <Center w='100%' h='200px'>
+        <Flex flexDirection='column' color='#a7b2ff'>
+          <Text p='3' mt='' fontSize='5xl'>
+            {
+              timerComponents.length ? timerComponents : 'It\'s time!'
+            }
+          </Text>
+          <Text fontSize='xl' as='b' textAlign='center'>{TIMER_CONTENT.timer_text}</Text>
+        </Flex>
+      </Center>
+    </Box>
   )
 }
 
