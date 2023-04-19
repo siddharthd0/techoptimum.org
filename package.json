@@ -22,7 +22,6 @@
     "@vercel/analytics": "^0.1.6",
     "all": "^0.0.0",
     "aos": "^2.3.4",
-    "countdown": "^2.6.0",
     "framer-motion": "^7.6.1",
     "next": "^12.3.4",
     "nextjs-redirect": "^6.0.1",
@@ -32,8 +31,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "stripe": "^11.5.0",
-    "styled-components": "^5.3.6",
-    "uninstall": "^0.0.0"
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.0",
