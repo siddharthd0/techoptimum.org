@@ -103,7 +103,7 @@ const Courses = () => {
         />
       </Head>
 
-      <Box mx="auto" maxW="980px" direction={"column"}>
+      <Box mx="auto" maxW={["90%", "980px"]} direction={"column"}>
         <Box>
           <Flex justifyContent={"center"} alignItems="center">
             <Box direction="column">
@@ -130,10 +130,10 @@ const Courses = () => {
             <Button
               data-aos="fade-up"
               data-aos-duration="900"
-              py="10px"
-              mx="auto"
-              px="50px"
-              my="1.5rem"
+              py={["6px", "10px"]}
+              mx={["0", "auto"]}
+              px={["30px", "50px"]}
+              my={["1rem", "1.5rem"]}
               bgColor={"#4559E9"}
               borderRadius={"18px"}
               color={"#FFFFFF"}
@@ -155,12 +155,14 @@ const Courses = () => {
           spacing="50px"
         >
           {coursesData.map(({ color, title, description }) => (
-            <CourseCard
-              key={title}
-              color={color}
-              title={title}
-              description={description}
-            />
+            <Center key={title}>
+              <CourseCard
+                key={title}
+                color={color}
+                title={title}
+                description={description}
+              />
+            </Center>
           ))}
         </Stack>
       </Box>
