@@ -224,12 +224,12 @@ html {
 
 .gradient-title {
   background: linear-gradient(90deg,
-      #5164ec -4.52%,
+      #475dff -4.52%,
       rgba(67, 124, 365, 0.9188) 22.72%,
-      rgba(156, 193, 250, 0.886457) 38.78%,
-      rgba(96, 154, 221, 0.863) 50.34%,
+      rgba(82, 151, 255, 0.886) 38.78%,
+      rgba(179, 215, 255, 0.863) 50.34%,
       rgba(143, 201, 255, 0.79) 62.16%,
-      #4559e9 84.49%);
+      #25307f 84.49%);
       -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

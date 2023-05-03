@@ -26,7 +26,7 @@ export default function TestimonialCard() {
       name: "Viachaslau M., Software Engineer",
       title: "Hackathon Judge",
       description:
-        "I had a great time judging for Tech Optimum Hacks. Before that, I participated in 15+ hackathons and can say that this was an awesome and well-organized event. Thanks to the Hackathon, lot's of great project with good potential was created. This event was great for experienced hackers as well as novices. I'd like to thank Tech Optimum team for the opportunity and would love to participate again! ",
+        "I had a great time judging for Tech Optimum Hacks. Before that, I participated in 15+ hackathons and can say that this was an awesome and well-organized event. This event was great for experienced hackers as well as novices. I'd like to thank Tech Optimum team for the opportunity and would love to participate again! ",
       src: "https://media.discordapp.net/attachments/996113402902614126/996114010351091763/headshot-matsukevich2.jpg?width=858&height=1045",
     },
   ];
@@ -34,7 +34,7 @@ export default function TestimonialCard() {
     <>
       <Flex
         margin="auto"
-        maxWidth="1000px"
+      
         overflow={"none"}
         justifyContent={"center"}
         flexWrap={"wrap"}
@@ -46,7 +46,7 @@ export default function TestimonialCard() {
           <Box
             mt="20px"
             key={i}
-            maxW="400px"
+            maxW="300px"
             py={4}
             px={8}
             bg="#29368C"
@@ -92,17 +92,17 @@ export default function TestimonialCard() {
             </chakra.h2>
 
             <chakra.p mt={2} color="white">
-              <chakra.span fontSize={"20px"} fontWeight={"700"} pr={"3px"}>
+              <chakra.span fontSize={"md"} fontWeight={"700"} pr={"3px"}>
                 &quot;
               </chakra.span>
-              {testimonial.description}
-              <chakra.span fontSize={"20px"} fontWeight={"700"} pl={"3px"}>
+           <chakra.span fontSize="sm">  {testimonial.description}</chakra.span> 
+              <chakra.span fontSize={"md"} fontWeight={"700"} pl={"3px"}>
                 &quot;
               </chakra.span>
             </chakra.p>
 
             <Flex mt={4}>
-              <Link fontSize="lg" color="white" pb={"10px"}>
+              <Link fontSize="sm" color="white" pb={"10px"}>
                 {testimonial.name}
               </Link>
             </Flex>

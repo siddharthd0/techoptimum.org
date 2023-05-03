@@ -132,7 +132,8 @@ export default function Footer() {
             Tech Optimum © 2023. All rights reserved.
           </Text>
           <Text display={"flex"} color="primary" fontSize="sm">
-          <Text>EIN: 88-3677650 | team@techoptimum.org</Text>
+            
+          <Text as="a" href="mailto:team@techoptimum.org">EIN: 88-3677650 | team@techoptimum.org</Text>
           </Text>
         </Flex>
 

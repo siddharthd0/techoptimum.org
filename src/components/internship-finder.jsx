@@ -10,90 +10,89 @@ import {
   Text,
   Button,
   Image,
+  Badge,
   Tooltip,
+  Spacer,
   Box,
   Stack,
 } from "@chakra-ui/react";
 
 export default function Finder() {
   return (
-    <Flex
-      marginLeft={["2rem", "7rem"]}
-      marginTop={["5rem", "10rem"]}
-      direction={"column"}
-      mb={["5rem", "10rem"]}
-    >
-      <Stack direction="row">
-        <Box mr="13rem">
-          <Head>
-            <link
-              href="https://unpkg.com/aos@next/dist/aos.css"
-              rel="stylesheet"
-              key="test"
-            />
-          </Head>
-          <Heading
-            color="primary"
-            fontSize={["4xl", "5xl"]}
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            Internship Finder
-          </Heading>
-          <Text
-            color="primary"
-            fontSize={["md", "lg"]}
-            marginTop={["1.3rem", "2.2rem"]}
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            width={["250px", "600px"]}
-          >
-            As a high school student, have you ever wanted to get real work
-            experience at a real company? This is your chance to discover
-            Computer Science internships at a number of businesses!
-          </Text>
-          <Link
-            href="https://internships.techoptimum.org"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            <Tooltip borderRadius={"10px"} placement="right" label="Coming Soon!    ">
-
-            
-            <Button
-              data-aos-delay="150"
+    <>
+      <Head>
+        <link
+          href="https://unpkg.com/aos@next/dist/aos.css"
+          rel="stylesheet"
+          key="test"
+        />
+      </Head>
+      <Flex
+        mx="auto"
+        maxW="980px"
+        marginTop={["1rem", "6rem"]}
+        direction={"column"}
+        mb={["5rem", "10rem"]}
+      >
+        <Stack direction="row">
+          <Box>
+            <Heading
+              color="primary"
+              fontSize={["4xl", "6xl"]}
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
+              Internship Finder
+            </Heading>
+            <Flex>
+              <Badge data-aos="zoom-in" data-aos-delay="200" mr="6px" colorScheme="pink">Web Development</Badge>
+              <Badge data-aos="zoom-in" data-aos-delay="400"mx="6px" colorScheme={"yellow"}>Data Science</Badge>
+              <Badge data-aos="zoom-in" data-aos-delay="600"mx="6px"  colorScheme={"orange"}>App Development</Badge>
+              <Badge data-aos="zoom-in" data-aos-delay="800"mx="6px"  colorScheme={"teal"}>Machine Learning</Badge>
+            </Flex>
+         
+            <Text
+              color="primary"
+              fontSize={["md", "lg"]}
+              marginTop={["1rem", "1.5rem"]}
               data-aos="fade-right"
-              data-aos-duration="3000"
-              transition={"700ms !important"}
+              data-aos-duration="1000"
+              width={["250px", "600px"]}
+            >
+              We believe in helping high schoolers find the right internships to
+              gain real-world experience. Our team has publicized hundreds of internships open to high school students.
+            </Text>
+
+            <Button
+            
+              data-aos-delay="200"
+              data-aos="fade-down"
+              data-aos-duration="1000"
               w={["250px", "280px"]}
               bgColor={"#4559E9"}
               borderRadius={"18px"}
               color={"#FFFFFF"}
               fontWeight={"400"}
-              fontSize={["lg", "xl"]}
+              fontSize={["md", "lg"]}
               _hover={{ bgColor: "#3244ca" }}
               _active={{ bgColor: "#3244ca" }}
-              mt={["1.5rem", "2.5rem"]}
-              isDisabled
+              mt={[".5rem", "1.5rem"]}
+              as="a"
+              href="https://dashboard.techoptimum.org/internships"
             >
               Find internships now
-            </Button></Tooltip>
-          </Link>
-        </Box>
-        <Box
-          data-aos="zoom-in"
-          data-aos-delay="450"
-          width={"350px"}
-          paddingLeft="80px"
-        >
-          <Image
-            mt="-1.5rem"
-            src="/internship-finder-image.png"
-            alt="internship finder"
-          />
-        </Box>
-      </Stack>
-    </Flex>
+            </Button>
+          </Box>
+          <Spacer/>
+          <Box ml="5rem" maxW="240px" data-aos="zoom-in" data-aos-delay="400" >
+            <Image
+              
+              src="/internship-finder-image.png"
+              alt="internship finder"
+            />
+          </Box>
+        </Stack>
+      </Flex>
+    </>
   );
 }

@@ -90,10 +90,7 @@ export default function HeroHeader() {
               py="10px"
               width={["80%", "200px"]}
               textAlign={"center"}
-              transition="transform 0.5s ease 0s, background 0.5s ease 0s"
-              _hover={{
-                transform: "rotate(-10deg)",
-              }}
+           
             >
               Programming Courses
             </Heading>
@@ -117,9 +114,7 @@ export default function HeroHeader() {
               width={["80%", "200px"]}
               textAlign={"center"}
               transition="transform 0.5s ease 0s, background 0.5s ease 0s"
-              _hover={{
-                transform: "rotate(10deg)",
-              }}
+           
             >
               Accessible Internships
             </Heading>
@@ -143,9 +138,7 @@ export default function HeroHeader() {
               width={["80%", "200px"]}
               textAlign={"center"}
               transition="transform 0.5s ease 0s, background 0.5s ease 0s"
-              _hover={{
-                transform: "rotate(-10deg)",
-              }}
+          
             >
               Inclusive Community
             </Heading>

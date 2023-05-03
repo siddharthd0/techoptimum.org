@@ -5,6 +5,7 @@ import {
   Button,
   Stack,
   Box,
+  Spacer,
   Center,
   Link,
 } from "@chakra-ui/react";
@@ -29,7 +30,7 @@ const coursesData = [
     color: "#145DA0",
     title: "Game Dev.",
     description:
-      "Learn how to create simple games, create real-world applications using languages like Javascript.",
+      "Learn how to create simple games, create real-world applications using languages like Javascript. Publish your very own functional game.",
   },
 ];
 
@@ -38,13 +39,16 @@ const CourseCard = ({ color, title, description }) => {
 
   return (
     <Box
+      textAlign="center"
       ref={ref}
-      data-aos-delay={inView ? "100" : "0"}
+      data-aos-delay={inView ? "100" : "300"}
       data-aos="zoom-in-up"
       backgroundColor={color}
       borderRadius={"20px"}
       w="280px"
       pb="10px"
+      alignItems="center"
+      direction={"column"}
     >
       <Center>
         <Text
@@ -55,6 +59,7 @@ const CourseCard = ({ color, title, description }) => {
           marginTop="2rem"
         >
           <Heading
+            textAlign="center"
             pt={".2rem"}
             pb={".7rem"}
             fontWeight={"300"}
@@ -89,7 +94,7 @@ const CourseCard = ({ color, title, description }) => {
 
 const Courses = () => {
   return (
-    <Flex marginLeft={["2rem", "7rem"]} direction={"column"}>
+    <>
       <Head>
         <link
           href="https://unpkg.com/aos@next/dist/aos.css"
@@ -97,26 +102,69 @@ const Courses = () => {
           key="test"
         />
       </Head>
-      <Heading
-        color="primary"
-        fontSize={["4xl", "5xl"]}
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        mb="2rem"
-      >
-        Courses
-      </Heading>
-      <Stack direction={["column", "row"]} spacing="50px">
-        {coursesData.map(({ color, title, description }) => (
-          <CourseCard
-            key={title}
-            color={color}
-            title={title}
-            description={description}
-          />
-        ))}
-      </Stack>
-    </Flex>
+
+      <Box mx="auto" maxW="980px" direction={"column"}>
+        <Box>
+          <Flex justifyContent={"center"} alignItems="center">
+            <Box direction="column">
+              <Heading
+                color="primary"
+                fontSize={["4xl", "6xl"]}
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
+                Courses
+              </Heading>
+              <Heading
+                data-aos="fade-up"
+                date-aos-delay="500"
+                data-aos-duration="1400"
+                color="primary"
+                fontSize={["xl", "2xl"]}
+                mb="1rem"
+              >
+                Featured Courses
+              </Heading>
+            </Box>
+            <Spacer />
+            <Button
+              data-aos="fade-up"
+              data-aos-duration="900"
+              py="10px"
+              mx="auto"
+              px="50px"
+              my="1.5rem"
+              bgColor={"#4559E9"}
+              borderRadius={"18px"}
+              color={"#FFFFFF"}
+              fontWeight={"400"}
+              fontSize={["lg", "xl"]}
+              _hover={{ bgColor: "#3244ca" }}
+              _active={{ bgColor: "#3244ca" }}
+              colorScheme={"blue"}
+              as="a"
+              href="https://dashboard.techoptimum.org"
+            >
+              View All Courses
+            </Button>
+          </Flex>
+        </Box>
+        <Stack
+          justifyContent={"space-between"}
+          direction={["column", "row"]}
+          spacing="50px"
+        >
+          {coursesData.map(({ color, title, description }) => (
+            <CourseCard
+              key={title}
+              color={color}
+              title={title}
+              description={description}
+            />
+          ))}
+        </Stack>
+      </Box>
+    </>
   );
 };
 
