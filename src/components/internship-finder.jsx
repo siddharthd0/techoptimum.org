@@ -15,6 +15,7 @@ import {
   Spacer,
   Box,
   Stack,
+  Center
 } from "@chakra-ui/react";
 
 export default function Finder() {
@@ -33,9 +34,10 @@ export default function Finder() {
         marginTop={["1rem", "6rem"]}
         direction={"column"}
         mb={["5rem", "10rem"]}
+        justifyContent={["center", "unset"]}
       >
         <Stack direction="row">
-          <Box>
+          <Box mx={["auto", "unset"]} textAlign={["center", "unset"]} maxW={["100%", "60%"]}>
             <Heading
               color="primary"
               fontSize={["4xl", "6xl"]}
@@ -44,13 +46,13 @@ export default function Finder() {
             >
               Internship Finder
             </Heading>
-            <Flex>
+            <Flex flexWrap="wrap" gap="5px" justifyContent={["center", "auto"]} mt="5px">
               <Badge data-aos="zoom-in" data-aos-delay="200" mr="6px" colorScheme="pink">Web Development</Badge>
               <Badge data-aos="zoom-in" data-aos-delay="400"mx="6px" colorScheme={"yellow"}>Data Science</Badge>
               <Badge data-aos="zoom-in" data-aos-delay="600"mx="6px"  colorScheme={"orange"}>App Development</Badge>
               <Badge data-aos="zoom-in" data-aos-delay="800"mx="6px"  colorScheme={"teal"}>Machine Learning</Badge>
             </Flex>
-         
+
             <Text
               color="primary"
               fontSize={["md", "lg"]}
@@ -58,13 +60,14 @@ export default function Finder() {
               data-aos="fade-right"
               data-aos-duration="1000"
               width={["250px", "600px"]}
+              mx="auto"
+              textAlign={["center", "left"]}
             >
               We believe in helping high schoolers find the right internships to
               gain real-world experience. Our team has publicized hundreds of internships open to high school students.
             </Text>
-
+  
             <Button
-            
               data-aos-delay="200"
               data-aos="fade-down"
               data-aos-duration="1000"
@@ -84,7 +87,7 @@ export default function Finder() {
             </Button>
           </Box>
           <Spacer/>
-          <Box ml="5rem" maxW="240px" data-aos="zoom-in" data-aos-delay="400" >
+          <Box ml="5rem" maxW="240px" display={["none", "block"]} data-aos="zoom-in" data-aos-delay="400" >
             <Image
               
               src="/internship-finder-image.png"
