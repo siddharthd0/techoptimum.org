@@ -630,3 +630,8 @@ input:focus {
 }
 
 
+
+.donation-form {
+  width: 500px;
+  height: 1000px;
+}

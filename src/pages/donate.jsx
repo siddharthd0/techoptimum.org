@@ -1,3 +1,25 @@
-import redirect from "nextjs-redirect";
-export default redirect("https://www.zeffy.com/en-US/donation-form/b47b410e-e84d-438f-bdd9-8b22db51f119");
-// Why you don't work? I don't know. But it works.
+import Socials from "../components/socials";
+import { Box, Heading } from "@chakra-ui/react";
+import Navbar from "../components/header";
+
+export default function Donations() {
+  return (
+    <>
+      <Box mb="100px" px="50px" textAlign="center" mx="auto" alignItems="center" justifyContent="center">
+        <Heading fontSize="5xl" py="40px" color="primary">Donate to Tech Optimum</Heading>
+
+        <iframe
+          className="donation-form"
+          src="https://givebutter.com/embed/c/tech-optimum-donations"
+          name="givebutter"
+          frameborder="0"
+          scrolling="no"
+          seamless
+          allowpaymentrequest
+          style={{ display: "block", margin: "0 auto" }}
+        ></iframe>
+        <script src="https://givebutter.com/js/widget.js"></script>
+      </Box>
+    </>
+  );
+}
