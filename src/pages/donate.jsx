@@ -1,6 +1,7 @@
 import Socials from "../components/socials";
 import { Box, Heading } from "@chakra-ui/react";
 import Navbar from "../components/header";
+import Script from 'next/script'
 
 export default function Donations() {
   return (
@@ -18,7 +19,7 @@ export default function Donations() {
           allowpaymentrequest
           style={{ display: "block", margin: "0 auto" }}
         ></iframe>
-        <script src="https://givebutter.com/js/widget.js"></script>
+        <Script src="https://givebutter.com/js/widget.js"></Script>
       </Box>
     </>
   );
