@@ -87,10 +87,10 @@ export default function Finder() {
             </Button>
           </Box>
           <Spacer/>
-          <Box ml="5rem" maxW="240px" display={["none", "block"]} data-aos="zoom-in" data-aos-delay="400" >
+          <Box ml="5rem" maxW="230px" display={["none", "block"]} data-aos="zoom-in" data-aos-delay="400" >
             <Image
               
-              src="/internship-finder-image.png"
+              src="/internship-finder.png"
               alt="internship finder"
             />
           </Box>
