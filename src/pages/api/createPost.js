@@ -1,5 +1,5 @@
 // pages/api/createPost.js
-import { connectToDb } from '../mongoUtil';
+import { connectToDb } from '../../lib/mongoUtil';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {

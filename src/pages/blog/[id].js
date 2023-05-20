@@ -1,10 +1,9 @@
 // pages/blog/[id].js
 import { Box, Heading, Text, Image, Link, Tag, Avatar } from "@chakra-ui/react";
-import { MongoClient, ObjectId } from 'mongodb';
+import { ObjectId } from 'mongodb';
+import { connectToClient } from '../../lib/mongoUtil';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
-
-const client = new MongoClient(process.env.MONGODB_URI);
 
 export default function BlogPost({ post }) {
   const router = useRouter();
@@ -35,7 +34,7 @@ export default function BlogPost({ post }) {
 }
 
 export async function getServerSideProps(context) {
-  await client.connect();
+  const client = await connectToClient();
   const posts = client.db(process.env.MONGODB_DB).collection("blogs");
   const post = await posts.findOne({ _id: new ObjectId(context.params.id) });
   
