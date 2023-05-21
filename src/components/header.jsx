@@ -62,6 +62,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
+  /// hello
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/courses-external`)
