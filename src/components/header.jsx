@@ -22,33 +22,13 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import { useEffect, useState } from "react";
 
-const NAV_ITEMS = [
+const DefaultNavItems = [
   {
     label: "Home",
     href: "/",
   },
-  {
-    label: "Curriculum",
-    children: [
-      {
-        label: "Python",
-        subLabel: "Learn the basics of Python.",
-        href: "/curriculum/python",
-      },
-      {
-        label: "SQL",
-        subLabel: "Learn the basics of SQL.",
-        href: "/curriculum/sql",
-      },
-      {
-        label: "Data Science",
-        subLabel: "Learn the basics of Data Science.",
-        href: "/curriculum/data-science",
-      },
-    ],
-  },
-
   {
     label: "About",
     children: [
@@ -80,6 +60,29 @@ const NAV_ITEMS = [
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+
+  const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/api/courses-external`)
+      .then((res) => res.json())
+      .then((data) => {
+        const updatedNAV_ITEMS = [
+          ...NAV_ITEMS.slice(0, 1), // Keep the first item as it is
+          {
+            label: "Curriculum",
+            children: data.map((course) => ({
+              label: course.title,
+              subLabel: course.description,
+              href: `/curriculum/${course.slug}`,
+            })),
+          },
+          ...NAV_ITEMS.slice(1), // Append the remaining items from the original array
+        ];
+
+        setNAV_ITEMS(updatedNAV_ITEMS);
+      });
+  }, []);
 
   const DesktopSubNav = ({ label, href, subLabel }) => {
     const linkColor = useColorModeValue("primary", "gray.200");
