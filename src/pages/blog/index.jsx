@@ -2,6 +2,7 @@
 import { Box, Heading, Text, VStack, Image } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { connectToDb } from '../../lib/mongoUtil';
 
 export default function BlogIndex({ posts }) {
   const router = useRouter();
@@ -19,22 +20,14 @@ export default function BlogIndex({ posts }) {
   );
 }
 
-export async function getStaticProps() {
-    const res = await fetch(`http://localhost:4269/api/getPosts`);
-    
-    // Check the status of the response
-    console.log(`Response status: ${res.status}`);
-    
-    const posts = await res.json();
-  
-    // Log the posts to the console
-    console.log(`Posts: ${JSON.stringify(posts, null, 2)}`);
-  
+export async function getServerSideProps() {
+    const db = await connectToDb();
+    const collection = db.collection('blogs');
+    const posts = await collection.find({}).toArray();
+
     return {
       props: {
-        posts,
+        posts: JSON.parse(JSON.stringify(posts)),
       },
-      revalidate: 1, // In seconds
     };
-  }
-  
+}
