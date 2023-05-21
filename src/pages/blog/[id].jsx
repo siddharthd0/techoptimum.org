@@ -1,7 +1,7 @@
-// pages/blog/[id].js
+// pages/blog/[id].jsx
 import { Box, Heading, Text, Image, Link, Tag, Avatar } from "@chakra-ui/react";
 import { ObjectId } from 'mongodb';
-import { connectToClient } from '../../lib/mongoUtil';
+import { connectToDb } from '../../lib/mongoUtil';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
 
@@ -11,7 +11,6 @@ export default function BlogPost({ post }) {
   if (router.isFallback) {
     return <div>Loading...</div>
   }
-  
 
   return (
     <Box>
@@ -34,10 +33,11 @@ export default function BlogPost({ post }) {
 }
 
 export async function getServerSideProps(context) {
-  const client = await connectToClient();
-  const posts = client.db(process.env.MONGODB_DB).collection("blogs");
+  console.log(context.params.id);
+  const db = await connectToDb();
+  const posts = db.collection("blogs");
   const post = await posts.findOne({ _id: new ObjectId(context.params.id) });
-  
+
   if (!post) {
     return {
       notFound: true,
@@ -48,5 +48,5 @@ export async function getServerSideProps(context) {
     props: {
       post: JSON.parse(JSON.stringify(post)), // We need to stringify the post to convert _id to string
     },
-  }
+  };
 }

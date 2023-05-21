@@ -1,11 +1,8 @@
 // pages/blog/index.jsx
-import { Box, Heading, Text, VStack, Image } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { Box, Heading, Text, VStack } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export default function BlogIndex({ posts }) {
-  const router = useRouter();
-
   return (
     <VStack spacing={4} align="stretch">
       {posts.map(post => (
@@ -20,21 +17,25 @@ export default function BlogIndex({ posts }) {
 }
 
 export async function getStaticProps() {
+  try {
     const res = await fetch(`http://localhost:4269/api/getPosts`);
-    
-    // Check the status of the response
     console.log(`Response status: ${res.status}`);
-    
+
     const posts = await res.json();
-  
-    // Log the posts to the console
     console.log(`Posts: ${JSON.stringify(posts, null, 2)}`);
-  
+
     return {
       props: {
         posts,
       },
       revalidate: 1, // In seconds
     };
+  } catch (_) {
+    return {
+      props: {
+        posts: [],
+      },
+      revalidate: 1
+    }
   }
-  
+}
