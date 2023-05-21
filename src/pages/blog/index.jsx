@@ -1,6 +1,7 @@
 // pages/blog/index.jsx
 import { Box, Heading, Text, VStack } from '@chakra-ui/react';
 import Link from 'next/link';
+import { connectToDb } from '../../lib/mongoUtil';
 
 export default function BlogIndex({ posts }) {
   return (
@@ -16,25 +17,13 @@ export default function BlogIndex({ posts }) {
   );
 }
 
-export async function getStaticProps() {
-  try {
-    const res = await fetch(`http://localhost:4269/api/getPosts`);
-    console.log(`Response status: ${res.status}`);
-
-    const posts = await res.json();
-    console.log(`Posts: ${JSON.stringify(posts, null, 2)}`);
-
-    return {
-      props: {
-        posts: JSON.parse(JSON.stringify(posts)),
-      },
-    };
-  } catch (_) {
-    return {
-      props: {
-        posts: [],
-      },
-      revalidate: 1
-    }
-  }
+export async function getServerSideProps() {
+  const db = await connectToDb();
+  const collection = db.collection('blogs');
+  const posts = await collection.find({}).toArray();
+  return {
+    props: {
+      posts: JSON.parse(JSON.stringify(posts)),
+    },
+  };
 }
