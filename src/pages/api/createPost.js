@@ -3,7 +3,17 @@ import { connectToDb } from '../../lib/mongoUtil';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { title, content, tags, authorAvatar, authorName, backgroundImage, authorLink, blogName } = req.body;
+    const {
+      title,
+      content,
+      tags,
+      authorAvatar,
+      authorName,
+      backgroundImage,
+      authorLink,
+      blogName,
+      currentDate // Add this line
+    } = req.body;
 
     const db = await connectToDb();
     await db.collection('blogs').insertOne({
@@ -13,7 +23,8 @@ export default async function handler(req, res) {
       backgroundImage,
       authorLink,
       blogName,
-      content
+      content,
+      currentDate // Add this line
     });
 
     res.status(200).json({ message: 'Blog post created successfully.' });

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Box, FormControl, FormLabel, Input, Button, useToast, Stack, Textarea } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
+import { format } from 'date-fns'; 
 
 export default function Admin() {
   const [password, setPassword] = useState("");
+  const currentDate = format(new Date(), 'yyyy-MM-dd');
   const [tags, setTags] = useState("");
   const [authorAvatar, setAuthorAvatar] = useState("");
   const [authorName, setAuthorName] = useState("");
@@ -33,7 +35,7 @@ export default function Admin() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ content, tags, authorAvatar, authorName, backgroundImage, authorLink, blogName }),
+      body: JSON.stringify({ content, tags, authorAvatar, authorName, backgroundImage, authorLink, blogName, currentDate }),
     });
 
     if (response.ok) {
