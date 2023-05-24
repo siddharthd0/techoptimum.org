@@ -1,3 +1,4 @@
+// src/lib/mongoUtil.js
 import { MongoClient } from 'mongodb';
 
 let client;
@@ -11,6 +12,7 @@ export async function connectToDb() {
     db = client.db(process.env.MONGODB_DB);
   } catch (err) {
     console.error("Failed to connect to the database", err);
+    db = undefined;
     throw err;
   }
 
@@ -19,6 +21,15 @@ export async function connectToDb() {
 
 export async function connectToClient() {
   if (client) return client;
-  client = await (new MongoClient(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })).connect();
+
+  try {
+    client = new MongoClient(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+    await client.connect();
+  } catch (err) {
+    console.error("Failed to connect to the client", err);
+    client = undefined;
+    throw err;
+  }
+
   return client;
 }
