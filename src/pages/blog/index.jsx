@@ -21,9 +21,9 @@ export default function BlogIndex({ posts }) {
 }
 
 export async function getServerSideProps() {
-    const db = await connectToDb();
-    const collection = db.collection('blogs');
-    const posts = await collection.find({}).toArray();
+  const db = await connectToDb();
+  const collection = db.collection("blogs");
+  const posts = await collection.find({}).toArray();
 
     return {
       props: {
