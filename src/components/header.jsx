@@ -65,7 +65,7 @@ export default function WithSubnavigation() {
   /// hello
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/courses-external`)
+    fetch(`https://dashboard.techoptimum.org/api/courses-external`)
       .then((res) => res.json())
       .then((data) => {
         const updatedNAV_ITEMS = [
@@ -75,7 +75,7 @@ export default function WithSubnavigation() {
             children: data.map((course) => ({
               label: course.title,
               subLabel: course.description,
-              href: `/curriculum/${course.slug}`,
+              href: `https://dashboard.techoptimum.org/open-curriculum/${course.slug}`,
             })),
           },
           ...NAV_ITEMS.slice(1), // Append the remaining items from the original array
