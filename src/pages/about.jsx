@@ -86,16 +86,17 @@ export default function About() {
               role="Director of Education"
               src="aviral.png"
             />
+              <Volunteer
+              src="preetham.png"
+              name="Preetham Manapuri"
+              role="Director of HR"
+            />
             <Volunteer
               src="azariah.png"
               name="Azariah Teklu"
               role="HR Coordinator"
             />
-            <Volunteer
-              src="preetham.png"
-              name="Preetham Manapuri"
-              role="HR Associate"
-            />
+          
             <Volunteer
               name="Neil Sangra"
               src="neils.jpg"
