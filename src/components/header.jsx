@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -28,6 +27,16 @@ const DefaultNavItems = [
   {
     label: "Home",
     href: "/",
+  },
+  {
+    label: "Curriculum",
+    children: [
+      {
+        label: "Loading...",
+        subLabel: "",
+        href: "",
+      }
+    ]
   },
   {
     label: "About",
@@ -78,17 +87,14 @@ export default function WithSubnavigation() {
               href: `https://dashboard.techoptimum.org/open-curriculum/${course.slug}`,
             })),
           },
-          ...NAV_ITEMS.slice(1), // Append the remaining items from the original array
+          ...NAV_ITEMS.slice(2), // Append the remaining items from the original array
         ];
 
         setNAV_ITEMS(updatedNAV_ITEMS);
       });
-  }, []);
+  });
 
   const DesktopSubNav = ({ label, href, subLabel }) => {
-    const linkColor = useColorModeValue("primary", "gray.200");
-    const linkHoverColor = useColorModeValue("gray.400", "white");
-    const popoverContentBgColor = useColorModeValue("black", "gray.800");
     return (
       <Link
         href={href}
@@ -102,7 +108,7 @@ export default function WithSubnavigation() {
           <Box>
             <Text
               color="primary"
-              transition={"all .3s ease"}
+              transition={"color .2s ease"}
               _groupHover={{ color: "blue.400" }}
               fontWeight={500}
             >
@@ -118,7 +124,7 @@ export default function WithSubnavigation() {
             </Text>
           </Box>
           <Flex
-            transition={"all .3s ease"}
+            transition={"all .2s ease"}
             transform={"translateX(-10px)"}
             opacity={0}
             _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
@@ -151,6 +157,7 @@ export default function WithSubnavigation() {
                     fontSize={"m"}
                     fontWeight={500}
                     color={linkColor}
+                    transitionDelay="0s"
                     _hover={{
                       textDecoration: "none",
                       color: linkHoverColor,
@@ -168,8 +175,9 @@ export default function WithSubnavigation() {
                     p={4}
                     rounded={"xl"}
                     minW={"sm"}
+                    transitionDelay="0s"
                   >
-                    <Stack>
+                    <Stack transitionDelay="0s">
                       {navItem.children.map((child) => (
                         <DesktopSubNav key={child.label} {...child} />
                       ))}
