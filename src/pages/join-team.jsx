@@ -4,20 +4,34 @@ import {
   Image,
   Button,
   Link,
+  HStack,
   Heading,
   Tooltip,
+  Spacer,
   Box,
   Flex,
+  VStack,
   Wrap,
   Text,
   chakra,
+  Badge,
 } from "@chakra-ui/react";
 import JoinTeamLanding from "../components/join-team-landing";
 import JobPostingCard from "../components/job-card";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function JoinTeam() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCards, setFilteredCards] = useState([]);
+  const [selectedJob, setSelectedJob] = useState(null);
+
+  const departments = [
+    "Marketing",
+    "Technology",
+    "Human Resources",
+    "Hackathon",
+    "Education",
+  ];
 
   const cardsInfo = useMemo(
     () => [
@@ -29,6 +43,12 @@ export default function JoinTeam() {
           "Conceptualize and craft compelling content that resonates with the target audience",
           "Deftly utilizing various graphic design platforms such as Canva, Photoshop, etc. to accomplish a set number of tasks per week",
         ],
+        shortDescription:
+          "Conceptualize and create captivating content for our Instagram platform.",
+        requirements: [
+          "Proven experience with content creation",
+          "Proficiency in graphic design platforms such as Canva, Photoshop",
+        ],
       },
       {
         role: "Coding Course Instructor",
@@ -37,6 +57,12 @@ export default function JoinTeam() {
         responsibility: [
           "Utilize acquired knowledge to craft polished and instructive programming lessons in the English language",
           "Create and maintain a comprehensive and up-to-date curriculum",
+        ],
+        shortDescription:
+          "Craft polished and instructive programming lessons in English.",
+        requirements: [
+          "Strong knowledge of programming",
+          "Experience in teaching or tutoring",
         ],
       },
       {
@@ -48,6 +74,12 @@ export default function JoinTeam() {
           "Actively seek out and onboard new volunteer associates",
           "Ensure the timely and accurate updating of all staff-related documentation",
         ],
+        shortDescription:
+          "Maintain personnel information and help onboard new associates.",
+        requirements: [
+          "Experience in HR or related field",
+          "Excellent organizational skills",
+        ],
       },
       {
         role: "Tiktok Content Creator",
@@ -58,6 +90,12 @@ export default function JoinTeam() {
           "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
           "Conduct extensive research to identify and develop novel and compelling ideas.",
         ],
+        shortDescription:
+          "Create engaging video content for our TikTok platform.",
+        requirements: [
+          "Proven experience with video content creation",
+          "Proficiency in video editing tools",
+        ],
       },
       {
         role: "Youtube Content Creator",
@@ -66,6 +104,12 @@ export default function JoinTeam() {
         responsibility: [
           "Conceive and produce visually captivating and entertaining Youtube shorts for the programming community",
           "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
+        ],
+        shortDescription:
+          "Create captivating YouTube shorts for the programming community.",
+        requirements: [
+          "Proven experience with video content creation",
+          "Proficiency in video editing tools",
         ],
       },
       {
@@ -77,6 +121,12 @@ export default function JoinTeam() {
           "Representing the organization at community events and meetings",
           "Contact famous software engineers/entrepreneurs to participate in TO Talks",
         ],
+        shortDescription:
+          "Develop outreach strategies and represent our organization in community events.",
+        requirements: [
+          "Experience in community outreach or related field",
+          "Excellent communication skills",
+        ],
       },
       {
         role: "Proof-reader",
@@ -84,7 +134,13 @@ export default function JoinTeam() {
         department: "Human Resources",
         responsibility: [
           "Curate and elevate the verbiage and language used in digital mediums, such as the organizations website and social media platforms",
-          " Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
+          "Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
+        ],
+        shortDescription:
+          "Enhance the language used in our digital platforms and ensure error-free content.",
+        requirements: [
+          "Strong proficiency in English language",
+          "Proven experience as a proof-reader or related role",
         ],
       },
       {
@@ -96,6 +152,12 @@ export default function JoinTeam() {
           "Monitor server activities and proactively address any issues that arise with the bot",
           "Optimize bot performance to ensure seamless user experience and maximum uptime",
         ],
+        shortDescription:
+          "Design, develop, and monitor bot commands for our Discord server.",
+        requirements: [
+          "Experience in bot development",
+          "Strong knowledge of Discord API",
+        ],
       },
       {
         role: "Community Team",
@@ -103,9 +165,15 @@ export default function JoinTeam() {
         department: "Community",
         responsibility: [
           "Develop and implement strategies to increase engagement on the Discord server and other platforms",
-          "  Monitor and moderate community discussions to ensure a positive and inclusive environment",
+          "Monitor and moderate community discussions to ensure a positive and inclusive environment",
           "Respond to user inquiries and concerns in a timely and professional manner",
           "Collaborate with other teams to organize events and activities that promote community engagement",
+        ],
+        shortDescription:
+          "Increase community engagement and ensure a positive environment on our platforms.",
+        requirements: [
+          "Experience in community management",
+          "Excellent communication and moderation skills",
         ],
       },
       {
@@ -113,12 +181,20 @@ export default function JoinTeam() {
         application: "https://forms.gle/dTR7zvEaQioPxC7W7",
         department: "Hackathon",
         responsibility: [
-          " Planning and organizing the hackathon event",
-          "Developing the hackathon schedule, including workshops, keynote speeches, and judging sessions ",
-          "Recruiting and managing a team of volunteers and staff to assist with the event ",
-          "Developing and implementing marketing and promotion strategies to attract participants and sponsors Identifying and securing sponsors and partnerships to support the event financially",
+          "Planning and organizing the hackathon event",
+          "Developing the hackathon schedule, including workshops, keynote speeches, and judging sessions",
+          "Recruiting and managing a team of volunteers and staff to assist with the event",
+          "Developing and implementing marketing and promotion strategies to attract participants and sponsors",
+          "Identifying and securing sponsors and partnerships to support the event financially",
+        ],
+        shortDescription:
+          "Plan and organize hackathon events, develop schedules, and manage volunteers.",
+        requirements: [
+          "Experience in organizing hackathons or similar events",
+          "Strong project management skills",
         ],
       },
+
       {
         role: "Web Designer",
         application: "https://forms.gle/9FayfQddFF6B4Ro39",
@@ -126,6 +202,14 @@ export default function JoinTeam() {
         responsibility: [
           "Design visually appealing websites: Create attractive and user-friendly websites by using your creativity, design, Figma/AdobeXD skills.",
           "Collaborate with team: Work with others effectively.",
+        ],
+        shortDescription:
+          "Design visually appealing and user-friendly websites while effectively collaborating with the team.",
+        requirements: [
+          "Proven experience as a Web Designer",
+          "Proficiency in Figma or AdobeXD",
+          "Excellent collaboration skills",
+          "Strong creative and design skills",
         ],
       },
       {
@@ -136,6 +220,14 @@ export default function JoinTeam() {
           "Contribute to the development and maintenance of the website",
           "Execute designs and assignments utilizing a comprehensive array of cutting-edge technologies such as NodeJS, CSS, Next.js/React.js and more",
         ],
+        shortDescription:
+          "Develop and maintain the website using cutting-edge technologies such as NodeJS, CSS, Next.js/React.js.",
+        requirements: [
+          "Proven experience as a Web Developer",
+          "Strong proficiency in NodeJS, CSS, Next.js/React.js",
+          "Excellent problem-solving skills",
+          "Ability to manage multiple assignments simultaneously",
+        ],
       },
     ],
     []
@@ -143,7 +235,6 @@ export default function JoinTeam() {
   useEffect(() => {
     setFilteredCards(cardsInfo);
   }, [cardsInfo]);
-
   useEffect(() => {
     setFilteredCards(
       cardsInfo.filter((cardInfo) =>
@@ -151,6 +242,7 @@ export default function JoinTeam() {
       )
     );
   }, [searchQuery, cardsInfo]);
+
   return (
     <>
       <Flex>
@@ -215,53 +307,138 @@ export default function JoinTeam() {
         </Box>
       </Flex>
       <Text id="jobs"></Text>
-      <Flex justify={"center"}>
-        <chakra.form justify="center" my="2rem">
-          <Tooltip
-            placement="right"
-            label="Try searching for Marketing, or Technology"
+      <HStack mt="3rem" justify="center">
+        <Button
+          fontWeight={"300"}
+          onClick={() => setSearchQuery("")}
+          backgroundColor={searchQuery === "" ? "blue.400" : "blue.900"}
+          color={searchQuery === "" ? "blue.100" : "blue.200"}
+          _hover={{
+            bg: "blue.500",
+          }}
+        >
+          All Departments
+        </Button>
+        {departments.map((department) => (
+          <Button
+            _hover={{
+              bg: "blue.500",
+            }}
+            fontWeight={"300"}
+            key={department}
+            onClick={() => setSearchQuery(department)}
+            backgroundColor={
+              searchQuery === department ? "blue.400" : "blue.900"
+            }
+            color={searchQuery === department ? "blue.100" : "blue.200"}
           >
-            <chakra.select
-              className="select"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by department..."
-              borderRadius={"10px"}
-              padding="10px 24px"
-              backgroundColor={"blue.500"}
-              color="white"
-            >
-              <option value="">Select a Department</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Technology">Technology</option>
-              <option value="Human Resources">Human Resources</option>
-              <option value="Hackathon">Hackathon</option>
-              <option value="Education">Education</option>
-            </chakra.select>
-          </Tooltip>
-        </chakra.form>
-      </Flex>
-      <Wrap
-        mx={["2rem !important", "auto !important"]}
-        mb="5rem !important"
-        maxW={"1200px"}
-        margin={"auto"}
-        direction="row"
-        justify="center"
-        spacing={"30px"}
-        zIndex="100"
-        marginTop={["10px", "5px"]}
-      >
-        {filteredCards.map((cardInfo) => (
-          <JobPostingCard
-            key={cardInfo}
-            role={cardInfo.role}
-            application={cardInfo.application}
-            department={cardInfo.department}
-            responsibility={cardInfo.responsibility}
-          />
+            {department}
+          </Button>
         ))}
-      </Wrap>
+      </HStack>
+      <Flex py="2rem" direction={["column", "row"]} justify="center">
+        <VStack pr="1rem" height="600px" overflow="scroll" spacing={4}>
+          {/* Department selection buttons */}
+
+          {/* Job cards */}
+          {filteredCards.map((cardInfo) => (
+            <JobPostingCard
+              key={cardInfo.role}
+              role={cardInfo.role}
+              application={cardInfo.application}
+              department={cardInfo.department}
+              responsibility={cardInfo.responsibility}
+              onSelect={() => setSelectedJob(cardInfo)}
+              selected={selectedJob && selectedJob.role === cardInfo.role} // pass selected prop
+            />
+          ))}
+        </VStack>
+        {/* Job preview info section */}
+        <Box pl="3rem" maxW="40%">
+          {selectedJob ? (
+            <>
+              <Box bg="footerBg" borderRadius="md" px="1rem" py="1rem">
+                <Flex>
+                  {" "}
+                  <Heading color="primary" fontSize="2xl">
+                    {selectedJob.role}
+                  </Heading>
+                  <Spacer />{" "}
+                  <Link
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                    href={selectedJob.application}
+                    isExternal
+                  >
+                    <Button
+                      fontWeight="light"
+                      backgroundColor="blue.400"
+                      color="white"
+                      _hover={{
+                        bg: "blue.500",
+                      }}
+                    >
+                      <ExternalLinkIcon marginRight="5px" /> Apply Now
+                    </Button>
+                  </Link>
+                </Flex>
+
+                <Badge colorScheme="blue">{selectedJob.department}</Badge>
+              </Box>
+
+              <Flex
+                mt="1rem"
+                bg="footerBg"
+                borderRadius="md"
+                px="2rem"
+                py="1rem"
+                mb="5rem"
+                direction="column"
+              >
+                <Heading color="primary" fontSize="xl">
+                  Responsiblities
+                </Heading>
+                <chakra.ul pt=".5rem" pb="1rem">
+                  {selectedJob.responsibility.map((item, i) => {
+                    return (
+                      <chakra.li fontSize="sm" key={i}>
+                        {item}
+                      </chakra.li>
+                    );
+                  })}
+                </chakra.ul>
+                <Heading color="primary" fontSize="xl">
+                  Requirements
+                </Heading>
+                <chakra.ul pt=".5rem" pb="1rem">
+                  {selectedJob.requirements.map((item, i) => {
+                    return (
+                      <chakra.li fontSize="sm" key={i}>
+                        {item}
+                      </chakra.li>
+                    );
+                  })}
+                </chakra.ul>
+                <Heading color="primary" fontSize="xl">
+                  Benefits
+                </Heading>
+                <chakra.ul fontSize="sm" pt=".5rem" pb="1rem">
+                  <Text pb="6px">
+                    As a volunteer at Tech Optimum, you will get numerous
+                    benefits:
+                  </Text>
+                  <chakra.li>Official Volunteering Hours</chakra.li>
+                  <chakra.li>Opportunity for Presidents Volunteering Service Award</chakra.li>
+                  <chakra.li>Gain new skills and leadership</chakra.li>
+                </chakra.ul>
+              </Flex>
+            </>
+          ) : (
+            <Text color="primary">Select a job to see more details.</Text>
+          )}
+        </Box>
+      </Flex>
 
       <Socials />
     </>
