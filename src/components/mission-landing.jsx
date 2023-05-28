@@ -38,13 +38,14 @@ export default function MissionLanding() {
         >
           <Flex pr="2rem" direction={"column"} maxWidth={["90%", "40%"]}>
             <Heading
-              fontSize={["3xl", "5xl"]}
+              fontSize={["3xl", "6xl"]}
               color="primary"
               marginBottom={"10px"}
+              textAlign="center"
             >
               Our Mission
             </Heading>
-            <Text fontSize={["sm", "lg"]} marginBottom="26px">
+            <Text   textAlign="center"fontSize={["sm", "lg"]} marginBottom="26px">
               More than one-third of the world&apos;s population especially
               students continues to be excluded from technology because of the{" "}
               <Link

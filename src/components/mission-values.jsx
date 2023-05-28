@@ -29,7 +29,7 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function MissionValues() {
   return (
     <>
-      <Flex direction="column" maxW="1000px" margin="auto" mb="2rem" mt="1rem">
+      <Flex direction="column" maxW="1000px" margin="auto" mb="2rem" mt="2rem">
       <Flex justifyContent={"center"} alignItems="center">
             <Box mt="1rem" direction="column">
               <Heading
@@ -40,16 +40,7 @@ export default function MissionValues() {
               >
                Equality
               </Heading>
-              <Heading
-                data-aos="fade-up"
-                date-aos-delay="500"
-                data-aos-duration="1400"
-                color="primary"
-                fontSize={["xl", "xl"]}
-                mb="1rem"
-              >
-                Understand the underlying problem.
-              </Heading>
+           
             </Box>
             <Spacer />
             <Button
