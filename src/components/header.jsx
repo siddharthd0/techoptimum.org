@@ -81,7 +81,7 @@ export default function WithSubnavigation() {
           ...NAV_ITEMS.slice(0, 1), // Keep the first item as it is
           {
             label: "Curriculum",
-            children: data.map((course) => ({
+            children: data.map(course => ({
               label: course.title,
               subLabel: course.description,
               href: `https://dashboard.techoptimum.org/open-curriculum/${course.slug}`,
@@ -92,7 +92,7 @@ export default function WithSubnavigation() {
 
         setNAV_ITEMS(updatedNAV_ITEMS);
       });
-  });
+  }, []);
 
   const DesktopSubNav = ({ label, href, subLabel }) => {
     return (
