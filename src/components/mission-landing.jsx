@@ -1,6 +1,26 @@
-import { Link } from "@chakra-ui/react";
-import { Box, Flex, Heading, Text, Button, Highlight } from "@chakra-ui/react";
-
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Highlight,
+  Tabs,
+  Tooltip,
+  TabList,
+  TabPanels,
+  Tab,
+  Divider,
+  TabPanel,
+  TabIndicator,
+  Stat,
+  StatLabel,
+  StatNumber,
+  Link,
+  StatHelpText,
+  SimpleGrid,
+} from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 export default function MissionLanding() {
   return (
     <>
@@ -9,25 +29,22 @@ export default function MissionLanding() {
         marginTop={["-15rem", "-6rem"]}
         className="missionbg"
       >
-        <Flex marginLeft={["2rem", "0rem"]} justifyContent={"center"} direction={["column", "row"]}>
-          <Flex
-            marginTop={["17rem", "15rem"]}
-            direction={"column"}
-            maxWidth={["90%", "50%"]}
-          >
+        <Flex
+          paddingTop={["17rem", "14rem"]}
+          marginLeft={["2rem", "0rem"]}
+          justify="center"
+          direction={["column", "row"]}
+          alignItems="center"
+        >
+          <Flex pr="2rem" direction={"column"} maxWidth={["90%", "40%"]}>
             <Heading
-              fontSize={["4xl", "5xl"]}
+              fontSize={["3xl", "5xl"]}
               color="primary"
-              textAlign={"center"}
-              marginBottom={"18px"}
+              marginBottom={"10px"}
             >
-              Our Mission:
+              Our Mission
             </Heading>
-            <Text
-              textAlign={"center"}
-              fontSize={["md", "18px"]}
-              marginBottom="26px"
-            >
+            <Text fontSize={["sm", "lg"]} marginBottom="26px">
               More than one-third of the world&apos;s population especially
               students continues to be excluded from technology because of the{" "}
               <Link
@@ -41,29 +58,8 @@ export default function MissionLanding() {
               about their passion. We envision a diverse community that strives
               for inclusion in the technology industry.
             </Text>
-            <Link
-              _hover={{
-                textDecoration: "none",
-              }}
-              margin={"auto"}
-              href="#accomplish"
-            >
-              <Button
-                fontSize={["sm","lg"]}
-                rounded="full"
-                pl="2rem"
-                pr="2rem"
-                colorScheme="joinTeamBtn"
-                fontWeight={"100"}
-                transition="300ms"
-                _hover={{
-                  bgColor: "#6C7BE6",
-                }}
-              >
-                Learn how we accomplish this
-              </Button>
-            </Link>
           </Flex>
+        
         </Flex>
       </Box>
     </>

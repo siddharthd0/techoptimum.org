@@ -7,15 +7,7 @@ export default function Contact() {
   return (
     <>
       <MissionLanding />
-      <Heading
-       id="accomplish"
-        pt="4rem"
-        fontSize={["2xl", "5xl"]}
-        color="primary"
-        textAlign={"center"}
-      >
-        Our Values:
-      </Heading>
+    
       <MissionValues />
       <br />
       <br />

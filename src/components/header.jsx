@@ -270,9 +270,7 @@ export default function WithSubnavigation() {
           color={useColorModeValue("gray.600", "white")}
           py="1.1rem"
           px={["3rem", "10rem"]}
-          borderBottom={1}
-          borderStyle={"solid"}
-          borderColor="gray.900"
+         
           align={"center"}
         >
           <Flex
