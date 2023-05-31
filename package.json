@@ -34,6 +34,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-markdown": "^8.0.7",
+    "react-responsive-carousel": "^3.2.23",
     "stripe": "^11.5.0",
     "styled-components": "^5.3.6"
   },

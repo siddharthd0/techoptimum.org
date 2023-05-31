@@ -5,15 +5,16 @@ export default function Volunteer({ title, description }) {
     <>
       <Box
         textAlign={"center"}
-        height={"225px"}
+        height={["180px","225px"]}
         width={"300px"}
-        className="missionValueBg"
+        bg="footerBg"
         display={"column"}
+        borderRadius="md"
       >
-        <Heading color={"primary"} fontSize={"3xl"} mt="1.5rem">
+        <Heading  color={"primary"} fontSize={["xl", "3xl"]} mt="1.5rem">
           {title}
         </Heading>
-        <Text color={"primary"} mt="8px"  px={"24px"} fontSize={"15px"}>
+        <Text color={"primary"} mt="8px"  px={"24px"} fontSize={["xs", "sm"]}>
           {description}
         </Text>
       </Box>

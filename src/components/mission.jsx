@@ -65,10 +65,10 @@ export default function Mission() {
           >
             digital divide
           </Link>
-          . We offer students in need accessible resources, tools, and a
-          learning platform along with an inclusive community to learn more
-          about their passion. Tech Optimum envisions a diverse community that
-          strives for inclusion in the technology industry.
+          . Tech Optimum offers students in-need accessible resources, tools, and a
+              learning platform along with an inclusive community to learn more
+              computer science. We envision a diverse community that strives
+              for inclusion in the technology industry.
         </Text>
 
         <Box maxW={"760px"} textAlign={"center"}>
