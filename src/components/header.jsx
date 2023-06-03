@@ -35,8 +35,8 @@ const DefaultNavItems = [
         label: "Loading...",
         subLabel: "",
         href: "",
-      }
-    ]
+      },
+    ],
   },
   {
     label: "About",
@@ -81,7 +81,7 @@ export default function WithSubnavigation() {
           ...NAV_ITEMS.slice(0, 1), // Keep the first item as it is
           {
             label: "Curriculum",
-            children: data.map(course => ({
+            children: data.map((course) => ({
               label: course.title,
               subLabel: course.description,
               href: `https://dashboard.techoptimum.org/open-curriculum/${course.slug}`,
@@ -119,6 +119,9 @@ export default function WithSubnavigation() {
                 color: "gray.500",
               }}
               fontSize={"sm"}
+              width="300px"
+              overflow="hidden"
+              className="custom-ellipsis"
             >
               {subLabel}
             </Text>
@@ -270,7 +273,6 @@ export default function WithSubnavigation() {
           color={useColorModeValue("gray.600", "white")}
           py="1.1rem"
           px={["3rem", "10rem"]}
-         
           align={"center"}
         >
           <Flex
