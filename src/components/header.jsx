@@ -54,8 +54,25 @@ const DefaultNavItems = [
     ],
   },
   {
-    label: "Hackathon",
-    href: "/hackathon",
+    label: "Initiatives",
+    children: [
+      {
+        label: "Tech Optimum Hacks",
+        subLabel: "Learn about our annual hackathons with a focus on social good.",
+        href: "/hackathon",
+      },
+      {
+        label: "Technology Drive",
+        subLabel: "Donate your old technology to help students in need.",
+        href: "/technology-donation",
+      }, 
+      {
+        label: "Tech Optimum Talks",
+        subLabel: "Listen to our podcast where we interview industry professionals.",
+        href: "/podcast",
+      },
+    ],
+        
   },
   {
     label: "Volunteer",
