@@ -7,7 +7,16 @@ import {
   WrapItem,
   Center,
   Link,
+  Icon,
 } from "@chakra-ui/react";
+import {
+  FaTiktok,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaDiscord,
+  FaLinkedin,
+} from "react-icons/fa";
 export default function Socials() {
   return (
     <>
@@ -28,10 +37,10 @@ export default function Socials() {
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              px="1.25rem"
+              px="1.55rem"
               className="socials-text-tiktok smooth-hover"
             >
-              TIKTOK
+              <Icon as={FaTiktok} boxSize={"24px"} />
             </WrapItem>
           </Link>
           <Link
@@ -45,10 +54,10 @@ export default function Socials() {
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              px="1.25rem"
+              px="1.55rem"
               className="socials-text-twitter smooth-hover"
             >
-              TWITTER
+              <Icon as={FaTwitter} boxSize={"24px"} />
             </WrapItem>
           </Link>
           <Link
@@ -62,10 +71,10 @@ export default function Socials() {
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              px="1.25rem"
+              px="1.55rem"
               className="socials-text-instagram smooth-hover"
             >
-              INSTAGRAM
+              <Icon as={FaInstagram} boxSize={"24px"} />
             </WrapItem>
           </Link>
           <Link
@@ -79,10 +88,10 @@ export default function Socials() {
               fontWeight={"800"}
               fontSize={"16px"}
               color={"#878787"}
-              px="1.25rem"
+              px="1.55rem"
               className="socials-text-linkedin smooth-hover"
             >
-              LINKEDIN
+              <Icon as={FaLinkedin} boxSize={"24px"} />
             </WrapItem>
           </Link>
           <Link
@@ -97,9 +106,9 @@ export default function Socials() {
               fontSize={"16px"}
               color={"#878787"}
               className="socials-text-discord smooth-hover"
-              px="1.25rem"
+              px="1.55rem"
             >
-              DISCORD
+              <Icon as={FaDiscord} boxSize={"24px"} />
             </WrapItem>
           </Link>
         </Wrap>
