@@ -12,6 +12,7 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
+  Image,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -44,22 +45,24 @@ const DefaultNavItems = [
     children: [
       {
         label: "Tech Optimum Hacks",
-        subLabel: "Learn about our annual hackathons with a focus on social good.",
+        subLabel:
+          "Learn about our annual hackathons with a focus on social good.",
         href: "/hackathon",
       },
       {
         label: "Technology Drive",
         subLabel: "Donate your old technology to help students in need.",
         href: "/technology-donation",
-      }, 
+      },
       {
         label: "Tech Optimum Talks",
-        subLabel: "Listen to our podcast where we interview industry professionals.",
+        subLabel:
+          "Listen to our podcast where we interview industry professionals.",
         href: "/podcast",
       },
     ],
-        
-  },  {
+  },
+  {
     label: "About",
     children: [
       {
@@ -102,6 +105,7 @@ export default function WithSubnavigation() {
               label: course.title,
               subLabel: course.description,
               href: `https://dashboard.techoptimum.org/open-curriculum/${course.slug}`,
+              image: course.image,
             })),
           },
           ...NAV_ITEMS.slice(2), // Append the remaining items from the original array
@@ -111,7 +115,7 @@ export default function WithSubnavigation() {
       });
   }, []);
 
-  const DesktopSubNav = ({ label, href, subLabel }) => {
+  const DesktopSubNav = ({ label, href, subLabel, image }) => {
     return (
       <Link
         href={href}
@@ -122,26 +126,30 @@ export default function WithSubnavigation() {
         _hover={{ bg: useColorModeValue("#091D34", "black") }}
       >
         <Stack direction={"row"} align={"center"}>
-          <Box>
-            <Text
-              color="primary"
-              transition={"color .2s ease"}
-              _groupHover={{ color: "blue.400" }}
-              fontWeight={500}
-            >
-              {label}
-            </Text>
-            <Text
-              _groupHover={{
-                color: "gray.500",
-              }}
-              fontSize={"sm"}
-              width="300px"
-              overflow="hidden"
-              className="custom-ellipsis"
-            >
-              {subLabel}
-            </Text>
+          <Box alignItems="center" display="flex">
+            <Flex direction="column">
+              <Text
+                color="primary"
+                transition={"color .2s ease"}
+                _groupHover={{ color: "blue.400" }}
+                fontWeight={500}
+              >
+                {label}
+              </Text>
+              <Text
+                _groupHover={{
+                  color: "gray.500",
+                }}
+                fontSize={"sm"}
+              >
+                {subLabel.length > 56
+                  ? `${subLabel.slice(0, 56)}...`
+                  : subLabel}
+              </Text>
+            </Flex>
+            {image && (
+              <Image ml="2rem" src={image} alt={label} boxSize="50px" />
+            )}
           </Box>
           <Flex
             transition={"all .2s ease"}
@@ -212,7 +220,7 @@ export default function WithSubnavigation() {
     );
   };
 
-  const MobileNavItem = ({ label, children, href }) => {
+  const MobileNavItem = ({ label, children, href, image }) => {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
@@ -227,6 +235,7 @@ export default function WithSubnavigation() {
             textDecoration: "none",
           }}
         >
+          {image && <Image src={image} alt={label} boxSize="50px" />}
           <Text color={useColorModeValue("gray.200", "gray.200")}>{label}</Text>
           {children && (
             <Icon
