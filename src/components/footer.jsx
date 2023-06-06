@@ -90,10 +90,10 @@ export default function Footer() {
           </Heading>
 
           <Text color="primary" fontSize="md">
-            <Link href="hackathon"> Hackathon</Link>
+            <Link href="/sponsorship">Sponsor Us</Link>
           </Text>
           <Text color="primary" fontSize="md">
-            <Link href="curriculum"> Courses</Link>
+            <Link isExternal href="https://dashboard.techoptimum.org">Learning Platform</Link>
           </Text>
           <Text color="primary" fontSize="md">
             <Link href="discord"> Discord</Link>
@@ -112,9 +112,11 @@ export default function Footer() {
             fontSize="sm"
             textAlign={{ base: "center", md: "left" }}
           >
-            Tech Optimum is a non-profit organization that aims to provide
-            educational resources to underprivileged students, to ensure
-            everyone has access to the same opportunities.
+            Tech Optimum is a non-profit organization that aims to level the playing 
+            field for students interested in technology. We offer 
+            educational resources and opportunities to students who may not have
+            access to them otherwise.
+
           </Text>
         </Flex>
       </Flex>
@@ -133,7 +135,7 @@ export default function Footer() {
           </Text>
           <Text display={"flex"} color="primary" fontSize="sm">
             
-          <Text as="a" href="mailto:team@techoptimum.org">EIN: 88-3677650 | team@techoptimum.org</Text>
+          <Text>501(c)3, EIN: 88-3677650 | <a as="a" href="mailto:team@techoptimum.org">team@techoptimum.org</a></Text>
           </Text>
         </Flex>
 

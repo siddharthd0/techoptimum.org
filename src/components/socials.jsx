@@ -16,6 +16,8 @@ import {
   FaLinkedinIn,
   FaDiscord,
   FaLinkedin,
+  FaYoutube,
+  FaGithub,
 } from "react-icons/fa";
 export default function Socials() {
   return (
@@ -25,7 +27,7 @@ export default function Socials() {
       </Flex>
 
       <Center>
-        <Wrap mx="2rem" my={"3rem"} justify="center">
+        <Wrap mx="2rem" my={"2rem"} justify="center">
           <Link
             isExternal
             _hover={{
@@ -109,6 +111,40 @@ export default function Socials() {
               px="1.55rem"
             >
               <Icon as={FaDiscord} boxSize={"24px"} />
+            </WrapItem>
+          </Link>
+          <Link
+            isExternal
+            _hover={{
+              textDecoration: "none",
+            }}
+            href="https://github.com/TechOptimum"
+          >
+            <WrapItem
+              fontWeight={"800"}
+              fontSize={"16px"}
+              color={"#878787"}
+              className="socials-text-github smooth-hover"
+              px="1.5rem"
+            >
+              <Icon as={FaGithub} boxSize={"24px"} />
+            </WrapItem>
+          </Link>
+          <Link
+            isExternal
+            _hover={{
+              textDecoration: "none",
+            }}
+            href="https://www.youtube.com/@techoptimum"
+          >
+            <WrapItem
+              fontWeight={"800"}
+              fontSize={"16px"}
+              color={"#878787"}
+              className="socials-text-youtube smooth-hover"
+              px="1.5rem"
+            >
+              <Icon as={FaYoutube} boxSize={"24px"} />
             </WrapItem>
           </Link>
         </Wrap>

@@ -38,21 +38,7 @@ const DefaultNavItems = [
       },
     ],
   },
-  {
-    label: "About",
-    children: [
-      {
-        label: "The Team",
-        subLabel: "Get to know the team behind the scenes.",
-        href: "/about",
-      },
-      {
-        label: "Our Mission",
-        subLabel: "Learn about our mission.",
-        href: "/mission",
-      },
-    ],
-  },
+
   {
     label: "Initiatives",
     children: [
@@ -73,6 +59,20 @@ const DefaultNavItems = [
       },
     ],
         
+  },  {
+    label: "About",
+    children: [
+      {
+        label: "The Team",
+        subLabel: "Get to know the team behind the scenes.",
+        href: "/about",
+      },
+      {
+        label: "Our Mission",
+        subLabel: "Learn about our mission.",
+        href: "/mission",
+      },
+    ],
   },
   {
     label: "Volunteer",
