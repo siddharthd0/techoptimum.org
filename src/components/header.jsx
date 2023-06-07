@@ -89,9 +89,15 @@ const DefaultNavItems = [
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const [location, setLocation] = useState("/");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLocation(window.location.pathname);
+    }
+  }, []);
 
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
-  /// hello
 
   useEffect(() => {
     fetch(`https://dashboard.techoptimum.org/api/courses-external`)
@@ -116,6 +122,8 @@ export default function WithSubnavigation() {
   }, []);
 
   const DesktopSubNav = ({ label, href, subLabel, image }) => {
+    const linkColor = useColorModeValue("transparent", "gray.300");
+    
     return (
       <Link
         href={href}
@@ -123,13 +131,16 @@ export default function WithSubnavigation() {
         display={"block"}
         p={2}
         rounded={"md"}
+       
         _hover={{ bg: useColorModeValue("#091D34", "black") }}
+        bgColor={location.includes(href) ? "#091D34" : "transparent"}
       >
         <Stack direction={"row"} align={"center"}>
           <Box alignItems="center" display="flex">
             <Flex direction="column">
               <Text
-                color="primary"
+               color={location.includes(href) ? "blue.200" : "primary"}
+            
                 transition={"color .2s ease"}
                 _groupHover={{ color: "blue.400" }}
                 fontWeight={500}
@@ -137,6 +148,7 @@ export default function WithSubnavigation() {
                 {label}
               </Text>
               <Text
+             
                 _groupHover={{
                   color: "gray.500",
                 }}
@@ -184,7 +196,12 @@ export default function WithSubnavigation() {
                     href={navItem.href ?? "#"}
                     fontSize={"m"}
                     fontWeight={500}
-                    color={linkColor}
+                    color={
+                      location === navItem.href ||
+                      navItem.children?.some((child) => location === child.href)
+                        ? "blue.400"
+                        : linkColor
+                    }
                     transitionDelay="0s"
                     _hover={{
                       textDecoration: "none",
@@ -236,7 +253,16 @@ export default function WithSubnavigation() {
           }}
         >
           {image && <Image src={image} alt={label} boxSize="50px" />}
-          <Text color={useColorModeValue("gray.200", "gray.200")}>{label}</Text>
+          <Text
+            color={
+              location === href ||
+              children?.some((child) => location === child.href)
+                ? "blue.400"
+                : useColorModeValue("gray.200", "gray.200")
+            }
+          >
+            {label}
+          </Text>
           {children && (
             <Icon
               _hover={{
@@ -267,7 +293,16 @@ export default function WithSubnavigation() {
           >
             {children &&
               children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
+                <Link
+                  key={child.label}
+                  py={2}
+                  href={child.href}
+                  color={
+                    location === child.href
+                      ? "blue.400"
+                      : useColorModeValue("gray.200", "gray.200")
+                  }
+                >
                   {child.label}
                 </Link>
               ))}
@@ -334,7 +369,7 @@ export default function WithSubnavigation() {
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               color={useColorModeValue("primary", "white")}
             >
-              Tech Optimum
+              Tech Optimum 
             </Text>
             <Spacer />
 
