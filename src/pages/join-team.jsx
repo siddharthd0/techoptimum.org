@@ -36,6 +36,26 @@ export default function JoinTeam() {
   const cardsInfo = useMemo(
     () => [
       {
+        role: "Video Editor",
+        application: "https://forms.gle/QtePyioQ8AykETAS6",
+        department: "Tech",
+        responsibility: [
+          "Assemble and edit raw footage into broadcast-ready videos.",
+          "Collaborate with content creators for optimal narrative and visual outcomes.",
+          "Apply graphics and special effects to enhance video content.",
+          "Incorporate audio elements like music, dialogue, and sound effects.",
+          "Review and revise video content based on feedback. "
+        ],
+        shortDescription:
+        "Edit 3-5 minute videos for our nonprofit. This includes course content, Youtube content, and more",
+        requirements: [
+          "Proven Video Editing experience with a strong portfolio. ",
+          "Familiarity with digital editing software packages (e.g., Adobe Premiere, After Effects, Filmora, etc.). ",
+          "Strong understanding of storytelling and visual aesthetics. ",
+          "Ability to work under tight deadlines."
+        ]
+      },
+      {
         role: "Insta Content Creator",
         application: "https://forms.gle/wAPeXbta2oE1WNMz6",
         department: "Marketing",
