@@ -446,7 +446,7 @@ export default function JoinTeam() {
         </Box>
       </Flex>
 
-      <Socials />
+     
     </>
   );
 }
