@@ -90,7 +90,7 @@ const Courses = () => {
       <Box
        
         pt="2rem"
-        mt="4rem"
+        mt={["0rem","4rem"]}
         maxW="1070px"
         mx="auto"
         direction={"column"}
@@ -98,10 +98,12 @@ const Courses = () => {
         <Box>
           <Flex direction={{ base: 'column', md: 'row'}} justifyContent={"center"} alignItems="center">
             <Box direction="column">
-              <Heading color="primary" fontSize={{ base: "3xl", md: "4xl" }}>
+              <Heading textAlign={["center", "left"]} color="primary" fontSize={{ base: "3xl", md: "4xl" }}>
                 Courses
               </Heading>
               <Heading
+              textAlign={["center", "left"]}
+              mt={['.1rem','0']}
                 color="blackAlpha.800"
                 fontSize={{ base: "xl", md: "2xl" }}
                 mb="1rem"
@@ -111,12 +113,12 @@ const Courses = () => {
               </Heading>
             </Box>
             <Spacer />
-            <Button as="a" href="https://dashboard.techoptimum.org" mt={{ base: '1rem', md: '0' }}>Check out all our courses</Button>
+            <Button textAlign={["center", "left"]} as="a" href="https://dashboard.techoptimum.org" mt={{ base: '0rem', md: '0' }}>Check out all our courses</Button>
           </Flex>
         </Box>
         <Wrap
         pb="2rem"
-          margin="auto"
+          mx={["2rem","auto"]}
           mt="1rem"
           justifyContent={"space-between"}
           direction={"row"}  

@@ -37,7 +37,6 @@ export default function HeroHeader() {
       messageRef.current.value === ""
     ) {
       toast({
-       
         description: "Please fill in all the fields.",
         status: "error",
         duration: 5000,
@@ -108,23 +107,17 @@ export default function HeroHeader() {
   const toast = useToast();
   return (
     <>
-      <Flex
-       
-        
-        justifyContent="center"
-        margin={"auto"}
-        color="primary"
-        mt="7rem"
-      >
+      <Flex justifyContent="center" margin={"auto"} color="primary" mt={["5rem","7rem"]}>
         <Flex
           direction={["column", "row"]}
           marginTop="50px"
           marginBottom="50px"
+          mx="2rem"
         >
           <Box
             padding={"50px"}
-           borderRadius="lg"
-           shadow="lg"
+            borderRadius="lg"
+            shadow="lg"
             maxWidth="500px"
             bg="gray.50"
           >
@@ -169,9 +162,9 @@ export default function HeroHeader() {
                 </Box>
                 <Box ml="20px">
                   <Input
-                   _placeholder={{
-                    color: "primary",
-                  }}
+                    _placeholder={{
+                      color: "primary",
+                    }}
                     padding="0"
                     placeholder="Enter your last name"
                     border="none"
@@ -206,19 +199,13 @@ export default function HeroHeader() {
                 onClick={() => {
                   handleSubmit();
                 }}
-               
-             
                 marginTop={3}
-               
                 rightIcon={<BsArrowRight position={"relative"} />}
-               
               >
                 Send
               </Button>
             </FormControl>
           </Box>
-
-       
         </Flex>
       </Flex>
     </>

@@ -12,12 +12,12 @@ export default function Donations() {
         alignItems="center"
         justifyContent="center"
       >
-        <Heading fontSize="5xl" pt="5rem" fontWeight="medium" color="primary">
+        <Heading fontSize={["3xl","5xl"]} pt="9rem" fontWeight="medium" color="primary">
           Donate to Tech Optimum
         </Heading>
         <Heading
           mt="1rem"
-          fontSize="2xl"
+          fontSize={["lg","2xl"]}
           fontWeight="medium"
           color="blackAlpha.800"
           mb="3rem"
@@ -33,7 +33,7 @@ export default function Donations() {
           scrolling="no"
           seamless
           allowpaymentrequest
-          style={{ display: "block", margin: "0 auto" }}
+          style={{ display: "block", margin: "0 auto", maxWidth: "90%"}}
         ></iframe>
         <Script src="https://givebutter.com/js/widget.js"></Script>
       </Box>

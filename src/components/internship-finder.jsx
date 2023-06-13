@@ -39,28 +39,40 @@ export default function Finder() {
         direction={{ base: "column", md: "column" }}
         justifyContent={["center", "unset"]}
         px={{ base: "2rem", md: "0rem" }}
+        
       >
         <Flex alignItems="center">
           {" "}
-          <Heading textAlign={["center !important", "left"]} color="primary" fontSize={{ base: "3xl", md: "4xl" }}>
+          <Heading
+          width="100%"
+              textAlign={["center", "left"]}
+             
+            color="primary"
+            fontSize={{ base: "3xl", md: "4xl" }}
+          >
             Apply your Skills
           </Heading>
         </Flex>
 
         <Flex
-          direction={{ base: "column-reverse", md: "row" }}
+          direction={{ base: "column", md: "row" }}
           alignItems={{ base: "center", md: "center" }}
-          mt={{ base: "2rem", md: "0" }}
+          mt={{ base: "0rem", md: "0" }}
         >
           <Box mb={{ base: "2rem", md: "0" }}>
             <Hackathon />
           </Box>
           <Box maxW={{ base: "100%", md: "40%" }} mx="auto">
-            <Heading textAlign={["center", "left"]}fontWeight="medium" fontSize={["2xl","3xl" ]}color="primary">
+            <Heading
+              textAlign={["center", "left"]}
+              fontWeight="medium"
+              fontSize={["2xl", "3xl"]}
+              color="primary"
+            >
               Our Internship Finder
             </Heading>
             <Heading
-            textAlign={["center", "left"]}
+              textAlign={["center", "left"]}
               mt="4px"
               fontWeight="light"
               fontSize="lg"
@@ -68,13 +80,22 @@ export default function Finder() {
             >
               Apply your skills in the real-world
             </Heading>
-            <Text textAlign={["center", "left"]} color="blackAlpha.800" mt="10px">
+            <Text
+              textAlign={["center", "left"]}
+              color="blackAlpha.800"
+              mt="10px"
+            >
               More than 50 internships on our public internship finder, with
               more being added every week. Apply your skills in the real-world
               industry and gain valuable experience. We have publicized
               internships ranging from web development to machine learning.
             </Text>
-            <Button display={["none", "block"]}mt="1rem" as="a" href="https://dashboard.techoptimum.org">
+            <Button
+              display={["none", "flex"]}
+              mt="1rem"
+              as="a"
+              href="https://dashboard.techoptimum.org"
+            >
               View Internships
             </Button>
           </Box>

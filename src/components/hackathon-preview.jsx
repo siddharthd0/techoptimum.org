@@ -40,7 +40,7 @@ const Courses = () => {
         />
       </Head>
 
-      <Box mt={["2rem", "0"]} px={["20px", "0"]} mx="auto" maxW="980px" direction={{ base: "column", md: "column" }}>
+      <Box mt={["0rem", "0"]} px={["20px", "0"]} mx="auto" maxW="980px" direction={{ base: "column", md: "column" }}>
         <Flex direction={{ base: "column", md: "row" }}>
           <Box direction="column">
             <Flex direction={["column", "row"]} mt=".5rem" alignItems="center">
@@ -49,6 +49,7 @@ const Courses = () => {
               </Heading>
               <Spacer />
               <Button
+              mt={["1rem", "0"]}
                 size="sm"
                 rightIcon={<IoIosArrowForward />}
                 as="a"
@@ -64,13 +65,13 @@ const Courses = () => {
               <Badge mx="6px" colorScheme="blue">
                 300+ Participants
               </Badge>
-              <Badge colorScheme="blue" mx="6px">
+              <Badge  mt={["1rem", "0"]} colorScheme="blue" mx="6px">
                 50+ Projects
               </Badge>
             </Flex>
           </Box>
         </Flex>
-        <Text textAlign={["center", "left"]} mb="6px" color="blackAlpha.800">
+        <Text  mt={["1rem", "0"]} textAlign={["center", "left"]} mb="6px" color="blackAlpha.800">
           Here are just some of the projects that were created at Tech Optimum
           Hacks 2022.
         </Text>

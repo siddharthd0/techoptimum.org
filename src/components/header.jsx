@@ -33,9 +33,9 @@ const DefaultNavItems = [
     label: "Curriculum",
     children: [
       {
-        label: "Loading...",
-        subLabel: "",
-        href: "",
+        label: "Our Learning Platform",
+        subLabel: "Loading...",
+        href: "https://dashboard.techoptimum.org",
       },
     ],
   },
@@ -286,7 +286,7 @@ export default function WithSubnavigation() {
         left="0"
         right="0"
         pos={"fixed"}
-        mx="3rem"
+        mx={["1.5rem","3rem"]}
         borderRadius="lg"
         boxShadow="0 0 10px rgba(0,0,0,0.1)"
         sx={{

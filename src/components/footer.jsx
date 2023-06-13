@@ -153,8 +153,10 @@ export default function Footer() {
           </React.Fragment>
         ))}
       </Flex>
+      
 
-      <Box bg="blue.600" py="1rem">
+      <Box bg="blue.600" py={["0","1rem"]}>
+        
         <Flex
           justifyContent="space-between"
           alignItems="center"
@@ -162,7 +164,7 @@ export default function Footer() {
           direction={{ base: "column", md: "row" }}
           fontSize="sm"
         >
-          <Flex alignItems="center">
+          <Flex direction={['column', "row"]} alignItems="center">
             <Text color="white">© 2023 Tech Optimum, &nbsp;</Text>
             <Text display={"flex"} color="white">
               501(c)3, EIN: 88-3677650, &nbsp;
@@ -171,7 +173,7 @@ export default function Footer() {
               <Link href="/privacy">Privacy Policy</Link>
             </Text>
           </Flex>
-          <Wrap spacing="24px" color="whiteAlpha.700" justify="center">
+          <Wrap my={["2rem", "0"]} spacing={[ "16px","24px"]} color="whiteAlpha.700" justify="center">
             {socialLinks.map(({ href, icon }, idx) => (
               <Link
                 isExternal

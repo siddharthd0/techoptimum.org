@@ -46,13 +46,14 @@ const ExpandedProjectCard = ({
         direction="column"
       >
         <Flex alignItems="center">
-        <Heading fontSize="2xl" fontWeight="medium" color="primary">
-          {projectName}
-        </Heading>
-        <Spacer/>
-        <Badge py="1" borderRadius="full" px="2" colorScheme="teal">
-          {projectPlace}
-        </Badge></Flex>
+          <Heading fontSize="2xl" fontWeight="medium" color="primary">
+            {projectName}
+          </Heading>
+          <Spacer />
+          <Badge py="1" borderRadius="full" px="2" colorScheme="teal">
+            {projectPlace}
+          </Badge>
+        </Flex>
 
         <Text mt="2" color="blackAlpha.800">
           {projectDescription}
@@ -84,7 +85,6 @@ export default function HackathonRecap() {
   return (
     <>
       <Flex
-       
         width="100%"
         justifyContent="center"
         alignItems="center"
@@ -96,9 +96,9 @@ export default function HackathonRecap() {
           fontWeight={"medium"}
           fontSize={["3xl", "5xl"]}
           textAlign={"center"}
+          lineHeight={["2", "1.5"]}
         >
           <Highlight
-         
             query={["2022", "Hacks", "Tech Optimum"]}
             styles={{
               px: "14px",
@@ -122,7 +122,7 @@ export default function HackathonRecap() {
           textAlign="center"
         >
           <Heading fontWeight="medium ">Our First ever Hackathon...</Heading>
-          <Text maxW={["80%","50%"]} mt=".5rem">
+          <Text maxW={["80%", "50%"]} mt=".5rem">
             Tech Optimum Hacks 2022 was our first ever hackathon. We had over
             300 participants from all over the world. We had 4 workshops where
             you got to learn new skills and apply them in the hackathon. All
@@ -133,7 +133,7 @@ export default function HackathonRecap() {
             Check out some notable projects
           </Heading>
           <VStack maxW="50%" mt={["30px", "0"]}>
-            <Wrap  gap="5px" direction={["column", "row"]}>
+            <Wrap gap="5px" direction={["column", "row"]}>
               <ProjectCard
                 projectName="Machine Learning Stock Predictor"
                 projectUrl="https://devpost.com/software/smartstock-meoq24"
@@ -175,15 +175,14 @@ export default function HackathonRecap() {
           textAlign={"center"}
           mt="3rem"
         >
-          Winners 
+          Winners
         </Heading>
-        <Wrap my="2rem">
+        <Wrap justify="center" my="2rem">
           <ExpandedProjectCard
             projectPlace="1st Place"
             projectName="Genfolio"
             projectUrl="https://devpost.com/software/genfolio"
             projectDescription="A portfolio generator that allows you to create a website portfolio in seconds using Svelte and Express.js"
-           
             projectVideoIframe="https://www.youtube.com/embed/jKoOPKs_bSA"
           />
           <ExpandedProjectCard

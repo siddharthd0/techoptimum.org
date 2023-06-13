@@ -4,6 +4,7 @@ import {
   Button,
   Flex,
   Text,
+  Wrap,
   Tooltip,
   Badge,
   Stat,
@@ -26,17 +27,18 @@ export default function Hackathons() {
   return (
     <>
       <Flex
-       mt="130px !important"
+        mt="130px !important"
         borderRadius="md"
         bg="blackAlpha.50"
         py={"25px"}
         px="2rem"
-        mb="6rem"
+        mb={["2rem","6rem"]}
         alignItems="center"
-        margin="auto"
+        marginX={["1rem", "auto"]}
         maxW="1070px"
+        direction={["column-reverse", "row"]}
       >
-        <Box maxW={"760px"}>
+        <Box mt={["1.5rem", "0"]} maxW={"760px"}>
           <Heading
             color="primary"
             fontSize={["2xl", "4xl"]}
@@ -71,38 +73,37 @@ export default function Hackathons() {
             </Button>
           </Flex>
         </Box>
-        <Box pl={["0rem", "5rem"]} maxW={["80%", "60%"]} display={["none", "block"]} position="relative">
+        <Box pl={["0rem", "5rem"]} maxW={["100%", "60%"]} position="relative">
           <Image
             borderRadius="md"
             src="hackathon-projects-background-modified.png"
             alt="Digital Divide"
           />
-          <HStack
+          <Wrap
             position="absolute"
-            bottom="30px"
+            bottom={["10px","30px"]}
             color="white"
             p={4}
             gap="10px"
             borderRadius="md"
           >
-            <Badge colorScheme="blue" fontSize="md">
+            <Badge colorScheme="blue" fontSize={["xs","md"]}>
               300+ Participants
             </Badge>
-            <Badge colorScheme={"green"} fontSize="md">
+            <Badge colorScheme={"green"} fontSize={["xs","md"]}>
               50+ Projects
             </Badge>
-            <Badge colorScheme={"red"} fontSize="md">
+            <Badge colorScheme={"red"} fontSize={["xs","md"]}>
               $40k in Prizes
             </Badge>
-          </HStack>
+          </Wrap>
         </Box>
       </Flex>
-      <Box py={["60px", "70px"]}>
+      <Box py={["0", "70px"]}>
         <HackathonRecap />
 
         <HackathonSponsors />
       </Box>
-    
     </>
   );
 }
