@@ -24,7 +24,7 @@ export default function Volunteer({ src, name, role }) {
             <Text color={"primary"} fontSize={"2xl"}>
               {name}
             </Text>
-            <Text color={"blue.300"} fontSize={"md"}>
+            <Text color={"blue.500"} fontSize={"md"}>
               {role}
             </Text>
           </Flex>

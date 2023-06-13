@@ -1,172 +1,198 @@
-import ChessIcon from "../assets/chess.svg";
-import SkribblIoIcon from "../assets/skribblio.svg";
-import WorkshopsIcon from "../assets/workshops.svg";
-
 import {
   Container,
   Flex,
+  Box,
   Heading,
   Text,
   Icon,
+  VStack,
+  Wrap,
+  Button,
+  Badge,
+  Spacer,
+  Highlight,
+  Link,
+  Image,
 } from "@chakra-ui/react";
-// import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BsArrowUpRight } from "react-icons/bs";
-import CountUp from "react-countup";
-import { motion } from "framer-motion";
-import { Highlight, Link } from "@chakra-ui/react";
+
+const ProjectCard = ({ projectName, projectUrl }) => {
+  return (
+    <>
+      <Button size="sm" as="a" href={projectUrl}>
+        {projectName} <ExternalLinkIcon mx="7px" />
+      </Button>
+    </>
+  );
+};
+const ExpandedProjectCard = ({
+  projectName,
+  projectUrl,
+  projectDescription,
+  projectVideoIframe,
+  projectImage,
+  projectPlace,
+}) => {
+  return (
+    <>
+      <Box
+        maxW="sm"
+        borderWidth="1px"
+        borderRadius="lg"
+        overflow="hidden"
+        boxShadow="lg"
+        p="6"
+        direction="column"
+      >
+        <Flex alignItems="center">
+        <Heading fontSize="2xl" fontWeight="medium" color="primary">
+          {projectName}
+        </Heading>
+        <Spacer/>
+        <Badge py="1" borderRadius="full" px="2" colorScheme="teal">
+          {projectPlace}
+        </Badge></Flex>
+
+        <Text mt="2" color="blackAlpha.800">
+          {projectDescription}
+        </Text>
+        <Box borderRadius="lg" pt="1rem">
+          <iframe
+            src={projectVideoIframe}
+            title={projectName}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </Box>
+        <Button
+          mt="1rem"
+          as="a"
+          href={projectUrl}
+          rightIcon={<ExternalLinkIcon />}
+          variant="outline"
+        >
+          View Project
+        </Button>
+      </Box>
+    </>
+  );
+};
 
 export default function HackathonRecap() {
   return (
     <>
-      <Flex id="recap" direction="column" marginBottom={"3rem"} align="center">
+      <Flex
+       
+        width="100%"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        marginBottom={"3rem"}
+      >
         <Heading
-          fontWeight={"100"}
+          color="primary"
+          fontWeight={"medium"}
           fontSize={["3xl", "5xl"]}
-          maxW={"1000px"}
-          lineHeight="medium"
           textAlign={"center"}
         >
           <Highlight
-            query={["2022", "Tech Optimum"]}
+            query={["2022", "Hacks", "Tech Optimum"]}
             styles={{
               px: "14px",
               py: "10px",
-              rounded: "12px",
-              bg: "linear-gradient(156.16deg, #0b2b5f 17.37%, #334c81 86.15%)",
-              fontWeight: "100",
-              color: "blue.100",
+              rounded: "lg",
+              bg: "gray.700",
+              fontWeight: "medium",
+              color: "white",
             }}
           >
-            Quick Recap of Tech Optimum Hacks 2022:
+            Quick Recap of Tech Optimum Hacks 2022
           </Highlight>
         </Heading>
-
-        <Text mt="8px" color="grey" fontSize={"lg"}>
-          (We did more than just coding!)
-        </Text>
-        <Container
-          marginTop={"50px! important"}
-          maxWidth={"570px"}
-          className="missionbg"
-          height={["120px", "150px"]}
-          margin={"1rem auto"}
-          borderRadius={"36px"}
-          paddingTop={"1rem"}
-          as={motion.div}
-          initial={{ opacity: 0, y: 40 }}
-          animate={{
-            opacity: 1,
-            transition: { duration: 1 },
-            ease: "easeIn",
-            y: 0,
-          }}
-        >
-          <Flex alignItems={"center"} height={"100%"}>
-            <Heading
-              color="white"
-              fontSize={["2xl", "4xl"]}
-              fontWeight={"400"}
-              textAlign={"left"}
-              ml={"6%"}
-              mr={"6%"}
-            >
-              <CountUp end={313} duration={4} useEasing={true} delay={1.5} />+
-              <Text fontWeight={"400"} fontSize={["xl", "2xl"]}>
-                Participants
-              </Text>
-            </Heading>
-            <Heading
-              color="white"
-              fontSize={["4xl", "6xl"]}
-              fontWeight={"300"}
-              width={"5%"}
-            >
-              /
-            </Heading>
-            <Heading
-              color="white"
-              fontSize={["2xl", "4xl"]}
-              fontWeight={"400"}
-              width={"47.5%"}
-              textAlign={"left"}
-              ml={"1rem"}
-            >
-              $<CountUp end={41750} duration={4} useEasing={true} delay={1.5} />
-              +<br></br>
-              <Text fontWeight={"400"} fontSize={["xl", "2xl"]}>
-                Prizes
-              </Text>
-            </Heading>
-            <Link
-              href="https://techoptimum.devpost.com"
-              isExternal
-              transition="500ms"
-            >
-              <Icon
-                display={["none", "block"]}
-                className="diagonal-button-secondary"
-                as={BsArrowUpRight}
-              />
-            </Link>
-          </Flex>
-        </Container>
-
         <Flex
-          borderRadius={"20px"}
-          mt="2rem"
-          py="2rem"
-          px="5rem"
-          className="missionbg"
-          direction={["column", "row"]}
-          rowGap="30px"
+          width="100%"
+          justifyContent="center"
+          alignItems="center"
+          mt="3rem"
+          color="primary"
+          direction="column"
+          textAlign="center"
         >
-          <Flex alignItems={"center"} height={"100%"}>
-            <Flex align="center" justify="center" paddingLeft="15px">
-              <ChessIcon width="55px" height="auto" />
+          <Heading fontWeight="medium ">Our First ever Hackathon...</Heading>
+          <Text maxW="50%" mt=".5rem">
+            Tech Optimum Hacks 2022 was our first ever hackathon. We had over
+            300 participants from all over the world. We had 4 workshops where
+            you got to learn new skills and apply them in the hackathon. All
+            participants were awarded with cool things ranging from Replit
+            Premium and Free Domains.
+          </Text>
+          <Heading fontSize="2xl" mt="1rem" mb="1rem" fontWeight="medium">
+            Check out some notable projects
+          </Heading>
+          <VStack maxW="50%" mt={["30px", "0"]}>
+            <Wrap  gap="5px" direction={["column", "row"]}>
+              <ProjectCard
+                projectName="Machine Learning Stock Predictor"
+                projectUrl="https://devpost.com/software/smartstock-meoq24"
+              />
+              <ProjectCard
+                projectName={"Mental Health Care Manager"}
+                projectUrl="https://devpost.com/software/mental-healthcare-manager"
+              />
+              <ProjectCard
+                projectName="A Portfolio Generator"
+                projectUrl="https://devpost.com/software/genfolio"
+              />
+              <ProjectCard
+                projectName="Data Visualization for Natural Disasters"
+                projectUrl={"https://devpost.com/software/badmap"}
+              />
 
-              <Heading
-                mx="20px"
-                textAlign="center"
-                color="primary"
-                fontSize={["2xl", "3xl"]}
-              >
-                Chess <br />
-                Tournaments
-              </Heading>
-            </Flex>
-          </Flex>
-          <Flex alignItems={"center"} height={"100%"}>
-            <Flex align="center" justify="center" paddingLeft="10px">
-              <SkribblIoIcon width="70px" height="auto" />
-
-              <Heading
-                mx={"30px"}
-                textAlign={"center"}
-                color="primary"
-                fontSize={["2xl", "3xl"]}
-              >
-                Skribble.io <br />
-                Tournaments
-              </Heading>
-            </Flex>
-          </Flex>
-          <Flex alignItems={"center"} height={"100%"}>
-            <Flex align="center" justify="center" paddingLeft="5%">
-              <WorkshopsIcon width="60px" />
-
-              <Heading
-                marginLeft={"20px"}
-                textAlign={"center"}
-                color="primary"
-                fontSize={["2xl", "3xl"]}
-              >
-                Programming
-                <br />
-                Workshops
-              </Heading>
-            </Flex>
-          </Flex>
+              <ProjectCard
+                projectName="A Pixel Game"
+                projectUrl="https://devpost.com/software/steve-s-pixels"
+              />
+              <ProjectCard
+                projectName="Bridging the Gender Gap in STEM"
+                projectUrl="https://devpost.com/software/lions-bridge-the-gap"
+              />
+            </Wrap>
+            <Button
+              href="https://techoptimum.devpost.com/project-gallery"
+              alignSelf="stretch"
+            >
+              View All 50 Projects <ExternalLinkIcon mx="7px" />
+            </Button>
+          </VStack>
         </Flex>
+        <Heading
+          color="primary"
+          fontWeight={"medium"}
+          fontSize={["3xl", "5xl"]}
+          textAlign={"center"}
+          mt="3rem"
+        >
+          Winners 
+        </Heading>
+        <Wrap my="2rem">
+          <ExpandedProjectCard
+            projectPlace="1st Place"
+            projectName="Genfolio"
+            projectUrl="https://devpost.com/software/genfolio"
+            projectDescription="A portfolio generator that allows you to create a website portfolio in seconds using Svelte and Express.js"
+           
+            projectVideoIframe="https://www.youtube.com/embed/jKoOPKs_bSA"
+          />
+          <ExpandedProjectCard
+            projectPlace="2nd Place"
+            projectName="School Smart"
+            projectUrl="https://devpost.com/software/school-smart"
+            projectDescription="A project created to reduce the effort needed to take attendance, buy lunch using image recognition."
+            projectVideoIframe="https://www.youtube.com/embed/WKyBhkX7ads"
+          />
+        </Wrap>
       </Flex>
     </>
   );

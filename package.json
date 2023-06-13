@@ -18,10 +18,12 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@notionhq/client": "^2.2.2",
+    "@react-three/drei": "^9.74.12",
     "@stripe/stripe-js": "^1.46.0",
     "@vercel/analytics": "^0.1.6",
     "all": "^0.0.0",
     "aos": "^2.3.4",
+    "d3": "^7.8.5",
     "date-fns": "^2.30.0",
     "framer-motion": "^7.6.1",
     "mongodb": "^5.5.0",
@@ -35,8 +37,10 @@
     "react-icons": "^4.6.0",
     "react-markdown": "^8.0.7",
     "react-responsive-carousel": "^3.2.23",
+    "react-three-fiber": "^6.0.13",
     "stripe": "^11.5.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "three": "^0.153.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.0",

@@ -18,15 +18,15 @@ export default function JobPostingCard({
         borderRadius={"md"}
         width="375px"
         onClick={onSelect}
-        background={selected ? "blue.900" : "footerBg"} // change color if selected
+        background={selected ? "blue.100" : "secondary"} // change color if selected
         transition="300ms"
         _hover={{
           color: "white",
           transform: "scale(.95)",
-          cursor:"pointer",
+          cursor: "pointer",
         }}
       >
-        <Heading color="primary" fontSize="lg" mb={"6px"}>
+        <Heading fontWeight="600" color={selected ? "black" : "white"} fontSize="lg" mb={"6px"}>
           {role}
         </Heading>
         <Badge colorScheme="blue">{department}</Badge>

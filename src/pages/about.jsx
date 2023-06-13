@@ -30,8 +30,8 @@ export default function About() {
           key="test"
         />
       </Head>
-      <Flex marginTop={"3rem"} direction={"column"} alignItems="center">
-        <Heading marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
+      <Flex marginTop={"8rem"} direction={"column"} alignItems="center">
+        <Heading  fontWeight="medium" marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
           Executives
         </Heading>
         <Flex mb={"5%"} direction={["column", "row"]}>
@@ -71,6 +71,7 @@ export default function About() {
           fontSize={["4xl", "5xl"]}
           textAlign={"center"}
           mt={["60px", "0px"]}
+          fontWeight="medium"
         >
           Volunteers
         </Heading>
@@ -86,7 +87,7 @@ export default function About() {
               role="Director of Education"
               src="aviral.png"
             />
-              <Volunteer
+            <Volunteer
               src="preetham.png"
               name="Preetham Manapuri"
               role="Director of HR"
@@ -96,16 +97,13 @@ export default function About() {
               name="Azariah Teklu"
               role="HR Coordinator"
             />
-          
+
             <Volunteer
               name="Neil Sangra"
               src="neils.jpg"
               role="HR Coordinator"
             />
-            <Volunteer 
-              src="sahil.png" 
-              name="Sahil Pai" 
-              role="HR Associate" />
+            <Volunteer src="sahil.png" name="Sahil Pai" role="HR Associate" />
             <Volunteer
               src="https://cdn.discordapp.com/attachments/917279304453328907/1047685381346316328/Screen_Shot_2022-11-30_at_6.27.28_PM.png"
               name="Snehil Kakani"
@@ -146,18 +144,16 @@ export default function About() {
           alignItems={"center"}
           alignContent={"center"}
           mb="4rem"
-          borderRadius={"14px"}
-          maxWidth={"400px"}
-          className="missionbg"
           padding="24px"
           textAlign={"center"}
-          mx="2rem"
+        
         >
           <Heading
             color="primary"
-            mb="5px"
+            mb="10px"
             fontSize={"5xl"}
             alignContent={"center"}
+            fontWeight="medium"
           >
             Our Mission
           </Heading>
@@ -166,18 +162,7 @@ export default function About() {
             possible, learn more about them!
           </Text>
           <Link href="/mission">
-            <Button
-              mt="1rem"
-              fontSize={["sm", "md"]}
-              rounded="full"
-              px="2rem"
-              colorScheme="joinTeamBtn"
-              fontWeight={"100"}
-              transition="300ms"
-              _hover={{
-                bgColor: "#6C7BE6",
-              }}
-            >
+            <Button px="2rem" mt="1rem" rounded="full" fontWeight="medium">
               Learn more
             </Button>
           </Link>

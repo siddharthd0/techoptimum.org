@@ -61,7 +61,8 @@ export default function DonationForm() {
 
       if (response.ok) {
         toast({
-          description: "You have successfully contacted Tech Optimum regarding donating technology. We will get back to you as soon as possible.",
+          description:
+            "You have successfully contacted Tech Optimum regarding donating technology. We will get back to you as soon as possible.",
           status: "success",
           duration: 5000,
           isClosable: true,
@@ -86,16 +87,18 @@ export default function DonationForm() {
         <Heading
           color="primary"
           textAlign="center"
-          mt="2rem"
+          mt="7rem"
           fontSize="5xl"
-       
+          fontWeight="medium"
+          mb="1rem"
         >
           Donation Form
         </Heading>
-        <Text  mb="1rem" color="primary"
-          textAlign="center">
-            If you are interested in donating technology to help Tech Optimum bridge the digital <br/>divide, please fill out the form below and we will get back to you as soon as possible.  
-
+        <Text mb="2rem" color="primary" textAlign="center">
+          If you are interested in donating technology to help Tech Optimum
+          bridge the digital <br />
+          divide, please fill out the form below and we will get back to you as
+          soon as possible.
         </Text>
         <VStack
           margin="auto"
@@ -106,14 +109,15 @@ export default function DonationForm() {
           borderRadius="8px"
           px="2rem"
           py="2rem"
-          bg="footerBg"
+          color="primary !important"
+          bg="gray.100"
         >
           <FormControl isRequired id="companyName">
-            <FormLabel color="white">Company Name</FormLabel>
+            <FormLabel color="primary">Company Name</FormLabel>
             <Input
-              _placeholder={{ color: "whiteAlpha.600" }}
+              _placeholder={{ color: "primary" }}
               variant="flushed"
-              borderColor={"gray.700"}
+              borderColor={"gray.300"}
               placeholder="Please enter your Company Name"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
@@ -121,11 +125,11 @@ export default function DonationForm() {
           </FormControl>
 
           <FormControl isRequired id="contactName">
-            <FormLabel color="white">Contact Name</FormLabel>
+            <FormLabel color="primary">Contact Name</FormLabel>
             <Input
-              _placeholder={{ color: "whiteAlpha.600" }}
+              _placeholder={{ color: "primary" }}
               variant="flushed"
-              borderColor={"gray.700"}
+              borderColor={"gray.300"}
               placeholder="Please enter your Name"
               value={contactName}
               onChange={(e) => setContactName(e.target.value)}
@@ -133,11 +137,11 @@ export default function DonationForm() {
           </FormControl>
 
           <FormControl isRequired id="contactEmail">
-            <FormLabel color="white">Contact Email</FormLabel>
+            <FormLabel color="primary">Contact Email</FormLabel>
             <Input
-              _placeholder={{ color: "whiteAlpha.600" }}
+              _placeholder={{ color: "primary" }}
               variant="flushed"
-              borderColor={"gray.700"}
+              borderColor={"gray.300"}
               type="email"
               placeholder="Please enter your Email (We will contact you here)"
               value={contactEmail}
@@ -146,7 +150,7 @@ export default function DonationForm() {
           </FormControl>
 
           <FormControl id="donationItems">
-            <FormLabel color="white">Items to Donate</FormLabel>
+            <FormLabel color="primary">Items to Donate</FormLabel>
             <CheckboxGroup value={donationItems} onChange={setDonationItems}>
               <Checkbox value="Laptops">Laptops</Checkbox>
               <Checkbox ml="10px" value="Desktops">
@@ -161,16 +165,16 @@ export default function DonationForm() {
               <Checkbox ml="10px" value="Mouses">
                 Mouses
               </Checkbox>
-              {/* Add more checkboxes as needed */}
             </CheckboxGroup>
           </FormControl>
 
           <FormControl id="itemQuantity">
-            <FormLabel color="white">Number of Items to Donate</FormLabel>
+            <FormLabel color="primary">Number of Items to Donate</FormLabel>
             <NumberInput
-              borderColor={"gray.700"}
-              placeholder="130"
+              _placeholder={{ color: "primary" }}
               variant="flushed"
+              borderColor={"gray.300"}
+              placeholder="130"
               value={itemQuantity}
               onChange={setItemQuantity}
               min={1}
@@ -180,14 +184,12 @@ export default function DonationForm() {
           </FormControl>
 
           <FormControl id="additionalInfo">
-            <FormLabel color="white">
-              Additional Information 
-            </FormLabel>
+            <FormLabel color="primary">Additional Information</FormLabel>
             <Textarea
-              _placeholder={{ color: "whiteAlpha.600" }}
+              _placeholder={{ color: "primary" }}
               variant="flushed"
+              borderColor={"gray.300"}
               placeholder="Please include any Additional Information here"
-              borderColor={"gray.700"}
               value={additionalInfo}
               onChange={(e) => setAdditionalInfo(e.target.value)}
             />

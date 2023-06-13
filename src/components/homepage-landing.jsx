@@ -1,160 +1,124 @@
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import CountUp from "react-countup";
-import { motion } from "framer-motion";
-import { Link } from "@chakra-ui/react";
-import { BsArrowUpRight } from "react-icons/bs";
+import React from "react";
 import {
-  Container,
-  Flex,
-  Heading,
-  Text,
+  Box,
   Button,
-  Icon,
+  Flex,
+  Text,
   Tooltip,
+  Stat,
+  Link,
+  Image,
+  chakra,
+  VStack,
+  Heading,
+  useBreakpointValue,
+  Stack,
 } from "@chakra-ui/react";
-import { NodeNextRequest } from "next/dist/server/base-http/node";
+import {
+  IoIosArrowForward,
+  IoIosInformationCircleOutline,
+} from "react-icons/io";
+import { TbSchool } from "react-icons/tb";
 
-export default function HeroHeader() {
+export default function Mission() {
+  const direction = useBreakpointValue({ base: "column", md: "row" });
+  const boxMaxWidth = useBreakpointValue({ base: "100%", md: "60%" });
+  const headingSize = useBreakpointValue({ base: "2xl", md: "3xl" });
+
   return (
-    <>
-      <Flex mb="60px" width={"100%"} direction={"column"}>
-        <Flex alignItems={"center"} direction={"column"}>
-          <Heading
-          px={["3rem", "0rem"]}
-            as={motion.div}
-            initial={{ opacity: 0, x: -40 }}
-            animate={{
-              opacity: 1,
-              transition: { duration: 1 },
-              ease: "easeIn",
-              x: 0,
-            }}
-            className="gradient-title"
-            fontSize={["4xl", "7xl"]}
-            marginBottom={{ base: ".5em", md: "1rem", lg: "1.5rem" }}
-          >
-            Learn. Create. Accomplish.
-          </Heading>
-          <Text
-            as={motion.div}
-            initial={{ opacity: 0, x: -40 }}
-            animate={{
-              opacity: 1,
-              transition: { duration: 1 },
-              ease: "easeIn",
-              x: 0,
-              delay: 1,
-            }}
-            fontSize={["md", "2xl"]}
-            color="primary"
-            marginBottom={{ base: ".3em", md: ".7rem", lg: "1rem" }}
-            width={"70%"}
-            textAlign={"center"}
-          >
-            Tech Optimum offers accessible resources including courses and
-            internships to help aspiring coders acquire skills and practical
-            experience.
-          </Text>
-        </Flex>
-
-        <Container
-          boxShadow="0px 3px 65px rgba(50, 10, 350, 0.6)"
-          maxWidth={["290px", "500px", "800px"]}
-          backgroundColor="#29368C"
-          height={["495px", "150px"]}
-          borderRadius={"15px"}
-          marginTop={"2rem"}
-          as={motion.div}
-          initial={{ opacity: 0, y: 40 }}
-          animate={{
-            opacity: 1,
-            transition: { duration: 1 },
-            ease: "easeIn",
-            y: 0,
-            delay: 4.5,
-          }}
+    <Flex
+      direction={direction}
+      borderRadius="md"
+      bg="blackAlpha.50"
+      py={"25px"}
+      px={{ base: "1rem", md: "2rem" }}
+      mb="6rem"
+      alignItems="center"
+      margin="auto"
+      maxW="1300px"
+    >
+      <Box pr={["0rem", "5rem"]} maxW={boxMaxWidth} position="relative">
+        <Image
+          borderRadius="md"
+          src="digital-divide.jpg"
+          alt="Digital Divide"
+        />
+        <VStack
+          position="absolute"
+          bottom="30px"
+          color="white"
+          p={4}
+          borderRadius="md"
         >
-          <Flex
-            direction={["column", "row"]}
-            alignItems={"center"}
-            height={"100%"}
-            marginTop="1"
+          <Link
+            _hover={{
+              textDecoration: "none",
+              color: "primary",
+            }}
+            href="https://advocacy.code.org/2022_state_of_cs.pdf"
           >
-            <Heading
-              borderRadius={"10px"}
-              marginTop={["2rem", "0rem"]}
-              color="white"
-              fontSize={["lg", "2xl"]}
-              fontWeight={"400"}
-              px={"1rem"}
-              py="10px"
-              width={["80%", "200px"]}
-              textAlign={"center"}
-           
-            >
-              Programming Courses
-            </Heading>
-            <Heading
-              color="white"
-              fontSize={["xl", "2xl"]}
-              fontWeight={"400"}
-              width={"5%"}
-              textAlign="center"
-            >
-              +
-            </Heading>
-            <Heading
-              borderRadius={"10px"}
-              marginTop={["2rem", "0rem"]}
-              color="white"
-              fontSize={["lg", "2xl"]}
-              fontWeight={"400"}
-              px={"1rem"}
-              py="10px"
-              width={["80%", "200px"]}
-              textAlign={"center"}
-              transition="transform 0.5s ease 0s, background 0.5s ease 0s"
-           
-            >
-              Accessible Internships
-            </Heading>
-            <Heading
-              color="white"
-              fontSize={["lg", "2xl"]}
-              fontWeight={"400"}
-              width={"5%"}
-              textAlign="center"
-            >
-              +
-            </Heading>
-            <Heading
-              borderRadius={"10px"}
-              marginTop={["2rem", "0rem"]}
-              color="white"
-              fontSize={["lg", "2xl"]}
-              fontWeight={"400"}
-              px={"1rem"}
-              py="10px"
-              width={["80%", "200px"]}
-              textAlign={"center"}
-              transition="transform 0.5s ease 0s, background 0.5s ease 0s"
-          
-            >
-              Inclusive Community
-            </Heading>
-            <Link
-              marginTop={["1.6rem", "0rem"]}
-              href="./about"
-              _hover={{
-                transform: "rotate(45deg)",
-              }}
-              transition="transform 0.4s ease"
-            >
-              <Icon className="diagonal-button" as={BsArrowUpRight} />
-            </Link>
-          </Flex>
-        </Container>
-      </Flex>
-    </>
+            <Tooltip label="Click to view the full Source of Computer Science Teachers Association, 2020">
+              <Stat>
+                <chakra.span
+                  px="2"
+                  py="1"
+                  rounded="md"
+                  bg="secondary"
+                  color="white"
+                  fontSize="4xl"
+                >
+                  54%
+                </chakra.span>
+                <br />
+                <Text mt=".6rem">
+                  <chakra.span
+                    px="1"
+                    rounded="md"
+                    bg="blue.600"
+                    color="white"
+                    fontSize="xl"
+                  >
+                    of public schools in the U.S. do not offer computer science
+                    courses.
+                  </chakra.span>
+                </Text>
+                <chakra.span fontWeight="bold" color="white" fontSize="sm">
+                  (Computer Science Teachers Association, 2020)
+                </chakra.span>
+              </Stat>
+            </Tooltip>
+          </Link>
+        </VStack>
+      </Box>
+      <Box maxW={"760px"}>
+        <Heading color="primary" fontSize={headingSize} fontWeight="600" mb="1rem">
+          Every student deserves access to computer science education.
+        </Heading>
+        <Text mt="1rem" color="primary">
+          Tech Optimum is committed to bridging the digital divide by providing
+          an online learning platform, resources, and tools dedicated to
+          computer science education for students across the globe.
+        </Text>
+
+        <Stack mt="1.5rem" spacing={4} direction={{ base: 'column', md: 'row' }}>
+          <Button as="a" href="https://dashboard.techoptimum.org" rightIcon={<IoIosArrowForward />} colorScheme="blue">
+            Register Now
+          </Button>
+          <Button
+          as="a"
+          href="/mission"
+            rightIcon={<TbSchool />}
+            colorScheme="green"
+            _hover={{
+              bg: "green.500",
+              borderColor: "green.500",
+              color: "white",
+            }}
+          >
+            Learn about our mission
+          </Button>
+        </Stack>
+      </Box>
+    </Flex>
   );
 }

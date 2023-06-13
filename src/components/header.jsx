@@ -62,21 +62,7 @@ const DefaultNavItems = [
       },
     ],
   },
-  {
-    label: "About",
-    children: [
-      {
-        label: "The Team",
-        subLabel: "Get to know the team behind the scenes.",
-        href: "/about",
-      },
-      {
-        label: "Our Mission",
-        subLabel: "Learn about our mission.",
-        href: "/mission",
-      },
-    ],
-  },
+
   {
     label: "Volunteer",
     href: "/join-team",
@@ -123,7 +109,7 @@ export default function WithSubnavigation() {
         display={"block"}
         p={2}
         rounded={"md"}
-        _hover={{ bg: useColorModeValue("#091D34", "black") }}
+        _hover={{ bg: useColorModeValue("whiteAlpha.100", "black") }}
       >
         <Stack direction={"row"} align={"center"}>
           <Box alignItems="center" display="flex">
@@ -131,7 +117,7 @@ export default function WithSubnavigation() {
               <Text
                 color="primary"
                 transition={"color .2s ease"}
-                _groupHover={{ color: "blue.400" }}
+                _groupHover={{ color: "secondary" }}
                 fontWeight={500}
               >
                 {label}
@@ -169,8 +155,11 @@ export default function WithSubnavigation() {
 
   const DesktopNav = () => {
     const linkColor = useColorModeValue("primary", "gray.300");
-    const linkHoverColor = useColorModeValue("gray.300", "white");
-    const popoverContentBgColor = useColorModeValue("#061220", "gray.800");
+    const linkHoverColor = useColorModeValue("blackAlpha.800", "white");
+    const popoverContentBgColor = useColorModeValue(
+      "white",
+      "gray.800"
+    );
 
     return (
       <header>
@@ -203,7 +192,7 @@ export default function WithSubnavigation() {
                     p={4}
                     rounded={"xl"}
                     minW={"sm"}
-                    transitionDelay="0s"
+                  
                   >
                     <Stack transitionDelay="0s">
                       {navItem.children.map((child) => (
@@ -292,8 +281,16 @@ export default function WithSubnavigation() {
       <Box
         zIndex="100"
         className="nav-cont stroke"
-        top="0 !important"
-        pos={"sticky"}
+        top="1.5rem !important"
+        left="0"
+        right="0"
+        pos={"fixed"}
+        mx="3rem"
+        borderRadius="lg"
+        boxShadow="0 0 10px rgba(0,0,0,0.1)"
+        sx={{
+          backdropFilter: "blur(10px)",
+        }}
       >
         <Flex
           color={useColorModeValue("gray.600", "white")}
@@ -307,6 +304,7 @@ export default function WithSubnavigation() {
             display={{ base: "flex", md: "none" }}
           >
             <IconButton
+            mr="2rem"
               onClick={onToggle}
               icon={
                 isOpen ? (
@@ -315,27 +313,23 @@ export default function WithSubnavigation() {
                   <HamburgerIcon w={5} h={5} />
                 )
               }
-              variant={"ghost"}
-              _hover={{
-                bg: "gray.900",
-              }}
+           
+             
               aria-label={"Toggle Navigation"}
             />
           </Flex>
+          
 
           <Flex
             alignItems={"center"}
             flex={{ base: 1 }}
             justify={{ base: "start", md: "start" }}
           >
-            <Text
-              fontSize="2xl"
-              fontWeight="bold"
+            <Image
+              maxW="120px"
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              color={useColorModeValue("primary", "white")}
-            >
-              Tech Optimum
-            </Text>
+              src="/text-black-transparent-tight.png"
+            />
             <Spacer />
 
             <Flex display={{ base: "none", md: "flex" }}>
@@ -343,6 +337,7 @@ export default function WithSubnavigation() {
             </Flex>
           </Flex>
         </Flex>
+        <Spacer/>
 
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />

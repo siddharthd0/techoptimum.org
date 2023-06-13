@@ -11,7 +11,16 @@ export default function TalksCard({
 }) {
   return (
     <>
-      <Box maxWidth={"500px"} borderRadius="20px" padding="10px 10px 10px 20px">
+      <Box
+      transform="400ms"
+        _hover={{
+          boxShadow: "sm",
+        }}
+       boxShadow="lg"
+        maxWidth={"500px"}
+        borderRadius="lg"
+        padding="10px 10px 10px 20px"
+      >
         <Flex alignItems={"center"} direction={"column"}>
           <Flex alignItems={"center"} direction={["column", "row"]}>
             <Image
@@ -24,7 +33,6 @@ export default function TalksCard({
               border={"3px solid #00B4D8"}
             />
             <Flex mt={["2rem", "0"]} direction="column">
-             
               <Text color={"primary"} fontSize={"3xl"}>
                 {name}
               </Text>
@@ -49,17 +57,16 @@ export default function TalksCard({
                   fontSize="11px"
                   marginBottom="0.5rem"
                   mt="8px"
-                  mb="13px"
+                  mb="10px"
                 >
-                  <Flex mt="3px" ml="11px" alignItems={"center"}>
+                  <Flex py="3px" ml="11px" alignItems={"center"}>
                     <BsYoutube /> <Text ml="10px">View Talk</Text>
                   </Flex>
                 </Badge>
               </Link>
-              <Text  fontSize={"sm"} color="primary" >
+              <Text fontSize={"sm"} color="primary">
                 {date}
               </Text>
-              
             </Flex>
           </Flex>
 
@@ -68,6 +75,7 @@ export default function TalksCard({
             maxWidth="400px"
             mt={["27px", "18px"]}
             color={"primary"}
+            mb="10px"
           >
             {description}
           </Text>

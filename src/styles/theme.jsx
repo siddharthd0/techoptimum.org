@@ -2,9 +2,9 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
-    primary: "#A7B2FF",
-    secondary: "#1B76FF",
-    bgColor: "#060E17",
+    primary: "#292929",
+    secondary: "#136bcb",
+    bgColor: "#FCFCFC",
     primaryButton: {
       500: "#1B76FF",
       600: "#1469F0", // 600: "Hover Color"
@@ -24,31 +24,47 @@ const theme = extendTheme({
       600: "#4A7EAE",
     },
   },
-  fonts: {
-    body: "'Neue Machina', sans-serif",
-    heading: "'Neue Machina', sans-serif",
-  },
+
   styles: {
     global: () => ({
       body: {
-        fontFamily: "Neue Machina",
         color: "white",
         backgroundColor: "bgColor",
         padding: 0,
         margin: 0,
       },
-     /*  "&::-webkit-scrollbar": {
-        width: "0.5em",
-      },
-      "&::-webkit-scrollbar-track": {
-        borderRadius: "0px",
-        background: "transparent",
-      },
-      "&::-webkit-scrollbar-thumb": {
-        background: "secondary",
-        borderRadius: "50px",
-      }, */
+  
     }),
+  },
+  components: {
+    Button: {
+      defaultProps: {
+        variant: "outline",
+        colorScheme: "blue",
+        fontWeight: "light",
+      },
+      variants: {
+        outline: {
+          _hover: {
+            bg: "blue.500 !important",
+            color: "whiteAlpha.900",
+            borderColor: "transparent",
+          },
+        },
+      },
+    },
+    Tooltip: {
+      baseStyle: {
+      
+        bg: "blackAlpha.900",
+        color: "white",
+        fontSize: "md",
+        px: 2,
+        py: 1,
+        borderRadius: "md",
+        boxShadow: "lg",
+      },
+    },
   },
 });
 

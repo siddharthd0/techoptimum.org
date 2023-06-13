@@ -8,7 +8,6 @@ export default function Loading() {
       bgPosition="absolute" 
       top="0" 
       left="0" 
-      bg="#060e17"
     >
       <Spinner 
         ml="50%"

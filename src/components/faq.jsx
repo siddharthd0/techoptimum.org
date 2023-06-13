@@ -11,6 +11,38 @@ import {
   Heading,
   Link,
 } from "@chakra-ui/react";
+
+const faqs = [
+  {
+    question: 'What is Tech Optimum?',
+    answer: 'Tech Optimum is a student-led nonprofit organization dedicated to helping high school and college students in computer science. We provider services such as free and accessible programming courses, an internship finder, a community of like-minded individuals, and more.'
+  },
+  {
+    question: 'How can I volunteer at Tech Optimum?',
+    answer: <>Click <Link href="join-team">here</Link> to apply to volunteer at Tech Optimum.</>
+  },
+  {
+    question: 'How can I signup for the courses?',
+    answer: <>Click <Link href="https://courses.techoptimum.org">here</Link> to signup for our free programming courses.</>
+  },
+  {
+    question: 'Where can I report a bug on the website?',
+    answer: 'Please email team@techoptimum.org to report any bugs on the website.'
+  },
+  {
+    question: 'Who is the founder of Tech Optimum?',
+    answer: <> <Link href="https://siddharthduggal.com">Siddharth Duggal</Link> founded Tech Optimum in February of 2022.</>
+  },
+  {
+    question: 'How can I donate to Tech Optimum?',
+    answer: <>We appreciate all donations. Please click <Link href="/donate">here</Link> to donate.</>
+  },
+  {
+    question: 'Do we have a Discord server?',
+    answer: <>Yes, we do! Please click <Link href="/discord">here</Link> to join our Discord server.</>
+  },
+];
+
 export default function FaqComp() {
   return (
     <>
@@ -22,117 +54,30 @@ export default function FaqComp() {
         maxWidth="700px"
         padding="3rem"
       >
-        <Heading color="primary" mt={"1rem"} fontSize={["4xl", "5xl"]}>
+        <Heading color="primary" fontWeight="medium" mt={"6rem"} fontSize={["4xl", "5xl"]}>
           {" "}
           FAQ
         </Heading>
-        <Text mb="1rem" mt=".5rem">
+        <Text color="primary" mb="1rem" mt=".5rem">
           Frequently Asked Questions
         </Text>
 
-        <Accordion allowToggle>
-          <AccordionItem className="faq-item faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box className="faq-button" flex="1" textAlign="left">
-                  What is Tech Optimum?
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Tech Optimum is a student-led nonprofit organization dedicated to
-              helping high schooler and college students in computer science. We
-              provider services such as free and accessible programming courses,
-              an internship finder, a community of like-minded individuals, and
-              more.
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  How can I volunteer at Tech Optimum?
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Click <Link href="join-team">here</Link> to apply to volunteer at Tech Optimum.
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  How can I signup for the courses?
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Click <Link href="https://courses.techoptimum.org">here</Link> to signup for our free programming
-              courses.
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  Where can I report a bug on the website?
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Please email team@techoptimum.org to report any bugs on
-              the website.
-            </AccordionPanel>
-          </AccordionItem>
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  Who is the founder of Tech Optimum?
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <Link href="https://siddharthduggal.com">Siddharth Duggal</Link>{" "}
-              founded Tech Optimum in Feburary of 2022.
-            </AccordionPanel>
-          </AccordionItem>
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  How can I donate to Tech Optimum
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              We appreciate all donations. Please click <Link href="/donate">here</Link> to donate.
-            </AccordionPanel>
-          </AccordionItem>
-          <AccordionItem mt=".75rem" className="faq-button">
-            <h2>
-              <AccordionButton className="faq-button">
-                <Box flex="1" textAlign="left">
-                  Do we have a Discord server?
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-             Yes, we do! Please click <Link href="/discord">here</Link> to join our Discord server.
-            </AccordionPanel>
-          </AccordionItem>
-       
+        <Accordion color="blackAlpha.800" allowToggle>
+          {faqs.map((faq, index) => (
+            <AccordionItem border="none" key={index} mt={index !== 0 ? ".75rem" : null} >
+              <h2>
+                <AccordionButton >
+                  <Box flex="1" textAlign="left">
+                    {faq.question}
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                {faq.answer}
+              </AccordionPanel>
+            </AccordionItem>
+          ))}
         </Accordion>
       </Flex>
     </>

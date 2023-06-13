@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Text, Button, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import TalksCard from "./talks-card";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function PodcastHero() {
   return (
@@ -8,7 +9,7 @@ export default function PodcastHero() {
       <Flex
         margin={"auto"}
         direction={"column"}
-        mt={["2rem", "5rem"]}
+        mt={["2rem", "10rem"]}
         justifyContent={"center"}
         alignItems={"center"}
       >
@@ -35,16 +36,11 @@ export default function PodcastHero() {
         </Text>
         <Link href="https://www.youtube.com/@techoptimum/videos">
           <Button
+          rightIcon={<ExternalLinkIcon />}
             mt="15px !important"
             margin="auto"
-            width={["130px", "185px"]}
-            alignContent={"center"}
-            fontSize={["md", "lg"]}
-            fontWeight={"light"}
-            color="black"
-            background={"primary"}
-            transition="0.3s"
-            _hover={{ background: "purple.300" }}
+            mx="2rem"
+           
             mb="5rem"
           >
             Listen Now

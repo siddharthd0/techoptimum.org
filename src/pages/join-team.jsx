@@ -16,7 +16,6 @@ import {
   chakra,
   Badge,
 } from "@chakra-ui/react";
-import JoinTeamLanding from "../components/join-team-landing";
 import JobPostingCard from "../components/job-card";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -38,22 +37,22 @@ export default function JoinTeam() {
       {
         role: "Video Editor",
         application: "https://forms.gle/QtePyioQ8AykETAS6",
-        department: "Tech",
+        department: "Technology",
         responsibility: [
           "Assemble and edit raw footage into broadcast-ready videos.",
           "Collaborate with content creators for optimal narrative and visual outcomes.",
           "Apply graphics and special effects to enhance video content.",
           "Incorporate audio elements like music, dialogue, and sound effects.",
-          "Review and revise video content based on feedback. "
+          "Review and revise video content based on feedback. ",
         ],
         shortDescription:
-        "Edit 3-5 minute videos for our nonprofit. This includes course content, Youtube content, and more",
+          "Edit 3-5 minute videos for our nonprofit. This includes course content, Youtube content, and more",
         requirements: [
           "Proven Video Editing experience with a strong portfolio. ",
           "Familiarity with digital editing software packages (e.g., Adobe Premiere, After Effects, Filmora, etc.). ",
           "Strong understanding of storytelling and visual aesthetics. ",
-          "Ability to work under tight deadlines."
-        ]
+          "Ability to work under tight deadlines.",
+        ],
       },
       {
         role: "Insta Content Creator",
@@ -266,38 +265,31 @@ export default function JoinTeam() {
   return (
     <>
       <Flex>
-        <Box
-          width={"100%"}
-          height={["90vh", "100vh"]}
-          backgroundImage={"/desk-modified.png"}
-          backgroundSize={"cover"}
-          backgroundPosition={"center"}
-          backdropFilter={"blur(10px)"}
-          mt={["0rem", "-5rem"]}
-          className="shadowBg"
-        >
+        <Box width={"100%"} height={["90vh", "95vh"]}>
           <Box
-            mt={["10rem", "12rem"]}
+            mt={["10rem", "15rem"]}
             mx={["2rem", "auto"]}
-            className="missionbg"
-            borderRadius={"20px"}
+            borderRadius={"lg"}
             maxWidth="800px"
             padding="1rem 2rem"
-            opacity={".95"}
           >
             <Flex alignItems={"center"}>
-              <Flex direction={"column"}>
-                <Heading fontSize={["4xl", "6xl"]} color={"blue.100"}>
+              <Flex mr="2rem" direction={"column"}>
+                <Heading
+                  fontWeight="medium"
+                  fontSize={["4xl", "6xl"]}
+                  color={"primary"}
+                >
                   Join the Team
                 </Heading>
                 <Text
                   pr=".5rem"
                   mt=".3rem"
-                  mb="1rem"
+                  mb="1.3rem"
                   fontSize={["sm", "lg"]}
-                  color={"blue.200"}
+                  color={"blackAlpha.800"}
                 >
-                  Join our team and become a catalyst for positive change,
+                  Become a catalyst for positive change,
                   impacting the lives of programmers globally.
                 </Text>
                 <Link
@@ -307,20 +299,15 @@ export default function JoinTeam() {
                   href="#jobs"
                 >
                   <Button
-                    mr={"18px"}
-                    px={"25px"}
-                    borderRadius={"20px"}
-                    colorScheme={"blue"}
-                    fontWeight="light"
-                    fontSize={["x-small", "md"]}
+                   
                   >
                     {" "}
                     Search for volunteer opportunities
                   </Button>
                 </Link>
               </Flex>
-              <Flex>
-                <Image src="puzzle.png" />
+              <Flex >
+                <Image src="join-team-logo.png" />
               </Flex>
             </Flex>
           </Box>
@@ -329,28 +316,22 @@ export default function JoinTeam() {
       <Text id="jobs"></Text>
       <HStack mt="3rem" justify="center">
         <Button
-          fontWeight={"300"}
           onClick={() => setSearchQuery("")}
           backgroundColor={searchQuery === "" ? "blue.400" : "blue.900"}
-          color={searchQuery === "" ? "blue.100" : "blue.200"}
-          _hover={{
-            bg: "blue.500",
-          }}
+          color={searchQuery === "" ? "white" : "blue.200"}
+          border="none"
         >
           All Departments
         </Button>
         {departments.map((department) => (
           <Button
-            _hover={{
-              bg: "blue.500",
-            }}
-            fontWeight={"300"}
             key={department}
             onClick={() => setSearchQuery(department)}
             backgroundColor={
               searchQuery === department ? "blue.400" : "blue.900"
             }
-            color={searchQuery === department ? "blue.100" : "blue.200"}
+            color={searchQuery === department ? "white" : "blue.200"}
+            border="none"
           >
             {department}
           </Button>
@@ -377,10 +358,10 @@ export default function JoinTeam() {
         <Box pl="3rem" maxW="40%">
           {selectedJob ? (
             <>
-              <Box bg="footerBg" borderRadius="md" px="1rem" py="1rem">
+              <Box bg="blue.100"borderRadius="md" px="1rem" py="1rem">
                 <Flex>
                   {" "}
-                  <Heading color="primary" fontSize="2xl">
+                  <Heading color="primary" fontWeight="medium" fontSize="2xl">
                     {selectedJob.role}
                   </Heading>
                   <Spacer />{" "}
@@ -392,11 +373,14 @@ export default function JoinTeam() {
                     isExternal
                   >
                     <Button
+                    border="none"
                       fontWeight="light"
                       backgroundColor="blue.400"
                       color="white"
                       _hover={{
-                        bg: "blue.500",
+                        bg: "blue.700",
+                        color: "white",
+                        borderColor: "blue.700",
                       }}
                     >
                       <ExternalLinkIcon marginRight="5px" /> Apply Now
@@ -404,19 +388,20 @@ export default function JoinTeam() {
                   </Link>
                 </Flex>
 
-                <Badge colorScheme="blue">{selectedJob.department}</Badge>
+                <Badge colorScheme="teal">{selectedJob.department}</Badge>
               </Box>
 
               <Flex
                 mt="1rem"
-                bg="footerBg"
+                bg="blue.100"
                 borderRadius="md"
                 px="2rem"
                 py="1rem"
                 mb="5rem"
                 direction="column"
+                color="primary"
               >
-                <Heading color="primary" fontSize="xl">
+                <Heading fontWeight="medium" color="primary" fontSize="xl">
                   Responsiblities
                 </Heading>
                 <chakra.ul pt=".5rem" pb="1rem">
@@ -428,7 +413,7 @@ export default function JoinTeam() {
                     );
                   })}
                 </chakra.ul>
-                <Heading color="primary" fontSize="xl">
+                <Heading fontWeight="medium" color="primary" fontSize="xl">
                   Requirements
                 </Heading>
                 <chakra.ul pt=".5rem" pb="1rem">
@@ -440,7 +425,7 @@ export default function JoinTeam() {
                     );
                   })}
                 </chakra.ul>
-                <Heading color="primary" fontSize="xl">
+                <Heading fontWeight="medium" color="primary" fontSize="xl">
                   Benefits
                 </Heading>
                 <chakra.ul fontSize="sm" pt=".5rem" pb="1rem">
@@ -449,7 +434,9 @@ export default function JoinTeam() {
                     benefits:
                   </Text>
                   <chakra.li>Official Volunteering Hours</chakra.li>
-                  <chakra.li>Opportunity for Presidents Volunteering Service Award</chakra.li>
+                  <chakra.li>
+                    Opportunity for Presidents Volunteering Service Award
+                  </chakra.li>
                   <chakra.li>Gain new skills and leadership</chakra.li>
                 </chakra.ul>
               </Flex>

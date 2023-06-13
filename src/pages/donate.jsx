@@ -1,13 +1,29 @@
-import Socials from "../components/socials";
+
 import { Box, Heading } from "@chakra-ui/react";
 import Navbar from "../components/header";
-import Script from 'next/script'
+import Script from "next/script";
 
 export default function Donations() {
   return (
     <>
-      <Box mb="100px" px="50px" textAlign="center" mx="auto" alignItems="center" justifyContent="center">
-        <Heading fontSize="5xl" py="40px" color="primary">Donate to Tech Optimum</Heading>
+      <Box
+        textAlign="center"
+        mx="auto"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Heading fontSize="5xl" pt="5rem" fontWeight="medium" color="primary">
+          Donate to Tech Optimum
+        </Heading>
+        <Heading
+          mt="1rem"
+          fontSize="2xl"
+          fontWeight="medium"
+          color="blackAlpha.800"
+          mb="3rem"
+        >
+          Help us continue to provide free resources to students
+        </Heading>
 
         <iframe
           className="donation-form"

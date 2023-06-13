@@ -37,7 +37,7 @@ export default function HeroHeader() {
       messageRef.current.value === ""
     ) {
       toast({
-        title: "Error",
+       
         description: "Please fill in all the fields.",
         status: "error",
         duration: 5000,
@@ -109,11 +109,12 @@ export default function HeroHeader() {
   return (
     <>
       <Flex
-        left="0%"
-        width="100vw"
+       
+        
         justifyContent="center"
         margin={"auto"}
-        color="#A7B2FF"
+        color="primary"
+        mt="7rem"
       >
         <Flex
           direction={["column", "row"]}
@@ -122,23 +123,22 @@ export default function HeroHeader() {
         >
           <Box
             padding={"50px"}
-            borderRadius={"20px"}
-            backgroundImage={"/contact-card.svg"}
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
+           borderRadius="lg"
+           shadow="lg"
             maxWidth="500px"
+            bg="gray.50"
           >
-            <Heading fontSize={"4xl"} mb={"30px"}>
+            <Heading fontWeight="600" fontSize={"4xl"} mb={"30px"}>
               Get in Touch{" "}
             </Heading>
             <FormControl height="full">
               <Input
                 mb={"40px"}
                 _placeholder={{
-                  color: "#A7B2FF",
+                  color: "primary",
                 }}
                 padding="0"
-                placeholder="EMAIL"
+                placeholder="Enter your email"
                 type="email"
                 border="none"
                 borderRadius="0px"
@@ -153,10 +153,10 @@ export default function HeroHeader() {
                 <Box>
                   <Input
                     _placeholder={{
-                      color: "#A7B2FF",
+                      color: "primary",
                     }}
                     padding="0"
-                    placeholder="FIRST NAME"
+                    placeholder="Enter your first name"
                     border="none"
                     borderRadius="0px"
                     borderBottom="1px"
@@ -169,11 +169,11 @@ export default function HeroHeader() {
                 </Box>
                 <Box ml="20px">
                   <Input
-                    _placeholder={{
-                      color: "#A7B2FF",
-                    }}
+                   _placeholder={{
+                    color: "primary",
+                  }}
                     padding="0"
-                    placeholder="LAST NAME"
+                    placeholder="Enter your last name"
                     border="none"
                     borderRadius="0px"
                     borderBottom="1px"
@@ -187,10 +187,10 @@ export default function HeroHeader() {
               </Flex>
               <Textarea
                 _placeholder={{
-                  color: "#A7B2FF",
+                  color: "primary",
                 }}
                 padding="0"
-                placeholder="MESSAGE"
+                placeholder="Enter your message here..."
                 border="none"
                 borderRadius="0px"
                 borderBottom="1px"
@@ -206,110 +206,19 @@ export default function HeroHeader() {
                 onClick={() => {
                   handleSubmit();
                 }}
-                backgroundColor="#2E3569"
-                borderRadius="full"
-                px="10"
+               
+             
                 marginTop={3}
-                fontWeight="normal"
+               
                 rightIcon={<BsArrowRight position={"relative"} />}
-                _hover={{
-                  backgroundColor: "#272D56",
-                }}
-                _active={{
-                  backgroundColor: "#272D56",
-                }}
+               
               >
-                SEND
+                Send
               </Button>
             </FormControl>
           </Box>
 
-          <Flex
-            marginTop={["5rem", "0px"]}
-            paddingLeft={["0rem", "5rem"]}
-            paddingRight={["0rem", "5rem"]}
-            maxWidth="530px"
-            flexDir="column"
-            justifyContent="center"
-            alignItems="center"
-            color="#A7B2FF"
-          >
-            <Box>
-              <Flex marginBottom="20px" alignItems="center">
-                <Image
-                  src="/contact-icon-1.svg"
-                  alt="talking icon"
-                  width="60"
-                  height="60"
-                />
-                <Text fontSize="3xl" ml="16px" fontWeight="bold">
-                  Contact us
-                </Text>
-              </Flex>
-              <Flex margin="auto" maxW="151px" justify={"space-between"}>
-                <Link href="/discord">
-                  <Button
-                    className="glowingShadow"
-                    fontSize="4xl"
-                    backgroundColor="transparent"
-                    transition={"700"}
-                    _hover={{
-                      backgroundColor: "transparent",
-                      color: "#9DB2F6",
-                    }}
-                    _active={{
-                      backgroundColor: "transparent",
-                      color: "#9DB2F6",
-                    }}
-                    padding={"0"}
-                    color="#7289D9"
-                    fontWeight={"400"}
-                    rightIcon={<BsDiscord position="relative" />}
-                  />
-                </Link>
-                <Link href="mailto:team@techoptimum.org">
-                  <Button
-                    className="glowingShadow"
-                    fontSize="4xl"
-                    backgroundColor="transparent"
-                    transition={"700"}
-                    _hover={{
-                      backgroundColor: "transparent",
-                      color: "#9DB2F6",
-                    }}
-                    _active={{
-                      backgroundColor: "transparent",
-                      color: "#9DB2F6",
-                    }}
-                    padding={"0"}
-                    color="#7289D9"
-                    fontWeight={"400"}
-                    rightIcon={<MdEmail position="relative" />}
-                  />
-                </Link>
-                <Link href="https://www.instagram.com/techoptimum_/">
-                  <Button
-                    className="glowingShadow"
-                    fontSize="4xl"
-                    backgroundColor="transparent"
-                    transition={"700"}
-                    _hover={{
-                      backgroundColor: "transparent",
-                      color: "#9DB2F6",
-                    }}
-                    _active={{
-                      backgroundColor: "transparent",
-                      color: "#9DB2F6",
-                    }}
-                    padding={"0 !important"}
-                    color="#7289D9"
-                    fontWeight={"400"}
-                    rightIcon={<BsInstagram position="relative" />}
-                  />
-                </Link>
-              </Flex>
-            </Box>
-          </Flex>
+       
         </Flex>
       </Flex>
     </>
