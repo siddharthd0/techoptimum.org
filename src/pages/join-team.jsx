@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo } from "react";
-import Socials from "../components/socials";
 import {
   Image,
   Button,
