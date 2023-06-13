@@ -34,7 +34,7 @@ export default function Hackathons() {
         mb="6rem"
         alignItems="center"
         margin="auto"
-        maxW="1300px"
+        maxW="1070px"
       >
         <Box maxW={"760px"}>
           <Heading
@@ -85,13 +85,13 @@ export default function Hackathons() {
             gap="10px"
             borderRadius="md"
           >
-            <Badge colorScheme="blue" fontSize="xl">
+            <Badge colorScheme="blue" fontSize="md">
               300+ Participants
             </Badge>
-            <Badge colorScheme={"green"} fontSize="xl">
+            <Badge colorScheme={"green"} fontSize="md">
               50+ Projects
             </Badge>
-            <Badge colorScheme={"red"} fontSize="xl">
+            <Badge colorScheme={"red"} fontSize="md">
               $40k in Prizes
             </Badge>
           </HStack>

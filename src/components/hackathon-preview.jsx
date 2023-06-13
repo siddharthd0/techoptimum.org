@@ -22,7 +22,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const ProjectCard = ({ projectName, projectUrl }) => {
   return (
     <>
-      <Button size="sm" as="a" href={projectUrl}>
+      <Button size="xs" as="a" href={projectUrl}>
         {projectName} <ExternalLinkIcon mx="7px" />
       </Button>
     </>

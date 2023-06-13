@@ -48,7 +48,8 @@ const CourseCard = ({ color, title, description }) => {
 
   return (
     <Box
-      m={{ base: "1rem", md: "0" }}
+ 
+     
       transition="300ms"
       _hover={{
         boxShadow: "sm",
@@ -56,15 +57,15 @@ const CourseCard = ({ color, title, description }) => {
       }}
       boxShadow={"xl"}
       borderRadius={"md"}
-      w={{ base: "auto", md: "280px" }}
+      
       alignItems="center"
       color="black"
       direction={"column"}
-      px="2rem"
+     px="2rem"
       pt="1.5rem"
     >
       <Box
-        pt={"2rem"}
+        pt={".9rem"}
         pb={".7rem"}
         alignItems="center"
         direction="row"
@@ -78,7 +79,7 @@ const CourseCard = ({ color, title, description }) => {
           Free
         </Badge>
       </Box>
-      <Text pb="2rem" fontSize={{ base: "xs", md: "md" }}>{description}</Text>
+      <Text pb="2rem" fontSize={{ base: "xs", md: "sm" }}>{description}</Text>
     </Box>
   );
 };
@@ -87,17 +88,17 @@ const Courses = () => {
   return (
     <>
       <Box
-        borderTop="1px solid #eaeaea"
+       
         pt="2rem"
         mt="4rem"
-        maxW="1300px"
+        maxW="1070px"
         mx="auto"
         direction={"column"}
       >
         <Box>
           <Flex direction={{ base: 'column', md: 'row'}} justifyContent={"center"} alignItems="center">
             <Box direction="column">
-              <Heading color="primary" fontSize={{ base: "3xl", md: "5xl" }}>
+              <Heading color="primary" fontSize={{ base: "3xl", md: "4xl" }}>
                 Courses
               </Heading>
               <Heading
@@ -117,12 +118,12 @@ const Courses = () => {
         pb="2rem"
           margin="auto"
           mt="1rem"
-          justifyContent={"center"}
-          direction={{ base: "column", md: "row" }}
-          spacing={"50px"}
+          justifyContent={"space-between"}
+          direction={"row"}  
+          spacing={"10px"}
         >
           {coursesData.map(({ color, title, description }) => (
-            <Center key={title} w={{ base: "auto", md: "280px" }}>
+            <Center key={title} w={{ base: "auto", md: "255px" }}>
               <CourseCard
                 key={title}
                 color={color}

@@ -13,9 +13,9 @@ export default function PodcastHero() {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <Image margin="auto" width={"200px"} src="talks-logo.png" />
+        <Image margin="auto" width={"400px"} src="to-talks-logo.png" />
         <Heading
-          mt="1rem"
+         
           fontWeight={"100"}
           fontSize={["3xl", "5xl"]}
           color="primary"

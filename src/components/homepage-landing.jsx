@@ -35,7 +35,7 @@ export default function Mission() {
       mb="6rem"
       alignItems="center"
       margin="auto"
-      maxW="1300px"
+      maxW="1070px"
     >
       <Box pr={["0rem", "5rem"]} maxW={boxMaxWidth} position="relative">
         <Image
@@ -70,13 +70,13 @@ export default function Mission() {
                   54%
                 </chakra.span>
                 <br />
-                <Text mt=".6rem">
+                <Text  mt=".6rem">
                   <chakra.span
                     px="1"
                     rounded="md"
                     bg="blue.600"
                     color="white"
-                    fontSize="xl"
+                    fontSize="md"
                   >
                     of public schools in the U.S. do not offer computer science
                     courses.

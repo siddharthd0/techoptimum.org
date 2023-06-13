@@ -34,7 +34,7 @@ export default function Finder() {
         borderTop="1px solid #eaeaea"
         pt="2rem"
         mx="auto"
-        maxW="1300px"
+        maxW="1070px"
         marginTop={["1rem", "6rem"]}
         direction={{ base: "column", md: "column" }}
         justifyContent={["center", "unset"]}
@@ -42,7 +42,7 @@ export default function Finder() {
       >
         <Flex alignItems="center">
           {" "}
-          <Heading color="primary" fontSize={{ base: "3xl", md: "5xl" }}>
+          <Heading color="primary" fontSize={{ base: "3xl", md: "4xl" }}>
             Apply your Skills
           </Heading>
         </Flex>

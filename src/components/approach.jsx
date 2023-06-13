@@ -38,13 +38,13 @@ import {
           pt="2rem"
           mt="3rem !important"
           margin="auto"
-          maxW="1300px"
+          maxW="1070px"
           flexDirection={{ base: "column-reverse", md: "row" }}
           alignItems="center"
           px={{ base: "2rem", md: "0rem" }}
         >
           <Box mx="auto" mb={{ base: "4rem", md: "0" }} direction={"column"}>
-            <Heading color="primary" fontSize={{ base: "3xl", md: "5xl" }}>
+            <Heading color="primary" fontSize={{ base: "3xl", md: "4xl" }}>
               Start Coding in Seconds
             </Heading>
             <Heading
