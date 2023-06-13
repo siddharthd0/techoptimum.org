@@ -51,19 +51,7 @@ export default function MissionValues() {
           </Box>
           <Spacer />
           <Button
-            fontSize={["md", "xl"]}
-            data-aos="fade-up"
-            data-aos-duration="900"
-            my={["1rem", "1.5rem"]}
-            bgColor={"#4559E9"}
-            borderRadius={"20px"}
-            color={"#FFFFFF"}
-            fontWeight={"400"}
-            px="3rem"
-            py="10px"
-            _hover={{ bgColor: "#3244ca" }}
-            _active={{ bgColor: "#3244ca" }}
-            colorScheme={"blue"}
+           
             as="a"
             href="/donate"
           >
@@ -75,7 +63,7 @@ export default function MissionValues() {
           direction={["column", "row"]}
           justify="center"
         >
-          <Box maxW={["80%", "60%"]} pr={["0rem", "5rem"]}>
+          <Box color="primary" maxW={["80%", "60%"]} pr={["0rem", "5rem"]}>
             <Heading py="10px" fontSize={["xl", "3xl"]} color="primary">
               Computer Science Education
             </Heading>
@@ -108,7 +96,8 @@ export default function MissionValues() {
                       borderBottomRightRadius="md"
                       mb="8px"
                       py=".5rem"
-                      bg="footerBg"
+                     
+
                       data-aos="zoom-in"
                       data-aos-duration="500"
                     >
@@ -144,7 +133,7 @@ export default function MissionValues() {
                       mb="8px"
                       px="1rem"
                       py="1rem"
-                      bg="footerBg"
+                    
                       data-aos="zoom-in"
                       data-aos-duration="500"
                     >
@@ -178,7 +167,7 @@ export default function MissionValues() {
                       borderBottomRightRadius="md"
                       mb="8px"
                       py=".5rem"
-                      bg="footerBg"
+
                       data-aos="zoom-in"
                       data-aos-duration="500"
                     >
@@ -201,24 +190,12 @@ export default function MissionValues() {
             </Carousel>
 
             <Divider borderColor="whiteAlpha.400" pt="13px" mb="14px" />
-            <Text fontSize="sm">
+            <Text  fontSize="sm">
               Tech Optimum is working hard to close this bridge this divide and
               make computer science education accessible for everyone.
             </Text>
             <Button
-              fontSize={["xs", "md"]}
-              data-aos="fade-up"
-              data-aos-duration="900"
-              my={[".7rem", "1.2rem"]}
-              bgColor={"#4559E9"}
-              borderRadius={"20px"}
-              color={"#FFFFFF"}
-              fontWeight={"400"}
-              px="2rem"
-              py="10px"
-              _hover={{ bgColor: "#3244ca" }}
-              _active={{ bgColor: "#3244ca" }}
-              colorScheme={"blue"}
+             mt="1rem"
               as="a"
               href="https://dashboard.techoptimum.org"
             >
@@ -235,7 +212,7 @@ export default function MissionValues() {
             />
           </Box>
         </Flex>
-        <Flex direction={["column", "row"]} alignItems="center" mt="3rem">
+        <Flex color="primary" direction={["column", "row"]} alignItems="center" mt="3rem">
           <Box pr={["0rem", "5rem"]} maxW={["80%", "50%"]}>
             <Image borderRadius="md" src="digital-divide.jpg" />
           </Box>
@@ -276,8 +253,8 @@ export default function MissionValues() {
           </Box>
         </Flex>
       </Flex>
-      <Flex direction="column"textAlign={"center"} mt="2rem">
-        <Heading mb={["1rem"]} color="primary" fontSize={["3xl", "5xl"]}>Our Values</Heading>
+      <Flex direction="column"textAlign={"center"} mt="4rem">
+        <Heading fontWeight="medium" mb={["1rem"]} color="primary" fontSize={["3xl", "5xl"]}>Our Values</Heading>
       </Flex>
       <Wrap spacing={"30px"} justify="center" maxWidth={"1000px"} margin="auto">
         <WrapItem>

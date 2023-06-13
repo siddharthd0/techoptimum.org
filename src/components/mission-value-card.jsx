@@ -7,7 +7,7 @@ export default function Volunteer({ title, description }) {
         textAlign={"center"}
         height={["180px","225px"]}
         width={"300px"}
-        bg="footerBg"
+       
         display={"column"}
         borderRadius="md"
       >
