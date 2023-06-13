@@ -225,9 +225,10 @@ export default function WithSubnavigation() {
           }}
         >
           {image && <Image src={image} alt={label} boxSize="50px" />}
-          <Text color={useColorModeValue("gray.200", "gray.200")}>{label}</Text>
+          <Text color={useColorModeValue("gray.900", "gray.800")}>{label}</Text>
           {children && (
             <Icon
+            color="primary"
               _hover={{
                 color: "gray.400",
                 bg: "gray.900",
@@ -251,12 +252,12 @@ export default function WithSubnavigation() {
             pl={4}
             borderLeft={1}
             borderStyle={"solid"}
-            borderColor={useColorModeValue("gray.200", "gray.700")}
+            borderColor={useColorModeValue("primary", "primary")}
             align={"start"}
           >
             {children &&
               children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
+                <Link color="primary" key={child.label} py={2} href={child.href}>
                   {child.label}
                 </Link>
               ))}
