@@ -30,7 +30,7 @@ export default function Mission() {
       direction={direction}
       borderRadius="md"
       bg="blackAlpha.50"
-      py={"25px"}
+      py={["100px","25px"]}
       px={{ base: "1rem", md: "2rem" }}
       mb="6rem"
       alignItems="center"

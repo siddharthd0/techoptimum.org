@@ -98,6 +98,7 @@ export default function HackathonRecap() {
           textAlign={"center"}
         >
           <Highlight
+         
             query={["2022", "Hacks", "Tech Optimum"]}
             styles={{
               px: "14px",
@@ -121,7 +122,7 @@ export default function HackathonRecap() {
           textAlign="center"
         >
           <Heading fontWeight="medium ">Our First ever Hackathon...</Heading>
-          <Text maxW="50%" mt=".5rem">
+          <Text maxW={["80%","50%"]} mt=".5rem">
             Tech Optimum Hacks 2022 was our first ever hackathon. We had over
             300 participants from all over the world. We had 4 workshops where
             you got to learn new skills and apply them in the hackathon. All

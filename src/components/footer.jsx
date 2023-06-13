@@ -120,7 +120,7 @@ export default function Footer() {
         gap={{ base: "20px", md: "0px" }}
       >
         <Flex
-          maxW="40%"
+          maxW={["80%","40%"]}
           alignItems={{ base: "center", md: "start" }}
           direction="column"
         >

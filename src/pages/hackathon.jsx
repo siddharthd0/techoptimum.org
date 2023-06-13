@@ -26,7 +26,7 @@ export default function Hackathons() {
   return (
     <>
       <Flex
-        mt={["20px", "130px"]}
+       mt="130px !important"
         borderRadius="md"
         bg="blackAlpha.50"
         py={"25px"}
@@ -71,7 +71,7 @@ export default function Hackathons() {
             </Button>
           </Flex>
         </Box>
-        <Box pl={["0rem", "5rem"]} maxW={["80%", "60%"]} position="relative">
+        <Box pl={["0rem", "5rem"]} maxW={["80%", "60%"]} display={["none", "block"]} position="relative">
           <Image
             borderRadius="md"
             src="hackathon-projects-background-modified.png"
