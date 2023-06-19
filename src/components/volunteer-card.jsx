@@ -4,9 +4,8 @@ export default function Volunteer({ src, name, role }) {
   return (
     <>
       <Box
-      transition={"200ms"}
-        borderColor={"transparent !important"}
-        border={"1px"}
+   
+        
         width={"350px"}
         borderRadius="20px"
         padding="10px 10px 10px 20px"
@@ -18,7 +17,7 @@ export default function Volunteer({ src, name, role }) {
             alt={name}
             width={"100px"}
             height={"100px"}
-            borderRadius="full"
+            borderRadius="md"
           />
           <Flex direction="column">
             <Text color={"primary"} fontSize={"2xl"}>

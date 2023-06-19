@@ -29,14 +29,17 @@ export default function ExecutiveCard({
         onClick={onOpen}
         transition={"250ms"}
         _hover={{
-          borderColor: "blue.700 !important",
+         bg: "gray.100",
           cursor: "pointer",
         }}
         borderColor={"transparent !important"}
         border={"1px"}
         maxWidth={"350px"}
-        borderRadius="20px"
-        padding="10px 10px 10px 20px"
+        borderRadius="md"
+        padding="10px 10px 10px 10px"
+        _groupActive={{
+          bg: "gray.500",
+        }}
       >
         <Flex alignItems={"center"} direction={"row"}>
           <Image
@@ -45,13 +48,13 @@ export default function ExecutiveCard({
             alt={name}
             width={"105px"}
             height={"105px"}
-            borderRadius="full"
+            borderRadius="md"
           />
           <Flex direction="column">
             <Text color={"primary"} fontSize={"2xl"}>
               {name}
             </Text>
-            <Text color={"blue.300"} fontSize={"md"}>
+            <Text color={"blue.400"} fontSize={"md"}>
               {role}
             </Text>
           </Flex>
@@ -59,15 +62,15 @@ export default function ExecutiveCard({
       </Box>
       <Modal onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
-        <ModalContent bgColor={"bgColor"} color="primary">
-          <Flex mt="1.5rem" alignItems={"center"}>
+        <ModalContent bgColor={"gray.50"} color="primary">
+          <Flex mt="1rem" alignItems={"center"}>
             <Image
               marginRight={"1rem"}
               src={src}
               alt={name}
               width={"105px"}
               height={"105px"}
-              borderRadius="full"
+              borderRadius="md"
               margin="1.5rem"
             />
             <Flex direction="column">
@@ -86,10 +89,10 @@ export default function ExecutiveCard({
           </Flex>
           <ModalCloseButton />
 
-          <ModalBody>
+          <ModalBody pb="2rem">
             <Text>{description}</Text>
           </ModalBody>
-          <ModalFooter></ModalFooter>
+     
         </ModalContent>
       </Modal>
     </>

@@ -31,7 +31,12 @@ export default function About() {
         />
       </Head>
       <Flex marginTop={"8rem"} direction={"column"} alignItems="center">
-        <Heading  fontWeight="medium" marginBottom={"2%"} color="primary" fontSize={["4xl", "5xl"]}>
+        <Heading
+          fontWeight="medium"
+          marginBottom={"2%"}
+          color="primary"
+          fontSize={["4xl", "5xl"]}
+        >
           Executives
         </Heading>
         <Flex mb={"5%"} direction={["column", "row"]}>
@@ -41,9 +46,16 @@ export default function About() {
               name="Siddharth Duggal"
               role="Chief Executive Officer"
               description={
-                "Siddharth Duggal is a senior in high school who enjoys programming. He enjoys participating in hackathons and making projects that help people. Outside of programming, he enjoys playing the piano and playing video games. "
+                "Meet Siddharth, our Chief Executive Officer. He is a programmer heart, and wants to create an environment for programmers globally to learn & collaborate. He loves diving into hackathons, always eager to apply his coding skills to projects that could help someone. Siddharth firmly believes in the power of education and is on a mission to make Computer Science learning accessible to everyone. "
               }
               linkedin="https://www.linkedin.com/in/siddharth-duggal"
+            />
+            <ExecutiveCard
+              src="adityasahas.jpg"
+              name="Aditya Sahasranam"
+              role="Chief Operating Officer"
+              linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
+              description="Meet Aditya, a dedicated student with a keen interest in coding and helping people. He finds great satisfaction in applying his technical skills to projects that serve underserved communities, demonstrating a deep commitment to social impact. Outside the digital domain, Aditya enjoys staying active with tennis and basketball. "
             />
             <ExecutiveCard
               src="/PranithPortraitv2.JPG"
@@ -53,13 +65,6 @@ export default function About() {
               description={
                 "Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."
               }
-            />
-            <ExecutiveCard
-              src="adityasahas.jpg"
-              name="Aditya Sahasranam"
-              role="Chief Operating Officer"
-              linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
-              description="Aditya is a sophomore  who enjoys coding and video games. He loves doing projects that have an impact on underserved communities. He also enjoys playing tennis and basketball."
             />
           </Wrap>
         </Flex>
@@ -146,7 +151,6 @@ export default function About() {
           mb="4rem"
           padding="24px"
           textAlign={"center"}
-        
         >
           <Heading
             color="primary"
