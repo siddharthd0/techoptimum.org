@@ -39,6 +39,8 @@
     "react-markdown": "^8.0.7",
     "react-responsive-carousel": "^3.2.23",
     "react-three-fiber": "^6.0.13",
+    "sitemap": "^7.1.1",
+    "stream": "^0.0.2",
     "stripe": "^11.5.0",
     "styled-components": "^5.3.6",
     "three": "^0.153.0"
