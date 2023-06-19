@@ -11,6 +11,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap",
+      },
+    ]
+  },
   swcMinify: true,
   webpack(config) {
     config.module.rules.push({
