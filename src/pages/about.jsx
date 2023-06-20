@@ -88,9 +88,9 @@ export default function About() {
               role="Director of Design"
             />
             <Volunteer
-              name="Aviral Dhingra"
-              role="Director of Education"
-              src="aviral.png"
+              name="Arnav Pandey"
+              role="Director of Hackathon"
+              src="https://arnavpandey.xyz/picture.png"
             />
             <Volunteer
               src="preetham.png"
