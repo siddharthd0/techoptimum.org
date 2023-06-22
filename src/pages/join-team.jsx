@@ -264,16 +264,16 @@ export default function JoinTeam() {
   return (
     <>
       <Flex>
-        <Box width={"100%"} height={["90vh", "95vh"]}>
+        <Box width={"100%"} height={["60vh", "95vh"]}>
           <Box
             mt={["10rem", "15rem"]}
-            mx={["2rem", "auto"]}
+            mx={["1rem", "auto"]}
             borderRadius={"lg"}
             maxWidth="800px"
             padding="1rem 2rem"
           >
             <Flex alignItems={"center"}>
-              <Flex mr="2rem" direction={"column"}>
+              <Flex mr="5rem" direction={"column"}>
                 <Heading
                   fontWeight="medium"
                   fontSize={["4xl", "6xl"]}
@@ -305,7 +305,7 @@ export default function JoinTeam() {
                   </Button>
                 </Link>
               </Flex>
-              <Flex >
+              <Flex>
                 <Image src="join-team-logo.png" />
               </Flex>
             </Flex>
@@ -313,7 +313,7 @@ export default function JoinTeam() {
         </Box>
       </Flex>
       <Text id="jobs"></Text>
-      <HStack mt="3rem" justify="center">
+      <Wrap mt="3rem" justify="center">
         <Button
           onClick={() => setSearchQuery("")}
           backgroundColor={searchQuery === "" ? "blue.400" : "blue.900"}
@@ -335,9 +335,9 @@ export default function JoinTeam() {
             {department}
           </Button>
         ))}
-      </HStack>
+      </Wrap>
       <Flex py="2rem" direction={["column", "row"]} justify="center">
-        <VStack pr="1rem" height="600px" overflow="scroll" spacing={4}>
+        <VStack px="1rem" height={["300px","600px" ]}overflow="scroll" spacing={4}>
           {/* Department selection buttons */}
 
           {/* Job cards */}
@@ -354,7 +354,7 @@ export default function JoinTeam() {
           ))}
         </VStack>
         {/* Job preview info section */}
-        <Box pl="3rem" maxW="40%">
+        <Box margin={["auto", "0 !important"]} pl={["0","3rem"]} maxW={["80%","40%"]}>
           {selectedJob ? (
             <>
               <Box bg="blue.100"borderRadius="md" px="1rem" py="1rem">

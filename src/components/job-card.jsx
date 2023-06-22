@@ -16,7 +16,7 @@ export default function JobPostingCard({
         px="1rem"
         position="relative"
         borderRadius={"md"}
-        width="375px"
+        width={["300px","375px"]}
         onClick={onSelect}
         background={selected ? "blue.100" : "secondary"} // change color if selected
         transition="300ms"
