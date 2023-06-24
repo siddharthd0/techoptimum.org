@@ -274,7 +274,7 @@ export default function JoinTeam() {
         <meta property="og:title" content="Join Our Team | Tech Optimum"/>
         <meta property="og:description" content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"/>
         <meta property="og:image" content="/tech-optimum-logo.png"/> {/* Replace with the URL to the image you want to display when the page is shared on social media */}
-        <meta property="og:url" content="/tech-optimum-logo.png"/> {/* Replace with the URL to the page */}
+        <meta property="og:url" content="https://techoptimum.org/join-team"/> {/* Replace with the URL to the page */}
 
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:title" content="Join Our Team | Tech Optimum"/>
