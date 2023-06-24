@@ -23,7 +23,7 @@ export default function Donations() {
           property="og:description"
           content="Help Tech Optimum continue to provide free and high-quality computer science education resources to students around the world. Every donation counts!"
         />
-        <meta property="og:image" content="tech-optimum-logo.png" />
+        <meta property="og:image" content="/tech-optimum-logo.png" />
         <meta property="og:url" content="https://techoptimum.org/donate" />
 
         {/* Twitter Card Meta Tags */}
@@ -32,7 +32,7 @@ export default function Donations() {
           name="twitter:description"
           content="Help Tech Optimum continue to provide free and high-quality computer science education resources to students around the world. Every donation counts!"
         />
-        <meta name="twitter:image" content="tech-optimum-logo.png" />
+        <meta name="twitter:image" content="/tech-optimum-logo.png" />
       </Head>
       <Box
         textAlign="center"

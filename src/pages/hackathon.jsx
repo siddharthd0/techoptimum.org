@@ -23,15 +23,15 @@ export default function Hackathons() {
         <meta name="keywords" content="Tech Optimum, Hackathon, Coding Competition, Computer Science, Prizes, Participants, Projects" />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Tech Optimum Hackathon"/>
+        <meta property="og:title" content="Hackathon | Tech Optimum"/>
         <meta property="og:description" content="Join the annual Tech Optimum Hackathon, our premier coding competition. With over 300 participants, 50 projects, and $40k in prizes, it's an event you don't want to miss!"/>
-        <meta property="og:image" content="tech-optimum-logo.png"/> {/* Replace with the URL to the image you want to display when the page is shared on social media */}
+        <meta property="og:image" content="/tech-optimum-logo.png"/> {/* Replace with the URL to the image you want to display when the page is shared on social media */}
         <meta property="og:url"content="https://techoptimum.org/hackathon"/> {/* Replace with the URL to the page */}
 
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:title" content="Tech Optimum Hackathon"/>
+        <meta name="twitter:title" content="Hackathon | Tech Optimum"/>
         <meta name="twitter:description" content="Join the annual Tech Optimum Hackathon, our premier coding competition. With over 300 participants, 50 projects, and $40k in prizes, it's an event you don't want to miss!"/>
-        <meta name="twitter:image" content="tech-optimum-logo.png"/>  {/* Replace with the URL to the image you want to display when the page is shared on Twitter */}
+        <meta name="twitter:image" content="/tech-optimum-logo.png"/>  {/* Replace with the URL to the image you want to display when the page is shared on Twitter */}
        
       </Head>
 

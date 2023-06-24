@@ -22,14 +22,14 @@ export default function MissionPage() {
           property="og:description"
           content="Learn about our mission at Tech Optimum to provide free, quality, and accessible computer science education globally. Discover our values and what drives us to do what we do."
         />
-        <meta property="og:image" content="tech-optimum-logo.png" />{" "}
+        <meta property="og:image" content="/tech-optimum-logo.png" />{" "}
         <meta property="og:url" content="https://techoptimum.org/mission" />{" "}
         <meta name="twitter:title" content="Our Mission | Tech Optimum" />
         <meta
           name="twitter:description"
           content="Learn about our mission at Tech Optimum to provide free, quality, and accessible computer science education globally. Discover our values and what drives us to do what we do."
         />
-        <meta name="twitter:image" content="tech-optimum-logo.png" />{" "}
+        <meta name="twitter:image" content="/tech-optimum-logo.png" />{" "}
       </Head>
 
       <MissionLanding />
