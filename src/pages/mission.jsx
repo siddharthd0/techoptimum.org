@@ -3,7 +3,7 @@ import Mission from "../components/mission";
 import MissionLanding from "../components/mission-landing";
 import MissionValues from "../components/mission-values";
 
-export default function Mission() {
+export default function MissionPage() {
   return (
     <>
       <Head>
