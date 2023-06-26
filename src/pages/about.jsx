@@ -46,7 +46,7 @@ export default function About() {
               name="Siddharth Duggal"
               role="Chief Executive Officer"
               description={
-                "Meet Siddharth, our Chief Executive Officer. He is a programmer heart, and wants to create an environment for programmers globally to learn & collaborate. He loves diving into hackathons, always eager to apply his coding skills to projects that could help someone. Siddharth firmly believes in the power of education and is on a mission to make Computer Science learning accessible to everyone. "
+                "Meet Siddharth, our Chief Executive Officer. He is a programmer at heart, and wants to create an environment for programmers globally to learn & collaborate. He loves diving into hackathons, always eager to apply his coding skills to projects that could help someone. Siddharth firmly believes in the power of education and is on a mission to make Computer Science learning accessible to everyone. "
               }
               linkedin="https://www.linkedin.com/in/siddharth-duggal"
             />
