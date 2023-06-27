@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-export default function newsletter() {
+export default function Newsletter() {
   const toast = useToast();
 
   const [email, setEmail] = useState("");
