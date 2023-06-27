@@ -9,7 +9,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: "Email is required" });
       }
 
-      await mailchimp.lists.addListMember("55aa7f75ec", {
+      await mailchimp.lists.addListMember(process.env.MAILCHIMP_AUDIENCE_ID, {
         email_address: email,
         status: "subscribed",
       });
