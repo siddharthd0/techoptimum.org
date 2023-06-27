@@ -17,6 +17,7 @@
     "@chakra-ui/react": "^2.3.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@notionhq/client": "^2.2.2",
     "@react-three/drei": "^9.74.12",
     "@stripe/stripe-js": "^1.46.0",
