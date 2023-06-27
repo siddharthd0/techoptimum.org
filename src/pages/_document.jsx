@@ -23,7 +23,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/public/favicon.ico" />
 
           {/* SEO Meta Tags */}
           {META_CONFIG.map(({ name, content }) => (
