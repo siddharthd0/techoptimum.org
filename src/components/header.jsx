@@ -7,6 +7,7 @@ import {
   Collapse,
   Icon,
   Link,
+  Heading, Button,
   Spacer,
   Popover,
   PopoverTrigger,
@@ -163,7 +164,8 @@ export default function WithSubnavigation() {
 
     return (
       <header>
-        <Stack direction={"row"} spacing={4}>
+       
+        <Stack alignItems="center" direction={"row"} spacing={4}>
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label}>
               <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -204,6 +206,7 @@ export default function WithSubnavigation() {
               </Popover>
             </Box>
           ))}
+          <Button  as="a" href="https://dashboard.techoptimum.org">Dashboard</Button>
         </Stack>
       </header>
     );
@@ -273,6 +276,7 @@ export default function WithSubnavigation() {
         {NAV_ITEMS.map((navItem) => (
           <MobileNavItem key={navItem.label} {...navItem} />
         ))}
+          <Button  color="black" as="a" href="https://dashboard.techoptimum.org">Dashboard</Button>
       </Stack>
     );
   };
