@@ -7,7 +7,8 @@ import {
   Collapse,
   Icon,
   Link,
-  Heading, Button,
+  Heading,
+  Button,
   Spacer,
   Popover,
   PopoverTrigger,
@@ -157,14 +158,10 @@ export default function WithSubnavigation() {
   const DesktopNav = () => {
     const linkColor = useColorModeValue("primary", "gray.300");
     const linkHoverColor = useColorModeValue("blackAlpha.800", "white");
-    const popoverContentBgColor = useColorModeValue(
-      "white",
-      "gray.800"
-    );
+    const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
     return (
       <header>
-       
         <Stack alignItems="center" direction={"row"} spacing={4}>
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label}>
@@ -194,7 +191,6 @@ export default function WithSubnavigation() {
                     p={4}
                     rounded={"xl"}
                     minW={"sm"}
-                  
                   >
                     <Stack transitionDelay="0s">
                       {navItem.children.map((child) => (
@@ -206,7 +202,9 @@ export default function WithSubnavigation() {
               </Popover>
             </Box>
           ))}
-          <Button  as="a" href="https://dashboard.techoptimum.org">Dashboard</Button>
+          <Button as="a" href="https://dashboard.techoptimum.org">
+            Dashboard
+          </Button>
         </Stack>
       </header>
     );
@@ -231,7 +229,7 @@ export default function WithSubnavigation() {
           <Text color={useColorModeValue("gray.900", "gray.800")}>{label}</Text>
           {children && (
             <Icon
-            color="primary"
+              color="primary"
               _hover={{
                 color: "gray.400",
                 bg: "gray.900",
@@ -260,7 +258,12 @@ export default function WithSubnavigation() {
           >
             {children &&
               children.map((child) => (
-                <Link color="primary" key={child.label} py={2} href={child.href}>
+                <Link
+                  color="primary"
+                  key={child.label}
+                  py={2}
+                  href={child.href}
+                >
                   {child.label}
                 </Link>
               ))}
@@ -276,78 +279,97 @@ export default function WithSubnavigation() {
         {NAV_ITEMS.map((navItem) => (
           <MobileNavItem key={navItem.label} {...navItem} />
         ))}
-          <Button  color="black" as="a" href="https://dashboard.techoptimum.org">Dashboard</Button>
+        <Button color="black" as="a" href="https://dashboard.techoptimum.org">
+          Dashboard
+        </Button>
       </Stack>
     );
   };
 
   return (
-    <header>
-      <Box
-        zIndex="100"
-        className="nav-cont stroke"
-        top="1.5rem !important"
-        left="0"
-        right="0"
-        pos={"fixed"}
-        mx={["1.5rem","3rem"]}
-        borderRadius="lg"
-        boxShadow="0 0 10px rgba(0,0,0,0.1)"
-        sx={{
-          backdropFilter: "blur(10px)",
-        }}
-      >
-        <Flex
-          color={useColorModeValue("gray.600", "white")}
-          py="1.1rem"
-          px={["3rem", "10rem"]}
-          align={"center"}
+    <>
+      <Link _hover={{
+        textDecor:"none",
+      }} href="https://dashboard.techoptimum.org" isExternal>
+        <Box bg="orange.500">
+          <Text
+            _hover={{
+              color: "gray.300",
+              cursor: "pointer",
+            }}
+            transition="300ms"
+            py="10px"
+            textAlign="center"
+          >
+            Check out our new learning platform that offers 7+ free coding
+            courses
+          </Text>
+        </Box>
+      </Link>
+      <header>
+        <Box
+          zIndex="100"
+          className="nav-cont stroke"
+          top="4rem !important"
+          left="0"
+          right="0"
+          pos={"fixed"}
+          mx={["1.5rem", "4rem"]}
+          borderRadius="lg"
+          boxShadow="0 0 10px rgba(0,0,0,0.1)"
+          sx={{
+            backdropFilter: "blur(10px)",
+          }}
         >
           <Flex
-            flex={{ base: 1, md: "auto" }}
-            ml={{ base: -2 }}
-            display={{ base: "flex", md: "none" }}
+            color={useColorModeValue("gray.600", "white")}
+            py="1.1rem"
+            px={["3rem", "10rem"]}
+            align={"center"}
           >
-            <IconButton
-            mr="2rem"
-              onClick={onToggle}
-              icon={
-                isOpen ? (
-                  <CloseIcon w={3} h={3} />
-                ) : (
-                  <HamburgerIcon w={5} h={5} />
-                )
-              }
-           
-             
-              aria-label={"Toggle Navigation"}
-            />
-          </Flex>
-          
+            <Flex
+              flex={{ base: 1, md: "auto" }}
+              ml={{ base: -2 }}
+              display={{ base: "flex", md: "none" }}
+            >
+              <IconButton
+                mr="2rem"
+                onClick={onToggle}
+                icon={
+                  isOpen ? (
+                    <CloseIcon w={3} h={3} />
+                  ) : (
+                    <HamburgerIcon w={5} h={5} />
+                  )
+                }
+                aria-label={"Toggle Navigation"}
+              />
+            </Flex>
 
-          <Flex
-            alignItems={"center"}
-            flex={{ base: 1 }}
-            justify={{ base: "start", md: "start" }}
-          >
-            <Image
-              maxW="120px"
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              src="/text-black-transparent-tight.png"
-            />
-            <Spacer />
+            <Flex
+              alignItems={"center"}
+              flex={{ base: 1 }}
+              justify={{ base: "start", md: "start" }}
+            >
+              <Image
+                maxW="120px"
+                textAlign={useBreakpointValue({ base: "center", md: "left" })}
+                src="/text-black-transparent-tight.png"
+              />
+              <Spacer />
 
-            <Flex display={{ base: "none", md: "flex" }}>
-              <DesktopNav />
+              <Flex display={{ base: "none", md: "flex" }}>
+                <DesktopNav />
+              </Flex>
             </Flex>
           </Flex>
-        </Flex>
-        <Spacer/>
+          <Spacer />
 
-        <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
-        </Collapse>
-      </Box>
-    </header>
+          <Collapse in={isOpen} animateOpacity>
+            <MobileNav />
+          </Collapse>
+        </Box>
+      </header>
+    </>
   );
 }
