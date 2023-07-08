@@ -17,8 +17,7 @@ import {
 } from "@chakra-ui/react";
 import JobPostingCard from "../components/job-card";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import Head from 'next/head'
-
+import Head from "next/head";
 
 export default function JoinTeam() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -35,6 +34,23 @@ export default function JoinTeam() {
 
   const cardsInfo = useMemo(
     () => [
+      {
+        role: "Opportunities Team",
+        application: "https://forms.gle/4e639XDZpXhjGxtZ8",
+        department: "Education",
+        responsibility: [
+          "Identify, verify, and populate the database with summer 2024 software engineering internships.",
+          "Maintain accurate records of sources and statuses of opportunities identified.",
+          "Collaborate effectively with the team to avoid duplication and maximize coverage.",
+        ],
+        shortDescription:
+          "The Opportunities Finder Team Volunteer is a remote role focused on identifying and validating 2024 summer software engineering internships, and updating our database accordingly. This role requires strong research skills, attention to detail, and an interest in software engineering.",
+        requirements: [
+          "Proficient in comprehensive online research and data management.",
+          "Excellent attention to detail and organizational skills for accurate data entry.",
+          "Strong written communication skills and interest in the software engineering field.",
+        ],
+      },
       {
         role: "Video Editor",
         application: "https://forms.gle/QtePyioQ8AykETAS6",
@@ -265,26 +281,36 @@ export default function JoinTeam() {
 
   return (
     <>
-     <Head>
+      <Head>
         <title>Join Our Team | Tech Optimum</title>
-        <meta name="description" content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"/>
-        <meta name="keywords" content="EdTech, Volunteer, Join our team, Computer Science Education, Free Coding Courses, Tech Optimum" />
-
+        <meta
+          name="description"
+          content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"
+        />
+        <meta
+          name="keywords"
+          content="EdTech, Volunteer, Join our team, Computer Science Education, Free Coding Courses, Tech Optimum"
+        />
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Join Our Team | Tech Optimum"/>
-        <meta property="og:description" content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"/>
-        <meta property="og:image" content="/tech-optimum-logo.png"/> {/* Replace with the URL to the image you want to display when the page is shared on social media */}
-        <meta property="og:url" content="https://techoptimum.org/join-team"/> {/* Replace with the URL to the page */}
-
+        <meta property="og:title" content="Join Our Team | Tech Optimum" />
+        <meta
+          property="og:description"
+          content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"
+        />
+        <meta property="og:image" content="/tech-optimum-logo.png" />{" "}
+        {/* Replace with the URL to the image you want to display when the page is shared on social media */}
+        <meta property="og:url" content="https://techoptimum.org/join-team" />{" "}
+        {/* Replace with the URL to the page */}
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:title" content="Join Our Team | Tech Optimum"/>
-        <meta name="twitter:description" content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry."/>
-        <meta name="twitter:image" content="/tech-optimum-logo.png"/> {/* Replace with the URL to the image you want to display when the page is shared on Twitter */}
-      
-
+        <meta name="twitter:title" content="Join Our Team | Tech Optimum" />
+        <meta
+          name="twitter:description"
+          content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry."
+        />
+        <meta name="twitter:image" content="/tech-optimum-logo.png" />{" "}
+        {/* Replace with the URL to the image you want to display when the page is shared on Twitter */}
       </Head>
       <Flex>
-     
         <Box width={"100%"} height={["60vh", "95vh"]}>
           <Box
             mt={["10rem", "15rem"]}
@@ -309,8 +335,8 @@ export default function JoinTeam() {
                   fontSize={["sm", "lg"]}
                   color={"blackAlpha.800"}
                 >
-                  Become a catalyst for positive change,
-                  impacting the lives of programmers globally.
+                  Become a catalyst for positive change, impacting the lives of
+                  programmers globally.
                 </Text>
                 <Link
                   _hover={{
@@ -318,12 +344,7 @@ export default function JoinTeam() {
                   }}
                   href="#jobs"
                 >
-                  <Button
-                   
-                  >
-                    {" "}
-                    Search for volunteer opportunities
-                  </Button>
+                  <Button> Search for volunteer opportunities</Button>
                 </Link>
               </Flex>
               <Flex>
@@ -358,7 +379,12 @@ export default function JoinTeam() {
         ))}
       </Wrap>
       <Flex py="2rem" direction={["column", "row"]} justify="center">
-        <VStack px="1rem" height={["300px","600px" ]}overflow="scroll" spacing={4}>
+        <VStack
+          px="1rem"
+          height={["300px", "600px"]}
+          overflow="scroll"
+          spacing={4}
+        >
           {/* Department selection buttons */}
 
           {/* Job cards */}
@@ -375,10 +401,14 @@ export default function JoinTeam() {
           ))}
         </VStack>
         {/* Job preview info section */}
-        <Box margin={["auto", "0 !important"]} pl={["0","3rem"]} maxW={["80%","40%"]}>
+        <Box
+          margin={["auto", "0 !important"]}
+          pl={["0", "3rem"]}
+          maxW={["80%", "40%"]}
+        >
           {selectedJob ? (
             <>
-              <Box bg="blue.100"borderRadius="md" px="1rem" py="1rem">
+              <Box bg="blue.100" borderRadius="md" px="1rem" py="1rem">
                 <Flex>
                   {" "}
                   <Heading color="primary" fontWeight="medium" fontSize="2xl">
@@ -393,7 +423,7 @@ export default function JoinTeam() {
                     isExternal
                   >
                     <Button
-                    border="none"
+                      border="none"
                       fontWeight="light"
                       backgroundColor="blue.400"
                       color="white"
@@ -466,8 +496,6 @@ export default function JoinTeam() {
           )}
         </Box>
       </Flex>
-
-     
     </>
   );
 }
