@@ -25,6 +25,11 @@ const Roadmap = () => {
       date: "February 2023",
     },
     {
+        title: "Initial Launch of our Courses",
+        description: "Our first courses were launched on a beta version of our platform, including Pythn, SQL, and JS. Available here: https://courses.techoptimum.org",
+        date: "December 2023",
+    },
+    {
       title: "The First Tech Optimum Talks",
       description:
         "We hosted our first Tech Optimum Talks with guest speaker, Julie Braun, the Founder & CEO of Super Purposes.",
@@ -135,7 +140,6 @@ const Roadmap = () => {
         </Text>
       </Center>
 
- 
       <Element>
         <Box mt="2rem" color="primary" maxWidth="600px" mx="auto">
           <Heading as="h2" size="lg" textAlign="center" mb={3} mt={8}>
