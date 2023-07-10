@@ -64,7 +64,7 @@ const ExpandedProjectCard = ({
             title={projectName}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Box>
         <Button
