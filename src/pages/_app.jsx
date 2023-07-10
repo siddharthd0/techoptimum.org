@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import Loading from "./loading";
 import Header from "../components/header";
@@ -26,6 +27,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        <title>Tech Optimum</title>
+      </Head>
       {loading ? (
         <Loading />
       ) : (
