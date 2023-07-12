@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Circle,
@@ -163,7 +165,7 @@ const StepsDisplay = () => {
           maxW={["90%", "45%"]}
           mb={{ base: "2rem", md: "0" }}
         >
-          <Image borderRadius="md" src="learn-in-seconds.jpg" />
+          <Image borderRadius="md" src="learn-in-seconds.jpg" alt="Learn In Seconds" />
         </Box>
       </Flex>
     </>

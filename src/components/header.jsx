@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Flex,
@@ -101,190 +103,7 @@ export default function WithSubnavigation() {
 
         setNAV_ITEMS(updatedNAV_ITEMS);
       });
-  }, []);
-
-  const DesktopSubNav = ({ label, href, subLabel, image }) => {
-    return (
-      <Link
-        href={href}
-        role={"group"}
-        display={"block"}
-        p={2}
-        rounded={"md"}
-        _hover={{ bg: useColorModeValue("whiteAlpha.100", "black") }}
-      >
-        <Stack direction={"row"} align={"center"}>
-          <Box alignItems="center" display="flex">
-            <Flex direction="column">
-              <Text
-                color="primary"
-                transition={"color .2s ease"}
-                _groupHover={{ color: "secondary" }}
-                fontWeight={500}
-              >
-                {label}
-              </Text>
-              <Text
-                _groupHover={{
-                  color: "gray.500",
-                }}
-                fontSize={"sm"}
-              >
-                {subLabel.length > 56
-                  ? `${subLabel.slice(0, 56)}...`
-                  : subLabel}
-              </Text>
-            </Flex>
-            {image && (
-              <Image ml="2rem" src={image} alt={label} boxSize="50px" />
-            )}
-          </Box>
-          <Flex
-            transition={"all .2s ease"}
-            transform={"translateX(-10px)"}
-            opacity={0}
-            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-            justify={"flex-end"}
-            align={"center"}
-            flex={1}
-          >
-            <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
-          </Flex>
-        </Stack>
-      </Link>
-    );
-  };
-
-  const DesktopNav = () => {
-    const linkColor = useColorModeValue("primary", "gray.300");
-    const linkHoverColor = useColorModeValue("blackAlpha.800", "white");
-    const popoverContentBgColor = useColorModeValue("white", "gray.800");
-
-    return (
-      <header>
-        <Stack alignItems="center" direction={"row"} spacing={4}>
-          {NAV_ITEMS.map((navItem) => (
-            <Box key={navItem.label}>
-              <Popover trigger={"hover"} placement={"bottom-start"}>
-                <PopoverTrigger>
-                  <Link
-                    px={2}
-                    href={navItem.href ?? "#"}
-                    fontSize={"m"}
-                    fontWeight={500}
-                    color={linkColor}
-                    transitionDelay="0s"
-                    _hover={{
-                      textDecoration: "none",
-                      color: linkHoverColor,
-                    }}
-                  >
-                    {navItem.label}
-                  </Link>
-                </PopoverTrigger>
-
-                {navItem.children && (
-                  <PopoverContent
-                    border={0}
-                    boxShadow={"xl"}
-                    bg={popoverContentBgColor}
-                    p={4}
-                    rounded={"xl"}
-                    minW={"sm"}
-                  >
-                    <Stack transitionDelay="0s">
-                      {navItem.children.map((child) => (
-                        <DesktopSubNav key={child.label} {...child} />
-                      ))}
-                    </Stack>
-                  </PopoverContent>
-                )}
-              </Popover>
-            </Box>
-          ))}
-          <Button as="a" href="https://dashboard.techoptimum.org">
-            Dashboard
-          </Button>
-        </Stack>
-      </header>
-    );
-  };
-
-  const MobileNavItem = ({ label, children, href, image }) => {
-    const { isOpen, onToggle } = useDisclosure();
-
-    return (
-      <Stack spacing={4} onClick={children && onToggle}>
-        <Flex
-          py={2}
-          as={Link}
-          href={href ?? "#"}
-          justify={"space-between"}
-          align={"center"}
-          _hover={{
-            textDecoration: "none",
-          }}
-        >
-          {image && <Image src={image} alt={label} boxSize="50px" />}
-          <Text color={useColorModeValue("gray.900", "gray.800")}>{label}</Text>
-          {children && (
-            <Icon
-              color="primary"
-              _hover={{
-                color: "gray.400",
-                bg: "gray.900",
-              }}
-              as={ChevronDownIcon}
-              transition={"all .25s ease-in-out"}
-              transform={isOpen ? "rotate(180deg)" : ""}
-              w={6}
-              h={6}
-            />
-          )}
-        </Flex>
-
-        <Collapse
-          in={isOpen}
-          animateOpacity
-          style={{ marginTop: "0!important" }}
-        >
-          <Stack
-            mt={2}
-            pl={4}
-            borderLeft={1}
-            borderStyle={"solid"}
-            borderColor={useColorModeValue("primary", "primary")}
-            align={"start"}
-          >
-            {children &&
-              children.map((child) => (
-                <Link
-                  color="primary"
-                  key={child.label}
-                  py={2}
-                  href={child.href}
-                >
-                  {child.label}
-                </Link>
-              ))}
-          </Stack>
-        </Collapse>
-      </Stack>
-    );
-  };
-
-  const MobileNav = () => {
-    return (
-      <Stack p={4} display={{ md: "none" }}>
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
-        ))}
-        <Button color="black" as="a" href="https://dashboard.techoptimum.org">
-          Dashboard
-        </Button>
-      </Stack>
-    );
-  };
+  }, [NAV_ITEMS]);
 
   return (
     <>
@@ -355,21 +174,203 @@ export default function WithSubnavigation() {
                 maxW="120px"
                 textAlign={useBreakpointValue({ base: "center", md: "left" })}
                 src="/text-black-transparent-tight.png"
+                alt="TechOptimum"
               />
               <Spacer />
 
               <Flex display={{ base: "none", md: "flex" }}>
-                <DesktopNav />
+                <DesktopNav NAV_ITEMS={NAV_ITEMS} />
               </Flex>
             </Flex>
           </Flex>
           <Spacer />
 
           <Collapse in={isOpen} animateOpacity>
-            <MobileNav />
+            <MobileNav NAV_ITEMS={NAV_ITEMS} />
           </Collapse>
         </Box>
       </header>
     </>
   );
 }
+
+function DesktopSubNav({ label, href, subLabel, image }) {
+  return (
+    <Link
+      href={href}
+      role={"group"}
+      display={"block"}
+      p={2}
+      rounded={"md"}
+      _hover={{ bg: useColorModeValue("whiteAlpha.100", "black") }}
+    >
+      <Stack direction={"row"} align={"center"}>
+        <Box alignItems="center" display="flex">
+          <Flex direction="column">
+            <Text
+              color="primary"
+              transition={"color .2s ease"}
+              _groupHover={{ color: "secondary" }}
+              fontWeight={500}
+            >
+              {label}
+            </Text>
+            <Text
+              _groupHover={{
+                color: "gray.500",
+              }}
+              fontSize={"sm"}
+            >
+              {subLabel.length > 56
+                ? `${subLabel.slice(0, 56)}...`
+                : subLabel}
+            </Text>
+          </Flex>
+          {image && (
+            <Image ml="2rem" src={image} alt={label} boxSize="50px" />
+          )}
+        </Box>
+        <Flex
+          transition={"all .2s ease"}
+          transform={"translateX(-10px)"}
+          opacity={0}
+          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+          justify={"flex-end"}
+          align={"center"}
+          flex={1}
+        >
+          <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
+        </Flex>
+      </Stack>
+    </Link>
+  );
+};
+
+function DesktopNav({ NAV_ITEMS }) {
+  const linkColor = useColorModeValue("primary", "gray.300");
+  const linkHoverColor = useColorModeValue("blackAlpha.800", "white");
+  const popoverContentBgColor = useColorModeValue("white", "gray.800");
+
+  return (
+      <Stack alignItems="center" direction={"row"} spacing={4}>
+        {NAV_ITEMS.map((navItem) => (
+          <Box key={navItem.label}>
+            <Popover trigger={"hover"} placement={"bottom-start"}>
+              <PopoverTrigger>
+                <Link
+                  px={2}
+                  href={navItem.href ?? "#"}
+                  fontSize={"m"}
+                  fontWeight={500}
+                  color={linkColor}
+                  transitionDelay="0s"
+                  _hover={{
+                    textDecoration: "none",
+                    color: linkHoverColor,
+                  }}
+                >
+                  {navItem.label}
+                </Link>
+              </PopoverTrigger>
+
+              {navItem.children && (
+                <PopoverContent
+                  border={0}
+                  boxShadow={"xl"}
+                  bg={popoverContentBgColor}
+                  p={4}
+                  rounded={"xl"}
+                  minW={"sm"}
+                >
+                  <Stack transitionDelay="0s">
+                    {navItem.children.map((child) => (
+                      <DesktopSubNav key={child.label} {...child} />
+                    ))}
+                  </Stack>
+                </PopoverContent>
+              )}
+            </Popover>
+          </Box>
+        ))}
+        <Button as="a" href="https://dashboard.techoptimum.org">
+          Dashboard
+        </Button>
+      </Stack>
+  );
+};
+
+function MobileNavItem({ label, children, href, image }) {
+  const { isOpen, onToggle } = useDisclosure();
+
+  return (
+    <Stack spacing={4} onClick={children && onToggle}>
+      <Flex
+        py={2}
+        as={Link}
+        href={href ?? "#"}
+        justify={"space-between"}
+        align={"center"}
+        _hover={{
+          textDecoration: "none",
+        }}
+      >
+        {image && <Image src={image} alt={label} boxSize="50px" />}
+        <Text color={useColorModeValue("gray.900", "gray.800")}>{label}</Text>
+        {children && (
+          <Icon
+            color="primary"
+            _hover={{
+              color: "gray.400",
+              bg: "gray.900",
+            }}
+            as={ChevronDownIcon}
+            transition={"all .25s ease-in-out"}
+            transform={isOpen ? "rotate(180deg)" : ""}
+            w={6}
+            h={6}
+          />
+        )}
+      </Flex>
+
+      <Collapse
+        in={isOpen}
+        animateOpacity
+        style={{ marginTop: "0!important" }}
+      >
+        <Stack
+          mt={2}
+          pl={4}
+          borderLeft={1}
+          borderStyle={"solid"}
+          borderColor={useColorModeValue("primary", "primary")}
+          align={"start"}
+        >
+          {children &&
+            children.map((child) => (
+              <Link
+                color="primary"
+                key={child.label}
+                py={2}
+                href={child.href}
+              >
+                {child.label}
+              </Link>
+            ))}
+        </Stack>
+      </Collapse>
+    </Stack>
+  );
+};
+
+function MobileNav({ NAV_ITEMS }) {
+  return (
+    <Stack p={4} display={{ md: "none" }}>
+      {NAV_ITEMS.map((navItem) => (
+        <MobileNavItem key={navItem.label} {...navItem} />
+      ))}
+      <Button color="black" as="a" href="https://dashboard.techoptimum.org">
+        Dashboard
+      </Button>
+    </Stack>
+  );
+};
