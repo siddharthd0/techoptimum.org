@@ -4,19 +4,15 @@ import {
   Box,
   Circle,
   VStack,
-  Button,
   Link,
   Heading,
   Flex,
   Text,
-  Center,
   Image,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { keyframes } from "@emotion/react";
 import { BsArrowRight } from "react-icons/bs";
-import { FcComboChart } from "react-icons/fc";
-import { css } from "@emotion/react";
 
 const StepsDisplay = () => {
   const movingGradient = keyframes`
@@ -39,22 +35,22 @@ const StepsDisplay = () => {
         borderTop="1px solid #eaeaea"
         pt="2rem"
         mt="3rem !important"
-        margin="auto"
+        mx={{ base: "1rem", lg: "auto"}}
         maxW="1070px"
-        flexDirection={{ base: "column-reverse", md: "row" }}
+        flexDirection="column"
         alignItems="center"
         px={{ base: "2rem", md: "0rem" }}
       >
-        <Box mx="auto" mb={{ base: "4rem", md: "0" }} direction={"column"}>
+        <Flex w="100%" direction="column" align={{ base: "center", lg: "start" }} justify={{ base: "center", lg: "start" }}>
           <Heading
-            textAlign={["center", "left"]}
+            textAlign={{ base: "center", lg: "left" }}
             color="primary"
             fontSize={{ base: "2xl", md: "4xl" }}
           >
             Start Coding in Seconds
           </Heading>
           <Heading
-            textAlign={["center", "left"]}
+            textAlign={{ base: "center", lg: "left" }}
             fontWeight="medium"
             mt="5px"
             color="blackAlpha.800"
@@ -63,110 +59,115 @@ const StepsDisplay = () => {
           >
             Beginner&apos;s Welcome!
           </Heading>
-
-          <Box
-            boxShadow="lg"
-            borderRadius="10px"
-            maxW="700px"
-            margin="auto"
-            py="2rem"
-            px="2rem"
-          >
-            <VStack spacing={8} alignItems="start">
-              {steps.map((step, index) => (
-                <Box key={index}>
-                  <Flex
-                    direction={{ base: "column", md: "row" }}
-                    alignItems="center"
-                  >
-                    <Circle
-                      mb={{ base: "1rem", md: "0" }}
-                      border={"2px solid"}
-                      borderColor={
-                        activeIndex === index ? "transparent" : "blue.400"
-                      }
-                      size="40px"
-                      bg={activeIndex === index ? "transparent" : "blue.500"}
-                      color="black"
-                      display="inline-flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      fontWeight="bold"
-                      mr={4}
-                      transition="all 0.4s ease-in-out"
-                      sx={{
-                        background:
-                          activeIndex === index
-                            ? "linear-gradient(135deg, white, blue)"
-                            : "",
-                        backgroundSize: "200% 200%",
-                        animation:
-                          activeIndex === index
-                            ? `${movingGradient} 3s linear infinite`
-                            : "",
-                      }}
-                    >
-                      {index + 1}
-                    </Circle>
-                    <VStack
-                      spacing={2}
-                      alignItems={{ base: "center", md: "start" }}
-                    >
-                      <Text
-                        textAlign={["center", "left"]}
-                        transition="300ms"
-                        color={activeIndex === index ? "blue.400" : "primary"}
-                        fontSize="xl"
-                        fontWeight="bold"
-                      >
-                        {step.title}
-                      </Text>
-                      <Text
-                        textAlign={["center", "left"]}
-                        transition="300ms"
-                        color={activeIndex === index ? "black" : "gray.500"}
-                      >
-                        {step.description}
-                      </Text>
-                    </VStack>
-                  </Flex>
-                </Box>
-              ))}
-            </VStack>
-
-            <Link
-              color="blue.400"
-              _hover={{
-                color: "purple.400",
-                textDecoration: "none",
-              }}
-              mt="2rem"
-              display="flex"
-              alignItems="center"
-              href="https://dashboard.techoptimum.org"
+        </Flex>
+        <Flex direction={{ base: "column-reverse", md: "row"}}>
+          <Flex mb={{ base: "4rem", md: "0" }} direction="column">
+            <Box
+              boxShadow="lg"
+              borderRadius="10px"
+              maxW="700px"
+              margin="auto"
+              py="2rem"
+              px="2rem"
             >
-              <Text
-                transition="300ms"
+              <VStack spacing={8} alignItems="start">
+                {steps.map((step, index) => (
+                  <Box key={index}>
+                    <Flex
+                      direction={{ base: "column", md: "row" }}
+                      alignItems="center"
+                    >
+                      <Circle
+                        mb={{ base: "1rem", md: "0" }}
+                        border={"2px solid"}
+                        borderColor={
+                          activeIndex === index ? "transparent" : "blue.400"
+                        }
+                        size="40px"
+                        bg={activeIndex === index ? "transparent" : "blue.500"}
+                        color="black"
+                        display="inline-flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontWeight="bold"
+                        mr={4}
+                        transition="all 0.4s ease-in-out"
+                        sx={{
+                          background:
+                            activeIndex === index
+                              ? "linear-gradient(135deg, white, blue)"
+                              : "",
+                          backgroundSize: "200% 200%",
+                          animation:
+                            activeIndex === index
+                              ? `${movingGradient} 3s linear infinite`
+                              : "",
+                        }}
+                      >
+                        {index + 1}
+                      </Circle>
+                      <VStack
+                        spacing={2}
+                        alignItems={{ base: "center", md: "start" }}
+                      >
+                        <Text
+                          textAlign={["center", "left"]}
+                          transition="300ms"
+                          color={activeIndex === index ? "blue.400" : "primary"}
+                          fontSize="xl"
+                          fontWeight="bold"
+                        >
+                          {step.title}
+                        </Text>
+                        <Text
+                          textAlign={["center", "left"]}
+                          transition="300ms"
+                          color={activeIndex === index ? "black" : "gray.500"}
+                        >
+                          {step.description}
+                        </Text>
+                      </VStack>
+                    </Flex>
+                  </Box>
+                ))}
+              </VStack>
+
+              <Link
+                color="blue.400"
                 _hover={{
                   color: "purple.400",
                   textDecoration: "none",
                 }}
-                pr="4px"
-                color="blue.600"
+                mt="2rem"
+                display="flex"
+                alignItems="center"
+                href="https://dashboard.techoptimum.org"
               >
-                Get Started
-              </Text>
-              <BsArrowRight />
-            </Link>
-          </Box>
-        </Box>
-        <Box
+                <Text
+                  transition="300ms"
+                  _hover={{
+                    color: "purple.400",
+                    textDecoration: "none",
+                  }}
+                  pr="4px"
+                  color="blue.600"
+                >
+                  Get Started
+                </Text>
+                <BsArrowRight />
+              </Link>
+            </Box>
+          </Flex>
+          <Flex
           ml={{ base: "0", md: "4rem" }}
-          maxW={["90%", "45%"]}
+          maxW={{ base: "100%", lg: "45%"}}
           mb={{ base: "2rem", md: "0" }}
-        >
-          <Image borderRadius="md" src="learn-in-seconds.jpg" alt="Learn In Seconds" />
-        </Box>
+          align="center"
+          justify="center"
+          >
+            <Image borderRadius="md" src="learn-in-seconds.jpg" alt="Learn In Seconds" />
+          </Flex>
+        </Flex>
       </Flex>
     </>
   );

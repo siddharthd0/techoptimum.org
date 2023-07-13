@@ -147,9 +147,9 @@ export default function WithSubnavigation() {
             align={"center"}
           >
             <Flex
-              flex={{ base: 1, md: "auto" }}
+              flex={{ base: 1, lg: "auto" }}
               ml={{ base: -2 }}
-              display={{ base: "flex", md: "none" }}
+              display={{ base: "flex", lg: "none" }}
             >
               <IconButton
                 mr="2rem"
@@ -178,7 +178,7 @@ export default function WithSubnavigation() {
               />
               <Spacer />
 
-              <Flex display={{ base: "none", md: "flex" }}>
+              <Flex display={{ base: "none", lg: "flex" }}>
                 <DesktopNav NAV_ITEMS={NAV_ITEMS} />
               </Flex>
             </Flex>
@@ -364,7 +364,7 @@ function MobileNavItem({ label, children, href, image }) {
 
 function MobileNav({ NAV_ITEMS }) {
   return (
-    <Stack p={4} display={{ md: "none" }}>
+    <Stack p={4} display={{ lg: "none" }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
