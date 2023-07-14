@@ -62,7 +62,7 @@ export default function Donations() {
           className="donation-form"
           src="https://givebutter.com/embed/c/tech-optimum-donations"
           name="givebutter"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           seamless
           allowpaymentrequest

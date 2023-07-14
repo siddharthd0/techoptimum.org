@@ -1,6 +1,7 @@
 import {
   FormControl,
   FormLabel,
+  FormHelperText,
   Textarea,
   Button,
   VStack,
@@ -11,11 +12,11 @@ import {
   NumberInput,
   NumberInputField,
   Text,
-  Select,
   Checkbox,
   CheckboxGroup,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import Select from "react-select";
 
 export default function DonationForm() {
   const [companyName, setCompanyName] = useState("");
@@ -41,7 +42,7 @@ export default function DonationForm() {
             { name: "Company Name", value: companyName },
             { name: "Contact Name", value: contactName },
             { name: "Contact Email", value: contactEmail },
-            { name: "Items to donate", value: donationItems.join(", ") },
+            { name: "Items to donate", value: donationItems },
             {
               name: "Number of Items to donate",
               value: itemQuantity.toString(),
@@ -51,6 +52,7 @@ export default function DonationForm() {
         },
       ],
     };
+    console.log(data)
 
     try {
       const response = await fetch(webhookURL, {
@@ -115,8 +117,7 @@ export default function DonationForm() {
           <FormControl isRequired id="companyName">
             <FormLabel color="primary">Company Name</FormLabel>
             <Input
-              _placeholder={{ color: "primary" }}
-              variant="flushed"
+              _placeholder={{ opacity: 1, color: "gray.500" }}
               borderColor={"gray.300"}
               placeholder="Please enter your Company Name"
               value={companyName}
@@ -127,8 +128,7 @@ export default function DonationForm() {
           <FormControl isRequired id="contactName">
             <FormLabel color="primary">Contact Name</FormLabel>
             <Input
-              _placeholder={{ color: "primary" }}
-              variant="flushed"
+              _placeholder={{ opacity: 1, color: "gray.500" }}
               borderColor={"gray.300"}
               placeholder="Please enter your Name"
               value={contactName}
@@ -139,40 +139,36 @@ export default function DonationForm() {
           <FormControl isRequired id="contactEmail">
             <FormLabel color="primary">Contact Email</FormLabel>
             <Input
-              _placeholder={{ color: "primary" }}
-              variant="flushed"
+              _placeholder={{ opacity: 1, color: "gray.500" }}
               borderColor={"gray.300"}
               type="email"
-              placeholder="Please enter your Email (We will contact you here)"
+              placeholder="Please enter your email"
               value={contactEmail}
               onChange={(e) => setContactEmail(e.target.value)}
             />
+            <FormHelperText>We will contact you here</FormHelperText>
           </FormControl>
 
           <FormControl id="donationItems">
             <FormLabel color="primary">Items to Donate</FormLabel>
-            <CheckboxGroup value={donationItems} onChange={setDonationItems}>
-              <Checkbox value="Laptops">Laptops</Checkbox>
-              <Checkbox ml="10px" value="Desktops">
-                Desktops
-              </Checkbox>
-              <Checkbox ml="10px" value="Monitors">
-                Monitors
-              </Checkbox>
-              <Checkbox ml="10px" value="Keyboards">
-                Keyboards
-              </Checkbox>
-              <Checkbox ml="10px" value="Mouses">
-                Mouses
-              </Checkbox>
-            </CheckboxGroup>
+            <Select
+              isMulti
+              options={[
+                { value: "Laptops", label: "Laptops" },
+                { value: "Desktops", label: "Desktops" },
+                { value: "Monitors", label: "Monitors" },
+                { value: "Keyboards", label: "Keyboards" },
+                { value: "Mouses", label: "Mouses" },
+              ]}
+              value={donationItems}
+              onChange={setDonationItems}
+            />
           </FormControl>
 
           <FormControl id="itemQuantity">
             <FormLabel color="primary">Number of Items to Donate</FormLabel>
             <NumberInput
-              _placeholder={{ color: "primary" }}
-              variant="flushed"
+              _placeholder={{ opacity: 1, color: "gray.500" }}
               borderColor={"gray.300"}
               placeholder="130"
               value={itemQuantity}
@@ -186,10 +182,9 @@ export default function DonationForm() {
           <FormControl id="additionalInfo">
             <FormLabel color="primary">Additional Information</FormLabel>
             <Textarea
-              _placeholder={{ color: "primary" }}
-              variant="flushed"
+              _placeholder={{ opacity: 1, color: "gray.500" }}
               borderColor={"gray.300"}
-              placeholder="Please include any Additional Information here"
+              placeholder="Please include any additional information here"
               value={additionalInfo}
               onChange={(e) => setAdditionalInfo(e.target.value)}
             />
@@ -197,6 +192,7 @@ export default function DonationForm() {
 
           <Button
             fontWeight="thin"
+            width="100%"
             mt="18px !important"
             colorScheme="blue"
             type="submit"
