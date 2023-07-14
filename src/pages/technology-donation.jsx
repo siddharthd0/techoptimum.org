@@ -52,7 +52,7 @@ export default function DonationForm() {
         },
       ],
     };
-    console.log(data)
+
 
     try {
       const response = await fetch(webhookURL, {
