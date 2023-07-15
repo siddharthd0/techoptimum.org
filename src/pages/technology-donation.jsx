@@ -12,8 +12,12 @@ import {
   NumberInput,
   NumberInputField,
   Text,
+  Flex,
+  Grid,
+  Image,
   Checkbox,
   CheckboxGroup,
+  GridItem,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import Select from "react-select";
@@ -53,7 +57,6 @@ export default function DonationForm() {
       ],
     };
 
-
     try {
       const response = await fetch(webhookURL, {
         method: "POST",
@@ -85,122 +88,138 @@ export default function DonationForm() {
 
   return (
     <>
-      <Box margin="auto" mb="4rem" p={4}>
-        <Heading
-          color="primary"
-          textAlign="center"
-          mt="7rem"
-          fontSize="5xl"
-          fontWeight="medium"
-          mb="1rem"
-        >
-          Donation Form
-        </Heading>
-        <Text mb="2rem" color="primary" textAlign="center">
-          If you are interested in donating technology to help Tech Optimum
-          bridge the digital <br />
-          divide, please fill out the form below and we will get back to you as
-          soon as possible.
-        </Text>
-        <VStack
-          margin="auto"
-          spacing={4}
-          maxW="700px"
-          as="form"
-          onSubmit={handleSubmit}
-          borderRadius="8px"
-          px="2rem"
-          py="2rem"
-          color="primary !important"
-          bg="gray.100"
-        >
-          <FormControl isRequired id="companyName">
-            <FormLabel color="primary">Company Name</FormLabel>
-            <Input
-              _placeholder={{ opacity: 1, color: "gray.500" }}
-              borderColor={"gray.300"}
-              placeholder="Please enter your Company Name"
-              value={companyName}
-              onChange={(e) => setCompanyName(e.target.value)}
-            />
-          </FormControl>
-
-          <FormControl isRequired id="contactName">
-            <FormLabel color="primary">Contact Name</FormLabel>
-            <Input
-              _placeholder={{ opacity: 1, color: "gray.500" }}
-              borderColor={"gray.300"}
-              placeholder="Please enter your Name"
-              value={contactName}
-              onChange={(e) => setContactName(e.target.value)}
-            />
-          </FormControl>
-
-          <FormControl isRequired id="contactEmail">
-            <FormLabel color="primary">Contact Email</FormLabel>
-            <Input
-              _placeholder={{ opacity: 1, color: "gray.500" }}
-              borderColor={"gray.300"}
-              type="email"
-              placeholder="Please enter your email"
-              value={contactEmail}
-              onChange={(e) => setContactEmail(e.target.value)}
-            />
-            <FormHelperText>We will contact you here</FormHelperText>
-          </FormControl>
-
-          <FormControl id="donationItems">
-            <FormLabel color="primary">Items to Donate</FormLabel>
-            <Select
-              isMulti
-              options={[
-                { value: "Laptops", label: "Laptops" },
-                { value: "Desktops", label: "Desktops" },
-                { value: "Monitors", label: "Monitors" },
-                { value: "Keyboards", label: "Keyboards" },
-                { value: "Mouses", label: "Mouses" },
-              ]}
-              value={donationItems}
-              onChange={setDonationItems}
-            />
-          </FormControl>
-
-          <FormControl id="itemQuantity">
-            <FormLabel color="primary">Number of Items to Donate</FormLabel>
-            <NumberInput
-              _placeholder={{ opacity: 1, color: "gray.500" }}
-              borderColor={"gray.300"}
-              placeholder="130"
-              value={itemQuantity}
-              onChange={setItemQuantity}
-              min={1}
-            >
-              <NumberInputField />
-            </NumberInput>
-          </FormControl>
-
-          <FormControl id="additionalInfo">
-            <FormLabel color="primary">Additional Information</FormLabel>
-            <Textarea
-              _placeholder={{ opacity: 1, color: "gray.500" }}
-              borderColor={"gray.300"}
-              placeholder="Please include any additional information here"
-              value={additionalInfo}
-              onChange={(e) => setAdditionalInfo(e.target.value)}
-            />
-          </FormControl>
-
-          <Button
-            fontWeight="thin"
-            width="100%"
-            mt="18px !important"
-            colorScheme="blue"
-            type="submit"
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        gap={10}
+        p={4}
+      >
+        <GridItem p={4}>
+          <Grid alignItems={"center"}>
+            <Flex>
+              <Box >
+                <Heading
+                  color="primary"
+                  textAlign="center"
+                  mt="7rem"
+                  fontSize="5xl"
+                  fontWeight="medium"
+                  mb="1rem"
+                >
+                  Support Technology Access for All
+                </Heading>
+                <Text mb="2rem" color="primary">
+                  Your donation fuels our mission to bridge the digital gap,
+                  ensuring that every person, regardless of their circumstances,
+                  can harness the opportunities of the digital world.
+                </Text>
+              </Box>
+            </Flex>
+            <Flex>
+              <Image src="donate.svg" />
+            </Flex>
+          </Grid>
+        </GridItem>
+        <GridItem margin="auto" mb="4rem" w="100%" mt={{base: '2rem', md: '6rem'}}  p={4}>
+          <VStack
+            margin="auto"
+            spacing={4}
+            maxW="700px"
+            as="form"
+            onSubmit={handleSubmit}
+            borderRadius="8px"
+            px="2rem"
+            py="2rem"
+            color="primary !important"
+            bg="gray.100"
           >
-            Submit
-          </Button>
-        </VStack>
-      </Box>
+            <FormControl isRequired id="companyName">
+              <FormLabel color="primary">Company Name</FormLabel>
+              <Input
+                _placeholder={{ opacity: 1, color: "gray.500" }}
+                borderColor={"gray.300"}
+                placeholder="Please enter your Company Name"
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+              />
+            </FormControl>
+
+            <FormControl isRequired id="contactName">
+              <FormLabel color="primary">Contact Name</FormLabel>
+              <Input
+                _placeholder={{ opacity: 1, color: "gray.500" }}
+                borderColor={"gray.300"}
+                placeholder="Please enter your Name"
+                value={contactName}
+                onChange={(e) => setContactName(e.target.value)}
+              />
+            </FormControl>
+
+            <FormControl isRequired id="contactEmail">
+              <FormLabel color="primary">Contact Email</FormLabel>
+              <Input
+                _placeholder={{ opacity: 1, color: "gray.500" }}
+                borderColor={"gray.300"}
+                type="email"
+                placeholder="Please enter your email"
+                value={contactEmail}
+                onChange={(e) => setContactEmail(e.target.value)}
+              />
+              <FormHelperText>We will contact you here</FormHelperText>
+            </FormControl>
+
+            <FormControl id="donationItems">
+              <FormLabel color="primary">Items to Donate</FormLabel>
+              <Select
+                isMulti
+                options={[
+                  { value: "Laptops", label: "Laptops" },
+                  { value: "Desktops", label: "Desktops" },
+                  { value: "Monitors", label: "Monitors" },
+                  { value: "Keyboards", label: "Keyboards" },
+                  { value: "Mouses", label: "Mouses" },
+                ]}
+                value={donationItems}
+                onChange={setDonationItems}
+              />
+            </FormControl>
+
+            <FormControl id="itemQuantity">
+              <FormLabel color="primary">Number of Items to Donate</FormLabel>
+              <NumberInput
+                _placeholder={{ opacity: 1, color: "gray.500" }}
+                borderColor={"gray.300"}
+                placeholder="130"
+                value={itemQuantity}
+                onChange={setItemQuantity}
+                min={1}
+              >
+                <NumberInputField />
+              </NumberInput>
+            </FormControl>
+
+            <FormControl id="additionalInfo">
+              <FormLabel color="primary">Additional Information</FormLabel>
+              <Textarea
+                _placeholder={{ opacity: 1, color: "gray.500" }}
+                borderColor={"gray.300"}
+                placeholder="Please include any additional information here"
+                value={additionalInfo}
+                onChange={(e) => setAdditionalInfo(e.target.value)}
+              />
+            </FormControl>
+
+            <Button
+              fontWeight="thin"
+              width="100%"
+              mt="18px !important"
+              colorScheme="blue"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </VStack>
+        </GridItem>
+      </Grid>
     </>
   );
 }
