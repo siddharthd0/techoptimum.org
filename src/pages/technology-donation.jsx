@@ -91,6 +91,7 @@ export default function DonationForm() {
       <Grid
         templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
         gap={10}
+        mx= {{ base: '2', md: '7'}}
         p={4}
       >
         <GridItem p={4}>
@@ -99,7 +100,7 @@ export default function DonationForm() {
               <Box >
                 <Heading
                   color="primary"
-                  textAlign="center"
+                  textAlign={{ base: 'center', md: 'start'}}
                   mt="7rem"
                   fontSize="5xl"
                   fontWeight="medium"
@@ -107,7 +108,7 @@ export default function DonationForm() {
                 >
                   Support Technology Access for All
                 </Heading>
-                <Text mb="2rem" color="primary">
+                <Text mb="2rem" color="primary" textAlign={{ base: 'center', md: 'start'}}>
                   Your donation fuels our mission to bridge the digital gap,
                   ensuring that every person, regardless of their circumstances,
                   can harness the opportunities of the digital world.
