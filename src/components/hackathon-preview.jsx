@@ -1,23 +1,14 @@
 import {
   Flex,
-  Heading,
   Text,
   Badge,
   Button,
   VStack,
-  Stack,
   Box,
-  Spacer,
-  Center,
-  Link,
   Wrap,
-  AspectRatio,
-  Image,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { useInView } from "framer-motion";
 import Head from "next/head";
-import { IoIosArrowForward } from "react-icons/io";
 
 const ProjectCard = ({ projectName, projectUrl }) => {
   return (
@@ -43,31 +34,18 @@ const Courses = () => {
       <Box mt={["0rem", "0"]} px={["20px", "0"]} mx="auto" maxW="980px" direction={{ base: "column", md: "column" }}>
         <Flex direction={{ base: "column", md: "row" }}>
           <Box direction="column">
-            <Flex direction={["column", "row"]} mt=".5rem" alignItems="center">
-              <Heading textAlign={["center", "none"]} fontSize="3xl" fontWeight="medium" color="primary">
-                Tech Optimum Hacks
-              </Heading>
-              <Spacer />
-              <Button
-              mt={["1rem", "0"]}
-                size="sm"
-                rightIcon={<IoIosArrowForward />}
-                as="a"
-                href="/hackathon"
-              >
-                Last Year&apos;s Recap
-              </Button>
-            </Flex>
-            <Flex direction={["column", "row"]} alignItems="center" my="4px">
-              <Text my={["1rem", "0"]} textAlign={["center", "left"]} color="blackAlpha.800">
+            <Flex direction="column" alignItems={{ base: "center", md: "start"}} my="4px">
+              <Text my={["1rem", "0"]} textAlign={["center", "left"]} color="blackAlpha.800" fontSize="3xl" fontWeight="semibold">
                 Our annual 48-hour coding competition
               </Text>
-              <Badge mx="6px" colorScheme="blue">
-                300+ Participants
-              </Badge>
-              <Badge  mt={["1rem", "0"]} colorScheme="blue" mx="6px">
-                50+ Projects
-              </Badge>
+              <Flex direction="row" alignItems={{ base: "center", md: "start"}} justifyItems={{ base: "center" }}>
+                <Badge mx="6px" colorScheme="blue">
+                  300+ Participants
+                </Badge>
+                <Badge mx="6px" colorScheme="blue">
+                  50+ Projects
+                </Badge>
+              </Flex>
             </Flex>
           </Box>
         </Flex>

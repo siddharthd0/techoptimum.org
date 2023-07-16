@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import {
   Flex,
@@ -7,7 +8,6 @@ import {
   Text,
   useToast,
   Button,
-  Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";

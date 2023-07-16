@@ -214,7 +214,7 @@ export default function MissionValues() {
         </Flex>
         <Flex color="primary" direction={["column", "row"]} alignItems="center" mt="3rem">
           <Box pr={["0rem", "5rem"]} maxW={["80%", "50%"]}>
-            <Image borderRadius="md" src="digital-divide.jpg" />
+            <Image borderRadius="md" src="digital-divide.jpg" alt="Digital Divide" />
           </Box>
           <Box mt={["2rem", "0"]} maxW={["80%", "50%"]}>
             <Heading py="10px" fontSize={["xl", "3xl"]} color="primary">

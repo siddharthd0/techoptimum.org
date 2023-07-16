@@ -16,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import {
   IoIosArrowForward,
-  IoIosInformationCircleOutline,
 } from "react-icons/io";
 import { TbSchool } from "react-icons/tb";
 
@@ -31,13 +30,13 @@ export default function Mission() {
       borderRadius="md"
       bg="blackAlpha.50"
       py={["100px", "25px"]}
-      px={{ base: "2rem", md: "2rem" }}
+      px={{ base: "1rem", lg: "2rem" }}
       mb="6rem"
       alignItems="center"
       margin="auto"
       maxW="1070px"
     >
-      <Box pr={["0rem", "5rem"]} maxW={boxMaxWidth} position="relative">
+      <Box pr={{ base: "1.5rem", lg: "5rem"}} maxW={boxMaxWidth} position="relative">
         <Image
           borderRadius="md"
           src="digital-divide.jpg"
@@ -46,9 +45,9 @@ export default function Mission() {
         <VStack
           position="absolute"
           bottom={["0","10px"]}
-          maxW="100%" // limit the width to the containing Box
+          maxW={{base: "95%", lg: "100%"}} // limit the width to the containing Box
           color="white"
-          p={4}
+          p={[1]}
           borderRadius="md"
         >
           <Link
@@ -93,7 +92,7 @@ export default function Mission() {
         </VStack>
       </Box>
 
-      <Box mt={["1.4rem", "0"]} maxW={"760px"}>
+      <Box mt={["1.4rem", "0.3rem", "0"]} maxW={"900px"}>
         <Heading
           color="primary"
           fontSize={headingSize}

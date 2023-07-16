@@ -1,5 +1,6 @@
-import ExecutiveCard from "../components/executive-card";
-import Volunteer from "../components/volunteer-card";
+'use client';
+import ExecutiveCard from "@/components/executive-card";
+import Volunteer from "@/components/volunteer-card";
 import React from "react";
 import {
   Button,
@@ -8,12 +9,10 @@ import {
   Heading,
   Text,
   Flex,
-  Stack,
 } from "@chakra-ui/react";
 import AOS from "aos";
 import Head from "next/head";
 import { useEffect } from "react";
-import MissionValues from "../components/mission-values";
 import Link from "next/link";
 
 export default function About() {

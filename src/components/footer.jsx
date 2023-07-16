@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from "react";
 import {
   Flex,
@@ -160,23 +162,23 @@ export default function Footer() {
         bg="blue.600"
         justifyContent="space-between"
         alignItems={{ base: "center", md: "center" }}
-        padding="40px 12% "
+        p={{ base: "40px 5%", lg: "40px 12%" }}
         direction={{ base: "column", md: "row" }}
         gap={{ base: "20px", md: "0px" }}
       >
         {/* NEWSLETTER */}
         <Flex
-          maxW={["80%", "40%"]}
+          maxW={["90%", "40%"]}
           alignItems={{ base: "center", md: "start" }}
           direction="column"
         >
           <Heading fontSize="lg" mt="1rem">
             Recieve Weekly Emails
           </Heading>
-          <Text mt="5px">
+          <Text mt="5px" align={{ base: "center", md: "start" }}>
             Get the latest news, event updates, and more from Tech Optimum.
           </Text>
-          <Flex mt="6px" alignItems={"center"}>
+          <Flex mt="6px" alignItems="center">
             <form onSubmit={handleSubmit}>
               <Input
                 variant={"flushed"}
@@ -192,10 +194,12 @@ export default function Footer() {
                 required
               />
               <Button
+                minW="0"
                 type="submit"
                 color="white"
                 border="none"
                 isLoading={isLoading}
+                p={{ base: "0", md: "5px" }}
               >
                 <ArrowForwardIcon />
               </Button>

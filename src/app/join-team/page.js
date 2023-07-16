@@ -1,11 +1,10 @@
+"use client";
 import { useState, useEffect, useMemo } from "react";
 import {
   Image,
   Button,
   Link,
-  HStack,
   Heading,
-  Tooltip,
   Spacer,
   Box,
   Flex,
@@ -15,9 +14,8 @@ import {
   chakra,
   Badge,
 } from "@chakra-ui/react";
-import JobPostingCard from "../components/job-card";
+import JobPostingCard from "@/components/job-card";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import Head from "next/head";
 
 export default function JoinTeam() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -281,35 +279,6 @@ export default function JoinTeam() {
 
   return (
     <>
-      <Head>
-        <title>Join Our Team | Tech Optimum</title>
-        <meta
-          name="description"
-          content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"
-        />
-        <meta
-          name="keywords"
-          content="EdTech, Volunteer, Join our team, Computer Science Education, Free Coding Courses, Tech Optimum"
-        />
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Join Our Team | Tech Optimum" />
-        <meta
-          property="og:description"
-          content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry"
-        />
-        <meta property="og:image" content="/tech-optimum-logo.png" />{" "}
-        {/* Replace with the URL to the image you want to display when the page is shared on social media */}
-        <meta property="og:url" content="https://techoptimum.org/join-team" />{" "}
-        {/* Replace with the URL to the page */}
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:title" content="Join Our Team | Tech Optimum" />
-        <meta
-          name="twitter:description"
-          content="Join our team at Tech Optimum and contribute to the mission of providing quality computer science education to students globally. Volunteer with us and make a difference in the CS industry."
-        />
-        <meta name="twitter:image" content="/tech-optimum-logo.png" />{" "}
-        {/* Replace with the URL to the image you want to display when the page is shared on Twitter */}
-      </Head>
       <Flex>
         <Box width={"100%"} height={["60vh", "95vh"]}>
           <Box
@@ -348,7 +317,7 @@ export default function JoinTeam() {
                 </Link>
               </Flex>
               <Flex>
-                <Image src="join-team-logo.png" />
+                <Image src="join-team-logo.png" alt="Join Team Logo" />
               </Flex>
             </Flex>
           </Box>
