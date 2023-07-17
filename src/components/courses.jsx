@@ -101,20 +101,20 @@ const Courses = () => {
       >
         <Box>
           <Flex
-            direction={{ base: "column", md: "row" }}
-            justifyContent={"center"}
+            direction={{ base: "column", lg: "row" }}
+            justifyContent="center"
             alignItems="center"
           >
             <Box direction="column">
               <Heading
-                textAlign={["center", "left"]}
+                textAlign={{ base: "center", lg: "left"}}
                 color="primary"
                 fontSize={{ base: "3xl", md: "4xl" }}
               >
                 Courses
               </Heading>
               <Heading
-                textAlign={["center", "left"]}
+                textAlign={{ base: "center", lg: "left"}}
                 mt={[".1rem", "0"]}
                 color="blackAlpha.800"
                 fontSize={{ base: "xl", md: "2xl" }}
@@ -135,13 +135,15 @@ const Courses = () => {
             </Button>
           </Flex>
         </Box>
-        <Wrap
+        <Flex
           pb="2rem"
           mx={["2rem", "auto"]}
           mt="1rem"
-          justifyContent={"space-between"}
-          direction={"row"}
-          spacing={"10px"}
+          direction="row"
+          spacing="10px"
+          justifyContent="center"
+          wrap="wrap"
+          gap={1}
         >
           {coursesData.map(({ color, title, description, link }) => (
             <Center key={title} w={{ base: "auto", md: "255px" }}>
@@ -154,7 +156,7 @@ const Courses = () => {
               />
             </Center>
           ))}
-        </Wrap>
+        </Flex>
       </Box>
     </>
   );

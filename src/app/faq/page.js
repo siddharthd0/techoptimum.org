@@ -1,4 +1,5 @@
-import FaqComp from "../components/faq";
+"use client";
+import FaqComp from "@/components/faq";
 
 export default function Contact() {
   return (

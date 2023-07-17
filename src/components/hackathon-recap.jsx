@@ -15,7 +15,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { BsArrowUpRight } from "react-icons/bs";
 
 const ProjectCard = ({ projectName, projectUrl }) => {
   return (
@@ -31,7 +30,6 @@ const ExpandedProjectCard = ({
   projectUrl,
   projectDescription,
   projectVideoIframe,
-  projectImage,
   projectPlace,
 }) => {
   return (
@@ -62,9 +60,8 @@ const ExpandedProjectCard = ({
           <iframe
             src={projectVideoIframe}
             title={projectName}
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Box>
         <Button

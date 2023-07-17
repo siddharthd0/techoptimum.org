@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   FormControl,
   Input,
@@ -7,13 +6,9 @@ import {
   Textarea,
   Button,
   Box,
-  Text,
   useToast,
 } from "@chakra-ui/react";
-import { BsArrowRight, BsDiscord, BsInstagram } from "react-icons/bs";
-import Link from "next/link";
-import { MdEmail } from "react-icons/md";
-import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
 
 export default function HeroHeader() {
@@ -21,13 +16,6 @@ export default function HeroHeader() {
   const lastNameRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
-
-  const resetValues = () => {
-    firstNameRef.current.value = "";
-    lastNameRef.current.value = "";
-    emailRef.current.value = "";
-    messageRef.current.value = "";
-  };
 
   async function handleSubmit() {
     if (
@@ -138,7 +126,7 @@ export default function HeroHeader() {
                 borderBottom="1px"
                 borderBottomColor="primary"
                 _focus={{
-                  "box-shadow": "none",
+                  boxShadow: "none",
                 }}
                 ref={emailRef}
               />
@@ -155,7 +143,7 @@ export default function HeroHeader() {
                     borderBottom="1px"
                     borderBottomColor="primary"
                     _focus={{
-                      "box-shadow": "none",
+                      boxShadow: "none",
                     }}
                     ref={firstNameRef}
                   />
@@ -172,7 +160,7 @@ export default function HeroHeader() {
                     borderBottom="1px"
                     borderBottomColor="primary"
                     _focus={{
-                      "box-shadow": "none",
+                      boxShadow: "none",
                     }}
                     ref={lastNameRef}
                   />
@@ -189,9 +177,9 @@ export default function HeroHeader() {
                 borderBottom="1px"
                 borderBottomColor="primary"
                 marginBottom="30px"
-                height="17vh"
+                height="15vh"
                 _focus={{
-                  "box-shadow": "none",
+                  boxShadow: "none",
                 }}
                 ref={messageRef}
               />
