@@ -22,8 +22,8 @@ const faqs = [
     question: "How can I volunteer at Tech Optimum?",
     answer: (
       <>
-        Click <Link href="join-team">here</Link> to apply to volunteer at Tech
-        Optimum.
+        <Link href="join-team">Click here to apply to volunteer at Tech
+        Optimum.</Link>
       </>
     ),
   },
@@ -31,8 +31,8 @@ const faqs = [
     question: "How can I signup for the courses?",
     answer: (
       <>
-        Click <Link href="https://courses.techoptimum.org">here</Link> to signup
-        for our free programming courses.
+        <Link href="https://courses.techoptimum.org">Click here to signup
+        for our free programming courses.</Link>
       </>
     ),
   },

@@ -24,7 +24,7 @@ export default function MissionLanding() {
         alignItems="center"
       >
         <Box pr={["0rem", "4rem"]} maxW={["80%", "50%"]}>
-          <Image borderRadius="md" src="our-mission.jpg" />
+          <Image borderRadius="md" src="our-mission.jpg" alt="Our Mission" />
         </Box>
         <Box mt={["2rem", "0"]} maxW={["80%", "50%"]}>
           <Heading

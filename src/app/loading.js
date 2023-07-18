@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Spinner } from "@chakra-ui/react";
 
 export default function Loading() {

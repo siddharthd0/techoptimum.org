@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from "react";
 import { Flex, Box, Image, chakra, Link } from "@chakra-ui/react";
 import AOS from "aos";
