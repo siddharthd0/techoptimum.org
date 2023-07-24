@@ -1,12 +1,4 @@
-import {
-  Flex,
-  Text,
-  Badge,
-  Button,
-  VStack,
-  Box,
-  Wrap,
-} from "@chakra-ui/react";
+import { Flex, Text, Badge, Button, VStack, Box, Wrap } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Head from "next/head";
 
@@ -31,14 +23,32 @@ const Courses = () => {
         />
       </Head>
 
-      <Box mt={["0rem", "0"]} px={["20px", "0"]} mx="auto" maxW="980px" direction={{ base: "column", md: "column" }}>
+      <Box
+        mt={["0rem", "0"]}
+        px={["20px", "0"]}
+        mx="auto"
+        direction={{ base: "column", md: "column" }}
+      >
         <Flex direction={{ base: "column", md: "row" }}>
           <Box direction="column">
-            <Flex direction="column" alignItems={{ base: "center", md: "start"}} my="4px">
-              <Text my={["1rem", "0"]} textAlign={["center", "left"]} color="blackAlpha.800" fontSize="3xl" fontWeight="semibold">
+            <Flex
+              direction="column"
+              alignItems={{ base: "center", md: "start" }}
+            >
+              <Text
+                my={["1rem", "0"]}
+                textAlign={["center", "left"]}
+                color="blackAlpha.800"
+                fontSize="xl"
+                fontWeight="400"
+              >
                 Our annual 48-hour coding competition
               </Text>
-              <Flex direction="row" alignItems={{ base: "center", md: "start"}} justifyItems={{ base: "center" }}>
+              <Flex
+                direction="row"
+                alignItems={{ base: "center", md: "start" }}
+                justifyItems={{ base: "center" }}
+              >
                 <Badge mx="6px" colorScheme="blue">
                   300+ Participants
                 </Badge>
@@ -49,11 +59,19 @@ const Courses = () => {
             </Flex>
           </Box>
         </Flex>
-        <Text  mt={["1rem", "0"]} textAlign={["center", "left"]} mb="6px" color="blackAlpha.800">
+        <Text
+          mt={["1rem", "0"]}
+          textAlign={["center", "left"]}
+          mb="6px"
+          color="blackAlpha.800"
+        >
           Here are just some of the projects that were created at Tech Optimum
           Hacks 2022.
         </Text>
-        <Flex direction={{ base: "column", md: "row" }} justifyContent="space-between">
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justifyContent="space-between"
+        >
           <VStack mt={["30px", "0"]} maxWidth={["100%", "70%"]}>
             <Wrap gap="5px" direction={{ base: "column", md: "row" }}>
               <ProjectCard
@@ -73,14 +91,17 @@ const Courses = () => {
                 projectUrl={"https://devpost.com/software/badmap"}
               />
 
-              <ProjectCard projectName="A Pixel Game" projectUrl="https://devpost.com/software/steve-s-pixels" />
+              <ProjectCard
+                projectName="A Pixel Game"
+                projectUrl="https://devpost.com/software/steve-s-pixels"
+              />
               <ProjectCard
                 projectName="Bridging the Gender Gap in STEM"
                 projectUrl="https://devpost.com/software/lions-bridge-the-gap"
               />
             </Wrap>
             <Button
-            as="a"
+              as="a"
               href="https://techoptimum.devpost.com/project-gallery"
               alignSelf="stretch"
             >
