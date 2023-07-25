@@ -170,12 +170,14 @@ export default function WithSubnavigation() {
               flex={{ base: 1 }}
               justify={{ base: "start", md: "start" }}
             >
-              <Image
-                maxW="120px"
-                textAlign={useBreakpointValue({ base: "center", md: "left" })}
-                src="/text-black-transparent-tight.png"
-                alt="TechOptimum"
-              />
+              <Link href="/">
+                <Image
+                  maxW="120px"
+                  textAlign={useBreakpointValue({ base: "center", md: "left" })}
+                  src="/text-black-transparent-tight.png"
+                  alt="TechOptimum"
+                />
+              </Link>
               <Spacer />
 
               <Flex display={{ base: "none", lg: "flex" }}>
