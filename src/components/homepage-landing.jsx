@@ -38,7 +38,7 @@ export default function Mission() {
     >
       <Box pr={{ md: "1.5rem", lg: "5rem"}} maxW={boxMaxWidth} position="relative">
         <Image
-          fit="cover"
+          fit="fill"
           borderRadius="md"
           src="digital-divide.jpg"
           alt="Digital Divide"

@@ -9,7 +9,7 @@ import { Box } from "@chakra-ui/react";
 export default function Home() {
 
   return (
-    <Box my={["20px", "130px"]} px={6}>
+    <Box my={["20px", "130px"]} px={5}>
       <HeroHeader />
       <Courses />
       <Approach />
