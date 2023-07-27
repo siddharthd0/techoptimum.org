@@ -67,13 +67,13 @@ export default function Finder() {
           <Heading
             textAlign={["center", "left"]}
             mt="4px"
-            fontWeight="light"
+            fontWeight="400"
             fontSize="lg"
             color="blackAlpha.800"
           >
             Apply your skills in the real-world
           </Heading>
-          <Text textAlign={["center", "left"]} color="blackAlpha.800" mt="10px">
+          <Text fontSize="sm" textAlign={["center", "left"]} color="blackAlpha.800" mt="10px">
             More than 50 internships on our public internship finder, with more
             being added every week. Apply your skills in the real-world industry
             and gain valuable experience. We have publicized internships ranging
