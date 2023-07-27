@@ -129,7 +129,7 @@ const DashboardPage = () => {
               </Feature>
               <Feature icon="internships.svg" title="Internship Finder">
                 Seamlessly apply your skills in the real world with our
-                integrated Internship Finder. It's your one-stop platform for
+                integrated Internship Finder. It is your one-stop platform for
                 learning and applying!
               </Feature>
          
