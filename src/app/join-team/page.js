@@ -26,7 +26,6 @@ export default function JoinTeam() {
     "Marketing",
     "Technology",
     "Human Resources",
-    "Hackathon",
     "Education",
   ];
 
@@ -113,21 +112,6 @@ export default function JoinTeam() {
         requirements: [
           "Proven experience with video content creation",
           "Proficiency in video editing tools",
-        ],
-      },
-      {
-        role: "Proof-reader",
-        application: "https://forms.gle/EBVmKkgeJVxAXNPBA",
-        department: "Human Resources",
-        responsibility: [
-          "Curate and elevate the verbiage and language used in digital mediums, such as the organizations website and social media platforms",
-          "Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
-        ],
-        shortDescription:
-          "Enhance the language used in our digital platforms and ensure error-free content.",
-        requirements: [
-          "Strong proficiency in English language",
-          "Proven experience as a proof-reader or related role",
         ],
       },
       {
