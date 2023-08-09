@@ -26,7 +26,6 @@ export default function JoinTeam() {
     "Marketing",
     "Technology",
     "Human Resources",
-    "Hackathon",
     "Education",
   ];
 
@@ -100,22 +99,6 @@ export default function JoinTeam() {
         ],
       },
       {
-        role: "HR Associate",
-        application: "https://forms.gle/GUD5T4cAPpRy2JYY6",
-        department: "Human Resources",
-        responsibility: [
-          "Curate meticulous records of personnel information",
-          "Actively seek out and onboard new volunteer associates",
-          "Ensure the timely and accurate updating of all staff-related documentation",
-        ],
-        shortDescription:
-          "Maintain personnel information and help onboard new associates.",
-        requirements: [
-          "Experience in HR or related field",
-          "Excellent organizational skills",
-        ],
-      },
-      {
         role: "Tiktok Content Creator",
         application: "https://forms.gle/L4SN4CjxtUjijN9h6",
         department: "Marketing",
@@ -131,104 +114,6 @@ export default function JoinTeam() {
           "Proficiency in video editing tools",
         ],
       },
-      {
-        role: "Youtube Content Creator",
-        application: "https://forms.gle/tqeJKWVQBCp52xi47",
-        department: "Marketing",
-        responsibility: [
-          "Conceive and produce visually captivating and entertaining Youtube shorts for the programming community",
-          "Utilize state-of-the-art video editing tools to meticulously edit and refine content",
-        ],
-        shortDescription:
-          "Create captivating YouTube shorts for the programming community.",
-        requirements: [
-          "Proven experience with video content creation",
-          "Proficiency in video editing tools",
-        ],
-      },
-      {
-        role: "Outreach Associate",
-        application: "https://forms.gle/WhdUNtTjnNShN3wXA",
-        department: "Human Resources",
-        responsibility: [
-          "Developing and implementing outreach strategies to reach new and diverse audiences",
-          "Representing the organization at community events and meetings",
-          "Contact famous software engineers/entrepreneurs to participate in TO Talks",
-        ],
-        shortDescription:
-          "Develop outreach strategies and represent our organization in community events.",
-        requirements: [
-          "Experience in community outreach or related field",
-          "Excellent communication skills",
-        ],
-      },
-      {
-        role: "Proof-reader",
-        application: "https://forms.gle/EBVmKkgeJVxAXNPBA",
-        department: "Human Resources",
-        responsibility: [
-          "Curate and elevate the verbiage and language used in digital mediums, such as the organizations website and social media platforms",
-          "Conduct thorough revisions to eliminate grammatical errors and promote fluency in the written content",
-        ],
-        shortDescription:
-          "Enhance the language used in our digital platforms and ensure error-free content.",
-        requirements: [
-          "Strong proficiency in English language",
-          "Proven experience as a proof-reader or related role",
-        ],
-      },
-      {
-        role: "Discord Bot Developer",
-        application: "https://forms.gle/WzU1TMsQ7WP18UcE6",
-        department: "Technology",
-        responsibility: [
-          "Design and develop innovative and user-friendly bot commands for the Discord server",
-          "Monitor server activities and proactively address any issues that arise with the bot",
-          "Optimize bot performance to ensure seamless user experience and maximum uptime",
-        ],
-        shortDescription:
-          "Design, develop, and monitor bot commands for our Discord server.",
-        requirements: [
-          "Experience in bot development",
-          "Strong knowledge of Discord API",
-        ],
-      },
-      {
-        role: "Community Team",
-        application: "https://forms.gle/MRcjD5Ytp5kWcyDy8",
-        department: "Community",
-        responsibility: [
-          "Develop and implement strategies to increase engagement on the Discord server and other platforms",
-          "Monitor and moderate community discussions to ensure a positive and inclusive environment",
-          "Respond to user inquiries and concerns in a timely and professional manner",
-          "Collaborate with other teams to organize events and activities that promote community engagement",
-        ],
-        shortDescription:
-          "Increase community engagement and ensure a positive environment on our platforms.",
-        requirements: [
-          "Experience in community management",
-          "Excellent communication and moderation skills",
-        ],
-      },
-      {
-        role: "Hackathon Organizer",
-        application: "https://forms.gle/dTR7zvEaQioPxC7W7",
-        department: "Hackathon",
-        responsibility: [
-          "Planning and organizing the hackathon event",
-          "Developing the hackathon schedule, including workshops, keynote speeches, and judging sessions",
-          "Recruiting and managing a team of volunteers and staff to assist with the event",
-          "Developing and implementing marketing and promotion strategies to attract participants and sponsors",
-          "Identifying and securing sponsors and partnerships to support the event financially",
-        ],
-        shortDescription:
-          "Plan and organize hackathon events, develop schedules, and manage volunteers.",
-        requirements: [
-          "Experience in organizing hackathons or similar events",
-          "Strong project management skills",
-        ],
-      },
-
       {
         role: "Web Designer",
         application: "https://forms.gle/9FayfQddFF6B4Ro39",

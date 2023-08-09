@@ -20,13 +20,13 @@ import {
 import { TbSchool } from "react-icons/tb";
 
 export default function Mission() {
-  const direction = useBreakpointValue({ base: "column", md: "row" });
+ 
   const boxMaxWidth = useBreakpointValue({ base: "100%", md: "60%" });
-  const headingSize = useBreakpointValue({ base: "2xl", md: "3xl" });
+
 
   return (
     <Flex
-      direction={direction}
+      direction={["column", "row"]}
       borderRadius="md"
       bg="blackAlpha.50"
       py={["100px", "25px"]}
@@ -36,8 +36,9 @@ export default function Mission() {
       margin="auto"
       maxW="1070px"
     >
-      <Box pr={{ base: "1.5rem", lg: "5rem"}} maxW={boxMaxWidth} position="relative">
+      <Box pr={{ md: "1.5rem", lg: "5rem"}} maxW={boxMaxWidth} position="relative">
         <Image
+          fit="fill"
           borderRadius="md"
           src="digital-divide.jpg"
           alt="Digital Divide"
@@ -49,6 +50,7 @@ export default function Mission() {
           color="white"
           p={[1]}
           borderRadius="md"
+          ml={["0", "1rem"]}
         >
           <Link
             _hover={{
@@ -95,7 +97,10 @@ export default function Mission() {
       <Box mt={["1.4rem", "0.3rem", "0"]} maxW={"900px"}>
         <Heading
           color="primary"
-          fontSize={headingSize}
+          fontSize={[
+            "2xl",
+            "3xl"
+          ]}
           fontWeight="600"
           mb="1rem"
         >

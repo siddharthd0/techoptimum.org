@@ -93,6 +93,7 @@ const Courses = () => {
   return (
     <>
       <Box
+      
         pt="2rem"
         mt={["0rem", "4rem"]}
         maxW="1070px"
@@ -107,14 +108,14 @@ const Courses = () => {
           >
             <Box direction="column">
               <Heading
-                textAlign={{ base: "center", lg: "left"}}
+                textAlign={{ base: "center", lg: "left" }}
                 color="primary"
                 fontSize={{ base: "3xl", md: "4xl" }}
               >
                 Courses
               </Heading>
               <Heading
-                textAlign={{ base: "center", lg: "left"}}
+                textAlign={{ base: "center", lg: "left" }}
                 mt={[".1rem", "0"]}
                 color="blackAlpha.800"
                 fontSize={{ base: "xl", md: "2xl" }}
@@ -140,10 +141,10 @@ const Courses = () => {
           mx={["2rem", "auto"]}
           mt="1rem"
           direction="row"
-          spacing="10px"
+          spacing="20px"
           justifyContent="center"
           wrap="wrap"
-          gap={1}
+          gap={4}
         >
           {coursesData.map(({ color, title, description, link }) => (
             <Center key={title} w={{ base: "auto", md: "255px" }}>

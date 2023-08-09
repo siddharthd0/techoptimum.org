@@ -12,6 +12,8 @@ import { BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
 
 export default function HeroHeader() {
+  const toast = useToast();
+
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const emailRef = useRef();
@@ -36,6 +38,7 @@ export default function HeroHeader() {
     const template_params = {
       first_name: firstNameRef.current.value,
       last: lastNameRef.current.value,
+      email: emailRef.current.value,
       message: messageRef.current.value,
     };
 
@@ -44,6 +47,8 @@ export default function HeroHeader() {
       user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
       template_params,
     };
+
+    console.log(data);
 
     const response_support = await fetch(
       "https://api.emailjs.com/api/v1.0/email/send",
@@ -84,7 +89,7 @@ export default function HeroHeader() {
     } else {
       toast({
         title: "Message Failed to Send.",
-        description: "Email use instead at contact@techoptimum.org",
+        description: "Email us instead at contact@techoptimum.org",
         status: "error",
         duration: 9000,
         isClosable: true,
@@ -92,10 +97,14 @@ export default function HeroHeader() {
     }
   }
 
-  const toast = useToast();
   return (
     <>
-      <Flex justifyContent="center" margin={"auto"} color="primary" mt={["5rem","7rem"]}>
+      <Flex
+        justifyContent="center"
+        margin={"auto"}
+        color="primary"
+        mt={["5rem", "7rem"]}
+      >
         <Flex
           direction={["column", "row"]}
           marginTop="50px"

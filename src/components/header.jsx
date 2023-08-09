@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Box,
@@ -9,7 +9,6 @@ import {
   Collapse,
   Icon,
   Link,
-  Heading,
   Button,
   Spacer,
   Popover,
@@ -45,26 +44,8 @@ const DefaultNavItems = [
   },
 
   {
-    label: "Initiatives",
-    children: [
-      {
-        label: "Tech Optimum Hacks",
-        subLabel:
-          "Learn about our annual hackathons with a focus on social good.",
-        href: "/hackathon",
-      },
-      {
-        label: "Technology Drive",
-        subLabel: "Donate your old technology to help students in need.",
-        href: "/technology-donation",
-      },
-      {
-        label: "Tech Optimum Talks",
-        subLabel:
-          "Listen to our podcast where we interview industry professionals.",
-        href: "/podcast",
-      },
-    ],
+    label: "Hackathon",
+    href: "https://hacks.techoptimum.org",
   },
 
   {
@@ -107,9 +88,13 @@ export default function WithSubnavigation() {
 
   return (
     <>
-      <Link _hover={{
-        textDecor:"none",
-      }} href="https://dashboard.techoptimum.org" isExternal>
+      <Link
+        _hover={{
+          textDecor: "none",
+        }}
+        href="https://dashboard.techoptimum.org"
+        isExternal
+      >
         <Box bg="orange.500">
           <Text
             _hover={{
@@ -170,12 +155,14 @@ export default function WithSubnavigation() {
               flex={{ base: 1 }}
               justify={{ base: "start", md: "start" }}
             >
-              <Image
-                maxW="120px"
-                textAlign={useBreakpointValue({ base: "center", md: "left" })}
-                src="/text-black-transparent-tight.png"
-                alt="TechOptimum"
-              />
+              <Link href="/">
+                <Image
+                  maxW="120px"
+                  textAlign={useBreakpointValue({ base: "center", md: "left" })}
+                  src="/text-black-transparent-tight.png"
+                  alt="TechOptimum"
+                />
+              </Link>
               <Spacer />
 
               <Flex display={{ base: "none", lg: "flex" }}>
@@ -221,14 +208,10 @@ function DesktopSubNav({ label, href, subLabel, image }) {
               }}
               fontSize={"sm"}
             >
-              {subLabel.length > 56
-                ? `${subLabel.slice(0, 56)}...`
-                : subLabel}
+              {subLabel.length > 56 ? `${subLabel.slice(0, 56)}...` : subLabel}
             </Text>
           </Flex>
-          {image && (
-            <Image ml="2rem" src={image} alt={label} boxSize="50px" />
-          )}
+          {image && <Image ml="2rem" src={image} alt={label} boxSize="50px" />}
         </Box>
         <Flex
           transition={"all .2s ease"}
@@ -244,7 +227,7 @@ function DesktopSubNav({ label, href, subLabel, image }) {
       </Stack>
     </Link>
   );
-};
+}
 
 function DesktopNav({ NAV_ITEMS }) {
   const linkColor = useColorModeValue("primary", "gray.300");
@@ -252,52 +235,52 @@ function DesktopNav({ NAV_ITEMS }) {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-      <Stack alignItems="center" direction={"row"} spacing={4}>
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
-            <Popover trigger={"hover"} placement={"bottom-start"}>
-              <PopoverTrigger>
-                <Link
-                  px={2}
-                  href={navItem.href ?? "#"}
-                  fontSize={"m"}
-                  fontWeight={500}
-                  color={linkColor}
-                  transitionDelay="0s"
-                  _hover={{
-                    textDecoration: "none",
-                    color: linkHoverColor,
-                  }}
-                >
-                  {navItem.label}
-                </Link>
-              </PopoverTrigger>
+    <Stack alignItems="center" direction={"row"} spacing={4}>
+      {NAV_ITEMS.map((navItem) => (
+        <Box key={navItem.label}>
+          <Popover trigger={"hover"} placement={"bottom-start"}>
+            <PopoverTrigger>
+              <Link
+                px={2}
+                href={navItem.href ?? "#"}
+                fontSize={"m"}
+                fontWeight={500}
+                color={linkColor}
+                transitionDelay="0s"
+                _hover={{
+                  textDecoration: "none",
+                  color: linkHoverColor,
+                }}
+              >
+                {navItem.label}
+              </Link>
+            </PopoverTrigger>
 
-              {navItem.children && (
-                <PopoverContent
-                  border={0}
-                  boxShadow={"xl"}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={"xl"}
-                  minW={"sm"}
-                >
-                  <Stack transitionDelay="0s">
-                    {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
-                </PopoverContent>
-              )}
-            </Popover>
-          </Box>
-        ))}
-        <Button as="a" href="https://dashboard.techoptimum.org">
-          Dashboard
-        </Button>
-      </Stack>
+            {navItem.children && (
+              <PopoverContent
+                border={0}
+                boxShadow={"xl"}
+                bg={popoverContentBgColor}
+                p={4}
+                rounded={"xl"}
+                minW={"sm"}
+              >
+                <Stack transitionDelay="0s">
+                  {navItem.children.map((child) => (
+                    <DesktopSubNav key={child.label} {...child} />
+                  ))}
+                </Stack>
+              </PopoverContent>
+            )}
+          </Popover>
+        </Box>
+      ))}
+      <Button as="a" href="https://dashboard.techoptimum.org">
+        Dashboard
+      </Button>
+    </Stack>
   );
-};
+}
 
 function MobileNavItem({ label, children, href, image }) {
   const { isOpen, onToggle } = useDisclosure();
@@ -332,11 +315,7 @@ function MobileNavItem({ label, children, href, image }) {
         )}
       </Flex>
 
-      <Collapse
-        in={isOpen}
-        animateOpacity
-        style={{ marginTop: "0!important" }}
-      >
+      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack
           mt={2}
           pl={4}
@@ -347,12 +326,7 @@ function MobileNavItem({ label, children, href, image }) {
         >
           {children &&
             children.map((child) => (
-              <Link
-                color="primary"
-                key={child.label}
-                py={2}
-                href={child.href}
-              >
+              <Link color="primary" key={child.label} py={2} href={child.href}>
                 {child.label}
               </Link>
             ))}
@@ -360,7 +334,7 @@ function MobileNavItem({ label, children, href, image }) {
       </Collapse>
     </Stack>
   );
-};
+}
 
 function MobileNav({ NAV_ITEMS }) {
   return (
@@ -373,4 +347,4 @@ function MobileNav({ NAV_ITEMS }) {
       </Button>
     </Stack>
   );
-};
+}

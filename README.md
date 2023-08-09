@@ -3,7 +3,7 @@
 
 [**Our Learning Platform**](https://dashboard.techoptimum.org)
 
-Welcome to Tech Optimum, a nonprofit organization dedicated to helping students in computer science through accessible coding courses, publicizing internships for students, tech talks and more. If you are interested in joining our communtiy, join [here](https://techoptimum.org/discord). If you would like to contribute to our repoositories or join Tech Optimum as a staff member, please go [here](https://techoptimum.org/join-team)
+Welcome to Tech Optimum, a nonprofit organization dedicated to helping students in computer science through accessible coding courses, publicizing internships for students, tech talks and more. If you are interested in joining our communtiy, join [here](https://techoptimum.org/discord). If you would like to contribute to our repoositories or join Tech Optimum as a staff member, please go [here.](https://techoptimum.org/join-team)
 
 
 ## Getting started
