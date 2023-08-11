@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Button, Link, Badge } from "@chakra-ui/react";
+import { Box, Badge, Checkbox, HStack } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function JobPostingCard({
@@ -12,25 +12,31 @@ export default function JobPostingCard({
   return (
     <>
       <Box
-        py=".7rem"
-        px="1rem"
+        py=".5rem"
+        // px="1rem"
         position="relative"
-        borderRadius={"md"}
-        width={["300px","375px"]}
+        // borderRadius={"md"}
+        width={"400px"}
         onClick={onSelect}
-        background={selected ? "blue.100" : "secondary"} // change color if selected
         transition="300ms"
+        borderBottom={"1px solid black"}
         _hover={{
-          color: "white",
-          transform: "scale(.95)",
+          backgroundColor: "twitter.300",
+          borderBottom: "0px",
+          transform: "scale(1.05)",
           cursor: "pointer",
         }}
+        className="department-item"
       >
-        <Heading fontWeight="600" color={selected ? "black" : "white"} fontSize="lg" mb={"6px"}>
-          {role}
-        </Heading>
-        <Badge colorScheme="blue">{department}</Badge>
-      </Box>
+        <HStack spacing='24px' >
+          <Box justify="center" w='200px' h='20px' color="black">
+            {role}
+          </Box>
+          <Box justify="center" w="100px" h='20px'>
+            <Badge>{department}</Badge>
+          </Box>
+        </HStack>
+      </Box >
     </>
   );
 }
