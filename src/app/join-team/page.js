@@ -13,16 +13,9 @@ import {
   Text,
   chakra,
   Badge,
-  Stack,
-  Checkbox,
-  InputGroup,
-  Input,
-  InputRightElement,
-  IconButton,
-  HStack
 } from "@chakra-ui/react";
 import JobPostingCard from "@/components/job-card";
-import { ExternalLinkIcon, SearchIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function JoinTeam() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -158,16 +151,13 @@ export default function JoinTeam() {
     ],
     []
   );
-
-  let searchText = "";
-
   useEffect(() => {
     setFilteredCards(cardsInfo);
   }, [cardsInfo]);
   useEffect(() => {
     setFilteredCards(
       cardsInfo.filter((cardInfo) =>
-        cardInfo.department.toLowerCase().includes(searchQuery.toLowerCase()) || cardInfo.role.toLowerCase().includes(searchQuery.toLowerCase())
+        cardInfo.department.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
   }, [searchQuery, cardsInfo]);
@@ -219,75 +209,36 @@ export default function JoinTeam() {
         </Box>
       </Flex>
       <Text id="jobs"></Text>
-
-      <HStack spacing='24px' alignItems="flex-start" py="2rem" direction={["column", "row"]} justify="center" backgroundColor="#bee3f8">
-        <Stack
-          px=".8rem" direction='column' borderRight="4px solid #20a9f7">
-          <Box
-            borderRadius="md"
-            py="1rem"
-            px=".5rem"
-            width={["250px", "325px"]}
-            onClick={() => setSearchQuery("")}
-            // backgroundColor={searchQuery === "" ? "twitter.500" : "twitter.200"}
-            // color={searchQuery === "" ? "white" : "twitter.900"}
-            border="none"
-            color="twitter.900"
-          >
-            <Checkbox borderColor="black" isChecked={searchQuery === ""}>
-              All Departments
-            </Checkbox>
-          </Box>
-          {departments.map((department) => (
-            <Box
-              borderRadius="md"
-              py=".7rem"
-              px=".5rem"
-              key={department}
-              onClick={() => setSearchQuery(department)}
-              // backgroundColor={searchQuery === department ? "twitter.500" : "twitter.200"}
-              // color={searchQuery === department ? "white" : "twitter.900"}
-              color="twitter.900"
-            >
-              <Checkbox borderColor="black" isChecked={searchQuery === department}>
-                {department}
-              </Checkbox>
-            </Box>
-          ))}
-        </Stack>
-
-        <VStack
-          bg="blue.100"
-          borderRadius="md"
-          py="1rem"
-          px=".5rem"
-          width={["400px", "450px"]}
-          height={["300px", "400px"]}
-          spacing={4}
-          className="department"
-          background="#bee3f8"
+      <Wrap mt="3rem" justify="center">
+        <Button
+          onClick={() => setSearchQuery("")}
+          backgroundColor={searchQuery === "" ? "blue.400" : "blue.900"}
+          color={searchQuery === "" ? "white" : "blue.200"}
+          border="none"
         >
-          <InputGroup w="400px">
-            <Input
-              onChange={(e) => searchText = e.target.value}
-              _placeholder={{ color: "black" }}
-              color="black"
-              border="none"
-              type='text'
-              colorScheme="twitter"
-              placeholder='Input Job Title'
-            />
-            <InputRightElement>
-              <IconButton
-                onClick={() => setSearchQuery(searchText)}
-                border="none"
-                colorScheme='blue'
-                aria-label='Search database'
-                icon={<SearchIcon />}
-              />
-            </InputRightElement>
-          </InputGroup>
-
+          All Departments
+        </Button>
+        {departments.map((department) => (
+          <Button
+            key={department}
+            onClick={() => setSearchQuery(department)}
+            backgroundColor={
+              searchQuery === department ? "blue.400" : "blue.900"
+            }
+            color={searchQuery === department ? "white" : "blue.200"}
+            border="none"
+          >
+            {department}
+          </Button>
+        ))}
+      </Wrap>
+      <Flex py="2rem" direction={["column", "row"]} justify="center">
+        <VStack
+          px="1rem"
+          height={["300px", "600px"]}
+          overflow="scroll"
+          spacing={4}
+        >
           {/* Department selection buttons */}
 
           {/* Job cards */}
@@ -303,13 +254,11 @@ export default function JoinTeam() {
             />
           ))}
         </VStack>
-
         {/* Job preview info section */}
         <Box
           margin={["auto", "0 !important"]}
-          // pl={["0", "3rem"]}
-          w="700px"
-          height="620px"
+          pl={["0", "3rem"]}
+          maxW={["80%", "40%"]}
         >
           {selectedJob ? (
             <>
@@ -400,7 +349,7 @@ export default function JoinTeam() {
             <Text color="primary">Select a job to see more details.</Text>
           )}
         </Box>
-      </HStack  >
+      </Flex>
     </>
   );
 }
