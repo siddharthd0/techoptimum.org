@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   Flex,
   FormControl,
@@ -96,14 +97,42 @@ const CourseCard = ({ color, title, description, link }) => {
 const Courses = () => {
   const [input, setInput] = useState("");
 
+  const MAILCHIMP_API_KEY = "8225c4a02338cd258618695996ce2003-us21";
+  const MAILCHIMP_LIST_ID = "55aa7f75ec";
+
   const handleInputChange = (e) => setInput(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(input);
+    // console.log("Submitted email:", input);
+    try {
+      const response = await axios.post(
+        `https://us21.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`,
+        {
+          email_address: input,
+          status: "subscribed",
+        },
+        {
+          headers: {
+            Authorization: `apikey ${MAILCHIMP_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+  
+      if(response.status === 200) {
+        console.log("Successfully subscribed to mailing list:", input);
+      } else {
+        console.error("Failed to subscribe to mailing list:", response.data);
+      }
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const isError = input === "";
+
 
   return (
     <>
