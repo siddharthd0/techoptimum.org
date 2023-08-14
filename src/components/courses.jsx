@@ -7,10 +7,12 @@ import {
   Spacer,
   Badge,
   Wrap,
+  Input,
   Center,
   Link,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+
+import { ExternalLinkIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useInView } from "framer-motion";
 import Head from "next/head";
 
@@ -92,23 +94,16 @@ const CourseCard = ({ color, title, description, link }) => {
 const Courses = () => {
   return (
     <>
-      <Box
-      
-        pt="2rem"
-        mt={["0rem", "4rem"]}
-        maxW="1070px"
-        mx="auto"
-        direction={"column"}
-      >
+      <Box maxW="1070px" mx="auto" direction={"column"}>
         <Box>
           <Flex
             direction={{ base: "column", lg: "row" }}
-            justifyContent="center"
-            alignItems="center"
+            justifyContent={{base:"center", lg:"space-between"}}
+            alignItems={{ base: "start", lg: "center" }}
           >
             <Box direction="column">
               <Heading
-                textAlign={{ base: "center", lg: "left" }}
+                textAlign={{ base: "left", lg: "center" }}
                 color="primary"
                 fontSize={{ base: "3xl", md: "4xl" }}
               >
@@ -122,23 +117,23 @@ const Courses = () => {
                 mb="1rem"
                 fontWeight="medium"
               >
-                Featured Courses
+                Have no experience with coding?
               </Heading>
+              <Spacer />
+              <Button
+                textAlign={["center", "left"]}
+                as="a"
+                href="https://dashboard.techoptimum.org"
+                mt={{ base: "0rem", md: "0" }}
+              >
+                Check out all our courses
+              </Button>
             </Box>
-            <Spacer />
-            <Button
-              textAlign={["center", "left"]}
-              as="a"
-              href="https://dashboard.techoptimum.org"
-              mt={{ base: "0rem", md: "0" }}
-            >
-              Check out all our courses
-            </Button>
           </Flex>
         </Box>
         <Flex
           pb="2rem"
-          mx={["2rem", "auto"]}
+
           mt="1rem"
           direction="row"
           spacing="20px"
@@ -147,9 +142,8 @@ const Courses = () => {
           gap={4}
         >
           {coursesData.map(({ color, title, description, link }) => (
-            <Center key={title} w={{ base: "auto", md: "255px" }}>
+            <Center key={title} flex="1 1 300px">
               <CourseCard
-                key={title}
                 color={color}
                 title={title}
                 description={description}
@@ -157,6 +151,28 @@ const Courses = () => {
               />
             </Center>
           ))}
+        </Flex>
+
+        <Flex direction="column" pb="2rem">
+          <Heading color="black">Already experienced in coding?</Heading>
+          <Text color="black" fontSize="sm">
+            Subscribe to our newsletter for micro hackathon updates and occasional workshops.
+          </Text>
+          <Flex mt="1rem" direction={{ base: "column", md: "row" }}>
+            <Input
+              variant="flushed"
+              placeholder="Enter your email"
+              _placeholder={{ color: "gray.500" }}
+              mb={{ base: "1rem", md: "0" }}
+            />
+            <Button
+              rightIcon={<ArrowForwardIcon />}
+              colorScheme="teal"
+              variant="outline"
+            >
+              Send
+            </Button>
+          </Flex>
         </Flex>
       </Box>
     </>
