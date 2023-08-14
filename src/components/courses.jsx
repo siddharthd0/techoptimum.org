@@ -1,5 +1,6 @@
 import {
   Flex,
+  FormControl,
   Heading,
   Text,
   Button,
@@ -48,6 +49,12 @@ const coursesData = [
     link: "https://dashboard.techoptimum.org/open-curriculum/intro-to-sql",
   },
 ];
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const email = e.target.email.value;
+  console.log(email);
+};
 
 const CourseCard = ({ color, title, description, link }) => {
   const { ref, inView } = useInView({ once: true });
@@ -98,7 +105,7 @@ const Courses = () => {
         <Box>
           <Flex
             direction={{ base: "column", lg: "row" }}
-            justifyContent={{base:"center", lg:"space-between"}}
+            justifyContent={{ base: "center", lg: "space-between" }}
             alignItems={{ base: "start", lg: "center" }}
           >
             <Box direction="column">
@@ -131,47 +138,50 @@ const Courses = () => {
             </Box>
           </Flex>
         </Box>
-        <Flex
-          pb="2rem"
-
-          mt="1rem"
-          direction="row"
-          spacing="20px"
-          justifyContent="center"
-          wrap="wrap"
-          gap={4}
-        >
-          {coursesData.map(({ color, title, description, link }) => (
-            <Center key={title} flex="1 1 300px">
-              <CourseCard
-                color={color}
-                title={title}
-                description={description}
-                link={link}
-              />
-            </Center>
-          ))}
-        </Flex>
+        <Box pb="2rem">
+          <Flex
+            pb="2rem"
+            direction="row"
+            overflowX="auto"
+            justifyContent="start"
+            wrap={{ base: "wrap", md: "nowrap" }}
+          >
+            {coursesData.map(({ color, title, description, link }) => (
+              <Center key={title} flex={{ base: "1 1 100%", md: "1 1 45%" }}>
+                <CourseCard
+                  color={color}
+                  title={title}
+                  description={description}
+                  link={link}
+                />
+              </Center>
+            ))}
+          </Flex>
+        </Box>
 
         <Flex direction="column" pb="2rem">
-          <Heading color="black">Already experienced in coding?</Heading>
-          <Text color="black" fontSize="sm">
-            Subscribe to our newsletter for micro hackathon updates and occasional workshops.
+          <Heading color="primary">Already experienced in coding?</Heading>
+          <Text color="primary" fontSize="sm">
+            Subscribe to our newsletter for micro hackathon updates and
+            occasional workshops.
           </Text>
           <Flex mt="1rem" direction={{ base: "column", md: "row" }}>
-            <Input
-              variant="flushed"
-              placeholder="Enter your email"
-              _placeholder={{ color: "gray.500" }}
-              mb={{ base: "1rem", md: "0" }}
-            />
-            <Button
-              rightIcon={<ArrowForwardIcon />}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Send
-            </Button>
+              <Input
+                variant="flushed"
+                type="email"
+                placeholder="Enter your email"
+                _placeholder={{ color: "gray.500" }}
+                mb={{ base: "1rem", md: "0" }}
+              />
+              <Button
+                rightIcon={<ArrowForwardIcon />}
+                colorScheme="teal"
+                variant="outline"
+                type="submit"
+                onSubmit={handleSubmit}
+              >
+                Send
+              </Button>
           </Flex>
         </Flex>
       </Box>

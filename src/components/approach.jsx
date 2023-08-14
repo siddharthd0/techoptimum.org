@@ -42,25 +42,7 @@ const StepsDisplay = () => {
         alignItems="center"
         px={{ base: "2rem", md: "0rem" }}
       >
-        <Flex w="100%" direction="column" align={{ base: "center", lg: "start" }} justify={{ base: "center", lg: "start" }}>
-          <Heading
-            textAlign={{ base: "center", lg: "left" }}
-            color="primary"
-            fontSize={{ base: "2xl", md: "4xl" }}
-          >
-            Start Coding in Seconds
-          </Heading>
-          <Heading
-            textAlign={{ base: "center", lg: "left" }}
-            fontWeight="medium"
-            mt="5px"
-            color="blackAlpha.800"
-            fontSize={{ base: "lg", md: "2xl" }}
-            mb="1rem"
-          >
-            Beginner&apos;s Welcome!
-          </Heading>
-        </Flex>
+        
         <Flex direction={{ base: "column-reverse", md: "row"}} justifyContent='space-between'>
           <Flex mb={{ base: "4rem", md: "0" }} direction="column">
             <Box
@@ -164,8 +146,8 @@ const StepsDisplay = () => {
           </Flex> */}
           <Flex
           direction="row"
-          align="center"
-          justify="center"
+          alignItems="center"
+          justifyContent="center"
           >
             <Courses />
             {/* <Image borderRadius="md" src="learn-in-seconds.jpg" alt="Learn In Seconds" /> */}
