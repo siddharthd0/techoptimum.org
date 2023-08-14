@@ -1,6 +1,7 @@
 import {
   Flex,
   FormControl,
+  FormErrorMessage,
   Heading,
   Text,
   Button,
@@ -12,7 +13,7 @@ import {
   Center,
   Link,
 } from "@chakra-ui/react";
-
+import { useState } from "react";
 import { ExternalLinkIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useInView } from "framer-motion";
 import Head from "next/head";
@@ -49,12 +50,6 @@ const coursesData = [
     link: "https://dashboard.techoptimum.org/open-curriculum/intro-to-sql",
   },
 ];
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const email = e.target.email.value;
-  console.log(email);
-};
 
 const CourseCard = ({ color, title, description, link }) => {
   const { ref, inView } = useInView({ once: true });
@@ -99,6 +94,17 @@ const CourseCard = ({ color, title, description, link }) => {
 };
 
 const Courses = () => {
+  const [input, setInput] = useState("");
+
+  const handleInputChange = (e) => setInput(e.target.value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(input);
+  };
+
+  const isError = input === "";
+
   return (
     <>
       <Box maxW="1070px" mx="auto" direction={"column"}>
@@ -166,9 +172,14 @@ const Courses = () => {
             occasional workshops.
           </Text>
           <Flex mt="1rem" direction={{ base: "column", md: "row" }}>
+            <form onSubmit={handleSubmit}>
+            <FormControl isInvalid={isError}>
               <Input
                 variant="flushed"
                 type="email"
+                value={input}
+                onChange={handleInputChange}
+                color="black"
                 placeholder="Enter your email"
                 _placeholder={{ color: "gray.500" }}
                 mb={{ base: "1rem", md: "0" }}
@@ -178,10 +189,11 @@ const Courses = () => {
                 colorScheme="teal"
                 variant="outline"
                 type="submit"
-                onSubmit={handleSubmit}
               >
                 Send
               </Button>
+            </FormControl>
+            </form>
           </Flex>
         </Flex>
       </Box>
