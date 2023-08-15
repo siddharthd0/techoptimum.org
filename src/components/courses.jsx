@@ -159,7 +159,7 @@ const Courses = () => {
             mb="1rem"
             fontWeight="medium"
           >
-            Beginners Welcome! No Coding Experience Required.
+            Beginners Welcome! Have no experience coding?
           </Text>
           <Button
             as="a"
@@ -209,7 +209,7 @@ const Courses = () => {
               />
               <Button
                 rightIcon={<ArrowForwardIcon />}
-                colorScheme="teal"
+                colorScheme="blue"
                 variant="solid"
                 type="submit"
               >
