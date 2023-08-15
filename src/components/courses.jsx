@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {
   Flex,
+  Grid,
   FormControl,
   FormErrorMessage,
   Heading,
@@ -136,96 +137,89 @@ const Courses = () => {
 
   return (
     <>
-      <Box maxW="1070px" mx="auto" direction={"column"}>
+      <Box maxW="1070px" mx="auto">
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        justifyContent={{ base: "center", lg: "space-between" }}
+        alignItems={{ base: "start", lg: "center" }}
+        mb="2rem"
+        px="2rem"
+      >
         <Box>
-          <Flex
-            direction={{ base: "column", lg: "row" }}
-            justifyContent={{ base: "center", lg: "space-between" }}
-            alignItems={{ base: "start", lg: "center" }}
+          <Heading
+            color="primary"
+            fontSize={{ base: "3xl", md: "4xl" }}
+            mb="1rem"
           >
-            <Box direction="column">
-              <Heading
-                textAlign={{ base: "left", lg: "center" }}
-                color="primary"
-                fontSize={{ base: "3xl", md: "4xl" }}
-              >
-                Courses
-              </Heading>
-              <Heading
-                textAlign={{ base: "center", lg: "left" }}
-                mt={[".1rem", "0"]}
-                color="blackAlpha.800"
-                fontSize={{ base: "xl", md: "2xl" }}
-                mb="1rem"
-                fontWeight="medium"
-              >
-                Have no experience with coding?
-              </Heading>
-              <Spacer />
-              <Button
-                textAlign={["center", "left"]}
-                as="a"
-                href="https://dashboard.techoptimum.org"
-                mt={{ base: "0rem", md: "0" }}
-              >
-                Check out all our courses
-              </Button>
-            </Box>
-          </Flex>
-        </Box>
-        <Box pb="2rem">
-          <Flex
-            pb="2rem"
-            direction="row"
-            overflowX="auto"
-            justifyContent="start"
-            wrap={{ base: "wrap", md: "nowrap" }}
+            Courses
+          </Heading>
+          <Text
+            color="blackAlpha.800"
+            fontSize={{ base: "xl", md: "2xl" }}
+            mb="1rem"
+            fontWeight="medium"
           >
-            {coursesData.map(({ color, title, description, link }) => (
-              <Center key={title} flex={{ base: "1 1 100%", md: "1 1 45%" }}>
-                <CourseCard
-                  color={color}
-                  title={title}
-                  description={description}
-                  link={link}
-                />
-              </Center>
-            ))}
-          </Flex>
-        </Box>
-
-        <Flex direction="column" pb="2rem">
-          <Heading color="primary">Already experienced in coding?</Heading>
-          <Text color="primary" fontSize="sm">
-            Subscribe to our newsletter for micro hackathon updates and
-            occasional workshops.
+            Beginners Welcome! No Coding Experience Required.
           </Text>
-          <Flex mt="1rem" direction={{ base: "column", md: "row" }}>
-            <form onSubmit={handleSubmit}>
-            <FormControl isInvalid={isError}>
+          <Button
+            as="a"
+            href="https://dashboard.techoptimum.org"
+            colorScheme="blue"
+          >
+            Explore Courses
+          </Button>
+        </Box>
+      </Flex>
+
+
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        gap="1.5rem"
+        pb="2rem"
+        px="2rem"
+      >
+        {coursesData.map(({ color, title, description, link }) => (
+          <CourseCard
+            key={title}
+            color={color}
+            title={title}
+            description={description}
+            link={link}
+          />
+        ))}
+      </Grid>
+
+
+      <Box px="2rem" pb="2rem">
+        <Heading color="primary">Experienced in Coding?</Heading>
+        <Text color="primary" fontSize="lg" mt="1rem">
+          Sign up for our newsletter to stay updated on micro hackathons and workshops.
+        </Text>
+        <form onSubmit={handleSubmit}>
+          <FormControl isInvalid={isError} mt="1rem">
+            <Flex align="center">
               <Input
-                variant="flushed"
                 type="email"
                 value={input}
                 onChange={handleInputChange}
                 color="black"
                 placeholder="Enter your email"
                 _placeholder={{ color: "gray.500" }}
-                mb={{ base: "1rem", md: "0" }}
+                mr="1rem"
               />
               <Button
                 rightIcon={<ArrowForwardIcon />}
                 colorScheme="teal"
-                variant="outline"
+                variant="solid"
                 type="submit"
               >
-                Send
+                Subscribe
               </Button>
-            </FormControl>
-            </form>
-          </Flex>
-        </Flex>
+            </Flex>
+          </FormControl>
+        </form>
       </Box>
+    </Box>
     </>
   );
 };
