@@ -14,6 +14,7 @@ import {
   Input,
   Center,
   Link,
+  useToast
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ExternalLinkIcon, ArrowForwardIcon } from "@chakra-ui/icons";
@@ -101,6 +102,8 @@ const Courses = () => {
   const MAILCHIMP_API_KEY = "8225c4a02338cd258618695996ce2003-us21";
   const MAILCHIMP_LIST_ID = "55aa7f75ec";
 
+  const toast = useToast();
+
   const handleInputChange = (e) => setInput(e.target.value);
 
   const handleSubmit = async (e) => {
@@ -123,12 +126,33 @@ const Courses = () => {
   
       if(response.status === 200) {
         console.log("Successfully subscribed to mailing list:", input);
+        toast({
+          title: "Subscription Successful",
+          description: "We'll get back to you with updates!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
       } else {
         console.error("Failed to subscribe to mailing list:", response.data);
+        toast({
+          title: "Subscription Failed",
+          description: "Please try again later.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
       }
       console.log(response);
     } catch (error) {
       console.log(error);
+      toast({
+        title: "An Error Occurred",
+        description: "Please try again later.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
     }
   };
 
