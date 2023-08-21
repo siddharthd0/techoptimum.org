@@ -61,7 +61,7 @@ export default function MicroHackathons() {
           </Flex>
           <Text mt={3}>
             We believe in giving free top-notch computer science education to
-            everyone. That's why we started our online courses.
+            everyone. That&apos;s why we started our online courses.
           </Text>
         </Box>
 
@@ -73,7 +73,7 @@ export default function MicroHackathons() {
           </Text>
           <Text mt={3}>
             Courses are a beginning. We believe people learn best by doing.
-            That's why we created our micro hackathons cohort.
+            That&apos;s why we created our micro hackathons cohort.
           </Text>
         </Box>
 
