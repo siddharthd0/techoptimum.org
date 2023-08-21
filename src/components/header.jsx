@@ -63,8 +63,6 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
   const [data, setData] = useState({});
-  
-
 
 
   useEffect(() => {
