@@ -247,20 +247,23 @@ function DesktopSubNav({ label, href, subLabel, image }) {
              </PopoverTrigger>
 
              {navItem.children && (
-               <PopoverContent
-                 border={0}
-                 boxShadow={"xl"}
-                 bg={popoverContentBgColor}
-                 p={4}
-                 rounded={"xl"}
-                 minW={"sm"}
-               >
-                 <Stack transitionDelay="0s">
-                   {navItem.children.map((child) => (
-                     <DesktopSubNav key={child.label} {...child} />
-                   ))}
-                 </Stack>
-               </PopoverContent>
+            <PopoverContent
+            border={0}
+            boxShadow={"xl"}
+            bg={popoverContentBgColor}
+            p={4}
+            rounded={"xl"}
+            minW={"sm"}
+            maxHeight={"360px"} 
+            overflowY={"auto"}
+         >
+            <Stack>
+               {navItem.children.map((child) => (
+                  <DesktopSubNav key={child.label} {...child} />
+               ))}
+            </Stack>
+         </PopoverContent>
+         
              )}
            </Popover>
          </Box>
