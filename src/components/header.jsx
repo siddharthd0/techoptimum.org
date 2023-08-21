@@ -63,35 +63,9 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
   const [data, setData] = useState({});
-  const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL;
+  
 
-  useEffect(() => {
-    async function fetchIP() {
-      try {
-        const response = await axios.get('https://ipgeolocation.abstractapi.com/v1/', {
-          params: {
-            api_key: '2315cc56532645c7aa892ecc2efe3bd7',
-          },
-        });
 
-        if (response && response.data) {
-          setData(response.data); 
-
-          await axios.post(DISCORD_WEBHOOK_URL, {
-            content: `Visitor Data: ${JSON.stringify(response.data)}`
-          });
-        } else {
-          console.error("Unexpected API response format", response.data);
-          setData({ error: 'Unexpected response format.' });
-        }
-      } catch (error) {
-        console.error("Failed to fetch data or send to Discord", error);
-        setData({ error: "Error fetching data" });
-      }
-    }
-
-    fetchIP();
-  }, []);
 
   useEffect(() => {
     fetch(`https://dashboard.techoptimum.org/api/courses-external`)
