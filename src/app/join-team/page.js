@@ -31,23 +31,7 @@ export default function JoinTeam() {
 
   const cardsInfo = useMemo(
     () => [
-      {
-        role: "Opportunities Team",
-        application: "https://forms.gle/4e639XDZpXhjGxtZ8",
-        department: "Education",
-        responsibility: [
-          "Identify, verify, and populate the database with summer 2024 software engineering internships.",
-          "Maintain accurate records of sources and statuses of opportunities identified.",
-          "Collaborate effectively with the team to avoid duplication and maximize coverage.",
-        ],
-        shortDescription:
-          "The Opportunities Finder Team Volunteer is a remote role focused on identifying and validating 2024 summer software engineering internships, and updating our database accordingly. This role requires strong research skills, attention to detail, and an interest in software engineering.",
-        requirements: [
-          "Proficient in comprehensive online research and data management.",
-          "Excellent attention to detail and organizational skills for accurate data entry.",
-          "Strong written communication skills and interest in the software engineering field.",
-        ],
-      },
+  
       {
         role: "Video Editor",
         application: "https://forms.gle/QtePyioQ8AykETAS6",
@@ -69,7 +53,7 @@ export default function JoinTeam() {
         ],
       },
       {
-        role: "Insta Content Creator",
+        role: "Instagram Content Manager",
         application: "https://forms.gle/wAPeXbta2oE1WNMz6",
         department: "Marketing",
         responsibility: [
@@ -99,7 +83,7 @@ export default function JoinTeam() {
         ],
       },
       {
-        role: "Tiktok Content Creator",
+        role: "Tiktok Content Manager",
         application: "https://forms.gle/L4SN4CjxtUjijN9h6",
         department: "Marketing",
         responsibility: [
@@ -115,7 +99,7 @@ export default function JoinTeam() {
         ],
       },
       {
-        role: "Web Designer",
+        role: "Website Designer",
         application: "https://forms.gle/9FayfQddFF6B4Ro39",
         department: "Technology",
         responsibility: [
@@ -132,7 +116,7 @@ export default function JoinTeam() {
         ],
       },
       {
-        role: "Web Developer",
+        role: "Website Developer",
         application: "https://forms.gle/NXQomJvT7dmCq8nU9",
         department: "Technology",
         responsibility: [
