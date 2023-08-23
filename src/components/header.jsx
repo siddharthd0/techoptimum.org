@@ -31,14 +31,8 @@ const DefaultNavItems = [
     href: "/",
   },
   {
-    label: "Curriculum",
-    children: [
-      {
-        label: "Our Learning Platform",
-        subLabel: "Loading...",
-        href: "https://dashboard.techoptimum.org",
-      },
-    ],
+    label: "Courses",
+    href: "https://dashboard.techoptimum.org/public-curriculum"
   },
   {
     label: "Hackathons",
@@ -78,26 +72,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
   /// hello
-  useEffect(() => {
-    fetch(`https://dashboard.techoptimum.org/api/courses-external`)
-      .then((res) => res.json())
-      .then((data) => {
-        const updatedNAV_ITEMS = [
-          ...NAV_ITEMS.slice(0, 1), // Keep the first item as it is
-          {
-            label: "Curriculum",
-            children: data.map((course) => ({
-              label: course.title,
-              subLabel: course.description,
-              href: `https://dashboard.techoptimum.org/open-curriculum/${course.slug}`,
-              image: course.image,
-            })),
-          },
-          ...NAV_ITEMS.slice(2), // Append the remaining items from the original array
-        ];
-        setNAV_ITEMS(updatedNAV_ITEMS);
-      });
-  }, [NAV_ITEMS]);
+  
 
   return (
     <>
