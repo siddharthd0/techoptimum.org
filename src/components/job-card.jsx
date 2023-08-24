@@ -3,7 +3,6 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function JobPostingCard({
   role,
-  application,
   department,
   responsibility,
   onSelect,
