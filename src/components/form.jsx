@@ -46,51 +46,50 @@ function Form({ questions = [], role = "" }) {
 
 
   const handleSubmit = async (e) => {
-    console.log("formData", formData);
-console.log("role", role);
-console.log("Is form valid?", validateForm());
-
-
     e.preventDefault();
     if (!validateForm()) {
-        return;
-        console.log("Is form valid?", validateForm());
+      return;
+    }
 
-      }
     try {
-      const response = await fetch("/api/slack", {
-        method: "POST",
+      const response = await fetch('/api/slack', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ formData, role }),
       });
 
       if (response.ok) {
         toast({
-          title: "Success",
-          description: "Successfully sent message to Slack",
-          status: "success",
+          title: 'Success',
+          description: 'Successfully sent your application for review.',
+          status: 'success',
           duration: 5000,
           isClosable: true,
         });
         setFormData({});
       } else {
-        const { error } = await response.json();
+        let error;
+        try {
+          error = await response.json();
+        } catch (e) {
+          error = await response.text();
+        }
         toast({
-          title: "Error",
+          title: 'Error',
           description: error,
-          status: "error",
+          status: 'error',
           duration: 5000,
           isClosable: true,
         });
       }
     } catch (error) {
-      console.error("There was an error sending the form data to Slack", error);
+      console.error('There was an error sending the form data to Slack', error);
       toast({
-        title: "Error",
-        description: "An error occurred while processing your request.",
-        status: "error",
+        title: 'Error',
+        description: 'An error occurred while processing your request.',
+        status: 'error',
         duration: 5000,
         isClosable: true,
       });
