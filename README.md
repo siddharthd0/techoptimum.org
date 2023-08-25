@@ -3,7 +3,7 @@
 
 [**Our Learning Platform**](https://dashboard.techoptimum.org)
 
-Welcome to Tech Optimum, a nonprofit organization dedicated to helping students in computer science through accessible coding courses, publicizing internships for students, tech talks and more. If you are interested in joining our communtiy, join [here](https://techoptimum.org/discord). If you would like to contribute to our repoositories or join Tech Optimum as a staff member, please go [here.](https://techoptimum.org/join-team)
+Welcome to Tech Optimum, a nonprofit organization dedicated to helping students in computer science through accessible coding courses, publicizing internships for students, tech talks and more. If you are interested in joining our community, join [here](https://techoptimum.org/discord). If you would like to contribute to our repositories or join Tech Optimum as a staff member, please go [here.](https://techoptimum.org/join-team)
 
 
 ## Getting started
@@ -25,23 +25,14 @@ npm run dev
 [Tech Optimum Internship Finder](https://github.com/TechOptimum/internships)
 
 ## License
-Copyright (c) 2022 Tech Optimum
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Copyright (c) 2023 Tech Optimum
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+All rights reserved.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+No part of this software and associated documentation files (the "Software") may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright holder, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+You may not modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
