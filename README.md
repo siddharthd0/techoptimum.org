@@ -21,8 +21,7 @@ npm run dev
 ## Other Initiatives
 ### Courses
 [Tech Optimum Coding Courses](https://github.com/TechOptimum/courses)
-### Internship Finder
-[Tech Optimum Internship Finder](https://github.com/TechOptimum/internships)
+
 
 ## License
 
