@@ -51,6 +51,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
@@ -93,6 +94,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
@@ -135,6 +137,7 @@ export default function JoinTeam() {
   questions: [
     { type: "shortAnswer", question: "What is your full name?" },
     { type: "shortAnswer", question: "How old are you?" },
+    { type: "shortAnswer", question: "What is your email?" },
     { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
     { type: "shortAnswer", question: "In which timezone are you located?" },
     { type: "longAnswer", question: "Describe a successful fundraising campaign you have managed. What were the key factors that contributed to its success?" },
@@ -160,6 +163,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
@@ -203,6 +207,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
@@ -244,6 +249,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
@@ -288,6 +294,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
@@ -333,6 +340,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
           { type: "shortAnswer", question: "In which timezone are you located?" },
           { type: "longAnswer", question: "Describe your experience in creating coding assessments. What are some key elements you focus on?" },
@@ -360,6 +368,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
           { type: "shortAnswer", question: "In which timezone are you located?" },
           { type: "longAnswer", question: "Describe a successful event you've helped organize in the past. What were the key factors that contributed to its success?" },
@@ -388,6 +397,7 @@ export default function JoinTeam() {
         questions: [
           { type: "shortAnswer", question: "What is your full name?" },
           { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
           { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
           { type: "shortAnswer", question: "In which timezone are you located?" },
           { type: "longAnswer", question: "Describe a successful partnership or sponsorship deal you've negotiated in the past. What were the key factors that contributed to its success?" },
@@ -401,7 +411,6 @@ export default function JoinTeam() {
     ],
     []
   );
-
   useEffect(() => {
     setFilteredCards(cardsInfo);
   }, [cardsInfo]);
