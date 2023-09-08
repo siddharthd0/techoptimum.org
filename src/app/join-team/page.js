@@ -467,20 +467,7 @@ export default function JoinTeam() {
            
            
             </Flex>
-            <IconButton
-            variant="ghost"
-            colorScheme="blue"
-            size="lg"
-            mt="1rem"
-            alignSelf="flex-end"
-            alignItem="center"
-            textAlign="center"
-            mx="auto"
-            justifySelf="flex-end"
-                justifyContent="center"
-              icon={<AiOutlineArrowDown/>}
-              aria-label="Scroll down"
-/>
+          
           </Box>
         </Box>
       </Flex>
