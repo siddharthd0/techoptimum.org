@@ -76,33 +76,12 @@ export default function WithSubnavigation() {
 
   return (
     <>
-      <Link
-        _hover={{
-          textDecor: "none",
-        }}
-        href="https://dashboard.techoptimum.org"
-        isExternal
-      >
-        <Box bg="orange.500">
-          <Text
-            _hover={{
-              color: "gray.300",
-              cursor: "pointer",
-            }}
-            transition="300ms"
-            py="10px"
-            textAlign="center"
-          >
-            Check out our new learning platform that offers 7+ free coding
-            courses
-          </Text>
-        </Box>
-      </Link>
+     
       <header>
         <Box
           zIndex="100"
           className="nav-cont stroke"
-          top="4rem !important"
+          top="2rem !important"
           left="0"
           right="0"
           pos={"fixed"}
