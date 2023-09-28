@@ -6,7 +6,7 @@ export default function JobPostingCard({
   department,
   responsibility,
   onSelect,
-  selected, // new prop
+  selected, 
 }) {
   return (
     <>
@@ -17,7 +17,7 @@ export default function JobPostingCard({
         borderRadius={"md"}
         width={["300px","375px"]}
         onClick={onSelect}
-        background={selected ? "blue.100" : "secondary"} // change color if selected
+        background={selected ? "blue.100" : "secondary"}
         transition="300ms"
         _hover={{
           color: "white",

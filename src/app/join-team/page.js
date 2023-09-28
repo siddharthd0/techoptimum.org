@@ -30,6 +30,53 @@ export default function JoinTeam() {
   const cardsInfo = useMemo(
     () => [
       {
+        role: "Coding Roadmap Creator",
+        department: "Technology",
+        responsibility: [
+          "Collaborate with educational and technical teams to design coding roadmaps for different programming languages and technologies.",
+          "Research and stay updated on the latest trends and best practices in the tech industry to ensure the relevance and quality of the roadmaps.",
+          "Create visually engaging and easy-to-follow roadmap graphics.",
+          "Develop supplementary materials and resources to support the learning journey outlined in the roadmaps.",
+          "Collect and analyze feedback from users to continuously improve and update the coding roadmaps.",
+        ],
+        shortDescription:
+          "Create and maintain coding roadmaps that guide learners through a structured path to mastering different programming languages and technologies.",
+        requirements: [
+          "Proven experience in educational content creation or instructional design, preferably in the tech field.",
+          "Strong knowledge of various programming languages and technologies.",
+          "Ability to break down complex technical topics into manageable learning paths.",
+          "Proficiency in graphic design software to create visually engaging roadmap materials.",
+        ],
+        questions: [
+          { type: "shortAnswer", question: "What is your full name?" },
+          { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
+          {
+            type: "longAnswer",
+            question: "What does Tech Optimum's mission mean to you?",
+          },
+          {
+            type: "shortAnswer",
+            question: "In which timezone are you located?",
+          },
+          {
+            type: "shortAnswer",
+            question: "How many years of experience do you have in creating educational content or coding roadmaps?",
+          },
+          {
+            type: "longAnswer",
+            question:
+              "Describe a challenging project where you had to create a learning roadmap or curriculum. What obstacles did you face and how did you overcome them?",
+          },
+          {
+            type: "checkbox",
+            question:
+              "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.",
+            options: ["Yes"],
+          },
+        ],
+      },
+      {
         role: "Video Editor",
 
         department: "Technology",
