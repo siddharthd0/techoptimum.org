@@ -1,5 +1,9 @@
+import axios from 'axios';
 import {
   Flex,
+  Grid,
+  FormControl,
+  FormErrorMessage,
   Heading,
   Text,
   Button,
@@ -7,10 +11,13 @@ import {
   Spacer,
   Badge,
   Wrap,
+  Input,
   Center,
   Link,
+  useToast
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { useState } from "react";
+import { ExternalLinkIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useInView } from "framer-motion";
 import Head from "next/head";
 
@@ -90,75 +97,153 @@ const CourseCard = ({ color, title, description, link }) => {
 };
 
 const Courses = () => {
+  const [input, setInput] = useState("");
+
+  const MAILCHIMP_API_KEY = "8225c4a02338cd258618695996ce2003-us21";
+  const MAILCHIMP_LIST_ID = "55aa7f75ec";
+
+  const toast = useToast();
+
+  const handleInputChange = (e) => setInput(e.target.value);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // console.log("Submitted email:", input);
+    try {
+      const response = await axios.post(
+        `https://us21.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`,
+        {
+          email_address: input,
+          status: "subscribed",
+        },
+        {
+          headers: {
+            Authorization: `apikey ${MAILCHIMP_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+  
+      if(response.status === 200) {
+        console.log("Successfully subscribed to mailing list:", input);
+        toast({
+          title: "Subscription Successful",
+          description: "We'll get back to you with updates!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        console.error("Failed to subscribe to mailing list:", response.data);
+        toast({
+          title: "Subscription Failed",
+          description: "Please try again later.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      }
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+      toast({
+        title: "An Error Occurred",
+        description: "Please try again later.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
+  };
+
+  const isError = input === "";
+
+
   return (
     <>
-      <Box
-      
-        pt="2rem"
-        mt={["0rem", "4rem"]}
-        maxW="1070px"
-        mx="auto"
-        direction={"column"}
+      <Box maxW="1070px" mx="auto">
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        justifyContent={{ base: "center", lg: "space-between" }}
+        alignItems={{ base: "start", lg: "center" }}
+        mb="2rem"
+        px="2rem"
       >
         <Box>
-          <Flex
-            direction={{ base: "column", lg: "row" }}
-            justifyContent="center"
-            alignItems="center"
+          <Heading
+            color="primary"
+            fontSize={{ base: "3xl", md: "4xl" }}
+            mb="1rem"
           >
-            <Box direction="column">
-              <Heading
-                textAlign={{ base: "center", lg: "left" }}
-                color="primary"
-                fontSize={{ base: "3xl", md: "4xl" }}
-              >
-                Courses
-              </Heading>
-              <Heading
-                textAlign={{ base: "center", lg: "left" }}
-                mt={[".1rem", "0"]}
-                color="blackAlpha.800"
-                fontSize={{ base: "xl", md: "2xl" }}
-                mb="1rem"
-                fontWeight="medium"
-              >
-                Featured Courses
-              </Heading>
-            </Box>
-            <Spacer />
-            <Button
-              textAlign={["center", "left"]}
-              as="a"
-              href="https://dashboard.techoptimum.org"
-              mt={{ base: "0rem", md: "0" }}
-            >
-              Check out all our courses
-            </Button>
-          </Flex>
+            Courses
+          </Heading>
+          <Text
+            color="blackAlpha.800"
+            fontSize={{ base: "xl", md: "2xl" }}
+            mb="1rem"
+            fontWeight="medium"
+          >
+            Beginners Welcome! Have no experience coding?
+          </Text>
+          <Button
+            as="a"
+            href="https://dashboard.techoptimum.org"
+            colorScheme="blue"
+          >
+            Explore Courses
+          </Button>
         </Box>
-        <Flex
-          pb="2rem"
-          mx={["2rem", "auto"]}
-          mt="1rem"
-          direction="row"
-          spacing="20px"
-          justifyContent="center"
-          wrap="wrap"
-          gap={4}
-        >
-          {coursesData.map(({ color, title, description, link }) => (
-            <Center key={title} w={{ base: "auto", md: "255px" }}>
-              <CourseCard
-                key={title}
-                color={color}
-                title={title}
-                description={description}
-                link={link}
+      </Flex>
+
+
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        gap="1.5rem"
+        pb="2rem"
+        px="2rem"
+      >
+        {coursesData.map(({ color, title, description, link }) => (
+          <CourseCard
+            key={title}
+            color={color}
+            title={title}
+            description={description}
+            link={link}
+          />
+        ))}
+      </Grid>
+
+
+      <Box px="2rem" pb="2rem">
+        <Heading color="primary">Experienced in Coding?</Heading>
+        <Text color="primary" fontSize="lg" mt="1rem">
+          Sign up for our newsletter to stay updated on micro hackathons and workshops.
+        </Text>
+        <form onSubmit={handleSubmit}>
+          <FormControl isInvalid={isError} mt="1rem">
+            <Flex align="center">
+              <Input
+                type="email"
+                value={input}
+                onChange={handleInputChange}
+                color="black"
+                placeholder="Enter your email"
+                _placeholder={{ color: "gray.500" }}
+                mr="1rem"
               />
-            </Center>
-          ))}
-        </Flex>
+              <Button
+                rightIcon={<ArrowForwardIcon />}
+                colorScheme="blue"
+                variant="solid"
+                type="submit"
+              >
+                Subscribe
+              </Button>
+            </Flex>
+          </FormControl>
+        </form>
       </Box>
+    </Box>
     </>
   );
 };

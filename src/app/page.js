@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Box my={["20px", "130px"]} px={5}>
       <HeroHeader />
-      <Courses />
+      {/* <Courses /> */}
       <Features />
       <Approach />
       <Finder />

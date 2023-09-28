@@ -37,7 +37,7 @@ export default function DonationForm() {
     event.preventDefault();
 
     const webhookURL =
-      "https://discord.com/api/webhooks/1115401017626992720/bLrzgoyA2vlLjz5yRXkIKiFSWVzjKpHuDYWjo0bG9T-dZjUZ1utn8_EpZcZg6tzk--Pj"; // replace with your Discord webhook URL
+      "https://discord.com/api/webhooks/1115401017626992720/bLrzgoyA2vlLjz5yRXkIKiFSWVzjKpHuDYWjo0bG9T-dZjUZ1utn8_EpZcZg6tzk--Pj"; 
 
     const data = {
       embeds: [
@@ -57,6 +57,8 @@ export default function DonationForm() {
         },
       ],
     };
+
+    console.log(data)
 
     try {
       const response = await fetch(webhookURL, {
