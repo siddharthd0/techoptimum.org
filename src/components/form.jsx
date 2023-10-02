@@ -63,7 +63,7 @@ function Form({ questions = [], role = "" }) {
       if (response.ok) {
         toast({
           title: 'Congrats!',
-          description: 'We have received your application. We will reach out to you soon!',
+          description: 'We have received your application. We will reach out to you soon! ',
           status: 'success',
           duration: 5000,
           isClosable: true,
