@@ -32,15 +32,16 @@ const DefaultNavItems = [
   },
   {
     label: "Courses",
-    href: "https://dashboard.techoptimum.org/public-curriculum"
+    href: "https://dashboard.techoptimum.org/public-curriculum",
   },
   {
     label: "Hackathons",
     children: [
       {
         label: "Micro Hackathons",
-        subLabel: "Check out our new cohort of micro hackathons - 8 hour hackathons",
-        href:"/micro-hackathons"
+        subLabel:
+          "Check out our new cohort of micro hackathons - 8 hour hackathons",
+        href: "/micro-hackathons",
       },
       {
         label: "Tech Optimum Hacks 2023",
@@ -49,18 +50,15 @@ const DefaultNavItems = [
       },
       {
         label: "Tech Optimum Hacks 2022",
-        subLabel: "Check out a recap of our annual hackathon held in Summer 2022",
-        href:"/hackathon",
-
-      }
-    ]
-
+        subLabel:
+          "Check out a recap of our annual hackathon held in Summer 2022",
+        href: "/hackathon",
+      },
+    ],
   },
 
-  
-
   {
-    label: "Volunteer",
+    label: "Join Team",
     href: "/join-team",
   },
   {
@@ -72,11 +70,9 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
   /// hello
-  
 
   return (
     <>
-     
       <header>
         <Box
           zIndex="100"

@@ -25,12 +25,54 @@ export default function JoinTeam() {
   const [selectedJob, setSelectedJob] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-  const departments = ["Marketing", "Technology", "Education"];
+  const departments = ["Marketing", "Technology", "Education", "Operations"];
 
   const cardsInfo = useMemo(
     () => [
       {
-        role: "Coding Roadmap Creator",
+        role: "Software Engineer",
+
+        department: "Technology",
+        responsibility: [
+          "Contribute to the development and maintenance of the website.",
+          "Execute design implementations using technologies such as NodeJS, CSS, and Next.js/React.js.",
+        ],
+        shortDescription:
+          "Develop and maintain the website using cutting-edge technologies like NodeJS, CSS, and Next.js/React.js.",
+        requirements: [
+          "Proven experience as a Web Developer",
+          "Strong proficiency in NodeJS, CSS, Next.js/React.js",
+          "Excellent problem-solving skills",
+          "Ability to manage multiple assignments simultaneously",
+        ],
+        questions: [
+          { type: "shortAnswer", question: "What is your full name?" },
+          { type: "shortAnswer", question: "How old are you?" },
+          { type: "shortAnswer", question: "What is your email?" },
+          {
+            type: "longAnswer",
+            question: "What does Tech Optimum's mission mean to you?",
+          },
+          {
+            type: "shortAnswer",
+            question:
+              "Describe your level of experience with Next.js/React.js.",
+          },
+          {
+            type: "longAnswer",
+            question:
+              "Share a challenging bug or problem you encountered and how you resolved it.",
+          },
+          {
+            type: "checkbox",
+            question:
+              "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.",
+            options: ["Yes"],
+          },
+        ],
+      },
+      {
+        role: "Development Roadmap Specialist",
         department: "Technology",
         responsibility: [
           "Collaborate with educational and technical teams to design coding roadmaps for different programming languages and technologies.",
@@ -55,10 +97,7 @@ export default function JoinTeam() {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
           },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
+
           {
             type: "shortAnswer",
             question: "How many years of experience do you have in creating educational content or coding roadmaps?",
@@ -103,10 +142,7 @@ export default function JoinTeam() {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
           },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
+
           {
             type: "shortAnswer",
             question: "How many years of video editing experience do you have?",
@@ -125,17 +161,18 @@ export default function JoinTeam() {
         ],
       },
       {
-        role: "Instagram Content Manager",
-
+        role: "Social Media Manager",
+    
         department: "Marketing",
         responsibility: [
-          "Conceptualize and craft compelling content that resonates with the target audience.",
+          "Conceptualize and craft compelling content that resonates with the target audience on both Instagram and TikTok.",
           "Deftly utilize various graphic design platforms such as Canva, Photoshop, etc., to accomplish a set number of tasks per week.",
+          "Adapt content strategies to leverage the unique features and audience demographics of both Instagram and TikTok."
         ],
         shortDescription:
-          "Conceptualize and create captivating content for our Instagram platform.",
+          "Conceptualize and create captivating content for our Instagram and TikTok platforms.",
         requirements: [
-          "Proven experience with content creation.",
+          "Proven experience with content creation on Instagram and TikTok.",
           "Proficiency in graphic design platforms such as Canva, Photoshop.",
         ],
         questions: [
@@ -146,14 +183,11 @@ export default function JoinTeam() {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
           },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
+       
           {
             type: "longAnswer",
             question:
-              "Provide an example of captivating Instagram content you've created. What was the objective and outcome?",
+              "Provide an example of captivating Instagram or TikTok content you've created. What was the objective and outcome?",
           },
           {
             type: "checkbox",
@@ -163,38 +197,10 @@ export default function JoinTeam() {
           },
         ],
       },
-      
-      {
-  role: "Fundraising Manager",
-  department: "Fundraising",
-  responsibility: [
-    "Develop and execute a comprehensive fundraising strategy for the organization.",
-    "Identify, research, and target potential donors, grants, and fundraising opportunities.",
-    "Coordinate and lead fundraising events and campaigns, both online and offline.",
-    "Manage and update donor databases.",
-    "Prepare and present regular fundraising reports and updates."
-  ],
-  shortDescription: "Lead the charge in fundraising efforts to support Tech Optimum's initiatives.",
-  requirements: [
-    "Experience in fundraising and donor relations.",
-    "Strong organizational and project management skills.",
-    "Excellent communication skills, both written and verbal.",
-    "Ability to meet fundraising targets and deadlines."
-  ],
-  questions: [
-    { type: "shortAnswer", question: "What is your full name?" },
-    { type: "shortAnswer", question: "How old are you?" },
-    { type: "shortAnswer", question: "What is your email?" },
-    { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
-    { type: "shortAnswer", question: "In which timezone are you located?" },
-    { type: "longAnswer", question: "Describe a successful fundraising campaign you have managed. What were the key factors that contributed to its success?" },
-    { type: "shortAnswer", question: "What strategies would you employ to achieve fundraising targets for Tech Optimum?" },
-    { type: "checkbox", question: "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.", options: ["Yes"] }
-  ]
-},
+    
 
       {
-        role: "Coding Course Instructor",
+        role: "Computer Science Instructor",
 
         department: "Education",
         responsibility: [
@@ -215,10 +221,7 @@ export default function JoinTeam() {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
           },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
+
           {
             type: "longAnswer",
             question:
@@ -236,49 +239,10 @@ export default function JoinTeam() {
           },
         ],
       },
-      {
-        role: "TikTok Content Manager",
-
-        department: "Marketing",
-        responsibility: [
-          "Craft visually stunning and engaging video content to delight and entertain the programming community.",
-          "Utilize state-of-the-art video editing tools to meticulously edit and refine content.",
-          "Conduct extensive research to identify and develop novel and compelling ideas.",
-        ],
-        shortDescription:
-          "Create engaging video content for our TikTok platform.",
-        requirements: [
-          "Proven experience with video content creation.",
-          "Proficiency in video editing tools.",
-        ],
-        questions: [
-          { type: "shortAnswer", question: "What is your full name?" },
-          { type: "shortAnswer", question: "How old are you?" },
-          { type: "shortAnswer", question: "What is your email?" },
-          {
-            type: "longAnswer",
-            question: "What does Tech Optimum's mission mean to you?",
-          },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
-          {
-            type: "longAnswer",
-            question:
-              "Share an example of a TikTok video you've produced or contributed to. Describe the objective and the impact it had.",
-          },
-          {
-            type: "checkbox",
-            question:
-              "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.",
-            options: ["Yes"],
-          },
-        ],
-      },
+   
 
       {
-        role: "Website Designer",
+        role: "UX Designer",
 
         department: "Technology",
         responsibility: [
@@ -301,10 +265,7 @@ export default function JoinTeam() {
             type: "longAnswer",
             question: "What does Tech Optimum's mission mean to you?",
           },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
+       
           {
             type: "shortAnswer",
             question: "Do you prefer Figma or AdobeXD? Why?",
@@ -322,82 +283,11 @@ export default function JoinTeam() {
           },
         ],
       },
-      {
-        role: "Website Developer",
 
-        department: "Technology",
-        responsibility: [
-          "Contribute to the development and maintenance of the website.",
-          "Execute design implementations using technologies such as NodeJS, CSS, and Next.js/React.js.",
-        ],
-        shortDescription:
-          "Develop and maintain the website using cutting-edge technologies like NodeJS, CSS, and Next.js/React.js.",
-        requirements: [
-          "Proven experience as a Web Developer",
-          "Strong proficiency in NodeJS, CSS, Next.js/React.js",
-          "Excellent problem-solving skills",
-          "Ability to manage multiple assignments simultaneously",
-        ],
-        questions: [
-          { type: "shortAnswer", question: "What is your full name?" },
-          { type: "shortAnswer", question: "How old are you?" },
-          { type: "shortAnswer", question: "What is your email?" },
-          {
-            type: "longAnswer",
-            question: "What does Tech Optimum's mission mean to you?",
-          },
-          {
-            type: "shortAnswer",
-            question: "In which timezone are you located?",
-          },
-          {
-            type: "shortAnswer",
-            question:
-              "Describe your level of experience with Next.js/React.js.",
-          },
-          {
-            type: "longAnswer",
-            question:
-              "Share a challenging bug or problem you encountered and how you resolved it.",
-          },
-          {
-            type: "checkbox",
-            question:
-              "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.",
-            options: ["Yes"],
-          },
-        ],
-      },
+     
       {
-        role: "Coding Course Assessment Creator",
-        department: "Education",
-        responsibility: [
-          "Design coding challenges, quizzes, and project-based assessments tailored to the objectives of our coding courses.",
-          "Collaborate with coding instructors to ensure the assessments align with the course material and learning objectives.",
-          "Analyze student performance data to refine and improve assessment quality.",
-          "Ensure assessments test not only basic coding syntax but also problem-solving and algorithmic thinking."
-        ],
-        shortDescription: "Create assessments to gauge student proficiency and understanding in our coding courses.",
-        requirements: [
-          "Strong knowledge in various programming languages and coding paradigms.",
-          "Understanding of pedagogical methods related to coding and computer science.",
-          "Experience in educational settings, specifically around coding or computer science education.",
-          "Excellent attention to detail."
-        ],
-        questions: [
-          { type: "shortAnswer", question: "What is your full name?" },
-          { type: "shortAnswer", question: "How old are you?" },
-          { type: "shortAnswer", question: "What is your email?" },
-          { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
-          { type: "shortAnswer", question: "In which timezone are you located?" },
-          { type: "longAnswer", question: "Describe your experience in creating coding assessments. What are some key elements you focus on?" },
-          { type: "shortAnswer", question: "In which programming languages are you proficient?" },
-          { type: "checkbox", question: "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.", options: ["Yes"] }
-        ]
-      },
-      {
-        role: "Online Hackathon Organizer",
-        department: "Events",
+        role: "Hackathon Organizer",
+        department: "Operations",
         responsibility: [
           "Plan, coordinate, and execute online hackathons focused on coding and technology.",
           "Work closely with sponsors, mentors, and team members to ensure a smooth and enriching experience for participants.",
@@ -417,16 +307,14 @@ export default function JoinTeam() {
           { type: "shortAnswer", question: "How old are you?" },
           { type: "shortAnswer", question: "What is your email?" },
           { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
-          { type: "shortAnswer", question: "In which timezone are you located?" },
           { type: "longAnswer", question: "Describe a successful event you've helped organize in the past. What were the key factors that contributed to its success?" },
           { type: "shortAnswer", question: "How familiar are you with various online event platforms?" },
           { type: "checkbox", question: "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.", options: ["Yes"] }
         ]
       },
       {
-        role: "Partnership/Sponsorship Manager",
-        application: "https://forms.gle/YourGoogleFormLinkHere",
-        department: "Partnerships",
+        role: "Partnerships Manager",
+        department: "Operations",
         responsibility: [
           "Identify, contact, and negotiate with potential sponsors and partners to secure financial and in-kind support.",
           "Maintain and manage relationships with existing sponsors and partners.",
@@ -446,7 +334,6 @@ export default function JoinTeam() {
           { type: "shortAnswer", question: "How old are you?" },
           { type: "shortAnswer", question: "What is your email?" },
           { type: "longAnswer", question: "What does Tech Optimum's mission mean to you?" },
-          { type: "shortAnswer", question: "In which timezone are you located?" },
           { type: "longAnswer", question: "Describe a successful partnership or sponsorship deal you've negotiated in the past. What were the key factors that contributed to its success?" },
           { type: "shortAnswer", question: "How would you approach a potential new sponsor for Tech Optimum?" },
           { type: "checkbox", question: "By pressing yes, you confirm that you understand the requirements and responsibilities should you be chosen for this position.", options: ["Yes"] }
@@ -654,6 +541,17 @@ export default function JoinTeam() {
                     </chakra.li>
                     <chakra.li>Gain new skills and leadership</chakra.li>
                   </chakra.ul>
+                  <Text fontSize="sm">
+                    If you have any questions, please contact us at{" "}
+                    <Link
+                      color="blue.800"
+                      href="mailto:team@techoptimum.org"
+                      isExternal
+                    >
+                      team@techoptimum.org
+                    </Link>
+                  </Text>
+
                 </Flex>
               </SlideFade>
               <SlideFade in={showForm} unmountOnExit={true} offsetY="20px">
