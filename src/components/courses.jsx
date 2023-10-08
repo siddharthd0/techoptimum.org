@@ -94,7 +94,7 @@ const Courses = () => {
     <>
       <Box
       
-        pt="2rem"
+        pt="1rem"
         mt={["0rem", "4rem"]}
         maxW="1070px"
         mx="auto"

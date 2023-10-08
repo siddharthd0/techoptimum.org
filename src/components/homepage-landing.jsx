@@ -107,7 +107,7 @@ export default function Mission() {
           Every student deserves access to computer science education.
         </Heading>
         <Text mt="1rem" color="primary">
-          Tech Optimum is committed to bridging the digital divide by providing
+          Tech Optimum is committed to bridging the educational gap by providing
           an online learning platform, resources, and tools dedicated to
           computer science education for students across the globe.
         </Text>
