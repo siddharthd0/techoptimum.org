@@ -56,7 +56,7 @@ export default function Home() {
     <Box my={["20px", "130px"]} px={5}>
       <Popup />
       <HeroHeader />
-      <Heading fontSize="4xl" textAlign="center" color="black" mt="50px">
+      <Heading fontSize="4xl" textAlign="center" color="black" mt="70px">
         Partners & Sponsors
       </Heading>
       <Heading
