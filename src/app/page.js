@@ -12,31 +12,36 @@ import Sponsors from "@/components/sponsors";
 const sponsorsData = [
   { imagePath: "/sponsors/open-ai.png", link: "https://openai.com" },
   { imagePath: "/sponsors/azure.png", link: "https://azure.microsoft.com" },
-
-  { imagePath: "/sponsors/desmos.png", link: "https://desmos.com" },
-  { imagePath: "/sponsors/cocalc.png", link: "https://cocalc.com" },
-  { imagePath: "/sponsors/axure.svg", link: "https://axure.com" },
   { imagePath: "/sponsors/google.png", link: "https://google.com" },
   {
-    imagePath: "/sponsors/interview-cake.jpg",
-    link: "https://interviewcake.com",
-  },
-  {
-    imagePath: "/sponsors/wolfram.png",
-    link: "https://wolfram.com",
-  },
-  {
-    imagePath: "/sponsors/aops.png",
-    link: "https://artofproblemsolving.com",
+    imagePath: "/sponsors/replit.png",
+    link: "https://replit.com",
   },
   {
     imagePath: "/sponsors/mercury.png",
     link: "https://mercury.com",
   },
+
+  { imagePath: "/sponsors/desmos.png", link: "https://desmos.com" },
   {
-    imagePath: "/sponsors/replit.png",
-    link: "https://replit.com",
+    imagePath: "/sponsors/wolfram.png",
+    link: "https://wolfram.com",
   },
+ 
+  { imagePath: "/sponsors/axure.svg", link: "https://axure.com" },
+  
+  {
+    imagePath: "/sponsors/interview-cake.jpg",
+    link: "https://interviewcake.com",
+  },
+ 
+  {
+    imagePath: "/sponsors/aops.png",
+    link: "https://artofproblemsolving.com",
+  },
+  
+ 
+  { imagePath: "/sponsors/cocalc.png", link: "https://cocalc.com" },
   {
     imagePath: "/sponsors/taskade.png",
     link: "https://taskade.com",
