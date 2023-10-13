@@ -12,7 +12,6 @@ import Sponsors from "@/components/sponsors";
 const sponsorsData = [
   { imagePath: "/sponsors/open-ai.png", link: "https://openai.com" },
   { imagePath: "/sponsors/azure.png", link: "https://azure.microsoft.com" },
-  { imagePath: "/sponsors/google.png", link: "https://google.com" },
   {
     imagePath: "/sponsors/replit.png",
     link: "https://replit.com",
@@ -27,20 +26,19 @@ const sponsorsData = [
     imagePath: "/sponsors/wolfram.png",
     link: "https://wolfram.com",
   },
- 
+
   { imagePath: "/sponsors/axure.svg", link: "https://axure.com" },
-  
+
   {
     imagePath: "/sponsors/interview-cake.jpg",
     link: "https://interviewcake.com",
   },
- 
+
   {
     imagePath: "/sponsors/aops.png",
     link: "https://artofproblemsolving.com",
   },
-  
- 
+
   { imagePath: "/sponsors/cocalc.png", link: "https://cocalc.com" },
   {
     imagePath: "/sponsors/taskade.png",
@@ -61,11 +59,16 @@ export default function Home() {
     <Box my={["20px", "130px"]} px={5}>
       <Popup />
       <HeroHeader />
-      <Heading fontSize="4xl" textAlign="center" color="black" mt="70px">
+      <Heading
+        fontSize={["3xl", "4xl"]}
+        textAlign="center"
+        color="black"
+        mt="70px"
+      >
         Partners & Sponsors
       </Heading>
       <Heading
-        fontSize="xl"
+        fontSize={["md", "xl"]}
         textAlign="center"
         color="blackAlpha.800"
         fontWeight="medium"
