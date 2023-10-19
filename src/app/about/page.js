@@ -56,15 +56,7 @@ export default function About() {
               linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
               description="Meet Aditya, a dedicated student with a keen interest in coding and helping people. He finds great satisfaction in applying his technical skills to projects that serve underserved communities, demonstrating a deep commitment to social impact. Outside the digital domain, Aditya enjoys staying active with tennis and basketball. "
             />
-            <ExecutiveCard
-              src="/PranithPortraitv2.JPG"
-              name="Pranith Molakalapalli"
-              role="Chief Technology Officer"
-              linkedin="https://www.linkedin.com/in/pranith-molakalapalli/"
-              description={
-                "Pranith is a senior in high school living life as a programming enthusiast looking forward to competing in hackathons and collaborating on projects that have a societal impact. Apart from his passion for computer science, he plays tennis, video games, and loves to sleep."
-              }
-            />
+        
           </Wrap>
         </Flex>
       </Flex>
