@@ -246,8 +246,8 @@ export default function MissionValues() {
             </Link>
             <Divider borderColor="whiteAlpha.400" pt="5px" mb="14px" />
             <Text fontSize="sm">
-              With your support, we can make give technology, such as
-              Laptops/PCs to people in-need to allow for them to thrive in the
+              With your support, we can give technology, such as
+              Laptops & PC's, to people in-need to allow for them to thrive in the
               tech industry.
             </Text>
           </Box>
