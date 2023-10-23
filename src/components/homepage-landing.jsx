@@ -30,13 +30,13 @@ export default function Mission() {
       borderRadius="md"
       bg="blackAlpha.50"
       py={["100px", "25px"]}
-      px={{ base: "1rem", lg: "2rem" }}
+      px={{ base: "1rem", lg: "1.5rem" }}
       mb="6rem"
       alignItems="center"
       margin="auto"
       maxW="1070px"
     >
-      <Box pr={{ md: "1.5rem", lg: "5rem"}} maxW={boxMaxWidth} position="relative">
+      <Box pr={{ md: "1.5rem", lg: "3.5rem"}} maxW={boxMaxWidth} position="relative">
         <Image
           fit="fill"
           borderRadius="md"
@@ -50,7 +50,7 @@ export default function Mission() {
           color="white"
           p={[1]}
           borderRadius="md"
-          ml={["0", "1rem"]}
+          ml={["0", ".8rem"]}
         >
           <Link
             _hover={{

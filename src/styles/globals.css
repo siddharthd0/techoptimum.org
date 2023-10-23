@@ -651,3 +651,175 @@ input:focus {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
+
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;0,700;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+
+  font-family: "IBM Plex Sans", sans-serif !important;
+  overflow-x: hidden !important;
+}
+
+
+
+
+
+pre {
+  margin-top: 10px !important;
+  font-size: 13.5px !important;
+
+  margin-bottom: 16px !important;
+  border-radius: 6px !important;
+
+}
+
+.chapter-content p code {
+  padding: 2px 5px;
+  font-weight: 500;
+  background-color: rgb(176, 176, 176) !important;
+  color: rgb(0, 0, 0) !important;
+  border-radius: 2px;
+}
+
+code {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15, 7, 40);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 42, 81);
+  border-radius: 5px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(32, 42, 81) #222;
+  overflow-x: none !important;
+}
+
+.logo-spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+ul li {
+  margin-left: 10px;
+}
+
+em {
+  font-weight: 800;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+li {
+  color: #3e3e3e;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.chapter-content {
+  color: #3e3e3e !important;
+}
+
+.chapter-content h1 {
+  font-size: 30px;
+
+}
+
+.chapter-content h2 {
+  font-size: 26px;
+  padding-top: 8px;
+}
+
+.chapter-content h3 {
+  font-size: 22px !important;
+}
+
+.chapter-content h4 {
+  font-size: 18px !important;
+}
+
+.chapter-content h5 {
+  font-size: 16px !important;
+}
+
+.chapter-content h6 {
+  font-size: 14px !important;
+}
+
+.chapter-content hr {
+  border-color: #b6b6b6;
+  margin-top: 7px !important;
+  padding-bottom: 7px;
+}
+
+.chapter-content a {
+  padding-bottom: 1.5px;
+  font-weight: 400;
+  color: rgb(0, 119, 255);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(75, 147, 255);
+  transition: 0.18s all !important;
+}
+
+.chapter-content a:hover {
+  padding-bottom: 2.5px;
+  border-bottom-color: rgb(67, 155, 255);
+  border-bottom: 3px solid rgb(67, 155, 255);
+}
+
+
+
+.link:hover {
+  padding-bottom: 2.5px;
+  border-bottom-color: rgb(190, 220, 255);
+  border-bottom: 3px solid rgb(191, 219, 251);
+}
+
+.chapter-content p {
+  padding-top: 10px;
+  line-height: 26px;
+  color: #3e3e3e !important;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;  /* Adjust width for vertical scrollbars */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F0F0F0;  /* Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5a84d2;  /* Scrollbar color */
+  border-radius: 4px;  /* Rounded scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #798ee2;  /* Hover effect */
+}

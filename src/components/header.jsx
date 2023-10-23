@@ -38,12 +38,6 @@ const DefaultNavItems = [
     label: "Hackathons",
     children: [
       {
-        label: "Micro Hackathons",
-        subLabel:
-          "Check out our new cohort of micro hackathons - 8 hour hackathons",
-        href: "/micro-hackathons",
-      },
-      {
         label: "Tech Optimum Hacks 2023",
         subLabel: "Check out our annual hackathon held in August 2023",
         href: "https://hacks.techoptimum.org",
@@ -58,7 +52,7 @@ const DefaultNavItems = [
   },
 
   {
-    label: "Join Team",
+    label: "Volunteer",
     href: "/join-team",
   },
   {
@@ -69,7 +63,6 @@ const DefaultNavItems = [
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const [NAV_ITEMS, setNAV_ITEMS] = useState(DefaultNavItems);
-  /// hello
 
   return (
     <>
@@ -81,11 +74,11 @@ export default function WithSubnavigation() {
           left="0"
           right="0"
           pos={"fixed"}
-          mx={["1.5rem", "4rem"]}
+          mx={["1.5rem", "8.5rem"]}
           borderRadius="lg"
           boxShadow="0 0 10px rgba(0,0,0,0.1)"
           sx={{
-            backdropFilter: "blur(10px)",
+            backdropFilter: "blur(20px)",
           }}
         >
           <Flex
