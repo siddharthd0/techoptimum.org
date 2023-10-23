@@ -8,6 +8,7 @@ import Features from "@/components/features";
 import Approach from "@/components/approach";
 import Popup from "@/components/popup";
 import { Box, Heading } from "@chakra-ui/react";
+import TechGuru from "@/components/tech-guru-show-off";
 import Sponsors from "@/components/sponsors";
 const sponsorsData = [
   { imagePath: "/sponsors/open-ai.png", link: "https://openai.com" },
@@ -79,6 +80,7 @@ export default function Home() {
 
       <Sponsors sponsors={sponsorsData} />
       <Courses />
+      
       <Features />
       <Approach />
       <Finder />
