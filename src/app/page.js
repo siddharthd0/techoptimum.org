@@ -10,6 +10,8 @@ import Popup from "@/components/popup";
 import { Box, Heading } from "@chakra-ui/react";
 import TechGuru from "@/components/tech-guru-show-off";
 import Sponsors from "@/components/sponsors";
+import ProgressCheck from "@/components/progress-check-show-off";
+import ChapterContent from "@/components/chapter-content-show";
 const sponsorsData = [
   { imagePath: "/sponsors/open-ai.png", link: "https://openai.com" },
   { imagePath: "/sponsors/azure.png", link: "https://azure.microsoft.com" },
@@ -80,7 +82,7 @@ export default function Home() {
 
       <Sponsors sponsors={sponsorsData} />
       <Courses />
-      
+    
       <Features />
       <Approach />
       <Finder />
