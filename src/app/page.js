@@ -82,6 +82,9 @@ export default function Home() {
 
       <Sponsors sponsors={sponsorsData} />
       <Courses />
+     { /*<ProgressCheck />
+      <ChapterContent />
+      <TechGuru/>*/}
     
       <Features />
       <Approach />
