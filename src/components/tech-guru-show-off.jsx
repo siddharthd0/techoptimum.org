@@ -68,12 +68,12 @@ const UserMessage = ({ message, user, index }) => {
       >
         <Box
           borderBottomRightRadius={"0px !important"}
-          border="1px"
+          border="2px"
           borderColor="green.300"
           px="8px"
           py="4px"
           borderRadius="lg"
-          boxShadow="0 3.5px 16px 0px rgba(46, 182, 125, 0.5), 0 2px 4px -1px rgba(46, 182, 125, 0.1)"
+          // boxShadow="0 3.5px 16px 0px rgba(46, 182, 125, 0.5), 0 2px 4px -1px rgba(46, 182, 125, 0.1)"
         >
           <Text>{message}</Text>
         </Box>
@@ -103,20 +103,20 @@ const GuruMessage = ({ message, index }) => {
         <Flex mr=".9rem" my="10px" alignItems="flex-end">
           <Box pb="2px">
             <Image
-            minW="35px"
+              minW="35px"
               src="/glyph-black-transparent.png"
               width="30px !important"
               alt="Guru Icon"
             />
           </Box>
           <Box
-            border="1px"
+            border="2px"
             borderColor="blue.300"
             mr="2rem"
             px="8px"
             borderBottomLeftRadius={"0px !important"}
             borderRadius="lg"
-            boxShadow="0 3.5px 16px 0px rgba(66, 153, 225, 0.5), 0 2px 4px -1px rgba(66, 153, 225, 0.1)"
+            // boxShadow="0 3.5px 16px 0px rgba(66, 153, 225, 0.5), 0 2px 4px -1px rgba(66, 153, 225, 0.1)"
           >
             <Box px="10px" className="chapter-content">
               <ReactMarkdown
@@ -191,7 +191,15 @@ const TechGuruFeature = () => {
   };
 
   return (
-    <Flex width="500px" flexDirection="column" mx="auto" my={5}>
+    <Flex
+      // width="500px"
+      flexDirection="column"
+      mx="auto"
+      my={5}
+      pb="3rem"
+      mb="2rem"
+      borderBottom="1px solid #eaeaea"
+    >
       <VStack alignItems="stretch" spacing={3}>
         <Box
           pt=".5rem"

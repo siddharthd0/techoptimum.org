@@ -12,12 +12,13 @@ import {
   Text,
   IconButton,
   useToast,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import { BsSend } from "react-icons/bs";
 import ReactMarkdown from "react-markdown";
 import { Prism } from "react-syntax-highlighter";
 import { CheckIcon, CopyIcon } from "@chakra-ui/icons";
-import { useClipboard } from "@chakra-ui/react";
+import { useClipboard, Flex } from "@chakra-ui/react";
 
 function Chapter() {
   const [showQuestions, setShowQuestions] = useState(false);
@@ -79,10 +80,13 @@ function Chapter() {
       </Button>
       <Modal isOpen={showQuestions} onClose={() => setShowQuestions(false)}>
         <ModalOverlay />
-        <ModalContent mx="2rem" bg="fourth" color="black" bg="white">
-          <ModalHeader pb="0" color="primary">
-            Intro to Javascript Questions
-          </ModalHeader>
+        <ModalContent mx="2rem" color="black" bg="white">
+          <Flex pb="0" justifyContent="space-between" alignItems="center">
+            <ModalHeader color="primary" whiteSpace="nowrap">
+              Intro to Javascript Questions
+            </ModalHeader>
+            <ModalCloseButton mt="8px"></ModalCloseButton>
+          </Flex>
           <ModalBody>
             {mockQuestions.map((question, questionIndex) => (
               <div key={question._id}>
@@ -171,7 +175,7 @@ function Chapter() {
                               ];
                             });
                           }}
-                          style={{ display: 'none' }} 
+                          style={{ display: "none" }}
                         />
                         <label
                           htmlFor={`radio-${option._id}`}
@@ -189,8 +193,12 @@ function Chapter() {
                             backgroundColor: "transparent",
                             padding: "14px",
                           }}
-                          onMouseOver={(e) => e.currentTarget.style.backgroundColor = "#e2e4e7"} // Darken the background on hover
-                          onMouseOut={(e) => e.currentTarget.style.backgroundColor = "#f2f4f7"} // Reset the background color
+                          onMouseOver={(e) =>
+                            (e.currentTarget.style.backgroundColor = "#e2e4e7")
+                          } // Darken the background on hover
+                          onMouseOut={(e) =>
+                            (e.currentTarget.style.backgroundColor = "#f2f4f7")
+                          } // Reset the background color
                         >
                           {String.fromCharCode(65 + index)}
                         </label>
@@ -211,7 +219,7 @@ function Chapter() {
           </ModalBody>
           <ModalFooter>
             <Text fontSize="sm" color="tertiary" mr="auto">
-               This progress check is a demo.
+              This progress check is a demo.
             </Text>
           </ModalFooter>
         </ModalContent>

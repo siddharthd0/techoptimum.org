@@ -82,9 +82,17 @@ export default function Home() {
 
       <Sponsors sponsors={sponsorsData} />
       <Courses />
-     { /*<ProgressCheck />
-      <ChapterContent />
-      <TechGuru/>*/}
+      <Box  pt="1rem"
+        mt={["0rem", "4rem"]}
+        maxW="1070px"
+        mx="auto"
+        direction={"column"} width="100%" display="flex" justifyContent="start" alignItems="center">
+        <Box>
+          <ProgressCheck />
+          <ChapterContent />
+          <TechGuru/> 
+        </Box>
+      </Box>
     
       <Features />
       <Approach />
