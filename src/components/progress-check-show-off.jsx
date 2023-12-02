@@ -23,6 +23,7 @@ import { useClipboard, Flex } from "@chakra-ui/react";
 function Chapter() {
   const [showQuestions, setShowQuestions] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
+  const [hasCopied, setHasCopied] = useState({});
   const toast = useToast();
 
   const handleAnswer = (isCorrect) => {
@@ -95,30 +96,32 @@ function Chapter() {
                     questionIndex + 1
                   }`}</Badge>
                   <ReactMarkdown
-                    children={question.question}
                     components={{
                       code({ node, inline, className, children, ...props }) {
                         const match = /language-(\w+)/.exec(className || "");
                         const textToCopy = String(children).replace(/\n$/, "");
-                        const { hasCopied, onCopy } = useClipboard(textToCopy);
+                        setHasCopied({...hasCopied, [textToCopy]: false})
 
                         return !inline && match ? (
                           <Box position="relative">
                             <Prism
                               {...props}
-                              children={textToCopy}
                               language={match[1]}
                               PreTag="div"
-                            />
+                            >{textToCopy}</Prism>
                             <Box position="absolute" top="5px" right="6px">
                               <IconButton
                                 border="none"
                                 background="none"
                                 color="whiteAlpha.900"
-                                onClick={onCopy}
+                                onClick={() => {
+                                  navigator.clipboard.writeText(textToCopy).then(() => {
+                                    setHasCopied({...hasCopied, [textToCopy]: true})
+                                  });
+                                }}
                                 aria-label="Copy to clipboard"
                                 icon={
-                                  hasCopied ? (
+                                  hasCopied[textToCopy] ? (
                                     <CheckIcon color="rgb(67, 155, 255)" />
                                   ) : (
                                     <CopyIcon />
@@ -132,7 +135,7 @@ function Chapter() {
                         );
                       },
                     }}
-                  />
+                  >{question.question}</ReactMarkdown>
                 </Box>
                 <Text
                   mb="10px"

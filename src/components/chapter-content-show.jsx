@@ -31,6 +31,8 @@ import ReactMarkdown from "react-markdown";
 import style from "@/styles/react-highlighter";
 
 const ChapterContent = ({ content, index }) => {
+  const [hasCopied, setHasCopied] = useState({});
+
   return (
     <Flex my="10px" direction="column">
       <Box
@@ -126,17 +128,17 @@ const ChapterContent = ({ content, index }) => {
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "");
                 const textToCopy = String(children).replace(/\n$/, "");
-                const { hasCopied, onCopy } = useClipboard(textToCopy);
+                // const { hasCopied, onCopy } = useClipboard(textToCopy);
+                setHasCopied({...hasCopied, [textToCopy]: false})
 
                 return !inline && match ? (
                   <Box position="relative">
                     <Prism
                       {...props}
-                      children={textToCopy}
                       style={style}
                       language={match[1]}
                       PreTag="div"
-                    />
+                    >{textToCopy}</Prism>
                     <Box position="absolute" top="5px" right="6px">
                       <IconButton
                         _hover={{
@@ -146,10 +148,14 @@ const ChapterContent = ({ content, index }) => {
                         border="none"
                         background="none"
                         color="whiteAlpha.900"
-                        onClick={onCopy}
+                        onClick={() => {
+                          navigator.clipboard.writeText(textToCopy).then(() => {
+                            setHasCopied({...hasCopied, [textToCopy]: true})
+                          });
+                        }}
                         aria-label="Copy to clipboard"
                         icon={
-                          hasCopied ? (
+                          hasCopied[textToCopy] ? (
                             <CheckIcon color="rgb(67, 155, 255)" />
                           ) : (
                             <CopyIcon />
