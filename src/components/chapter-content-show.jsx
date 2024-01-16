@@ -73,7 +73,7 @@ const ChapterContent = ({ content, index }) => {
               as={Button}
               rightIcon={<ChevronDownIcon />}
             >
-              Variables
+              Getting Setup & Basics
             </MenuButton>
             <MenuList color="primary">
               <MenuItem
@@ -81,7 +81,7 @@ const ChapterContent = ({ content, index }) => {
                 as="a"
                 textDecoration="none !important"
               >
-                Lesson 1
+                Lesson 1: Getting Setup & Basics
               </MenuItem>
             </MenuList>
           </Menu>

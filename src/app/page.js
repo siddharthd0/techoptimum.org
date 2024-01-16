@@ -8,10 +8,9 @@ import Features from "@/components/features";
 import Approach from "@/components/approach";
 import Popup from "@/components/popup";
 import { Box, Heading } from "@chakra-ui/react";
-import TechGuru from "@/components/tech-guru-show-off";
 import Sponsors from "@/components/sponsors";
-import ProgressCheck from "@/components/progress-check-show-off";
-import ChapterContent from "@/components/chapter-content-show";
+import DashboardShowoff from "@/components/dashboard-showoff";
+
 const sponsorsData = [
   { imagePath: "/sponsors/open-ai.png", link: "https://openai.com" },
   { imagePath: "/sponsors/azure.png", link: "https://azure.microsoft.com" },
@@ -82,17 +81,8 @@ export default function Home() {
 
       <Sponsors sponsors={sponsorsData} />
       <Courses />
-      <Box  pt="1rem"
-        mt={["0rem", "4rem"]}
-        maxW="1070px"
-        mx="auto"
-        direction={"column"} width="100%" display="flex" justifyContent="start" alignItems="center">
-        <Box>
-          <ProgressCheck />
-          <ChapterContent />
-          <TechGuru/> 
-        </Box>
-      </Box>
+      
+      <DashboardShowoff />
     
       <Features />
       <Approach />

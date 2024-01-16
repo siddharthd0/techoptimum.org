@@ -77,7 +77,7 @@ function Chapter() {
   return (
     <Box>
       <Button onClick={() => setShowQuestions(true)}>
-        Intro to Javascript Questions
+        Check here for a progress check
       </Button>
       <Modal isOpen={showQuestions} onClose={() => setShowQuestions(false)}>
         <ModalOverlay />
