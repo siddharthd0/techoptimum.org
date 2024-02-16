@@ -27,7 +27,7 @@ function dashboardShowoff() {
         >
           Our Dashboard
         </Heading>
-        <Box display="flex" justifyContent="start"
+        <Box display="flex" justifyContent="center"
         alignItems="center" width="100%" mb="20px">
           <Text color={tab == "content" ? "blue.500" : "grey"} borderBottom="2px" borderColor={tab == "content" ? "blue.500" : "grey"} _hover={{ borderColor: "blue.200", color: "blue.200", cursor: "pointer" }} mr="30px" px="4px" onClick={() => setTab("content")}>1. Quality Content & Videos</Text>
           <Text color={tab == "questions" ? "blue.500" : "grey"} borderBottom="2px" borderColor={tab == "questions" ? "blue.500" : "grey"} _hover={{ borderColor: "blue.200", color: "blue.200", cursor: "pointer" }} mr="30px" px="4px" onClick={() => setTab("questions")}>2. Progress Check w/ Questions</Text>
