@@ -68,12 +68,12 @@ const UserMessage = ({ message, user, index }) => {
       >
         <Box
           borderBottomRightRadius={"0px !important"}
-          border="1px"
+          border="2px"
           borderColor="green.300"
           px="8px"
           py="4px"
           borderRadius="lg"
-          boxShadow="0 3.5px 16px 0px rgba(46, 182, 125, 0.5), 0 2px 4px -1px rgba(46, 182, 125, 0.1)"
+          // boxShadow="0 3.5px 16px 0px rgba(46, 182, 125, 0.5), 0 2px 4px -1px rgba(46, 182, 125, 0.1)"
         >
           <Text>{message}</Text>
         </Box>
@@ -90,6 +90,7 @@ const GuruMessage = ({ message, index }) => {
     threshold: 0.1,
     triggerOnce: true,
   });
+  const [hasCopied, setHasCopied] = useState({});
 
   return (
     <>
@@ -103,20 +104,20 @@ const GuruMessage = ({ message, index }) => {
         <Flex mr=".9rem" my="10px" alignItems="flex-end">
           <Box pb="2px">
             <Image
-            minW="35px"
+              minW="35px"
               src="/glyph-black-transparent.png"
               width="30px !important"
               alt="Guru Icon"
             />
           </Box>
           <Box
-            border="1px"
+            border="2px"
             borderColor="blue.300"
             mr="2rem"
             px="8px"
             borderBottomLeftRadius={"0px !important"}
             borderRadius="lg"
-            boxShadow="0 3.5px 16px 0px rgba(66, 153, 225, 0.5), 0 2px 4px -1px rgba(66, 153, 225, 0.1)"
+            // boxShadow="0 3.5px 16px 0px rgba(66, 153, 225, 0.5), 0 2px 4px -1px rgba(66, 153, 225, 0.1)"
           >
             <Box px="10px" className="chapter-content">
               <ReactMarkdown
@@ -124,17 +125,16 @@ const GuruMessage = ({ message, index }) => {
                   code({ node, inline, className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || "");
                     const textToCopy = String(children).replace(/\n$/, "");
-                    const { hasCopied, onCopy } = useClipboard(textToCopy);
+                    setHasCopied({...hasCopied, [textToCopy]: false})
 
                     return !inline && match ? (
                       <Box position="relative">
                         <Prism
                           {...props}
-                          children={textToCopy}
                           style={style}
                           language={match[1]}
                           PreTag="div"
-                        />
+                        >{textToCopy}</Prism>
                         <Box position="absolute" top="5px" right="6px">
                           <IconButton
                             _hover={{
@@ -144,10 +144,14 @@ const GuruMessage = ({ message, index }) => {
                             border="none"
                             background="none"
                             color="whiteAlpha.900"
-                            onClick={onCopy}
+                            onClick={() => {
+                              navigator.clipboard.writeText(textToCopy).then(() => {
+                                setHasCopied({...hasCopied, [textToCopy]: true})
+                              });
+                            }}
                             aria-label="Copy to clipboard"
                             icon={
-                              hasCopied ? (
+                              hasCopied[textToCopy] ? (
                                 <CheckIcon color="rgb(67, 155, 255)" />
                               ) : (
                                 <CopyIcon />
@@ -191,7 +195,15 @@ const TechGuruFeature = () => {
   };
 
   return (
-    <Flex width="500px" flexDirection="column" mx="auto" my={5}>
+    <Flex
+      // width="500px"
+      flexDirection="column"
+      mx="auto"
+      my={5}
+      pb="3rem"
+      mb="2rem"
+      borderBottom="1px solid #eaeaea"
+    >
       <VStack alignItems="stretch" spacing={3}>
         <Box
           pt=".5rem"

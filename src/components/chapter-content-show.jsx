@@ -31,10 +31,12 @@ import ReactMarkdown from "react-markdown";
 import style from "@/styles/react-highlighter";
 
 const ChapterContent = ({ content, index }) => {
+  const [hasCopied, setHasCopied] = useState({});
+
   return (
     <Flex my="10px" direction="column">
       <Box
-        px="3rem"
+        // px="3rem"
         position="sticky"
         bg="white"
         top="56px"
@@ -71,7 +73,7 @@ const ChapterContent = ({ content, index }) => {
               as={Button}
               rightIcon={<ChevronDownIcon />}
             >
-              Variables
+              Getting Setup & Basics
             </MenuButton>
             <MenuList color="primary">
               <MenuItem
@@ -79,7 +81,7 @@ const ChapterContent = ({ content, index }) => {
                 as="a"
                 textDecoration="none !important"
               >
-                lesson 1
+                Lesson 1: Getting Setup & Basics
               </MenuItem>
             </MenuList>
           </Menu>
@@ -98,7 +100,7 @@ const ChapterContent = ({ content, index }) => {
       <Heading
         className="heading"
         fontWeight="500"
-        px="3rem"
+        // px="3rem"
         mb="10px"
         fontSize="3xl"
         color="primary"
@@ -106,7 +108,13 @@ const ChapterContent = ({ content, index }) => {
       >
         Lesson 1: Getting Setup & Basics
       </Heading>
-      <AspectRatio my="1rem" ml="3rem" maxW={`90%`} ratio={16 / 9}>
+      <AspectRatio
+        my="1rem"
+        // ml="3rem"
+        // maxW={`90%`}
+        maxW={`98%`}
+        ratio={16 / 9}
+      >
         <iframe
           src="https://www.youtube.com/embed/RQzB6oRgi2g?si=aMPvGOByXVSPy_8H"
           title="Intro to Javascript Lesson 1"
@@ -120,17 +128,17 @@ const ChapterContent = ({ content, index }) => {
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "");
                 const textToCopy = String(children).replace(/\n$/, "");
-                const { hasCopied, onCopy } = useClipboard(textToCopy);
+                // const { hasCopied, onCopy } = useClipboard(textToCopy);
+                setHasCopied({...hasCopied, [textToCopy]: false})
 
                 return !inline && match ? (
                   <Box position="relative">
                     <Prism
                       {...props}
-                      children={textToCopy}
                       style={style}
                       language={match[1]}
                       PreTag="div"
-                    />
+                    >{textToCopy}</Prism>
                     <Box position="absolute" top="5px" right="6px">
                       <IconButton
                         _hover={{
@@ -140,10 +148,14 @@ const ChapterContent = ({ content, index }) => {
                         border="none"
                         background="none"
                         color="whiteAlpha.900"
-                        onClick={onCopy}
+                        onClick={() => {
+                          navigator.clipboard.writeText(textToCopy).then(() => {
+                            setHasCopied({...hasCopied, [textToCopy]: true})
+                          });
+                        }}
                         aria-label="Copy to clipboard"
                         icon={
-                          hasCopied ? (
+                          hasCopied[textToCopy] ? (
                             <CheckIcon color="rgb(67, 155, 255)" />
                           ) : (
                             <CopyIcon />
@@ -171,7 +183,12 @@ const ChapterContent = ({ content, index }) => {
 
 const ChapterPreview = () => {
   return (
-    <Flex width="700px" flexDirection="column" mx="auto" my={5}>
+    <Flex
+      // width="700px"
+      flexDirection="column"
+      mx="auto"
+      my={5}
+    >
       <ChapterContent
         index={6}
         content={`JavaScript is a versatile, high-level programming language that is primarily used for adding interactive features to websites. It's one of the core technologies of the web, alongside HTML and CSS. Despite its name, it's unrelated to Java.
