@@ -1,4 +1,4 @@
-export default {
+const reactHighlighterStyle = {
     'code[class*="language-"]': {
       background: "hsl(220, 13%, 18%)",
       color: "hsl(220, 14%, 71%)",
@@ -511,4 +511,6 @@ export default {
       stroke: "hsl(220, 14%, 71%)",
     },
   };
+
+export default reactHighlighterStyle;
   

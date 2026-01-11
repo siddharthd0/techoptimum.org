@@ -30,6 +30,49 @@ import {
 import ReactMarkdown from "react-markdown";
 import style from "@/styles/react-highlighter";
 
+const CodeBlock = ({ inline, className, children, ...props }) => {
+  const match = /language-(\w+)/.exec(className || "");
+  const textToCopy = String(children).replace(/\n$/, "");
+  const { hasCopied, onCopy } = useClipboard(textToCopy);
+
+  if (inline || !match) {
+    return <code {...props} className={className}>{children}</code>;
+  }
+
+  return (
+    <Box position="relative">
+      <Prism
+        {...props}
+        style={style}
+        language={match[1]}
+        PreTag="div"
+      >
+        {textToCopy}
+      </Prism>
+      <Box position="absolute" top="5px" right="6px">
+        <IconButton
+          _hover={{
+            backgroundColor: "transparent !important",
+            color: "blue.200 !important",
+          }}
+          border="none"
+          background="none"
+          color="whiteAlpha.900"
+          onClick={onCopy}
+          aria-label="Copy to clipboard"
+          icon={
+            hasCopied ? (
+              <CheckIcon color="rgb(67, 155, 255)" />
+            ) : (
+              <CopyIcon />
+            )
+          }
+        />
+      </Box>
+    </Box>
+  );
+};
+
 const ChapterContent = ({ content, index }) => {
   return (
     <Flex my="10px" direction="column">
@@ -117,47 +160,7 @@ const ChapterContent = ({ content, index }) => {
         <Box px="10px" className="chapter-content">
           <ReactMarkdown
             components={{
-              code({ node, inline, className, children, ...props }) {
-                const match = /language-(\w+)/.exec(className || "");
-                const textToCopy = String(children).replace(/\n$/, "");
-                const { hasCopied, onCopy } = useClipboard(textToCopy);
-
-                return !inline && match ? (
-                  <Box position="relative">
-                    <Prism
-                      {...props}
-                      children={textToCopy}
-                      style={style}
-                      language={match[1]}
-                      PreTag="div"
-                    />
-                    <Box position="absolute" top="5px" right="6px">
-                      <IconButton
-                        _hover={{
-                          backgroundColor: "transparent !important",
-                          color: "blue.200 !important",
-                        }}
-                        border="none"
-                        background="none"
-                        color="whiteAlpha.900"
-                        onClick={onCopy}
-                        aria-label="Copy to clipboard"
-                        icon={
-                          hasCopied ? (
-                            <CheckIcon color="rgb(67, 155, 255)" />
-                          ) : (
-                            <CopyIcon />
-                          )
-                        }
-                      />
-                    </Box>
-                  </Box>
-                ) : (
-                  <code {...props} className={className}>
-                    {children}
-                  </code>
-                );
-              },
+              code: CodeBlock,
             }}
             skipHtml
           >

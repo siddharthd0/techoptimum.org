@@ -19,6 +19,44 @@ import { Prism } from "react-syntax-highlighter";
 import { CheckIcon, CopyIcon } from "@chakra-ui/icons";
 import { useClipboard } from "@chakra-ui/react";
 
+const CodeBlock = ({ inline, className, children, ...props }) => {
+  const match = /language-(\w+)/.exec(className || "");
+  const textToCopy = String(children).replace(/\n$/, "");
+  const { hasCopied, onCopy } = useClipboard(textToCopy);
+
+  if (inline || !match) {
+    return <code className={className}>{children}</code>;
+  }
+
+  return (
+    <Box position="relative">
+      <Prism
+        {...props}
+        language={match[1]}
+        PreTag="div"
+      >
+        {textToCopy}
+      </Prism>
+      <Box position="absolute" top="5px" right="6px">
+        <IconButton
+          border="none"
+          background="none"
+          color="whiteAlpha.900"
+          onClick={onCopy}
+          aria-label="Copy to clipboard"
+          icon={
+            hasCopied ? (
+              <CheckIcon color="rgb(67, 155, 255)" />
+            ) : (
+              <CopyIcon />
+            )
+          }
+        />
+      </Box>
+    </Box>
+  );
+};
+
 function Chapter() {
   const [showQuestions, setShowQuestions] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
@@ -79,7 +117,7 @@ function Chapter() {
       </Button>
       <Modal isOpen={showQuestions} onClose={() => setShowQuestions(false)}>
         <ModalOverlay />
-        <ModalContent mx="2rem" bg="fourth" color="black" bg="white">
+        <ModalContent mx="2rem" bg="white" color="black">
           <ModalHeader pb="0" color="primary">
             Intro to Javascript Questions
           </ModalHeader>
@@ -91,44 +129,12 @@ function Chapter() {
                     questionIndex + 1
                   }`}</Badge>
                   <ReactMarkdown
-                    children={question.question}
                     components={{
-                      code({ node, inline, className, children, ...props }) {
-                        const match = /language-(\w+)/.exec(className || "");
-                        const textToCopy = String(children).replace(/\n$/, "");
-                        const { hasCopied, onCopy } = useClipboard(textToCopy);
-
-                        return !inline && match ? (
-                          <Box position="relative">
-                            <Prism
-                              {...props}
-                              children={textToCopy}
-                              language={match[1]}
-                              PreTag="div"
-                            />
-                            <Box position="absolute" top="5px" right="6px">
-                              <IconButton
-                                border="none"
-                                background="none"
-                                color="whiteAlpha.900"
-                                onClick={onCopy}
-                                aria-label="Copy to clipboard"
-                                icon={
-                                  hasCopied ? (
-                                    <CheckIcon color="rgb(67, 155, 255)" />
-                                  ) : (
-                                    <CopyIcon />
-                                  )
-                                }
-                              />
-                            </Box>
-                          </Box>
-                        ) : (
-                          <code className={className}>{children}</code>
-                        );
-                      },
+                      code: CodeBlock,
                     }}
-                  />
+                  >
+                    {question.question}
+                  </ReactMarkdown>
                 </Box>
                 <Text
                   mb="10px"

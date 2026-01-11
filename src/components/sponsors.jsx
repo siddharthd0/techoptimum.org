@@ -1,6 +1,7 @@
 import { Box, Flex, Link } from "@chakra-ui/react";
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const SponsorCard = ({ imagePath, link }) => {
   return (
     <Link href={link} isExternal>
@@ -17,7 +18,7 @@ const SponsorCard = ({ imagePath, link }) => {
         _hover={{ transform: "scale(1.05)" }}
         transition="transform 0.2s ease-in-out"
       >
-        <img src={imagePath} alt="Sponsor" width="100%" />
+        <Image src={imagePath} alt="Sponsor" width={140} height={100} style={{ width: "100%", height: "auto" }} />
       </Box>
     </Link>
   );
