@@ -1,4 +1,4 @@
-import { Providers } from "./providers";
+import { Providers, PostHogProvider } from "./providers";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -40,12 +40,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Providers theme={theme}>
-          <Header />
-          {children}
-          <Footer />
-          <Analytics />
-        </Providers>
+        <PostHogProvider>
+          <Providers theme={theme}>
+            <Header />
+            {children}
+            <Footer />
+            <Analytics />
+          </Providers>
+        </PostHogProvider>
       </body>
     </html>
   )
