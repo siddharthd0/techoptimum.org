@@ -50,7 +50,7 @@ export default function About() {
               linkedin="https://www.linkedin.com/in/siddharth-duggal"
             />
             <ExecutiveCard
-              src="adityasahas.jpg"
+              src="https://pbs.twimg.com/profile_images/1922535201982578688/ZjRUgUAu_400x400.jpg"
               name="Aditya Sahasranam"
               role="Chief Operating Officer"
               linkedin={"https://www.linkedin.com/in/adityasahas2025/"}
